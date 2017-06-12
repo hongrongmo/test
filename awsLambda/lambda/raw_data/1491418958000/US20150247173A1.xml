@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247173A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021512" date-changed="20151208" time-changed="150638">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140285">
+        <country>US</country>
+        <doc-number>20150247173</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14426801</doc-number>
+        <date>20130822</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012206972</doc-number>
+        <date>20120920</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151208">
+      <classification-ipcr sequence="1">
+        <text>C12P   7/64        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>7</main-group>
+        <subgroup>64</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C12N   9/16        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>9</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151208">
+      <classification-cpc sequence="1">
+        <text>C12P   7/6409      20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>7</main-group>
+        <subgroup>6409</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12N   9/16        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>9</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12Y 301/02014     20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Y</subclass>
+        <main-group>301</main-group>
+        <subgroup>02014</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>Y02P  20/52        20151101 LA20151203BHEP        </text>
+        <cpc-version-indicator>
+          <date>20151101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>P</subclass>
+        <main-group>20</main-group>
+        <subgroup>52</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151203</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">Method of Producing Lipids Using a Thioesterase Variant</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Kao Corporation</orgname>
+            <role>03</role>
+            <address>
+              <city>Chuo-ku, Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kawahara</last-name>
+            <first-name>Akihito</first-name>
+            <address>
+              <city>Wakayama</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13072418</doc-number>
+        <date>20130822</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014045793</doc-number>
+        <date>20140327</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150911">
+      <main-family family-id="164904331">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104662154</doc-number>
+            <kind>A</kind>
+            <date>20150527</date>
+          </document-id>
+          <application-date>
+            <date>20130822</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>2589DELNP2015</doc-number>
+            <kind>A</kind>
+            <date>20150911</date>
+          </document-id>
+          <application-date>
+            <date>20150330</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014060943</doc-number>
+            <kind>A</kind>
+            <date>20140410</date>
+          </document-id>
+          <application-date>
+            <date>20120920</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247173</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130822</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014045793</doc-number>
+            <kind>A1</kind>
+            <date>20140327</date>
+          </document-id>
+          <application-date>
+            <date>20130822</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164904330">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104662154</doc-number>
+            <kind>A</kind>
+            <date>20150527</date>
+          </document-id>
+          <application-date>
+            <date>20130822</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>2589DELNP2015</doc-number>
+            <kind>A</kind>
+            <date>20150911</date>
+          </document-id>
+          <application-date>
+            <date>20150330</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014060943</doc-number>
+            <kind>A</kind>
+            <date>20140410</date>
+          </document-id>
+          <application-date>
+            <date>20120920</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247173</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130822</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014045793</doc-number>
+            <kind>A1</kind>
+            <date>20140327</date>
+          </document-id>
+          <application-date>
+            <date>20130822</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A method of producing a lipid, comprising steps of <ul id="ula-00001-en" list-style="none"><li><ul id="ula-00002-en" list-style="none"><li>introducing a gene that encodes the following protein (a) or (b) into a host, and thereby obtaining a transformant, and</li><li>collecting a lipid from the transformant:</li></ul></li><li>(a) A protein comprising an amino acid sequence of the 112<sup>nd </sup>to 414<sup>th </sup>amino acids set forth in SEQ ID NO: 1 in which an amino acid corresponding to the 209<sup>th </sup>amino acid set forth in SEQ ID NO: 1 is substituted from tryptophan to threonine, glutamic acid or alanine, and having thioesterase activity, and</li><li>(b) A protein comprising an amino acid sequence of the protein (a) in which one to several amino acids other than the amino acid corresponding to the 209<sup>th </sup>amino acid set forth in SEQ ID NO: 1 are deleted, substituted, inserted or added, and having thioesterase activity.</li></ul></p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150325</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247173A1</docdb-publication-number>
+      <docdb-application-id>444210244</docdb-application-id>
+      <new-owner>KAO CORPORATION, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:KAWAHARA, AKIHITO;REEL/FRAME:035253/0485</free-text-description>
+      <effective-date>
+        <date>20150224</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a thioesterase variant and a method of producing lipids using the thioesterase variant.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">Fatty acids are one of the principal components of lipids. In vivo, fatty acids are attached to glycerin via an ester bond to form lipids such as triacylglycerol. Many animals and plants store and utilize fatty acids as an energy source and these fatty acids and lipids are widely utilized for food or industrial use, for example, intermediate materials of foods, such as monoacylglycerol and diacylglycerol, and additives or intermediate materials for various industrial products. Further, higher alcohol derivatives that are obtained by reducing higher fatty acids having approximately 12 to 18 carbon atoms are used as surfactants. For example, alkyl sulfuric acid ester salts and alkylbenzenesulfonic acid salts are utilized as anionic surfactants, and polyoxyalkylene alkyl ethers and alkyl polyglycosides are utilized as nonionic surfactants, and these surfactants are used for detergents or disinfectants. Likewise, as other higher alcohol derivatives, alkylamine salts and mono- or dialkyl quaternary amine salts are commonly used for fiber treatment agents, hair conditioning agents or disinfectants, and benzalkonium type quaternary ammonium salts are commonly used for disinfectants or antiseptics. Furthermore, higher alcohols having approximately 18 carbon atoms are also useful as growth promoting agents for plants.</p>
+      <p id="p-00003-en" num="0003">Fatty acids are widely used for various applications shown above, and therefore, it has been attempted to enhance the productivity of fatty acids or lipids in vivo by using animals and plants. For example, methods of increasing the lipid content in seeds by introducing acetyl-CoA carboxylase (ACCase) (Patent Literature 1, Non-Patent Literature 1, and Patent Literature 5); methods of increasing the lipid content in seeds by introducing a yeast sn-2 acyltransferase (SLC1-1) (Patent Literature 2, Patent Literature 3 and Non-Patent Literature 2); and methods of increasing the lipid content in seeds by introducing diacylglycerol acyltransferase gene (DGAT) (Patent Literature 4 and Non-Patent Literature 3), have been proposed. Further, several enzymes participating in the fatty acid biosynthesis are known, for example, a <i>Elaeis quineensis</i>-derived Acyl-ACP thioesterase (Patent Literature 6), a <i>Cocos nucifera </i>L.-derived Acyl-ACP thioesterase (Patent Literature 7), and a thioesterase having an amino acid sequence which is partially changed from that of an Acyl-ACP thioesterase derived from <i>Umbellularia californica </i>(Patent Literature 8).</p>
+      <heading id="h-00003-en" level="1">CITATION LIST</heading>
+      <heading id="h-00004-en" level="1">Patent Literatures</heading>
+      <p id="p-00004-en" num="0000">
+        <ul id="ul-00001-en" list-style="none">
+          <li>Patent Literature 1: JP-A-2002-335786 (“JP-A” means unexamined published Japanese patent application)</li>
+          <li>Patent Literature 2: JP-A-11-506323</li>
+          <li>Patent Literature 3: WO 2008/076377 pamphlet</li>
+          <li>Patent Literature 4: WO 2000/036114 pamphlet</li>
+          <li>Patent Literature 5: U.S. Pat. No. 5,925,805</li>
+          <li>Patent Literature 6: JP-A-8-205863</li>
+          <li>Patent Literature 7: JP-A-2011-250781</li>
+          <li>Patent Literature 8: JP-A-2011-147438</li>
+        </ul>
+      </p>
+      <heading id="h-00005-en" level="1">Non-Patent Literatures</heading>
+      <p id="p-00005-en" num="0000">
+        <ul id="ul-00002-en" list-style="none">
+          <li>Non-Patent Literature 1: Madoka Y, Tomizawa K, Mizoi J, Nishida I, Nagano Y, Sasaki Y., “Chloroplast transformation with modified accD operon increases acetyl-CoA carboxylase and causes extension of leaf longevity and increase in seed yield in tobacco”, Plant Cell Physiol., 2002 December, 43 (12), p. 1518-1525</li>
+          <li>Non-Patent Literature 2: Zou J, Katavic V, Giblin E M, Barton D L, MacKenzie S L, Keller W A, Hu X, Taylor D C., “Modification of seed oil content and acyl composition in the brassicaceae by expression of a yeast sn-2 acyltransferase gene”, Plant Cell, 1997 June, 9 (6), p. 909-923</li>
+          <li>Non-Patent Literature 3: Jako C, Kumar A, Wei Y, Zou J, Barton D L, Giblin E M, Covello P S, Taylor D C., “Seed-specific over-expression of an <i>Arabidopsis </i>cDNA encoding a diacylglycerol acyltransferase enhances seed oil content and seed weight”, Plant Physiol., 2001, 126 (2), p. 861-874</li>
+        </ul>
+      </p>
+      <heading id="h-00006-en" level="1">SUMMARY OF INVENTION</heading>
+      <p id="p-00006-en" num="0015">The present invention is contemplated for providing a thioesterase variant obtained by modifying an amino acid sequence of a wild-type thioesterase, and a method of producing a lipid using the thioesterase variant. The present invention is also contemplated for providing a transformant introduced with the thioesterase variant and having an enhanced ability to produce a lipid.</p>
+      <p id="p-00007-en" num="0016">The present inventors made extensive studies so as to enhance the lipid productivity in animals and plants. As a result, the inventors attempted to partially modify an amino acid sequence of a thioesterase derived from <i>Cocos nucifera, </i>and they found that a transformant introduced with the thioesterase variant significantly enhances the productivity of lipids, as compared with a transformant introduced with the wild-type thioesterase. The present invention was completed based on this finding.</p>
+      <p id="p-00008-en" num="0017">The present invention relates to a method of producing a lipid, comprising steps of</p>
+      <p id="p-00009-en" num="0018">introducing a gene that encodes the following protein (a) or (b) into a host, and thereby obtaining a transformant, and</p>
+      <p id="p-00010-en" num="0019">collecting a lipid from the transformant: <ul id="ul-00003-en" list-style="none"><li>(a) A protein comprising an amino acid sequence of the 112<sup>nd </sup>to 414<sup>th </sup>amino acids set forth in SEQ ID NO: 1 in which an amino acid corresponding to the 209<sup>th </sup>amino acid set forth in SEQ ID NO: 1 is substituted from tryptophan to threonine, glutamic acid or alanine, and having thioesterase activity, and</li><li>(b) A protein comprising an amino acid sequence of the protein (a) in which one to several amino acids other than the amino acid corresponding to the 209<sup>th </sup>amino acid set forth in SEQ ID NO: 1 are deleted, substituted, inserted or added, and having thioesterase activity. <br /> (Hereinafter, referred to as “the production method of the present invention”) </li></ul></p>
+      <p id="p-00011-en" num="0022">The present invention also relates to a method of enhancing productivity of a lipid, comprising a step of</p>
+      <p id="p-00012-en" num="0023">introducing a gene that encodes the above protein (a) or (b) into a host, and thereby obtaining a transformant.</p>
+      <p id="p-00013-en" num="0024">The present invention also relates to a transformant obtained by introducing a gene that encodes the above protein (a) or (b) into a host.</p>
+      <p id="p-00014-en" num="0025">(Hereinafter, referred to as “the transformant of the present invention”)</p>
+      <p id="p-00015-en" num="0026">The present invention also relates to a protein of the above (a) or (b). (Hereinafter, referred to as “the thioesterase variant of the present invention”)</p>
+      <p id="p-00016-en" num="0027">The present invention provides a transformant having an enhanced ability to produce lipids, compared to a transformant introduced with a wild-type thioesterase. The present invention also provides a production method using the transformant with excellent productivity of lipid. The thioesterase variant, the transformant and the production method of the present invention can be preferably used for the industrial production of fatty acids and lipids.</p>
+      <p id="p-00017-en" num="0028">Other and further features and advantages of the invention will appear more fully from the following description.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00007-en" level="1">MODE FOR CARRYING OUT THE INVENTION</heading>
+      <p id="p-00018-en" num="0029">Hereinafter, the thioesterase variant of the present invention, the transformant, and the method of producing a lipid using the thioesterase variant will be explained.</p>
+      <p id="p-00019-en" num="0030">In the present invention, the term “lipid(s)” covers simple lipids such as neutral lipids, wax, ceramides; complex lipids such as phospholipids, glycolipids, sulfolipids; and derived lipids such as fatty acids, alcohols, hydrocarbons.</p>
+      <heading id="h-00008-en" level="2">1. Thioesterase Variant</heading>
+      <p id="p-00020-en" num="0031">The thioesterase variant of the present invention is a protein having an amino acid sequence which is partially changed from an amino acid sequence of a wild-type thioesterase derived from <i>Cocos nucifera </i>set forth in SEQ ID NO: 1 (hereinafter, may be simply called the wild-type thioesterase, and is abbreviated to CTE), and having thioesterase activity.</p>
+      <p id="p-00021-en" num="0032">The thioesterase is an acyl-acyl carrier protein (Acyl-ACP) thioesterase. Acyl-ACP thioesterases are enzymes involved in the triglyceride biosynthesis pathway and hydrolyzing a thioester bond of an acyl-acyl carrier protein to form free fatty acids. An acyl-acyl carrier protein is a composite composed of an acyl group as a fatty acid residue and an acyl carrier protein, and is an intermediate in the process of fatty acid biosynthesis in chloroplasts or plastids. Acyl-ACP thioesterases catalyze the fatty acid synthesis on an acyl carrier protein to generate free fatty acids, and then the free fatty acids are transported from plastids and supplied to the triglyceride synthesis. To date, several Acyl-ACP thioesterases having different reaction specificities depending on the kind of fatty acid residue of acyl-acyl carrier proteins are identified, and therefore, they are considered an important factor in determining fatty acid composition of an organism.</p>
+      <p id="p-00022-en" num="0033">The thioesterase variant of the present invention includes the following protein (a) or (b): <ul id="ul-00004-en" list-style="none"><li>(a) A protein comprising an amino acid sequence of the 112<sup>nd </sup>to 414<sup>th </sup>amino acids set forth in SEQ ID NO: 1 in which an amino acid corresponding to the 209<sup>th </sup>amino acid set forth in SEQ ID NO: 1 is substituted from tryptophan to threonine, glutamic acid or alanine, and having thioesterase activity, and</li><li>(b) A protein comprising an amino acid sequence of the protein (a) in which one to several amino acids other than the amino acid corresponding to the 209<sup>th </sup>amino acid set forth in SEQ ID NO: 1 are deleted, substituted, inserted or added, and having thioesterase activity.</li></ul></p>
+      <p id="p-00023-en" num="0036">The protein (a) at least has an amino acid sequence of the 112<sup>nd </sup>to 414<sup>th </sup>amino acids in the wild-type thioesterase set forth in SEQ ID NO: 1. In the amino acid sequence of the wild-type thioesterase set forth in SEQ ID NO: 1, a region from the 112<sup>nd </sup>amino acid to 414<sup>th </sup>amino acid is considered particularly important for a thioesterase function, and necessary and sufficient for a protein to exhibit thioesterase activity (see Voelker, T. A., A. C. Worrell, L. Anderson, J. Bleibaum, C. Fan, D. H. Hawkins, S. E. Radke, and H. M. Davies, “Fatty acid biosynthesis redirected to medium chains in transgenic oilseed plants,” Science, 1992, 257, p. 72-74). The protein (a) has the region necessary and sufficient for thioesterase activity, and acts thioesterase as demonstrated by the working example below.</p>
+      <p id="p-00024-en" num="0037">Further, in the protein (a), the 209<sup>th </sup>amino acid in the 112<sup>nd </sup>to 414<sup>th </sup>amino acid sequence set forth in SEQ ID NO: 1 is substituted from tryptophan (Trp; W) to any one of threonine (Thr; T), glutamic acid (Glu; E) and alanine (Ala; A).</p>
+      <p id="p-00025-en" num="0038">Hereinafter, a thioesterase variant that an amino acid corresponding to the 209<sup>th </sup>amino acid of SEQ ID NO: 1 is substituted to threonine will be abbreviated to CTE(W209T), a thioesterase variant that an amino acid corresponding to the 209<sup>th </sup>amino acid of SEQ ID NO: 1 is substituted to glutamic acid will be abbreviated to CTE(W209E), and a thioesterase variant that an amino acid corresponding to the 209<sup>th </sup>amino acid of SEQ ID NO: 1 is substituted to alanine will be abbreviated to CTE(W209A).</p>
+      <p id="p-00026-en" num="0039">The protein (b) has an amino acid sequence having mutation of deletion, substitution, insertion or addition partially in the amino acid sequence of the protein (a), and has the thioesterase activity. However, the amino acid has the mutation of deletion, substitution, insertion or addition in a region other than the amino acid corresponding to the 209<sup>th </sup>amino acid of SEQ ID NO: 1 as subjected to substitution in the protein (a). More specifically, the amino acid sequence of the protein (b) is based on the amino acid sequence of the 112<sup>th </sup>to 414<sup>th </sup>amino acids of SEQ ID NO: 1, in which the amino acid corresponding to the 209<sup>th </sup>amino acid of SEQ ID NO: 1 in the sequence is substituted from tryptophan to any one of amino acids selected from threonine, glutamic acid and alanine, and one to several amino acids other than the amino acid corresponding to the 209<sup>th </sup>amino acid subjected to substitution in the sequence are deleted, substituted, inserted or added.</p>
+      <p id="p-00027-en" num="0040">In general, an amino acid sequence encoding an enzyme protein is not necessarily conserved over its entire length in order for the protein to exhibit enzymic activity, that is, a protein sequence includes a region that mutation of an amino acid sequence has little or no effect on its enzymic activity. In such a region that is not essential to the enzymic activity, the enzymic activity can be maintained even if some variations (mutations) such as deletions, substitutions, insertions or additions are introduced into amino acids of the region. Likewise, the present invention can be used the thioesterase variants having amino acid sequences which are partially changed from the sequence set forth in SEQ ID NO: 1 by deletion and the like, and which maintain the thioesterase activity.</p>
+      <p id="p-00028-en" num="0041">The thioesterase activity of the variant protein can be confirmed by in-vitro activity measurement methods using Acyl-ACPs as substrates, such as a method described in Robert M et al. Plant Cell Physiol. 40(2): 155-163 (1999).</p>
+      <p id="p-00029-en" num="0042">In the protein (b), one to several amino acids is preferably 1 to 10 amino acids, more preferably 1 to 5 amino acids, and particularly preferably 1 to 2 amino acids, in view of enhancing ability to produce lipids.</p>
+      <p id="p-00030-en" num="0043">The protein (a) and the protein (b) may have other amino acid sequences in addition to the amino acid sequence corresponding to the amino acid sequence of the 112<sup>th </sup>to 414<sup>th </sup>amino acids of SEQ ID NO: 1. From a viewpoint of enhancing ability to produce lipids, other amino acid sequences preferably include the amino acid sequence of the 1<sup>st </sup>to 111<sup>th </sup>amino acids of SEQ ID NO: 1 or part of the sequences.</p>
+      <p id="p-00031-en" num="0044">From the viewpoint of enhancing the ability to produce lipids, the protein (a) and the protein (b) preferably include the following protein (c) and protein (d). <ul id="ul-00005-en" list-style="none"><li>(c) A protein consisting of an amino acid sequence set forth in SEQ ID NO: 1 in which the 209<sup>th </sup>amino acid is substituted from tryptophan to threonine, glutamic acid or alanine, and having thioesterase activity.</li><li>(d) A protein consisting of an amino acid sequence of the protein (c) in which one to several amino acids other than the 209<sup>th </sup>amino acid are deleted, substituted, inserted or added, and having thioesterase activity.</li></ul></p>
+      <p id="p-00032-en" num="0047">The protein (c) has an amino acid sequence in which the tryptophan corresponding to the 209<sup>th </sup>amino acid in the wild-type thioesterase set forth in SEQ ID NO: 1 is substituted to an amino acid selected from threonine, glutamic acid and alanine. An amino acid sequence of a thioesterase variant in which the 209<sup>th </sup>amino acid is substituted to threonine is set forth in SEQ ID NO: 3, an amino acid sequence of a thioesterase variant in which the 209<sup>th </sup>amino acid is substituted to glutamic acid is set forth in SEQ ID NO: 5, and an amino acid sequence of a thioesterase variant in which the 209<sup>th </sup>amino acid is substituted to alanine is set forth in SEQ ID NO: 7, respectively.</p>
+      <p id="p-00033-en" num="0048">The protein (d) has an amino acid sequence in which the tryptophan corresponding to the 209<sup>th </sup>amino acid in the wild-type thioesterase set forth in SEQ ID NO: 1 is substituted to an amino acid selected from threonine, glutamic acid and alanine, and one to several amino acids other than the 209<sup>th </sup>amino acid are deleted, substituted, inserted or added, and has the thioesterase activity.</p>
+      <p id="p-00034-en" num="0049">In the protein (d), one to several amino acids is preferably 1 to 10 amino acids, more preferably 1 to 5 amino acids, and particularly preferably 1 to 2 amino acids, in view of enhancing ability to produce lipids.</p>
+      <heading id="h-00009-en" level="2">2. Gene Encoding Thioesterase Variant</heading>
+      <p id="p-00035-en" num="0050">Examples of genes encoding the protein (a) to (d) include the following genes (e) to (h), but the present invention is not limited thereto. <ul id="ul-00006-en" list-style="none"><li>(e) A gene comprising a nucleotide sequence of the 334<sup>th </sup>to 1245<sup>th </sup>nucleotides set forth in SEQ ID NO: 2 in which nucleotides corresponding to the 625<sup>th </sup>to 627<sup>th </sup>nucleotides set forth in SEQ ID NO: 2 are substituted from nucleotides encoding tryptophan to nucleotides encoding threonine, glutamic acid or alanine, and encoding a protein having thioesterase activity.</li><li>(f) A gene comprising a nucleotide sequence of the gene (e) in which one to several nucleotides other than the nucleotides corresponding to the 625<sup>th </sup>to 627<sup>th </sup>nucleotides set forth in SEQ ID NO: 2 are deleted, substituted, inserted or added, and encoding a protein having thioesterase activity.</li><li>(g) A gene consisting of a nucleotide sequence set forth in SEQ ID NO: 2 in which the 625<sup>th </sup>to 627<sup>th </sup>nucleotides are substituted from nucleotides encoding tryptophan to nucleotides encoding threonine, glutamic acid or alanine, and encoding a protein having thioesterase activity.</li><li>(h) A gene consisting of a nucleotide sequence of the gene (g) in which one to several nucleotides other than the 625<sup>th </sup>to 627<sup>th </sup>nucleotides are deleted, substituted, inserted or added, and encoding a protein having thioesterase activity.</li></ul></p>
+      <p id="p-00036-en" num="0055">The nucleotide sequence set forth in SEQ ID NO: 2 is an example of the nucleotide sequence encoding the wild-type thioesterase derived from <i>Cocos nucifera. </i></p>
+      <p id="p-00037-en" num="0056">In the nucleotide sequence of the gene (f) or (h), one to several nucleotides is preferably 1 to 10 nucleotides, more preferably 1 to 5 nucleotides, and particularly preferably 1 to 2 nucleotides, in view of enhancing ability to produce lipids.</p>
+      <p id="p-00038-en" num="0057">As the nucleotide sequence of the gene (g), one example of a nucleotide sequence in which nucleotides encoding tryptophan is substituted to nucleotides encoding threonine is set forth in SEQ ID NO: 4, one example of a nucleotide sequence in which nucleotides encoding tryptophan is substituted to nucleotides encoding glutamic acid is set forth in SEQ ID NO: 6, and one example of a nucleotide sequence in which nucleotides encoding tryptophan is substituted to nucleotides encoding alanine is set forth in SEQ ID NO: 8, respectively.</p>
+      <p id="p-00039-en" num="0058">The thioesterase variant and the gene encoding the thioesterase variant can be obtained by conventional genetic engineering techniques. For example, the variant can be obtained based on amino acid or nucleotide sequence data of the wild-type thioesterase, and by introducing mutation such as substitution to the sequence at a desired position according to a site-specific mutagenesis method and the like.</p>
+      <p id="p-00040-en" num="0059">The amino acid sequence of the wild-type thioesterase (SEQ ID NO: 1) and the nucleotide sequence encoding the amino acid sequence (for example, SEQ ID NO: 2) can be obtained from databases such as GenBank (for example, according to GenBank, protein sequence: AEM72521.1, mRNA sequence: JF338905.1). Based on the sequence data thus obtained, a gene that encodes the wild-type thioesterase can be obtained by artificial gene synthesis. The artificial synthesis of a gene can be achieved by utilizing the services such as Invitrogen, Inc. Furthermore, a gene that encodes the wild-type thioesterase can also be obtained by cloning from <i>Cocos nucifera, </i>and the cloning can be carried out by, for example, the methods described in Molecular Cloning—A LABORATORY MANUAL THIRD EDITION [Joseph Sambrook, David W. Russell, Cold Spring Harbor Laboratory Press (2001)] and the like.</p>
+      <p id="p-00041-en" num="0060">Examples of the method for introducing site-specific mutation include a method of utilizing the splicing overlap extension (SOE) PCR (Horton et al., Gene 77, 61-68, 1989) used in the Example section that will be described below; the ODA method (Hashimoto-Gotoh et al., Gene, 152, 271-276, 1995); and the Kunkel method (Kunkel, T. A., Proc. Natl. Acad. Sci. USA, 1985, 82, 488). Furthermore, commercially available kits such as the Site-Directed Mutagenesis System Mutan-SuperExpress Km kit (Takara Bio, Inc.), the Transformer TM Site-Directed Mutagenesis kit (Clonetech Laboratories, Inc.), and the KOD-Plus-Mutagenesis kit (Toyobo Co., Ltd.) can also be utilized. Among these, according to the present invention, it is preferable to carry out the introduction of site-specific mutation according to the Kunkel method due to its high efficiency.</p>
+      <p id="p-00042-en" num="0061">The gene encoding the thioesterase variant used in the present invention can be prepared by, for example, the following procedure. First, a cloning of the wild-type thioesterase gene derived from <i>Cocos nucifera </i>(for example, the nucleotide sequence set forth in SEQ ID NO: 2) is carried out, and a nucleotide sequence of the gene is incorporated into a vector by the In-Fusion (registered trademark) HD Cloning Kit (Clonthech, Mountain View, Calif.). Subsequently, a DNA fragment is amplified, according to a PCR method, using the resultant vector DNA as a template, and using as a primer an oligonucleotide containing a nucleotide sequence encoding an amino acid sequence in which the 209<sup>th </sup>amino acid in the amino acid sequence set forth in SEQ ID NO: 1 is substituted from tryptophan to threonine, glutamic acid or alanine (for example, an oligonucleotide having a nucleotide sequence set forth in SEQ ID NO: 13 or 14). A preferred example of the reaction conditions for PCR as follows: a thermal denaturation reaction of making a double-stranded DNA into single strands is carried out at 94° C. for 30 seconds; an annealing reaction of hybridizing a primer pair with the single-stranded DNA is carried out at 55° C. for about 30 seconds; an elongation reaction of operating a DNA polymerase is carried out at 72° C. for about 70 seconds; and a process consisting of these three reactions as one cycle is carried out in 30 cycles.</p>
+      <p id="p-00043-en" num="0062">The DNA amplified according to PCR is treated with a DpnI enzyme that specifically cleaves a methylated DNA. <i>Escherichia coli </i>is transformed using the resultant treated material, and the resultant product is selected in an antibiotic-containing agar plate medium. Plasmids are extracted from the transformed <i>Escherichia coli, </i>and thus a gene encoding the thioesterase variant having a target amino acid mutation can be obtained.</p>
+      <heading id="h-00010-en" level="2">3. Transformant (Recombinant)</heading>
+      <p id="p-00044-en" num="0063">The transformant of the present invention is obtained by introducing a gene that encodes the above protein (a) or (b) into a host. The transformant exhibits a significantly enhanced ability to produce lipids, as compared with a transformant introduced with the wild-type thioesterase gene. The ability to produce fatty acids and lipids of the wild-type thioesterase or the thioesterase variant can be measured by the method used in the Examples.</p>
+      <p id="p-00045-en" num="0064">The transformant of the present invention is obtained by introducing a gene that encodes the thioesterase variant into a host according to a conventional genetic engineering method. Specifically, the transformant can be produced by preparing a vector which is capable of expressing a gene that encodes the thioesterase variant in a host cell, introducing this vector into host cells, and thereby transforming the host cells.</p>
+      <p id="p-00046-en" num="0065">The host for transformation is not particularly limited, and examples of the host include microorganisms, algae, plants or animals. Among these, microorganisms, algae and plants are preferable, microorganisms and algae are more preferable, and microorganisms are further preferable, from the viewpoints of production efficiency and the usability of lipids.</p>
+      <p id="p-00047-en" num="0066">As microorganisms for the host, prokaryotes and eukaryotes can be used. Prokaryotes include microorganisms which belong to the genus <i>Escherichia </i>or microorganisms which belong to the genus <i>Bacillus. </i>Eukaryotes include yeast or filamentous fungi. Among them, from the viewpoint of the productivity of useful materials, <i>Escherichia coli, Bacillus subtilis, Rhodosporidium toruloides, </i>and <i>Mortierella </i>sp. are preferable, <i>Escherichia coli </i>and <i>Bacillus subtilis </i>are more preferable, and <i>Escherichia coli </i>is further preferable.</p>
+      <p id="p-00048-en" num="0067">As plants, from the viewpoint of a lipid content of seeds, <i>Arabidopsis thaliana, </i>rapeseed, coconut, palm, cuphea, and jatropha are preferable, and <i>Arabidopsis thaliana </i>is more preferable.</p>
+      <p id="p-00049-en" num="0068">As algae, from a viewpoint of establishment of a gene recombination technique, Cyanobacteria (<i>Synechocystis </i>sp.), <i>Chlamydomonas </i>and <i>Phaeodactylum </i>are preferable, and Cyanobacteria (<i>Synechocystis </i>sp.) is more preferable.</p>
+      <p id="p-00050-en" num="0069">A vector for use as the expression vector may be any vector capable of introducing the gene encoding the thioesterase variant into a host, and expressing the gene in the host cells. For example, a vector which has expression regulation regions such as a promoter and a terminator in accordance with the type of the host to be used, and has a replication initiation point, a selection marker or the like, can be used. Furthermore, the vector may also be a vector which is capable of self-proliferation and self-replication outside the chromosome, such as a plasmid, or may also be a vector which is incorporated into the chromosome.</p>
+      <p id="p-00051-en" num="0070">Specific examples of the vector include, in the case of using a microorganism as the host, pBluescript II SK(−) (manufactured by Stratagene Corp.), pUC-based vector (manufactured by Takara Shuzo Co., Ltd.), a pET-based vector (manufactured by Takara Bio, Inc.), a pGEX-based vector (manufactured by GE Healthcare, Inc.), a pCold-based vector (manufactured by Takara Bio, Inc.), pHY300PLK (manufactured by Takara Bio, Inc.), pUB110 (Mckenzie, T. et al., (1986), Plasmid 15(2); p. 93-103), pBR322 (manufactured by Takara Bio, Inc.), pRS403 (manufactured by Stratagene Corp.), and pMW218/219 (manufactured by Nippon Gene Co., Ltd.). In the case of using a plant cell as the host, examples of the vector include a pRI-based vector (manufactured by Takara Bio, Inc.), a pBI-based vector (manufactured by Clontech Laboratories, Inc.), and an IN3-based vector (manufactured by Inplanta Innovations, Inc.). In the case of using an alga as the host, examples of the vector include pUC-based vector (manufactured by Takara Shuzo Co., Ltd.), a pET-based vector (manufactured by Takara Bio, Inc.), and pBluescript II SK(−) (manufactured by Stratagene Corp.).</p>
+      <p id="p-00052-en" num="0071">Particularly, in the case of using Escherichia coli as the host, pBluescript II SK(−) and pMW218/219 are used preferably. In the case of using <i>Arabidopsis thaliana </i>as the host, a pRI-based vector and a pBI-based vector are used preferably. In the case of using Cyanobacteria as the host, pUC-based vector is used preferably.</p>
+      <p id="p-00053-en" num="0072">The expression regulation regions such as a promoter and a terminator, and the selection marker are not particularly limited, and can be appropriately selected from conventionally used promoters, markers and the like in accordance with the type of the host to be used.</p>
+      <p id="p-00054-en" num="0073">Specific examples of the promoter include lac promoter, trp promoter, tac promoter, trc promoter, T7 promoter, SpoVG promoter, cauliflower mosaic virus 35S RNA promoter, promoters for housekeeping genes such as actin and ubiquitin, rapeseed-derived <i>Napin </i>gene promoter, and plant-derived Rubisco promoter.</p>
+      <p id="p-00055-en" num="0074">Examples of the selection marker include drug resistance genes such as antibiotic resistance genes (ampicillin resistance gene, chloramphenicol resistance gene, erythromycin resistance gene, neomycin resistance gene, kanamycin resistance gene, spectinomycin resistance gene, tetracycline resistance gene, blasticidin S resistance gene, bialaphos resistance gene, and hygromycin resistance gene). Further, it is also possible to use a deletion of an auxotrophy-related gene or the like as a selection marker.</p>
+      <p id="p-00056-en" num="0075">A vector for transformation can be constructed by introducing the thioesterase variant into the above-described vector according to a conventional technique such as restriction enzyme treatment or ligation. The thioesterase variant can be obtained by the method described above.</p>
+      <p id="p-00057-en" num="0076">The method for transformation is not particularly limited as long as it is a method capable of introducing a target gene into a host. For example, a method of using calcium ion, a general competent cell transformation method (J. Bacterial. 93, 1925 (1967)), a protoplast transformation method (Mol. Gen. Genet. 168, 111 (1979)), an electroporation method (FEMS Microbiol. Lett. 55, 135 (1990)), an LP transformation method (T. Akamatsu and J. Sekiguchi, Archives of Microbiology, 1987, 146, p. 353-357; T. Akamatsu and H. Taguchi, Bioscience, Biotechnology, and Biochemistry, 2001, 65, 4, p.823-829) and the like, can be used.</p>
+      <p id="p-00058-en" num="0077">Further, the selection of a transformant having a target gene fragment introduced therein can be carried out by using a selection marker or the like. For example, the selection can be carried out by using an indicator whether a transformant acquires the drug resistance as a result of introducing a vector-derived drug resistance gene into a host cell together with a target DNA fragment. Further, the introduction of a target DNA fragment can also be confirmed by PCR using a genome as a template.</p>
+      <heading id="h-00011-en" level="2">4. Method of Producing Lipid</heading>
+      <p id="p-00059-en" num="0078">The transformant obtained as described above is used for production of a lipid.</p>
+      <p id="p-00060-en" num="0079">The production method of the present invention comprises a step of collecting the lipid from the transformant into which the gene encoding the thioesterase variant is introduced. From a viewpoint of enhancing the productivity of lipids, the step preferably comprises a step of culturing or growing under appropriate conditions the transformant into which the gene encoding the thioesterase variant is introduced to obtain a culture or a growth product, and a step of collecting the lipid from the resultant culture or grown product. In the present specification, the culture includes a culture fluid and a transformant after culturing, and the grown product includes a transformant after growing.</p>
+      <p id="p-00061-en" num="0080">The culture or growth conditions of the transformant can be selected in accordance with the type of the host into which the gene is introduced, and any appropriate preferred conditions can be employed. For instance, in the case of using <i>Escherichia coli </i>as the host for transformation, culture may be carried out in LB medium at 30° C. to 37° C. for half a day to 1 day. In the case of using <i>Arabidopsis thaliana </i>as the host for transformation, growth may be carried out under the temperature conditions of 20° C. to 25° C., by continuously irradiating white light or under the illumination conditions of a light period of 16 hours and a dark period of 8 hours, for one to two months. In the case of using Cyanobacteria as the host for transformation, culture may be carried out under the temperature conditions of 25° C. to 32° C., by continuously irradiating white light or under the illumination conditions of a light period of 12 hours and a dark period of 12 hours, for one week to one month.</p>
+      <p id="p-00062-en" num="0081">From the viewpoint of the production efficiency of fatty acids and lipids, substrates for thioesterase or precursor substances participating in the fatty acid biosynthesis, such as glycerol, acetic acid, malonic acid and the like, may be added to the medium.</p>
+      <p id="p-00063-en" num="0082">As the method of collecting lipids produced in the transformant, methods that are conventionally used to isolate lipid components and the like from organisms may be used. For example, lipid components can be isolated and collected from the culture, grown product or transformant by means of filtration, centrifugation, cell disruption, gel filtration chromatography, ion exchange chromatography, chloroform/methanol extraction, hexane extraction, ethanol extraction, or the like. In the case of isolation and collection of larger scales, lipids can be obtained by collecting oil components from the culture, grown product or transformant through pressing or extraction, and then performing general purification processes such as degumming, deacidification, decoloration, dewaxing, and deodorization. After lipid components are isolated as such, the isolated lipids are hydrolyzed, and thereby fatty acids can be obtained. Specific examples of the method of isolating fatty acids from lipid components include a method of treating the lipid components at a high temperature of about 70° C. in an alkaline solution, a method of performing a lipase treatment, and a method of degrading the lipid components using high-pressure hot water.</p>
+      <p id="p-00064-en" num="0083">According to the production method of the present invention, the productivity of lipids can be significantly enhanced by using the thioesterase variant of the present invention in comparison with a case where the wild-type thioesterase is used.</p>
+      <p id="p-00065-en" num="0084">In view of usability, lipids to be produced according to the production method of the present invention contains preferably at least one kind selected from a simple lipid and a derived liquid, further preferably, a derived lipid, and still further preferably, a fatty acid or an ester thereof. From usability for a surfactant or the like, the fatty acid or the ester thereof contained in the lipid is preferably a fatty acid having 12 to 16 carbon atoms or an ester thereof, further preferably, a fatty acid having 12 to 14 carbon atoms or an ester thereof, and still further preferably, a lauric acid or an ester thereof. These higher fatty acids can be reduced to generate higher alcohol derivatives, and the higher alcohol derivatives can be utilized for the surfactant.</p>
+      <p id="p-00066-en" num="0085">From a viewpoint of utilizing the fatty acid as the surfactant, a content of the fatty acid having 12 to 16 carbon atoms in total collected lipid components is preferably 65% by mass or more, more preferably, 75% by mass or more, and further preferably, 85% by mass or more. Moreover, from the viewpoint of utilizing the fatty acid as the surfactant, a content of the fatty acid having 12 to 14 carbon atoms in the total collected lipid components is preferably 50% by mass or more, more preferably, 55% by mass or more, and further preferably, 60% by mass or more. Further, from the viewpoint of utilizing the lauric acid as the surfactant, a content of the lauric acid contained in the total collected lipid components is preferably 27% by mass or more, more preferably, 28% by mass or more, and further preferably, 30% by mass or more. Here, “total collected lipid components” means total lipid components calculated by the method applied in Examples.</p>
+      <p id="p-00067-en" num="0086">The fatty acids or lipids obtained by the production method and the transformant of the present invention can be utilized for food, as well as can be utilized as an emulsifier incorporated into cosmetic products or the like, a cleansing agent such as a soap or a detergent, a fiber treatment agent, a hair conditioning agent, a disinfectant or an antiseptic.</p>
+      <p id="p-00068-en" num="0087">With regard to the embodiments described above, also disclosed by the present invention includes a method, a transformant, a protein and a gene described below. <ul id="ul-00007-en" list-style="none"><li>&lt;1&gt; A method of producing a lipid, comprising steps of</li></ul></p>
+      <p id="p-00069-en" num="0089">introducing a gene that encodes the following protein (a) or (b) into a host, and thereby obtaining a transformant, and</p>
+      <p id="p-00070-en" num="0090">collecting a lipid from the transformant: <ul id="ul-00008-en" list-style="none"><li>(a) A protein comprising an amino acid sequence of the 112<sup>nd </sup>to 414<sup>th </sup>amino acids set forth in SEQ ID NO: 1 in which an amino acid corresponding to the 209<sup>th </sup>amino acid set forth in SEQ ID NO: 1 is substituted from tryptophan to threonine, glutamic acid or alanine, and having thioesterase activity, and</li><li>(b) A protein comprising an amino acid sequence of the protein (a) in which one to several amino acids (preferably 1 to 10 amino acids, more preferably 1 to 5 amino acids, and particularly preferably 1 to 2 amino acids) other than the amino acid corresponding to the 209<sup>th </sup>amino acid set forth in SEQ ID NO: 1 are deleted, substituted, inserted or added, and having thioesterase activity.</li><li>&lt;2&gt; The method according to &lt;1&gt;, wherein the protein (a) or (b) is the following protein (c) or (d):</li><li>(c) A protein consisting of an amino acid sequence set forth in SEQ ID NO: 1 in which the 209<sup>th </sup>amino acid is substituted from tryptophan to threonine, glutamic acid or alanine, and having thioesterase activity, and</li><li>(d) A protein consisting of an amino acid sequence of the protein (c) in which one to several amino acids (preferably 1 to 10 amino acids, more preferably 1 to 5 amino acids, and particularly preferably 1 to 2 amino acids) other than the 209<sup>th </sup>amino acid are deleted, substituted, inserted or added, and having thioesterase activity.</li><li>&lt;3&gt; The method according to &lt;1&gt; or &lt;2&gt;, wherein the gene that encodes the protein is a gene selected from the following (e) to (h):</li><li>(e) A gene comprising a nucleotide sequence of the 334<sup>th </sup>to 1245<sup>th </sup>nucleotides set forth in SEQ ID NO: 2 in which nucleotides corresponding to the 625<sup>th </sup>to 627<sup>th </sup>nucleotides set forth in SEQ ID NO: 2 are substituted from nucleotides encoding tryptophan to nucleotides encoding threonine, glutamic acid or alanine, and encoding a protein having thioesterase activity,</li><li>(f) A gene comprising a nucleotide sequence of the gene (e) in which one to several nucleotides (preferably 1 to 10 nucleotides, more preferably 1 to 5 nucleotides, and particularly preferably 1 to 2 nucleotides) other than the nucleotides corresponding to the 625<sup>th </sup>to 627<sup>th </sup>nucleotides set forth in SEQ ID NO: 2 are deleted, substituted, inserted or added, and encoding a protein having thioesterase activity,</li><li>(g) A gene consisting of a nucleotide sequence set forth in SEQ ID NO: 2 in which the 625<sup>th </sup>to 627<sup>th </sup>nucleotides are substituted from nucleotides encoding tryptophan to nucleotides encoding threonine, glutamic acid or alanine, and encoding a protein having thioesterase activity, and</li><li>(h) A gene consisting of a nucleotide sequence of the gene (g) in which one to several nucleotides (preferably 1 to 10 nucleotides, more preferably 1 to 5 nucleotides, and particularly preferably 1 to 2 nucleotides) other than the 625<sup>th </sup>to 627<sup>th </sup>nucleotides are deleted, substituted, inserted or added, and encoding a protein having thioesterase activity.</li><li>&lt;4&gt; The method according to any one of &lt;1&gt; to &lt;3&gt;, wherein the host is selected from plants, algae and microorganisms.</li><li>&lt;5&gt; The method according to any one of &lt;1&gt; to &lt;4&gt;, wherein the host is selected from <i>Arabidopsis thaliana, </i>Cyanobacteria and <i>Escherichia coli. </i></li><li>&lt;6&gt; The method according to any one of &lt;1&gt; to &lt;5&gt;, wherein the lipid contains a lauric acid.</li><li>&lt;7&gt; The method according to any one of &lt;1&gt; to &lt;6&gt;, wherein the lipid contains a lauric acid in an amount of 27% by mass or more, preferably 28% by mass or more, and more preferably 30% by mass or more.</li><li>&lt;8&gt; The method according to any one of &lt;1&gt; to &lt;7&gt;, wherein the lipid contains fatty acids having 12 to 16 carbon atoms in an amount of 65% by mass or more, preferably 75% by mass or more, and more preferably 85% by mass or more.</li><li>&lt;9&gt; The method according to any one of &lt;1&gt; to &lt;8&gt;, wherein the host is a microorganism.</li><li>&lt;10&gt; The method according to any one of &lt;1&gt; to &lt;9&gt;, wherein the host is <i>Escherichia coli. </i></li><li>&lt;11&gt; A method of enhancing productivity of a lipid, comprising a step of</li></ul></p>
+      <p id="p-00071-en" num="0109">introducing a gene that encodes the above protein (a) or (b) into a host, and thereby obtaining a transformant. <ul id="ul-00009-en" list-style="none"><li>&lt;12&gt; A transformant obtained by introducing a gene that encodes the above protein (a) or (b) into a host.</li><li>&lt;13&gt; The transformant according to &lt;12&gt;, wherein the protein (a) or (b) is the above protein (c) or (d).</li><li>&lt;14&gt; The transformant according to &lt;12&gt; or &lt;13&gt;, wherein the gene that encodes the protein is a gene selected from the above (e) to (h).</li><li>&lt;15&gt; The transformant according to any one of &lt;12&gt; to &lt;14&gt;, wherein the host is selected from plants, algae and microorganisms.</li><li>&lt;16&gt; The transformant according to any one of &lt;12&gt; to &lt;15&gt;, wherein the host is selected from <i>Arabidopsis thaliana, </i>Cyanobacteria and <i>Escherichia coli. </i></li><li>&lt;17&gt; The transformant according to any one of &lt;12&gt; to &lt;16&gt;, wherein the host is a microorganism.</li><li>&lt;18&gt; The transformant according to any one of &lt;12&gt; to &lt;17&gt;, wherein the host is <i>Escherichia coli. </i></li><li>&lt;19&gt; A protein of the above (a) or (b).</li><li>&lt;20&gt; The protein according to &lt;19&gt;, which is the above protein (c) or (d).</li><li>&lt;21&gt; A gene selected from the above (e) to (h) that encode the protein according to &lt;19&gt; or &lt;20&gt;.</li><li>&lt;22&gt; Use of the transformant according to any one of &lt;12&gt; to &lt;18&gt; for the production of a lipid.</li></ul></p>
+      <heading id="h-00012-en" level="1">EXAMPLES</heading>
+      <p id="p-00072-en" num="0121">Hereinafter, the present invention will be described more in detail with reference to Examples, but the present invention is not limited thereto.</p>
+      <heading id="h-00013-en" level="1">Example</heading>
+      <heading id="h-00014-en" level="2">1. Construction of Wild-Type Thioesterase (CTE) Gene Expression Plasmid</heading>
+      <p id="p-00073-en" num="0122">A DNA fragment of the wild-type thioesterase gene was amplified by PCR using a gene that encodes the wild-type thioesterase having the nucleotide sequence set forth in SEQ ID NO: 2 as a template, and using a pair of primers of CTE FW (SEQ ID NO: 9) and CTE RV (SEQ ID NO: 10) as shown in the following Table 1. Moreover, a linearly formed pMW 219 was obtained by using a plasmid vector pMW 219 (manufactured by Nippon Gene Co., LTD.) as a template, and according to PCR using a pair of primers of pMW 219 FW (SEQ ID NO: 11) and pMW 219 RV (SEQ ID NO: 12), and then the resultant product was subjected to DpnI treatment. These two DNA fragments were linked using an In-Fusion (registered trademark) HD Cloning Kit (Clonthech, Mountain View, Calif.) to construct a plasmid. The plasmid included a wild-type thioesterase gene fragment (nucleotide sequence of the 334<sup>th </sup>to 1245<sup>th </sup>nucleotides in the nucleotide sequence set forth in SEQ ID NO: 2) being fused to the 27<sup>th </sup>amino acid on an N-terminus of a vector-derived LacZ protein, and the plasmid can express the wild-type thioesterase gene. The insertion of the gene encoding the wild-type thioesterase into the plasmid was confirmed by DNA sequencing.</p>
+      <heading id="h-00015-en" level="2">2. Construction of Thioesterase Variant Gene Expression Plasmid</heading>
+      <p id="p-00074-en" num="0123">DNA fragments including a gene encoding a thioesterase variant CTE(W209T), CTE(W209E), CTE(W209A), or CTE(W209D) were amplified according to PCR. In these variants, the nucleotide sequence TGG (tryptophan: W) at the position of 625<sup>th </sup>to 627<sup>th </sup>in the wild-type thioesterase sequence set forth in SEQ ID NO: 2, was substituted by ACC (threonine: T), GAG (glutamic acid: E), GCC (alanine: A), or GAC (aspartic acid: D). The PCR was carried out by using the wild-type thioesterase expression plasmid constructed in the above section 1 as a template, and a primer pair of CTE_W209T FW (SEQ ID NO: 13) and CTE_W209T RV (SEQ ID NO: 14), a primer pair of CTE_W209E FW (SEQ ID NO: 15) and CTE_W209E RV (SEQ ID NO: 16), a primer pair of CTE_W209A FW (SEQ ID NO: 17) and CTE_W209A RV (SEQ ID NO: 18), or a primer pair of CTE_W209D FW (SEQ ID NO: 19) and CTE_W209D RV (SEQ ID NO: 20) as shown in the following Table 1. The PCR reaction mixtures thus obtained were treated with Dpn I to digest the template DNA. <i>Escherichia coli </i>were transformed by each of the reaction mixture to construct plasmids for expression of the thioesterase variant. The insertion of the gene encoding the thioesterase variant into the plasmid was confirmed by DNA sequencing.</p>
+      <p id="p-00075-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1" tabstyle="monospace">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="147pt" align="left" />
+              <colspec colname="3" colwidth="63pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Primers</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>CTE FW</entry>
+                  <entry>CAGGTCGACTCTAGAGCTCGATTCCAAGAAGAG</entry>
+                  <entry>SEQ ID NO: 9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>GGGGGC</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CTE RV</entry>
+                  <entry>GGTACCCGGGGATCCTCATTTACTCTCAGTTGG</entry>
+                  <entry>SEQ ID NO: 10</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>pMW219 FW</entry>
+                  <entry>CTCTAGATTGGTCCACTGCTTCTCA</entry>
+                  <entry>SEQ ID NO: 11</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>pMW219 RV</entry>
+                  <entry>GCGGCCGCGGCATATGGTGTGTA</entry>
+                  <entry>SEQ ID NO: 12</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CTE_W209T FW</entry>
+                  <entry>ACGTTATCCTACCTGGGGAGACGTGGTTC</entry>
+                  <entry>SEQ ID NO: 13</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CTE_W209T RV</entry>
+                  <entry>ACGTCTCCCCAGGTAGGATAACGTTCGAC</entry>
+                  <entry>SEQ ID NO: 14</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CTE_W209E FW</entry>
+                  <entry>ACGTTATCCTGAGTGGGGAGACGTGGTTC</entry>
+                  <entry>SEQ ID NO: 15</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CTE_W209E RV</entry>
+                  <entry>ACGTCTCCCCACTCAGGATAACGTTCGAC</entry>
+                  <entry>SEQ ID NO: 16</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CTE_W209A FW</entry>
+                  <entry>ACGTTATCCTGCCTGGGGAGACGTGGTTC</entry>
+                  <entry>SEQ ID NO: 17</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CTE_W209A RV</entry>
+                  <entry>ACGTCTCCCCAGGCAGGATAACGTTCGAC</entry>
+                  <entry>SEQ ID NO: 18</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CTE_W209D FW</entry>
+                  <entry>ACGTTATCCTGACTGGGGAGACGTGGTTC</entry>
+                  <entry>SEQ ID NO: 19</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CTE_W209D RV</entry>
+                  <entry>ACGTCTCCCCAGTCAGGATAACGTTCGAC</entry>
+                  <entry>SEQ ID NO: 20</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00016-en" level="2">3. Construction of Transformant</heading>
+      <p id="p-00076-en" num="0124">An <i>Escherichia coli </i>mutant strain, strain K27 (fadD88) (Overath et al, Eur. J. Biochem. 7, 559-574, 1969), was transformed by a competent cell transformation method, using the plasmid that express the wild-type thioesterase or the plasmid that express the thioesterase variant constructed in the above. The transformed strain K27 was left to stand overnight at 30° C., and colonies thus obtained were inoculated in 1 mL of LBKm liquid medium (Bacto Trypton 1%, yeast extract 0.5%, NaCl 1%, and kanamycin 50 μg/mL), and was subjected to shaking culture for 12 hours at 30° C. After 12 hours, 20 μL of the culture fluid was added to another 2.0 mL of LBKm liquid medium, and the mixture was subjected to shaking culture at 30° C. After a lapse of 36 hours from the initiation of culture, lipid components contained in the culture fluid were analyzed by the method described below. Further, after a lapse of 36 hours from the initiation of culture, the light absorbance at 600 nm (OD600) of the culture fluid was measured to calculate the cell numbers of <i>Escherichia coli </i>contained in the culture fluid. As a negative control, <i>Escherichia coli </i>strain K27 that was transformed with plasmid vector pMW219, was also subjected to the same experiment.</p>
+      <p id="p-00077-en" num="0000">4. Extraction of Lipid in <i>Escherichia coli </i>Culture Fluid and Analysis of Fatty Acid Contained Therein</p>
+      <p id="p-00078-en" num="0125">To 1 mL of the culture fluid obtained after a lapse of 36 hours from the initiation of culture, 10 μL of 2N hydrochloric acid, and 30 μL of 7-pentadecanone (5 mg/mL) dissolved in methanol as an internal standard were added. To this liquid, 0.5 mL of chloroform and 1 mL of methanol were added, and the mixture was sufficiently stirred and then was left to stand for 15 minutes. Further, 0.5 mL of a 1.5% aqueous solution of potassium chloride and 0.5 mL of chloroform were added thereto, and the mixture was sufficiently stirred and then was left to stand for 15 minutes. The mixture was centrifuged for 5 minutes at room temperature and at 1,500 rpm, and then the lower layer was collected and dried with nitrogen gas. 1 mL of a boron trifluoride-methanol complex solution was added to the dried sample, and the mixture was kept warm at 80° C. for 10 minutes to thereby performing methyl esterification treatment of fatty acids. Thereafter, 1 mL of saturated brine and 1 mL of hexane were added thereto, and the mixture was sufficiently stirred and then was left to stand for 30 minutes. The upper layer was collected and provided for gas chromatographic analysis (Agilent 6890). The gas chromatography was carried out under the conditions as follows: [capillary column: DB-1 MS 30 m×200 μm×0.25 μm (J&amp;W Scientific, Inc.), mobile layer: high purity helium, flow rate inside the column: 1.0 mL/min, temperature rise program: 100° C. (for 1 min)→10° C./min→300° C. (for 5 min), equilibration time: for 1 min, injection port: split injection (split ratio: 100:1), pressure 14.49 psi, 104 mL/min, amount of injection 1 μL, vial cleaning: methanol•chloroform, detector temperature: 300° C.].</p>
+      <p id="p-00079-en" num="0000">5. Analysis of Lipid and Fatty Acid Content in <i>Escherichia coli </i>Culture Fluid</p>
+      <p id="p-00080-en" num="0126">Amounts of fatty acid methyl esters were quantitatively determined based on the peak areas of the waveform data obtained by the above gas chromatographic analysis. The peak areas corresponding to the individual fatty acids were compared with that of 7-pentadecanone as the internal standard, and carried out corrections between the samples, and then the contents of the individual fatty acids per liter of the culture fluid were calculated. Further, the contents of the individual fatty acids thus calculated were normalized with respect to the cell numbers of <i>Escherichia coli </i>contained in the culture fluid previously measured (OD600). Furthermore, the total content of the individual fatty acids (the total lipid content) was calculated by summing the contents of the individual fatty acids thus obtained. The results are shown in Table 2. Further, ratios of the contents of the individual fatty acids in the total content of the individual fatty acids were shown in Table 3. In addition, in Table 2, the contents of the individual fatty acids and the total content of the individual fatty acids (total lipid content) were expressed in terms of relative values when the content in the transformant into which the wild-type thioesterase gene was introduced was taken as 1.</p>
+      <p id="p-00081-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="center" />
+              <colspec colname="2" colwidth="210pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Fatty acid content</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <colspec colname="6" colwidth="42pt" align="center" />
+              <colspec colname="7" colwidth="63pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Stearic acid</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>(C18:0)</entry>
+                  <entry>Total content</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Lauric acid</entry>
+                  <entry>Myristic acid </entry>
+                  <entry>Palmitic acid</entry>
+                  <entry>Palmitoleic acid</entry>
+                  <entry>Oleic acid</entry>
+                  <entry>of fatty acids</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(C12:0)</entry>
+                  <entry>(C14:0)</entry>
+                  <entry>(C16:0)</entry>
+                  <entry>(C16:1)</entry>
+                  <entry>(C18:1)</entry>
+                  <entry>(Total lipid content)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="42pt" align="char" char="." />
+              <colspec colname="5" colwidth="49pt" align="char" char="." />
+              <colspec colname="6" colwidth="42pt" align="char" char="." />
+              <colspec colname="7" colwidth="63pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>pMW (Control)</entry>
+                  <entry>0</entry>
+                  <entry>0.06</entry>
+                  <entry>0.08</entry>
+                  <entry>1.67</entry>
+                  <entry>0.24</entry>
+                  <entry>0.28</entry>
+                </row>
+                <row>
+                  <entry>CTE</entry>
+                  <entry>1.00</entry>
+                  <entry>1.00</entry>
+                  <entry>1.00</entry>
+                  <entry>1.00</entry>
+                  <entry>1.00</entry>
+                  <entry>1.00</entry>
+                </row>
+                <row>
+                  <entry>CTE(W209T)</entry>
+                  <entry>2.14</entry>
+                  <entry>1.63</entry>
+                  <entry>1.08</entry>
+                  <entry>1.76</entry>
+                  <entry>1.04</entry>
+                  <entry>1.64</entry>
+                </row>
+                <row>
+                  <entry>CTE(W209E)</entry>
+                  <entry>1.60</entry>
+                  <entry>1.33</entry>
+                  <entry>0.92</entry>
+                  <entry>1.67</entry>
+                  <entry>1.19</entry>
+                  <entry>1.45</entry>
+                </row>
+                <row>
+                  <entry>CTE(W209A)</entry>
+                  <entry>1.47</entry>
+                  <entry>1.27</entry>
+                  <entry>0.95</entry>
+                  <entry>1.42</entry>
+                  <entry>0.85</entry>
+                  <entry>1.25</entry>
+                </row>
+                <row>
+                  <entry>CTE(W209D)</entry>
+                  <entry>1.07</entry>
+                  <entry>1.04</entry>
+                  <entry>0.82</entry>
+                  <entry>1.13</entry>
+                  <entry>0.79</entry>
+                  <entry>1.00</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00082-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <colspec colname="6" colwidth="42pt" align="center" />
+              <colspec colname="7" colwidth="63pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="7" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Stearic acid</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>(C18:0)</entry>
+                  <entry>Total content</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Lauric acid</entry>
+                  <entry>Myristic acid </entry>
+                  <entry>Palmitic acid</entry>
+                  <entry>Palmitoleic acid</entry>
+                  <entry>Oleic acid</entry>
+                  <entry>of fatty acids</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(C12:0)</entry>
+                  <entry>(C14:0)</entry>
+                  <entry>(C16:0)</entry>
+                  <entry>(C16:1)</entry>
+                  <entry>(C18:1)</entry>
+                  <entry>(Total lipid content)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <colspec colname="6" colwidth="42pt" align="center" />
+              <colspec colname="7" colwidth="63pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>CTE</entry>
+                  <entry>25.0%</entry>
+                  <entry>35.4%</entry>
+                  <entry>14.8%</entry>
+                  <entry>13.1%</entry>
+                  <entry>11.7%</entry>
+                  <entry>100%</entry>
+                </row>
+                <row>
+                  <entry>CTE(W209T)</entry>
+                  <entry>32.6%</entry>
+                  <entry>35.7%</entry>
+                  <entry> 8.7%</entry>
+                  <entry>15.6%</entry>
+                  <entry> 7.4%</entry>
+                  <entry>100%</entry>
+                </row>
+                <row>
+                  <entry>CTE(W209E)</entry>
+                  <entry>29.0%</entry>
+                  <entry>34.2%</entry>
+                  <entry> 8.8%</entry>
+                  <entry>18.0%</entry>
+                  <entry>10.0%</entry>
+                  <entry>100%</entry>
+                </row>
+                <row>
+                  <entry>CTE(W209A)</entry>
+                  <entry>29.4%</entry>
+                  <entry>35.8%</entry>
+                  <entry>10.0%</entry>
+                  <entry>16.8%</entry>
+                  <entry> 8.0%</entry>
+                  <entry>100%</entry>
+                </row>
+                <row>
+                  <entry>CTE(W209D)</entry>
+                  <entry>26.6%</entry>
+                  <entry>36.8%</entry>
+                  <entry>10.7%</entry>
+                  <entry>16.7%</entry>
+                  <entry> 9.2%</entry>
+                  <entry>100%</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00083-en" num="0127">As is apparent from Table 2, the transformants having the thioesterase variant CTE(W209T), CTE(W209E), or CTE(W209A) exhibited an increase in the contents (amounts of production) of the individual fatty acids and the total content of the individual fatty acids (the total lipid content) to a large extent, as compared with the transformant having the wild-type thioesterase gene.</p>
+      <p id="p-00084-en" num="0128">In contrast, the transformant having the thioesterase variant CTE(W209D) exhibited almost the same production amount of the individual fatty acids as the transformant having the wild-type thioesterase gene.</p>
+      <p id="p-00085-en" num="0129">Having described our invention as related to the present embodiments, it is our intention that the invention not be limited by any of the details of the description, unless otherwise specified, but rather be construed broadly within its spirit and scope as set out in the accompanying claims.</p>
+      <p id="p-00086-en" num="0130">This application claims priority on Patent Application No. 2012-206972 filed in Japan on Sep. 20, 2012, which is entirely herein incorporated by reference.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>. A method of producing a lipid, comprising steps of
+<claim-text>introducing a gene that encodes the following protein (a) or (b) into a host, and thereby obtaining a transformant, and</claim-text><claim-text>collecting a lipid from the transformant:</claim-text><claim-text>wherein the proteins (a) and (b) are:</claim-text><claim-text>(a) A protein comprising an amino acid sequence of the 112<sup>nd </sup>to 414<sup>th </sup>amino acids set forth in SEQ ID NO: 1 in which an amino acid corresponding to the 209<sup>th </sup>amino acid set forth in SEQ ID NO: 1 is substituted from tryptophan to threonine, glutamic acid or alanine, and having thioesterase activity, and</claim-text><claim-text>(b) A protein comprising an amino acid sequence of the protein (a) in which one to ten amino acids other than the amino acid corresponding to the 209<sup>th </sup>amino acid set forth in SEQ ID NO: 1 are deleted, substituted, inserted or added, and having thioesterase activity.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the host is selected from plants, algae and microorganisms.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the host is selected from <i>Arabidopsis thaliana, </i>Cyanobacteria and <i>Escherichia coli. </i></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the lipid contains a lauric acid.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the lipid contains a lauric acid in an amount of 27% by mass or more.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the lipid contains fatty acids having 12 to 16 carbon atoms in an amount of 65% by mass or more.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A transformant obtained by introducing a gene that encodes the following protein (a) or (b) into a host:
+<claim-text>(a) A protein comprising an amino acid sequence of the 112<sup>nd </sup>to 414<sup>th </sup>amino acids set forth in SEQ ID NO: 1 in which an amino acid corresponding to the 209<sup>th </sup>amino acid set forth in SEQ ID NO: 1 is substituted from tryptophan to threonine, glutamic acid or alanine, and having thioesterase activity, and</claim-text><claim-text>(b) A protein comprising an amino acid sequence of the protein (a) in which one to ten amino acids other than the amino acid corresponding to the 209<sup>th </sup>amino acid set forth in SEQ ID NO: 1 are deleted, substituted, inserted or added, and having thioesterase activity.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The transformant according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the host is selected from plants, algae and microorganisms.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The transformant according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the host is selected from the group consisting of <i>Arabidopsis thaliana, </i>Cyanobacteria and <i>Escherichia coli. </i></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>.-<b>13</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>14</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the protein (a) or (b) is the following protein (c) or (d):
+<claim-text>(c) A protein consisting of an amino acid sequence set forth in SEQ ID NO: 1 in which the 209<sup>th </sup>amino acid is substituted from tryptophan to threonine, glutamic acid or alanine, and having thioesterase activity, and</claim-text><claim-text>(d) A protein consisting of an amino acid sequence of the protein (c) in which one to ten amino acids other than the 209<sup>th </sup>amino acid are deleted, substituted, inserted or added, and having thioesterase activity.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>15</b>. The method according to <claim-ref idref="clm-00012-en">claim 14</claim-ref>, wherein the protein (c) consists of the amino acid sequence set forth in SEQ ID NO: 3, SEQ ID NO: 5, or SEQ ID NO: 7.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>16</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the gene that encodes the protein is a gene selected from the following (e) to (h):
+<claim-text>(e) A gene comprising a nucleotide sequence of the 334<sup>th </sup>to 1245<sup>th </sup>nucleotides set forth in SEQ ID NO: 2 in which nucleotides corresponding to the 625<sup>th </sup>to 627<sup>th </sup>nucleotides set forth in SEQ ID NO: 2 are substituted from nucleotides encoding tryptophan to nucleotides encoding threonine, glutamic acid or alanine, and encoding a protein having thioesterase activity,</claim-text><claim-text>(f) A gene comprising a nucleotide sequence of the gene (e) in which one to ten nucleotides other than the nucleotides corresponding to the 625<sup>th </sup>to 627<sup>th </sup>nucleotides set forth in SEQ ID NO: 2 are deleted, substituted, inserted or added, and encoding a protein having thioesterase activity,</claim-text></claim-text>
+      <claim-text>(g) A gene consisting of a nucleotide sequence set forth in SEQ ID NO: 2 in which the 625<sup>th </sup>to 627<sup>th </sup>nucleotides are substituted from nucleotides encoding tryptophan to nucleotides encoding threonine, glutamic acid or alanine, and encoding a protein having thioesterase activity, and</claim-text>
+      <claim-text>(h) A gene consisting of a nucleotide sequence of the gene (g) in which one to ten nucleotides other than the 625<sup>th </sup>to 627<sup>th </sup>nucleotides are deleted, substituted, inserted or added, and encoding a protein having thioesterase activity.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>17</b>. The method according to <claim-ref idref="clm-00014-en">claim 16</claim-ref>, wherein the gene (g) is consisting of the nucleotide sequence set forth in SEQ ID NO: 4, SEQ ID NO: 6, or SEQ ID NO: 8.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>18</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the lipid contains fatty acids having 12 to 16 carbon atoms in an amount of 65% by mass or more.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>19</b>. The transformant according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the protein (a) or (b) is the following protein (c) or (d):
+<claim-text>(c) A protein consisting of an amino acid sequence set forth in SEQ ID NO: 1 in which the 209<sup>th </sup>amino acid is substituted from tryptophan to threonine, glutamic acid or alanine, and having thioesterase activity, and</claim-text><claim-text>(d) A protein consisting of an amino acid sequence of the protein (c) in which one to ten amino acids other than the 209<sup>th </sup>amino acid are deleted, substituted, inserted or added, and having thioesterase activity.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>20</b>. The transformant according to <claim-ref idref="clm-00017-en">claim 19</claim-ref>, wherein the protein (c) consists of the amino acid sequence set forth in SEQ ID NO: 3, SEQ ID NO: 5, or SEQ ID NO: 7.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>21</b>. The transformant according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the gene that encodes the protein is a gene selected from the following (e) to (h):
+<claim-text>(e) A gene comprising a nucleotide sequence of the 334<sup>th </sup>to 1245<sup>th </sup>nucleotides set forth in SEQ ID NO: 2 in which nucleotides corresponding to the 625<sup>th </sup>to 627<sup>th </sup>nucleotides set forth in SEQ ID NO: 2 are substituted from nucleotides encoding tryptophan to nucleotides encoding threonine, glutamic acid or alanine, and encoding a protein having thioesterase activity,</claim-text><claim-text>(f) A gene comprising a nucleotide sequence of the gene (e) in which one to ten nucleotides other than the nucleotides corresponding to the 625<sup>th </sup>to 627<sup>th </sup>nucleotides set forth in SEQ ID NO: 2 are deleted, substituted, inserted or added, and encoding a protein having thioesterase activity,</claim-text><claim-text>(g) A gene consisting of a nucleotide sequence set forth in SEQ ID NO: 2 in which the 625<sup>th </sup>to 627<sup>th </sup>nucleotides are substituted from nucleotides encoding tryptophan to nucleotides encoding threonine, glutamic acid or alanine, and encoding a protein having thioesterase activity, and</claim-text><claim-text>(h) A gene consisting of a nucleotide sequence of the gene (g) in which one to ten nucleotides other than the 625<sup>th </sup>to 627<sup>th </sup>nucleotides are deleted, substituted, inserted or added, and encoding a protein having thioesterase activity.</claim-text></claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>22</b>. The transformant according to <claim-ref idref="clm-00019-en">claim 21</claim-ref>, wherein the gene (g) consists of the nucleotide sequence set forth in SEQ ID NO: 4, SEQ ID NO: 6, or SEQ ID NO: 8.</claim-text>
+    </claim>
+  </claims>
+  <image file="US20150247173A1.PDF" type="pdf" size="2044531" pages="20" />
+</lexisnexis-patent-document>

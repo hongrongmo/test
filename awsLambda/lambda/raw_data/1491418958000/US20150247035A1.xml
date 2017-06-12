@@ -1,0 +1,1163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247035A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021447" date-changed="20151223" time-changed="182840">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140112">
+        <country>US</country>
+        <doc-number>20150247035</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14632019</doc-number>
+        <date>20150226</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020140024022</doc-number>
+        <date>20140228</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>KR</country>
+        <doc-number>1020150022497</doc-number>
+        <date>20150213</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151223">
+      <classification-ipcr sequence="1">
+        <text>C08L  67/03        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>67</main-group>
+        <subgroup>03</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>H01L  33/60        20100101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20100101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>33</main-group>
+        <subgroup>60</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>H01L  51/00        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>51</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151223">
+      <classification-cpc sequence="1">
+        <text>H01L  33/60        20130101 FI20151123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>33</main-group>
+        <subgroup>60</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C08L  67/02        20130101 LI20151120BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>67</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C08L2201/02        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>2201</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C08L2201/08        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>2201</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C08L2203/20        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>2203</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C08L2205/16        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>2205</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C08L2207/04        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>2207</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>H01L  51/5271      20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>51</main-group>
+        <subgroup>5271</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C08L  67/02        20130101 LI20151120BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>67</main-group>
+            <subgroup>02</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151120</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08K   3/0033      20130101 LI20151120BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>K</subclass>
+            <main-group>3</main-group>
+            <subgroup>0033</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151120</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>C08L  67/02        20130101 LI20151120BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>67</main-group>
+            <subgroup>02</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151120</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">10</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">Polyester Resin Composition Having Improved Mechanical Properties and Anti-Discoloration</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>SAMSUNG SDI CO., LTD.</orgname>
+            <address>
+              <city>Yongin-si</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>KR</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>JUNG</last-name>
+            <first-name>Yoo Jin</first-name>
+            <address>
+              <city>Uiwang-si</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>KANG</last-name>
+            <first-name>Tae Gon</first-name>
+            <address>
+              <city>Uiwang-si</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>PARK</last-name>
+            <first-name>Chan Moo</first-name>
+            <address>
+              <city>Uiwang-si</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>LIM</last-name>
+            <first-name>Jong Cheol</first-name>
+            <address>
+              <city>Uiwang-si</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>HONG</last-name>
+            <first-name>Sang Hyun</first-name>
+            <address>
+              <city>Uiwang-si</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20151009">
+      <main-family family-id="173463210">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104877313</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20150302</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247035</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="174069844">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104877313</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20150302</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247035</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150102859</doc-number>
+            <kind>A</kind>
+            <date>20150908</date>
+          </document-id>
+          <application-date>
+            <date>20150213</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A polyester resin composition comprises: (A) a first polyester resin having a melting temperature of greater than about 285° C.; (B) a second polyester resin having a melting temperature of less than or equal to about 285° C.; (C) a white pigment; and (D) an inorganic filler. The polyester resin composition may exhibit improved mechanical properties and discoloration resistance and can be used in a molded article, for example, as a LED reflector.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150226</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247035A1</docdb-publication-number>
+      <docdb-application-id>444209971</docdb-application-id>
+      <new-owner>SAMSUNG SDI CO., LTD., KOREA, REPUBLIC OF</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:JUNG, YOO JIN;KANG, TAE GON;PARK, CHAN MOO;AND OTHERS;REEL/FRAME:035037/0713</free-text-description>
+      <effective-date>
+        <date>20150225</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims priority to and the benefit of Korean Patent Application No. 10-2014-0024022, filed on Feb. 28, 2014, in the Korean Intellectual Property Office, and Korean Patent Application No. 10-2015-0022497, filed on Feb. 13, 2015, in the Korean Intellectual Property Office, the entire disclosure of each of which is incorporated herein by reference.</p>
+      <heading id="h-00002-en" level="1">FIELD OF THE INVENION</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to a polyester resin composition and a molded article produced using the same.</p>
+      <p id="p-00003-en" num="0003">BACKGROUND</p>
+      <p id="p-00004-en" num="0004">Lighting display devices, such as light emitting diodes (LEDs), organic light emitting diodes (OLEDs), and the like using novel light sources have rapidly superseded existing light sources and have come to the forefront of light technology. The lighting display devices form a lighting display device package together with components such as reflectors, reflector cups, scramblers, housings, etc. The lighting display devices may efficiently utilize light by maximizing optical efficiency while having high reflectivity. To this end, it is desired for materials used for such a component to be able to withstand high temperatures and to minimize decreased whiteness due to reflection and yellowing.</p>
+      <p id="p-00005-en" num="0005">Thermoplastic and thermal resistant polyester resins have been used as the materials for the lighting display devices. The thermoplastic and thermal resistant polyester resins can have minimal deformation and excellent discoloration resistance at high temperatures relative to other resins, but can also exhibit problems of reduced impact resistance.</p>
+      <p id="p-00006-en" num="0006">To resolve the problems, compositions in which white pigments and fillers are added to the polyester resins have been developed. Reference is made, for example, to Korean patent laid-open publication No. 2012-0140332 A, which is directed to a polyester resin composition including a polyester resin defined therein, white pigment, and filler. However, such compositions also can have problems such as dramatically reduced impact strength and moldability depending on the amounts of the white pigments and the fillers, and decreased light stability at high temperatures during long term operations.</p>
+      <p id="p-00007-en" num="0007">Therefore, in the thermoplastic polyester resins used for the components of the lighting display devices, there has been increasing demand for technologies to impart heat resistance to the polyester resins and improve light stability and discoloration resistance of the polyester resins even though exposed to light and heat for a long time, without decreasing moldability and mechanical properties.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00008-en" num="0008">The present invention relates to a polyester resin composition including (A) a first polyester resin having a melting temperature of greater than about 285° C.; (B) a second polyester resin having a melting temperature of less than or equal to about 285° C.; (C) a white pigment; and (D) an inorganic filler.</p>
+      <p id="p-00009-en" num="0009">According to exemplary embodiments, the polyester resin composition may include (A) about 20 wt % to about 80 wt % of the first polyester resin, (B) about 10 wt % to about 70 wt % of the second polyester resin; (C) about 5 wt % to about 60 wt % of the white pigment; and (D) about 1 wt % to about 40 wt % of the inorganic filler.</p>
+      <p id="p-00010-en" num="0010">According to exemplary embodiments, (A) the first polyester resin may be a polyester resin derived from an aromatic dicarboxylic acid and an alicyclic diol and may have a melting temperature of greater than about 285° C. to about 320° C. or less, and (B) the second polyester resin may be a copolyester resin derived from an aromatic dicarboxylic acid and an alicyclic diol and may have a melting temperature of about 250° C. or more to about 285° C. or less.</p>
+      <p id="p-00011-en" num="0011">According to exemplary embodiments, (A) the first polyester resin and/or (B) the second polyester resin may include the basic structure unit represented by Formula 1:</p>
+      <p id="p-00012-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="14.48mm" wi="73.83mm" alt="embedded image" img-content="chem" file="US20150247035A1_00003.PNG" img-format="png" original="US20150247035A1-20150903-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00013-en" num="0000">wherein in Formula 1, each A is the same or different and each is independently C<sub>6 </sub>to C<sub>12 </sub>arylene, each B is the same or different and each is independently C<sub>3 </sub>to C<sub>12 </sub>cycloalkylene, R<sub>1 </sub>to R<sub>4 </sub>are the same or different and are each independently hydrogen or C<sub>1 </sub>to C<sub>10 </sub>alkyl, n and m are the same or different and are each independently an integer selected from 1 to 10, and x is an integer selected from 10 to 500.</p>
+      <p id="p-00014-en" num="0012">According to exemplary embodiments, the aromatic dicarboxylic acid forming (B) the second polyester resin may include terephthalic acid (TPA) and isophthalic acid (IPA), and a weight ratio of the terephthalic acid to the isophthalic acid may be from about 80 to 99.95 to from about 0.05 to 20.</p>
+      <p id="p-00015-en" num="0013">According to exemplary embodiments, the white pigment may be at least one or more of titanium oxide, zinc oxide, zinc sulfide, lead white (white lead), zinc sulfate, barium sulfate, calcium carbonate, and/or alumina, and the inorganic filler may be at least one or more of glass fiber, carbon fiber, ceramic fiber, metal fiber, silica, talc, clay, mica and/or whisker.</p>
+      <p id="p-00016-en" num="0014">The present invention also relates to a molded article produced from the polyester resin composition as described above.</p>
+      <p id="p-00017-en" num="0015">According to exemplary embodiments, the molded article may satisfy Equations 1 to 3:</p>
+      <p id="p-00018-en" num="0000">[in-line-formulae]17≦Is≦30   Eq. (1)[/in-line-formulae]</p>
+      <p id="p-00019-en" num="0000">[in-line-formulae]1000≦Fs≦1300   Eq. (2)[/in-line-formulae]</p>
+      <p id="p-00020-en" num="0000">[in-line-formulae]94.0≦Re≦99   Eq. (3)[/in-line-formulae]</p>
+      <p id="p-00021-en" num="0000">wherein in Equation (1), Is is impact strength (kgf cm/cm) measured on ⅛ inch samples according to ASTM D256, in Equation (2), Fs is flexural strength (kg f/cm<sup>2</sup>) measured at a rate of 2.8 mm/min according to ASTM D790, and in Equation (3), Re is an initial reflectivity (%) measured at a wavelength of 450 nm using a color meter.</p>
+      <p id="p-00022-en" num="0016">According to exemplary embodiments, the molded article may have an initial yellowness index of less than about 4, and a yellowness index change (ΔYI) of less than about 7 after leaving the molded article at a temperature of 170° C. for 500 hours.</p>
+      <p id="p-00023-en" num="0017">According to exemplary embodiments, the molded article may be a LED reflector.</p>
+      <p id="p-00024-en" num="0018">The polyester resin composition according to the present invention may have advantages of excellent mechanical properties and/or significantly improved discoloration resistance and/or light stability, such as reflectivity change, etc.</p>
+      <p id="p-00025-en" num="0019">Furthermore, the molded article produced from the polyester resin composition according to the present invention may have advantages of excellent mechanical properties and/or significantly improved discoloration resistance and/or reflectivity change, as well as excellent optical properties adapted for a use as a LED reflector with minimal or no deformation.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00026-en" num="0020">
+        <figref>FIG. 1</figref> illustrates a reflector including a resin composition according to one embodiment of the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00027-en" num="0021">Exemplary embodiments now will be described more fully hereinafter in the following detailed description, in which some, but not all embodiments of the invention are described. Indeed, this invention may be embodied in many different forms and should not be construed as limited to the embodiments set forth herein; rather, these embodiments are provided so that this disclosure will satisfy applicable legal requirements.</p>
+      <p id="p-00028-en" num="0022">In addition, unless the used technical and scientific terms are otherwise specifically defined, the terms are intended to have the meanings ordinarily understood by the person of ordinary skill in the art. Moreover, explanations of known functions and constructions will be omitted in the following detailed description.</p>
+      <p id="p-00029-en" num="0023">A polyester resin composition and a molded article produced from the same of the present invention may decrease yellowness index change and maximize discoloration resistance and light stability, as well as improve significantly mechanical properties such as impact strength, flexural strength, and the like.</p>
+      <p id="p-00030-en" num="0024">Each component will be described more fully hereinafter.</p>
+      <p id="p-00031-en" num="0025">According to exemplary embodiments of the present invention, the polyester resin composition may include a first polyester resin having a melting temperature of greater than about 285° C.; (B) a second polyester resin having a melting temperature of less than or equal to about 285° C.; (C) a white pigment; and (D) an inorganic filler.</p>
+      <p id="p-00032-en" num="0026">(A) First Polyester Resin</p>
+      <p id="p-00033-en" num="0027">A first polyester resin according to exemplary embodiments of the present invention may be used to provide excellent heat resistance, mechanical strength and/or impact resistance. The first polyester resin may be an aromatic polyester resin. The aromatic polyester resin may have high melting point as a result of including a ring structure in the main chain of the polymer.</p>
+      <p id="p-00034-en" num="0028">The first polyester resin may have a melting temperature of greater than about 285° C. For example, the first polyester resin may have a melting temperature of greater than about 285° C. to about 320° C. or less. Within this range of melting temperature, the first polyester may have improved moldability. In addition, if the first polyester resin has a melting temperature in the range of the melting temperature as described above, it may have advantages of excellent heat resistance and/or impact resistance, and can provide improved mechanical properties and/or discoloration resistance when combined with the second polyester resin.</p>
+      <p id="p-00035-en" num="0029">The first polyester resin may be a resin polycondensed by melt polymerization of a dicarboxylic acid component including an aromatic dicarboxylic acid and/or a derivative thereof; and a diol component.</p>
+      <p id="p-00036-en" num="0030">Examples of the dicarboxylic acid of the dicarboxylic acid component can include without limitation terephthalic acid, isophthalic acid, phthalic acid, naphthalene dicarboxylic acid, and the like, lower alkyl (for example C<sub>1 </sub>to C<sub>4 </sub>alkyl) esters thereof, and mixtures thereof In exemplary embodiments, terephthalic acid may be used as the dicarboxylic acid component.</p>
+      <p id="p-00037-en" num="0031">The diol component may include an alicyclic diol to form a repeating unit having a ring structure. For example, the alicyclic diol may be a diol having a saturated hydrocarbon ring and having 3 to 54 carbon atoms in a molecule. In exemplary embodiments, 1,4-cyclohexanedimethanol (CHDM) may be used as the alicyclic diol.</p>
+      <p id="p-00038-en" num="0032">According to exemplary embodiments, the first polyester resin may include the basic structure unit represented by the following Formula 1:</p>
+      <p id="p-00039-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="14.48mm" wi="73.83mm" alt="embedded image" img-content="chem" file="US20150247035A1_00004.PNG" img-format="png" original="US20150247035A1-20150903-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00040-en" num="0033">wherein in Formula 1, each A is the same or different and each is independently C<sub>6 </sub>to C<sub>12 </sub>arylene, each B is the same or different and each is independently C<sub>3 </sub>to C<sub>12 </sub>cycloalkylene, R<sub>1 </sub>to R<sub>4 </sub>are the same or different and are each independently hydrogen or C<sub>1 </sub>to C<sub>10 </sub>alkyl, n and m are the same or different and are each independently an integer selected from 1 to 10, and x is an integer selected from 10 to 500.</p>
+      <p id="p-00041-en" num="0034">As used herein, the term “arylene” refers a aromatic hydrocarbon group having one or more aromatic rings, each of which may contain four to seven, for example five or six, ring carbon atoms, and can be obtained by removing one hydrogen atom from the ring atoms (for example, one or two ring carbon atoms) of a monocyclic hydrocarbon or a fused ring hydrocarbon. Examples of the arylene may include without limitation p-phenylene, o-phenylene, m-phenylene, naphthalene, and the like, and mixtures thereof</p>
+      <p id="p-00042-en" num="0035">As used herein, the term “cycloalkylene” refers to a divalent hydrocarbon group obtained by removing one hydrogen atom from a ring atom (for example, one or two ring carbon atoms) of a C<sub>3 </sub>to C<sub>12 </sub>saturated monocyclic hydrocarbon and/or a C<sub>3 </sub>to C<sub>12 </sub>saturated bicyclic hydrocarbon. Examples of the cycloalkylene may include without limitation cyclopropylene, cyclobutylene, cyclopentylene, cyclohexylene, cycloheptylene, cyclooctylene, and the like, and mixtures thereof</p>
+      <p id="p-00043-en" num="0036">In exemplary embodiments, in Formula 1 in the first polyester resin of the present invention, A represents</p>
+      <p id="p-00044-en" num="0000">
+        <chemistry id="chem-00003-en" num="00003">
+          <img id="img-00003-en" he="9.99mm" wi="24.55mm" alt="embedded image" img-content="chem" file="US20150247035A1_00005.PNG" img-format="png" original="US20150247035A1-20150903-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00045-en" num="0000">B represents</p>
+      <p id="p-00046-en" num="0000">
+        <chemistry id="chem-00004-en" num="00004">
+          <img id="img-00004-en" he="11.60mm" wi="18.88mm" alt="embedded image" img-content="chem" file="US20150247035A1_00006.PNG" img-format="png" original="US20150247035A1-20150903-C00004.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00047-en" num="0000">R<sub>1 </sub>to R<sub>4 </sub>are each hydrogen, and n and m may each be 1.</p>
+      <p id="p-00048-en" num="0037">Since the first polyester resin of the present invention includes the basic structure unit as described above, it may have advantages of significantly improved heat resistance and/or excellent compatibility with the second polyester resin, and thus can provide significantly improved moldability and/or mechanical properties, as well as discoloration resistance and/or light stability.</p>
+      <p id="p-00049-en" num="0038">The (A) first polyester resin may have an intrinsic viscosity [η] of from about 0.4 dl/g to about 1.5 dl/g, for example from about 0.5 dl/g to about 1.2 dl/g in o-chlorophenol solution measured at 35° C. Within this range, the first polyester resin may have excellent mechanical properties and/or moldability.</p>
+      <p id="p-00050-en" num="0039">The first polyester resin may be prepared by any well known conventional polycondensation process. For example, the polycondensation process may include the direct condensation of one or more dicarboxylic acids with one or more glycols and/or the transesterification reaction of one or more lower alkyl esters of one or more dicarboxylic acids with one or more glycols.</p>
+      <p id="p-00051-en" num="0040">The first polyester resin may have a weight average molecular weight of from about 5,000 g/mol to about 30,000 g/mol, for example from about 5,000 g/mol to about 20,000 g/mol. Within this range, the first polyester resin may have excellent mechanical properties and/or moldability.</p>
+      <p id="p-00052-en" num="0041">The polyester resin composition may include the first polyester resin in an amount of from about 20 wt % to about 80 wt %, for example about 30 wt % to about 60 wt %, based on the total weight (100 wt %) of the polyester resin composition. In some embodiments, the polyester resin composition may include the first polyester resin in an amount of about 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, or 80 wt %. Further, according to some embodiments, the amount of the first polyester resin can be in a range of from about any of the foregoing amounts to about any other of the foregoing amounts.</p>
+      <p id="p-00053-en" num="0042">Within this range, the polyester resin composition may have improved heat resistance, mechanical strength and/or impact resistance. In addition, within this range, the polyester resin composition may have improved moldability.</p>
+      <p id="p-00054-en" num="0043">(B) Second Polyester Resin</p>
+      <p id="p-00055-en" num="0044">A second polyester resin according to one embodiment of the present invention may be used to improve moldability and/or mechanical strength. The second polyester resin may be an aromatic polyester resin like the first polyester resin.</p>
+      <p id="p-00056-en" num="0045">The second polyester resin may have a melting temperature of less than or equal to about 285° C., for example from about 250° C. or more to about 285° C. or less, and as another example from about 250° C. to about 279° C. The second polyester resin has a melting temperature that is different from, and lower than, the melting temperature of the first polyester resin. Within this range, the second polyester resin may provide improved moldability. In addition, within this range, the second polyester resin may have improved compatibility with the first polyester resin, and thus can provide improved mechanical properties and/or discoloration resistance.</p>
+      <p id="p-00057-en" num="0046">Accordingly, if the second polyester resin has a melting temperature in the range as described above, it may have advantages of excellent heat resistance and/or mechanical properties, as well as significantly improved discoloration resistance and/or ability to maintain the reflectivity when combined with the first polyester resin.</p>
+      <p id="p-00058-en" num="0047">The second polyester resin may be a copolymer of the resin polycondensed by melt polymerization of a dicarboxylic acid component including an aromatic dicarboxylic acid and/or a derivative thereof; and a diol component.</p>
+      <p id="p-00059-en" num="0048">For example, one, two, or more of terephthalic acid, isophthalic acid, phthalic acid, naphthalene dicarboxylic acid, and the like may be used as the dicarboxylic acid of the dicarboxylic acid component. In exemplary embodiments, a mixture of terephthalic acid and isophthalic acid may be used.</p>
+      <p id="p-00060-en" num="0049">In one embodiment, the dicarboxylic acid used in the second polyester resin may include terephthalic acid (TPA) and isophthalic acid (IPA), wherein terephthalic acid and isophthalic acid may be present at a weight ratio of from about 80 to 99.95 to from about 0.05 to 20. For example, terephthalic acid and isophthalic acid may be present at a weight ratio of from about 90 to 99.9 to from about 0.1 to 10.</p>
+      <p id="p-00061-en" num="0050">In exemplary embodiments, when the dicarboxylic acid component of the second polyester resin includes both terephthalic acid and isophthalic acid, the dicarboxylic acid component may include terephthalic acid in an amount of about 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 99.1, 99.2, 99.3, 99.4, 99.5, 99.6, 99.7, 99.8, 99.9, 99.91, 99.92, 99.93, 99.94 or 99.95 wt %. Further, according to some embodiments, the amount of terephthalic acid can be in a range of from about any of the foregoing amounts to about any other of the foregoing amounts.</p>
+      <p id="p-00062-en" num="0051">In exemplary embodiments, when the dicarboxylic acid component of the second polyester resin includes both terephthalic acid and isophthalic acid, the dicarboxylic acid component may include isophthalic acid in an amount of about 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 2, 3, 4, 5, 6, 7 , 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, or 20 wt %. Further, according to some embodiments, the amount of isophthalic acid can be in a range of from about any of the foregoing amounts to about any other of the foregoing amounts</p>
+      <p id="p-00063-en" num="0052">Within this range, the second polyester resin may have excellent mechanical properties such as impact strength and/or flexural strength, and/or more excellent crystallization rate and/or moldability.</p>
+      <p id="p-00064-en" num="0053">Accordingly, if terephthalic acid (TPA) and isophthalic acid (IPA) are present in the range of the weight ratio as described above, it can be possible to improve mechanical properties such as impact strength and/or flexural strength with minimal or no deformation of the molded article at high temperatures, as well as improve discoloration resistance caused by light and heat, and/or ability to maintain reflectivity.</p>
+      <p id="p-00065-en" num="0054">An alicyclic diol having ring structure may be used as the diol component to form a repeating unit. For example, 1,4-cyclohexanedimethanol (CHDM) may be used as the alicyclic diol.</p>
+      <p id="p-00066-en" num="0055">According to exemplary embodiments, the second polyester resin may include the basic structure unit represented by the following Formula 1:</p>
+      <p id="p-00067-en" num="0000">
+        <chemistry id="chem-00005-en" num="00005">
+          <img id="img-00005-en" he="14.48mm" wi="73.83mm" alt="embedded image" img-content="chem" file="US20150247035A1_00007.PNG" img-format="png" original="US20150247035A1-20150903-C00005.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00068-en" num="0056">wherein in Formula 1, each A is the same or different and each is independently C<sub>6 </sub>to C<sub>12 </sub>arylene, each B is the same or different and each is independently C<sub>3 </sub>to C<sub>12 </sub>cycloalkylene, R<sub>1 </sub>to R<sub>4 </sub>are the same or different and are each independently hydrogen or C<sub>1 </sub>to C<sub>10 </sub>alkyl, n and m are the same or different and are each independently an integer selected from 1 to 10, and x is an integer selected from 10 to 500.</p>
+      <p id="p-00069-en" num="0057">In exemplary embodiments, A represents</p>
+      <p id="p-00070-en" num="0000">
+        <chemistry id="chem-00006-en" num="00006">
+          <img id="img-00006-en" he="9.99mm" wi="23.88mm" alt="embedded image" img-content="chem" file="US20150247035A1_00008.PNG" img-format="png" original="US20150247035A1-20150903-C00006.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00071-en" num="0000">and/or</p>
+      <p id="p-00072-en" num="0000">
+        <chemistry id="chem-00007-en" num="00007">
+          <img id="img-00007-en" he="12.36mm" wi="21.51mm" alt="embedded image" img-content="chem" file="US20150247035A1_00009.PNG" img-format="png" original="US20150247035A1-20150903-C00007.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00073-en" num="0000">B represents</p>
+      <p id="p-00074-en" num="0000">
+        <chemistry id="chem-00008-en" num="00008">
+          <img id="img-00008-en" he="11.60mm" wi="18.88mm" alt="embedded image" img-content="chem" file="US20150247035A1_00010.PNG" img-format="png" original="US20150247035A1-20150903-C00008.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00075-en" num="0000">R<sub>1 </sub>to R<sub>4 </sub>are hydrogen, and n and m may each be 1 in Formula 1 in the second polyester resin of the present invention.</p>
+      <p id="p-00076-en" num="0058">Since the second polyester resin of the present invention includes the basic structure unit as described above, it may have advantages of excellent compatibility with the first polyester resin and may provide decreased crystallization rate of the polyester resin composition, and thus can provide significantly improved moldability and/or mechanical properties, as well as discoloration resistance and/or light stability.</p>
+      <p id="p-00077-en" num="0059">The (B) second polyester resin may have an intrinsic viscosity [η] of from about 0.5 dl/g to about 2.0 dl/g, for example from about 0.7 dl/g to about 1.5 dl/g in o-chlorophenol solution measured at 35° C. Within this range, the second polyester resin may have excellent mechanical properties and/or moldability.</p>
+      <p id="p-00078-en" num="0060">The second polyester resin may be prepared by any well known conventional polycondensation process. For example, the polycondensation process may include the direct condensation of one or more dicarboxylic acids with one or more glycols and/or the transesterification reaction of one or more lower alkyl esters of one or more dicarboxylic acids with one or more glycols.</p>
+      <p id="p-00079-en" num="0061">The second polyester resin may have a weight average molecular weight of from about about 5,000 g/mol to about 40,000 g/mol, for example from about 5,000 g/mol to about 30,000 g/mol. Within this range, the second polyester resin may have excellent mechanical properties and/or moldability.</p>
+      <p id="p-00080-en" num="0062">The polyester resin composition may include the second polyester resin in an amount of from about 10 wt % to about 70 wt %, for example about 10 wt % to about 50 wt %, based on the total weight (100 wt %) of the polyester resin composition. In some embodiments, the polyester resin composition may include the second polyester resin in an amount of about 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, or 70 wt %. Further, according to some embodiments, the amount of the second polyester resin can be in a range of from about any of the foregoing amounts to about any other of the foregoing amounts.</p>
+      <p id="p-00081-en" num="0063">Within this range, the polyester resin composition may have improved heat resistance and/or moldability.</p>
+      <p id="p-00082-en" num="0064">(C) White Pigment</p>
+      <p id="p-00083-en" num="0065">According to exemplary embodiments, a white pigment may be added to the polyester resin composition to improve reflectivity and/or discoloration resistance. The type of white pigment used is not particularly limited. Examples of the white pigment may include without limitation titanium oxide, zinc oxide, zinc sulfide, lead white (white lead, 2PbCO3.Pb(OH)2), zinc sulfate, barium sulfate, calcium carbonate, alumina, and the like, and mixtures thereof</p>
+      <p id="p-00084-en" num="0066">The white pigment in combination with other components may increase whiteness and/or reflectivity, and may improve discoloration resistance and/or light stability at high temperatures for a long time.</p>
+      <p id="p-00085-en" num="0067">The polyester resin composition may include the white pigment in an amount of from about 5 wt % to about 60 wt %, for example about 15 wt % to about 40 wt %, based on the total weight (100 wt %)of the polyester resin composition. In some embodiments, the polyester resin composition may include the white pigment in an amount of about 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, or 60 wt %. Further, according to some embodiments, the amount of the white pigment can be in a range of from about any of the foregoing amounts to about any other of the foregoing amounts.</p>
+      <p id="p-00086-en" num="0068">Within this range, it is possible to have an effect of increasing whiteness and/or reflectivity, and/or improve impact resistance and/or mechanical strength of the polyester composition.</p>
+      <p id="p-00087-en" num="0069">In exemplary embodiments, titanium oxide, which has high whiteness, light reflectivity and dispersibility, and excellent weather resistance and chemical stability in combination with other components, may be used as the white pigment. Although the crystal structure of the titanium oxide is not particularly limited, titanium oxide having a rutile and/or tetragonal crystal can be used because it can be stable even upon exposure to high temperatures for a long time, and can efficiently prevent the lowering of reflectivity.</p>
+      <p id="p-00088-en" num="0070">The white pigment may have a particle size, for example, from about 0.01 μm to about 2.0 μm, and as another example from about 0.05 μm to about 0.7 μm. Within this range, it may exhibit excellent reflectivity.</p>
+      <p id="p-00089-en" num="0071">A white pigment surface-modified with an organic and/or inorganic surface modifying agent may be used as the white pigment.</p>
+      <p id="p-00090-en" num="0072">Examples of the organic surface modifying agent can include without limitation silane coupling agents, polydimethylsiloxane, trimethylpropane (TMP), pentaerythritol, and the like, alone or in combination with two or more thereof</p>
+      <p id="p-00091-en" num="0073">For example, the silane coupling agent may include vinyltriethoxysilane, 2-aminopropyl triethoxysilane, and/or 2-glycidoxypropyl triethoxysilane, and the like.</p>
+      <p id="p-00092-en" num="0074">Examples of the inorganic surface modifying agent may include without limitation aluminum oxide (alumina, Al203), silicone dioxide (silica, SiO2), zirconia (zirconium dioxide, ZrO2), sodium silicate, sodium aluminate, sodium aluminum silicate, zinc oxide, and the like, alone or in combination with two or more thereof</p>
+      <p id="p-00093-en" num="0075">The organic and/or inorganic surface modifying agent may be present in an amount of from 0 part by weight (the surface modifying agent is not present), about 0 part by weight (the surface modifying agent is present) to less than about 5 parts by weight based on about 100 parts by weight of the white pigment. Within this range, it is possible to have an effect of increasing whiteness and/or reflectivity, and/or improve impact resistance and/or mechanical strength of the polyester composition.</p>
+      <p id="p-00094-en" num="0076">(D) Inorganic Filler</p>
+      <p id="p-00095-en" num="0077">According to exemplary embodiments, an inorganic filler may be added to the polyester resin composition to improve intensity of the resin. Examples of the kind or type of inorganic filler may include without limitation fiber-, particle-, load-, needle-, flake-, amorphous-type fillers, and the like, and mixtures thereof. In exemplary embodiments, fiber-type inorganic filler may be used.</p>
+      <p id="p-00096-en" num="0078">For example, at least one or more of fiber-type inorganic filler such as glass fiber, carbon fiber, ceramic fiber, and/or metal fiber, and the like, and/or silica, talc, clay, mica and/or whisker may be used.</p>
+      <p id="p-00097-en" num="0079">In exemplary embodiments, the inorganic filler may be a glass fiber.</p>
+      <p id="p-00098-en" num="0080">In exemplary embodiments, the glass fiber may have a cross-sectional diameter of from about 5 μm to about 20 and may have a cylindrical (round) cross-section and have a length of from about 2 mm to about 5 mm prior to processing. In other exemplary embodiments, the glass fiber may have a cross-sectional aspect ratio (long diameter of the cross-section/short diameter of the cross-section) of from about 1.5 to about 10, and may have a plate type (flat) cross-section and have a length of from about 2 mm to about 5 mm prior to processing. If such inorganic filler is used, it is possible to improve moldability of the resin, and/or improve significantly mechanical properties such as flexural strength, impact strength, etc. of the molded article.</p>
+      <p id="p-00099-en" num="0081">An inorganic filler surface coated with a surface modifying agent may be used to increase adhesion with the polyester resin. Examples of the surface modifying agent may include without limitation silane compounds, urethane compounds, epoxy compounds, and the like, and mixtures thereof.</p>
+      <p id="p-00100-en" num="0082">According to exemplary embodiments, the polyester resin composition may include inorganic filler in an amount of from about 1 wt % to about 40 wt %, for example about 10 wt % to about 20 wt %, based on the total weight (100 wt %) of the polyester resin composition. In some embodiments, the polyester resin composition may include the inorganic filler in an amount of about 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, or 40 wt %. Further, according to some embodiments, the amount of the inorganic filler can be in a range of from about any of the foregoing amounts to about any other of the foregoing amounts.</p>
+      <p id="p-00101-en" num="0083">Within this range, it is possible to improve mechanical properties and/or heat resistance. In addition, within this range, it is possible to improve fluidity and/or moldability.</p>
+      <p id="p-00102-en" num="0084">In exemplary embodiments, the polyester resin composition can include a total (combined) amount of the white pigment and the inorganic filler of from about 6 wt % to about 61 wt %, for example, from about 45 wt % to about 55 wt %, based on the total weight (100 wt %) of the polyester resin composition. In some embodiments, the polyester resin composition may include the white pigment and the inorganic filler in a total amount of about 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, or 61 wt % . Further, according to some embodiments, the total amount of the white pigment and the inorganic filler can be in a range of from about any of the foregoing amounts to about any other of the foregoing amounts.</p>
+      <p id="p-00103-en" num="0085">Within this range, it is possible to achieve excellent mechanical properties and/or heat resistance, and/or improve discoloration resistance.</p>
+      <p id="p-00104-en" num="0086">The polyester resin composition of the present invention may further include one or more typical additives in addition to the components described above depending on the intended use. Examples of the additives may include without limitation one or more of antimicrobial agent, thermal stabilizer, oxidant, releasing agent, photostabilizer, surfactant, coupling agent, plasticizer, compatibilizer, lubricant, antistatic agent, flame retardant, auxiliary flame retardant, anti-dripping agent, weather-resistance agent, UV absorber and stabilizer, and the like, and mixtures thereof</p>
+      <p id="p-00105-en" num="0087">The additives may be present in an amount selected to minimize deterioration of the physical properties of the polyester resin composition. For example, the additives may be present in an amount of about 20 parts by weight or less, for example from about 0.1 parts by weight to about 15 parts by weight, based on about 100 parts by weight of the polyester resin composition.</p>
+      <p id="p-00106-en" num="0088">The polyester resin composition of the present invention may be prepared by any well known method. The polyester resin composition may be prepared, for example, by mixing each components and optional additives in a Henschel mixer, a V blender, a tumbler blender, a ribbon blender, and the like, and melt extruding the resultant mixture using a single-screw or twin-screw extruder at a temperature of about 150° C. to about 350° C. to form a pellet. For example, the pellet may be prepared by extruding the mixture at a screw rotation speed of about 300 rpm to about 600 rpm, and at a self supply rate of about 60 kg/hr to about 600 kg/hr at a temperature of about 250° C. to about 310° C. using a twin-screw extruder having about L/D=29 and about Φ=36 mm. In one embodiment, the prepared pellet may be subjected to an injection molding process into a specimen by drying it at about 80° C. for about 4 hours.</p>
+      <p id="p-00107-en" num="0089">The present invention also provides a molded article that can have significantly improved mechanical properties and/or discoloration resistance, prepared by molding the polyester resin composition. The molded article may be prepared by any conventional molding process known in the art, such as but not limited to injection molding, double-shot injection molding, blow molding, extrusion molding, thermal molding, and the like, using the polyester resin composition.</p>
+      <p id="p-00108-en" num="0090">According to exemplary embodiments, the molded article may satisfy Equations (1) to (3):</p>
+      <p id="p-00109-en" num="0000">[in-line-formulae]17≦Is≦30   Eq. (1)[/in-line-formulae]</p>
+      <p id="p-00110-en" num="0000">[in-line-formulae]1000≦Fs≦1300   Eq. (2)[/in-line-formulae]</p>
+      <p id="p-00111-en" num="0000">[in-line-formulae]94.0≦Re≦99   Eq. (3)[/in-line-formulae]</p>
+      <p id="p-00112-en" num="0000">wherein in Equation (1), Is is impact strength (kgf cm/cm) measured on ⅛ inch samples according to ASTM D256, in Equation (2), Fs is flexural strength (kg f/cm<sup>2</sup>) measured at a rate of 2 8 mm/min according to ASTM D790, and in Equation (3), Re is initial reflectivity (%) measured at a wavelength of 450 nm using a color meter.</p>
+      <p id="p-00113-en" num="0091">Furthermore, the molded article may have an initial yellowness index of less than about 4, and yellowness index change (Δ&amp;I) of less than about 7 after leaving the article at a temperature of 170° C. for 500 hours (under constant temperature conditions). The initial yellowness index, the yellowness index after remaining under constant temperature conditions, and the yellowness index change (ΔYI) may be determined using a Minolta CM-3600D CIE Lab. color meter (spectrophotometer) according to ASTM D1925 as described in the following Examples.</p>
+      <p id="p-00114-en" num="0092">The molded article prepared from the polyester resin composition of the present invention may include a polyester resin having a melting temperature of greater than 285° C., a polyester resin having a melting temperature of less than or equal to 285° C., a white pigment, and an inorganic filler. As a result, it is possible to provide a molded article having excellent initial yellowness index and/or reflectivity, and/or decreased changes thereof, and thus significantly improved discoloration resistance and/or light stability without causing deformation even at high temperatures for a long time. Thus, the molded article may be advantageously used as a LED reflector requiring the above-mentioned properties.</p>
+      <p id="p-00115-en" num="0093">
+        <figref>FIG. 1</figref> is a cross-sectional view of a semiconductor apparatus (reflector package) including a molded article according to the present invention. As shown in <figref>FIG. 1</figref>, a reflector or reflector cup 1 may be a molded article prepared from the polyester resin composition according to the present invention. The prepared reflector cup 1 may be assembled with a variety of the known electrodes 2, substrates 3, sealing resins 4, wires 5, and light emitting diodes (LEDs) 6 together into a reflector package product. Furthermore, it will be understood by those skilled in the art that various modifications and changes may be made to the configuration from the disclosure as described above.</p>
+      <p id="p-00116-en" num="0094">Hereinafter, the present invention will be described with reference to the following examples, but the present invention will not be limited to the following Examples.</p>
+      <p id="p-00117-en" num="0095">Measurement of Physical Properties</p>
+      <p id="p-00118-en" num="0096">(1) Measurement of Izod Impact Strength (Unit: kg·cm/cm)</p>
+      <p id="p-00119-en" num="0097">Izod impact strength is measured on ⅛ inch thick specimens according to ASTM D256.</p>
+      <p id="p-00120-en" num="0098">(2) Measurement of Flexural Strength (Unit: kg f/cm<sup>2</sup>)</p>
+      <p id="p-00121-en" num="0099">Flexural strength is measured on ⅛ inch thick specimens at a rate of 2.8 mm/min according to ASTM D790.</p>
+      <p id="p-00122-en" num="0100">(3) Measurement of Yellowness Index (YI) Change (Unit: %)</p>
+      <p id="p-00123-en" num="0101">Yellowness index (YI) change is measured on 2.5 mm thick specimens by determining the yellowness index before and after exposure to a constant temperature, using a Minolta CM-3600D CIE Lab. color meter (spectrophotometer) according to ASTM D1925 and calculating the yellowness index change (ΔYI) according to Eq. 4 below:</p>
+      <p id="p-00124-en" num="0000">[in-line-formulae]Δ<i>YI=YI</i><sub>1</sub><i>−YI</i><sub>0 </sub>  Eq. (4)[/in-line-formulae]</p>
+      <p id="p-00125-en" num="0000">wherein in Equation (4), YI<sub>0 </sub>is an initial yellowness index of the specimen before exposure to a constant temperature, and YI<sub>1 </sub>is a yellowness index after the specimen is maintained in a constant temperature and constant humidity oven maintained at 170° C. and 85% relative humidity (R.H.) for 500 hours under a LED light source at a wavelength of 450 nm.</p>
+      <p id="p-00126-en" num="0102">(4) Measurement of Reflectivity (Reflectance) Change (Unit: %)</p>
+      <p id="p-00127-en" num="0103">Reflectivity is measured on 2 5 mm thick flake-like specimens for the reflectivity (SCI, specular component included) using a Minolta CM-3600D CIE Lab. color meter at a wavelength of 450 nm. The reflectivity is measured before and after maintaining the specimens under constant temperature and constant pressure conditions, to calculate the reflectivity change (ΔRe) according to the following Eq. 5:</p>
+      <p id="p-00128-en" num="0000">[in-line-formulae]Δ<i>Re=Re</i><sub>1</sub><i>−Re</i><sub>0 </sub>  Eq. (5)[/in-line-formulae]</p>
+      <p id="p-00129-en" num="0000">wherein in Equation (5), Rc<sub>0 </sub>is an initial reflectivity of the specimen before exposure to a constant temperature, and Rc<sub>1 </sub>is a reflectivity after the specimen is maintained in a constant temperature and constant humidity oven maintained at 170° C. and 85% R.H. for 500 hours under a LED light source at a wavelength of 450 nm.</p>
+      <p id="p-00130-en" num="0104">(5) Evaluation of Reflector Deformation</p>
+      <p id="p-00131-en" num="0105">The pellets prepared in Examples 1 to 3 and Comparative Examples 1 to 4, are dried at 80° C. for 4 hours. Then, the dried pellets are injection molded to manufacture a reflector cup. Thereby, a LED reflector is prepared.</p>
+      <p id="p-00132-en" num="0106">A LED reflector is prepared by mounting the prepared reflector cup and a LED device on a substrate for reflectors, on which electrodes are formed, and electronically connecting those with a metal line using a wire.</p>
+      <p id="p-00133-en" num="0107">The prepared reflector is left at a high temperature (260° C.) for 5 minutes to determine visually whether deformation occurs. If deformation occurs, this is represented by a symbol of “o,” and if deformation did not occur, this is represented by a symbol of “X.” The results thereof are shown in Table 2.</p>
+      <p id="p-00134-en" num="0108">The detailed specification of the components used in the Examples and Comparative Examples is as follows.</p>
+      <p id="p-00135-en" num="0109">(A) First Polyester Resin</p>
+      <p id="p-00136-en" num="0110">PCT Polyester PURATAN<sup>TM </sup>0302 (melting temperature: 290° C.) from SK Chemicals is used.</p>
+      <p id="p-00137-en" num="0111">(B) Second Polyester Resin</p>
+      <p id="p-00138-en" num="0112">Eastman™ copolyester 13319 (melting temperature: 285° C.) from Eastman Chemical Co. is used (TPA:IPA=95.24:4.76).</p>
+      <p id="p-00139-en" num="0113">(B′) Amorphous Polyester Resin</p>
+      <p id="p-00140-en" num="0114">PCTG (amorphous resin) SKYGREEN® JN100 (glass transition temperature: 60° C.) from SK Chemicals is used.</p>
+      <p id="p-00141-en" num="0115">(C) White Pigment</p>
+      <p id="p-00142-en" num="0116">TI-Pure® R-105 (titanium dioxide) from DuPont, Co. is used.</p>
+      <p id="p-00143-en" num="0117">(D) Inorganic Filler</p>
+      <p id="p-00144-en" num="0118">A round type glass fiber (Owens Corning, #910) having a cross-sectional diameter of 10 μm, an aspect ratio of long diameter to short diameter of the cross-section of 1, and an average length of 3 mm is used.</p>
+      <heading id="h-00006-en" level="1">EXAMPLE 1</heading>
+      <p id="p-00145-en" num="0119">As shown in Table 1, 40 wt % of (A) a first polyester resin, 10 wt % of (B) a second polyester resin, 35 wt % of (C) a white pigment and 15 wt % of (D) an inorganic filler are mixed, and dry blended to prepare a polyester resin composition. The composition is processed into a pellet using a twin screw extruder with Φ=36 mm at a nozzle temperature of from 250° C. to 310° C. The prepared pellet is dried at 80° C. for 4 hours, and a specimen is injection molded and evaluated for physical properties, the results of which are shown in Table 2.</p>
+      <heading id="h-00007-en" level="1">EXAMPLES 2 TO 3</heading>
+      <p id="p-00146-en" num="0120">As shown in Table 1, the polyester resin compositions are prepared in the same manner as Example 1, except that the amounts of (A) the first polyester resin, (B) the second polyester resin, (C) the white pigment and (D) the inorganic filler are changed. The measured physical properties are shown in Table 2.</p>
+      <heading id="h-00008-en" level="1">COMPARATIVE EXAMPLES 1 TO 2</heading>
+      <p id="p-00147-en" num="0121">As shown in Table 1, the polyester resin compositions are prepared in the same manner as Example 1, except that (B) the second polyester resin is not used, and the amounts of (A) the first polyester resin, (C) the white pigment and (D) the inorganic filler are changed. The measured physical properties are shown in Table 2.</p>
+      <heading id="h-00009-en" level="1">COMPARATIVE EXAMPLE 3</heading>
+      <p id="p-00148-en" num="0122">As shown in Table 1, the polyester resin composition is prepared in the same manner as Example 1, except that (B) the second polyester resin is not used, and (B′) an amorphous polyester resin is used. The measured physical properties are shown in Table 2.</p>
+      <heading id="h-00010-en" level="1">COMPARATIVE EXAMPLE 4</heading>
+      <p id="p-00149-en" num="0123">As shown in Table 1, the polyester resin composition is prepared in the same manner as Example 1, except that (A) the first polyester resin is not used, and the amounts of (B) the second polyester resin, (C) the white pigment and (D) the inorganic filler are changed. The measured physical properties are shown in Table 2.</p>
+      <p id="p-00150-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="70pt" align="left" />
+              <colspec colname="1" colwidth="63pt" align="center" />
+              <colspec colname="2" colwidth="84pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Examples</entry>
+                  <entry>Comparative Examples</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="70pt" align="left" />
+              <colspec colname="1" colwidth="21pt" align="center" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>1</entry>
+                  <entry>2</entry>
+                  <entry>3</entry>
+                  <entry>1</entry>
+                  <entry>2</entry>
+                  <entry>3</entry>
+                  <entry>4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>(A) First polyester</entry>
+                  <entry>40</entry>
+                  <entry>35</entry>
+                  <entry>15</entry>
+                  <entry>60</entry>
+                  <entry>50</entry>
+                  <entry>40</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>resin (wt %)</entry>
+                </row>
+                <row>
+                  <entry>(B) Second polyester</entry>
+                  <entry>10</entry>
+                  <entry>15</entry>
+                  <entry>35</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>60</entry>
+                </row>
+                <row>
+                  <entry>resin (wt %)</entry>
+                </row>
+                <row>
+                  <entry>(B′) Amorphous</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>10</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>polyester resin (wt %)</entry>
+                </row>
+                <row>
+                  <entry>(C) White Pigment</entry>
+                  <entry>35</entry>
+                  <entry>35</entry>
+                  <entry>35</entry>
+                  <entry>20</entry>
+                  <entry>35</entry>
+                  <entry>35</entry>
+                  <entry>20</entry>
+                </row>
+                <row>
+                  <entry>(wt %)</entry>
+                </row>
+                <row>
+                  <entry>(D) Inorganic filler</entry>
+                  <entry>15</entry>
+                  <entry>15</entry>
+                  <entry>15</entry>
+                  <entry>20</entry>
+                  <entry>15</entry>
+                  <entry>15</entry>
+                  <entry>20</entry>
+                </row>
+                <row>
+                  <entry>(wt %)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00151-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="77pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="center" />
+              <colspec colname="2" colwidth="98pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Examples</entry>
+                  <entry>Comparative Examples</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Classification</entry>
+                  <entry>1</entry>
+                  <entry>2</entry>
+                  <entry>3</entry>
+                  <entry>1</entry>
+                  <entry>2</entry>
+                  <entry>3</entry>
+                  <entry>4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="21pt" align="char" char="." />
+              <colspec colname="7" colwidth="21pt" align="char" char="." />
+              <colspec colname="8" colwidth="28pt" align="char" char="." />
+              <colspec colname="9" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Impact</entry>
+                  <entry>kg f · cm/</entry>
+                  <entry>17</entry>
+                  <entry>18</entry>
+                  <entry>18</entry>
+                  <entry>13</entry>
+                  <entry>16</entry>
+                  <entry>16</entry>
+                  <entry>21</entry>
+                </row>
+                <row>
+                  <entry>strength</entry>
+                  <entry>cm</entry>
+                </row>
+                <row>
+                  <entry>Flexural</entry>
+                  <entry>kg/cm<sup>2</sup></entry>
+                  <entry>1010</entry>
+                  <entry>1050</entry>
+                  <entry>1080</entry>
+                  <entry>820</entry>
+                  <entry>940</entry>
+                  <entry>930</entry>
+                  <entry>1100</entry>
+                </row>
+                <row>
+                  <entry>strength</entry>
+                </row>
+                <row>
+                  <entry>Reflector</entry>
+                  <entry>260° C./</entry>
+                  <entry>X</entry>
+                  <entry>X</entry>
+                  <entry>X</entry>
+                  <entry>X</entry>
+                  <entry>X</entry>
+                  <entry>X</entry>
+                  <entry>◯</entry>
+                </row>
+                <row>
+                  <entry>deformation</entry>
+                  <entry>5 min</entry>
+                </row>
+                <row>
+                  <entry>yellowness</entry>
+                  <entry>YI<sub>0</sub></entry>
+                  <entry>3.3</entry>
+                  <entry>3.4</entry>
+                  <entry>3.5</entry>
+                  <entry>3.8</entry>
+                  <entry>3.3</entry>
+                  <entry>3.1</entry>
+                  <entry>3.9</entry>
+                </row>
+                <row>
+                  <entry>index</entry>
+                  <entry>YI<sub>1</sub></entry>
+                  <entry>9.8</entry>
+                  <entry>9.7</entry>
+                  <entry>10.4</entry>
+                  <entry>18.5</entry>
+                  <entry>10.2</entry>
+                  <entry>10.6</entry>
+                  <entry>11.7</entry>
+                </row>
+                <row>
+                  <entry>(@170° C.)</entry>
+                  <entry>(500 hr)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ΔYI</entry>
+                  <entry>6.5</entry>
+                  <entry>6.3</entry>
+                  <entry>6.9</entry>
+                  <entry>14.7</entry>
+                  <entry>6.9</entry>
+                  <entry>7.5</entry>
+                  <entry>7.8</entry>
+                </row>
+                <row>
+                  <entry>Reflectivity</entry>
+                  <entry>Re<sub>0</sub></entry>
+                  <entry>94.5</entry>
+                  <entry>94.5</entry>
+                  <entry>94.4</entry>
+                  <entry>93.5</entry>
+                  <entry>93.8</entry>
+                  <entry>94.1</entry>
+                  <entry>94.4</entry>
+                </row>
+                <row>
+                  <entry>(Reflectance)</entry>
+                  <entry>Re<sub>1</sub></entry>
+                  <entry>85.9</entry>
+                  <entry>86.1</entry>
+                  <entry>86.2</entry>
+                  <entry>83.5</entry>
+                  <entry>85.4</entry>
+                  <entry>84.6</entry>
+                  <entry>86.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(500 hr)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ΔRe</entry>
+                  <entry>8.6</entry>
+                  <entry>8.4</entry>
+                  <entry>8.2</entry>
+                  <entry>10.0</entry>
+                  <entry>8.4</entry>
+                  <entry>9.5</entry>
+                  <entry>8.0</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00152-en" num="0124">As shown in Table 2, it can be seen that Examples 1 to 3 according to the present invention exhibit excellent mechanical properties such as impact strength, and flexural strength, did not cause reflector deformation at high temperatures (260° C.), and have excellent initial yellowness index and reflectivity. It can be also seen that Examples 1 to 3 did not experience the greatly reduced yellowness index and reflectivity, and changes thereof even if left at high temperatures for a long time.</p>
+      <p id="p-00153-en" num="0125">Meanwhile, Comparative Examples 1 and 2, which do not include the second polyester resin, exhibit significantly reduced mechanical properties such as impact strength and flexural strength, as well as significantly reduced discoloration resistance and light stability.</p>
+      <p id="p-00154-en" num="0126">Furthermore, Comparative Example 3, which includes the amorphous polyester resin instead of the second polyester resin to reduce the crystallization rate, exhibits reduced mechanical properties, discoloration resistance and light stability relative to the Examples, and exhibits reduced crystallization rate and deteriorated moldability.</p>
+      <p id="p-00155-en" num="0127">In addition, Comparative Example 4, which did not include the first polyester resin, exhibits improved mechanical properties, but exhibits reflector deformation when left at 260° C. for 5 minutes due to non-uniform molding.</p>
+      <p id="p-00156-en" num="0128">Therefore, it is possible to improve significantly mechanical properties as well as discoloration resistance and light stability, and enhance greatly moldability and molding stability by using the first polyester resin and the second polyester resin in amounts as described herein.</p>
+      <p id="p-00157-en" num="0129">Exemplary embodiments have been disclosed herein, and although specific terms are employed, they are used and are to be interpreted in a generic and descriptive sense only and not for purpose of limitation. In some instances, as would be apparent to one of ordinary skill in the art as of the filing of the present application, features, characteristics, and/or elements described in connection with a particular embodiment may be used singly or in combination with features, characteristics, and/or elements described in connection with other embodiments unless otherwise specifically indicated. Accordingly, it will be understood by those of skill in the art that various changes in form and details may be made without departing from the spirit and scope of the present invention as set forth in the following claims. Many modifications and other embodiments of the invention will come to mind to one skilled in the art to which this invention pertains. Therefore, it is to be understood that the invention is not to be limited to the specific embodiments disclosed and that such modifications and other embodiments are intended to be included within the scope of the appended claims.</p>
+      <heading id="h-00011-en" level="1">DESCRIPTION OF REFERENCE NUMERALS</heading>
+      <p id="p-00158-en" num="0130" />
+      <p id="p-00159-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="left" />
+              <colspec colname="3" colwidth="56pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>1: reflector</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>2: electrode</entry>
+                  <entry>3: substrate</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>4: sealing resin</entry>
+                  <entry>5: wire</entry>
+                  <entry>6: LED</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A polyester resin composition comprising: (A) a first polyester resin having a melting temperature of greater than about 285° C.; (B) a second polyester resin having a melting temperature of less than or equal to about 285° C.; (C) a white pigment; and (D) an inorganic filler.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The polyester resin composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the polyester resin composition comprises: (A) about 15 wt % to about 80 wt % of the first polyester resin, (B) about 10 wt % to about 70 wt % of the second polyester resin; (C) about 5 wt % to about 60 wt % of the white pigment; and (D) about 1 wt % to about 40 wt % of the inorganic filler.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The polyester resin composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein (A) the first polyester resin is a polyester resin derived from an aromatic dicarboxylic acid and an alicyclic diol, and having a melting temperature of greater than about 285° C. to about 320° C. or less, and (B) the second polyester resin is a copolyester resin derived from an aromatic dicarboxylic acid and an alicyclic diol, and having a melting temperature of about 250° C. or more to about 285° C. or less.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The polyester resin composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein (A) the first polyester resin or (B) the second polyester resin comprise a structure unit represented by the following Formula 1:</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00009">
+          <img id="imgc-00001-en" he="14.48mm" wi="73.83mm" alt="embedded image" img-content="chem" file="US20150247035A1_00011.PNG" img-format="png" original="US20150247035A1-20150903-C00009.TIF" />
+        </chemistry><claim-text>wherein in Formula 1, each A is the same or different and each is independently C<sub>6 </sub>to C<sub>12 </sub>arylene, each B is the same or different and each is independently C<sub>3 </sub>to C<sub>12 </sub>cycloalkylene, R<sub>1 </sub>to R<sub>4 </sub>are the same or different and are each independently hydrogen or C<sub>1 </sub>to C<sub>10 </sub>alkyl, n and m are the same or different and are each independently an integer selected from 1 to 10, and x is an integer selected from 10 to 500.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The polyester resin composition according to <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the aromatic dicarboxylic acid forming (B) the second polyester resin comprises terephthalic acid (TPA) and isophthalic acid (IPA), wherein a weight ratio of the terephthalic acid to the isophthalic acid is from about 80 to 99.95 to from about 0.05 to 20.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The polyester resin composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the white pigment comprises titanium oxide, zinc oxide, zinc sulfide, lead white, zinc sulfate, barium sulfate, calcium carbonate, alumina or a mixture thereof, and the inorganic filler comprises glass fiber, carbon fiber, ceramic fiber, metal fiber, silica, talc, clay, mica, whisker, or a mixture thereof</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. A molded article produced from the polyester resin composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The molded article according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the molded article satisfies Equations 1 to 3:
+<claim-text>17≦Is≦30   Eq. (1)</claim-text><claim-text>1000≦Fs≦1300   Eq. (2)</claim-text><claim-text>94.0≦Re≦99   Eq. (3)</claim-text><claim-text>wherein in Equation (1), Is is impact strength (kgf cm/cm) measured on ⅛ inch samples according to ASTM D256, in equation (2), Fs is flexural strength (kg f/cm<sup>2</sup>) measured at a rate of 2 8 mm/min according to ASTM D790, and in Equation (3), Re is an initial reflectivity (%) measured at a wavelength of 450 nm using a color meter.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The molded article according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the molded article has an initial yellowness index of less than about 4, and a yellowness index change (ΔYI) of less than about 7 after leaving the article at a temperature of 170° C. for 500 hours.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The molded article according to <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the molded article is a LED reflector.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247035A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150247035A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247035A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247035A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247035A1_00003.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247035A1-20150903-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247035A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247035A1-20150903-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247035A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247035A1-20150903-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150247035A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247035A1-20150903-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150247035A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247035A1-20150903-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150247035A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247035A1-20150903-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150247035A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247035A1-20150903-C00007.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150247035A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247035A1-20150903-C00008.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150247035A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247035A1-20150903-C00009.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150247035A1_00012.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150247035A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247035A1.PDF" type="pdf" size="534799" pages="10" />
+</lexisnexis-patent-document>

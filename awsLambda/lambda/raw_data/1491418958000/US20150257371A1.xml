@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257371A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030154" date-changed="20151215" time-changed="165854">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315302">
+        <country>US</country>
+        <doc-number>20150257371</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14368232</doc-number>
+        <date>20121227</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>CN</country>
+        <doc-number>201120553103</doc-number>
+        <date>20111227</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151215">
+      <classification-ipcr sequence="1">
+        <text>A01K  63/04        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>K</subclass>
+        <main-group>63</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B01D  29/56        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>29</main-group>
+        <subgroup>56</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B01D  35/02        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>35</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151215">
+      <classification-cpc sequence="1">
+        <text>A01K  63/045       20130101 FI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>K</subclass>
+        <main-group>63</main-group>
+        <subgroup>045</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A01K  63/042       20130101 LI20150814BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>K</subclass>
+        <main-group>63</main-group>
+        <subgroup>042</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150814</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B01D  21/0054      20130101 LI20151209BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>21</main-group>
+        <subgroup>0054</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151209</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>B01D  21/2405      20130101 LI20151209BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>21</main-group>
+        <subgroup>2405</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151209</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>B01D  29/56        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>29</main-group>
+        <subgroup>56</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>B01D  35/02        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>35</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">9</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">WATER-POLLUTANT SEPARATION DEVICE, WATER-POLLUTANT SEPARATION AND FILTRATION DEVICE, ORNAMENTAL FISH TANK WATER-POLLUTANT SEPARATION AND FILTRATION SYSTEM, AND HIGH DENSITY CULTIVATION WATER-POLLUTANT SEPARATION, FILTRATION AND OXYGEN AERATION SYSTEM</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>CHANG</last-name>
+            <first-name>Junbin</first-name>
+            <address>
+              <city>Zhangjiagang, Jiangsu</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>CN</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Chang</last-name>
+            <first-name>Junbin</first-name>
+            <address>
+              <city>Jiangsu</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>CN12087635</doc-number>
+        <date>20121227</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2013097741</doc-number>
+        <date>20130704</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150924">
+      <main-family family-id="155603183">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103202262</doc-number>
+            <kind>A</kind>
+            <date>20130717</date>
+          </document-id>
+          <application-date>
+            <date>20121226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257371</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103202263</doc-number>
+            <kind>A</kind>
+            <date>20130717</date>
+          </document-id>
+          <application-date>
+            <date>20121226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>202680252</doc-number>
+            <kind>U</kind>
+            <date>20130123</date>
+          </document-id>
+          <application-date>
+            <date>20120508</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>202979921</doc-number>
+            <kind>U</kind>
+            <date>20130612</date>
+          </document-id>
+          <application-date>
+            <date>20121226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2798949</doc-number>
+            <kind>A1</kind>
+            <date>20141105</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>202979922</doc-number>
+            <kind>U</kind>
+            <date>20130612</date>
+          </document-id>
+          <application-date>
+            <date>20121226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2798949</doc-number>
+            <kind>A4</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2013097741</doc-number>
+            <kind>A1</kind>
+            <date>20130704</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="155603182">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103202262</doc-number>
+            <kind>A</kind>
+            <date>20130717</date>
+          </document-id>
+          <application-date>
+            <date>20121226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257371</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103202263</doc-number>
+            <kind>A</kind>
+            <date>20130717</date>
+          </document-id>
+          <application-date>
+            <date>20121226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>202680252</doc-number>
+            <kind>U</kind>
+            <date>20130123</date>
+          </document-id>
+          <application-date>
+            <date>20120508</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>202979921</doc-number>
+            <kind>U</kind>
+            <date>20130612</date>
+          </document-id>
+          <application-date>
+            <date>20121226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2798949</doc-number>
+            <kind>A1</kind>
+            <date>20141105</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>202979922</doc-number>
+            <kind>U</kind>
+            <date>20130612</date>
+          </document-id>
+          <application-date>
+            <date>20121226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2798949</doc-number>
+            <kind>A4</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2013097741</doc-number>
+            <kind>A1</kind>
+            <date>20130704</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention, relating to a water-pollutant separation device, on which a water-pollutant separation and filtration device, an ornamental fish tank water-pollutant separation and filtration system, and a high density cultivation water-pollutant separation, filtration and oxygen aeration system are based on, comprises a tank, a water inlet pipe and a water outlet pipe respectively communicated with the top of the separation tank, and a pollutant discharge pipe disposed at the bottom of the tank; the inner cavity of the tank is provided with a separation structure which is in an inverted barrel shape, having an upper closing cover and slightly smaller external dimensions than that of the tank which provides a gap between the separation structure and the bottom of the tank; a spoiler is installed onto the water inlet pipe after the water inlet pipe passes through the upper closing cover of the separation structure in the tank; the spoiler is sealed at the lower end, and is provided with a plurality of openings or slots on the side wall to generate a subcritical flow to spoil the water flow, the openings or slots being biased in the same direction. In the technical solution, a water-pollutant separation device is preferably added prior to fish tank filtration, and the multiple slots provided on the spoiler are suitable for splitting the flow of relatively large water flow, so that most pollutants in the water can be separated and discharged, thus reducing the accumulation of the pollutants on filtration material, and improving water quality and stability.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a water-pollutant separation device, on which a water-pollutant separation and filtration device, an ornamental fish tank water-pollutant separation and filtration system, and a high-density cultivation water-pollutant separation, filtration and oxygen aeration system are based on.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">In the field of fish farming, the maintenance of water takes more precedence. The water quality determined by the organic content and dissolved oxygen has a great influence on keeping fish. The organic content in the aquatic water comes from the excretions of the fish and the remained fish food, most of which is remained in the form of particles at the bottom of the fishpond.</p>
+      <p id="p-00003-en" num="0003">In the prior art, the mechanism of the filtration system for fish-tank is that internal filtration materials blocks the particles pollutant to purify the water. As time goes on lots of pollutant will accumulate on the filtration materials. This will reduce the water flow rate and the filtration effect, so washing the filtration materials is a time-consuming work. One preferred example for the industrialized fish farming is that a sedimentation tank or a rotating separation module is used for separating and discharging the particles pollutant, and then a biological filtration treatment is applied to purify the water. However, these schemes remain many disadvantages, for instance, the separation effect for the sedimentation tank or a rotating separation module is very low because of the huge force applied to the particles by the strong water flow. To reach an ideal effect, the sedimentation tank or a rotating separation module should be enlarged to a large scale. In this condition, the pollutant discharging and the back flushing need a high quantity of water. So a powerful filtration system and a large quantity of fresh water are needed to maintain the water quality with a high construction cost and a low use ratio.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00004-en" num="0004">The object of the present invention is to provide a water-pollutant separation device free of disassembling and cleaning and easy for discharging pollutant, on which a water-pollutant separation and filtration device, an ornamental fish tank water-pollutant separation and filtration system, and a high-density cultivation water-pollutant separation, filtration and oxygen aeration system that are based on.</p>
+      <p id="p-00005-en" num="0005">In order to obtain one or more of these objects, the present invention provides a water-pollutant separation device, comprising a tank, a water inlet pipe and a water outlet pipe respectively communicated with the top of the tank, and a pollutant discharge pipe communicated with the bottom of the tank, wherein, the inner cavity of the tank is provided with a separation structure being in such an inverted-barrel shape that has an upper closing cover, a slightly smaller external dimension than that of the tank, a gap from the bottom of the tank, and a spoiler, which is installed onto the water inlet pipe after which goes through the upper closing cover of the separation structure in the tank, having a sealed lower-end and a plurality of openings or slots on the side-wall to generate subcritical flow to spoil the water flow. The technical scheme presents a water-pollutant separation device before the filtration treatment for fish tank, in which the openings or slots on the side-wall of the spoiler shunt the strong water into flows so that the pollutant in the water can be easily separated and discharged. With less pollutant accumulating in the filtration materials, the water quality can be improved and stable.</p>
+      <p id="p-00006-en" num="0006">Preferably, the dimensions of the openings or slots on the side-wall of the spoiler gradually decrease from the top to the bottom, thus ensuring the efficiency of the spoiler with a weak water flow.</p>
+      <p id="p-00007-en" num="0007">Preferably, the upper closing cover of the separation structure has a spherical appearance that is hard for pollutant accumulating.</p>
+      <p id="p-00008-en" num="0008">Preferably, the openings or slots on the side wall of the spoiler being biased in the same direction.</p>
+      <p id="p-00009-en" num="0009">Preferably, a number of spiral leaves, which are biased in the same direction with the openings or slots, are arranged onto the inner-wall of the separation structure to swirl the water.</p>
+      <p id="p-00010-en" num="0010">Preferably, the inner-wall of the separation structure is provided with filtration materials.</p>
+      <p id="p-00011-en" num="0011">According to another aspect, the present invention provides a water-pollutant separation and filtration device based on the water-pollutant separation device mentioned above, comprising a tank, a water inlet pipe and a water outlet pipe respectively communicated with the top of the tank, a pump, a pollutant discharge pipe communicated with the bottom of the tank, and a back-flush pipe provided with a back-flush valve communicating the water inlet pipe and the water outlet pipe, wherein, the upper inner cavity of the tank is provided with multiple layers of filtration materials; the lower inner cavity of the tank is provided with a separation structure being in such an inverted-barrel shape that has an upper closing cover, a slightly smaller external dimension than that of the tank, a gap from the bottom of the tank, and a spoiler, which is installed onto the water inlet pipe after which goes through the upper closing cover of the separation structure in the tank, having a sealed lower-end and a plurality of openings or slots on the side-wall biased in the same direction to generate a subcritical flow to spoil the water flow. The technical scheme presents a filtration device to the water-pollutant separation device, thus the pollutant in the water can be easily separated and discharged. With less pollutant accumulating in the filtration materials, the water quality can be improved and stable resulting in less cleaning work. The designing spirit of the device is that: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>(1) The water-pollutant separation device is arranged under a filtration device, which comprises a spoiler for shunting and generating weak flows and several spiral leaves for swirling the flows. The circulating water is converted into weak swirling flows when getting through the water-pollutant separation device under the function of the spoiler and spiral leaves, during which most particles in the water falling to the center area of the bottom of the filtration device because of gravity thus finishing a primary water-pollutant separation process.</li><li>(2) Multiple layers of filtration materials are arranged in the upper part of the filtration device. When the circulating water after the primary water-pollutant separation process getting through filtration materials, the tiny particles left in the water after the primary water-pollutant separation process are sediment or absorbed to the filtration materials because of obstruction thus finishing a secondary water-pollutant separation process, during which a biological filtration treatment is applied to the circulating water by the filtration materials in the same time.</li><li>(3) A pollutant discharge pipe with a pollutant discharge valve is communicated with the bottom of the filtration device which is center-inclined. When the pollutant discharge valve is turned on, the sedimented particles in the center area of the bottom of the filtration device can be discharged easily.</li><li>(4) A water inlet pipe and a water outlet pipe are respectively communicated with the top of the filtration device, also a controlling valve and a back-flush pipe provided with a back-flush valve are communicated with the water outlet pipe. When the pollutant discharge valve is turned on to discharge pollutant, the tiny particles absorbed to the filtration materials can be also discharged out of the filtration device by back-flows with the controlling valve off and back-flush valve on.</li></ul></li></ul></p>
+      <p id="p-00012-en" num="0016">Preferably, the lower layers of filtration materials have a less density than the upper layers of filtration materials, and a net spacing is provided between each layer of filtration materials.</p>
+      <p id="p-00013-en" num="0017">According to still another aspect, the present invention provides ornamental fish tank water-pollutant separation and filtration system comprising a tank, wherein, the inner cavity of the tank is divided by a clapboard into the bottom-water filtration area on one side and the upper-water filtration area on the other side communicating with each other through a opening on the upper part of the clapboard, and a bottom-water inlet pipe corresponding to the bottom-water filtration area and an upper-water inlet pipe corresponding to the upper-water filtration area are communicated with the top of the tank, and a pollutant discharge pipe corresponding to the bottom-water filtration area and a water discharge pipe corresponding to the upper-water filtration area are communicated with the bottom of the tank, wherein, the bottom-water filtration area is provided with a separation structure being in such an inverted-barrel shape that has an upper closing cover, a slightly smaller external dimension than that of the tank, a gap from the bottom of the tank, and a spoiler, which is installed onto the water inlet pipe after which goes through the upper closing cover of the separation structure in the tank, having a sealed lower-end and a plurality of openings or slots on the side-wall to generate subcritical flow; the upper-water filtration area is provided with multiple layers of filtration materials, under which a water outlet pipe is communicated so that the filtered water is constantly imported to the ornamental fish tank under the action of the pump. The technical scheme has the advantages that the pollutant in the water can be easily separated and discharged with less pollutant accumulating in the filtration materials, thus the water quality can be improved and stable resulting in less cleaning work.</p>
+      <p id="p-00014-en" num="0018">Preferably, the upper closing cover of the separation structure has a spherical appearance that is hard for pollutant accumulating and easy for cleaning.</p>
+      <p id="p-00015-en" num="0019">Preferably, the dimensions of openings or slots on the side-wall of the spoiler gradually decrease from the top to the bottom to generate uniform water flows.</p>
+      <p id="p-00016-en" num="0020">Preferably, the openings or slots are biased in the same direction, and the cross-section of the spoiler is provided with a round profile along the tangential direction of which the slots on the side wall of the spoiler extend. So, this reduces the probability of collision between the particles pollutant and the side-wall of the bottom-water filtration area by achieving the best rotating efficiency, during which the particles pollutant may be crashed into more tiny particles (that may go into the next filtration system with the water flow) which may decompose organic matters that pollutant the water and not easy to separate.</p>
+      <p id="p-00017-en" num="0021">Preferably, the slots of the spoiler are connected to the side-wall by round corners so that particles pollutant passes easily.</p>
+      <p id="p-00018-en" num="0022">Preferably, a number of spiral leaves, which are biased in the same direction with the openings or slots, are arranged onto the inner-wall of the separation structure to swirl the water.</p>
+      <p id="p-00019-en" num="0023">Preferably, the inner-wall of the separation structure is provided with filtration materials.</p>
+      <p id="p-00020-en" num="0024">Preferably, a number of brushes are arranged above the separation structure in the bottom-water filtration area.</p>
+      <p id="p-00021-en" num="0025">Preferably, the bottoms of the bottom-water filtration area and the upper-water filtration area are center-inclined respectively, easy for the pollutant sedimenting and discharging.</p>
+      <p id="p-00022-en" num="0026">Preferably, a pollutant insulation board having a plurality of openings is arranged under the separation structure in the bottom-water filtration area for the particles pollutant sedimenting efficiently.</p>
+      <p id="p-00023-en" num="0027">According to yet another aspect, the present invention provides a high-density cultivation water-pollutant separation, filtration and oxygen aeration system, comprising:</p>
+      <p id="p-00024-en" num="0000">a water-pollutant separation device, comprising a water-pollutant separation tank and a water-pollutant separation structure disposed inside the water-pollutant separation tank, the water-pollutant separation structure being in such an inverted-barrel shape that has an upper closing cover, a slightly smaller external dimension than that of the water-pollutant separation tank, a gap from the bottom of the water-pollutant separation tank, and a spoiler installed onto a bottom-water inlet pipe after which goes through the upper closing cover of the water-pollutant separation structure in the water-pollutant separation tank, the spoiler having a sealed lower-end and a plurality of openings or slots on the side-wall to generate subcritical flow to spoil the water, and a pollutant discharge pipe being communicated with the bottom of the water-pollutant separation tank; <br /> a primary filtration device communicated with the water-pollutant separation device, comprising a primary filtration tank, primary filtration materials disposed inside the primary filtration tank, and an upper-water inlet pipe communicated with the primary filtration tank; <br /> a secondary filtration and oxygen aeration device communicated with the primary filtration device, comprising a secondary filtration and oxygen aeration tank, secondary filtration materials and an oxygen aeration disk disposed inside the secondary filtration and oxygen aeration tank, and a water-outlet pipe and a water-discharge pipe communicating with the secondary filtration and oxygen aeration tank. The technical scheme has the advantages that the pollutant in the water can be easily separated and discharged with less pollutant accumulating in the filtration materials, thus the water quality can be improved and stable resulting in less cleaning work. Also, the scheme provides a simple structure with a low cost, a high oxygen dissolving efficiency, a high oxygen utilization rate, and good result of Water conservation, sterilization and disinfection. </p>
+      <p id="p-00025-en" num="0028">Preferably, the upper closing cover of the water-pollutant separation structure has a spherical appearance that is hard for pollutant accumulating and easy for cleaning.</p>
+      <p id="p-00026-en" num="0029">Preferably, the dimensions of openings or slots on the side-wall of the spoiler gradually decrease from the top to the bottom to generate uniform water flows.</p>
+      <p id="p-00027-en" num="0030">Preferably, the openings or slots are biased in the same direction, and the cross-section of the spoiler is provided with a round profile along the tangential direction of which the slots on the side-wall of the spoiler extend. So, this reduces the probability of collision between the particles pollutant and the side-wall of the water-pollutant separation tank by achieving the best rotating efficiency, during which the particles pollutant may be crashed into more tiny particles (that may go into the next filtration system with the water flow) which may decompose organic matters that pollutant the water and not easy to separate.</p>
+      <p id="p-00028-en" num="0031">Preferably, the slots of the spoiler are connected to the side-wall by round corners so that particles pollutant passes easily.</p>
+      <p id="p-00029-en" num="0032">Preferably, a number of spiral leaves, which are biased in the same direction with the openings or slots, are arranged onto the inner-wall of the water-pollutant separation structure to swirl the water.</p>
+      <p id="p-00030-en" num="0033">Preferably, filtration materials are arranged onto the inner-wall of the water-pollutant separation structure.</p>
+      <p id="p-00031-en" num="0034">Preferably, a number of brushes are arranged above the water-pollutant separation structure in the bottom-water filtration area.</p>
+      <p id="p-00032-en" num="0035">Preferably, the bottoms of water-pollutant separation device and the secondary filtration and oxygen aeration device are center-inclined respectively, easy for the pollutant sedimenting and discharging.</p>
+      <p id="p-00033-en" num="0036">Preferably, a pollutant filtration insulation board having a plurality of openings is arranged under the water-pollutant separation structure inside the water-pollutant separation tank for the particles pollutant sedimenting efficiently.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00034-en" num="0037">In the course of this detailed description below, references will be made to the drawings, in which:</p>
+      <p id="p-00035-en" num="0038">
+        <figref>FIG. 1</figref> is a schematic view of the first embodiment of the water-pollutant separation device according to the present invention.</p>
+      <p id="p-00036-en" num="0039">
+        <figref>FIG. 2</figref> is a schematic view of a second embodiment of the water-pollutant separation device according to the present invention.</p>
+      <p id="p-00037-en" num="0040">
+        <figref>FIG. 3</figref> is a schematic view of a third embodiment of the water-pollutant separation device according to the present invention.</p>
+      <p id="p-00038-en" num="0041">
+        <figref>FIG. 4</figref> is a schematic view of the first embodiment of the water-pollutant separation and filtration device according to the present invention.</p>
+      <p id="p-00039-en" num="0042">
+        <figref>FIG. 5</figref> is a schematic view of a second embodiment of the water-pollutant separation and filtration device according to the present invention.</p>
+      <p id="p-00040-en" num="0043">
+        <figref>FIG. 6</figref> is a schematic view of one embodiment of the ornamental fish tank water-pollutant separation and filtration system according to the present invention.</p>
+      <p id="p-00041-en" num="0044">
+        <figref>FIG. 7</figref> is a schematic view of the water-pollutant separation structure according to the present invention.</p>
+      <p id="p-00042-en" num="0045">
+        <figref>FIGS. 8 and 9</figref> shows a schematic view of the upper closing cover of the water-pollutant separation structure according to the present invention.</p>
+      <p id="p-00043-en" num="0046">
+        <figref>FIG. 10</figref> shows a schematic view of the spoiler of the water-pollutant separation structure according to the present invention.</p>
+      <p id="p-00044-en" num="0047">
+        <figref>FIG. 11</figref> shows a longitudinal-sectional view of the spoiler of the water-pollutant separation structure according to the present invention.</p>
+      <p id="p-00045-en" num="0048">
+        <figref>FIG. 12</figref> shows a cross-sectional view of the spoiler of the water-pollutant separation structure according to the present invention.</p>
+      <p id="p-00046-en" num="0049">
+        <figref>FIG. 13</figref> is a schematic view of the one embodiment of the high-density cultivation water-pollutant separation, filtration and oxygen aeration system according to the present invention.</p>
+      <p id="p-00047-en" num="0050">
+        <figref>FIG. 14</figref> is a schematic view of another embodiment of the high-density cultivation water-pollutant separation, filtration and oxygen aeration system having a twin-separation structure according to the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS</heading>
+      <p id="p-00048-en" num="0051">The detailed description of the preferred embodiment according to the invention is given as below with the accompanying drawings so that the benefits and features of the present invention are understood for those skilled in the art.</p>
+      <p id="p-00049-en" num="0052">As shown in <figref>FIG. 1</figref>, the water-pollutant separation device of the embodiment comprises a tank <b>1</b><i>a</i>, a water inlet pipe <b>2</b><i>a </i>and a water outlet pipe <b>3</b><i>a </i>respectively communicated with the top of the tank <b>1</b><i>a</i>, a pollutant discharge pipe <b>4</b><i>a </i>with a pollutant discharge valve <b>41</b><i>a </i>communicated with the bottom of the tank <b>1</b><i>a</i>. The bottom of the tank <b>1</b><i>a </i>is center-inclined towards the pollutant discharge pipe <b>4</b><i>a </i>so that the sedimented particles pollutant in the center area of the bottom can be discharged easily.</p>
+      <p id="p-00050-en" num="0053">The inner cavity of the tank <b>1</b><i>a </i>is provided with a separation structure <b>5</b><i>a </i>being in such an inverted-barrel shape that has an upper closing cover with a spherical appearance, a slightly smaller external dimension than that of the tank <b>1</b><i>a</i>, and a gap from the bottom of the tank <b>1</b><i>a</i>. The water inlet pipe <b>2</b><i>a </i>goes through the upper closing cover of the separation structure <b>5</b><i>a </i>in the tank <b>1</b><i>a </i>and is connected with a spoiler <b>51</b><i>a</i>. The spoiler <b>51</b><i>a </i>is provided with an upper end communicated to the water inlet pipe <b>2</b><i>a</i>, a sealed lower-end and a side-wall having a plurality of slots (or openings) to generate subcritical flow to spoil the water flow. A number of spiral leaves <b>52</b><i>a</i>, which are biased in the same direction with the slots (or openings), are arranged onto the inner-wall of the separation structure <b>5</b><i>a </i>to swirl the water. With the cooperation of the spiral leaves <b>52</b><i>a </i>and the slots (or openings), the water in the separation structure <b>5</b><i>a </i>swirls to separate the pollutant. Preferably, the dimensions of openings or slots on the side-wall of the spoiler <b>51</b><i>a </i>gradually decrease from the top to the bottom, generating uniform water flows in the effective area on the side-wall of the spoiler <b>51</b><i>a </i>with a better separation effect. In addition, the upper closing cover of the separation structure <b>5</b><i>a </i>has a spherical appearance that is hard for pollutant accumulating and easy for cleaning.</p>
+      <p id="p-00051-en" num="0054">
+        <figref>FIG. 2</figref> and <figref>FIG. 3</figref> are schematic views of a second and a third embodiment of the water-pollutant separation device according to the present invention, which have a similar structure with the embodiment in <figref>FIG. 1</figref>. The difference is that the pollutant discharge pipe <b>4</b><i>a </i>for discharging pollutant at the bottom of the tank <b>1</b><i>a </i>is extending along the horizontal direction below the bottom of the tank <b>1</b><i>a </i>to reduce the total product height (as shown in <figref>FIG. 2</figref>), or is extending along the horizontal direction inside the tank <b>1</b><i>a </i>(as shown in <figref>FIG. 3</figref>).</p>
+      <p id="p-00052-en" num="0055">When the device in a normal working state, the pollutant discharge pipe valve <b>41</b><i>a </i>is turned off and dirty water goes into the spoiler <b>51</b><i>a </i>through the water inlet pipe <b>2</b><i>a </i>inside the separation structure <b>5</b><i>a</i>. With the shunting function of the slots, the cycling water loses impact force and becomes smooth, and then starts whirling in the same direction under the function of the spiral leaves <b>52</b><i>a</i>, gathering most particles pollutant within a central area of the bottom of the tank <b>1</b><i>a</i>. After that, the water goes upwards slowly through the gap between the bottom of the tank <b>1</b><i>a </i>and the separation structure <b>5</b><i>a </i>and enters a filtration system through the water outlet pipe to apply a second level separation, and finally is sent into the fish-tank by a cycling water pump. The upper closing cover of the separation structure has a spherical appearance that is hard for pollutant accumulating. Particles pollutant sedimented within the central area of the bottom of the tank <b>1</b><i>a </i>can be easily discharged by turning on the pollutant discharge pipe valve <b>41</b><i>a </i>at any time with less water, reaching the object of the invention that pollutant water separation is no longer a difficult for fish farming and meets the concept of low carbon.</p>
+      <p id="p-00053-en" num="0056">According to another aspect, the present invention provides a water-pollutant separation and filtration device as below based on the various water-pollutant separation devices mentioned above.</p>
+      <p id="p-00054-en" num="0057">As shown in <figref>FIG. 4</figref>, the water-pollutant separation and filtration device for ornamental fish tanks comprises a tank <b>1</b><i>a</i>, a water inlet pipe <b>2</b><i>a </i>and a water outlet pipe <b>3</b><i>a </i>respectively communicated with the top of the tank <b>1</b><i>a</i>, a pump <b>6</b><i>a </i>arranged to the water outlet pipe <b>3</b><i>a</i>, and a back-flush pipe <b>22</b><i>a </i>provided with a back-flush valve <b>221</b><i>a </i>communicating the water inlet pipe <b>2</b><i>a </i>and the water outlet pipe <b>3</b><i>a</i>. A three-way ball valve <b>21</b><i>a </i>is arranged at the junction of the water inlet pipe <b>2</b><i>a </i>and the back-flush pipe <b>22</b><i>a</i>. A pollutant discharge pipe <b>4</b><i>a </i>with a pollutant discharge valve <b>41</b><i>a </i>is communicated with the bottom of the tank <b>1</b><i>a </i>for discharging pollutant. The bottom of the tank <b>1</b><i>a </i>is center-inclined towards the pollutant discharge pipe <b>4</b><i>a </i>so that the sedimented particles pollutant in the center area of the bottom can be discharged easily with little water. The upper inner cavity of the tank <b>1</b><i>a </i>is provided with multiple layers of filtration materials <b>11</b><i>a</i>, and the lower layers of filtration materials <b>11</b><i>a </i>have a less density than the upper layers of filtration materials <b>11</b><i>a</i>, and a net spacing <b>12</b><i>a </i>is provided between each layer of filtration materials <b>11</b><i>a</i>. In this embodiment, the filtration materials <b>11</b><i>a </i>comprise carbon cotton in the upper layer, filer pieces in the middle layer, and brushes in the bottom layer.</p>
+      <p id="p-00055-en" num="0058">The lower inner cavity of the tank <b>1</b><i>a </i>is provided with a separation structure <b>5</b><i>a </i>being in such an inverted-barrel shape that has an upper closing cover, a slightly smaller external dimension than that of the tank <b>1</b><i>a</i>, a gap from the bottom of the tank <b>1</b><i>a</i>. A spoiler <b>51</b><i>a</i>, which is installed onto the water inlet pipe <b>2</b><i>a </i>after which goes through the upper closing cover of the separation structure <b>5</b><i>a </i>in the tank <b>1</b><i>a</i>, has an upper end connected to the water inlet pipe <b>2</b><i>a</i>, a sealed lower end and a side-wall provided with a plurality of openings (or slots) biased and oriented in the same direction of left or right to generate a subcritical flow to spoil the water flow. A number of spiral leaves <b>52</b><i>a </i>shown in <figref>FIG. 1 to 3</figref> can be arranged onto the inner-wall of the separation structure <b>5</b><i>a </i>to generate a cooperation effect of the spiral leaves <b>52</b><i>a </i>and the slots (or openings). Preferably, the dimensions of openings or slots on the side-wall of the spoiler <b>51</b><i>a </i>gradually decrease from the top to the bottom, generating uniform water flows in the effective area on the side-wall of the spoiler <b>51</b><i>a </i>with a better separation effect. In addition, the upper closing cover of the separation structure <b>5</b><i>a </i>can be a spherical appearance. The above descriptions are not limited to the examples shown in descriptions (or drawings) hereinbefore, and other modifications varied in efficient manners within the scope of the present invention can be made.</p>
+      <p id="p-00056-en" num="0059">A basic operating principle and process of this preferred embodiment is given herein below. When the device in a normal working state, the pollutant discharge pipe valve <b>41</b><i>a </i>is turned off, and the three-way ball valve <b>21</b><i>a </i>is set to open the water inlet pipe <b>2</b><i>a </i>and block the back-flush pipe <b>22</b><i>a</i>. The dirty water of the fish tank goes into the spoiler <b>51</b><i>a </i>through the water inlet pipe <b>2</b><i>a </i>inside the separation structure <b>5</b><i>a</i>. With the shunting function of the holes (or slots), the cycling water loses impact force and becomes smooth, and then starts whirling to left (or right) under the function of the left (or right) biased holes, gathering most particles pollutant within a central area of the bottom of the tank <b>1</b><i>a</i>. After that, water with tiny particles go upwards slowly through the gap between the bottom of the tank <b>1</b><i>a </i>and the separation structure <b>5</b><i>a</i>. So tiny particles are blocked by the filtration materials <b>11</b><i>a</i>, and finally filtered cycling water is sent into the fish-tank by a cycling water pump. Particles pollutant sedimented within the central area of the bottom of the tank <b>1</b><i>a </i>can be easily discharged by turning on the pollutant discharge pipe valve <b>41</b><i>a </i>at any time with less water. Tiny particles pollutant absorbed on the filtration materials <b>11</b><i>a </i>can be easily discharged out of the tank <b>1</b><i>a </i>with back-flush flows by setting the three-way ball valve <b>21</b><i>a </i>(block the water inlet pipe <b>2</b><i>a </i>and open the back-flush pipe <b>22</b><i>a</i>) at the time of pollutant discharging.</p>
+      <p id="p-00057-en" num="0060">
+        <figref>FIG. 5</figref> is a schematic view of a second embodiment of the water-pollutant separation and filtration device according to the present invention, which has a similar structure with the embodiment in <figref>FIG. 4</figref>. The difference is that the pollutant discharge pipe <b>4</b><i>a </i>for discharging pollutant at the bottom of the tank <b>1</b><i>a </i>is extending along the horizontal direction inside the tank <b>1</b><i>a </i>from bottom to top and then stretch out to reduce the total product height. Still, low density filtration materials <b>52</b><i>a</i>, such as brushes made into circle plate or the like, are arranged on the inner side-wall of the separation structure <b>5</b><i>b </i>to enhance the filtration effect of weak flow.</p>
+      <p id="p-00058-en" num="0061">
+        <figref>FIG. 6</figref> is a schematic view of one embodiment of the ornamental fish tank water-pollutant separation and filtration system according to the present invention. The inner cavity of the tank <b>1</b><i>b </i>is divided by clapboard into the bottom-water filtration area on the left side and the upper-water filtration area on the right side communicating with each other through an opening <b>10</b><i>b </i>on the upper part of the clapboard. A bottom-water inlet pipe <b>21</b><i>b </i>corresponding to the bottom-water filtration area and an upper-water inlet pipe <b>22</b><i>b </i>corresponding to the upper-water filtration area are communicated with the top of the tank <b>1</b><i>b</i>. The bottom-water inlet pipe <b>21</b><i>b </i>is controlled by the bottom-water inlet valve <b>211</b><i>b</i>, and the upper-water inlet pipe <b>22</b><i>b </i>is controlled by the upper-water inlet valve <b>221</b><i>b</i>. A pollutant discharge pipe <b>4</b><i>b </i>corresponding to the bottom-water filtration area and a water discharge pipe <b>3</b><i>b </i>corresponding to the upper-water filtration area are communicated with the bottom of the tank <b>1</b><i>b</i>. The pollutant discharge pipe <b>4</b><i>b </i>is controlled by the pollutant discharge valve <b>41</b><i>b</i>, and the water discharge pipe <b>3</b><i>b </i>is controlled by the water discharge valve <b>31</b><i>b</i>. The bottoms of the bottom-water filtration area and the upper-water filtration area are center-inclined respectively.</p>
+      <p id="p-00059-en" num="0062">The bottom-water filtration area is provided with a separation structure <b>5</b><i>b</i>, and a number of brushes <b>53</b><i>b </i>are arranged above the separation structure <b>5</b><i>b </i>in the bottom-water filtration area.</p>
+      <p id="p-00060-en" num="0063">The upper-water filtration area is provided with multiple layers of filtration materials <b>8</b><i>b</i>, and a spacing <b>9</b><i>b </i>is provided between each layer of filtration materials <b>11</b><i>a</i>. A water outlet pipe <b>7</b><i>b </i>is communicated under the filtration materials <b>8</b><i>b </i>so that the filtered water is constantly imported to the ornamental fish tank under the action of the pump <b>6</b><i>b. </i></p>
+      <p id="p-00061-en" num="0064">As shown in <figref>FIG. 7 to 10</figref>, <figref>FIG. 7</figref> is a schematic view of the water-pollutant separation structure according to the present invention, and <figref>FIGS. 8 and 9</figref> shows a schematic view of the upper closing cover of the water-pollutant separation structure according to the present invention. <figref>FIG. 10</figref> shows a schematic view of the spoiler of the water-pollutant separation structure according to the present invention. The separation structure <b>5</b><i>b </i>is in such an inverted-barrel shape that has a spherical upper closing cover, a slightly smaller external dimension than that of the tank <b>1</b><i>b</i>, a gap from the bottom of the tank <b>1</b><i>b</i>, and a spoiler <b>51</b><i>b</i>, which is installed onto the water inlet pipe <b>21</b><i>b </i>after which goes through the upper closing cover of the separation structure <b>5</b><i>b </i>in the tank <b>1</b><i>b</i>. The spoiler <b>51</b><i>b </i>has a sealed lower-end and a plurality of slots <b>52</b><i>b </i>biased in the same direction on the side-wall to generate subcritical flow.</p>
+      <p id="p-00062-en" num="0065">As shown in <figref>FIGS. 11 to 12</figref>, <figref>FIG. 11</figref> shows a longitudinal-sectional view of the spoiler of the water-pollutant separation structure according to the present invention, and <figref>FIG. 12</figref> shows a cross-sectional view of the spoiler of the water-pollutant separation structure according to the present invention. The dimensions of slots <b>52</b><i>b </i>on the side-wall of the spoiler <b>51</b><i>b </i>gradually decrease from the top to the bottom. The cross-section of the spoiler <b>51</b><i>b </i>is provided with a round profile along the tangential direction of which the slots <b>52</b><i>b </i>on the side-wall of the spoiler <b>51</b><i>b </i>extends. The slots <b>52</b><i>b </i>of the spoiler are connected to the side-wall by round corners.</p>
+      <p id="p-00063-en" num="0066">With the above-mentioned technical proposals, the advantage of the water-pollutant separation process is that:</p>
+      <p id="p-00064-en" num="0000">1. With a weak water flow and impact force, small particles pollutant is more possible to sediment. Water shunting and water whirling both are most effective ways of gravity sedimenting. The above mentioned water-pollutant separation process combines and takes full advantage of the function of the water shunting and water swirling during the gravity sedimenting of the particles pollutant, generating smooth and swirling water flow to reach a best effect of particles pollutant gravity sedimenting separation. <br /> 2. The first level (or primary level) of particles pollutant gravity sedimenting separation is designed with a downward water flow. In this process, the particles pollutant gravity sedimenting separation is accelerated because of the superposition of the (downward) force that the smooth water flow applies to the particles pollutant and the (downward) gravity of the particles pollutant itself. So most particles pollutant will sediment as long as the gravity is greater than the force of the smooth water flow applied. <br /> 3. The next level of particles pollutant blocking and filtration separation is designed with an upward water flow, during which filtration materials block and filter rare tiny particles pollutant that did not sediment. In this process, the (downward) gravity of the particles pollutant itself weakens the (upward) force that the smooth water flow applies to the particles pollutant. The result is that a tiny (upward) resultant force acts on the tiny particles pollutant and pushes them moving upwards slowly in suspension until sedimented or absorbed to the lower surface of the filtration materials. For example, when a tiny particles pollutant is blocked by brushes, a second and a third . . . more and more tiny particles pollutant will be adhered together. Once the blocked tiny particles pollutant reach to a certain extent, they will sediment together downwards. </p>
+      <p id="p-00065-en" num="0067">In another preferred embodiment, a number of spiral leaves <b>55</b><i>b</i>, which are biased in the same direction with the openings or slots <b>52</b><i>b</i>, are arranged onto the inner-wall of the water-pollutant separation structure <b>5</b><i>b </i>to swirl the water. Still more, filtration materials are arranged onto the inner-wall of the water-pollutant separation structure <b>5</b><i>b. </i></p>
+      <p id="p-00066-en" num="0068">A basic operating principle and process of this preferred embodiment is given herein below. When the device in a normal working state, the pollutant discharge pipe valve <b>41</b><i>b </i>and the water discharge valve <b>31</b><i>b </i>are turned off, and the bottom-water inlet valve <b>211</b><i>b </i>and the upper-water inlet valve <b>221</b><i>b </i>are turned on. The bottom water of the fish tank goes into the spoiler <b>51</b><i>b </i>through the bottom-water inlet pipe <b>21</b><i>b </i>inside the separation structure <b>5</b><i>b</i>. With the shunting function of the slots <b>52</b><i>b</i>, the cycling water loses impact force and becomes smooth, and then starts whirling to left under the function of the left (or right) biased slots <b>52</b><i>b</i>, gathering most particles pollutant of the bottom water within a central area of the bottom of the bottom-water filtration area. After that, water with remained tiny particles goes upwards slowly through the gap between the bottom-water filtration area and the separation structure <b>5</b><i>b</i>. So tiny particles are sedimented or absorbed when passing through the filtration materials <b>53</b><i>b </i>(brushes), and finally the bottom-cycling-water enters the upper-water filtration area through the opening <b>10</b><i>b </i>to apply a biochemistry filtration. Almost at the same time with the bottom water of the fish tank goes into the water-pollutant separation structure <b>5</b><i>b </i>through the bottom-water inlet pipe <b>21</b><i>b </i>inside the separation structure <b>5</b><i>b</i>, middle-water and upper-water with little particles pollutant goes into the upper-water filtration area through the upper-water inlet pipe <b>22</b><i>b </i>to apply a biochemistry filtration. The water entering into the water-pollutant separation structure <b>5</b><i>b </i>can be controlled into a certain velocity to achieve the best water-pollutant separation effect by adjusting the bottom-water inlet valve <b>211</b><i>b </i>and the upper-water inlet valve <b>221</b><i>b</i>. The cycling water in the upper-water filtration area is then sent into the fish-tank by a water pump <b>6</b><i>b </i>through the water outlet pipe <b>7</b><i>b </i>after the biochemistry filtration. Particles pollutant sedimented within the central area of the bottom of bottom-water filtration area can be easily discharged by turning on the pollutant discharge pipe valve <b>41</b><i>b </i>at any time. Tiny particles pollutant absorbed on the filtration materials <b>53</b><i>b </i>can be easily discharged out of the bottom-water filtration area with back-flush flows from the upper-water inlet pipe <b>22</b><i>b </i>by turning off the bottom-water inlet pipe <b>221</b><i>b </i>at the time of pollutant discharging.</p>
+      <p id="p-00067-en" num="0069">According to the above description, the ornamental fish tank water-pollutant separation and filtration system according to the present invention has the advantage in that:</p>
+      <p id="p-00068-en" num="0000">1. The particles pollutant for instance excretions from the fish is separated and discharged at the first time, and after that, water with fewer particles pollutant is applied a biochemistry filtration. Thus, the filtration system now just undertakes 20% to 30% biochemistry filtration task compared to 100% previously. The easy work of filtration now keeps the water clear, makes the fish-tank bright, and brings health to the fish. <br /> 2. Because the particles pollutant is separated and discharged, water entering the filtration system is provided with hardly any particles pollutant to block. Thus, filtration cotton is no longer a necessary for the filtration system to filter the particles pollutant for example excretions from the fish, and the filtration system no longer gets blocking and needs washing due to the accumulating of particles pollutant. <br /> 3. Because the sedimenting happens near the pollutant discharge pipe, the particles pollutant can be easily discharged by turning on the pollutant discharge pipe valve and back-flush valve at any time with less water. Preferably, the water outlet pipe and the water inlet pipe communicated to the fish tank can be controlled by a clock controlling self-acting pollutant discharge valve and an automatic water-adding device. The result is that, the work for water adding and pollutant discharging is so fully automatic that labor is no longer needed for adding water and washing the filtration system, achieving the object of keeping pet-fish so easily and joyfully. </p>
+      <p id="p-00069-en" num="0070">
+        <figref>FIG. 13</figref> is a schematic view of one embodiment of the high-density cultivation water-pollutant separation, filtration and oxygen aeration system according to the present invention. The high-density cultivation water-pollutant separation, filtration and oxygen aeration system can be applied to modern high-density aquiculture such as fishpond or the like, the water level of which need to be higher than the height of the water-pollutant separation tank. The high-density cultivation water-pollutant separation, filtration and oxygen aeration system of the preferred embodiment comprises a water-pollutant separation device <b>1</b><i>c</i>, a primary filtration device <b>2</b><i>c </i>communicated with the water-pollutant separation device <b>1</b><i>c</i>, and a secondary filtration and oxygen aeration device <b>3</b><i>c </i>communicated with the primary filtration device <b>2</b><i>c. </i></p>
+      <p id="p-00070-en" num="0071">The water-pollutant separation device <b>1</b><i>c </i>comprises a water-pollutant separation tank <b>11</b><i>c </i>and a water-pollutant separation structure <b>12</b><i>c </i>disposed inside the water-pollutant separation tank <b>11</b><i>c</i>. A bottom-water inlet pipe <b>16</b><i>c </i>controlled by a bottom-water inlet valve <b>161</b><i>c </i>is communicated with the top or the side-wall of the water-pollutant separation tank <b>11</b><i>c</i>, and a pollutant discharge pipe <b>17</b><i>c </i>controlled by a pollutant discharge pipe valve <b>171</b><i>c </i>is communicated with the bottom of the water-pollutant separation tank <b>11</b><i>c</i>. The bottom of water-pollutant separation device <b>1</b><i>c </i>is center-inclined, while a number of brushes <b>15</b><i>c </i>are arranged above the water-pollutant separation structure <b>12</b><i>c</i>. Because the water level of fishpond is higher than the height of the water-pollutant separation tank, the bottom water of the fishpond automatically goes through the bottom-water inlet pipe <b>16</b><i>c </i>into the water-pollutant separation tank <b>11</b><i>c </i>and starts a water-pollutant separation process.</p>
+      <p id="p-00071-en" num="0072">The primary filtration device <b>2</b><i>c </i>of this embodiment is arranged above the water-pollutant separation device <b>1</b><i>c</i>. A pump <b>5</b><i>c </i>sucks the separated water out from the water-pollutant separation device <b>1</b><i>c </i>and sends into the primary filtration device <b>2</b><i>c </i>through the pump outtake <b>52</b><i>c</i>. The primary filtration device <b>2</b><i>c </i>comprises a primary filtration tank <b>21</b><i>c</i>, primary filtration materials <b>22</b><i>c </i>disposed inside the primary filtration tank <b>21</b><i>c</i>. An upper-water inlet pipe <b>23</b><i>c </i>is communicated with the pump intake <b>51</b><i>c </i>and is controlled by upper-water inlet valve <b>231</b><i>c</i>, so the upper-water of the fishpond is also pumped into the primary filtration device <b>2</b><i>c </i>by pump <b>5</b><i>c </i>through the upper-water inlet pipe <b>23</b><i>c </i>to start a primary filtration.</p>
+      <p id="p-00072-en" num="0073">A secondary filtration and oxygen aeration device <b>3</b><i>c </i>is communicated with the primary filtration device <b>2</b><i>c </i>through a first opening <b>41</b><i>c</i>. The secondary filtration and oxygen aeration device <b>3</b><i>c </i>comprises a secondary filtration and oxygen aeration tank <b>31</b><i>c</i>, secondary filtration materials <b>33</b><i>c </i>disposed inside the secondary filtration and oxygen aeration tank <b>31</b><i>c</i>, and an oxygen aeration disk <b>38</b><i>c</i>. The secondary filtration and oxygen aeration tank <b>31</b><i>c </i>has a U-shaped structure similar with communicating vessels, where the two parts on the left and right side are communicated with each other through a second opening <b>42</b><i>c </i>near the bottom. The bottom of the secondary filtration and oxygen aeration tank <b>31</b><i>c </i>is center-inclined and communicated with a water-discharge pipe <b>34</b><i>c </i>that discharges water in the secondary filtration and oxygen aeration tank <b>31</b><i>c </i>under the control of a water-discharge pipe valve <b>341</b><i>c</i>. The oxygen aeration disk <b>38</b><i>c </i>is connected to the air supply with an oxygen aeration pipe <b>37</b><i>c</i>. A primary water-outlet pipe <b>35</b><i>c </i>and a secondary water-outlet pipe <b>36</b><i>c </i>are communicated with the secondary filtration and oxygen aeration tank <b>31</b><i>c</i>. The secondary filtration materials <b>33</b><i>c </i>are arranged between a pair of pollutant insulation boards that have a plurality of openings.</p>
+      <p id="p-00073-en" num="0074">Also, the water-pollutant separation structure <b>12</b><i>c </i>of this embodiment has the same structure shown in <figref>FIG. 7 to 12</figref> that has an inverted-barrel shape that has an spherical upper closing cover, a slightly smaller external dimension than that of the water-pollutant separation tank <b>11</b><i>c</i>, a gap from the bottom of the water-pollutant separation tank <b>11</b><i>c</i>. A spoiler <b>13</b><i>c</i>, which is installed onto a bottom-water inlet pipe <b>16</b><i>c </i>after which goes through the upper closing cover of the water-pollutant separation structure <b>12</b><i>c </i>in the water-pollutant separation tank <b>11</b><i>c</i>, has a sealed lower-end and a plurality of slots <b>14</b><i>c </i>biased in the same direction on the side-wall to generate subcritical flow. The dimensions of slots <b>14</b><i>c </i>on the side-wall of the spoiler <b>13</b><i>c </i>gradually decrease from the top to the bottom. The cross-section of the spoiler <b>13</b><i>c </i>is provided with a round profile along the tangential direction of which the slots <b>14</b><i>c </i>on the side-wall of the spoiler extend, and the slots <b>14</b><i>c </i>of the spoiler are connected to the side-wall by round corners.</p>
+      <p id="p-00074-en" num="0075">With the above-mentioned technical proposals, the advantage of the water-pollutant separation process is that:</p>
+      <p id="p-00075-en" num="0000">1. With a weak water flow and impact force, small particles pollutant is more possible to sediment. Water shunting and water whirling both are most effective ways of gravity sedimenting. The above mentioned water-pollutant separation process combines and takes full advantage of the function of the water shunting and water whirling during the gravity sedimenting of the particles pollutant, generating smooth and swirling water flow to reach a best effect of particles pollutant gravity sedimenting separation. <br /> 2. The first level (or primary level) of particles pollutant gravity sedimenting separation is designed with a downward water flow. In this process, the particles pollutant gravity sedimenting separation is accelerated because of the superposition of the (downward) force that the smooth water flow applies to the particles pollutant and the (downward) gravity of the particles pollutant itself. So most particles pollutant will sediment as long as the gravity is greater than the force of the smooth water flow applied. <br /> 3. The next level of particles pollutant blocking and filtration separation is designed with an upward water flow, which blocks and filters minor tiny particles pollutant that did not sediment with filtration materials. In this process, the (downward) gravity of the particles pollutant itself weakens the (upward) force that the smooth water flow applies to the particles pollutant. The result is that a tiny (upward) resultant force acts on the tiny particles pollutant and brings it moving upwards slowly in suspension until sedimented or absorbed to the lower surface of the filtration materials. For example, when a tiny particles pollutant is blocked by brushes, a second and a third . . . more and more tiny particles pollutant will be adhered together. Once the blocked tiny particles pollutant reach a certain extent, they will sediment together downwards. </p>
+      <p id="p-00076-en" num="0076">In another preferred embodiment, a number of spiral leaves which are biased in the same direction with the slots <b>14</b><i>c </i>are arranged onto the inner-wall of the water-pollutant separation structure <b>12</b><i>c </i>to swirl the water. Still more, filtration materials are arranged onto the inner-wall of the water-pollutant separation structure <b>12</b><i>c. </i></p>
+      <p id="p-00077-en" num="0077">A basic operating principle and process of this preferred embodiment is given herein below. When the device in a normal working state, the pollutant discharge pipe valve <b>171</b><i>c </i>and the water discharge valve <b>341</b><i>c </i>are turned off, and the bottom-water inlet valve <b>161</b><i>c </i>and the upper-water inlet valve <b>231</b><i>c </i>are turned on. The bottom water of the fish tank goes into the spoiler <b>13</b><i>c </i>through the bottom-water inlet pipe <b>161</b><i>c </i>inside the separation structure <b>12</b><i>c</i>. With the shunting function of the slots <b>14</b><i>c</i>, the cycling water loses impact force and becomes smooth, and then starts whirling to left under the function of the left (or right) biased slots <b>14</b><i>c</i>, gathering most particles pollutant of the bottom water within a central area of the bottom of the water-pollutant separation tank <b>11</b><i>c</i>. After that, water with remained tiny particles goes upwards slowly through the gap between the water-pollutant separation tank <b>11</b><i>c </i>and the water-pollutant separation structure <b>12</b><i>c</i>. So tiny particles are sedimented or absorbed when passing through the filtration materials <b>15</b><i>c </i>(brushes), and finally the bottom-cycling-water is pumped by the water pump <b>5</b><i>c </i>through pump intake <b>51</b><i>c </i>and pump outtake <b>52</b><i>c </i>to the primary filtration tank <b>21</b><i>c</i>. At the same time, the upper water with hardly any particles pollutant is pumped by the water pump <b>5</b><i>c </i>through the upper-water inlet pipe <b>23</b><i>c</i>, the pump intake <b>51</b><i>c </i>and the pump outtake <b>52</b><i>c </i>to the primary filtration tank <b>21</b><i>c</i>. The cycling water entering the primary filtration tank <b>21</b><i>c </i>is applied a primary biochemistry filtration and a further tiny particles pollutant blocking filtration by the primary filtration materials <b>22</b><i>c</i>, then the cycling water enters the secondary filtration tank <b>31</b><i>c </i>through the first opening <b>41</b><i>c </i>to apply a main biochemistry filtration.</p>
+      <p id="p-00078-en" num="0078">The secondary filtration tank <b>31</b><i>c </i>is divided into two parts to apply the biochemistry filtration. First, the cycling water goes downwards into the first part of the secondary filtration tank <b>31</b><i>c </i>to apply a biochemistry filtration. Oxygen is supplied continuously by the oxygen aeration disk <b>38</b><i>c </i>and the oxygen aeration pipe <b>37</b><i>c</i>. The contact time between the water and the oxygen is significantly extended due to the blocking effect of the secondary filtration materials <b>33</b><i>c</i>, thus a high oxygen dissolved cycling water is obtained because of the fully contact and convection. This high oxygen dissolved cycling water can active the biological bacterium to grow and flourish in a short time, during which a large quantity of organic matter is decomposed that doubled the effect of biochemistry filtration. After that, the cycling water from the first part of the secondary filtration tank <b>31</b><i>c </i>enters the second part through the second opening <b>42</b><i>c </i>to apply the biochemistry filtration, and finally return into the fish-pond through the primary water-outlet pipe <b>35</b><i>c </i>and the secondary water-outlet pipe <b>36</b><i>c. </i></p>
+      <p id="p-00079-en" num="0079">The water entering into the water-pollutant separation structure <b>12</b><i>c </i>can be controlled into a certain velocity to achieve the best water-pollutant separation effect by adjusting the bottom-water inlet valve <b>161</b><i>c </i>and the upper-water inlet valve <b>231</b><i>c</i>. Particles pollutant sedimented within the central area of the bottom of the water-pollutant separation tank <b>11</b><i>c </i>can be easily discharged by turning on the pollutant discharge pipe valve <b>171</b><i>c </i>at any time. Tiny particles pollutant absorbed on the bushes <b>15</b><i>c </i>can be easily discharged out of the water-pollutant separation tank <b>11</b><i>c </i>with back-flush flows from the upper-water inlet pipe <b>23</b><i>c </i>by turning off the bottom-water inlet pipe <b>161</b><i>c </i>at the time of pollutant discharging. Similarly, tiny particles pollutant absorbed on the primary filtration materials <b>22</b><i>c </i>can also be easily discharged out of the water-pollutant separation tank <b>11</b><i>c </i>with back-flush flows from the primary filtration tank by turning off the bottom-water inlet pipe <b>161</b><i>c</i>, the upper-water inlet valve <b>231</b><i>c</i>, and the water pump <b>5</b><i>c </i>at the time of pollutant discharging.</p>
+      <p id="p-00080-en" num="0080">As shown in <figref>FIG. 14</figref>, the high-density cultivation water-pollutant separation, filtration and oxygen aeration system of this embodiment can also have several water-pollutant separation devices <b>1</b><i>c</i>, or several primary filtration device <b>2</b><i>c</i>, or several secondary filtration and oxygen aeration device <b>3</b><i>c </i>cooperating together in parallel to improve the effect of the water-pollutant separation, filtration and oxygen aeration.</p>
+      <p id="p-00081-en" num="0081">The above descriptions are meant to be exemplary only and are not limited to the examples shown in the drawings and described hereinbefore, and those skilled in the art will recognize that changes may be made to the embodiments described without department from the scope of the invention disclosed. Still other modifications varied in efficient manners within the scope of the present invention and their technical equivalents will be apparent to those skilled in the art, in light of a review of this disclosure, and such modifications are intended to fall within the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>. A water-pollutant separation device, comprising a tank (<b>1</b><i>a</i>), a water inlet pipe (<b>2</b><i>a</i>) and a water outlet pipe (<b>3</b><i>a</i>) respectively communicated with the top of the tank (<b>1</b><i>a</i>), and a pollutant discharge pipe (<b>4</b><i>a</i>) communicated with the bottom of the tank (<b>1</b><i>a</i>), is characterized in that the inner cavity of the tank (<b>1</b><i>a</i>) is provided with a separation structure (<b>5</b><i>a</i>) being in such an inverted-barrel shape that has an upper closing cover, a slightly smaller external dimension than that of the tank (<b>1</b><i>a</i>), a gap from the bottom of the tank (<b>1</b><i>a</i>), and a spoiler (<b>51</b><i>a</i>), which is installed onto the water inlet pipe (<b>2</b><i>a</i>) after which goes through the upper closing cover of the separation structure (<b>5</b><i>a</i>) in the tank (<b>1</b><i>a</i>), having a sealed lower-end and a plurality of openings on the side-wall to generate subcritical flow to spoil the water flow.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The water-pollutant separation device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein, the dimensions of the openings on the side-wall of the spoiler (<b>51</b><i>a</i>) gradually decrease from the top to the bottom.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The water-pollutant separation device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein, the upper closing cover of the separation structure (<b>5</b><i>a</i>) has a spherical appearance.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The water-pollutant separation device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein, the openings on the side wall of the spoiler (<b>51</b><i>a</i>) are biased in the same direction.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The water-pollutant separation device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein, a number of spiral leaves (<b>52</b><i>a</i>), which are biased in the same direction with the openings, are arranged onto the inner-wall of the separation structure (<b>5</b><i>a</i>) to swirl the water.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The water-pollutant separation device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein, the inner-wall of the separation structure (<b>5</b><i>a</i>) is provided with filtration materials (<b>52</b><i>a</i>).</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. A water-pollutant separation and filtration device based on the water-pollutant separation device in any of the preceding claims, is characterized by comprising a tank (<b>1</b><i>a</i>), a water inlet pipe (<b>2</b><i>a</i>) and a water outlet pipe (<b>3</b><i>a</i>) respectively communicated with the top of the tank (<b>1</b><i>a</i>), a pump (<b>6</b><i>a</i>), a pollutant discharge pipe (<b>4</b><i>a</i>) communicated with the bottom of the tank (<b>1</b><i>a</i>), and a back-flush pipe (<b>22</b><i>a</i>) provided with a back-flush valve (<b>221</b><i>a</i>) communicating the water inlet pipe (<b>2</b><i>a</i>) and the water outlet pipe (<b>3</b><i>a</i>), wherein,
+<claim-text>the upper inner cavity of the tank (<b>1</b><i>a</i>) is provided with multiple layers of filtration materials (<b>11</b><i>a</i>);</claim-text><claim-text>the lower inner cavity of the tank (<b>1</b><i>a</i>) is provided with a separation structure (<b>5</b><i>a</i>) being in such an inverted-barrel shape that has an upper closing cover, a slightly smaller external dimension than that of the tank (<b>1</b><i>a</i>), a gap from the bottom of the tank (<b>1</b><i>a</i>), and a spoiler (<b>51</b><i>a</i>), which is installed onto the water inlet pipe (<b>2</b><i>a</i>) after which goes through the upper closing cover of the separation structure (<b>5</b><i>a</i>) in the tank (<b>1</b><i>a</i>), having a sealed lower-end and a plurality of openings on the side-wall biased in the same direction to generate a subcritical flow to spoil the water flow.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The water-pollutant separation and filtration device of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein, the lower layers of filtration materials (<b>11</b><i>a</i>) have a less density than the upper layers of filtration materials (<b>11</b><i>a</i>), and a net spacing (<b>12</b><i>a</i>) is provided between each layer of filtration materials (<b>11</b><i>a</i>).</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>-<b>28</b>. (canceled) </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257371A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257371A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257371A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257371A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257371A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257371A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257371A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257371A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257371A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257371A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257371A1_00006.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257371A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257371A1.PDF" type="pdf" size="623288" pages="13" />
+</lexisnexis-patent-document>

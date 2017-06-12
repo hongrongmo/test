@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257722A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030249" date-changed="20160104" time-changed="154741">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121316917">
+        <country>US</country>
+        <doc-number>20150257722</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14212637</doc-number>
+        <date>20140314</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151223">
+      <classification-ipcr sequence="1">
+        <text>A61B   6/00        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>6</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B   6/03        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>6</main-group>
+        <subgroup>03</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151223">
+      <classification-cpc sequence="1">
+        <text>A61B   6/4241      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>6</main-group>
+        <subgroup>4241</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   6/032       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>6</main-group>
+        <subgroup>032</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>G01T   1/00        20130101 LI20151218BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>T</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151218</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">13</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">ENERGY-WEIGHTED SINGLE-BINNING FOR A PHOTON-COUNTING DETECTOR</invention-title>
+    <references-cited date-changed="20160104">
+      <patent-citations name="patcit" date-changed="20160104" />
+      <citation>
+        <patcit num="1" dnum="US2007076842A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070076842</doc-number>
+            <kind>A1</kind>
+            <name>TKACZYK JOHN E [US], et al</name>
+            <date>20070405</date>
+          </document-id>
+          <application-date>
+            <date>20050930</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Toshiba Medical Systems Corporation</orgname>
+            <role>03</role>
+            <address>
+              <city>Otawara-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="2" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Kabushiki Kaisha Toshiba</orgname>
+            <role>03</role>
+            <address>
+              <city>Minato-ku</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>WANG</last-name>
+            <first-name>Gin-Chung</first-name>
+            <address>
+              <city>Lincolnshire</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Gagnon</last-name>
+            <first-name>Daniel</first-name>
+            <address>
+              <city>Twinsburg</city>
+              <state>OH</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Zou</last-name>
+            <first-name>Yu</first-name>
+            <address>
+              <city>Naperville</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173671108">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257722</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140314</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173671107">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257722</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140314</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">An apparatus is provided that includes a digital processing circuit to obtain a digital signal corresponding to an output signal of a photon-counting detector; determine, from the obtained digital signal, a plurality of X-ray photons received by the photon-counting detector during a measurement period; determine a corresponding energy level of each of the plurality of X-ray photons; determine, based on the corresponding energy level, a corresponding weight for each of the plurality of X-ray photons; and calculate a sum of the corresponding weights of the plurality of X-ray photons.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140314</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257722A1</docdb-publication-number>
+      <docdb-application-id>444511124</docdb-application-id>
+      <new-owner>KABUSHIKI KAISHA TOSHIBA, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:WANG, GIN-CHUNG;GAGNON, DANIEL;ZOU, YU;SIGNING DATES FROM 20140308 TO 20140310;REEL/FRAME:032444/0790</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20140314</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257722A1</docdb-publication-number>
+      <docdb-application-id>444511124</docdb-application-id>
+      <new-owner>TOSHIBA MEDICAL SYSTEMS CORPORATION, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:WANG, GIN-CHUNG;GAGNON, DANIEL;ZOU, YU;SIGNING DATES FROM 20140308 TO 20140310;REEL/FRAME:032444/0790</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD</heading>
+      <p id="p-00001-en" num="0001">Embodiments disclosed herein generally relate to photon-counting detectors and computed tomography (CT) imaging using photon-counting detectors.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">In conventional spectral CT imaging, it has been shown that energy-weighting, whether in the image-domain or the data-domain, improves the contrast-to-noise ratio. Conventionally, photon-counting detectors use a set of predetermined energy thresholds to count the number of events falling into predetermined energy ranges. However, no practical implementation of energy-weighting at the detector level is known.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00003-en" num="0003">A more complete appreciation of the disclosure and many of the attendant advantages thereof will be readily obtained as the same becomes better understood by reference to the following detailed description when considered in connection with the accompanying drawings, wherein:</p>
+      <p id="p-00004-en" num="0004">
+        <figref>FIG. 1</figref> is a block diagram of a photon-counting detector connected to a set of comparators with predetermined energy thresholds to count the number of events falling in predetermined energy ranges;</p>
+      <p id="p-00005-en" num="0005">
+        <figref>FIG. 2</figref> illustrates energy-weighted binning;</p>
+      <p id="p-00006-en" num="0006">
+        <figref>FIG. 3</figref> is illustrates a device for performing energy-weighted binning;</p>
+      <p id="p-00007-en" num="0007">
+        <figref>FIG. 4</figref> illustrates signal outputs of elements of the device of <figref>FIG. 3</figref>;</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 5</figref> illustrates a CT scanner system; and</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIGS. 6A and 6B</figref> illustrate fourth-generation scanners having photon-counting detectors.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00010-en" num="0010">According to one embodiment, there is provided an apparatus, comprising a digital processing circuit configured to (1) obtain a digital signal corresponding to an output signal of a photon-counting detector; (2) determine, from the obtained digital signal, a plurality of X-ray photons received by the photon-counting detector during a measurement period; (3) determine a corresponding energy level of each of the plurality of X-ray photons; (4) determine, based on the corresponding energy level, a corresponding weight for each of the plurality of X-ray photons; and (5) calculate a sum of the corresponding weights of the plurality of X-ray photons.</p>
+      <p id="p-00011-en" num="0011">In another embodiment, the apparatus includes an analog-to-digital converter circuit configured to generate the digital signal from the output signal of the photon-counting detector.</p>
+      <p id="p-00012-en" num="0012">In another embodiment, the apparatus includes a preamplifier configured to amplify the output signal of the photon-counting detector to generate an amplified signal, wherein the amplified signal is input to the analog-to-digital converter circuit.</p>
+      <p id="p-00013-en" num="0013">In another embodiment, the digital processing circuit is configured to determine the corresponding weight to be proportional to an inverse of the corresponding energy level cubed.</p>
+      <p id="p-00014-en" num="0014">In another embodiment, the digital processing circuit is configured to determine the corresponding weight by accessing a programmable look-up table.</p>
+      <p id="p-00015-en" num="0015">In another embodiment, the apparatus includes a memory configured to store the calculated sum as an energy-weighted bin value.</p>
+      <p id="p-00016-en" num="0016">According to another embodiment, there is provided a computed tomography scanner, comprising: (1) an X-ray source; (2) a plurality of photon-counting detectors; and (3) a plurality of data acquisition devices, each data acquisition device including a digital processing circuit configured to obtain a digital signal corresponding to an output signal of a photon-counting detector; determine, from the obtained digital signal, a plurality of X-ray photons received by the photon-counting detector during a measurement period; determine a corresponding energy level of each of the plurality of X-ray photons; determine, based on the corresponding energy level, a corresponding weight for each of the plurality of X-ray photons; and calculate a sum of the corresponding weights of the plurality of X-ray photons.</p>
+      <p id="p-00017-en" num="0017">Referring now to the drawings, wherein like reference numerals designate identical or corresponding parts throughout the several views, <figref>FIG. 1</figref> illustrates a system in which the signal output from a photon-counting detector device <b>102</b> is input into a set of comparators <b>104</b>, <b>106</b>, and <b>108</b>, etc. The comparators <b>104</b>, <b>106</b>, and <b>108</b> have a corresponding set of predetermined energy thresholds, denoted by E1, E2, and E3, etc. and one of the comparators produces an output signal when the energy level of the signal output from the photon-counting detector falls within a corresponding one of the energy ranges determined by the predetermined energy thresholds. The output of each comparator is connected to a corresponding counter <b>110</b>, <b>112</b>, and <b>114</b>, etc., which counts the number of received photons at the corresponding energy range.</p>
+      <p id="p-00018-en" num="0018">However, the approach illustrated in <figref>FIG. 1</figref> is limited because the finite number of energy thresholds (E1, E2, E3 . . . ) defeats the possibility of energy-weighted binning at the detector level.</p>
+      <p id="p-00019-en" num="0019">Thus, according to one embodiment, a device that performs energy-weighted binning at the detector level is disclosed. A photon-counting detector resolves the energy of each received X-ray, which is discernable from the output signal of the photon-counting detector. For example, the received X-ray can have any energy value, e.g., E<sub>1</sub>, E<sub>2</sub>, . . . , or E<sub>n</sub>. Pre-loaded energy-correlated weights, denoted by W(E<sub>1</sub>), W(E<sub>2</sub>), . . . ,W(E<sub>n</sub>), are used such that one of the weights is obtained for each corresponding X-ray photon having a given energy. For example, if an X-ray photon of energy E<sub>1 </sub>is received, the weight W(E<sub>1</sub>) is obtained, e.g., from a look-up table. Note that a finite number of weights/energy levels can be used, or the weights can be a more general function of the energy. The optimum number of weights is determined by the energy resolution. For example, after reaching the optimum, adding more weights only costs more in the implementation, but does not gain anything in performance. The implementation can be a lookup table (with pre-calculated weights) or a function to be calculated in realtime using a DSP or an FPGA, for example.</p>
+      <p id="p-00020-en" num="0020">Next, all of the obtained weights obtained in a predetermined scan or measurement period are summed to calculate an energy-weighted bin value.</p>
+      <p id="p-00021-en" num="0021">In one embodiment, each weight can be proportional to a power of the corresponding energy E, where the power is dependent on the clinical application. For example, each weight W(E,) can be proportional to 1/E<sub>i</sub><sup>3</sup>.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 3</figref> illustrated a practical device for implementing the detector-level energy-weighted disclosed herein. <figref>FIG. 3</figref> uses a combination of a high-speed ADC (analog-to-digital converter) <b>306</b> and a digital processing circuit <b>308</b> to perform energy-weighted binning at the detector level. In <figref>FIG. 3</figref>, the output of photon-counting detector <b>302</b> is input into a preamplifier <b>304</b>. The output of the preamplifier <b>304</b>, which is shown in graph <b>410</b> in <figref>FIG. 4</figref>, is input into the ADC <b>306</b>, which produces the digitized signal shown in graph <b>420</b> in <figref>FIG. 4</figref>. The digitized signal output from the ADC is input to the digital signal processing circuit <b>308</b>.</p>
+      <p id="p-00023-en" num="0023">As shown in graph <b>430</b> in <figref>FIG. 4</figref>, the digital processing circuit <b>308</b> analyzes the digitized signal output from the ADC in real time to detect a plurality of photons and their corresponding energy levels, and for each detected photon, e.g., having an energy E, obtains (e.g., using a look-up table) a weight W<sub>E </sub>corresponding to the energy level E of the photon. The digital processing circuit further sums of all the obtained weights W<sub>E </sub>during a measurement period to form the energy-weighted bin value.</p>
+      <p id="p-00024-en" num="0024">Referring now to <figref>FIG. 2</figref>, <figref>FIG. 2</figref> is a block diagram that shows how the energy-weighted bin value is obtained by the digital processing circuit according to one embodiment of the present disclosure. Elements <b>202</b>, <b>204</b>, and <b>206</b> represent a photon detected by the digital processing having a corresponding energy value E1, E2, and E3, respectively. Elements <b>208</b>, <b>210</b>, <b>212</b> represent weights W(E1), W(E2), W(E3) that are obtained corresponding to the energy values E1, E2, and E3, respectively. The weights are summed by the summer <b>214</b> to produce the energy-weighted bin value <b>216</b>.</p>
+      <p id="p-00025-en" num="0025">The disclosed embodiments have several advantages over conventional approaches, e.g., an improved contrast-to-noise ratio (CNR). Further, the disclosed detector-level energy weighting significantly reduces the processing time compared to image-domain energy weighting, while having the same CNR advantages. Further, in the present embodiments, the method of calculating the weights in the digital processing circuit can be easily modified to suit a particular application.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 5</figref> illustrates the basic structure of a CT scanner apparatus that includes the detectors described herein. The CT apparatus of <figref>FIG. 5</figref> includes an X-ray tube <b>1</b>, filters and collimators <b>2</b>, and detector <b>3</b>. As shown in <figref>FIGS. 6A and 6B</figref>, the CT apparatus also includes sparse, fixed energy-discriminating detectors, creating a 4<sup>th</sup>-generation scanner. The CT apparatus will also include additional mechanical and electrical components such as a gantry motor and a controller <b>4</b> to control the rotation of the gantry, control the X-ray source, and control a patient bed. The CT apparatus also includes a data acquisition system <b>5</b> and a processor <b>6</b> to generate CT images based on the projection (view) data acquired by the data acquisition system. The processor <b>6</b> can be a CPU or other hardware processing circuit that can execute a computer program. The processor and data acquisition system make use of a memory <b>7</b>, which is configured to store, e.g., projection data obtained from the detector and reconstructed images.</p>
+      <p id="p-00027-en" num="0027">As one of ordinary skill in the art would recognize, the digital processing circuit <b>308</b> can include a CPU that can be implemented as discrete logic gates, as an Application Specific Integrated Circuit (ASIC), a Field Programmable Gate Array (FPGA), a DSP/GPU, or other Complex Programmable Logic Device (CPLD). An FPGA or CPLD implementation may be coded in VHDL, Verilog, or any other hardware description language and the code may be stored in an electronic memory directly within the FPGA or CPLD, or as a separate electronic memory. Further, the memory may be non-volatile, such as ROM, EPROM, EEPROM or FLASH memory. The memory can also be volatile, such as static or dynamic RAM, and a processor, such as a microcontroller or microprocessor, may be provided to manage the electronic memory as well as the interaction between the FPGA or CPLD and the memory.</p>
+      <p id="p-00028-en" num="0028">Alternatively, the CPU in the digital processing circuit <b>308</b> can execute a computer program including a set of computer-readable instructions that perform the functions described herein, the program being stored in any of the above-described non-transitory electronic memories and/or a hard disk drive, CD, DVD, FLASH drive or any other known storage media.</p>
+      <p id="p-00029-en" num="0029">Further, the CPU in the processor <b>6</b> can be implemented as discrete logic gates, as an Application Specific Integrated Circuit (ASIC), a Field Programmable Gate Array (FPGA), a DSP/GPU, or other Complex Programmable Logic Device (CPLD). An FPGA or CPLD implementation may be coded in VHDL, Verilog, or any other hardware description language and the code may be stored in an electronic memory directly within the FPGA or CPLD, or as a separate electronic memory.</p>
+      <p id="p-00030-en" num="0030">Further, the CPU in the processor <b>6</b> can execute a computer program including a set of computer-readable instructions that perform various functions described herein, the program being stored in any of the above-described non-transitory electronic memories and/or a hard disk drive, CD, DVD, FLASH drive or any other known storage media. Further, the computer-readable instructions may be provided as a utility application, background daemon, or component of an operating system, or combination thereof, executing in conjunction with a processor, such as a Xenon processor from Intel of America or an Opteron processor from AMD of America and an operating system, such as Microsoft VISTA, UNIX, Solaris, LINUX, Apple, MAC-OS and other operating systems known to those skilled in the art.</p>
+      <p id="p-00031-en" num="0031">While certain embodiments have been described, these embodiments have been presented by way of example only, and are not intended to limit the scope of the inventions. Indeed the novel methods and systems described herein may be embodied in a variety of other forms; furthermore, various omissions, substitutions, and changes in the form of the methods and systems described herein may be made without departing from the spirit of the inventions. The accompanying claims and their equivalents are intended to cover such forms or modifications as would fall within the scope and spirit of the inventions.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>7</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>8</b>. A computed tomography (CT) scanner, comprising:
+<claim-text>an X-ray source;</claim-text><claim-text>a plurality of photon-counting detectors, wherein each photon-counting detector is configured to receive X-ray photons from the X-ray source and to provide an output signal indicating a number of X-ray photons received; and</claim-text><claim-text>a plurality of data acquisition devices, each data acquisition device including a digital processing circuit configured to
+<claim-text>obtain a digital signal corresponding to the output signal of a photon-counting detector;</claim-text><claim-text>determine, from the obtained digital signal, a plurality of X-ray photons received by the photon-counting detector during a measurement period;</claim-text><claim-text>determine a corresponding energy level of each of the plurality of X-ray photons;</claim-text><claim-text>determine, based on the corresponding energy level, a corresponding weight for each of the plurality of X-ray photons; and</claim-text><claim-text>calculate a sum of the corresponding weights of the plurality of X-ray photons.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>9</b>. The CT scanner of <claim-ref idref="clm-00002-en">claim 8</claim-ref>, wherein each data acquisition device further comprises:
+<claim-text>an analog-to-digital converter circuit configured to generate the digital signal from the output signal of the photon-counting detector.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>10</b>. The CT scanner of <claim-ref idref="clm-00003-en">claim 9</claim-ref>, wherein each data acquisition device further comprises:
+<claim-text>a preamplifier configured to amplify the output signal of the photon-counting detector to generate an amplified signal, wherein the amplified signal is input to the analog-to-digital converter circuit.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>11</b>. The CT scanner of <claim-ref idref="clm-00002-en">claim 8</claim-ref>, wherein the digital processing circuit is configured to determine the corresponding weight to be proportional to an inverse of the corresponding energy level cubed.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>12</b>. The CT scanner of <claim-ref idref="clm-00002-en">claim 8</claim-ref>, wherein the digital processing circuit is configured to determine the corresponding weight by accessing a programmable look-up table.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>13</b>. The CT scanner of <claim-ref idref="clm-00002-en">claim 8</claim-ref>, further comprising:
+<claim-text>a memory configured to store the calculated sum as an energy-weighted bin value.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>14</b>. An apparatus, comprising:
+<claim-text>a digital processing circuit configured to
+<claim-text>obtain a digital signal corresponding to an output signal of a photon-counting detector;</claim-text><claim-text>determine, from the obtained digital signal, a plurality of X-ray photons received by the photon-counting detector during a measurement period;</claim-text><claim-text>determine a corresponding energy level of each of the plurality of X-ray photons;</claim-text><claim-text>determine, based on the corresponding energy level, a corresponding weight for each of the plurality of X-ray photons; and</claim-text><claim-text>calculate a sum of the corresponding weights of the plurality of X-ray photons.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>15</b>. The apparatus of <claim-ref idref="clm-00008-en">claim 14</claim-ref>, further comprising:
+<claim-text>an analog-to-digital converter circuit configured to generate the digital signal from the output signal of the photon-counting detector.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>16</b>. The apparatus of <claim-ref idref="clm-00008-en">claim 14</claim-ref>, further comprising:
+<claim-text>a preamplifier configured to amplify the output signal of the photon-counting detector to generate an amplified signal, wherein the amplified signal is input to the analog-to-digital converter circuit.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>17</b>. The apparatus of <claim-ref idref="clm-00008-en">claim 14</claim-ref>, wherein the digital processing circuit is configured to determine the corresponding weight to be proportional to an inverse of the corresponding energy level cubed.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>18</b>. The apparatus of <claim-ref idref="clm-00008-en">claim 14</claim-ref>, wherein the digital processing circuit is configured to determine the corresponding weight by accessing a programmable look-up table.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>19</b>. The apparatus of <claim-ref idref="clm-00008-en">claim 14</claim-ref>, further comprising:
+<claim-text>a memory configured to store the calculated sum as an energy-weighted bin value.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257722A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257722A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257722A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257722A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257722A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257722A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257722A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257722A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257722A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257722A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257722A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257722A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257722A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257722A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257722A1_00008.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257722A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257722A1.PDF" type="pdf" size="339457" pages="10" />
+</lexisnexis-patent-document>

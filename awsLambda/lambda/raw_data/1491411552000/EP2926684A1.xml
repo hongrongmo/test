@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2926684A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151007" time-inserted="093524" date-changed="20151016" time-changed="031256">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121593092">
+        <country>EP</country>
+        <doc-number>2926684</doc-number>
+        <kind>A1</kind>
+        <date>20151007</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>15161575</doc-number>
+        <date>20150330</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>ita</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151007">
+      <priority-claim sequence="1" kind="national">
+        <country>IT</country>
+        <doc-number>2014MI0126U</doc-number>
+        <date>20140331</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>IT</country>
+        <doc-number>MI20140126</doc-number>
+        <kind>U</kind>
+        <date>20140331</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>MI20140126 U</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>IT2014MI00126U</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151008">
+      <gazette-reference>
+        <date>20151007</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151007</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151007</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151008">
+      <classification-ipcr sequence="1">
+        <text>A45D  33/18        20060101AFI20150817BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>33</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150817</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151008">
+      <classification-cpc sequence="1">
+        <text>A45D  40/22        20130101 FI20151001BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>40</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A45D  33/18        20130101 LI20151002BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>33</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151002</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A45D2040/0012      20130101 LA20151001BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>2040</main-group>
+        <subgroup>0012</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A45D2200/05        20130101 LA20150618BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>2200</main-group>
+        <subgroup>05</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150618</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>B65D   7/12        20130101 LI20151001BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>65</class>
+        <subclass>D</subclass>
+        <main-group>7</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>B65D  25/54        20130101 LI20151001BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>65</class>
+        <subclass>D</subclass>
+        <main-group>25</main-group>
+        <subgroup>54</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">7</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151007" lang="ger" format="original">Bodenbasis für kosmetische Produkte und Verpackung für kosmetische Produkte mit solch einer Bodenbasis</invention-title>
+    <invention-title id="title_eng" date-changed="20151007" lang="eng" format="original">Bottom base for cosmetic products and package for cosmetic products comprising such bottom base</invention-title>
+    <invention-title id="title_fre" date-changed="20151007" lang="fre" format="original">Base de fond pour des produits cosmétiques et emballage pour produits cosmétiques comprenant un tel fond</invention-title>
+    <references-cited date-changed="20151013">
+      <patent-citations name="patcit" date-changed="20151013" />
+      <citation>
+        <patcit num="1" dnum="US6076533A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6076533</doc-number>
+            <kind>A</kind>
+            <name>COHEN ISAAC DAVID [US], et al</name>
+            <date>20000620</date>
+          </document-id>
+          <application-date>
+            <date>19990714</date>
+          </application-date>
+        </patcit>
+        <category>I</category>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="WO2006103496A1" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2006103496</doc-number>
+            <kind>A1</kind>
+            <name>GAMMA CROMA SPA [IT], et al</name>
+            <date>20061005</date>
+          </document-id>
+          <application-date>
+            <date>20060126</date>
+          </application-date>
+        </patcit>
+        <category>I</category>
+      </citation>
+    </references-cited>
+    <parties date-changed="20151007">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>B. Kolormakeup &amp; Skincare S.r.l.</orgname>
+            <registered-number>101367028</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Via Canonica, 79/A Loc. Geromina</address-1>
+              <city>24047 Treviglio (Bergamo)</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>De Luigi, Mario</name>
+            <address>
+              <address-1>Viale Piave, 20</address-1>
+              <city>20129 Milano</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Locatelli, Massimo et al</name>
+            <registered-number>101228364</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Barzanò &amp; Zanardo Milano S.p.A. Via Borgonuovo 10</address-1>
+              <city>20121 Milano</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151007">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20151127">
+      <main-family family-id="174018775">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2926684</doc-number>
+            <kind>A1</kind>
+            <date>20151007</date>
+          </document-id>
+          <application-date>
+            <date>20150330</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>204763994</doc-number>
+            <kind>U</kind>
+            <date>20151118</date>
+          </document-id>
+          <application-date>
+            <date>20150331</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="174018774">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2926684</doc-number>
+            <kind>A1</kind>
+            <date>20151007</date>
+          </document-id>
+          <application-date>
+            <date>20150330</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>204763994</doc-number>
+            <kind>U</kind>
+            <date>20151118</date>
+          </document-id>
+          <application-date>
+            <date>20150331</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151007" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A bottom base (11) for cosmetic products, with an upper surface (13) intended to constitute a support for the cosmetic product and a lower surface intended to rest on the bottom of an outer container, has at least one of said surfaces that is decorated with decorations (14) made by thermal sublimation photographic printing. A package for cosmetic products comprises an outer container (10) and a bottom base (11) thus made. <img id="imga-00001-en" wi="121" he="77" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <legal-data date-changed="20151016">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926684A1</docdb-publication-number>
+      <docdb-application-id>438491392</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AL</country>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>MK</country>
+        <country>MT</country>
+        <country>NL</country>
+        <country>NO</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>RS</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>SM</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AV</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR VALIDATION OF THE EUROPEAN PATENT IN</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926684A1</docdb-publication-number>
+      <docdb-application-id>438491392</docdb-application-id>
+      <countries-concerned>
+        <country>MA</country>
+      </countries-concerned>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926684A1</docdb-publication-number>
+      <docdb-application-id>438491392</docdb-application-id>
+      <countries-concerned>
+        <country>BA</country>
+        <country>ME</country>
+      </countries-concerned>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151007">
+    <p id="p-00001-en" num="0001">The present invention relates to a bottom base intended to be filled with cosmetic products and inserted in outer containers (primary packaging) made of plastic, glass or other material.</p>
+    <p id="p-00002-en" num="0002">In the prior art bottom bases are used, made of plastic or metal (tinplate, aluminium, etc.), on which the cosmetic product is pressed or cast, which generally have the rough aesthetic finish of metal, or a coloured finish by glazing or given by the coloured pigments of the plastic which they are made of.</p>
+    <p id="p-00003-en" num="0003">Possibly, such bottom bases display, obtained by incision, the logo or the name of the manufacturer. In general, however, writing or other graphical markings using ink are not made because the printing inks normally used can contaminate the cosmetic product or, in any case, react with it, altering its properties. Sometimes, however, it is desirable to be able to provide the purchaser with a cosmetic product packaged in a container equipped with a bottom base decorated on the inner surface intended to receive the product itself, so that, if the cosmetic product is substantially transparent or semi-transparent (consisting for example of a gel substance), the decoration can be visible even when the container is full, whereas if the cosmetic product is opaque (for example in the form of powder, in anhydrous form, non-transparent cream, etc.), the decoration becomes progressively visible once the product is almost completely used up and the surface of the bottom base begins to come into sight.</p>
+    <p id="p-00004-en" num="0004">The general purpose of the present invention is to avoid the aforementioned drawbacks by providing a bottom base for cosmetic products that makes it possible to appreciate a decoration thereof placed on its inner surface when the cosmetic product contained therein has not been used yet (if it is a transparent or semi-transparent product) or it has been partially used (if it is an opaque product), to a sufficient extent as to at least partially let the surface of the bottom base appear.</p>
+    <p id="p-00005-en" num="0005">In view of such a purpose, it has been devised, according to the invention, a bottom base for cosmetic products, having an upper surface intended to constitute a support for the cosmetic product and a lower surface, opposite said upper surface, intended to rest on the bottom of an outer container, characterised in that at least one of said surfaces of the bottom base is decorated with decorations made by thermal sublimation photographic printing.</p>
+    <p id="p-00006-en" num="0006">According to the invention, it has also been devised a package for cosmetic products, comprising an outer container, a bottom base contained inside the container and having an upper surface intended to constitute a support for a cosmetic product and a lower surface, opposite said upper surface, intended to rest on the bottom of the container, characterised in that at least one of said surfaces of the bottom base is decorated with decorations made by thermal sublimation photographic printing.</p>
+    <p id="p-00007-en" num="0007">In order to clarify the explanation of the innovative principles of the present invention and its advantages with respect to the prior art, hereafter a possible embodiment applying such principles will be described, with the help of the attached drawings. In the drawings: <ul id="ul-00001-en" list-style="none" compact="compact"><li><figref>Fig.1</figref> represents a general view of a container for cosmetic products, with the bottom base inserted in it.</li><li><figref>Fig.2A</figref> schematically represents a view from above of a bottom base according to the invention, having a decoration on its surface designed to contain the cosmetic product.</li><li><figref>Fig.2B</figref> is a view like that of <figref>Fig.2A</figref>, but represented through a photographic image illustrating the aesthetical rendering of a decoration applied on the surface of the bottom base according to the invention.</li><li><figref>Fig.3A</figref> represents a view from above of a container for cosmetic products with the bottom base of <figref>Fig.2A</figref> present therein, which is filled with a transparent or semi-transparent cosmetic product.</li><li><figref>Fig.3B</figref> is a view like that of <figref>Fig.3A</figref>, represented through a photographic image illustrating the aesthetical rendering of a decoration applied on the surface of the bottom base according to the invention, visible through a transparent or semi-transparent cosmetic product.</li></ul></p>
+    <p id="p-00008-en" num="0008">With reference to the figures, <figref>Fig.1</figref> illustrates a container 10 for cosmetic products, which represents the primary packaging of the product itself. The container 10 can be made, as well known to the person skilled in the art, with the most appropriate shape and of the most appropriate material for the specific marketing requirements. For example, it could be made of plastic, glass, metal or another suitable material. Inside the container 10, a bottom base 11 is housed for supporting and containing a cosmetic product. Advantageously, the container 10 is also equipped with a closing lid 12 to protect the cosmetic product contained therein.</p>
+    <p id="p-00009-en" num="0009">In the case where the container 10 and/or the lid 12 are made of glass or of transparent plastic, the cosmetic product may be visible from the outside.</p>
+    <p id="p-00010-en" num="0010">
+      <figref>Fig.2A</figref> separately illustrates the bottom base 11, having a shape and size suitable for being inserted in the outer container 10 and for adequately supporting the cosmetic product. Advantageously, the bottom base can be made of metal.</p>
+    <p id="p-00011-en" num="0011">The bottom base 11 has an upper surface 13, intended to face towards the inside of the container 10 and to constitute a support for the cosmetic product, and an opposite lower surface (not visible in the figures) intended to rest on the bottom of the container 10. According to the invention, at least one of the surfaces of the bottom base 11, typically the upper surface 13 intended to constitute a support for the cosmetic product, is decorated with decorations 14 made by thermal sublimation photographic printing.</p>
+    <p id="p-00012-en" num="0012">As well known to the person skilled in the art, the thermal sublimation photographic printing process, or thermal transfer, exploits a transfer process of the colour (in the form of a polymer in solid state) by direct transition from solid state to aeriform state at a temperature normally around 400°C, which allows its firm and long-lasting attachment to the support to be decorated. This technique is widely used, for example, for printing on fabrics.</p>
+    <p id="p-00013-en" num="0013">It has been found that, by using this printing technology on bottom bases for cosmetic products, it is possible to obtain the desired decorations without the product itself being contaminated, or altered in its chemical-physical properties, by the pigment that constitutes the decoration.</p>
+    <p id="p-00014-en" num="0014">By "decoration" it is intended here any graphical image, photograph, illustration, drawing, writing (mono-, bi- or poly-chromatic), made by the aforementioned thermal sublimation photographic printing process.</p>
+    <p id="p-00015-en" num="0015">In <figref>Fig.2B</figref> it is possible to see, by a photographic illustration, the real aesthetical rendering of an example decoration 14 applied onto the upper surface 13 of the bottom base according to the invention.</p>
+    <p id="p-00016-en" num="0016">
+      <figref>Figures 3A and 3B</figref> show schematically and by a real photographic illustration respectively, the assembly of the container 10 and bottom base 11 filled with cosmetic product 15 in the form of transparent substance. The attractive visual effect that the package of cosmetic product as a whole can have is clearly visible from <figref>Fig. 3B</figref>.</p>
+    <p id="p-00017-en" num="0017">In the case of cosmetic product in form of opaque substance, as stated, the image printed on the bottom base 11 will gradually appear through the use of the product, when the surface 13 of the bottom base is uncovered.</p>
+    <p id="p-00018-en" num="0018">It is clear how making a bottom base according to the invention makes it possible to obtain a package for cosmetic products with an added value in terms of good appearance and enjoyability during use.</p>
+    <p id="p-00019-en" num="0019">Of course, the description made above of an embodiment applying the innovative principle of the present invention is given as an example of such innovative principles and therefore should not be taken to limit the scope of protection claimed here.</p>
+    <p id="p-00020-en" num="0020">For example, according to the invention, it is possible for the decoration by thermal sublimation photographic printing to also, or only, cover the lower surface of the bottom base, designed to rest on the bottom of the container 10, if the container itself was made of glass or another transparent material and it was wished to propose a decoration specifically linked to the product contained in the bottom base, without having to specifically provide a primary container that is necessarily intended for it, said primary container therefore being able to be totally generic and for universal use also for other products supported by bottom bases of the same shape and size.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151007">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>Bottom base for cosmetic products, having an upper surface (13) intended to constitute a support for the cosmetic product and a lower surface, opposite said upper surface (13), intended to rest on the bottom of an outer container, <b>characterised in that</b> at least one of said surfaces of the bottom base is decorated with decorations (14) made by thermal sublimation photographic printing.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>Bottom base for cosmetic products according to claim 1, characterised in that the at least one of said surfaces, decorated with decorations (14) made by thermal sublimation photographic printing, is the upper surface (13) intended to constitute a support for the cosmetic product.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>Bottom base for cosmetic products according to claim 1, characterised in that it is made of metal.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en" independent="true">
+      <claim-text>Package for cosmetic products, comprising an outer container (10), a bottom base (11) contained inside the container (10) and having an upper surface (13) intended to constitute a support for a cosmetic product and a lower surface, opposite said upper surface (13), intended to rest on the bottom of the container (10), <b>characterised in that</b> at least one of said surfaces of the bottom base (11) is decorated with decorations (14) made by thermal sublimation photographic printing.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>Package for cosmetic products according to claim 4, characterised in that the at least one of said surfaces, decorated with decorations (14) made by thermal sublimation photographic printing, is the upper surface (13) intended to constitute a support for the cosmetic product.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>Package for cosmetic products according to claim 4, characterised in that the at least one of said surfaces, decorated with decorations (14) made by thermal sublimation photographic printing, is the lower surface, intended to rest on the bottom of the container (10).</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>Package for cosmetic products according to claim 4, characterised in that the container (10) is made of transparent material.</claim-text>
+    </claim>
+  </claims>
+  <image file="EP2926684A1.PDF" type="pdf" size="388498" pages="6" />
+</lexisnexis-patent-document>

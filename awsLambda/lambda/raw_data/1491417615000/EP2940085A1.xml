@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940085A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091117" date-changed="20151223" time-changed="095901">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121939516">
+        <country>EP</country>
+        <doc-number>2940085</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13867739</doc-number>
+        <date>20131227</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>jpn</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012283870</doc-number>
+        <date>20121227</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2012283870</doc-number>
+        <kind>A</kind>
+        <date>20121227</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2013085164</doc-number>
+        <kind>W</kind>
+        <date>20131227</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2012283870</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013085164</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>JP20120283870</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2013JP85164</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150623</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151223">
+      <classification-ipcr sequence="1">
+        <text>C09D  11/00        20140101AFI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20140101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B41J   2/01        20060101ALI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>41</class>
+        <subclass>J</subclass>
+        <main-group>2</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B41M   5/00        20060101ALI20140715BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>41</class>
+        <subclass>M</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151223">
+      <classification-cpc sequence="1">
+        <text>C09D 133/12        20130101 FI20151113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>133</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C09D  11/107       20130101 LI20151114BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>107</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151114</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C09D  11/322       20130101 LI20150811BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>322</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150811</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C09D  11/34        20130101 LI20151217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C09D  11/38        20130101 LI20151217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>38</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">5</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">ACRYLHARZEMULSION FÜR WÄSSRIGE TINTENSTRAHLTINTEN UND DAMIT HERGESTELLTE WÄSSRIGE TINTENSTRAHLTINTENZUSAMMENSETZUNG</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">ACRYLIC RESIN EMULSION FOR WATER-BASED INKJET INKS, AND WATER-BASED INKJET INK COMPOSITION PRODUCED USING SAME</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">RÉSINE ACRYLIQUE ÉMULSIONNÉE POUR ENCRES À JET D'ENCRE À BASE D'EAU ET COMPOSITION D'ENCRE À JET D'ENCRE À BASE D'EAU PRODUITE AU MOYEN DE LADITE RÉSINE</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>The Nippon Synthetic Chemical Industry Co., Ltd.</orgname>
+            <registered-number>101320014</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>2-4, Komatsubara-cho Kita-ku</address-1>
+              <city>Osaka-shi, Osaka 530-0018</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>MATSUMOTO Akihisa</name>
+            <address>
+              <address-1>c/o The Nippon Synthetic Chemical Industry Co. Ltd. 2-4 Komatsubara-cho Kita-ku</address-1>
+              <city>Osaka-shi Osaka 530-0018</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>INOUE Toshimitsu</name>
+            <address>
+              <address-1>c/o The Nippon Synthetic Chemical Industry Co. Ltd. 2-4 Komatsubara-cho Kita-ku</address-1>
+              <city>Osaka-shi Osaka 530-0018</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>KANDA Taiji</name>
+            <address>
+              <address-1>c/o The Nippon Synthetic Chemical Industry Co. Ltd. 2-4 Komatsubara-cho Kita-ku</address-1>
+              <city>Osaka-shi Osaka 530-0018</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Kuhnen &amp; Wacker</name>
+            <registered-number>101467730</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Patent- und Rechtsanwaltsbüro Prinz-Ludwig-Straße 40A</address-1>
+              <city>85354 Freising</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13085164</doc-number>
+        <date>20131227</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014104319</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151112">
+      <main-family family-id="166465073">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014104319</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014141672</doc-number>
+            <kind>A</kind>
+            <date>20140807</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104884550</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940085</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150322282</doc-number>
+            <kind>A1</kind>
+            <date>20151112</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166465072">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014104319</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014141672</doc-number>
+            <kind>A</kind>
+            <date>20140807</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104884550</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940085</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150322282</doc-number>
+            <kind>A1</kind>
+            <date>20151112</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">To provide an aqueous inkjet ink composition excellent in glossiness and other ink properties and imparted with a higher viscosity without the use of a tackifier, an acrylic resin emulsion for an aqueous inkjet ink is provided, which contains a particulate acrylic resin having an acid value of 1 to 100 mgKOH/g, wherein an acid-group-containing monomer is present at a content mole ratio (As) in surface regions of particles of the particulate acrylic resin and present at a content mole ratio (At) in the overall acrylic resin particles as measured with a <sup>1</sup>H spin diffusion time of 5 ms, and a ratio (As/At) of the content mole ratio (As) to the content mole ratio (At) is not less than 9.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">TECHNICAL FIELD</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to an acrylic resin emulsion which is advantageously used for an aqueous inkjet ink.</p>
+    <heading id="h-00002-en">BACKGROUND ART</heading>
+    <p id="p-00002-en" num="0002">In an inkjet recording method, an aqueous ink composition is jetted in a liquid droplet form onto a substrate from small holes based on electric signals which induce thermal or mechanical pulses. In response to the pulses, the ink is jetted in the form of liquid droplets, which are forced toward specific positions on a surface of the substrate. After once being applied to the surface, the liquid droplets are required to stay at the positions and maintain their dimensions to form an image with a proper resolution. Thereafter, the liquid droplets are dried and sufficiently fixed to the surface of the substrate.</p>
+    <p id="p-00003-en" num="0003">With the recent innovative progress of the inkjet recording technique, the inkjet recording method is employed for higher-definition image recording (image printing) which used to be an application filed of photography and offset printing. Inkjet printers including a higher-viscosity ink head have been developed, which permit formation of clearer images with the use of a higher-viscosity ink. Hence, there is a demand for the higher-viscosity ink to be used with the higher-viscosity ink head.</p>
+    <p id="p-00004-en" num="0004">An ink composition (PLT1) which contains an aqueous vehicle, a self-dispersive pigment, a silicone-containing surfactant and a polymer having a specific glass transition temperature (Tg), and an ink composition (PLT2) which contains at least a polymer, glycerin, a tackifier and water, for example, have been developed as aqueous inkjet ink compositions to be used for inkjet inks. In PLT2, a method of controlling the viscosity of the ink with the use of the tackifier is disclosed.</p>
+    <heading id="h-00003-en">RELATED ART DOCUMENTS</heading>
+    <heading id="h-00004-en">PATENT DOCUMENTS</heading>
+    <p id="p-00005-en" num="0005">PLT1: <patcit id="pcit-00001" dnum="JP2006022328A"><text>JP-A-2006-22328</text></patcit> PLT2: <patcit id="pcit-00002" dnum="JP2011202030A"><text>JP-A-2011-202030</text></patcit></p>
+    <heading id="h-00005-en">SUMMARY</heading>
+    <heading id="h-00006-en">TECHNICAL PROBLEM</heading>
+    <p id="p-00006-en" num="0006">However, the aqueous inkjet ink composition employing a resin emulsion as described in PLT1 generally has a lower viscosity and, therefore, cannot be applied to the higher-viscosity ink head as it is.</p>
+    <p id="p-00007-en" num="0007">It is also conceivable to increase the viscosity of the ink with the use of the tackifier as described in PLT2, for example, in order to apply the ink to the higher-viscosity ink head. The aqueous inkjet ink composition imparted with a higher viscosity with the use of the tackifier can be used for the higher-viscosity ink head, but problematically has a lower glossiness after the printing.</p>
+    <p id="p-00008-en" num="0008">In view of the foregoing, the present invention provides an acrylic resin emulsion to be used for an aqueous inkjet ink composition excellent in glossiness and other ink properties and imparted with a higher viscosity without the use of a tackifier.</p>
+    <p id="p-00009-en" num="0009">In view of the foregoing, inventors of the present invention conducted intensive studies. As a result, the inventors found that, if an emulsion to be used for an aqueous inkjet ink composition contains a particulate acrylic resin and an acid-group-containing monomer is present at a higher content ratio in surface regions of particles of the particulate acrylic resin, the aqueous inkjet ink composition has a higher viscosity and yet has an excellent glossiness.</p>
+    <p id="p-00010-en" num="0010">According to the present invention, an acrylic resin emulsion for an aqueous inkjet ink is provided, which contains a particulate acrylic resin having an acid value of 1 to 100 mgKOH/g, wherein an acid-group-containing monomer is present at a content mole ratio (As) in surface regions of particles of the particulate acrylic resin and present at a content mole ratio (At) in the overall acrylic resin particles as measured with a <sup>1</sup>H spin diffusion time of 5 ms, and a ratio (As/At) of the content mole ratio (As) to the content mole ratio (At) is not less than 9.</p>
+    <p id="p-00011-en" num="0011">According to the present invention, an aqueous inkjet ink composition is also provided, which contains the acrylic resin emulsion for the aqueous inkjet ink, a pigment, a solvent and a wetting agent.</p>
+    <p id="p-00012-en" num="0012">The aqueous inkjet ink composition employing the inventive acrylic resin emulsion for the aqueous inkjet ink has a higher viscosity and, therefore, can be used for a higher-viscosity ink head. Further, the aqueous inkjet ink composition is excellent in glossiness and other ink properties in good balance and, therefore, can be used for high-definition image recording.</p>
+    <heading id="h-00007-en">BRIEF DESCRIPTION OF DRAWING</heading>
+    <p id="p-00013-en" num="0013">
+      <figref>FIG. 1</figref> is a diagram for explaining an (As) measuring method employing NMR spectra as described in <nplcit id="ncit-00001" npl-type="s"><text>Polymer Preprints Japan Vol. 60, No. 2, 3086(2011</text></nplcit>).</p>
+    <heading id="h-00008-en">DESCRIPTION OF EMBODIMENTS</heading>
+    <p id="p-00014-en" num="0014">The present invention will hereinafter be described in detail.</p>
+    <p id="p-00015-en" num="0015">In the present invention, the term " (meth) acryl" means acryl or methacryl, and the term " (meth) acryloyl" means acryloyl or methacryloyl. The term "(meth)acrylate" means acrylate or methacrylate.</p>
+    <p id="p-00016-en" num="0016">The inventive acrylic resin emulsion is an acrylic resin emulsion for an aqueous inkjet ink, and contains a particulate acrylic resin having an acid value of 1 to 100 mgKOH/g. An acid-group-containing monomer is present at a content mole ratio (As) in surface regions of particles of the particulate acrylic resin and present at a content mole ratio (At) in the overall acrylic resin particles as measured with a <sup>1</sup>H spin diffusion time of 5 ms, and the ratio (As/At) of the content mole ratio (As) to the content mole ratio (At) is not less than 9.</p>
+    <p id="p-00017-en" num="0017">First, the acrylic resin to be contained in the inventive acrylic resin emulsion for the aqueous inkjet ink will be described.</p>
+    <heading id="h-00009-en">&lt;Acrylic Resin&gt;</heading>
+    <p id="p-00018-en" num="0018">The acrylic resin is required to have an acid value of 1 to 100 mgKOH/g, preferably 1 to 50 mgKOH/g, particularly preferably 1 to 30 mgKOH/g.</p>
+    <p id="p-00019-en" num="0019">If the acid value is excessively high, an ink coating film formed by using the emulsion containing the acrylic resin is liable to have a reduced water resistance. If the acid value is excessively low, the particulate acrylic resin tends to be less stable.</p>
+    <p id="p-00020-en" num="0020">The acid value may be controlled within the aforementioned range by controlling the blending amount of the acid-group-containing monomer to be described later.</p>
+    <p id="p-00021-en" num="0021">The ratio (As/At) of the content mole ratio (As) of the acid-group-containing monomer in the surface regions of the acrylic resin particles to the content mole ratio (At) of the acid-group-containing monomer in the overall acrylic resin particles is required to be not less than 9 as measured with a <sup>1</sup>H spin diffusion time of 5 ms. The ratio (As/At) is preferably 10 to 100, particularly preferably 11 to 80, more preferably 12 to 60, further more preferably 13 to 40.</p>
+    <p id="p-00022-en" num="0022">If the As/At ratio is excessively low, the aqueous inkjet ink composition employing the resulting acrylic resin emulsion for the aqueous inkjet ink is liable to have a reduced viscosity.</p>
+    <p id="p-00023-en" num="0023">The content mole ratio (As) of the acid-group-containing monomer in the surface regions of the acrylic resin particles is preferably 1 to 100, particularly preferably 2 to 80, more preferably 10 to 60, as measured with a <sup>1</sup>H spin diffusion time of 5 ms.</p>
+    <p id="p-00024-en" num="0024">If the value (As) is excessively great, an ink coating film formed by using the emulsion containing the acrylic resin particles is liable to have a reduced water resistance. If the value (As) is excessively low, the particulate acrylic resin tends to be less stable.</p>
+    <p id="p-00025-en" num="0025">The content mole ratio (At) of the acid-group-containing monomer in the overall acrylic resin particles is preferably 0.1 to 11, particularly preferably 0.5 to 8, more preferably 1 to 5.</p>
+    <p id="p-00026-en" num="0026">If the value (At) is excessively great, an ink coating film formed by using the emulsion containing the acrylic resin particles is liable to have a reduced water resistance. If the value (At) is excessively low, the particulate acrylic resin tends to be less stable.</p>
+    <p id="p-00027-en" num="0027">Examples of the acid-group-containing monomer include carboxyl-group-containing monomers, sulfonic-acid-group-containing monomers and phosphoric-acid-group-containing monomers, among which the carboxyl-group-containing monomers are preferred because the viscosity increasing effect can be easily provided.</p>
+    <p id="p-00028-en" num="0028">The content ratio (As) of the acid-group-containing monomer in the surface regions of the particles and the content ratio (At) of the acid-group-containing monomer in the overall particles can be calculated by analyzing NMR spectra.</p>
+    <p id="p-00029-en" num="0029">Where the acid group is a carboxyl group, for example, a resonance peak for the carboxyl group in the carboxyl-group-containing monomer appears at 190 to 180 ppm in a <sup>13</sup>C spectrum. On the other hand, a resonance peak for the carbonyl group in the ester structure of the acrylate monomer appears at 180 to 170 ppm in the <sup>13</sup>C spectrum. The formulation of the copolymer can be determined based on the area ratio of these two resonance peaks.</p>
+    <p id="p-00030-en" num="0030">As described above, the content ratio (As) is a content ratio of the acid-group-containing monomer in the surface regions of the acrylic resin particles as measured with an NMR <sup>1</sup>H spin diffusion time of 5 ms. The surface regions of the acrylic resin particles to be subjected to the measurement, i.e., the depths of the surface regions as measured from the surfaces of the particles, are an important factor. The specific depths of the surface regions of the acrylic resin particles can be calculated from the following mathematical expression (MATH-1): <maths id="maths-00001-en" num="(MATH-1)"><math display="block"><mrow><mi mathvariant="normal">L</mi><mo>=</mo><mn mathvariant="normal">0.816</mn><mo>×</mo><msup><mrow><mfenced><mi mathvariant="normal">τd</mi></mfenced></mrow><mrow><mn mathvariant="normal">1</mn><mo>/</mo><mn mathvariant="normal">2</mn></mrow></msup></mrow></math><img id="img-00001-en" wi="94" he="10" img-content="math" file="imgb0001.tif" img-format="tif" /></maths> wherein L is the depth (nm) of the surface region of an acrylic resin particle as measured from the surface of the particle, 0.816 is a coefficient, and τd (ms) is the <sup>1</sup>H spin diffusion time (Reference: <nplcit id="ncit-00002" npl-type="s"><text>Masuda et al., Solid State Nuclear Magnetic Resonance (2003) 23, 198</text></nplcit>).</p>
+    <p id="p-00031-en" num="0031">That is, where the NMR <sup>1</sup>H spin diffusion time for the content ratio (As) is 5 ms in the mathematical expression (MATH-1), the depth from the surface of the acrylic resin particle is about 1.8 nm. That is, the content ratio (As) is the content mole ratio of the acid-group-containing monomer in a surface region having a depth of about 1.8 mm as measured from the surface of the acrylic resin particle.</p>
+    <p id="p-00032-en" num="0032">On the other hand, the content ratio (At) is the content mole ratio of the acid-group-containing monomer in the overall acrylic resin particles, and can be determined by analyzing the NMR spectrum as described above.</p>
+    <p id="p-00033-en" num="0033">The NMR spectra are typically determined through measurement by a common NMR spectrometer, e.g., an NMR spectrometer (AVANCE III 400WB available from Bruker Corporation). The content ratio (As) can be determined by the method described in <nplcit id="ncit-00003" npl-type="s"><text>Polymer Preprints Japan Vol. 60, No. 2, 3086 (2011</text></nplcit>) shown in <figref>FIG. 1</figref>, and the content ratio (At) can be determined with the use of CP/MAS (Cross Polarization Magic Angle Spinning).</p>
+    <p id="p-00034-en" num="0034">Symbols shown in <figref>FIG. 1</figref> are as follows: It is herein assumed that a magnetic field is generated along the z-axis. <ul id="ul-00001-en" list-style="bullet" compact="compact"><li>90±x:A pulse is rotatively phase-shifted by 90 degrees alternately toward +x and -x axial directions.</li><li>90-x:A pulse is rotatively phase-shifted by 90 degrees toward the -x axial direction.</li><li>180y: A pulse is rotatively shifted by 180 degrees about the y-axis.</li><li>τt: Time required for demagnetization of a solid component.</li><li>τd: <sup>1</sup>H spin diffusion time.</li><li>VACP: Cross polarization (Variable Amplitude Magic Angle Spinning) component.</li><li>(i): Contact time (Period during which cross polarization is effected).</li><li>DD: Decoupling (Dipole Decoupling).</li><li>PD: Standby period for next pulse (Post Delay).</li><li>FID: Free Induction Decay.</li><li>(ii): Period during which FID signals are fetched.</li></ul></p>
+    <p id="p-00035-en" num="0035">An NMR spectrum measuring method will hereinafter be described specifically.</p>
+    <heading id="h-00010-en">&lt;NMR Spectrum Measuring Method&gt;</heading>
+    <p id="p-00036-en" num="0036">NMR spectra (for the content ratios (As) and (At)) are measured at a temperature of 20°C by means of an NMR spectrometer (AVANCE III 400WB available from Bruker Corporation) with the use of a 4-mm diameter solid CP/MAS probe and a 4-mm HRMAS test tube under measurement conditions shown below in Table 1. <tables id="tables-00001-en" num="0001"><table frame="all"><title>Table 1</title><tgroup cols="3"><colspec colnum="1" colname="col1" colwidth="85mm" /><colspec colnum="2" colname="col2" colwidth="50mm" /><colspec colnum="3" colname="col3" colwidth="31mm" /><thead><row><entry valign="middle" /><entry align="center" valign="middle">(As) measuring conditions</entry><entry align="center" valign="middle">(At) measuring conditions</entry></row></thead><tbody><row><entry valign="middle">Revolutions of test tube</entry><entry namest="col2" nameend="col3" align="center" valign="middle">10000 Hz</entry></row></tbody></tgroup><tgroup cols="3"><colspec colnum="1" colname="col1" colwidth="85mm" /><colspec colnum="2" colname="col2" colwidth="50mm" /><colspec colnum="3" colname="col3" colwidth="31mm" /><thead><row><entry namest="col1" nameend="col3" align="left" valign="middle">Major measurement parameters</entry></row></thead><tbody><row><entry valign="middle"><sup>1</sup>H 90° pulse</entry><entry namest="col2" nameend="col3" align="center" valign="middle">4 µs × 3 dB (39W/300W)</entry></row><row><entry valign="middle">Contact time (corresponding to (i) in <figref>FIG. 1</figref>)</entry><entry namest="col2" nameend="col3" align="center" valign="middle">1000 µs (Highly quantitative conditions are selected for contact time)</entry></row><row><entry valign="middle">Time required for demagnetization of solid component (corresponding to τt in <figref>FIG. 1</figref>)</entry><entry align="center" valign="middle">1 ms</entry><entry align="center" valign="middle">-</entry></row><row><entry valign="middle"><sup>1</sup>H spin diffusion time (corresponding to τd in <figref>FIG. 1</figref>)</entry><entry align="center" valign="middle">5 ms</entry><entry align="center" valign="middle">-</entry></row><row><entry valign="middle">FID signal fetch time (corresponding to (ii) in <figref>FIG. 1</figref>)</entry><entry align="center" valign="middle">14 ms</entry><entry align="center" valign="middle">14 ms</entry></row><row><entry valign="middle">Number of times of multiplication</entry><entry align="center" valign="middle">&gt; 8000</entry><entry align="center" valign="middle">&gt; 256</entry></row><row><entry valign="middle">Observation center</entry><entry namest="col2" nameend="col3" align="center" valign="middle">120 ppm</entry></row><row><entry valign="middle">Observation width</entry><entry namest="col2" nameend="col3" align="center" valign="middle">365 ppm</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00037-en" num="0037">The particulate acrylic resin preferably has an average particle diameter of 40 to 300 nm, particularly preferably 50 to 200 nm, more preferably 60 to 150 nm.</p>
+    <p id="p-00038-en" num="0038">If the average particle diameter is excessively great, the resulting coating film tends to have poorer glossiness. If the average particle diameter is excessively small, a greater amount of an emulsifier is required in the production, resulting in inefficient economy.</p>
+    <p id="p-00039-en" num="0039">The average particle diameter is a volume average particle diameter which is determined through cumulant fitting of an autocorrelation function obtained at a temperature of 23°C with a scatter angle of 90 degrees by a dynamic light scattering method (DLS) . "NICOMP 380" available from Particle Sizing Systems Inc. may be used as a measuring apparatus.</p>
+    <p id="p-00040-en" num="0040">The surface region of the acrylic resin particle accounts for about 3 to about 25 vol% based on the volume of the entire particle.</p>
+    <p id="p-00041-en" num="0041">The acrylic resin having the aforementioned properties may be prepared by a single-stage polymerization method or by a two or more stage polymerization method. The two or more stage polymerization method is more preferred, because the localization of the acid-group-containing monomer in the surface regions of the particles can be promoted by increasing the blending proportion of the acid-group-containing monomer at a latter polymerization stage.</p>
+    <p id="p-00042-en" num="0042">In the case of the single-stage polymerization method, the content ratio of an essentially water-soluble acid-group-containing monomer for the particulate acrylic resin having an acid value of 1 to 100 mgKOH/g is increased to promote the localization of the monomer in the surface regions of the particles, whereby the emulsion containing the acrylic resin particles can be prepared as desired by the polymerization.</p>
+    <p id="p-00043-en" num="0043">In the case of the two-stage polymerization method (where n is 2), for example, a first emulsion is prepared through emulsion polymerization of a first-stage monomer component, and then a second-stage monomer component containing the acid-group-containing monomer in a greater proportion is added to the first emulsion to be thereby polymerized in the first emulsion through emulsion polymerisation.</p>
+    <p id="p-00044-en" num="0044">The number n of times of the polymerization is an integer of not less than 2, preferably 2 to 3, particular preferably 2. If the number n is excessively great, the viscosity increasing effect tends to be reduced.</p>
+    <p id="p-00045-en" num="0045">In the polymerization of the acrylic resin, the monomer components in the respective polymerization stages preferably satisfy the following weight ratios (α) and (β): <ul id="ul-00002-en" list-style="none" compact="compact"><li>(α) the weight ratio (1a)/(2a) between an acid-group-containing monomer (1a) to be used in the first to (n-1)th polymerization stages and an acid-group-containing monomer (2a) to be used in the n-th polymerization stage is 0/100 to 40/60; and</li><li>(β) the weight ratio (X1)/(X2) between the total weight (X1) of monomers to be used in the first to (n-1) th polymerization stages and the total weight (X2) of monomers to be used in the n-th polymerization stage is 99/1 to 60/40.</li></ul></p>
+    <p id="p-00046-en" num="0046">The weight ratio (α) = (1a)/(2a) between the acid-group-containing monomer (1a) to be used in the first to (n-1)th polymerization stages and the acid-group-containing monomer (2a) to be used in the n-th polymerization stage is preferably (1a)/(2a) = 0/100 to 40/60, more preferably (1a)/(2a) = 0.5/99.5 to 20/80, particularly preferably (1a)/(2a) = 1/99 to 10/90.</p>
+    <p id="p-00047-en" num="0047">If the use amount of the acid-group-containing monomer (2a) is excessively smaller than the use amount of the acid-group-containing monomer (1a), it will be impossible to sufficiently increase the viscosity of the inkjet ink composition.</p>
+    <p id="p-00048-en" num="0048">The weight ratio (β) = (X1)/(X2) between the total weight (X1) of the monomers to be used in the first to (n-1)th polymerization stages and the total weight (X2) of the monomers to be used in the n-th polymerization stage is preferably (X1)/(X2) = 99/1 to 60/40, more preferably (X1) / (X2) - 99/1 to 80/20, particularly preferably (X1)/(X2) = 98/2 to 90/10.</p>
+    <p id="p-00049-en" num="0049">If the weight (X2) is excessively greater than the weight (X1), the viscosity of the acrylic resin tends to be excessively high. If the weight (X2) is excessively smaller than the weight (X1), it will be impossible to sufficiently increase the viscosity of the inkjet ink composition.</p>
+    <p id="p-00050-en" num="0050">The production of the acrylic resin by the two-stage polymerization method (n = 2) will hereinafter be described in detail.</p>
+    <p id="p-00051-en" num="0051">In the first polymerization stage, a monomer component (I) including the acid-group-containing monomer (1a) and a (meth) acrylate monomer (1b) as a major component thereof is polymerized.</p>
+    <p id="p-00052-en" num="0052">The term "major component" herein means a component which is contained in an amount of 50 % or more and may be contained alone.</p>
+    <p id="p-00053-en" num="0053">Examples of the acid-group-containing monomer (1a) include carboxyl-group-containing monomers, sulfonic-acid-group-containing monomers and phosphoric-acid-group-containing monomers, among which the carboxyl-group-containing monomers are preferred because the viscosity increasing effect can be easily provided.</p>
+    <p id="p-00054-en" num="0054">Examples of the carboxyl-group-containing monomers include (meth)acrylic acid, an acrylic acid dimer, crotonic acid, maleic acid, maleic anhydride, fumaric acid, citraconic acid, glutaconic acid, itaconic acid, acrylamide-N-glycolic acid and cinnamic acid, among which (meth)acrylic acid is preferred, and methacrylic acid is particularly preferred for stability of the resulting inkjet ink composition.</p>
+    <p id="p-00055-en" num="0055">Examples of the sulfonic-acid-group-containing monomers include vinyl sulfonate, 2-acrylamido-2-methylpropanesulfonic acid, styrene sulfonic acid, allyl sulfonate, 3-sulfopropyl (meth)acrylate, and bis-(3-sulfopropyl) itaconate.</p>
+    <p id="p-00056-en" num="0056">Examples of the phosphoric-acid-containing monomers include vinyl phosphonate and the like.</p>
+    <p id="p-00057-en" num="0057">For excellent physical properties (ethanol resistance and water resistance) of the ink coating film to be formed from the aqueous inkjet ink composition, it is preferred not to use the acid-group-containing monomer (1a). Where the acid-group-containing monomer (1a) is used, however, the acid-group-containing monomer (1a) is preferably contained in the monomer component (I) in a proportion of 0.1 to 20 wt%, particularly preferably 0.5 to 10 wt%, more preferably 1 to 5 wt%.</p>
+    <p id="p-00058-en" num="0058">If the proportion of the acid-group-containing monomer is excessively great, an ink coating film formed from the resulting aqueous inkjet ink composition tends to be poorer in physical properties (ethanol resistance and water resistance).</p>
+    <p id="p-00059-en" num="0059">Examples of the (meth)acrylate monomers (1b) include alkyl (meth)acrylates such as methyl (meth)acrylate, ethyl (meth)acrylate, n-butyl (meth)acrylate, iso-butyl (meth)acrylate, tert-butyl (meth)acrylate, n-propyl (meth)acrylate, n-hexyl (meth)acrylate, 2-ethylhexyl (meth)acrylate, n-octyl (meth)acrylate, iso-octyl (meth)acrylate, isodecyl (meth)acrylate, lauryl (meth)acrylate, cetyl (meth)acrylate, stearyl (meth)acrylate and iso-stearyl (meth)acrylate; and alicyclic (meth)acrylate such as cyclohexyl (meth)acrylate and isobonyl (meth)acrylate. Where the (meth)acrylate mononer (1b) is an alkyl (meth)acrylate, the alkyl group typically has 1 to 20 carbon atoms, particularly preferably 1 to 12 carbon atoms, more preferably 1 to 8 carbon atoms. These (meth) acrylate monomers may be used either alone or in combination.</p>
+    <p id="p-00060-en" num="0060">Among these (meth)acrylate monomers (1b), methyl methacrylate and n-butyl acrylate are preferred, and methyl methacrylate is particularly preferred, because an ink coating film formed from the resulting aqueous inkjet ink composition is excellent in physical properties (ethanol resistance and water resistance).</p>
+    <p id="p-00061-en" num="0061">In the monomer component (I), the (meth) acrylate monomer (1b) is preferably contained in a proportion of 80 to 100 wt%, particularly preferably 90 to 99.9 wt%, more preferably 95 to 99.5 wt%. If the proportion of the(meth)acrylate monomer (1b) is excessively small, an ink coating film formed from the resulting aqueous inkjet ink composition tends to be poorer in physical properties (ethanol resistance and water resistance).</p>
+    <p id="p-00062-en" num="0062">In the present invention, as required, an additional monomer (1c) may be copolymerized with the acid-group-containing monomer (1a) and the (meth)acrylate monomer (1b), and examples of the monomer (1c) include the following monomers (a) to (h) : <ol><li>(a) a hydroxyl-group-containing ethylenically unsaturated monomer;</li><li>(b) an epoxy-group-containing ethylenically unsaturated monomer;</li><li>(c) a methylol-group-containing ethylenically unsaturated monomer;</li><li>(d) an alkoxyalkyl-group-containing ethylenically unsaturated monomer;</li><li>(e) a cyano-group-containing ethylenically unsaturated monomer;</li><li>(f) an ethylenically unsaturated monomer having two or more radically polymerizable double bonds;</li><li>(g) an amino-group-containing ethylenically unsaturated monomer; and</li><li>(h) an aromatic-ring-containing ethylenically unsaturated monomer.</li></ol></p>
+    <p id="p-00063-en" num="0063">Other than the monomers (a) to (h), as required, monomers such as vinyl propionate, vinyl versatate, vinylpyrrolidone, methyl vinyl ketone, butadiene, ethylene, propylene, vinyl chloride and vinylidene chloride may be used for the acrylic resin in the present invention.</p>
+    <p id="p-00064-en" num="0064">Examples of the hydroxyl-group-containing ethylenically unsaturated monomer (a) include hydroxyalkyl (meth)acrylates such as hydroxyethyl (meth)acrylate and hydroxypropyl(meth)acrylate, and polyalkylene glycol (meth)acrylates such as polyethylene glycol (meth)acrylate, which may be used either alone or in combination. Among these monomers, hydroxyalkyl (meth)acrylates having a C2 to C4 hydroxyalkyl group and polyalkylene glycol (meth)acrylates having a C2 to C4 alkylene group are preferred, and hydroxyethyl (meth)acrylate is particularly preferred.</p>
+    <p id="p-00065-en" num="0065">Examples of the epoxy-group-containing ethylenically unsaturated monomer(b) include glycidyl (meth)acrylate, allyl glycidyl ether and methyl glycidyl (meth) acrylate, which may be used either alone or in combination. Among these monomers, glycidyl (meth)acrylate is particularly preferred.</p>
+    <p id="p-00066-en" num="0066">Examples of the methylol-group-containing ethylenically unsaturated monomer (c) include N-methylol (meth)acrylamide and dimethylol (meth)acrylamide, which may be used either alone or in combination.</p>
+    <p id="p-00067-en" num="0067">Examples of the alkoxyalkyl-group-containing ethylenically unsaturated monomer (d) include N-methoxymethyl (meth)acrylamide, N-butoxymethyl (meth)acrylamide, alkoxyalkyl (meth)acrylates such as methoxyethyl (meth)acrylate, methoxypropyl (meth)acrylate, ethoxyethyl (meth)acrylate and ethoxypropyl (meth)acrylate, and polyalkylene glycol monoalkoxy (meth)acrylates such as polyethylene glycol monomethoxy (meth)acrylate, which may be used either alone or in combination.</p>
+    <p id="p-00068-en" num="0068">Examples of the cyano-group-containing ethylenically unsaturated monomer (e) include (meth)acrylonitrile.</p>
+    <p id="p-00069-en" num="0069">Examples of the ethylenically unsaturated monomer (f) having two or more radically polymerizable double bonds include divinylbenzene, di(meth)acrylates such as polyoxyethylene di(meth)acrylate, polyoxypropylene di(meth)acrylate, neopentyl glycol di(meth)acrylate and butanediol di(meth)acrylate, tri(meth)acrylates such as trimethylolpropane tri(meth)acrylate, and tetra(meth)acrylates such as pentaerythritol tetra (meth) acrylate, which may be used either alone or in combination.</p>
+    <p id="p-00070-en" num="0070">Examples of the amino-group-containing ethylenically unsaturated monomer (g) include N,N-dimethylaminoethyl (meth)acrylate and N,N-diethylaminoethyl (meth)acrylate, which may be used either alone or in combination.</p>
+    <p id="p-00071-en" num="0071">Examples of the aromatic-ring-containing ethylenically unsaturated monomer (h) include styrene, α-methylstyrene, benzyl (meth)acrylate and phenoxyethyl (meth)acrylate, which may be used either alone or in combination.</p>
+    <p id="p-00072-en" num="0072">Where the monomer (1c) is used in addition to the monomers (1a) and (1b), the monomer (1c) is preferably contained in the monomer component (I) in a proportion of 0 to 10 wt%, particularly preferably 0 to 5 wt%, based on the overall weight of the monomer component (I). If the proportion of the monomer (1c) other than the monomers (1a) and (1b) is excessively great, an ink coating film formed from the resulting aqueous inkjet ink composition tends to have poorer water resistance.</p>
+    <p id="p-00073-en" num="0073">In the subsequent second polymerization stage, a monomer component (II) including the acid-group-containing monomer (2a) and a (meth)acrylate monomer (2b) as a major component thereof is added to the polymer obtained in the first stage for further polymerization.</p>
+    <p id="p-00074-en" num="0074">Examples of the acid-group-containing monomer (2a) include those for the acid-group-containing monomer (1a). Among the acid-group-containing monomers, the carboxyl-group-containing monomers excellent in viscosity increasing effect are preferred, and (meth)acrylic acid is particularly preferred. Methacrylic acid is more preferred.</p>
+    <p id="p-00075-en" num="0075">In the monomer component (II), the acid-group-containing monomer (2a) is preferably contained in a proportion of 20 to 80 wt%, particularly preferred 30 to 70 wt%, more preferably 40 to 60 wt%.</p>
+    <p id="p-00076-en" num="0076">If the proportion of the acid-group-containing monomer (2a) is excessively great, an ink coating film formed from the resulting aqueous inkjet ink composition tends to be poorer in physical properties (ethanol resistance and water resistance. If the proportion of the acid-group-containing monomer (2a) is excessively small, it will be difficult to sufficiently provide the viscosity increasing effect.</p>
+    <p id="p-00077-en" num="0077">Examples of the (meth)acrylate monomer (2b) include those for the (meth)acrylate monomer (1b). Among the (meth)acrylate monomers, methyl (meth)acrylate and n-butyl acrylate are preferred because an ink coating film formed from the resulting aqueous inkjet ink composition is excellent in physical properties (ethanol resistance and water resistance), and methyl (meth)acrylate is particularly preferred. Methyl acrylate is more preferred.</p>
+    <p id="p-00078-en" num="0078">In the monomer component (II), the (meth) acrylate monomer (2b) is preferably contained in a proportion of 20 to 80 wt%, particularly preferably 30 to 70 wt%, more preferably 40 to 60 wt%.</p>
+    <p id="p-00079-en" num="0079">If the proportion of the (meth) acrylate monomer (2b) is excessively great, it will be difficult to provide the viscosity increasing effect. If the proportion of the (meth)acrylate monomer (2b) is excessively small, an ink coating film formed from the resulting inkjet ink composition tends to be poorer in physical properties (ethanol resistance and water resistance).</p>
+    <p id="p-00080-en" num="0080">As required, an additional monomer (2c) other than the acid-group-containing monomer (2a) and the (meth)acrylate monomer (2b) may be used, and examples of the monomer (2c) include those for the additional monomer (1c).</p>
+    <p id="p-00081-en" num="0081">Where the monomer (2c) is used in addition to the monomers (2a) and (2b), the monomer (2c) is preferably contained in the monomer component (II) in a proportion of 0 to 10 wt%, particularly preferably 0 to 5 wt%, based on the overall weight of the monomer component (II). If the proportion of the monomer (2c) other than the monomers (2a) and (2b) is excessively great, the coating film tends to have poorer water resistance.</p>
+    <p id="p-00082-en" num="0082">The acrylic resin emulsion is prepared by the polymerization of the respective monomer components (I) and (II). First, the acrylic resin emulsion will be described.</p>
+    <p id="p-00083-en" num="0083">In addition to the monomer components (I) and (II), a surfactant is preferably used for the preparation of the acrylic resin emulsion. As required, additives such as a polymerization initiator, a polymerization controlling agent, a plasticizer and a film formation assisting agent may be used.</p>
+    <p id="p-00084-en" num="0084">A generally known surfactant may be used as the surfactant. Examples of the surfactant include anionic, cationic and nonionic reactive surfactants, and anionic, cationic and nonionic nonreactive surfactants.</p>
+    <p id="p-00085-en" num="0085">Among these surfactants, the anionic reactive surfactant, the anionic nonreactive surfactant and the nonionic nonreactive surfactant are preferably used, because these surfactants are excellent in polymerization stability and temporal stability.</p>
+    <p id="p-00086-en" num="0086">Where the nonreactive surfactants are used, it is preferred to use the anionic nonreactive surfactant and the nonionic nonreactive surfactant in combination to ensure excellent temporal stability.</p>
+    <p id="p-00087-en" num="0087">The anionic reactive surfactant is not particularly limited, as long as it is anionic and reactive. Examples of the anionic reactive surfactant include surfactants having structures represented by the following general formulae (1) to (11): <chemistry id="chem-00001-en" num="0001"><img id="img-00002-en" wi="116" he="16" img-content="chem" file="EP2940085A1_00002.PNG" img-format="png" original="imgb0002.tif" /></chemistry><chemistry id="chem-00002-en" num="0002"><img id="img-00003-en" wi="100" he="14" img-content="chem" file="EP2940085A1_00003.PNG" img-format="png" original="imgb0003.tif" /></chemistry><chemistry id="chem-00003-en" num="0003"><img id="img-00004-en" wi="87" he="14" img-content="chem" file="EP2940085A1_00004.PNG" img-format="png" original="imgb0004.tif" /></chemistry><chemistry id="chem-00004-en" num="0004"><img id="img-00005-en" wi="120" he="22" img-content="chem" file="EP2940085A1_00005.PNG" img-format="png" original="imgb0005.tif" /></chemistry><chemistry id="chem-00005-en" num="0005"><img id="img-00006-en" wi="97" he="14" img-content="chem" file="EP2940085A1_00006.PNG" img-format="png" original="imgb0006.tif" /></chemistry><chemistry id="chem-00006-en" num="0006"><img id="img-00007-en" wi="101" he="22" img-content="chem" file="EP2940085A1_00007.PNG" img-format="png" original="imgb0007.tif" /></chemistry><chemistry id="chem-00007-en" num="0007"><img id="img-00008-en" wi="129" he="21" img-content="chem" file="EP2940085A1_00008.PNG" img-format="png" original="imgb0008.tif" /></chemistry><chemistry id="chem-00008-en" num="0008"><img id="img-00009-en" wi="119" he="12" img-content="chem" file="EP2940085A1_00009.PNG" img-format="png" original="imgb0009.tif" /></chemistry><chemistry id="chem-00009-en" num="0009"><img id="img-00010-en" wi="101" he="15" img-content="chem" file="EP2940085A1_00010.PNG" img-format="png" original="imgb0010.tif" /></chemistry><chemistry id="chem-00010-en" num="0010"><img id="img-00011-en" wi="115" he="13" img-content="chem" file="EP2940085A1_00011.PNG" img-format="png" original="imgb0011.tif" /></chemistry><chemistry id="chem-00011-en" num="0011"><img id="img-00012-en" wi="104" he="13" img-content="chem" file="EP2940085A1_00012.PNG" img-format="png" original="imgb0012.tif" /></chemistry></p>
+    <p id="p-00088-en" num="0088">In the general formulae (1) to (11), R<sub>1</sub> is an alkyl group, R<sub>2</sub> is a hydrogen atom or a methyl group, R<sub>3</sub> is an alkylene group, n is an integer of not less than 1, m and 1 are integers not less than 1 and satisfy a relationship of m + 1 = 3, and X is SO<sub>3</sub>NH<sub>4</sub> or SO<sub>3</sub>Na.</p>
+    <p id="p-00089-en" num="0089">Specifically, examples of commercially available products of the anionic reactive surfactant include ADEKA REASOAP SE-20N, ADEKA REASOAP SE-10N, ADEKA REASOAP PP-70, ADEKA REASOAP PP-710, ADEKA REASOAP SR-10 and ADEKA REASOAP SR-20 (available from Adeka Corporation), ELEMINOL JS-2 and ELEMINOL RS-30 (available from Sanyo Chemical Industries Ltd.), RAMTEL S-180A, RAMTEL S-180 and RAMTEL PD-104 (available from Kao Corporation), AQUARON BC-05, AQUARON BC-10, AQUARON BC-20, AQUARON HS-05, AQUARON HS-10, AQUARON HS-20, NEW FRONTIER S-510, AQUARON KH-05 and AQUARON KH-10 (available from Dai-Ichi Kogyo Seiyaku Co. , Ltd.), and PHOSPHINOL TX (available from Toho Chemical Industry Co., Ltd.)</p>
+    <p id="p-00090-en" num="0090">Among the anionic reactive surfactants described above, anionic reactive emulsifiers having structures represented by the above general formulae (3), (4), (5), (9) and (10), i.e., having no alkylphenol structure, are preferred because they properly react with acryl and improve the stability of the emulsion. Specifically, ADEKA REASOAP SR-10, ADEKA REASOAP SR-20, ELEMINOL JS-2, ELEMINOL RS-30, RAMTEL S-180A, RAMTEL S-180, RAMTEL PD-104, AQUARON KH-05 and AQUARON KH-10 are preferred, and AQUARON KH-10 and RAMTEL PD-104 are more preferred.</p>
+    <p id="p-00091-en" num="0091">Examples of the anionic nonreactive surfactant include alkyl sulfates, alkylbenzene sulfonates, alkyl sulfosuccinates, alkyl diphenyl ether disulfonates, polyoxyethylene alkyl sulfates and polyoxyethylene alkyl phosphates.</p>
+    <p id="p-00092-en" num="0092">Examples of the nonionic nonreactive surfactant include polyoxyethylene alkyl ethers, polyoxyethylene alkyl phenyl ethers, oxyethylene-oxypropylene block polymers, sorbitan fatty acid esters and polyoxyethylene fatty acids.</p>
+    <p id="p-00093-en" num="0093">Examples of the nonionic reactive surfactant include surfactants represented by the above general formulae (1) to (11) wherein X is a hydrogen atom. Specifically, examples of commercially available products of the nonionic reactive surfactant include ADEKA REASOAP NE-10, ADEKA REASOAP NE-20, ADEKA REASOAP NE-30, ADEKA REASOAP NE-40, ADEKA REASOAP ER-10, ADEKA REASOAP ER-20, ADEKA REASOAP ER-30 and ADEKA REASOAP ER-40 (commercially available from Adeka Corporation), and AQUARON RN-10, AQUARON RN-20, AQUARON RN-30 and AQUARON RN-50 (commercially available from Dai-Ichi Kogyo Seiyaku Co., Ltd.)</p>
+    <p id="p-00094-en" num="0094">The surfactant may be blended with an emulsified monomer liquid including a mixture of the monomers, or may be preliminarily added to a polymerization can in which the monomer component is polymerized. Alternatively, these methods may be used in combination. The surfactant may be directly blended, or may be blended after being dissolved in a solvent or in the monomer component. Further, the surfactant may be added to the polymerization can at any of the polymerization stages, or may be added little by little to the polymerization can a plurality of times.</p>
+    <p id="p-00095-en" num="0095">The surfactant is preferably used in an amount of 0.1 to 10 parts by weight, particularly preferably 3 to 5 parts by weight, based on 100 parts by weight of the overall monomer components (I) and (II).</p>
+    <p id="p-00096-en" num="0096">If the amount of the surfactant is excessively small, the polymerization stability is liable to be reduced. If the amount of the surfactant is excessively great, the resulting coating film tends to have poorer physical properties.</p>
+    <p id="p-00097-en" num="0097">A water-soluble or an oil-soluble polymerization initiator may be used as the polymerization initiator. Examples of the polymerization initiator include organic peroxides such as alkyl peroxides, t-butyl hydroperoxide, cumene hydroperoxide, p-methane hydroperoxide, lauroyl peroxide, 3,5,5-trimethyl hexanoyl peroxide, octanoyl peroxide, t-butyl cumyl peroxide, benzoyl peroxide, dichlorobenzoylperoxide, dicumyl peroxide, di-t-butyl peroxide, 1,1-bis(t-butylperoxy)-3,3,5-trimethylcyclohexane, 3,3,5-trimethylcyclohexanone peroxide, methylcyclohexanone peroxide, diisobutyl peroxydicarbonate, di-2-ethylhexyl peroxydicarbonate and t-butyl peroxyisobutyrate; 2,2'-azobisisobutyronitrile, dimethyl-2,2'-azobisisobutyrate, 2,2'-azobis(2,4-dimethylvaleronitrile), 2,2'-azobis(2-methylbutyronitrile), potassium persulfate, sodium persulfate, ammonium persulfate, hydrogen peroxide, ammonium (amine) salts of 4,4'-azobis-4-cyanovaleric acid, 2,2'-azobis(2-methylamidoxime) dihydrochloride, 2,2'-azobis(2-methylbutaneamidoxime) dihydrochloride tetrahydrate, 2,2'-azobis{2-methyl-N-[1,1-bis(hydroxymethyl)-2-hy droxyethyl]-propionamide}, 2,2'-azobis[2-methyl-N-(2-hydroxyethyl)-propionamid e], and various redox catalysts (including oxidizing agents such as ammonium persulfate, potassium persulfate, sodium persulfate, hydrogen peroxide, t-butyl hydroperoxide, benzoyl peroxide, cumene hydroperoxide and p-methane hydroperoxide, and reducing agents such as sodium sulfite, acidic sodium sulfite, Rongalite and ascorbic acid).</p>
+    <p id="p-00098-en" num="0098">These polymerization initiators may be used either alone or in combination. Among these polymerization initiators, potassium persulfate, sodium persulfate, the redox catalysts (oxidizing agents such as potassium persulfate and sodium persulfate, and reducing agents such as sodium sulfite, acidic sodium sulfite, Rongalite and ascorbic acid) and the like are preferred because of their excellent polymerization stability.</p>
+    <p id="p-00099-en" num="0099">The polymerization initiator is preferably used in an amount of 0.01 to 5 parts by weight, particularly preferably 0.03 to 3 parts by weight, more preferably 0.02 to 1 part by weight, based on 100 parts by weight of the overall monomer components (I) and (II). If the use amount of the polymerization initiator is excessively small, the polymerization speed tends to be lower. If the use amount of the polymerization initiator is excessively great, the resulting polymer tends to have a lower molecular weight and, hence, have poorer water resistance.</p>
+    <p id="p-00100-en" num="0100">The polymerization initiator may be preliminarily added to the polymerization can, or may be added to the polymerization can immediately before the start of the polymerization and, as required, during the polymerization. Alternatively, the polymerization initiator may be preliminarily blended with the monomer component (I) or may be blended with an emulsion of the monomer component (I). The polymerization initiator may be added after being dissolved in a solvent or in the monomer component (I), or may be blended after the dissolved polymerization initiator is further emulsified.</p>
+    <p id="p-00101-en" num="0101">Examples of the polymerization controlling agent include a chain transfer agent and a pH buffer agent.</p>
+    <p id="p-00102-en" num="0102">Examples of the chain transfer agent include alcohols such as methanol, ethanol, propanol and butanol, aldehydes such as acetaldehyde, propionaldehyde, n-butyl aldehyde, furfural and benzaldehyde, and mercaptans such as n-dodecylmercaptan, thioglycolic acid, octyl thioglycolate and thioglycerol, which may be used either alone or in combination.</p>
+    <p id="p-00103-en" num="0103">The use of the chain transfer agent is effective for stable polymerization, but reduces the polymerization degree of the acrylic resin and the elastic modulus of the resulting coating film. Specifically, therefore, the chain transfer agent is preferably used in an amount of 0.01 to 1 part by weight, particularly preferably 0.01 to 0.5 parts by weight, based on 100 parts by weight of the overall monomer components (I) and (II). If the use amount of the chain transfer agent is excessively small, the effect of the chain transfer agent tends to be insufficient. If the use amount of the chain transfer agent is excessively great, the resulting coating film tends to have a reduced elastic modulus.</p>
+    <p id="p-00104-en" num="0104">Examples of the pH buffer agent include soda ash (sodium carbonate), sodium hydrogen carbonate, potassium hydrogen carbonate, monosodium phosphate, monopotassium phosphate, disodium phosphate, trisodium phosphate, sodium acetate, ammonium acetate, sodium formate and ammonium formate, which may be used either alone or in combination.</p>
+    <p id="p-00105-en" num="0105">The pH buffer agent is used in an amount of 0.01 to 10 parts by weight, particularly preferably 0.1 to 5 parts by weight, based on 100 parts by weight of the overall monomer components (I) and (II). If the use amount of the pH buffer agent is excessively small, the polymerization controlling effect tends to be reduced. If the use amount of the pH buffer agent is excessively great, the reaction is liable to be inhibited.</p>
+    <p id="p-00106-en" num="0106">Examples of the plasticizer include an adipate plasticizer, a phthalic acid plasticizer and a phosphoric acid plasticizer. The film formation assisting agent preferably has a boiling point of, for example, not lower than 260°C.</p>
+    <p id="p-00107-en" num="0107">The use amounts of the plasticizer and the film formation assisting agent may be properly selected, as long as the object of the present invention is not impaired. For example, the plasticizer is typically used in an amount of 0.1 to 50 parts by weight based on 100 parts by weight of the overall monomer components (I) and (II). The film formation assisting agent is typically used in an amount of 0 . 1 to 50 parts by weight based on 100 parts by weight of the overall monomer components (I) and (II).</p>
+    <p id="p-00108-en" num="0108">The acrylic resin emulsion includes the acrylic resin as a dispersoid. A dispersion medium is preferably such that the acrylic resin can be properly dispersed as the dispersoid therein. The dispersion medium is more preferably an aqueous medium. The term "aqueous medium" herein means water or an aqueous medium containing water as a major component and an alcohol solvent. The aqueous medium is preferably water.</p>
+    <p id="p-00109-en" num="0109">The polymerization method for the acrylic resin emulsion is preferably such that the first emulsion is prepared by the emulsion polymerization of the monomer component (I), and then the monomer component (II) is added to the first emulsion and polymerized in the first emulsion through emulsion polymerization. This method is preferred for excellent viscosity increasing effect.</p>
+    <p id="p-00110-en" num="0110">Exemplary methods for the emulsion polymerization of the monomer component (I) include a monomer dripping emulsion polymerization method in which water and the surfactant are put in a reaction can and the monomer component (I) and the polymerization initiator are added dropwise to the reaction can with heating, and an emulsified monomer dripping emulsion polymerization method in which a monomer mixture of the monomer component (I) to be added dropwise is preliminarily dispersed and emulsified in water with the use of the surfactant and then the dispersed and emulsified monomer is added dropwise to the reaction can. The emulsified monomer dripping emulsion polymerization method is preferred because conditions for the polymerization process (polymerization temperature and the like) can be easily managed and controlled.</p>
+    <p id="p-00111-en" num="0111">The emulsified monomer dripping emulsion polymerization method includes, for example, the steps of putting water and, as required, the surfactant in the reaction can and heating the resulting mixture (typically to 40°C to 90°C), adding a part (typically 1 to 50 wt%) of the monomer component (I) emulsified and dispersed in water with the use of the surfactant and the polymerization initiator to the reaction can for initial polymerization (typically for a reaction period of 0.1 to 3 hours), adding the rest of the monomer component (I) collectively or dropwise to the reaction can and, as required, adding the polymerization initiator for the polymerization.</p>
+    <p id="p-00112-en" num="0112">The polymerization of the monomer component (I) is allowed to proceed typically for 0.5 to 2 hours (preferably 0.5 to 1 hour) after completion of the addition of the entire amount of the monomer component (I), and completed when the polymerization percentage of the monomer component (I) becomes higher than 90 % (preferably 95 % or higher). Thus, the first emulsion is considered to be obtained. This is followed by further emulsion polymerization of the monomer component (II).</p>
+    <p id="p-00113-en" num="0113">The polymerization percentage is calculated as the ratio of the actually measured amount of a nonvolatile component to the amount of the nonvolatile component calculated based on the formulations of the monomer components.</p>
+    <heading id="h-00011-en">[Actually Measured Amount of Nonvolatile Component]</heading>
+    <p id="p-00114-en" num="0114">A predetermined amount of the emulsion is put in a container, and the weight of the nonvolatile component remaining after the emulsion is dried in an oven heated to 105°C for 1 hour is measured.</p>
+    <p id="p-00115-en" num="0115">The emulsion polymerization of the monomer component (II) is preferably allowed to proceed by adding the monomer component (II) into the first emulsion, i.e., into the reaction can in which the polymerization of the monomer component (I) is completed.</p>
+    <p id="p-00116-en" num="0116">For the emulsion polymerization of the monomer component (II), the whole amount of the monomer component (II) may be collectively or dividedly added to the reaction can typically at 40°C to 90°C (preferably 60°C to 85°C) in 0.1 to 3 hours (preferably 0.5 to 2 hours).</p>
+    <p id="p-00117-en" num="0117">Thus, the acrylic resin emulsion is prepared by the two stage polymerization method.</p>
+    <p id="p-00118-en" num="0118">Where the acrylic resin emulsion is prepared by a three or more stage polymerization method (n = 3 or greater), the final polymerization stage employs a monomer component containing the acid-group-containing monomer in a greater proportion than the other polymerization stages for the polymerization as in the two stage polymerization method in order to achieve the intended object of the present invention.</p>
+    <p id="p-00119-en" num="0119">Thus, the inventive acrylic resin emulsion which includes the acrylic resin emulsion prepared in the aforementioned manner as a major component is provided for the aqueous inkjet ink.</p>
+    <p id="p-00120-en" num="0120">As required, additives such as an organic pigment, an inorganic pigment, water-soluble additives, a pH adjusting agent, a preservative agent, a defoaming agent and an antioxidant may be added to the inventive acrylic resin emulsion for the aqueous inkjet ink.</p>
+    <p id="p-00121-en" num="0121">The acrylic resin of the acrylic resin emulsion for the aqueous inkjet ink preferably has a glass transition temperature (Tg) of 0°C to 120°C, particularly preferably 30°C to 100°C, more preferably 40°C to 100°C.</p>
+    <p id="p-00122-en" num="0122">If the glass transition temperature is excessively high, the film formability is liable to be reduced. If the glass transition temperature is excessively low, an ink coating film formed from the resulting aqueous inkjet ink composition tends to have poorer physical properties.</p>
+    <p id="p-00123-en" num="0123">The glass transition temperature (Tg) may be measured at a temperature increasing rate of 10°C/minute (at the 2nd run) by means of a differential scanning calorimeter (DSC) in conformity with JIS K7121 (the method of measuring the glass transition temperature of a plastic). After the first run is performed to once heat a sample to higher than the glass transition temperature to impart the sample with a certain thermal history, the second run is performed to heat the sample again.</p>
+    <p id="p-00124-en" num="0124">The acrylic resin emulsion for the aqueous inkjet ink preferably has a solid concentration of 20 to 50 wt%, particularly preferably 30 to 45 wt%.</p>
+    <p id="p-00125-en" num="0125">If the solid concentration is excessively high, the polymerization stability tends to be reduced. If the solid concentration is excessively low, the design flexibility of the ink formulation is liable to be reduced.</p>
+    <p id="p-00126-en" num="0126">The acrylic resin emulsion for the aqueous inkjet ink preferably has a viscosity of 10 to 100,000 mPa·s, particularly preferably 10 to 50,000 mPa·s, more preferably 10 to 10,000 mPa·s.</p>
+    <p id="p-00127-en" num="0127">If the viscosity is excessively low, it will be impossible to provide a higher viscosity ink by blending the acrylic resin emulsion with an ink material. If the viscosity is excessively high, the working efficiency for the preparation of the ink tends to be reduced.</p>
+    <p id="p-00128-en" num="0128">The viscosity is measured by means of a B-type viscometer.</p>
+    <heading id="h-00012-en">&lt;Aqueous Inkjet Ink Composition&gt;</heading>
+    <p id="p-00129-en" num="0129">In the present invention, a pigment dispersion, a solvent, a wetting agent and the like are blended with the acrylic resin emulsion prepared in the aforementioned manner for the aqueous inkjet ink, and then the resulting mixture is treated with an alkali to provide a more advantageous aqueous inkjet ink composition.</p>
+    <p id="p-00130-en" num="0130">Examples of the pigment dispersion include CAB-O-JET 200, CAB-O-JET 260M, CAB-O-JET 270Y, CAB-O-JET 400, CAB-O-JET 450C, CAB-O-JET 465M, CAB-O-JET 470Y, CAB-O-JET 480V, CAB-O-JET 554B and CAB-O-JET 740Y (trade names) available from Cabot Corporation. The pigment dispersion is typically used in an amount of 2 to 15 wt% based on the overall weight of the aqueous inkjet ink composition.</p>
+    <p id="p-00131-en" num="0131">Examples of the solvent include ethylene glycol monoethyl ether, ethylene glycol monobutyl ether, diethylene glycol monobutyl ether, diethylene glycol monoethyl ether, triethylene glycol monobutyl ether, propylene glycol monopropyl ether, tripropylene glycol monomethyl ether, 2-pyrrolidone, N-methyl-2-pyrrolidone, cyclohexyl pyrrolidone, 1-chlorohexyl-2-pyrrolidone, oxazolidin-2-one and 1,3-dimethyl-2-imidazolidinone. The solvent is typically used in an amount of 5 to 50 wt% based on the overall weight of the aqueous inkjet ink composition.</p>
+    <p id="p-00132-en" num="0132">Examples of the wetting agent include silicone-containing surfactants available under the trade names of POLYFLOW KL-245 and POLYFLOW KL-260 from Kyoeisha Chemical Co., Ltd., and fluorine-containing surfactants available under the trade names of PHTHAGENT 100C and PHTHAGENT 150CH from Neos Co., Ltd. The wetting agent is typically used in an amount of 0.01 to 1 wt% based on the overall weight of the aqueous inkjet ink composition.</p>
+    <p id="p-00133-en" num="0133">An exemplary preferred method for blending the pigment dispersion, the solvent, the wetting agent and the like with the acrylic resin emulsion is to respectively dilute these components (the pigment dispersion, the solvent, the wetting agent and the like) with water, and add the resulting solutions to the acrylic resin emulsion with stirring.</p>
+    <p id="p-00134-en" num="0134">Examples of the alkali to be used for the alkali treatment include alkali-metal-containing bases such as sodium hydroxide, and amines such as ammonia and alkanolamines, among which the amines are preferred and ammonia is particularly preferred because an ink coating film formed from the resulting aqueous inkjet ink composition is excellent in physical properties.</p>
+    <p id="p-00135-en" num="0135">An exemplary preferred method for the alkali treatment is to add a 5 to 10 % ammonia aqueous solution to the acrylic resin emulsion with stirring. After the completion of the addition, the resulting mixture is continuously stirred for several minutes to several hours for completion of neutralization.</p>
+    <p id="p-00136-en" num="0136">The proportion (solid proportion) of the acrylic resin emulsion to be blended for the aqueous inkjet ink is typically 1 to 20 wt% based on the overall weight of the aqueous inkjet ink composition.</p>
+    <p id="p-00137-en" num="0137">The aqueous inkjet ink composition is usable as an aqueous inkjet ink, which is applied to a substrate by a generally known inkjet printing method.</p>
+    <p id="p-00138-en" num="0138">Examples of the substrate include non-absorptive substrates such as polyvinyl chloride substrates and polyethylene terephthalate (PET) substrates, and absorptive substrates such as paper substrates, among which the non-absorptive substrates are preferred and the polyvinyl chloride substrates are particularly preferred.</p>
+    <p id="p-00139-en" num="0139">The inventive acrylic resin emulsion for the aqueous inkjet ink is useful for the aqueous inkjet ink composition for use with a higher-viscosity ink printer head.</p>
+    <heading id="h-00013-en">EXAMPLES</heading>
+    <p id="p-00140-en" num="0140">The present invention will hereinafter be described more specifically by way of examples thereof. It will be understood that the invention be not limited to these examples within the scope of the present invention.</p>
+    <p id="p-00141-en" num="0141">Percentages and parts shown in the following examples are on a weight basis.</p>
+    <p id="p-00142-en" num="0142">The following average particle diameters were measured in the aforementioned manner.</p>
+    <heading id="h-00014-en">[Example 1]</heading>
+    <heading id="h-00015-en">&lt;Preparation of Acrylic Resin Emulsion (E1) for Aqueous Inkjet Ink&gt;</heading>
+    <p id="p-00143-en" num="0143">A monomer component (I) including 95 parts of methyl methacrylate and 5 parts of butyl acrylate was added to an aqueous solution prepared by dissolving 3.5 parts of a nonreactive surfactant (containing 2 parts of a nonionic nonreactive surfactant available under the trade name of EMULGEN 1135S-70 from Kao Corporation and 1.5 parts of an anionic nonreactive surfactant available under the trade name of EMULSOGEN EPA073 from Clarian GmbH) in 40 parts of water, and the resulting mixture was stirred, whereby an emulsified monomer composition was prepared.</p>
+    <p id="p-00144-en" num="0144">Then, 173 parts of water and 1 part of a nonreactive surfactant (an anionic nonreactive surfactant available under the trade name of EMULSOGEN EPA073 from Clarian GmbH) were put in a glass reaction vessel provided with a thermometer, a stirrer, a reflux condenser, a nitrogen inlet tube and a dripping funnel, and the surfactant was dissolved in the water with stirring. The resulting mixture was heated up to 73°C. Then, 5 % of the aforementioned emulsified monomer composition was added to the mixture. In turn, the resulting mixture was stirred, and 1.3 parts of 3% potassium persulfate was added to the mixture for initial polymerization. Thereafter, 5.3 parts of 3 % potassium persulfate and the rest of the emulsified monomer composition were added dropwise to the resulting mixture in 3 hours and 30 minutes for a polymerization reaction while the mixture was kept at a temperature of 80°C. After completion of the dropwise addition, the reaction was allowed to proceed for 60 minutes. Thus, the first polymerization stage was completed.</p>
+    <p id="p-00145-en" num="0145">Then, a monomer component (II) including 2.8 parts of methyl methacrylate and 2.4 parts of methacrylic acid, and 0.87 parts of 3 % potassium persulfate were simultaneously added to the resulting polymerization product, whereby the second polymerization stage was started. After the dropwise addition, the pH of the resulting product was adjusted to pH6 with a 5 % ammonia aqueous solution, and then the reaction was allowed to completely proceed for 1 hour. Thereafter, the resulting product was cooled to 50°C, and continuously stirred for 1 hour. After the resulting product was cooled to a room temperature, 0.5 parts of a preservative agent (available under the trade name of ACTICIDE MBS from Thor Japan Inc.) was added to the resulting product. Thus, a milky-white acrylic resin emulsion (E1) for an aqueous inkjet ink (having a solid concentration of 30 %, an average particle diameter of 70 nm, a resin acid value of 14 mgKOH/g and a glass transition temperature of 95°C) was prepared.</p>
+    <heading id="h-00016-en">[Comparative Example 1] &lt;Preparation of Acrylic Resin Emulsion (E1') for Aqueous Inkjet Ink&gt;</heading>
+    <p id="p-00146-en" num="0146">A monomer component including 85 parts of methyl methacrylate, 15 parts of butyl acrylate and 2.2 parts of methacrylic acid was added to an aqueous solution prepared by dissolving 3 parts of a reactive surfactant (containing 1 part of an anionic reactive surfactant available under the trade name of ADEKA REASOAP SR-10 from ADEKA Corporation and 2 parts of an anionic reactive surfactant available under the trade name of AQUARON KH-10 from Dai-Ichi Kogyo Seiyaku Co., Ltd.) in 36 parts of water, and the resulting mixture was stirred, whereby an emulsified monomer composition was prepared.</p>
+    <p id="p-00147-en" num="0147">Then, 80 parts of water and 1 part of a reactive surfactant (available under the trade name of ADEKA REASOAP SR-10 from ADEKA Corporation) were put in a glass reaction vessel provided with a thermometer, a stirrer, a reflux condenser, a nitrogen inlet tube and a dripping funnel, and the surfactant was dissolved in the water with stirring. The resulting mixture was heated up to 73°C. Then, 5 % of the aforementioned emulsified monomer composition was added to the mixture. In turn, the resulting mixture was stirred, and 2.2 parts of 3% potassium persulfate was added to the mixture for initial polymerization. Thereafter, 4.4 parts of 3 % potassium persulfate and the rest of the emulsified monomer composition were added dropwise to the resulting mixture in 4 hours for a polymerization reaction while the mixture was kept at a temperature of 80°C. After completion of the dropwise addition, the pH of the resulting product was adjusted to pH6 with a 10 % ammonia aqueous solution, and then the reaction was allowed to completely proceed for 1 hour.</p>
+    <p id="p-00148-en" num="0148">Thereafter, the resulting product was cooled to 50°C, and continuously stirred for 1 hour. After the resulting product was cooled to a room temperature, 0.5 parts of a preservative agent (available under the trade name of NIPACIDE BIT20 from Clarian GmbH) was added to the resulting product. Thus, a milky-white acrylic resin emulsion (E1') for an aqueous inkjet ink (having a solid concentration of 41 %, an average particle diameter of 105 nm, a resin acid value of 12 mgKOH/g and a glass transition temperature of 80°C) was prepared.</p>
+    <p id="p-00149-en" num="0149">The acrylic resin emulsions of Example 1 and Comparative Example 1 for the aqueous inkjet inks were analyzed in the following manner.</p>
+    <heading id="h-00017-en">&lt;Measurement of NMR Spectrum&gt;</heading>
+    <p id="p-00150-en" num="0150">NMR spectra (for (As) and (At)) were measured at a temperature of 20°C by means of an NMR spectrometer (AVANCE III 400WB available from Bruker Corporation) with the use of a 4-mm diameter solid CP/MAS probe and a 4-mm HRMAS test tube under measurement conditions shown below in Table 2. <tables id="tables-00002-en" num="0002"><table frame="all"><title>Table 2</title><tgroup cols="3"><colspec colnum="1" colname="col1" colwidth="85mm" /><colspec colnum="2" colname="col2" colwidth="50mm" /><colspec colnum="3" colname="col3" colwidth="31mm" /><thead><row><entry valign="middle" /><entry align="center" valign="middle">(As) measuring conditions</entry><entry align="center" valign="middle">(At) measuring conditions</entry></row></thead><tbody><row><entry valign="middle">Revolutions of test tube</entry><entry namest="col2" nameend="col3" align="center" valign="middle">10000 Hz</entry></row></tbody></tgroup><tgroup cols="3"><colspec colnum="1" colname="col1" colwidth="85mm" /><colspec colnum="2" colname="col2" colwidth="50mm" /><colspec colnum="3" colname="col3" colwidth="31mm" /><thead><row><entry namest="col1" nameend="col3" align="left" valign="middle">Major measurement parameters</entry></row></thead><tbody><row><entry valign="middle"><sup>1</sup>H 90° pulse</entry><entry namest="col2" nameend="col3" align="center" valign="middle">4 µs × 3dB (39W/300W)</entry></row><row><entry valign="middle">Contact time (corresponding to (i) in <figref>FIG. 1</figref>)</entry><entry namest="col2" nameend="col3" align="center" valign="middle">1000 µs (Highly quantitative conditions are selected for contact time)</entry></row><row><entry valign="middle">Time required for demagnetization of solid component (corresponding to τt in <figref>FIG. 1</figref>)</entry><entry align="center" valign="middle">1 ms</entry><entry align="center" valign="middle">-</entry></row><row><entry valign="middle"><sup>1</sup>H spin diffusion time (corresponding to τd in <figref>FIG. 1</figref>)</entry><entry align="center" valign="middle">5 ms</entry><entry align="center" valign="middle">-</entry></row><row><entry valign="middle">FID signal fetch time (corresponding to (ii) in <figref>FIG. 1</figref>)</entry><entry align="center" valign="middle">14 ms</entry><entry align="center" valign="middle">14 ms</entry></row><row><entry valign="middle">Number of times of multiplication</entry><entry align="center" valign="middle">&gt; 8000</entry><entry align="center" valign="middle">&gt; 256</entry></row><row><entry valign="middle">Observation center</entry><entry namest="col2" nameend="col3" align="center" valign="middle">120 ppm</entry></row><row><entry valign="middle">Observation width</entry><entry namest="col2" nameend="col3" align="center" valign="middle">365 ppm</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00018-en">&lt;Method of Calculating Content Mole Ratio of Acid-Group-Containing Monomer&gt;</heading>
+    <p id="p-00151-en" num="0151">The content mole ratios of the acid-group-containing monomer were each determined by dividing the spectrum obtained by the NMR measurement into a zone of 186.5 to 181.8 ppm and a zone of 181.8 to 171.8 ppm, calculating integration values (A) and (B) from area ratios, and substituting the integration values (A) and (B) into the following mathematical expression (MATH-2): <ul id="ul-00003-en" list-style="bullet" compact="compact"><li>Integration value (A) : CO of methacrylic acid (186.5 to 181.8 ppm)</li><li>Integration value (B) : CO of methyl methacrylate and butyl acrylate (181.8 to 171.8 ppm) <maths id="maths-00002-en" num=""><math display="block"><mrow><mi mathvariant="normal">Content mole ratio</mi><mspace width="1em" /><mfenced separators=""><mi mathvariant="normal">mol</mi><mo>%</mo></mfenced><mspace width="1em" /><mi mathvariant="normal">of methacrylic acid</mi><mo>=</mo><mn mathvariant="normal">100</mn><mo>×</mo><mi mathvariant="normal">A</mi><mo>/</mo><mfenced separators=""><mi mathvariant="normal">A</mi><mo>+</mo><mi mathvariant="normal">B</mi></mfenced></mrow></math><img id="img-00013-en" wi="151" he="14" img-content="math" file="imgb0013.tif" img-format="tif" /></maths></li></ul></p>
+    <p id="p-00152-en" num="0152">The mole ratios of the acid-group-containing monomer (methacrylic acid) in the acrylic resin emulsions (E1) and (E1') were calculated based on the NMR measurement by the method of calculating the content mole ratio of the acid-group-containing monomer. Thus, the content mole ratios (As) and (At) and the ratio (As)/(At) were calculated. The calculation results are shown below in Table 3. <tables id="tables-00003-en" num="0003"><table frame="all"><title>Table 3</title><tgroup cols="3"><colspec colnum="1" colname="col1" colwidth="54mm" /><colspec colnum="2" colname="col2" colwidth="40mm" /><colspec colnum="3" colname="col3" colwidth="59mm" /><thead><row><entry valign="middle" /><entry align="center" valign="middle">Example 1 Emulsion (E1)</entry><entry align="center" valign="middle">Comparative Example 1 Emulsion (E1')</entry></row></thead><tbody><row><entry valign="middle">Resin acid value (mgKOH/g)</entry><entry align="center" valign="middle">14</entry><entry align="center" valign="middle">12</entry></row><row><entry valign="middle">(As) (mol%) for surface layer (5ms)</entry><entry align="center" valign="middle">36.6</entry><entry align="center" valign="middle">19.7</entry></row><row><entry valign="middle">(At) (mol%) for overall</entry><entry align="center" valign="middle">2.5</entry><entry align="center" valign="middle">2.6</entry></row><row><entry valign="middle">(As) / (At)</entry><entry align="center" valign="middle">14.6</entry><entry align="center" valign="middle">7.6</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00153-en" num="0153">Then, aqueous inkjet ink compositions were respectively produced by using the acrylic resin emulsions (E1) and (E1') prepared in the aforementioned manner.</p>
+    <heading id="h-00019-en">&lt;Production of Aqueous Inkjet Ink Composition (C1) &gt;</heading>
+    <p id="p-00154-en" num="0154">After 10 parts of 2-pyrrolidone and 10 parts of propylene glycol monopropyl ether (film formation assisting agent), 0.5 parts of a wetting agent (WET260 available from Evonik Tego Chemie GmbH) and 70.5 parts of water were blended with 9 parts (solid proportion) of the acrylic resin emulsion (E1) prepared in Example 1 for the aqueous inkjet ink with stirring, the pH of the resulting mixture was adjusted to pH7.8 with the use of a 10% ammonia aqueous solution. Thus, an aqueous inkjet ink composition (C1) was produced.</p>
+    <heading id="h-00020-en">&lt;Production of Aqueous Inkjet Ink Composition (C1')&gt;</heading>
+    <p id="p-00155-en" num="0155">After 10 parts of 2-pyrrolidone and 10 parts of propylene glycol monopropyl ether (film formation assisting agent), 0.5 parts of a wetting agent (WET260 available from Evonik Tego Chemie GmbH) and 70.5 parts of water were blended with 9 parts (solid proportion) of the acrylic resin emulsion (E1') prepared in Comparative Example 1 for the aqueous inkjet ink with stirring, the pH of the resulting mixture was adjusted to pH7.8 with the use of a 10% ammonia aqueous solution. Thus, an aqueous inkjet ink composition (C1') was produced.</p>
+    <heading id="h-00021-en">&lt;Evaluation for Viscosity&gt;</heading>
+    <p id="p-00156-en" num="0156">The viscosities of the aqueous inkjet ink compositions (C1) and (C1') were measured (at 23°C with a rotor No. 1 rotated at a rotation speed of 60 rpm) by means of a B-type viscometer (TVB10 available from Toki Sangyo Co., Ltd.) The measurement results are shown below in Table 4.</p>
+    <p id="p-00157-en" num="0157">The proper viscosity of the aqueous inkjet ink composition is about 4 to about 30 mPa·s, and an aqueous inkjet ink composition having a viscosity of 10mPa·s or higher is regarded as a higher viscosity aqueous inkjet ink composition. Since the viscosity of the aqueous inkjet ink composition (C1') produced in the aforementioned manner fell outside the proper viscosity range, it was impossible to properly apply the aqueous inkjet ink composition (C1') by means of a bar coater. Therefore, a tackifier was blended with the aqueous inkjet ink composition (C1') so as to impart the aqueous inkjet ink composition (C1') with a proper viscosity.</p>
+    <heading id="h-00022-en">&lt;Production of Aqueous Inkjet Ink Composition (C2')&gt;</heading>
+    <p id="p-00158-en" num="0158">An aqueous inkjet ink composition (C2') having the same viscosity as the aqueous inkjet ink composition (C1) was produced by blending a tackifier (BISMOL YK-1 available from Toho Chemical Co. , Ltd.) with the aqueous inkjet ink composition (C1') in an amount of 10 wt% based on the overall weight of the aqueous inkjet ink composition (C1').</p>
+    <p id="p-00159-en" num="0159">The aqueous inkjet ink compositions (C1) and (C2') produced in the aforementioned manner were evaluated for glossiness in the following manner.</p>
+    <heading id="h-00023-en">&lt;Evaluation for Glossiness&gt;</heading>
+    <p id="p-00160-en" num="0160">The aqueous inkjet ink compositions (C1) and (C2') were each applied onto a polyvinyl chloride (PVC) sheet (MD5 available from Metamark Inc.) by means of a bar coater No. 4 (to a wet thickness of 9.1 µm (micrometer)). Thereafter, the resulting sheet was kept in an oven at 100°C for 20 minutes, whereby a film was formed and dried. Thus, a coating surface was provided.</p>
+    <p id="p-00161-en" num="0161">The 20-degree glossiness and the 60-degree glossiness of the coating surface thus provided were measured by means of a glossiness meter (Micro-TRI-gloss 4520 available from BYK Gardner GmbH).</p>
+    <p id="p-00162-en" num="0162">The evaluation was based on the following criteria, and the results are shown below in Table 4.</p>
+    <p id="p-00163-en" num="0163">The PVC sheet (substrate sheet) had a 20-degree glossiness of 70 (Δ) and a 60-degree glossiness of 90 (○).</p>
+    <heading id="h-00024-en">(Evaluation)</heading>
+    <p id="p-00164-en" num="0164">Excellent (○): A glossiness of not less than 80. Acceptable (Δ): A glossiness of not less than 40 and less than 80.</p>
+    <p id="p-00165-en" num="0165">Unacceptable (×): A glossiness of not less than 0 and less than 40. <tables id="tables-00004-en" num="0004"><table frame="all"><title>Table 4</title><tgroup cols="4"><colspec colnum="1" colname="col1" colwidth="27mm" /><colspec colnum="2" colname="col2" colwidth="47mm" /><colspec colnum="3" colname="col3" colwidth="47mm" /><colspec colnum="4" colname="col4" colwidth="47mm" /><thead><row><entry morerows="2" valign="middle" /><entry align="center" valign="middle">Example 1</entry><entry namest="col3" nameend="col4" align="center" valign="middle">Comparative Example 1</entry></row><row><entry align="center" valign="middle">Emulsion (E1)</entry><entry namest="col3" nameend="col4" align="center" valign="middle">Emulsion (E1')</entry></row><row><entry align="center" valign="middle">Aqueous inkjet ink composition (C1)</entry><entry align="center" valign="middle">Aqueous inkjet ink composition (C1')</entry><entry align="center" valign="middle">Aqueous inkjet ink composition (C2')</entry></row></thead><tbody><row><entry valign="middle">Viscosity</entry><entry align="center" valign="middle">18 mPa·s</entry><entry align="center" valign="middle">2.9 mPa·s</entry><entry align="center" valign="middle">18 mPa·s</entry></row><row><entry namest="col1" nameend="col4" align="left" valign="middle">Glossiness</entry></row><row><entry namest="col1" nameend="col4" align="left" valign="middle"> 20-degree glossiness</entry></row><row><entry valign="middle">  Measured value</entry><entry align="center" valign="middle">62</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">33</entry></row><row><entry valign="middle">  Evaluation</entry><entry align="center" valign="middle">Δ</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">×</entry></row><row><entry namest="col1" nameend="col4" align="left" valign="middle"> 60-degree glossiness</entry></row><row><entry valign="middle">  Measured value</entry><entry align="center" valign="middle">90</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">70</entry></row><row><entry valign="middle">  Evaluation</entry><entry align="center" valign="middle">○</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">Δ</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00166-en" num="0166">As can be understood from the results shown in Table 4, the aqueous inkjet ink composition produced by using the acrylic resin emulsion (E1) of Example 1 for the aqueous inkjet ink had a higher viscosity and the inkjet ink produced from this composition had excellent glossiness. This is because the acrylic resin emulsion (E1) was prepared by using the monomer component containing the acid-group-containing monomer in a greater amount in the final polymerization stage than in the other polymerization stage and, therefore, the acrylic resin particles each had a higher acid value in a surface region thereof, and the higher-acid-value surface portions were dissolved to increase the interaction between the emulsion particles.</p>
+    <p id="p-00167-en" num="0167">In contrast, the aqueous inkjet ink composition (C1') produced by using the acrylic resin emulsion (E1') of Comparative Example 1 for the aqueous inkjet ink had a lower viscosity and, even when the viscosity of the aqueous inkjet ink composition was increased by the addition of the tackifier, the resulting aqueous inkjet ink composition (C2') had poorer glossiness.</p>
+    <p id="p-00168-en" num="0168">While specific forms of the embodiment of the present invention have been shown in the aforementioned inventive example, the inventive example is merely illustrative of the invention but not limitative of the invention. It is contemplated that various modifications apparent to those skilled in the art could be made within the scope of the invention.</p>
+    <p id="p-00169-en" num="0169">The aqueous inkjet ink composition produced by using the inventive acrylic resin emulsion for the aqueous inkjet ink is imparted with a higher viscosity without the use of a tackifier and is excellent in glossiness and other ink properties. Therefore, the inventive acrylic resin emulsion is particularly useful for an aqueous inkjet ink composition for use with a higher-viscosity ink printer head.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>An acrylic resin emulsion for an aqueous inkjet ink, comprising a particulate acrylic resin having an acid value of 1 to 100 mgKOH/g,<br />
+wherein an acid-group-containing monomer is present at a content mole ratio (As) in surface regions of particles of the particulate acrylic resin and present at a content mole ratio (At) in the overall acrylic resin particles as measured with a <sup>1</sup>H spin diffusion time of 5 ms, and a ratio (As/At) of the content mole ratio (As) to the content mole ratio (At) is not less than 9.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The acrylic resin emulsion for the aqueous inkjet ink according to claim 1, wherein the particulate acrylic resin has an average particle diameter of 40 to 300 nm.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The acrylic resin emulsion for the aqueous inkjet ink according to claim 1 or 2, which is prepared by an n-stage polymerization (wherein n is an integer of not less than 2), wherein the following weight ratios (α) and (β) are satisfied:
+<claim-text>(α) a weight ratio (1a)/(2a) between an acid-group-containing monomer (1a) to be used in the first to (n-1)th polymerization stages and an acid-group-containing monomer (2a) to be used in the n-th polymerization stage is (1a)/(2a) = 0/100 to 40/60; and</claim-text><claim-text>(β) a weight ratio (X1)/(X2) between a total weight (X1) of monomers to be used in the first to (n-1)th polymerization stages and a total weight (X2) of monomers to be used in the n-th polymerization stage is (X1)/(X2) = 99/1 to 60/40.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>An aqueous inkjet ink composition comprising:
+<claim-text>the acrylic resin emulsion for the aqueous inkjet ink according to any one of claims 1 to 3;</claim-text><claim-text>a pigment;</claim-text><claim-text>a solvent; and</claim-text><claim-text>a wetting agent.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>An aqueous inkjet ink composition, which is prepared by treating the aqueous inkjet ink composition according to claim 4 with an alkali.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940085A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940085A1_00002.PNG" alt="mathematical image" img-content="math" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940085A1_00003.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0002.tif" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940085A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0003.tif" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2940085A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0004.tif" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2940085A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0005.tif" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2940085A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0006.tif" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2940085A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0007.tif" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP2940085A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0008.tif" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="EP2940085A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0009.tif" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="EP2940085A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0010.tif" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="EP2940085A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0011.tif" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="EP2940085A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0012.tif" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="EP2940085A1_00014.PNG" alt="mathematical image" img-content="math" img-format="png" original="imgb0013.tif" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="EP2940085A1.PDF" type="pdf" size="370442" pages="21" />
+</lexisnexis-patent-document>

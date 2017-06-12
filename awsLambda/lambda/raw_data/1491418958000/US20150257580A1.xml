@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257580A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030200" date-changed="20151002" time-changed="033539">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315455">
+        <country>US</country>
+        <doc-number>20150257580</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14205256</doc-number>
+        <date>20140311</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A47J  31/40        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>31</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B65D  85/804       20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>65</class>
+        <subclass>D</subclass>
+        <main-group>85</main-group>
+        <subgroup>804</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A47J  31/407       20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>31</main-group>
+        <subgroup>407</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A47J  31/0647      20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>31</main-group>
+        <subgroup>0647</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A47J  31/0668      20130101 LI20150615BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>31</main-group>
+        <subgroup>0668</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150615</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>B65D  85/8043      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>65</class>
+        <subclass>D</subclass>
+        <main-group>85</main-group>
+        <subgroup>8043</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">31</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">BEVERAGE PRODUCTION MACHINES AND METHODS WITH MULTI-CHAMBERED BASKET UNITS</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Starbucks Corporation dba Starbucks Coffee Company</orgname>
+            <role>02</role>
+            <address>
+              <city>Seattle</city>
+              <state>WA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Crarer</last-name>
+            <first-name>Alan Scott</first-name>
+            <address>
+              <city>Santa Cruz</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Mack</last-name>
+            <first-name>Adam Mekeel</first-name>
+            <address>
+              <city>Menlo Park</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>James</last-name>
+            <first-name>Matthew Thomas</first-name>
+            <address>
+              <city>San Francisco</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Manoux</last-name>
+            <first-name>Philipe Roget</first-name>
+            <address>
+              <city>Oakland</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lee</last-name>
+            <first-name>Diane Chia-Lin</first-name>
+            <address>
+              <city>San Francisco</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ruegg</last-name>
+            <first-name>Martin</first-name>
+            <address>
+              <city>Muttenz</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20151211">
+      <main-family family-id="173668806">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015138292</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150309</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257580</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201534550</doc-number>
+            <kind>A</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173668805">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015138292</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150309</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257580</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201534550</doc-number>
+            <kind>A</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Various beverage preparation machines having a multi-chambered basket unit are disclosed. The basket unit can be configured to accept multiple cartridge configurations. For example, some embodiments are configured to receive a first cartridge configuration in a first chamber of the basket unit and a second configuration in a second chamber of the basket unit. In various embodiments, the basket unit can rotate to allow selective accessibility of the first and second chambers. This can facilitate loading the cartridges into the appropriate chamber, such as loading the first cartridge configuration into the first chamber and the second cartridge configuration into the second chamber.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150715</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257580A1</docdb-publication-number>
+      <docdb-application-id>444510842</docdb-application-id>
+      <new-owner>STARBUCKS CORPORATION DBA STARBUCKS COFFEE COMPANY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:CRARER, ALAN SCOTT;MACK, ADAM MEKEEL;JAMES, MATTHEW THOMAS;AND OTHERS;SIGNING DATES FROM 20150221 TO 20150227;REEL/FRAME:036101/0571</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is related to at least United States (U.S.) application Ser. No. ______, titled “SINGLE-SERVE BEVERAGE PRODUCTION MACHINE,” which is filed on the same day as the present application and is Attorney Reference No. SBUX1.294A; U.S. application Ser. No. ______, titled “CARTRIDGE EJECTION SYSTEMS AND METHODS FOR SINGLE-SERVE BEVERAGE PRODUCTION MACHINES,” which is filed on the same day as the present application and is Attorney Reference No. SBUX1.297A1; U.S. application Ser. No. ______, titled “BEVERAGE PRODUCTION MACHINES AND METHODS WITH TAMPING ASSEMBLY,” which is filed on the same day as the present application and is Attorney Reference No. SBUX1.306A; U.S. application Ser. No. ______, titled “BEVERAGE PRODUCTION MACHINES AND METHODS WITH RESTRICTORS,” which is filed on the same day as the present application and is Attorney Reference No. SBUX1.332A; and U.S. application Ser. No. ______, titled “POD-BASED RESTRICTORS AND METHODS,” which is filed on the same day as the present application and is Attorney Reference No. SBUX1.333A. The entirety of each of the aforementioned applications is hereby incorporated herein by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">1. Field</p>
+      <p id="p-00003-en" num="0003">The present disclosure relates to beverage machines, and more specifically to beverage machines that can receive a cartridge, such as a cartridge containing a single serving of an instant beverage component for producing a beverage.</p>
+      <p id="p-00004-en" num="0004">2. Description of the Related Art</p>
+      <p id="p-00005-en" num="0005">Single-serve beverage machines are devices that are designed to produce a single serving, or sometimes a single cup, of a desired beverage. In comparison to other types of beverage machines (such as drip coffee makers having a multi-cup carafe), single-serve beverage machines can enhance convenience by reducing the time to prepare the beverage.</p>
+      <p id="p-00006-en" num="0006">Some single-serve beverage machines use a cartridge or capsule containing one or more beverage components or precursors to produce the beverage. Generally, such cartridges are received in the single-serve beverage machine, are used to produce the single serving of the beverage, and are subsequently manually removed from the machine and discarded.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00007-en" num="0007">Various embodiments are depicted in the accompanying drawings for illustrative purposes, and should in no way be interpreted as limiting the scope of the embodiments. Furthermore, various features of different disclosed embodiments can be combined to form additional embodiments, which are part of this disclosure.</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 1</figref> illustrates an embodiment of a beverage production machine including a main housing.</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 2</figref> illustrates a perspective view of an upper portion of the beverage production machine of <figref>FIG. 1</figref>, with a lid in an open position and a cartridge received in the main housing.</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 3</figref> illustrates a perspective view of a portion of the upper portion of the beverage production machine shown in <figref>FIG. 2</figref>, with certain features hidden to show a beverage production assembly and a frame.</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIGS. 4</figref>, <b>4</b>A, and <b>4</b>B schematically illustrate certain embodiments of a beverage production assembly.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 4C</figref> illustrates a perspective view of the beverage production assembly of <figref>FIG. 3</figref> with the frame hidden and the cartridge removed, the beverage production assembly including a multi-chambered basket unit, a ratchet assembly, and a collar.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 5</figref> illustrates a top front perspective view of the basket unit of <figref>FIG. 4C</figref>.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 5A</figref> illustrates a bottom rear perspective view of the basket unit of <figref>FIG. 4C</figref>.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 5B</figref> illustrates a side view of the basket unit of <figref>FIG. 4C</figref>.</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 5C</figref> illustrates a top view of the basket unit of <figref>FIG. 4C</figref>.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 5D</figref> illustrates a cross-sectional view of the assembly of <figref>FIG. 4C</figref> taken along the line <b>5</b>D-<b>5</b>D.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 6</figref> illustrates a perspective view of the ratchet assembly of <figref>FIG. 4C</figref>, including a ratchet member, ratchet follower, and biasing member.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 6A</figref> illustrates a front perspective view of the ratchet member of <figref>FIG. 6</figref>.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 6B</figref> illustrates a rear perspective view of the ratchet member of <figref>FIG. 6</figref>.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 6C</figref> illustrates a front view of the ratchet member of <figref>FIG. 6</figref>.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 6D</figref> illustrates a perspective view of a ratchet follower of <figref>FIG. 6</figref>.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 7</figref> illustrates a perspective view of the collar of <figref>FIG. 4C</figref>.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 7A</figref> illustrates a top view of the collar of <figref>FIG. 8</figref>.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 8</figref> illustrates a perspective view of the beverage production assembly of <figref>FIG. 4C</figref> in a position to accept a first type of cartridge for producing a first type of beverage.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 8A</figref> illustrates a side view of the beverage production assembly of <figref>FIG. 8</figref>.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIGS. 9-12</figref> illustrate perspective views of the beverage production assembly of <figref>FIG. 4C</figref> in various stages of a rotating operation.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIGS. 9A-12A</figref> illustrate side views of the beverage production assembly of <figref>FIGS. 9-12</figref>, respectively.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 13</figref> illustrates a perspective view of the beverage production assembly of <figref>FIG. 4C</figref> in a position to accept a second type of cartridge for producing a second type of beverage.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 13A</figref> illustrates a side view of the beverage production assembly of <figref>FIG. 13</figref>.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 14</figref> illustrates a perspective view of the beverage production assembly of <figref>FIG. 4C</figref> in a configuration for dispensing the second type of beverage.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 14A</figref> illustrates a side view of the beverage production assembly of <figref>FIG. 14</figref>.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 14B</figref> illustrates a top view of the beverage production assembly of <figref>FIG. 14</figref>.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIGS. 15-18</figref> illustrate perspective views of the beverage production assembly of <figref>FIG. 4C</figref> in various stages of another rotating operation.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIGS. 15A-18A</figref> illustrate side views of the beverage production assembly of <figref>FIGS. 15-18</figref>, respectively.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 19</figref> illustrates a perspective view of the beverage production assembly of <figref>FIG. 4C</figref> in a configuration for dispensing the first type of beverage.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 19A</figref> illustrates a side view of the beverage production assembly of <figref>FIG. 19</figref>.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 19B</figref> illustrates a top view of the beverage production assembly of <figref>FIG. 19</figref>.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIGS. 20-23</figref> illustrate perspective views of the beverage production assembly of <figref>FIG. 4C</figref> in various stages of a reset operation.</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIGS. 20A-23A</figref> illustrate side views of the beverage production assembly of <figref>FIGS. 20-23</figref>, respectively.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIGS. 24-27</figref> illustrate perspective views of the beverage production assembly of <figref>FIG. 4C</figref> in various stages of another reset operation.</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIGS. 24A-27A</figref> illustrate side views of the beverage production assembly of <figref>FIGS. 24-27</figref>, respectively.</p>
+      <p id="p-00043-en" num="0043">
+        <figref>FIGS. 28-28A</figref> illustrate perspective views of an alternative dispensing assembly.</p>
+      <p id="p-00044-en" num="0044">
+        <figref>FIGS. 29-29D</figref> illustrate various views of an alternative ratchet assembly and of a ratchet member thereof.</p>
+      <p id="p-00045-en" num="0045">
+        <figref>FIGS. 30-30C</figref> illustrate partial perspective views of another embodiment of a beverage production assembly.</p>
+      <p id="p-00046-en" num="0046">
+        <figref>FIGS. 31-31B</figref> illustrate various views of another embodiment of a beverage production assembly.</p>
+      <p id="p-00047-en" num="0047">
+        <figref>FIGS. 32 and 32A</figref> illustrate perspective views of an embodiment of a waste bin unit.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF CERTAIN EMBODIMENTS</heading>
+      <p id="p-00048-en" num="0048">Various beverage preparation machines having multi-chamber basket units are described below to illustrate various examples that may be employed to achieve one or more desired improvements. These examples are only illustrative and not intended in any way to restrict the general disclosure presented and the various aspects and features of the disclosure. The general principles described herein may be applied to embodiments and applications other than those detailed below without departing from the spirit and scope of the disclosure. Indeed, the present embodiments are not intended to be limited to the particular embodiments shown, but are to be accorded the widest scope consistent with the principles and features disclosed or suggested herein. Certain aspects, advantages, and features of the inventions have been described herein. It is not necessary that any or all such aspects, advantages, and features are achieved in accordance with any particular embodiment. Some embodiments may not achieve the advantages described herein, but may achieve different advantages instead. Any structure, feature, or step in one example is contemplated to be used in place of or in addition to any structure, feature, or step of any other example. No features, structure, or step disclosed herein is essential or indispensable.</p>
+      <p id="p-00049-en" num="0049">Certain single-serve beverage machines can accept only a single type of cartridge. For example, some such machines can use only cartridges having a certain configuration (e.g., diameter, height, shape, etc.). This can be problematic because variations in the cartridge configuration can be beneficial. Indeed, in some instances, one cartridge configuration may be suitable for preparing some beverages and another cartridge configuration may be suitable for preparing other beverages. For example, it can be beneficial to prepare brewed drinks using different cartridge configurations, which are useful for different brewing conditions (e.g., different temperatures and/or pressures). For example, brewed coffee drinks and espresso coffee drinks can be produced using different cartridge configurations (e.g., the espresso cartridge having a diameter that is less than a diameter of the brewed coffee cartridge, a height that is greater than the brewed coffee cartridge, and/or being adapted to withstand higher pressures than the brewed coffee cartridge).</p>
+      <p id="p-00050-en" num="0050">Accordingly, some aspects of the present disclosure describe beverage preparation machines include a basket unit that is configured to accept multiple cartridge configurations. For example, some embodiments are configured to receive a first cartridge configuration in a first chamber of the basket unit and a second configuration in a second chamber of the basket unit. In some variants, the first chamber has a shape that substantially corresponds to the shape of the first cartridge and the second chamber has a shape that substantially corresponds to the shape of the second cartridge. In certain embodiments, the first cartridge configuration is for preparing brewed coffee beverages and the second cartridge configuration is for preparing espresso coffee beverages. In some implementations, the first cartridge configuration is for preparing beverages at a first pressure and the second cartridge configuration is for preparing beverages at a second pressure (e.g., greater than the first pressure).</p>
+      <p id="p-00051-en" num="0051">In various embodiments, the first and second chambers are selectively accessible. This can facilitate loading the cartridges into the appropriate chamber (e.g., loading the first cartridge configuration into the first chamber and the second cartridge configuration into the second chamber). In several embodiments, the basket unit can be moved so that the first and second chambers can be selectively presented to and/or accessed by a user. For example, the basket unit can be rotated relative to a frame of the beverage machine so that the first or second chambers are selectively oriented generally upwardly and/or near a top portion of the beverage preparation machine, which can facilitate loading of a cartridge into the first or second chambers. In some embodiments, rotation of the basket unit is driven by a movable (e.g., rotatable) collar, which in turn can be driven by a motor and/or gear train.</p>
+      <p id="p-00052-en" num="0052">In accordance with some embodiments, a machine for preparing beverages from cartridges includes a frame, a basket unit, and a rotatable collar. The basket unit can rotate in the frame. The basket unit can include a first chamber, which can receive a first single-serve cartridge configuration, and a second chamber, which can receive a second cartridge configuration. The second cartridge configuration can be the same or different from the first cartridge configuration. In some variants, when one of the chambers is in a loading position, the other of the chambers is in a non-loading (e.g., inverted) position. The ratchet assembly can have a ratchet member, a ratchet follower, and a biasing member (e.g., a spring). The ratchet member can be engaged with (e.g., abut against) the basket unit. The ratchet member can have an arm and a boss. The ratchet follower can be pivotally connected with the frame and can include a ramp. The biasing member can bias the ramp of the ratchet follower against the boss of the ratchet member. The rotatable collar can have a projection. In certain implementations, during rotation of the collar, the projection engages with the arm of the ratchet member, which slides the boss of the ratchet member along the ramp of the ratchet follower and/or rotates the basket unit. This can result in the chamber in the loading position being moved to the non-loading (e.g., inverted) position and the chamber in the non-loading position being moved to the loading position.</p>
+      <p id="p-00053-en" num="0053">Certain variants of the machine include any one, or any combination, of any of the following. The first chamber can have a volume that is greater than a volume of the second chamber. The basket unit and the collar can be adapted to rotate about axes that are substantially perpendicular. The first chamber can receive cartridges for brewed coffee beverages and the second chamber can receive cartridges for espresso beverages.</p>
+      <p id="p-00054-en" num="0054">In some implementations, a machine for preparing a beverage from a cartridge includes a basket unit, a ratchet assembly connected with the basket unit, and a collar. The basket unit can have a first chamber for receiving a first single-serve cartridge configuration and a second chamber for receiving a second cartridge configuration. The basket unit can rotate about an axis RA<sub>b </sub>between a first chamber loading position and a second chamber loading position. In certain embodiments, in the first chamber loading position, the first chamber is positioned to facilitate loading the first cartridge and the second chamber is inverted. In some embodiments, in the second chamber loading position, the second chamber positioned to facilitate loading the second cartridge and the first chamber is inverted. The collar can rotate about an axis RA<sub>c</sub>. In some variants, rotation of the collar engages the collar with the ratchet assembly, which causes the basket unit to rotate between the first chamber loading position and the second chamber loading position.</p>
+      <p id="p-00055-en" num="0055">Certain variants of the machine include any one, or any combination, of any of the following. The axes RA<sub>b </sub>and RA<sub>c </sub>can be substantially perpendicular. The axis RA<sub>c </sub>can be substantially vertical, and the axis RA<sub>b </sub>can be substantially horizontal and pass through first and second sidewalls of the machine. The first chamber loading position can be such that the first chamber is generally upwardly oriented, and the second chamber loading position can be such that the second chamber is generally upwardly oriented. The collar can have a projection. The ratchet assembly can include an arm. The projection can engage the arm. The collar can have a wing. The ratchet assembly can have a rib. The wing can engage the rib. In some implementations, during normal operation of the machine (e.g., preparing one or more single-serve beverages from one or more cartridges), the collar is rotatable in the clockwise and counterclockwise directions. The basket unit can have a first outlet in fluid communication with the first chamber and a second outlet in fluid communication with the second chamber. Certain embodiments include a dispensing assembly that can move (e.g., rotate) into and out of engagement with one of the first and second outlets. In some variants, the dispensing assembly and one of the first and second chambers is in fluid communication during the engagement of the dispensing assembly and the one of the first and second outlets. In some variants of the machine, the first chamber can receive cartridges for brewed coffee beverages and the second chamber can receive cartridges for espresso beverages. Certain implementations include one or more of the cartridges.</p>
+      <p id="p-00056-en" num="0056">In some embodiments, a machine for preparing a beverage from a cartridge has a frame, a basket unit, a ratchet assembly, and a rotatable collar. The basket unit can be rotatable in the frame. The basket unit can have a first chamber for receiving a first single-serve cartridge configuration and a second chamber for receiving a second single-serve cartridge configuration. The basket unit can rotate between a first position (e.g., in which the first chamber is oriented upwardly) and a second position (e.g., in which the second chamber is oriented upwardly). In some embodiments, the ratchet assembly is connected (e.g., directly or indirectly) with the basket unit. The rotatable collar can engage the ratchet assembly. In various embodiments, rotation of the collar in a first direction engages the collar with a first surface of the ratchet assembly. The first surface can be adapted (e.g., shaped and/or angled) such that the collar slides along the first surface without rotating the basket unit from the first position to the second position. In some embodiments, rotation of the collar in a second direction engages the collar with a second surface of the ratchet assembly. The second surface can be adapted such that the engagement with the collar rotates the ratchet assembly, which can cause the basket unit to rotate from the first position to the second position.</p>
+      <p id="p-00057-en" num="0057">Some embodiments of the machine include any one, or any combination, of any of the following. The basket unit can rotate less than about 45° when the collar rotates in the first direction. The basket unit can rotate at least about 180° when the collar rotates in the second direction. The collar can have a projection. The ratchet assembly can have an arm. The projection can engage the arm during the rotation of the collar. The first chamber can receive cartridges for brewed coffee beverages and the second chamber can receive cartridges for espresso beverages. In some variants, the basket unit and the collar are adapted to rotate about axes that are substantially perpendicular.</p>
+      <p id="p-00058-en" num="0058">According to certain implementations, a method of preparing an individual serving of a beverage includes rotating a basket unit to a first configuration (e.g., in which a first chamber of the basket unit is located in a loading position). The method can include receiving a cartridge in the first chamber. Some variants of the method include introducing liquid into the cartridge in the first chamber to prepare the individual serving of the beverage. The method can include dispensing the individual serving of the beverage into a vessel. Some embodiments of the method include rotating the basket unit to a second configuration in which a second chamber of the basket unit is located in the loading position.</p>
+      <p id="p-00059-en" num="0059">Certain embodiments of the method include any one, or any combination, of any of the following. Some variants include ejecting the cartridge during rotation of the basket unit to the second configuration. For example, the cartridge can be ejected into a waste bin. The method can include rinsing at least one of an interior surface of the first chamber and a seal surface of the first chamber. The method can include disposing of residual beverage fluid in the first chamber into the waste bin. In some embodiments, the method includes compressing the cartridge in the first chamber with a tamp assembly. Certain implementations of the method include rotating a collar in a first direction. Some embodiments include engaging the collar with a first surface of a ratchet assembly that is connected with the basket unit, which can result in rotation of the basket unit between the first and second configurations. Some embodiments include rotating the collar in a second direction. Some embodiments include sliding the collar along a second surface of the ratchet assembly, thereby not rotating the basket unit between the first and second configurations. In certain implementations of the method, the collar rotates about an axis of rotation that is substantially perpendicular to an axis of rotation of the basket unit.</p>
+      <p id="p-00060-en" num="0060">In some embodiments, a machine for preparing beverages from cartridges has a basket unit and a rotation mechanism. The basket unit can have a first chamber for receiving a first single-serve cartridge configuration and a second chamber for receiving a second cartridge configuration. The basket unit can rotate within the machine between a first configuration and a second configuration. In certain variants, in the first configuration, the first chamber is oriented in an upward direction and the second chamber is oriented in a downward direction. In certain variants, in the second configuration, the second chamber is oriented in the upward direction and the first chamber is orientated in the downward direction. The rotation mechanism can be coupled to the basket unit. The rotation mechanism can be adapted to rotate the basket unit from the first configuration to the second configuration.</p>
+      <p id="p-00061-en" num="0061">According to some embodiments, the machine can include any one, or any combination, of any of the following. Certain embodiments include a motor coupled with the rotation mechanism. In some embodiments, after insertion of a first single-serve cartridge into the first chamber, the rotation mechanism rotates the basket unit at least about 5 degrees in a clockwise direction and at least about 5 degrees in a counterclockwise direction. This can facilitate settling of the contents of the first single-serve cartridge. Some variants have a sensor for determining whether the basket unit is in the first configuration or the second configuration. Some embodiments include a controller that can receive an input from a user, such as a command to begin operation.</p>
+      <heading id="h-00005-en" level="2">I. Overview</heading>
+      <p id="p-00062-en" num="0062">
+        <figref>FIG. 1</figref> illustrates a perspective view of an embodiment of a beverage preparation machine <b>100</b> that is configured to dispense a beverage into a cup <b>101</b> or other vessel. The beverage preparation machine <b>100</b> can include one or more of a main housing <b>105</b>, liquid reservoir, and frother unit. In some embodiments, one or more of the components of the beverage preparation machine <b>100</b> are housed on and/or partially in a tray <b>120</b>.</p>
+      <p id="p-00063-en" num="0063">The liquid reservoir can be located within or external to the housing <b>105</b>. The liquid reservoir can be in fluid communication (e.g., via tubing or pipes) with the main housing <b>105</b> to provide liquid (e.g., water) stored within the liquid reservoir to a chamber within the main housing <b>105</b> where the beverage is prepared. In various embodiments, the liquid is pre-heated before entering the chamber. For example, the liquid may be heated within a separate storage reservoir or within fluid supply lines as the liquid travels to the chamber. The amount of liquid (e.g., water) provided to the chamber from the liquid reservoir may be determined by the beverage recipe. The liquid reservoir may include a water level sensor configured to determine whether enough liquid is present in the liquid reservoir to prepare a requested beverage. The frother unit can cause the beverage to be dispensed with a froth of bubbles (e.g., a frothed milk). After dispensing a brewed beverage into the cup <b>101</b>, the frothed liquid (e.g., frothed milk) can be poured into the beverage. The frother unit may include a control input to toggle the frothing on and off.</p>
+      <p id="p-00064-en" num="0064">As shown in <figref>FIGS. 2 and 3</figref>, the main housing <b>105</b> can include a frame <b>125</b> that supports a beverage production assembly <b>400</b> having a multi-chambered basket unit <b>500</b>. As also shown, an upper portion of the main housing <b>105</b> can include a top <b>130</b> with an opening <b>135</b> to facilitate the loading of a single-serve beverage cartridge <b>200</b> (e.g., a single-serve cartridge with a porous upper and/or lower surface) into the basket unit <b>500</b>. The opening <b>135</b> can be selectively opened and closed with a lid assembly <b>140</b>. Additional details regarding single-serve beverage cartridges and the lid assembly <b>140</b> are disclosed in U.S. Application No. 61/786,072, filed Mar. 14, 2013, and U.S. application Ser. No. 14/191,225, filed Feb. 26, 2014, the entirety of each of which is hereby incorporated by reference.</p>
+      <p id="p-00065-en" num="0065">In some embodiments, a single-serve beverage cartridge includes a cartridge body holding a beverage precursor. The cartridge body may comprise any suitable material, including but not limited to, plastic, metal, wood, bio-degradable polymers, etc. The cartridge body may be reusable, recyclable, biodegradable, compostable, commercially compostable, etc. The beverage precursor may comprise, for example, coffee grounds, tea leaves, powdered milk, milk, juice, tea, coffee, green coffee, green coffee extract, coffee extract, flavorings, other beverage materials, etc.</p>
+      <p id="p-00066-en" num="0066">In various embodiments, the main housing <b>105</b> includes an input and output unit <b>150</b>. For example, the input and output unit <b>150</b> can include an indicator (e.g., a light, display, dial, or otherwise) to indicate status information, such as whether the main housing <b>105</b> has power, is operating, requires maintenance, etc. The input and output unit <b>150</b> can include a user-interface member (e.g., a button or switch) to provide instruction to the main housing <b>105</b>, such as a command to begin the beverage production process. The input and output unit <b>150</b> can be connected with a memory and/or a controller, such as a microprocessor.</p>
+      <p id="p-00067-en" num="0067">In some variants, the input and output unit <b>150</b> includes a reader. The reader can be configured to read a code (e.g., optical code, one dimensional bar code, two dimensional bar code, etc.) and/or a tag (e.g., a radio frequency identification (RFID) tag or near field communication (NFC) tag) on the cartridge or associated packaging. This can allow the machine <b>100</b> to identify the type of beverage to be produced. For example, reading a cartridge containing espresso coffee ingredients (e.g., grounds) can identify to the machine <b>100</b> that an espresso beverage is to be produced. In several implementations, the beverage production assembly <b>400</b> is adjusted based on the type of beverage to be produced, as is discussed in more detail below. Additional details regarding the reader, as well as associated functions, are disclosed in U.S. application Ser. No. ______, titled “SINGLE-SERVE BEVERAGE PRODUCTION MACHINE,” which is filed on the same day as the present application and is Attorney Reference No. SBUX1.294A; the entirety of that application is hereby incorporated by reference.</p>
+      <p id="p-00068-en" num="0068">In some implementations, when the cartridge <b>200</b> has been loaded into the basket unit <b>500</b> and the lid assembly <b>140</b> has been closed, a beverage preparation process can begin. In some embodiments of the beverage preparation process, liquid (e.g., hot water) is introduced into the cartridge <b>200</b> to produce a beverage, such as by a discharge head in the lid assembly <b>140</b>. The beverage can exit the cartridge <b>200</b> and be conveyed to the cup <b>101</b> through portions of the main housing <b>105</b>, such as via a dispensing assembly <b>300</b>.</p>
+      <p id="p-00069-en" num="0069">
+        <figref>FIG. 4</figref> schematically illustrates certain embodiments of the beverage production assembly <b>400</b>. As shown, the beverage production assembly <b>400</b> can include the basket unit <b>500</b>. The basket unit <b>500</b> can be configured to receiving at least two different types of cartridges, such as a first type in a first chamber and a second type in a second chamber. The basket unit <b>500</b> can be rotated, such as by a rotation mechanism that is coupled with a motor. In several embodiments, the rotation of the basket unit <b>500</b> facilitates loading of a cartridge into, and/or ejection of a cartridge from, the basket unit <b>500</b>. In some implementations, the rotation of the basket unit <b>500</b> is controlled by a controller, which can be configured to operate (e.g., energize and de-energize) the motor. The controller can receive a signal from one or more sensors, such as sensors adapted to detect signs indicative of a position of the basket unit <b>500</b>, rotation mechanism, or other components.</p>
+      <p id="p-00070-en" num="0070">Further schematic embodiments of the beverage production assembly <b>400</b> are illustrated in <figref>FIGS. 4A and 4B</figref>. In a mode, the basket unit <b>500</b> can be positioned to receive a first cartridge type into a first chamber. The basket unit <b>500</b> can be moved (e.g., rotated) by a rotation mechanism coupled with a motor. This can put the basket unit <b>500</b> into another mode, such as the basket unit <b>500</b> being positioned to receive a second cartridge type into a second chamber and/or being positioned to eject the first cartridge type from the first chamber. In some implementations, the basket unit <b>500</b> can be further moved (e.g., rotated), such as to return the basket unit <b>500</b> to the position to receive the first cartridge type into the first chamber and/or to eject the second cartridge type from the second chamber. The rotation of the basket unit <b>500</b> can be controlled be a controller, which can receive a signal from one or more sensors. In some embodiments, the signal indicates the rotational position of the basket unit <b>500</b> (e.g., whether the first chamber or the second chamber is positioned to receive a cartridge). In certain embodiments, the controller is configured to receive an input from a user, such as the type of beverage the user desires to have produced and/or the type of cartridge the user desires to position in the basket unit (e.g., the first type or the second type).</p>
+      <p id="p-00071-en" num="0071">An embodiment of the beverage production assembly <b>400</b> is illustrated in <figref>FIG. 4C</figref>. As noted above, the beverage production assembly <b>400</b> can include the multi-chambered basket unit <b>500</b>. The beverage production assembly <b>400</b> can also include a ratchet assembly <b>600</b> and/or a collar <b>700</b>. As discussed in further detail below, engagement between the ratchet assembly <b>600</b> and the collar <b>700</b> can facilitate movement (e.g., rotation) of the basket unit <b>500</b>. This can allow the basket unit <b>500</b> to be selectively positioned to provide access to a desired chamber in the basket, such as for loading a cartridge.</p>
+      <heading id="h-00006-en" level="2">II. Multi-Chambered Basket Unit</heading>
+      <p id="p-00072-en" num="0072">
+        <figref>FIGS. 5-5D</figref> illustrate an embodiment of the multi-chambered basket unit <b>500</b>. In some embodiments, the basket unit <b>500</b> includes a body portion <b>506</b> with a first cartridge-receiving chamber <b>502</b> and a second cartridge-receiving chamber <b>504</b>. As shown, the first chamber <b>502</b> can be located on a first side of the basket unit <b>500</b> and the second chamber <b>504</b> is disposed on a second side of the basket unit <b>500</b>. For example, the first chamber <b>502</b> and the second chamber <b>504</b> can be positioned on generally opposite sides of the basket unit <b>500</b>. Certain embodiments of the basket unit <b>500</b> have additional chambers, such as third, fourth, fifth, sixth, or otherwise chambers.</p>
+      <p id="p-00073-en" num="0073">In some implementations, the basket unit <b>500</b> includes a body portion <b>506</b>. The illustrated body portion <b>506</b> has a generally cylindrical shape, though many other shapes are contemplated as well. As shown, the first chamber <b>502</b> can be positioned at a first end of the generally cylindrical shape and the second chamber <b>504</b> can be positioned at a second end of the generally cylindrical shape. In some embodiments, the first and/or second chambers <b>502</b>, <b>504</b> protrude into the body portion <b>506</b> (e.g., are recessed within).</p>
+      <p id="p-00074-en" num="0074">In certain variants, the first and second chambers <b>502</b>, <b>504</b> are configured to receive different types of cartridges. For example, the first chamber <b>502</b> can be configured to receive a first type of cartridge with a first size and/or shape and the second chamber <b>504</b> can be configured to receive a second type of cartridge a second size and/or shape. In some embodiments, the first chamber <b>502</b> is adapted for producing a first type of beverage from beverage component or precursor in the first cartridge type, and the second chamber <b>504</b> is adapted for producing a second type of beverage from beverage component or precursor in the second cartridge type. For example, first chamber <b>502</b> can receive a first type of cartridge containing a beverage component or precursor for the production of a brewed coffee beverage and the second chamber <b>504</b> can receive a second type of cartridge containing a beverage component or precursor for the production of an espresso coffee beverage (e.g., latte, macchiato, cappuccino, espresso shot, etc.). In certain variants, the first type of cartridge is for the production of an espresso coffee beverage and the second type of cartridge can be for the production of a brewed coffee beverage. In several implementations, at least one of the chambers <b>502</b>, <b>504</b> is for producing a coffee beverage, such as a brewed coffee or espresso coffee beverage. In certain embodiments, at least one of the cartridges <b>502</b>, <b>504</b> is for producing a non-coffee beverage, such as tea, hot chocolate, fruit or vegetable based drink (e.g., juice, cider, or the like), or otherwise.</p>
+      <p id="p-00075-en" num="0075">In embodiments in which at least one of chambers <b>502</b>, <b>504</b> is for preparing brewed coffee, that chamber may include structural features such as filtration elements, strainers, large exit apertures, etc. configured to facilitate brewing of coffee grounds. In embodiments in which at least one of chambers <b>502</b>, <b>504</b> is for preparing espresso coffee, that chamber may be smaller in size (e.g., diameter, volume, or otherwise) than the brewed coffee chamber. In some implementations, the chamber for preparing espresso coffee beverages may include structural features configured to prepare the espresso beverage at a higher pressure than the brewed coffee beverage (for example, the espresso coffee chamber may include very small exit apertures or may be configured to receive a tamp that compresses the grounds in the cartridge). In some embodiments, the chamber for preparing espresso coffee beverages is configured to withstand at least about 130.5 psi (about 9 bar) of pressure and the chamber for preparing brewed coffee beverages is configured to withstand less than 130.5 psi of pressure (e.g., about 5 psi of pressure). In some embodiments, the chamber for preparing brewed coffee beverages is configured to withstand pressures of at least about 3 psi and/or less than or equal to about 4 psi. In some implementations, the chamber for preparing espresso coffee beverages is configured to withstand at least about 195 psi and/or the chamber for preparing brewed coffee beverages is configured to withstand at least about 4.5 psi.</p>
+      <p id="p-00076-en" num="0076">The cartridges to be received in each such respective chambers may also include different structural features to facilitate preparation of different types of beverages. For example, a cartridge for use in preparing an espresso or other high pressure type beverage may be configured may to withstand a higher pressure being applied to its contents, rather than a cartridge used for preparing a brewed type coffee or other low pressure type beverage, in order to prepare an espresso beverage rather than a brewed coffee beverage. Thus, an espresso or “high pressure” cartridge may include a stretchable lid (for receiving a tamp that compresses the grounds in the cartridge), may include smaller exit apertures, or may be smaller in size, while a brewed coffee or “low pressure” cartridge may include large or more exit apertures, may include a non-deformable or stretchable lid, or may be larger in size.</p>
+      <p id="p-00077-en" num="0077">Various embodiments of the basket unit <b>500</b> can include one or more bracing elements. For example, some embodiments of the basket unit <b>500</b> can include one or more radially outwardly extending annular flanges <b>508</b>. Certain variants have one or more cartridge support members <b>510</b>, <b>512</b>, such as shoulders or walls, that surround a portion of the first and second chambers <b>502</b>, <b>504</b>. For example, the embodiment and configuration shown has a generally upwardly extending first wall bounding a portion of the first chamber <b>502</b> and a generally downwardly extending second wall that bounds a portion of the second chamber <b>504</b>. The cartridge support members can be configured to support a cartridge that is received in the chamber, such as by engaging an outwardly-extending lip or flange on the periphery of the cartridge (not shown).</p>
+      <p id="p-00078-en" num="0078">In certain implementations, one or more of the cartridge support members <b>510</b>, <b>512</b> include a sealing member <b>514</b>, such as a gasket made of plastic, rubber, or another elastomeric material. As shown, the sealing member <b>514</b> can be located at an end of the respective cartridge support member <b>510</b>, <b>512</b>. In certain variants, the sealing member extends generally vertically. In some embodiments, a portion of the sealing member <b>514</b> is received in a recess <b>510</b><i>a</i>, <b>512</b><i>a </i>in the respective cartridge support member <b>510</b>, <b>512</b>.</p>
+      <p id="p-00079-en" num="0079">The sealing member <b>514</b> can be configured to facilitate a seal (e.g., a substantially liquid-tight seal and/or substantially gas-tight seal) between the respective cartridge support members <b>510</b>, <b>512</b> and the cartridge. For example, in certain implementations, during the beverage production process the peripheral flange of the cartridge and one of the cartridge support members <b>510</b>, <b>512</b> are pressed together, thereby resiliently deforming the sealing member <b>514</b> and providing a closure between the cartridge and the cartridge support member. In some embodiments, a tamping mechanism (e.g., in the lid assembly) depresses the cartridge against one of the cartridge support members <b>510</b>, <b>512</b> (e.g., the cartridge support member oriented generally upwardly). Additional details regarding the tamping mechanism and the sealing member can be found in U.S. application Ser. No. ______, titled “BEVERAGE PRODUCTION MACHINES AND METHODS WITH TAMPING ASSEMBLY,” which is filed on the same day as the present application and is Attorney Reference No. SBUX1.306A; the entirety of that application is hereby incorporated by reference.</p>
+      <p id="p-00080-en" num="0080">With continued reference to <figref>FIGS. 5-5D</figref>, some embodiments of the basket unit <b>500</b> includes features that can facilitate movement (e.g., rotation) of the basket unit <b>500</b>. For example, in the illustrated arrangement, the basket unit <b>500</b> can include first and second axle portions <b>516</b>, <b>518</b>. As shown, at least some of the axle portions <b>516</b>, <b>518</b> can have a generally circular cross-section, which can aid in rotation about the axle portions. The axle portions <b>516</b>, <b>518</b> can extend radially outwardly from, and be rigidly attached to, the body portion <b>506</b> of the basket unit <b>500</b>. In some embodiments, the axle portions <b>516</b>, <b>518</b> are positioned opposite each other around the periphery (e.g., circumference) of the body portion <b>506</b> and/or are aligned along a common axis RA<sub>b</sub>. In various embodiments, the axle portions <b>516</b>, <b>518</b> can facilitate rotation of the basket unit <b>500</b> about the axis RA<sub>b</sub>, and relative to other components of the main housing <b>105</b>, as described in further detail below. In some implementations, the axle portions <b>516</b>, <b>518</b> are formed with the body portion <b>506</b> of the basket unit <b>500</b>. In some variants, the axle portions <b>516</b>, <b>518</b> are part of a unitary axle member that extends through the basket unit <b>500</b>. In some embodiments, the axle member can be a separate component that fits into a mating cylindrical bore in the basket unit <b>500</b>, e.g., along the axis RA<sub>b</sub>.</p>
+      <p id="p-00081-en" num="0081">According to some implementations, at least one of the axle portions includes a mating feature <b>520</b>, such as a groove, notch, tooth, or otherwise. The mating feature can be configured to engage with a portion of the ratchet assembly <b>600</b>. In some embodiments, at least one of the axle portions <b>516</b>, <b>518</b> includes a stop member <b>522</b>, such as a shoulder. The stop member <b>522</b> can engage a mating portion (e.g., a hole) of the frame <b>125</b> to inhibit or prevent translational movement of the basket unit <b>500</b> relative to the frame <b>125</b> along the axis RA<sub>b</sub>.</p>
+      <p id="p-00082-en" num="0082">In various embodiments, the basket unit <b>500</b> can include bottom portions <b>524</b>, <b>526</b> that can define a bottom of each of the chambers. In some embodiments, each of the bottom portions <b>524</b>, <b>526</b> are configured to support a cartridge placed in the respective chamber. For example, as shown in <figref>FIGS. 5</figref>, <b>5</b>A, and <b>5</b>C, the bottom portions <b>524</b>, <b>526</b> can include a series or radial struts <b>528</b> and/or rings <b>530</b>, or a perforated surface <b>532</b>. In some embodiments, one or more of the bottom portions <b>524</b>, <b>526</b> can include a center support, which can intersect with the radial struts <b>528</b> and/or one or more of the rings <b>530</b>. In various embodiments, each of the bottom portions <b>524</b>, <b>526</b> include one or gaps or apertures, which can allow liquid to flow therethrough to exit the respective chambers <b>502</b>, <b>504</b>. In some embodiments, each of the bottom portions <b>524</b>, <b>526</b> are secured to the body portion <b>506</b> with one or more threads, fasteners (e.g., screws), adhesives, or otherwise.</p>
+      <p id="p-00083-en" num="0083">In some embodiments, one or more of the bottom portions <b>524</b>, <b>526</b> include a restriction assembly <b>534</b>. The restriction assembly <b>534</b> can be configured to facilitate creating or providing an increase in pressure in one or more of the chambers <b>502</b>, <b>504</b> during the beverage production process. This can be beneficial in producing certain types of beverages. For example, producing espresso at under elevated pressure conditions (e.g., about at least 9 bar) can yield an improved beverage. Additional details regarding restriction assemblies can be found in U.S. application Ser. No. ______, titled “BEVERAGE PRODUCTION MACHINES AND METHODS WITH RESTRICTORS,” which is filed on the same day as the present application and is Attorney Reference No. SBUX1.332A; the entirety of that application is hereby incorporated by reference.</p>
+      <p id="p-00084-en" num="0084">With regard to <figref>FIGS. 5B</figref>, <b>5</b>C, and <b>5</b>D, each of the chambers <b>502</b>, <b>504</b> can have at least one conduit configured to convey liquid to a corresponding outlet during the beverage production process. For example, a first conduit <b>536</b> can fluidly connect the first chamber <b>502</b> with a first outlet <b>540</b>, and a second conduit <b>538</b> can fluidly connect the second chamber <b>504</b> with a second outlet <b>542</b>. This can provide a distinct flow path for each of the chambers <b>502</b>, <b>504</b>. As shown, in some embodiments, the outlets can extend outward from the body portion <b>506</b> in generally opposite directions. For example, the first outlet <b>540</b> can extend from a first side of the basket unit <b>500</b> and the second outlet <b>542</b> can extend from generally the opposite side of the basket unit <b>500</b>. In various embodiments, the conduits <b>536</b>, <b>538</b> are angled, such that a given conduit is inclined generally downwardly when its associated chamber is oriented generally upwardly. For example, in <figref>FIG. 5D</figref>, the first chamber <b>502</b> is oriented generally upwardly, and the first conduit is inclined generally downwardly. Such inclined conduits <b>536</b>, <b>538</b> can encourage liquid (e.g., a beverage) to exit from the chambers <b>502</b>, <b>504</b>. In some embodiments, the first conduit <b>536</b> and/or the second conduit <b>538</b> can be angled relative to horizontal at least about: 1°, 5°, 10°, 20°, 30°, 45°, values between the aforementioned values, or otherwise.</p>
+      <p id="p-00085-en" num="0085">In some embodiments, one or more of the outlets <b>540</b>, <b>542</b> extend generally perpendicular to the axis RA<sub>b</sub>. In certain variants, the outlets <b>540</b>, <b>542</b> can extend generally parallel to, or at a slight angle (e.g., less than about: 5°, 10°, 15°, values between the aforementioned values, or otherwise) relative to, the axis RA<sub>b</sub>. This can facilitate engaging the one or more of the outlets <b>540</b>, <b>542</b> with the dispensing assembly <b>300</b> during a rotational operation of the basket unit <b>500</b>, as is discussed in more detail below. In some implementations, each of the outlets <b>540</b>, <b>542</b> include a mating member, such as a flange <b>540</b><i>a</i>, <b>542</b><i>a</i>. As shown in the side view of <figref>FIG. 5B</figref>, the flange can be curved. This can facilitate mating engagement with the dispensing assembly <b>300</b>.</p>
+      <p id="p-00086-en" num="0086">In some embodiments, the basket unit <b>500</b> includes features configured to indicate the position of the basket unit <b>500</b> relative to the frame <b>125</b> or other portions of the main housing <b>105</b>. For example, the basket unit <b>500</b> can include one or more basket position elements <b>546</b>, and the main housing <b>105</b> can include one or more basket position sensors (not shown) configured to detect the presence of the basket position elements <b>546</b>. In some embodiments, the basket position elements <b>546</b> are magnetic markers and the basket position sensors are magnetic sensors. In certain variants, the basket position elements <b>546</b> are light reflective elements and the basket position sensors are configured to emit and detect a light signal (e.g., a light signal reflected off of the basket position elements). In various implementations, the basket position sensors are configured to determine the presence or non-presence of at least one of the basket position elements <b>546</b>. For example, at least one of the basket position sensors can sense whether at least one of the basket position elements <b>546</b> is in close proximity to and/or is facing the basket position sensor.</p>
+      <p id="p-00087-en" num="0087">In some embodiments, the basket position elements <b>546</b> are configured to indicate the position of the basket unit <b>500</b>. For example, in the embodiment illustrated in <figref>FIG. 5C</figref>, a first basket position element can be located on a first side of the cross-sectional line <b>5</b>D-<b>5</b>D and a second basket position element can be located on a second side of the cross-sectional line <b>5</b>D-<b>5</b>D. When the basket unit <b>500</b> is rotated about the axis RA<sub>b</sub>, the position of the basket position elements <b>546</b> changes as a function of which chamber is oriented generally upwardly. In some embodiments, one or more basket position sensors can detect the location of the basket position elements <b>546</b>. For example, the basket position sensors can determine which side of the line <b>5</b>D-<b>5</b>D that the basket position element that is facing the sensor is located on. This information can be provided to the controller in the machine <b>100</b> to monitor the position of the basket unit <b>500</b>. In some embodiments, when a first sensor detects a first of the basket position elements <b>546</b>, the first sensor can send a signal the controller indicating that the first side is oriented generally upwardly, and when a second sensor detects a second of the basket position elements <b>546</b>, the second sensor can send a signal to the controller indicating that the second side is oriented generally upwardly. This can facilitate determining a position of the basket <b>500</b> and/or whether and which of the chambers is in the loading position.</p>
+      <heading id="h-00007-en" level="2">III. Ratchet Assembly</heading>
+      <p id="p-00088-en" num="0088">
+        <figref>FIG. 6</figref> illustrates an embodiment of the ratchet assembly <b>600</b>, which can be used to rotate the basket unit <b>500</b>. The ratchet assembly <b>600</b> can include one or more of: a ratchet member <b>610</b>, a ratchet follower <b>630</b>, and a biasing member <b>650</b>. In some embodiments, the ratchet member <b>610</b> is integrated with the body portion <b>506</b> of the basket unit <b>500</b>.</p>
+      <p id="p-00089-en" num="0089">With reference to <figref>FIGS. 6A</figref>, <b>6</b>B, and <b>6</b>C, an embodiment of the ratchet member <b>610</b> is illustrated. In some embodiments, the ratchet member <b>610</b> comprises a main portion <b>612</b> that is configured to engage with the axle portion <b>516</b> of the basket unit <b>500</b>. For example, the main portion <b>612</b> can include a channel <b>614</b> configured to receive a portion of the axle portion <b>516</b>. In some implementations, the main portion <b>612</b> is configured to be received in and/or to rotate relative to the frame <b>125</b> (see <figref>FIG. 3</figref>). In some embodiments, the ratchet member <b>610</b> includes mating features <b>616</b>, such as one or more notches, teeth, or otherwise. The mating features <b>616</b> of the ratchet member <b>610</b> can be configured to engage with the mating features <b>520</b> of the basket unit <b>500</b>. Such engagement can inhibit the ratchet member <b>610</b> from rotating relative to the basket unit <b>500</b> such that movement of the ratchet member <b>610</b> can result in movement of the basket unit <b>500</b>.</p>
+      <p id="p-00090-en" num="0090">The ratchet member <b>610</b> can include one or more collar engaging members, such as arms <b>618</b> and/or ribs <b>620</b>. In some embodiments, the ratchet member <b>610</b> includes at least one, two, three, four, five, six, seven, or eight arms <b>618</b> and/or at least one, two, three, four, five, six, seven, or eight ribs <b>620</b>. For example, the embodiment shown includes two arms <b>618</b> and four ribs <b>620</b>. In some implementations, the arms <b>618</b> are longitudinally spaced-apart (e.g., in a direction generally parallel to an axis of rotation of the ratchet member) from a rear portion of the ratchet member <b>610</b>. For example, the arms <b>618</b> can be located at a central portion of the ratchet member <b>610</b>. This can allow portions of the collar <b>700</b> to pass behind the arms <b>618</b>, as discussed in more detail below.</p>
+      <p id="p-00091-en" num="0091">As discussed in more detail below, when some variants are in certain configurations, the ribs <b>620</b> can engage with the collar <b>700</b>. For example, in some embodiments, the ribs <b>620</b> engage with the collar <b>700</b> when a lid of the lid assembly <b>140</b> is in the open position. This can inhibit unintended rotation of the basket unit <b>500</b>. In certain variants, when the lid is not in the open position, the ribs <b>620</b> do not engage with the collar <b>700</b>, thereby allowing rotation of the basket unit <b>500</b>.</p>
+      <p id="p-00092-en" num="0092">As illustrated in <figref>FIGS. 6A</figref>, <b>6</b>B, and <b>6</b>C, various configurations of the arms <b>618</b> and ribs <b>620</b> are contemplated. In certain embodiments, the ribs <b>620</b> have a longitudinal length LL<sub>r </sub>that is greater than a longitudinal length LL<sub>a </sub>of the arms <b>618</b>. As shown, in some variants, the ribs <b>620</b> extend at least from the rear portion of the ratchet member <b>610</b> to a front side of the arms <b>618</b>. In some implementations, a radial length RL<sub>a </sub>of one of the arms <b>618</b> is greater than the longitudinal length LL<sub>a </sub>of that arm. In some embodiments, the longitudinal length LL<sub>r </sub>of one of the ribs <b>620</b> is greater than the radial length RL<sub>r </sub>of that rib. In certain variants, the arms <b>618</b> extend from the main portion <b>612</b> of the ratchet member <b>610</b> in generally opposite directions.</p>
+      <p id="p-00093-en" num="0093">Each of the arms <b>618</b> can have a first surface <b>618</b><i>a </i>and a second surface <b>618</b><i>b</i>. As shown in <figref>FIG. 6B</figref>, in certain variants, the first surface <b>618</b><i>a </i>is curved and the second surface <b>618</b><i>b </i>is substantially straight. In some implementations, a first length measured along the first surface <b>618</b><i>a </i>is longer than a second length measured along the second surface <b>618</b><i>b</i>. In various embodiments, the first surface <b>618</b><i>a </i>is configured to facilitate sliding movement of a portion (e.g., a projection) of the collar <b>700</b> relative to the ratchet member <b>610</b>, and/or the second surface <b>618</b><i>b </i>is configured to engage and/or move in conjunction with a portion of the collar <b>700</b>, as discussed in further detail below.</p>
+      <p id="p-00094-en" num="0094">As illustrated in <figref>FIG. 6A</figref>, the ratchet member <b>610</b> can include one or more follower-engaging members, such as projections or bosses <b>622</b>. In certain implementations the bosses <b>622</b> have a substantially circular cross-sectional shape. As shown, certain embodiments include a plurality of bosses <b>622</b> that are spaced-apart from each other. For example, the illustrated embodiment includes a first boss <b>622</b><i>a </i>and a second boss <b>622</b><i>b. </i></p>
+      <p id="p-00095-en" num="0095">With regard to <figref>FIG. 6D</figref>, an embodiment of a ratchet follower <b>630</b> is shown. The ratchet follower <b>630</b> can include an elongate shape. In some embodiments, a first end <b>632</b> of the ratchet follower <b>630</b> is configured to be fixedly attached to a portion of the frame <b>125</b> (see <figref>FIG. 3</figref>) with a fastener, such as a screw, rivet, pin, or otherwise. In some embodiments, the ratchet follower <b>630</b> is biased by the biasing member <b>650</b>, such as a tension spring, leaf spring, torsion spring, or otherwise. For example, a second end <b>634</b> of the ratchet follower <b>630</b> can connect to the biasing member <b>650</b>. As shown, the second end <b>634</b> can include an arm <b>636</b> that engages with a hook or loop at an end of the biasing member <b>650</b>. In some embodiments, a spring element (such as a torsion or compression spring) can be configured to interact on one or more surfaces on the ratchet follower <b>630</b> so as to bias the follower in one rotational direction.</p>
+      <p id="p-00096-en" num="0096">As shown, the ratchet follower <b>630</b> can include a cam-following portion <b>640</b>. In certain variants, the cam-following portion <b>640</b> includes a first ramp <b>642</b> and a second ramp <b>644</b>. Relative to a longitudinal axis of the ratchet follower <b>630</b>, the first ramp <b>642</b> can be at an angle α and the second ramp <b>644</b> can be at an angle β. In various implementations, the angle α is greater than or equal to the angle β. In some implementations, the angle α is less than or equal to the angle β. In some variants, the angles α, β are about equal.</p>
+      <heading id="h-00008-en" level="2">IV. Collar</heading>
+      <p id="p-00097-en" num="0097">With regard to <figref>FIGS. 7 and 7A</figref>, an embodiment of a collar <b>700</b> is illustrated. The collar <b>700</b> can include an annular body with a wall portion <b>710</b>. In some embodiments, the wall portion <b>710</b> includes one or more cam teeth <b>712</b>. For example, the cam teeth <b>712</b> can be positioned on a radially inner side of the wall portion <b>710</b>. In some embodiments, one or more of the cam teeth <b>712</b> engage a cam track (e.g., in the lid assembly, see <figref>FIG. 2</figref>) to facilitate securing the lid assembly <b>140</b> and/or for tamping of the cartridge. Further details in that regard can be found in U.S. application Ser. No. ______, titled “BEVERAGE PRODUCTION MACHINES AND METHODS WITH TAMPING ASSEMBLY,” which is filed on the same day as the present application and is Attorney Reference No. SBUX1.306A.</p>
+      <p id="p-00098-en" num="0098">As shown, the collar <b>700</b> can include a radially outwardly extending flange <b>714</b>. In some embodiments, the flange <b>714</b> includes a circumferentially-extending notch <b>716</b>. Certain variants of the flange <b>714</b> have one or more position indication features <b>718</b>, such as tick marks, dimples, or grooves. In some embodiments, the main housing <b>105</b> includes a rotation detection sensor (not shown) that is configured to detect the position indication features <b>718</b>. The sensor can send a signal to the controller in the main housing <b>105</b>, which can use that signal to discern the rotational position of the collar <b>700</b> relative to other portions of the main housing <b>105</b> (e.g., the basket unit <b>500</b>).</p>
+      <p id="p-00099-en" num="0099">In various embodiments, the collar <b>700</b> is configured to be rotatably driven by a motor (not shown). For example, the collar <b>700</b> can include a plurality of gear teeth <b>720</b> adapted to engage with a gear or gear train that engages with a shaft of the motor. The motor can drive the gear or gear train, which in turn rotates the collar <b>700</b> about the axis RA<sub>c</sub>.</p>
+      <p id="p-00100-en" num="0100">Several embodiments of the collar <b>700</b> include one or more ratchet engaging members. For example, certain embodiments of the collar <b>700</b> include a leg <b>722</b> with a projection <b>724</b> (e.g., a tab, bump, finger, or otherwise). In some implementations, the leg <b>722</b> extends generally downward and/or the projection <b>724</b> extends radially outwardly. In some embodiments, the collar <b>700</b> includes a wing <b>726</b>. In some embodiments, the wing <b>726</b> is positioned radially inward of the leg <b>222</b> and/or the projection <b>724</b>. As discussed in further detail below, in some variants, to facilitate rotation of the basket unit <b>500</b>, the projection <b>724</b> can be configured to engage with the arms <b>618</b> of the ratchet member <b>610</b> and/or the wing <b>726</b> can be configured to engage with the ribs <b>620</b> of the ratchet member <b>610</b>.</p>
+      <p id="p-00101-en" num="0101">As noted above, when some variants are in certain configurations, the ribs <b>620</b> can engage with the collar <b>700</b>. For example, when the lid is in the open position, the collar <b>700</b> can be rotatably positioned such that the wing <b>726</b> and the ribs <b>620</b> of the ratchet member <b>610</b> are engaged. This engagement can inhibit unintended rotation of the basket unit <b>500</b>. In certain variants, when the lid is not in the open position, the ribs <b>620</b> do not engage with the wing <b>726</b>, thereby allowing rotation of the basket unit <b>500</b>.</p>
+      <heading id="h-00009-en" level="2">V. Beverage Production Assembly</heading>
+      <p id="p-00102-en" num="0102">With reference to <figref>FIG. 8</figref>, an embodiment of the beverage production assembly <b>400</b> is illustrated. As previously noted, the beverage production assembly <b>400</b> can include the basket unit <b>500</b>, the ratchet assembly <b>600</b>, and the collar <b>700</b>. In some variants, the beverage production assembly <b>400</b> includes a controller (not shown) configured to receive a signal from and a sensor (not shown). In the embodiment illustrated, the first chamber <b>502</b> is oriented generally upwardly and the second chamber <b>504</b> is oriented generally downwardly. This can facilitate loading of the first cartridge (e.g., not shown) into the first chamber <b>502</b>, provided that the lid assembly is open, such as is shown in <figref>FIG. 2</figref>. As such, the chamber that is oriented generally upwardly is said to be in the “loading position.” Also, the cartridge that is oriented generally downwardly can be said to be in the “inverted position.” As will be discussed in detail below, the basket unit <b>500</b> of the beverage production assembly can be configured to rotate to selectively position one of the first and the second chambers <b>502</b>, <b>504</b> in the loading position and/or to selectively position the other of the first and the second chambers <b>502</b>, <b>504</b> in the inverted position.</p>
+      <p id="p-00103-en" num="0103">In some embodiments, the collar <b>700</b> is positioned and adapted such that cartridges can be passed through the collar <b>700</b> for receipt into one of the chambers. For example, as shown, the collar <b>700</b> can surround an upper portion of the basket unit <b>500</b> while also allowing access to the chamber that is in the loading position. In certain variants, an axial centerline of the collar <b>700</b> is collinear with a line drawn between the centers of the first and second chambers <b>502</b>, <b>504</b>.</p>
+      <p id="p-00104-en" num="0104">As noted above, the beverage production assembly <b>400</b> can include a motor (not shown). The motor can drive (e.g., rotate) the collar <b>700</b>, such as via a gear or gear train. In turn, the collar <b>700</b> can drive other components of the beverage production assembly. For example, the collar <b>700</b> can engage the ratcheting assembly <b>600</b> and/or the dispensing assembly <b>300</b>, which can result in movement of those components as well as other components (e.g., the basket unit <b>500</b>). As described in more detail below, rotation of the collar <b>700</b> about a rotational axis RA<sub>c </sub>can result in one or more of the following: rotational movement of the ratchet member <b>610</b> relative to the collar <b>700</b>, rotational movement of the basket unit <b>500</b> relative to the collar <b>700</b>, pivoting movement of the ratchet follower <b>630</b>, energizing of the biasing member <b>650</b>, and pivoting movement of a component of the dispensing assembly <b>300</b> relative to the collar <b>700</b>. As also described below, in various embodiments, the projection <b>724</b> and/or the wing <b>726</b> of the collar <b>700</b> engages the ratchet member <b>610</b>. In the state shown in <figref>FIG. 8</figref>, however, the projection and the wing <b>726</b> are spaced apart from the ratchet member <b>610</b>.</p>
+      <p id="p-00105-en" num="0105">As illustrated, the ratchet assembly <b>600</b> can engage with the body portion <b>506</b> of the multi-chamber basket unit <b>500</b>. In some embodiments, one of the axle portions <b>516</b>, <b>518</b> is partly received into the channel in the ratchet member <b>610</b>. As shown, the mating features <b>616</b> (e.g., teeth) of the ratchet member <b>610</b> can engage with the corresponding mating features <b>520</b> (e.g., grooves or notches) in the axle portion <b>516</b> of the basket unit <b>500</b>. In certain implementations, the engagement facilitates a generally rigid connection between the ratchet member <b>610</b> and the body portion <b>506</b> of the basket unit <b>500</b>. In various embodiments, the engagement of the ratchet member <b>610</b> and the body portion <b>506</b> inhibits rotation of the ratchet assembly <b>600</b> and the basket unit <b>500</b> relative to each other. The engagement can result in rotation of the ratchet assembly <b>600</b> being transferred to the body portion <b>506</b> of the basket unit <b>500</b>. This can facilitate rotation of the basket unit <b>500</b>, as will be discussed in further detail below.</p>
+      <p id="p-00106-en" num="0106">To facilitate clarity of presentation, some components of the upper portion of the main housing are not shown in <figref>FIG. 8</figref>. For example, the frame <b>125</b> and lid assembly <b>140</b> are not shown. Nevertheless, some portions of the illustrated components may be connected to the frame <b>125</b>. For example, a first end <b>632</b> of the ratchet follower <b>630</b> can be hingedly connected to the frame <b>125</b>, such as with a fastener (e.g., a screw). This can facilitate hinged movement of a portion of the ratchet follower <b>630</b> relative to the frame, other portions of the ratchet assembly <b>600</b>, or otherwise. In some embodiments, the first end <b>632</b> of the ratchet follower <b>630</b> is pinned to the frame and the second end <b>634</b> of the ratchet follower <b>630</b> is able to pivot about the first end <b>632</b>.</p>
+      <p id="p-00107-en" num="0107">As previously discussed, the arm <b>636</b> at the second end <b>634</b> of the ratchet follower <b>630</b> can be connected with the biasing member <b>650</b>. As shown, the biasing member <b>650</b> can also be connected with a mount or fastener <b>652</b>, such as a hook or screw, which in turn is connected with the frame. As such, downward pivoting movement of the ratchet follower <b>630</b> (e.g., about the first end <b>632</b>) can energize the biasing member <b>650</b>, thereby producing a restoring force on the second end <b>634</b> of the ratchet follower <b>630</b>.</p>
+      <heading id="h-00010-en" level="2">VI. Dispensing Assembly</heading>
+      <p id="p-00108-en" num="0108">
+        <figref>FIG. 8</figref> also illustrates an embodiment of the dispensing assembly <b>300</b>. In some embodiments the dispensing assembly <b>300</b> includes a pivoting member <b>310</b>, catch member <b>320</b>, and dispensing nozzle <b>330</b>. The pivoting member <b>310</b> can be pivotally connected with the frame <b>125</b> (not shown in <figref>FIG. 8</figref> for clarity of presentation). This can allow the rear portion of the pivoting member <b>310</b> to rotate into and out of engagement with the outlet ports <b>540</b>, <b>542</b> of the basket unit <b>500</b>. In certain embodiments, the pivoting member <b>310</b> can rotate along an axis that is generally parallel with the axis RA<sub>b </sub>and/or generally perpendicular with the axis RA<sub>c</sub>. In the state illustrated, the pivoting member <b>310</b> is spaced apart from the outlet ports of the basket unit <b>500</b>. This is because the flange <b>714</b> on the collar <b>700</b> engages with a cam <b>312</b> on the pivoting member <b>310</b>, thereby pushing the pivoting member <b>310</b> outward relative to the basket unit <b>500</b>. In some embodiments, the pivoting member <b>310</b> is biased to pivot generally toward the basket unit <b>500</b>, such as by a biasing member <b>314</b> (e.g., a torsion spring).</p>
+      <p id="p-00109-en" num="0109">In various embodiments, the pivoting member <b>310</b> includes a passage <b>316</b>. As discussed in further detail below, the passage <b>316</b> can convey liquid beverage from the basket unit <b>500</b> to the catch member <b>320</b>. When the pivoting member <b>310</b> is not in a position to convey the beverage to the catch member <b>320</b>, it can be configured to inhibit dripping outside the machine <b>105</b>. For example, the pivoting member <b>310</b> can be positioned such that the rear portion of the passage <b>316</b> is inclined downward and/or away from the catch member <b>320</b>. This can inhibit or prevent liquid residue in the passage <b>316</b> from flowing into the catch member <b>320</b>, and thus can reduce the chance of unintentional liquid discharge (e.g., drips) from the dispensing nozzle <b>330</b>. In some embodiments, when the pivoting member <b>310</b> is not in a position to convey the beverage to the catch member <b>320</b>, it can be configured to route drips to a reservoir (not shown), such as a waste bin located below the basket unit <b>500</b>.</p>
+      <p id="p-00110-en" num="0000">VII. Rotation from First Chamber to Second Chamber</p>
+      <p id="p-00111-en" num="0110">
+        <figref>FIGS. 9-12A</figref> illustrate the beverage production assembly <b>400</b> during various stages of rotation of the basket unit <b>500</b>. Such a rotational movement can facilitate loading a cartridge into the basket unit <b>500</b> by orienting a desired one of the chambers <b>502</b>, <b>504</b> generally upwardly, near an upper portion of the machine <b>105</b>, and/or in a direction generally toward the user. For example, when a beverage that is prepared using the second chamber <b>504</b> is desired, but the first chamber <b>502</b> is in the loading position, the basket unit <b>500</b> can rotate so that the second chamber <b>504</b> is in the loading position. This can allow the cartridge to be loaded into the second chamber <b>504</b> and the beverage prepared. In some embodiments, the amount of rotation of the basket unit <b>500</b> is about 180° (and thus can be called a “half flip” of the basket unit <b>500</b>).</p>
+      <p id="p-00112-en" num="0111">In some embodiments, rotation of the basket unit <b>500</b> can aid in ejecting or otherwise removing a used or unwanted cartridge from one of the chambers <b>502</b>, <b>504</b>. For example, after a cartridge that was loaded into one of the chamber has been used to prepare a beverage, that chamber can be rotated to eject the cartridge from the chamber. This is because, as a result of the rotation, the chamber that was in the loading position has been moved to a generally downwardly oriented position (e.g., the inverted position), thereby facilitating ejection (e.g., by force of gravity or otherwise) of the cartridge in that chamber. More details about cartridge ejection mechanisms and features can be found in U.S. application Ser. No. ______, titled “CARTRIDGE EJECTION SYSTEMS AND METHODS FOR SINGLE-SERVE BEVERAGE PRODUCTION MACHINES,” which is filed on the same day as the present application and is Attorney Reference No. SBUX1.297A1; the entirety of that application is hereby incorporated by reference. In certain embodiments, after ejection of the cartridge from a chamber, liquid (e.g., water) is introduced into that chamber to rinse away debris and/or residual beverage. In certain such implementations, an interior surface of the chamber (e.g., a radially inwardly facing surface) and/or one of the sealing members <b>510</b>, <b>512</b> can be rinsed with the introduced liquid.</p>
+      <p id="p-00113-en" num="0112">As shown in <figref>FIGS. 9 and 9A</figref>, the collar <b>700</b> has rotated (e.g., in a clockwise direction) about the axis RA<sub>c </sub>that is generally perpendicular to the axis RA<sub>b </sub>of rotation of the basket unit <b>500</b>. This has engaged the projection of the collar <b>700</b> with the arm of the ratchet member <b>610</b>, which has rotated about the axis RA<sub>b </sub>(e.g., in a counter-clockwise direction). As previously noted, because of the engagement of the mating features of the basket unit <b>500</b> and the ratchet member <b>610</b>, rotation of the ratchet member <b>610</b> can result in rotation of the basket unit <b>500</b> as well. As such, the rotation of the ratchet member <b>610</b> has resulted in the basket unit <b>500</b> being rotated about the axis RA<sub>b </sub>as well. In some implementations, the axis of rotation RA<sub>b </sub>passes between sidewalls of the main housing <b>105</b> (e.g., in <figref>FIG. 1</figref>, between a wall near the liquid reservoir and frother and a wall on the opposite side of the main housing <b>105</b>). In certain variants, the axis of rotation RA<sub>b </sub>passes between a front and rear of the main housing <b>105</b>.</p>
+      <p id="p-00114-en" num="0113">As shown due to the rotation of the ratchet member <b>610</b>, the bosses <b>622</b><i>a</i>, <b>622</b><i>b </i>on the ratchet member <b>610</b> have been rotated relative to the ratchet follower <b>630</b>. This rotation has resulted in one of the bosses <b>622</b><i>b </i>being separated from the ramps <b>642</b>, <b>644</b> of the ratchet follower <b>630</b>, and the other of the bosses <b>622</b><i>a </i>being moved along the first ramp <b>642</b> of the ratchet follower <b>630</b>. As shown, the boss <b>622</b><i>a </i>is positioned at about an apex between the ramps <b>642</b>, <b>644</b>. As will be discussed below, with continued rotation of the collar <b>700</b> and ratchet assembly <b>600</b>, the boss <b>622</b><i>a </i>will pass the apex and begin to descend along the second ramp <b>644</b>.</p>
+      <p id="p-00115-en" num="0114">As shown, the movement boss <b>622</b><i>a </i>of the ratchet member <b>610</b> along the ramp <b>642</b> of the ratchet follower <b>630</b> has resulted in the second end <b>634</b> of the ratchet follower <b>630</b> being pivoted (e.g., generally downwardly) relative to the first end <b>632</b> of the ratchet follower <b>630</b>. In some embodiments, such movement of the second end <b>634</b> of the ratchet follower <b>630</b> is against the bias of the biasing member <b>650</b>, which tends to energize (e.g., elongate the longitudinal length of) the biasing member <b>650</b>. For example, in the position shown in <figref>FIG. 9</figref>, the biasing member <b>650</b> has an elongated length spanning from the fastener connected with frame <b>125</b> to the arm <b>636</b> of the ratchet follower <b>630</b>. Such elongation of the biasing member <b>650</b> can produce a biasing force, such as a force encouraging the second end <b>634</b> of the ratchet member <b>610</b> generally upwardly.</p>
+      <p id="p-00116-en" num="0115">With reference to <figref>FIGS. 10</figref>, <b>10</b>A, <b>11</b>, and <b>11</b>A, the collar <b>700</b> has been further rotated (relative to <figref>FIGS. 9 and 9A</figref>). As shown, the projection <b>724</b> is no longer in engagement with the arm <b>618</b> of the ratchet member <b>610</b>. In some embodiments, the wing <b>726</b> on the collar <b>700</b> engages one of the ribs <b>620</b> on the ratchet member <b>610</b>. In some variants, further rotation of the collar <b>700</b> about the rotational axis RA<sub>c </sub>can result in additional rotation of the ratchet member <b>610</b> about the rotational axis RA<sub>b</sub>, which in turn can result in further rotation of the basket unit <b>500</b>.</p>
+      <p id="p-00117-en" num="0116">In some embodiments, the biasing member <b>650</b> can motivate at least one of the bosses <b>622</b><i>a</i>, <b>622</b><i>b </i>on the ratchet member <b>610</b> to traverse along (e.g., slide relative to) the second ramp <b>644</b>. This is because the biasing force from the biasing member <b>650</b> is encouraging the second end <b>634</b> of the ratchet follower <b>630</b> generally upwardly. That force can be transmitted through the ratchet follower <b>630</b> to the engagement between the second ramp <b>644</b> and the boss <b>622</b><i>a</i>. As the second ramp <b>644</b> is at an angle relative to the direction of the transmitted biasing force, the boss <b>622</b><i>a </i>can be encouraged to traverse (e.g., slide down) a portion of the second ramp <b>644</b>. In some embodiments, movement of the boss <b>622</b><i>a </i>along the second ramp <b>644</b> results in further rotation of the ratchet member <b>610</b>, and thus the basket unit <b>500</b>. In some embodiments, such rotation of the ratcheting member <b>610</b> via the engagement of the boss <b>622</b><i>a </i>and the second ramp <b>644</b> rotates the ratchet member <b>610</b> even when the projection <b>724</b> and/or wing <b>726</b> of the collar <b>700</b> are not engaged with the arm of the ratchet member <b>610</b>.</p>
+      <p id="p-00118-en" num="0117">As shown in <figref>FIGS. 13 and 13A</figref>, as the basket unit <b>500</b> nears the end of the rotational movement, the boss <b>622</b><i>b </i>that had been separated from the ratchet follower <b>630</b> can engage the first ramp <b>642</b>. This can aid in stabilizing the basket unit <b>500</b> and/or ratchet member <b>610</b>, and/or can facilitate additional rotational movements, as discussed in further detail below.</p>
+      <p id="p-00119-en" num="0118">
+        <figref>FIGS. 13 and 13A</figref> illustrate the basket unit <b>500</b> at the conclusion of the rotational movement discussed above. As shown, the second chamber <b>504</b> is oriented generally upwardly and the first chamber <b>502</b> is oriented generally downwardly. Thus, between <figref>FIGS. 9 and 13A</figref>, the basket unit <b>500</b> has made approximately one half of a complete revolution (also called a half flip).</p>
+      <heading id="h-00011-en" level="2">VIII. Second Chamber Dispensing</heading>
+      <p id="p-00120-en" num="0119">With regard to <figref>FIGS. 14</figref>, <b>14</b>A, and <b>14</b>B, the beverage production assembly <b>400</b> is shown in a state for dispensing a liquid beverage from the second chamber <b>504</b>. In this state, the dispensing assembly <b>300</b> is in fluid communication with the second outlet port <b>542</b> of the basket unit <b>500</b>. In various embodiments, a liquid (e.g., water) can be introduced into a cartridge (not shown) located in the second chamber <b>504</b> to produce the beverage. The beverage can exit the cartridge (e.g., via a porous bottom), pass through the bottom of the second chamber <b>504</b>, through the second conduit <b>538</b>, and into the passage in the pivoting member <b>310</b>. In some embodiments, during the dispensing process, the beverage flows from the basket unit <b>500</b> to the dispensing assembly <b>300</b> in a direction substantially perpendicular to the axis RA<sub>b</sub>. In certain variants, during the dispensing process, the beverage flows from the basket unit <b>500</b> to the dispensing assembly <b>300</b> in a direction that is not perpendicular to (e.g., generally parallel with) the axis RA<sub>b</sub>.</p>
+      <p id="p-00121-en" num="0120">In some embodiments, whether the dispensing assembly is in fluid communication with the basket unit <b>500</b> is a function of the position of the collar <b>700</b>. For example, in the illustrated embodiment, the collar <b>700</b> has rotated into a position such that the notch <b>716</b> in the flange <b>714</b> of the collar <b>700</b> is circumferentially aligned with the cam <b>312</b> on the pivoting member <b>310</b> of the dispensing assembly <b>300</b>. This can result in the bias of the biasing member <b>314</b> (e.g., torsional spring) encouraging the cam <b>312</b> into the notch <b>716</b>, which in turn can result in the pivoting member <b>310</b> moving toward the second outlet port <b>542</b> of the basket unit <b>500</b>. This can provide a fluid communication path between the second outlet port <b>542</b> of the basket <b>500</b> and the passage of the pivoting member <b>310</b> of the dispensing assembly <b>300</b>. As shown, in certain embodiments, the pivoting member <b>310</b> can receive some or all of the second outlet port <b>542</b> of the basket <b>500</b>. As shown, the pivoting member <b>310</b> is angled downward, thereby allowing the liquid to flow down the passage <b>316</b> and into the catch member <b>320</b> by force of gravity. The liquid can flow from the catch member <b>320</b> to the dispensing nozzle <b>330</b> for dispensing to the cup <b>101</b> or other vessel.</p>
+      <p id="p-00122-en" num="0121">In certain variants, the catch member <b>320</b> is configured to encourage the liquid to flow toward and out of the dispensing nozzle <b>330</b>. For example, the catch member <b>320</b> can be configured to pivot such that an end of the catch member <b>320</b> with the dispensing nozzle <b>330</b> is lower than an opposite end of the catch member <b>320</b>. For example, the catch member <b>320</b> can include hinge features, such as pins, that pivotally connect with other portions of the machine <b>100</b>, such as with the frame <b>125</b>. During the dispensing portion of the beverage preparation process, the catch member <b>320</b> can be pivoted (e.g., by an actuator or other mechanism) such that gravity encourages the liquid to flow toward and through the dispensing nozzle <b>330</b>.</p>
+      <p id="p-00123-en" num="0122">In some implementations, the catch member <b>320</b> can include a funnel member <b>322</b> in communication with the pivoting member <b>310</b> during dispensing of the beverage. The funnel member <b>322</b> can be inclined, with a lower portion at or near an inlet <b>332</b> of the dispensing nozzle <b>330</b>, thereby allowing gravity to encourage the liquid to flow toward and out of the dispensing nozzle <b>332</b>. In certain embodiments, because the funnel member <b>322</b> is configured to encourage flow of the liquid in the funnel member <b>322</b> during dispensation to the cup <b>101</b>, the funnel member <b>322</b> can reduce the likelihood of liquid remaining in the catch member <b>320</b>. This can inhibit or avoid dripping from the funnel member <b>322</b> and/or the dispensing nozzle <b>332</b>. In some embodiments, the funnel member <b>322</b> includes a low friction material and/or coating, which can reduce the chance and/or amount of liquid residue remaining in the funnel member <b>322</b>.</p>
+      <p id="p-00124-en" num="0000">IX. Rotation from Second Chamber to First Chamber</p>
+      <p id="p-00125-en" num="0123">
+        <figref>FIGS. 15-18A</figref> illustrate an another rotational operation of the multi-chamber basket <b>500</b>. In these figures, the second chamber <b>504</b> is rotated from an upward position to a downward position, and the first chamber <b>502</b> is rotated from a downward position to an upward position. Thus, at the conclusion of <figref>FIGS. 15-18A</figref>, the first and second chambers <b>502</b>, <b>504</b> return to approximately the position shown in <figref>FIG. 8</figref>. During the rotating operation of <figref>FIGS. 15-18A</figref>, the basket unit <b>500</b>, ratchet assembly <b>600</b>, and collar <b>700</b> undergo similar movements to those described above in connection with <figref>FIGS. 9-12A</figref>.</p>
+      <p id="p-00126-en" num="0124">For example, as shown in <figref>FIGS. 15</figref>, <b>15</b>A, <b>16</b>, and <b>16</b>A, rotational movement of the collar <b>700</b> engages the projection <b>724</b> of the leg of the collar <b>700</b> with the arm <b>618</b> of the ratchet member <b>610</b>. This can transfer the rotational movement of the collar <b>700</b> along the axis RA<sub>C </sub>into rotational movement of the ratchet assembly <b>600</b> and basket unit <b>500</b> along the axis RA<sub>B</sub>. The rotation of the ratchet member <b>610</b> can rotate the bosses <b>622</b><i>a</i>, <b>622</b><i>b </i>on the ratchet member <b>610</b> relative to the ratchet follower <b>630</b>. This results in at least one of the bosses <b>622</b><i>a</i>, <b>622</b><i>b </i>(e.g., the second boss <b>622</b><i>b</i>) sliding up the first ramp <b>642</b>, which encourages the ratchet follower <b>630</b> to move against the bias of the biasing member <b>650</b>.</p>
+      <p id="p-00127-en" num="0125">As shown in <figref>FIGS. 17 and 17A</figref>, further rotation of the collar <b>700</b> engages the wing <b>724</b> of the collar <b>700</b> against the rib of the ratchet assembly <b>600</b>. Such engagement can further rotate the ratchet assembly <b>600</b> and basket unit <b>500</b>. Moreover, further rotation of the collar <b>700</b>, and thus the ratchet member <b>610</b>, can cause the boss <b>622</b><i>b </i>can slide down the second ramp <b>644</b>, which allows the biasing member <b>650</b> to move (e.g., pivot) the ratchet follower <b>630</b>, such as pivoting generally upwardly.</p>
+      <p id="p-00128-en" num="0126">In some embodiments, rotation of the ratchet assembly <b>600</b> and basket unit <b>500</b> are further encouraged by the bias of the biasing member <b>650</b> on the second end <b>634</b> of the ratchet follower <b>630</b> and/or because of the engagement between at least one of the bosses <b>622</b><i>a</i>, <b>622</b><i>b </i>on the ratchet assembly <b>600</b> and at least one of the ramps <b>642</b>, <b>644</b> on the ratchet follower <b>630</b>. For example, as shown in <figref>FIGS. 18 and 18A</figref>, even when the collar <b>700</b> is not engaged with the ratchet member <b>610</b>, the cam action between at least one of the bosses <b>622</b><i>a</i>, <b>622</b><i>b </i>on the ratchet assembly <b>600</b> and at least one of the incline ramps <b>642</b>, <b>644</b> on the ratchet follower <b>630</b> (e.g., because of the biasing force provided by the biasing member <b>650</b>) can facilitate rotation of the ratchet member <b>610</b> and basket unit <b>500</b>.</p>
+      <p id="p-00129-en" num="0127">With reference to <figref>FIGS. 19</figref>, <b>19</b>A, and <b>19</b>B, the basket unit <b>500</b> is shown in a state at the conclusion of the rotational operation of <figref>FIGS. 15-18A</figref>. In this state, the basket unit <b>500</b> has returned to the state of <figref>FIG. 8</figref>. For example, the first chamber <b>502</b> is oriented generally upwardly and the second chamber <b>504</b> is oriented generally downwardly. As such, between <figref>FIGS. 15 and 18A</figref>, the basket unit <b>500</b> has made approximately a second half of a complete revolution. Moreover, between <figref>FIGS. 8 and 18A</figref>, the basket unit <b>500</b> has made approximately one complete revolution (also called a full flip).</p>
+      <heading id="h-00012-en" level="2">X. First Chamber Dispensing</heading>
+      <p id="p-00130-en" num="0128">
+        <figref>FIGS. 19</figref>, <b>19</b>A, and <b>19</b>B also illustrate that the dispensing assembly <b>300</b> can move into a position for dispensing a liquid beverage from the first chamber <b>502</b>. As shown, the collar <b>700</b> can be rotated such that the notch <b>716</b> on the flange <b>714</b> is circumferentially aligned with the cam <b>312</b> on the pivoting member <b>310</b> of the dispensing assembly <b>300</b>. This can result in the cam <b>312</b> being partially received in the notch <b>716</b> (e.g., due to the bias of the biasing member), thereby allowing the pivoting member <b>310</b> to rotate toward the basket unit <b>500</b>. This can place the passage of the pivoting member <b>310</b> in fluid communication with the first outlet port <b>540</b> of the basket unit <b>500</b>.</p>
+      <p id="p-00131-en" num="0129">Similar to the description above in connection with <figref>FIG. 14</figref>, liquid (e.g., water) can be introduced into a cartridge in the first chamber <b>502</b> to produce a beverage. The beverage can exit the cartridge (e.g., via a porous bottom), flow through the bottom of the chamber <b>502</b>, and pass through the first conduit <b>536</b> to the first outlet <b>540</b>. The beverage can continue through the passage in the pivoting member <b>310</b> of the dispensing assembly <b>300</b> and into the catch member <b>320</b>. As shown, the pivoting member <b>310</b> can be angled downward, which can encourage the flow of beverage through the passage <b>316</b> by force of gravity. The beverage can flow out of the dispensing nozzle into the cup <b>101</b> or other vessel.</p>
+      <heading id="h-00013-en" level="2">XI. Reset Operations</heading>
+      <p id="p-00132-en" num="0130">In certain implementations, the beverage production assembly can perform a reset operation. During the reset operation the rotational direction of the collar <b>700</b> is reversed. For example, the collar <b>700</b> can rotate a first direction (e.g., clockwise) during the flip operations (e.g., the half flip of <figref>FIGS. 9-12A</figref>, the half flip of <figref>FIGS. 15-18A</figref>, and/or the full flip of <figref>FIGS. 9-12A</figref> and <b>15</b>-<b>18</b>A), and can rotate a second direction (e.g., counterclockwise) during the reset operation. <figref>FIG. 20</figref> illustrates an example of the collar <b>700</b> undergoing reverse rotation.</p>
+      <p id="p-00133-en" num="0131">In various implementations, during the reverse-rotation of the collar <b>700</b>, engagement between certain components can be reduced or avoided. This can facilitate circumferentially positioning the collar <b>700</b> relative to the ratchet member <b>610</b> without flipping the basket unit <b>500</b>. For example, in some embodiments, during the reverse-rotation of the collar <b>700</b>, the wing <b>726</b> can rotate beyond the ratchet member <b>610</b> without flipping the basket unit <b>500</b>. In some embodiments, the wing <b>726</b> of the collar <b>700</b> is configured to pass behind the arm <b>618</b> of the ratchet assembly <b>600</b> (e.g., between the arm and the basket unit <b>500</b>), thereby not engaging the arm <b>618</b>. In some embodiments, the wing <b>726</b> can pass over (e.g., be vertically spaced apart from) the rib <b>620</b> of the ratchet assembly <b>600</b>, thereby not engaging the rib <b>620</b>.</p>
+      <p id="p-00134-en" num="0132">
+        <figref>FIGS. 20-23A</figref> illustrate a reset operation when the first chamber <b>502</b> is oriented generally upwardly. As shown in <figref>FIGS. 21-22A</figref>, the reverse-rotation of the collar <b>700</b> engages the projection <b>724</b> on the collar <b>700</b> with the first surface <b>618</b><i>a </i>on the arm <b>618</b> of the ratchet assembly <b>600</b>. As the collar <b>700</b> continues to reverse-rotate, the projection <b>724</b> slides along the first surface <b>618</b><i>a </i>of the arm <b>618</b>. This can result in a slight reverse-rotation of the ratchet member <b>610</b>, as well as the basket unit <b>500</b>. As shown in <figref>FIG. 22A</figref>, the basket <b>500</b> can reverse-rotate an angle γ, which is the angular displacement of the basket unit <b>500</b> from the horizontal position (as shown in <figref>FIG. 20A</figref>). In some embodiments, the angle γ of the basket unit <b>500</b> is less than or equal to about: 10°, 15°, 20°, 25°, 30°, 45°, values between the aforementioned values, or otherwise. As shown, the reverse-rotation of the ratchet member <b>610</b> can cause one of the bosses <b>622</b><i>a</i>, <b>622</b><i>b </i>to slide generally upwardly along the second ramp <b>642</b>. This encourages the ratchet follower <b>630</b> to pivot (e.g., generally downwardly) against the bias of the biasing member <b>650</b>.</p>
+      <p id="p-00135-en" num="0133">As illustrated in <figref>FIGS. 23 and 23A</figref>, with still further reverse-rotation of the collar <b>700</b>, the projection <b>724</b> on the collar <b>700</b> can disengage from the arm <b>618</b> on the ratchet member <b>610</b>. As such, the projection <b>724</b> of the collar <b>700</b> no longer presents an interference with the arm <b>618</b> of the ratchet member <b>610</b>. In some such instances, the biasing member <b>650</b> encourages movement of the ratchet follower <b>630</b> (e.g., generally upward), which results in the boss <b>622</b><i>b </i>sliding down the second ramp <b>644</b>. This results in the ratchet member <b>610</b> rotating back to its rest position, as shown. The collar <b>700</b> thus has rotated beyond the ratchet member <b>610</b> without flipping the basket unit <b>500</b>. As shown, after the reset operation, the projection <b>724</b> on the collar <b>700</b> is positioned so as to readily engage the second surface <b>618</b><i>b </i>of the arm <b>618</b> of the ratchet member <b>610</b>. Thus, the projection <b>724</b> can be positioned to execute a flip operation, as discussed above in connection with <figref>FIGS. 9-12A</figref>.</p>
+      <p id="p-00136-en" num="0134">
+        <figref>FIGS. 24-27A</figref> illustrate a reset operation when the second chamber <b>504</b> is oriented generally upwardly. The reset operation shown in <figref>FIGS. 24-27A</figref> is similar to the reset operation discussed above in connection with <figref>FIGS. 20-23A</figref>. For example, when the collar <b>700</b> reverse-rotates, the projection <b>724</b> on the collar <b>700</b> can engage the first surface <b>618</b><i>a </i>of the arm on the ratchet member <b>610</b>. This can result in a slight reverse-rotation of the ratchet member <b>610</b>, as well as the basket unit <b>500</b>, during the engagement of the projection <b>724</b> and the arm <b>618</b>. When the projection <b>724</b> rotates out of engagement with the arm <b>618</b> of the ratchet assembly <b>600</b>, the bias of the biasing member <b>650</b> on the ratchet follower <b>630</b> can encourage the ratchet member <b>610</b> and basket unit <b>500</b> to return to the rest position, as shown in <figref>FIGS. 27 and 27A</figref>.</p>
+      <heading id="h-00014-en" level="2">XII. Certain Operational Modes</heading>
+      <p id="p-00137-en" num="0135">As noted above, embodiments of the beverage production assembly <b>400</b> can produce multiple types of beverages. In some embodiments, the first chamber <b>502</b> is adapted for producing a first type of beverage type and the second chamber <b>504</b> is adapted for producing a second beverage type. For example, the first chamber <b>502</b> in the basket unit <b>500</b> can be for producing brewed coffee beverages and the second chamber <b>504</b> can be for producing espresso beverages. The rotation of the basket unit <b>500</b> can facilitate producing such a multiplicity of beverage types and/or can transition the beverage production assembly <b>400</b> from being configured to produce one beverage type to being configured to produce another beverage type.</p>
+      <p id="p-00138-en" num="0136">For example, in the situation that the first cartridge <b>502</b> is in the loading position, yet the beverage desired is prepared using the second chamber <b>504</b>, the basket unit <b>500</b> can rotate (e.g., at least about 170°) to bring the second chamber <b>504</b> to the loading position. An example of such a rotational operation is shown above in <figref>FIGS. 9-13A</figref>, in which the first chamber <b>502</b> rotates from the top portion to the bottom portion of the basket unit <b>500</b> (e.g., from the loading position to the inverted position), and the second chamber <b>504</b> rotates from the bottom portion to the top portion of the basket unit <b>500</b> (e.g., from the inverted position to the loading position). The second chamber <b>504</b> can thus be positioned for loading of the desired cartridge, after which the beverage production process can proceed.</p>
+      <p id="p-00139-en" num="0137">In the reverse situation, in which the second cartridge <b>504</b> is in the loading position, yet the beverage desired is prepared using the first chamber <b>502</b> (e.g., a brewed coffee drink), the basket unit <b>500</b> can rotate (e.g., at least about 180°) to bring the first chamber <b>502</b> to the loading position. Such a rotational operation is shown above in <figref>FIGS. 15-18A</figref>, in which the second chamber <b>504</b> rotates from the loading position to the inverted position, and the first chamber <b>502</b> rotates from the inverted position to the loading position. The first chamber <b>502</b> can thus be positioned for loading of the desired cartridge, after which the beverage production process can proceed.</p>
+      <p id="p-00140-en" num="0138">In several embodiments, when rotating from one chamber being in the loading position to another chamber being in the loading position, the basket unit <b>500</b> rotates at least about: 45°, 90°, 135°, 170°, 175°, 180°, 185°, 190°, 225°, 270°, values between the aforementioned values, or otherwise.</p>
+      <p id="p-00141-en" num="0139">As noted above, after a cartridge has been loaded in the chamber that is appropriate for the type of beverage to be made, the beverage production process can proceed. After that process has occurred and the beverage has been dispensed, the beverage production assembly <b>400</b> can be moved into a configuration to expediently execute another rotation of the basket unit <b>500</b>. This can reduce the time a user may have to wait before being able to load another cartridge into the basket unit <b>500</b>. For example, after the dispensing operations shown in <figref>FIGS. 15B and 19B</figref>, the projection <b>724</b> on the collar <b>700</b> can be rotated so as to be positioned at or near the ratchet member <b>610</b>, such as the position of the collar <b>700</b> shown in <figref>FIG. 8</figref>. This can aid in readying the beverage production assembly <b>400</b> for a further rotational operation.</p>
+      <p id="p-00142-en" num="0140">In certain situations, a user may wish to produce multiple consecutive beverages of the same type. For example, a first brewed coffee beverage may have been produced, then the user may scan (e.g., by providing the cartridge to the reader) another cartridge to instruct the machine <b>100</b> to produce another brewed coffee beverage. In some embodiments, when that situation occurs, the basket unit <b>500</b> makes a two half rotations (also called one full rotation) of the first chamber <b>502</b> after the first beverage has been produced and dispensed. The first half rotation includes moving the first chamber <b>502</b> from the loading position to the inverted position, as is shown in <figref>FIGS. 9-13A</figref>. The second half rotation includes moving the first chamber <b>502</b> from the inverted position to the loading position, as is shown in <figref>FIGS. 15-18A</figref>.</p>
+      <p id="p-00143-en" num="0141">In some embodiments, for the first half rotation, the projection <b>724</b> on the collar <b>700</b> is already in position for engaging the ratchet member <b>610</b>. For example, as such was previously discussed, after preparing the first brewed coffee beverage, the projection <b>724</b> can be rotated so as to be positioned at or near the ratchet member <b>610</b>, such as the position of the collar <b>700</b> shown in <figref>FIG. 8</figref>. Thus, the projection <b>724</b> can be positioned to readily engage the ratchet member <b>610</b> to execute the first half rotation.</p>
+      <p id="p-00144-en" num="0142">As shown in <figref>FIG. 13</figref>, at the conclusion of the first half rotation, the projection <b>724</b> is not in a position to readily engage the ratchet member <b>610</b> to execute a rotation of the basket unit <b>500</b>. To alleviate this, in some embodiments, the collar <b>700</b> rotates as normal to put the projection <b>724</b> in position of <figref>FIG. 8</figref>. Certain other embodiments reverse the rotation of the collar <b>700</b> with the reset operation, as previously discussed and shown in <figref>FIGS. 20-23A</figref>. This can decrease the circumferential distance traveled by the projection <b>724</b> and/or the amount of time required to put the projection in position to readily engage the ratchet member <b>610</b> to execute the second half rotation of the basket unit <b>500</b>.</p>
+      <p id="p-00145-en" num="0143">In various embodiments, the two half (or one full rotation) operation described above can aid in ejecting or otherwise removing the cartridge in the first chamber <b>502</b>. For example, when the first chamber <b>502</b> is oriented downward (e.g., in the inverted position or otherwise tilted downward), the cartridge can be encouraged out of the chamber by force of gravity. As such, when the first chamber <b>502</b> is returned to the loading position, it can be configured to accept another cartridge.</p>
+      <p id="p-00146-en" num="0144">Although the example above involves preparing consecutive beverages using the first chamber <b>502</b>, similar operations could be used to prepare consecutive beverages using the second chamber <b>504</b>. For example, in the first half rotation, the second chamber <b>504</b> can be rotated from the loading position to the inverted position, as is shown in <figref>FIGS. 15-18A</figref>. During the second half rotation, the first chamber <b>502</b> can be rotated from the inverted position to the loading position, as is shown in <figref>FIGS. 8-13A</figref>. In some embodiments, after the first half rotation, the direction of rotation of the collar <b>700</b> is reversed with the reset operation, as previously discussed and shown in <figref>FIGS. 24-27A</figref>. This can put the projection <b>724</b> in a position to engage the ratchet member <b>610</b> to execute the second half rotation. This can return the second chamber <b>504</b> to the loading position, thereby positioning the second chamber <b>504</b> to accept another cartridge.</p>
+      <p id="p-00147-en" num="0145">In some embodiments, the beverage production assembly <b>400</b> is configured to facilitate settling (e.g., a generally equally distribution of) the contents of a cartridge inserted into the basket unit <b>500</b>. In certain instances, such as if the cartridge was stored on its side, more coffee grounds may be located on one side of the cartridge than the other. This can hinder beverage production, such as by reducing extraction efficiency. As such, it can be desirable to distribute the grounds generally equally on the bottom of the cartridge. In some embodiments, after insertion of a cartridge into one of the chambers <b>502</b>, <b>504</b>, the basket unit <b>500</b> is rotated back-and-forth (clockwise and counterclockwise) to encourage settling of the contents of the cartridge. For example, the basket unit <b>500</b> can be rotated in a clockwise direction less than or equal to about: 45°, 30°, 25°, 20°, 15°, 10°, 5°, 3°, 1°, values between the aforementioned values, or otherwise. The basket unit <b>500</b> can be rotated in a counterclockwise direction less than or equal to about: 45°, 30°, 25°, 20°, 15°, 10°, 5°, 3°, 1°, values between the aforementioned values, or otherwise. In some embodiments, during the settling operation, the basket unit <b>500</b> is rotated between about 10° and about 20° in the counterclockwise direction and between about 10° and about 20° in the clockwise direction. In some embodiments, during the settling operation, the basket unit <b>500</b> is rotated less than about 5° in the counterclockwise direction and less than about 5° in the clockwise direction. In several embodiments, during the settling operation, the basket unit <b>500</b> is not rotated a sufficient amount to flip the basket unit <b>500</b>. In various implementations, after the settling operation, the basket unit <b>500</b> is returned to a generally level position (e.g., as shown in <figref>FIGS. 8A and 13A</figref>) and the brewing process commences.</p>
+      <heading id="h-00015-en" level="2">XIII. Swinging Spout</heading>
+      <p id="p-00148-en" num="0146">With regard to <figref>FIGS. 28 and 28A</figref>, an illustrative alternative dispensing assembly <b>300</b>A is shown. The dispensing assembly <b>300</b>A can include any of the features of the dispensing assembly <b>300</b>. The dispensing assembly <b>300</b>A can be used with any embodiment of the beverage production assembly <b>400</b>.</p>
+      <p id="p-00149-en" num="0147">As illustrated, the dispensing assembly <b>300</b>A includes a pivoting member <b>310</b> with a passage <b>316</b>A and a nozzle <b>330</b>A. The passage <b>316</b>A can be bounded on one or more sides by walls, which can aid in containing liquid flow. The passage <b>316</b>A can be angled downwardly to facilitate liquid flow to the nozzle <b>330</b>A by gravity. The dispensing assembly <b>300</b>A can be rotatably connected to the housing <b>105</b>, such as by a support column <b>334</b>A.</p>
+      <p id="p-00150-en" num="0148">In various embodiments, the dispensing assembly <b>300</b>A can be selectively rotated into and out of engagement with the outlet ports <b>540</b>, <b>542</b> of the basket unit <b>500</b>. For example, as shown in <figref>FIG. 28</figref>, the pivoting member <b>310</b> can be rotated out of engagement with the basket unit <b>500</b>. This can place the dispensing assembly <b>300</b>A in a position that does not interfere with the basket unit <b>500</b> during rotation of the basket unit <b>500</b> (e.g., flipping of the basket unit <b>500</b>). As shown, in <figref>FIG. 28A</figref>, the pivoting member <b>310</b> can be rotated into engagement with the basket unit <b>500</b>. This can provide a fluid communication path for liquid (e.g., beverage) to exit the basket unit <b>500</b> (e.g., via one of the outlet ports <b>540</b>, <b>542</b>) and to flow to the nozzle <b>330</b>A for dispensing. In some embodiments, the pivoting member <b>310</b> rotates along an axis that is generally parallel with the axis RA<sub>c </sub>and/or generally perpendicular with the axis RA<sub>b</sub>.</p>
+      <p id="p-00151-en" num="0149">In certain embodiments, the dispensing assembly <b>300</b>A engages with the collar <b>700</b>. For example, the pivoting member <b>310</b> can include features (e.g., one or more cams) that engage with the collar <b>700</b> (e.g., one or more tabs or slots). In some embodiments, rotation of the collar <b>700</b> to a first circumferential position results in the pivoting member <b>310</b> swinging into engagement with one of the outlet ports <b>540</b>, <b>542</b> of the basket unit <b>500</b>. In certain variants, rotation of the collar <b>700</b> to a second circumferential position results in the pivoting member <b>310</b> swinging out of engagement with one of the outlet ports <b>540</b>, <b>542</b> of the basket unit <b>500</b>. A biasing member (not shown), such as a spring, can bias the dispensing assembly <b>300</b>A toward the non-engaged position.</p>
+      <p id="p-00152-en" num="0000">XIV. Ratchet Assembly with Cam Member</p>
+      <p id="p-00153-en" num="0150">
+        <figref>FIGS. 29-29D</figref> show an illustrative alternative ratchet assembly <b>600</b>A. The ratchet assembly <b>600</b>A can include any of the features of the ratchet assembly <b>600</b>, such as arms configured to engage the collar <b>700</b>. The ratchet assembly <b>600</b>A can be used with any embodiment of the beverage production assembly <b>400</b>.</p>
+      <p id="p-00154-en" num="0151">As shown, the ratchet assembly <b>600</b>A can include a ratchet member <b>610</b>A and a ratchet follower <b>630</b>A. Some embodiments also include a biasing member (not shown). The ratchet member <b>610</b>A can be configured to engage with the basket unit <b>500</b>. For example, the ratchet member <b>610</b>A can include one or more mating features <b>616</b>A, such as a projection with a non-circular cross-section that is configured to engage a corresponding recess in the axle portion <b>516</b> of the basket unit <b>500</b>.</p>
+      <p id="p-00155-en" num="0152">The ratchet member <b>610</b>A can include a first portion <b>624</b>A and a second portion <b>626</b>A. In some embodiments, the first and second portions <b>624</b>A, <b>626</b>A are spaced-apart by a cam member <b>628</b>A. As shown, the ratchet follower <b>630</b>A can be received into the space between the first and second portions <b>624</b>A, <b>626</b>A. The biasing member can bias the ratchet follower <b>630</b>A into engagement with the cam member <b>628</b>A.</p>
+      <p id="p-00156-en" num="0153">As shown in the cross-sectional view of <figref>FIG. 29D</figref>, the cam member <b>628</b>A can have an elongate cross-sectional shape. The cam member <b>628</b>A can have a length L<sub>c </sub>that is greater than its width W<sub>c</sub>. In certain variants, the ratio of length L<sub>c </sub>to width W<sub>c </sub>is at least about: 2:1, 3:1, 4:1, 5:1, values between the aforementioned values, or otherwise. In some implementations, the cam member <b>628</b>A has rounded or chamfered ends, which can facilitate engagement with the ratchet follower <b>630</b>A.</p>
+      <p id="p-00157-en" num="0154">During rotation of the ratchet assembly <b>600</b>A with the collar, the ratchet member <b>610</b>A can be rotated. This can result in the cam member <b>628</b>A rotating with respect to the ratchet follower <b>630</b>A. Similar to the previously-described way that rotation of the bosses <b>622</b><i>a</i>, <b>622</b><i>b </i>deflects the cam follower <b>630</b>, rotation of the cam member <b>630</b>A deflects the cam follower <b>630</b>A. This, in turn, can energize the biasing member.</p>
+      <p id="p-00158-en" num="0155">In certain implementations, when the collar <b>700</b> has rotated sufficiently so as to disengage with the ratchet member <b>610</b>A, then the cam member <b>628</b>A has rotated to a position such that the rounded or chamfered ends are engaged with the ratchet follower <b>630</b>A. In certain embodiments, when the collar <b>700</b> has rotated out of engagement with the ratchet member <b>610</b>A, a region of engagement between the cam member <b>628</b>A and the ratchet follower <b>630</b>A has crossed-over a longitudinal centerline CL<sub>c </sub>of the cam member <b>628</b>A. In some variants, after the collar <b>700</b> has rotated out of engagement with the ratchet member <b>610</b>A, the bias of the biasing member encourages the ratchet follower <b>630</b>A against the cam member <b>628</b>A, which can cause the cam member <b>628</b>A to slide with respect to the ratchet follower <b>630</b>A. This can result in the ratchet member <b>610</b>A being further rotated (e.g., by the bias of the basing member acting on the cam member <b>628</b>A via the ratchet follower <b>630</b>A). For example, the region of engagement between the cam member <b>628</b>A and the ratchet follower <b>630</b>A can slide down the rounded or chamfered end, which can cause further rotation of the ratchet member <b>610</b>A. In various implementations, rotation of the cam member <b>628</b>A also rotates the ratchet member <b>610</b>A and basket unit <b>500</b> a corresponding amount.</p>
+      <p id="p-00159-en" num="0156">Thus, according to some embodiments, the engagement between the collar <b>700</b> and the ratchet member <b>610</b>A provides a first amount of rotation of the basket unit <b>500</b>, and the bias of the basing member acting on the cam member <b>628</b>A via the ratchet follower <b>630</b>A provides a second amount of rotation of the basket unit <b>500</b>. In various embodiments, total of the first amount of rotation and the second amount of rotation of the basket unit <b>500</b> is at least about 170° and/or less than or equal to about 190°. Such total rotation is preferably equal to about 180°.</p>
+      <heading id="h-00016-en" level="2">XV. Certain Translating Features</heading>
+      <p id="p-00160-en" num="0157">
+        <figref>FIGS. 30-30C</figref> illustrate an illustrative alternative beverage production assembly <b>1400</b>. Many of the features of the beverage production assembly <b>1400</b> are the same as or similar to the features described above in connection with the beverage production assembly <b>400</b>. Indeed, the beverage production assembly <b>1400</b> can include one or more of any of the features of the beverage production assembly <b>400</b>, including all combinations and sub-combinations.</p>
+      <p id="p-00161-en" num="0158">The beverage production assembly <b>1400</b> can include a multi-chambered basket unit <b>1500</b>. The basket unit <b>1500</b> includes a first chamber (not shown) and a second chamber <b>1504</b>, which can be generally opposite the first chamber. As shown, a lid assembly <b>1140</b> can be opened to facilitate loading of a cartridge into the chamber <b>1504</b>. As shown in <figref>FIG. 30A</figref>, the lid assembly <b>1140</b> can be closed for the beverage preparation process.</p>
+      <p id="p-00162-en" num="0159">In some embodiments, the basket unit <b>1500</b> can rotate to selectively orient one of the first and second chambers to the loading position. For example, <figref>FIG. 30</figref> illustrates the second chamber <b>1504</b> in a loading position. In various embodiments, the basket unit <b>1500</b> is configured to rotate about one or more axle portions <b>1516</b>. In certain implementations, the basket unit <b>1500</b> can rotate about an axis of rotation RA<sub>b </sub>that passes between a front and rear wall of the main housing <b>105</b>. For example, the axis RA<sub>b </sub>can pass through a generally vertical front face of the main housing <b>105</b>. In certain variants, during the dispensing process, the beverage flows from the basket unit <b>1500</b> to a dispensing assembly <b>1300</b> in a direction that is not perpendicular to (e.g., parallel with) the axis RA<sub>b</sub>. For example, the basket unit <b>1500</b> can include first conduit <b>1536</b> (not shown) in fluid communication with the first chamber <b>1502</b> and a second conduit <b>1538</b> (not shown) in fluid communication with the first chamber <b>1504</b>. The conduits <b>1536</b>, <b>1538</b> can pass through the one or more axle portions <b>1516</b>.</p>
+      <p id="p-00163-en" num="0160">As illustrated, an outlet of at least one of the conduits <b>1536</b>, <b>1538</b> can engage with the dispensing assembly <b>1300</b>. The dispensing assembly <b>1300</b> can include a pivoting member <b>1310</b> (e.g., an anti-drip unit), catch member <b>1320</b>, and outlet <b>1330</b>. The pivoting member <b>1310</b> can be pivotally connected with the catch member <b>1320</b> or a frame <b>1125</b>, such as by a pinned connection.</p>
+      <p id="p-00164-en" num="0161">In some variants, the basket unit <b>1500</b> is configured to translate, such as moving substantially vertically. As shown, the basket unit <b>1500</b> is connected with a cam collar <b>1800</b>. The cam collar <b>1800</b> in turn can engage with a collar <b>1700</b> (not shown), which can be rotated (e.g., by a motor and/or gearing) about the axis RA<sub>c</sub>. The engagement between the collar <b>1700</b> and cam collar <b>1800</b> can provide substantially vertical translation of the basket unit <b>1500</b>, such as between the upper position of <figref>FIG. 30A</figref> and the lower position of <figref>FIG. 30C</figref>.</p>
+      <p id="p-00165-en" num="0162">In certain embodiments, the cam collar <b>1800</b> has one or more cam tracks <b>1810</b> that are configured to receive one or more cam teeth <b>1712</b> (not shown) on the collar <b>1700</b>. The cam tracks <b>1810</b> can include angled tracks <b>1810</b><i>a</i>, which form a portion of a helix on a periphery of the collar <b>1800</b>. The cam tracks <b>1810</b> can also include non-angled tracks <b>1810</b><i>b</i>, which extend around a portion of the periphery of the collar <b>1800</b> generally parallel to a circumferential axis of the collar. As shown, the angled tracks <b>1810</b><i>a </i>and non-angled tracks <b>1810</b><i>b </i>can intersect. For example, the cam tracks <b>1810</b> can include an angled track <b>1810</b><i>a </i>portion and then a non-angled track portion <b>1810</b><i>b. </i></p>
+      <p id="p-00166-en" num="0163">During rotation of the collar <b>1700</b> about the axis RA<sub>c</sub>, the cam teeth <b>1712</b> travel along the cam tracks <b>1810</b>. When the teeth travel along the angled tracks <b>1810</b><i>a</i>, the cam collar <b>1800</b> is drawn toward or away from the collar <b>1700</b>, depending on the direction of rotation of the collar <b>1700</b>. Because the cam collar <b>1800</b> is connected with the basket unit <b>1500</b>, such vertical movement of the cam collar <b>1800</b> also vertically moves the basket unit <b>1500</b>. In some implementations, the basket unit <b>1500</b> translates vertically (e.g., downward) during rotation of the basket unit <b>1500</b> about the axis RA<sub>b</sub>.</p>
+      <p id="p-00167-en" num="0164">Vertical movement can be beneficial, for example, to inhibit or prevent dripping. For example, as shown in <figref>FIG. 30B</figref>, when the basket unit <b>1500</b> is moved downward, the pivoting member <b>1310</b> can pivot away from the catch member <b>1320</b>. This can direct liquid (e.g., residual beverage liquid) toward a waste bin or other location, and thus decrease the chance of that liquid dripping outside the main housing <b>105</b>. In some embodiments, the pivoting member is biased (e.g., toward the position shown in <figref>FIG. 28B</figref>).</p>
+      <p id="p-00168-en" num="0165">
+        <figref>FIG. 30C</figref> shows the basket unit <b>1500</b> after a half-flip operation has been completed. In various implementations, at the conclusion of the half-flip operation, the cartridge that was previously generally downwardly-oriented is now generally upwardly-oriented and the cartridge that was previously generally upwardly-oriented is now generally downwardly-oriented. This can facilitate loading a cartridge into the newly generally upwardly-oriented chamber. Moreover, this can facilitate ejecting a used or unwanted cartridge from the chamber that was previously-upwardly oriented (e.g., the second chamber <b>504</b> in the embodiment shown) by force of gravity or otherwise.</p>
+      <p id="p-00169-en" num="0166">In the embodiment illustrated, the collar <b>1700</b> and the cam collar <b>1800</b> is shown at least partly below the basket unit <b>1500</b>. However, in some embodiments, the collar <b>1700</b> and the cam collar <b>1800</b> are located at least partly above the basket unit <b>1500</b>. For example, the collar <b>1700</b> can be positioned similarly to what is shown in <figref>FIG. 8</figref>, and the cam collar <b>1800</b> can be located in the lid assembly <b>1140</b>. In some implementations, the lid assembly <b>1140</b> receives a portion of the cam collar <b>1800</b>.</p>
+      <p id="p-00170-en" num="0167">In certain variants, the cam collar <b>1800</b> is connected with a tamp assembly rather than or in addition to the basket unit <b>1500</b>. Translation of the cam collar <b>1800</b> can result in translation of the tamp assembly relative to a cartridge in one of the chambers. This can facilitate compressing beverage component or precursor components (e.g., espresso grounds) in the cartridge. Translation of certain components in a main housing, as well as tamping functionality, is discussed in more detail in U.S. application Ser. No. ______, titled “BEVERAGE PRODUCTION MACHINES AND METHODS WITH TAMPING ASSEMBLY,” which is filed on the same day as the present application and is Attorney Reference No. SBUX1.306A; as noted above, that application is incorporated by reference herein in its entirety.</p>
+      <p id="p-00171-en" num="0168">
+        <figref>FIGS. 31-31B</figref> illustrate another example of an alternative beverage production assembly <b>2400</b>. Many of the features of the beverage production assembly <b>2400</b> are the same as or similar to the features described above in connection with the beverage production assemblies <b>400</b>, <b>1400</b>. Indeed, the beverage production assembly <b>2400</b> can include one or more of any of the features of the beverage production assemblies <b>400</b>, <b>1400</b>, including all combinations and sub-combinations.</p>
+      <p id="p-00172-en" num="0169">As shown, the beverage production assembly <b>2400</b> can include a multi-chambered basket unit <b>2500</b>, ratchet assembly <b>2600</b>, and/or collar <b>2700</b>. The collar <b>2700</b> can engage with a lid portion <b>2800</b>. For example, one of the collar <b>2700</b> and the lid portion <b>2800</b> can include one or more teeth <b>2712</b> that can be received in one or more cam tracks <b>2810</b> in the other of the collar <b>2700</b> and the lid portion <b>2800</b>. As shown, a portion of the cam tracks <b>2810</b> are at an angle relative to an axis of rotation of the collar <b>2700</b>. In some variants, the cam tracks <b>2810</b> form a portion of a substantially helical shape.</p>
+      <p id="p-00173-en" num="0170">In certain embodiments, rotation of the collar <b>2700</b> can result in the teeth moving along the tracks <b>2810</b>. Due to the angle of the cam tracks <b>2810</b>, this can cause translational movement between the collar <b>2700</b> and the lid portion <b>2800</b>. In some implementations, the collar <b>2700</b> is generally translationarily stationary relative to the housing <b>105</b> and the lid portion <b>2800</b> translates. In certain implementations, the lid portion <b>2800</b> is generally translationarily stationary relative to the housing <b>105</b> and the collar <b>2700</b> translates. In some variants, both the collar <b>2700</b> and the lid portion <b>2800</b> translate relative to each other and to the housing <b>105</b>.</p>
+      <p id="p-00174-en" num="0171">In certain variants, the lid portion <b>2800</b> is connected with a tamp assembly. In various embodiments, the translation of the collar <b>2700</b> and/or the lid portion <b>2800</b> can cause the tamp assembly to move relative to (e.g., into and/or out of engagement with) a cartridge in one of the chambers. This can facilitate compressing beverage component or precursor components (e.g., espresso grounds) in the cartridge. As noted above, translation of certain components in a main housing, as well as tamping functionality, is discussed in more detail in U.S. application Ser. No. ______, titled “BEVERAGE PRODUCTION MACHINES AND METHODS WITH TAMPING ASSEMBLY,” which is filed on the same day as the present application and is Attorney Reference No. SBUX1.306A as noted above, that application is incorporated by reference herein in its entirety.</p>
+      <p id="p-00175-en" num="0172">With continued reference to <figref>FIGS. 31-31B</figref>, the beverage production assembly <b>2400</b> can include a discharge assembly <b>2300</b>. As shown, the discharge assembly <b>2300</b> can include a conduit <b>2310</b>, catch member <b>2320</b>, and outlet <b>2330</b>. The conduit <b>2310</b> can be in fluid communication with chambers <b>2502</b>, <b>2504</b> of the basket unit <b>2500</b>. For example, the basket unit <b>500</b> can include one or more internal passages (not shown) that connect the chambers <b>2502</b>, <b>2504</b> with the conduit <b>2310</b>.</p>
+      <p id="p-00176-en" num="0173">In some implementations, the conduit <b>2310</b> is flexible and/or resilient. In certain embodiments, this can aid in translation of the basket unit <b>2500</b>. For example, in some embodiments in which the basket unit <b>500</b> can translate relative to the outlet <b>2330</b>, the conduit <b>2310</b> can flex to maintain a liquid flow path between the basket unit <b>2500</b> and the outlet <b>2330</b>.</p>
+      <p id="p-00177-en" num="0174">In certain embodiments, the flexible and/or resilient conduit <b>2310</b> can facilitate closing a fluid flow path between the outlet <b>2330</b> and the chambers of the basket unit <b>2500</b>. For example, certain embodiments include one or more pinch members (not shown) that can pinch the conduit <b>2310</b>, thereby selectively reducing the size of or eliminating the fluid flow path between the outlet <b>2330</b> and the chambers <b>502</b>, <b>504</b> of the basket unit <b>2500</b>. In some embodiments, at least one of the pinch members engages with the collar <b>2700</b> such that rotation of the collar <b>2700</b> can engage and/or disengage the pinch members with the collar <b>2700</b>. For example, the pinch members can include gears that engage with the teeth <b>720</b> on the collar <b>700</b>. In some implementations, one of the pinch members is engaged with another of the pinch members in a master-slave gear relationship.</p>
+      <heading id="h-00017-en" level="2">XVI. Waste Bin Unit</heading>
+      <p id="p-00178-en" num="0175">Several embodiments include a waste bin unit for collecting and/or storing cartridges, such as used or unwanted cartridges. The waste bin unit can be selectively received in, and removable from, the housing <b>105</b>. This can facilitate removing and/or discarding cartridges from the machine <b>100</b>.</p>
+      <p id="p-00179-en" num="0176">As illustrated in <figref>FIGS. 32 and 32A</figref>, the waste bin unit can include a first receptacle <b>3201</b> configured to receive the cartridges. Certain embodiments include a plurality of receptacles, such as a first receptacle <b>3201</b> and a second receptacle <b>3202</b>. In certain variants, the second receptacle <b>3203</b> is located underneath the first receptacle <b>3201</b>. In some embodiments, the first receptacle <b>3201</b> is separable from the second receptacle <b>3202</b>.</p>
+      <p id="p-00180-en" num="0177">The first receptacle <b>3201</b> can be configured to receive a cartridge (e.g., a spent, used, or discarded cartridge <b>3203</b>) from the single-serve brewing machine. In some implementations, the first receptacle <b>3201</b> may comprise a porous (e.g., perforated) floor. The porous floor can be configured to retain the cartridge body and/or to permit excess water, beverage, and/or any stray beverage precursor material to pass through (e.g., to enter the second receptacle). Such a drainage system may be beneficial to limit molding, odor, and other negative aspects of storing wet, used cartridges. The porous floor may comprise, for example, mesh, netting, a single opening, a plurality of openings, etc. In some variations, the openings may range from 0.1 mm to 5 mm; 0.5 mm to 5 mm; 1 mm to 5 mm; 0.1 mm to 2 mm; 0.5 mm to 2 mm; or 1 mm to 2 mm such that liquid is permitted to pass through but the cartridge body and beverage precursor material is substantially retained. In some variations, the openings may range from 1 mm to 20 mm; 1 mm to 10 mm; 1 mm to 5 mm; 3 mm to 20 mm; 3 mm to 10 mm; 3 mm to 5 mm; 5 mm to 20 mm; or 5 mm to 10 mm to permit beverage precursor material to pass through. In some embodiments the porous floor comprises the same material as the first receptacle. In other implementations, the perforated floor comprises a different material than the first receptacle. In some embodiments, the porous floor and the reminder of the first receptacle <b>3201</b> (e.g., walls) are formed as a single unitary component. In other variants, the porous floor and the reminder of the first receptacle <b>3201</b> are formed as separate components that are subsequently assembled together.</p>
+      <p id="p-00181-en" num="0178">In some embodiments, the waste bin unit includes a removal mechanism. This can assist the user in disassociating the waste bin unit from the beverage machine. In some embodiments, the removal mechanism is configured to tilt one or more of the receptacles, such as tilting the first and/or second receptacles generally toward a front of the machine <b>100</b>.</p>
+      <p id="p-00182-en" num="0179">In some embodiments, the waste bin unit includes a compression device (not shown) to compress the contents of one or more of the receptacles. For example, the machine <b>100</b> can include a piston that extends into the first and/or second receptacle to apply compressive force to cartridges located therein. This can reduce the amount of volume of the receptacle that is occupied by discarded cartridges, which can increase the number of cartridges the receptacle is able to contain, can reduce the frequency that the receptacle needs to be emptied, and/or can facilitate disassociating the waste bin unit from the beverage machine.</p>
+      <p id="p-00183-en" num="0180">In certain embodiments, the waste bin unit includes a sensing mechanism (not shown) configured to determine a status of one or more of the receptacles. For example, the sensing mechanism can include a position sensor to monitor whether one or both of the receptacles are properly engaged in the machine <b>100</b>. In some implementations, the sensing mechanism includes a sensor for monitoring the amount or level of material in one or both of the receptacles. For example, the sensing mechanism can include a sensor (e.g., a proximity sensor, weight sensor, or otherwise) configured to send a signal to a controller of the machine <b>100</b> when a characteristic (e.g., height or weight) of the materials in one or more of the receptacles exceeds a certain amount.</p>
+      <heading id="h-00018-en" level="2">XVII. Summary</heading>
+      <p id="p-00184-en" num="0181">Various embodiments and examples of beverage preparation machines and methods including multi-chamber basket units have been described herein. Although certain embodiments and examples have been described herein with respect to cartridges for producing coffee beverages, the basket units and chambers described herein can be configured to receive cartridges containing other particulate materials or components for producing many other types of beverages, such as a chocolate based product (e.g., hot cocoa), tea, juice, soup, broth, and other beverages. Further, although some embodiments have been disclosed in which liquid is introduced into the cartridge, the introduction of other phases is contemplated. For example, in some embodiments, steam or a combination of steam and liquid water is introduced into the cartridge. Additionally, although certain embodiments have been disclosed that include a single beverage component or precursor, the term “beverage component or precursor” is not limited to only a single component. Rather, the beverage component or precursor can comprise one component (e.g., coffee) or a plurality of components (e.g., coffee and a sweetener).</p>
+      <p id="p-00185-en" num="0182">As used herein, the term “beverage,” in addition to having its ordinary meaning, can include, among other things, any liquid or substantially liquid substance or product having a flowing quality such as juices, coffee beverages, teas, frozen yogurt, beer, wine, cocktails, liqueurs, spirits, cider, soft drinks, flavored water, energy drinks, soups, broths, combinations of the same, or the like. The term “cartridge” as used herein shall be given its ordinary and customary meaning, and includes, among other things, cartridges, capsules, cups, pods, pucks, pads, and the like, whether or not such cartridge is capable of being pierced or otherwise ruptured in order to form an inlet and/or outlet for the cartridge.</p>
+      <p id="p-00186-en" num="0183">Although this disclosure describes certain embodiments and examples of beverage preparation machines, it will be understood by those skilled in the art that many aspects of the methods and devices shown and described in the present disclosure may be differently combined and/or modified to form still further embodiments or acceptable examples. All such modifications and variations are intended to be included herein within the scope of this disclosure. Indeed, a wide variety of designs and approaches are possible and are within the scope of this disclosure. No feature, structure, or step disclosed herein is essential or indispensable. Moreover, while illustrative embodiments have been described herein, the scope of any and all embodiments having equivalent elements, modifications, omissions, combinations (e.g., of aspects across various embodiments), adaptations and/or alterations as would be appreciated by those in the art based on the present disclosure. Although there may be some embodiments within the scope of this disclosure that are not expressly recited above or elsewhere herein, the present disclosure contemplates and includes all embodiments within the scope of what this disclosure shows and describes. Further, this disclosure contemplates and includes embodiments comprising any combination of any structure, material, step, or other feature disclosed anywhere herein with any other structure, material, step, or other feature disclosed anywhere herein.</p>
+      <p id="p-00187-en" num="0184">Furthermore, certain features that are described in this disclosure in the context of separate implementations can also be implemented in combination in a single implementation. Conversely, various features that are described in the context of a single implementation can also be implemented in multiple implementations separately or in any suitable subcombination. Moreover, although features may be described above as acting in certain combinations, one or more features from a claimed combination can, in some cases, be excised from the combination, and the combination may be claimed as a subcombination or variation of a subcombination.</p>
+      <p id="p-00188-en" num="0185">Moreover, while operations may be depicted in the drawings or described in the specification in a particular order, such operations need not be performed in the particular order shown or in sequential order, or that all operations be performed, to achieve desirable results. Other operations that are not depicted or described can be incorporated in the example methods and processes. For example, one or more additional operations can be performed before, after, simultaneously, or between any of the described operations. Further, the operations may be rearranged or reordered in other implementations. Also, the separation of various system components in the implementations described above should not be understood as requiring such separation in all implementations, and it should be understood that the described components and systems can generally be integrated together in a single product or packaged into multiple products.</p>
+      <p id="p-00189-en" num="0186">For purposes of this disclosure, certain aspects, advantages, and novel features are described herein. Not necessarily all such advantages may be achieved in accordance with any particular embodiment. Thus, for example, those skilled in the art will recognize that the disclosure may be embodied or carried out in a manner that achieves one advantage or a group of advantages as taught herein without necessarily achieving other advantages as may be taught or suggested herein.</p>
+      <p id="p-00190-en" num="0187">Conditional language, such as “can,” “could,” “might,” or “may,” unless specifically stated otherwise, or otherwise understood within the context as used, is generally intended to convey that certain embodiments include, while other embodiments do not include, certain features, elements, and/or steps. Thus, such conditional language is not generally intended to imply that features, elements, and/or steps are in any way required for one or more embodiments or that one or more embodiments necessarily include logic for deciding, with or without user input or prompting, whether these features, elements, and/or steps are included or are to be performed in any particular embodiment.</p>
+      <p id="p-00191-en" num="0188">Conjunctive language such as the phrase “at least one of X, Y, and Z,” unless specifically stated otherwise, is otherwise understood with the context as used in general to convey that an item, term, etc. may be either X, Y, or Z. Thus, such conjunctive language is not generally intended to imply that certain embodiments require the presence of at least one of X, at least one of Y, and at least one of Z.</p>
+      <p id="p-00192-en" num="0189">Unless otherwise explicitly stated, articles such as ‘a’ or ‘an’ should generally be interpreted to include one or more described items. Accordingly, phrases such as “a device configured to” are intended to include one or more recited devices. Such one or more recited devices can also be collectively configured to carry out the stated recitations. For example, “a processor configured to carry out recitations A, B, and C” can include a first processor configured to carry out recitation A working in conjunction with a second processor configured to carry out recitations B and C.</p>
+      <p id="p-00193-en" num="0190">Language of degree used herein, such as the terms “approximately,” “about,” “generally,” and “substantially” as used herein represent a value, amount, or characteristic close to the stated value, amount, or characteristic that still performs a desired function or achieves a desired result. For example, the terms “approximately”, “about”, “generally,” and “substantially” may refer to an amount that is within less than 10% of, within less than 5% of, within less than 1% of, within less than 0.1% of, and within less than 0.01% of the stated amount. As another example, in certain embodiments, the terms “generally parallel” and “substantially parallel” refer to a value, amount, or characteristic that departs from exactly parallel by less than or equal to 15°, 10°, 5°, 3°, 1°, 0.1°, or otherwise. Similarly, in certain embodiments, the terms “generally perpendicular” and “substantially perpendicular” refer to a value, amount, or characteristic that departs from exactly perpendicular by less than or equal to 15°, 10°, 5°, 3°, 1°, 0.1°, or otherwise.</p>
+      <p id="p-00194-en" num="0191">The language of the claims is to be interpreted broadly based on the language employed in the claims and not limited to the examples described in the present specification or during the prosecution of the application, which examples are to be construed as non-exclusive.</p>
+      <p id="p-00195-en" num="0192">Some embodiments have been described in connection with the accompanying drawings. However, the figures are not drawn to scale. Distances, angles, etc. are merely illustrative and do not necessarily bear an exact relationship to actual dimensions and layout of the devices illustrated. Components can be added, removed, and/or rearranged. Further, the disclosure herein of any particular feature, aspect, method, property, characteristic, quality, attribute, element, or the like in connection with various embodiments can be used in all other embodiments set forth herein. Additionally, it will be recognized that any methods described herein may be practiced using any device suitable for performing the recited steps.</p>
+      <p id="p-00196-en" num="0193">In summary, various illustrative embodiments and examples of beverage preparation machines have been disclosed. Although the beverage preparation machines have been disclosed in the context of those embodiments and examples, it will be understood by those skilled in the art that this disclosure extends beyond the specifically disclosed embodiments to other alternative embodiments and/or other uses of the embodiments, as well as to certain modifications and equivalents thereof. This disclosure expressly contemplates that various features and aspects of the disclosed embodiments can be combined with, or substituted for, one another. Accordingly, the scope of this disclosure should not be limited by the particular disclosed embodiments described above, but should be determined only by a fair reading of the claims that follow as well as their full scope of equivalents.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>The following is claimed:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A machine for preparing beverages from cartridges, the machine comprising:
+<claim-text>a frame;</claim-text><claim-text>a basket unit configured to rotate in the frame, the basket unit comprising:
+<claim-text>a first chamber configured to receive a first single-serve cartridge configuration; and</claim-text><claim-text>a second chamber, the second chamber configured to receive a second cartridge configuration, the second cartridge configuration being different than the first cartridge configuration;</claim-text><claim-text>wherein one of the chambers is in a loading position and the other of the chambers is in an inverted position;</claim-text></claim-text><claim-text>a ratchet assembly comprising:
+<claim-text>a ratchet member engaged with the basket unit, the ratchet member comprising an arm and a boss;</claim-text><claim-text>a ratchet follower pivotally connected with the frame, the ratchet follower comprising a ramp; and</claim-text><claim-text>a biasing member that biases the ramp of the ratchet follower against the boss of the ratchet member; and</claim-text></claim-text><claim-text>a rotatable collar comprising a projection;</claim-text><claim-text>wherein, during rotation of the collar, the projection engages with the arm of the ratchet member, thereby sliding the boss of the ratchet member along the ramp of the ratchet follower and rotating the basket unit such that the chamber in the loading position is moved to the inverted position and the chamber in the inverted position is moved to the loading position.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The machine of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein in the first chamber has a volume that is greater than a volume of the second chamber.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The machine of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the basket unit and the collar are adapted to rotate about axes that are substantially perpendicular.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The machine of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first chamber is configured to receive cartridges for brewed coffee beverages and the second chamber is configured to receive cartridges for espresso beverages.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en" independent="true">
+      <claim-text>
+        <b>5</b>. A machine for preparing a beverage from a cartridge, the machine comprising:
+<claim-text>a basket unit comprising a first chamber configured to receive a first single-serve cartridge configuration and a second chamber configured to receive a second cartridge configuration, the basket unit being configured to rotate about an axis RA<sub>b </sub>between a first chamber loading position and a second chamber loading position, wherein:
+<claim-text>in the first chamber loading position, the first chamber is positioned to facilitate loading the first cartridge and the second chamber is inverted; and</claim-text><claim-text>in the second chamber loading position, the second chamber positioned to facilitate loading the second cartridge and the first chamber is inverted;</claim-text></claim-text><claim-text>a ratchet assembly connected with the basket unit; and</claim-text><claim-text>a collar configured to rotate about an axis RA<sub>c</sub>, wherein rotation of the collar engages the collar with the ratchet assembly, thereby rotating the basket unit between the first chamber loading position and the second chamber loading position.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The machine of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the axes RA<sub>b </sub>and RA<sub>c </sub>are substantially perpendicular.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The machine of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the axis RA<sub>c </sub>is substantially vertical, and the axis RA<sub>b </sub>is substantially horizontal and passes through first and second sidewalls of the machine.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The machine of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein in the first chamber loading position the first chamber is generally upwardly oriented, and in the second chamber loading position the second chamber is generally upwardly oriented.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The machine of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the collar comprises a projection and the ratchet assembly comprises an arm, the projection being configured to engage the arm.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The machine of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the collar further comprises a wing and the ratchet assembly comprises a rib, the wing being configured to engage the rib.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The machine of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein, during normal operation of the machine, the collar is rotatable in the clockwise and counterclockwise directions.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The machine of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the basket unit further comprises a first outlet in fluid communication with the first chamber and a second outlet in fluid communication with the second chamber.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The machine of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, further comprising a dispensing assembly configured to rotate into and out of engagement with one of the first and second outlets, wherein the dispensing assembly and one of the first and second chambers are in fluid communication during the engagement of the dispensing assembly and the one of the first and second outlets.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The machine of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the first chamber is configured to receive cartridges for brewed coffee beverages and the second chamber is configured to receive cartridges for espresso beverages.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The machine of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, further comprising the cartridge.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en" independent="true">
+      <claim-text>
+        <b>16</b>. A machine for preparing a beverage from a cartridge, the machine comprising:
+<claim-text>a frame;</claim-text><claim-text>a basket unit that is rotatable in the frame, the basket unit comprising a first chamber configured to receive a first single-serve cartridge configuration and a second chamber configured to receive a second single-serve cartridge configuration;</claim-text><claim-text>wherein the basket unit is configured to rotate between a first position in which the first chamber is oriented upwardly and a second position in which the second chamber is oriented upwardly;</claim-text><claim-text>a ratchet assembly connected with the basket unit;</claim-text><claim-text>a rotatable collar, the collar configured to engage the ratchet assembly;</claim-text><claim-text>wherein rotation of the collar in a first direction engages the collar with a first surface of the ratchet assembly, the first surface configured such that the collar slides along the first surface without rotating the basket unit from the first position to the second position;</claim-text><claim-text>wherein rotation of the collar in a second direction engages the collar with a second surface of the ratchet assembly, the second surface configured such that the engagement with the collar rotates the ratchet assembly, thereby rotating the basket unit from the first position to the second position.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The machine of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the basket unit rotates less than about 45° when the collar rotates in the first direction, and the basket unit rotates at least about 180° when the collar rotates in the second direction.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The machine of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the collar comprises a projection and the ratchet assembly comprises an arm, wherein the projection engages the arm during the rotation of the collar.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The machine of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the first chamber is configured to receive cartridges for brewed coffee beverages and the second chamber is configured to receive cartridges for espresso beverages.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The machine of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the basket unit and the collar are adapted to rotate about axes that are substantially perpendicular.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en" independent="true">
+      <claim-text>
+        <b>21</b>. A method of preparing an individual serving of a beverage, the method comprising:
+<claim-text>rotating a basket unit to a first configuration in which a first chamber of the basket unit is located in a loading position;</claim-text><claim-text>receiving a cartridge in the first chamber;</claim-text><claim-text>introducing liquid into the cartridge in the first chamber to prepare the individual serving of the beverage;</claim-text><claim-text>dispensing the individual serving of the beverage into a vessel; and</claim-text><claim-text>rotating the basket unit to a second configuration in which a second chamber of the basket unit is located in the loading position.</claim-text></claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The method of <claim-ref idref="clm-00021-en">claim 21</claim-ref>, further comprising:
+<claim-text>ejecting the cartridge into a waste bin during rotation of the basket unit to the second configuration;</claim-text><claim-text>rinsing at least one of an interior surface of the first chamber and a seal surface of the first chamber; and</claim-text><claim-text>disposing of residual beverage fluid in the first chamber into the waste bin.</claim-text></claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The method of <claim-ref idref="clm-00021-en">claim 21</claim-ref>, further comprising compressing the cartridge in the first chamber with a tamp assembly.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The method of <claim-ref idref="clm-00021-en">claim 21</claim-ref>, further comprising:
+<claim-text>rotating a collar in a first direction; and</claim-text><claim-text>engaging the collar with a first surface of a ratchet assembly that is connected with the basket unit, thereby rotating the basket unit between the first and second configurations.</claim-text></claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. The method of <claim-ref idref="clm-00024-en">claim 24</claim-ref>, further comprising:
+<claim-text>rotating the collar in a second direction; and</claim-text><claim-text>sliding the collar along a second surface of the ratchet assembly, thereby not rotating the basket unit between the first and second configurations.</claim-text></claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. The method of <claim-ref idref="clm-00024-en">claim 24</claim-ref>, wherein the collar rotates about an axis of rotation that is substantially perpendicular to an axis of rotation of the basket unit.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en" independent="true">
+      <claim-text>
+        <b>27</b>. A machine for preparing beverages from cartridges, the machine comprising:
+<claim-text>a basket unit comprising a first chamber configured to receive a first single-serve cartridge configuration and a second chamber configured to receive a second cartridge configuration, the basket unit rotating within the machine between a first configuration in which the first chamber is oriented in an upward direction and the second chamber is oriented in a downward direction and a second configuration in which the second chamber is oriented in the upward direction and the first chamber is orientated in the downward direction; and</claim-text><claim-text>a rotation mechanism coupled to the basket unit and configured to rotate the basket unit from the first configuration to the second configuration.</claim-text></claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en">
+      <claim-text>
+        <b>28</b>. The machine of <claim-ref idref="clm-00027-en">claim 27</claim-ref>, further comprising a motor coupled with the rotation mechanism.</claim-text>
+    </claim>
+    <claim num="29" id="clm-00029-en">
+      <claim-text>
+        <b>29</b>. The machine of <claim-ref idref="clm-00027-en">claim 27</claim-ref>, wherein, after insertion of a first single-serve cartridge into the first chamber, the rotation mechanism rotates the basket unit at least about 5 degrees in a clockwise direction and at least about 5 degrees in a counterclockwise direction, thereby facilitating settling of the contents of the first single-serve cartridge.</claim-text>
+    </claim>
+    <claim num="30" id="clm-00030-en">
+      <claim-text>
+        <b>30</b>. The machine of <claim-ref idref="clm-00027-en">claim 27</claim-ref>, further comprising a sensor configured to determine whether basket unit is in the first configuration or the second configuration.</claim-text>
+    </claim>
+    <claim num="31" id="clm-00031-en">
+      <claim-text>
+        <b>31</b>. The machine of <claim-ref idref="clm-00027-en">claim 27</claim-ref>, further comprising a controller configured to receive an input from a user. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00015.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00016.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00017.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00018.TIF" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00020.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00019.TIF" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00021.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00020.TIF" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00022.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00021.TIF" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00023.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00022.TIF" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00024.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00023.TIF" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00025.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00024.TIF" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00026.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00025.TIF" />
+    </figure>
+    <figure num="27">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00027.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00026.TIF" />
+    </figure>
+    <figure num="28">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00028.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00027.TIF" />
+    </figure>
+    <figure num="29">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00029.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00028.TIF" />
+    </figure>
+    <figure num="30">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00030.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00029.TIF" />
+    </figure>
+    <figure num="31">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00031.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00030.TIF" />
+    </figure>
+    <figure num="32">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00032.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00031.TIF" />
+    </figure>
+    <figure num="33">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00033.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00032.TIF" />
+    </figure>
+    <figure num="34">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00034.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00033.TIF" />
+    </figure>
+    <figure num="35">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00035.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00034.TIF" />
+    </figure>
+    <figure num="36">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00036.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00035.TIF" />
+    </figure>
+    <figure num="37">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00037.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00036.TIF" />
+    </figure>
+    <figure num="38">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00038.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00037.TIF" />
+    </figure>
+    <figure num="39">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00039.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00038.TIF" />
+    </figure>
+    <figure num="40">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00040.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00039.TIF" />
+    </figure>
+    <figure num="41">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00041.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00040.TIF" />
+    </figure>
+    <figure num="42">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00042.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00041.TIF" />
+    </figure>
+    <figure num="43">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00043.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00042.TIF" />
+    </figure>
+    <figure num="44">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00044.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00043.TIF" />
+    </figure>
+    <figure num="45">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00045.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00044.TIF" />
+    </figure>
+    <figure num="46">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00046.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00045.TIF" />
+    </figure>
+    <figure num="47">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00047.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00046.TIF" />
+    </figure>
+    <figure num="48">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00048.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00047.TIF" />
+    </figure>
+    <figure num="49">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00049.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00048.TIF" />
+    </figure>
+    <figure num="50">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00050.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00049.TIF" />
+    </figure>
+    <figure num="51">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00051.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00050.TIF" />
+    </figure>
+    <figure num="52">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00052.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00051.TIF" />
+    </figure>
+    <figure num="53">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00053.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00052.TIF" />
+    </figure>
+    <figure num="54">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00054.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00053.TIF" />
+    </figure>
+    <figure num="55">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00055.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00054.TIF" />
+    </figure>
+    <figure num="56">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00056.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00055.TIF" />
+    </figure>
+    <figure num="57">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00057.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00056.TIF" />
+    </figure>
+    <figure num="58">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00058.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00057.TIF" />
+    </figure>
+    <figure num="59">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00059.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00058.TIF" />
+    </figure>
+    <figure num="60">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00060.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00059.TIF" />
+    </figure>
+    <figure num="61">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00061.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00060.TIF" />
+    </figure>
+    <figure num="62">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00062.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00061.TIF" />
+    </figure>
+    <figure num="63">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00063.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00062.TIF" />
+    </figure>
+    <figure num="64">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00064.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00063.TIF" />
+    </figure>
+    <figure num="65">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00065.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00064.TIF" />
+    </figure>
+    <figure num="66">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00066.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00065.TIF" />
+    </figure>
+    <figure num="67">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00067.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00066.TIF" />
+    </figure>
+    <figure num="68">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00068.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00067.TIF" />
+    </figure>
+    <figure num="69">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00069.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00068.TIF" />
+    </figure>
+    <figure num="70">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00070.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00069.TIF" />
+    </figure>
+    <figure num="71">
+      <img he="N/A" wi="N/A" file="US20150257580A1_00071.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257580A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257580A1.PDF" type="pdf" size="2631338" pages="89" />
+</lexisnexis-patent-document>

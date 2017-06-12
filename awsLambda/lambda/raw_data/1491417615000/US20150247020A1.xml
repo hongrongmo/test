@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247020A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021444" date-changed="20160127" time-changed="023630">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140079">
+        <country>US</country>
+        <doc-number>20150247020</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14427674</doc-number>
+        <date>20130729</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>MY</country>
+        <doc-number>PI 2012700640</doc-number>
+        <date>20120912</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151223">
+      <classification-ipcr sequence="1">
+        <text>C08K   3/34        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B01J   8/08        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>8</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B01J   8/10        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>8</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C08K   5/01        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151223">
+      <classification-cpc sequence="1">
+        <text>C08K   3/346       20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>346</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B01J   8/087       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>8</main-group>
+        <subgroup>087</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B01J   8/10        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>8</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>B01J2208/00212     20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2208</main-group>
+        <subgroup>00212</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>B01J2208/00858     20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2208</main-group>
+        <subgroup>00858</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>B29B  17/04        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C08C  19/08        20130101 LI20140411BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>C</subclass>
+        <main-group>19</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140411</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C08J  11/10        20130101 LI20140411BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>11</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140411</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C08J  11/16        20130101 LI20140411BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>11</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140411</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C08J  11/18        20130101 LI20140411BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>11</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140411</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C08J  11/28        20130101 LI20140411BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>11</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140411</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C08J2319/00        20130101 LA20151215BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2319</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151215</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C08J2321/00        20130101 LA20140630BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2321</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140630</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>C08K   5/01        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">33</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">METHOD FOR PRODUCING DEVULCANIZED RUBBER AND AN APPARATUS THEREFOR</invention-title>
+    <references-cited date-changed="20160127">
+      <patent-citations name="patcit" date-changed="20160127" />
+      <citation>
+        <patcit num="1" dnum="US6313183B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6313183</doc-number>
+            <kind>B1</kind>
+            <name>PILLAI CHANDRASEKARAN R [US], et al</name>
+            <date>20011106</date>
+          </document-id>
+          <application-date>
+            <date>20000713</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>SEKHAR RESEARCH INNOVATIONS SDN. BHD.</orgname>
+            <role>03</role>
+            <address>
+              <city>Petaling Jaya, Selangor</city>
+              <country>MY</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Sekhar</last-name>
+            <first-name>Gopinath B.</first-name>
+            <address>
+              <city>Petaling Jaya</city>
+              <country>MY</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>MY13000136</doc-number>
+        <date>20130729</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014042510</doc-number>
+        <date>20140320</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="164800268">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247020</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130729</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014042510</doc-number>
+            <kind>A1</kind>
+            <date>20140320</date>
+          </document-id>
+          <application-date>
+            <date>20130729</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164800266">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247020</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130729</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014042510</doc-number>
+            <kind>A1</kind>
+            <date>20140320</date>
+          </document-id>
+          <application-date>
+            <date>20130729</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A method for producing devulcanized rubber and an apparatus (<b>100</b>) therefor. The method for producing devulcanized rubber comprises the steps of (1) providing vulcanized rubber particles with a pre-determined particle size and (2) devulcanizing the vulcanized rubber particles. The vulcanized rubber particles are devulcanized mechanically by impact forces and devulcanized chemically by a chemical composition. The impact forces break sulphur- sulphur and sulphur-carbon bonds of the vulcanized rubber particles causing surfaces of the rubber to become receptive in reacting with the chemical composition and the chemical composition renders the sulphur passive to prevent reattachment of the bonds, of which the chemical composition comprises at least one accelerator, at least one inorganic activator and at least one organic activator.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150506</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247020A1</docdb-publication-number>
+      <docdb-application-id>444209941</docdb-application-id>
+      <new-owner>SEKHAR RESEARCH INNOVATIONS SDN. BHD., MALAYSIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:SEKHAR, GOPINATH B;REEL/FRAME:035577/0384</free-text-description>
+      <effective-date>
+        <date>20150415</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a method for producing devulcanized rubber and an apparatus therefor. In particular, the present invention relates to a method and an apparatus for producing devulcanized rubber via mechanical and chemical process.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">In a general rubber devulcanization, the process involves cleaving of the monosulfidic, disulfidic and polysulfidic crosslinks (carbon-sulphur or sulphur-sulphur bonds) existing in a vulcanized rubber. Technologies that were developed for this purposeful process, typically adopt techniques involving chemical, ultrasonic, microwave or biological devulcanization.</p>
+      <p id="p-00003-en" num="0003">It is known that in chemical devulcanization, the process makes use of materials such as organic solvent, oil and chemicals, or organic compounds for devulcanizing rubber. Ultrasonic devulcanization and microwave devulcanization, on the other hand, make use of ultrasonic waves and microwave heat to devulcanize the rubber, and biological devulcanization is carried out through microbial attacks on the sulphur crosslinks of the vulcanized rubber so as to break the bonds.</p>
+      <p id="p-00004-en" num="0004">There are several prior arts divulged the methods for producing devulcanized rubber. U.S. Pat. No. 5,770,632 discloses a method of reclaiming elastomeric material, or known as De-Link process, through the use of a chemical mixture that is capable of initiating proton exchange at a controlled temperature. The prior art discloses a method for producing devulcanized rubber via vigorous mixing of the rubber powder by stirring prior to the addition of the chemical composition and processing in a roll mill.</p>
+      <p id="p-00005-en" num="0005">European Patent No. 1 242 520 B1 owned by Levgum, Ltd. discloses a modifier for devulcanizing cured elastomer and a method to devulcanize rubber using said modifier. As discussed in the prior art, the cured elastomers are brought to a stressed polymer structure state and then treated by organic cations that are generated by the modifier as claimed.</p>
+      <p id="p-00006-en" num="0006">U.S. patent application Ser. No. 11/636,611 owned by The SF Materials Corporation discloses a method of devulcanizing rubber by contacting the vulcanized rubber with turpentine liquid in a reaction mixture in the absence of an alkali metal. The reaction mixture further comprises a solvent or a liquid that is immiscible with the turpentine liquid. The vulcanized rubber is contacted with the turpentine liquid in the presence of an energy input comprising thermal energy, microwave energy, ultrasonic energy, mechanical shear-forces or mixtures thereof.</p>
+      <p id="p-00007-en" num="0007">U.S. Pat. No. 4,161,464 owned by BF Goodrich Company describes a method of devulcanizing rubber through a phase transfer chemical reaction catalysed with certain onium salts that allows the transport of hydroxide ions into vulcanized rubber particles to selectively cleave polysulfide crosslinks for producing a recyclable devulcanized rubber. The devulcanizing process involves the steps of swelling vulcanized rubber particles in an organic solvent having dissolved therein an onium salt, and thereon contacting the swollen vulcanized particles with an aqueous solution of a base to provide sufficient hydroxide ions for the phase transfer reaction.</p>
+      <p id="p-00008-en" num="0008">U.S. Pat. No. 6,387,966 B1 describes a method of devulcanizing waste rubber by adding a modifying composition to waste rubber particles and subsequently crushing the waste rubber particles through a roll mill thereby creating modified crushed particles. The modification of the rubber particles involves the breaking of at least 70% sulphur to sulphur bonds and no more than 10 to 15% carbon to carbon bonds.</p>
+      <p id="p-00009-en" num="0009">U.S. Pat. No. 7,189,762 B2 discloses a method for modifying crosslinked rubber. The method for modifying crosslinked rubber is carried out by using mechanical elongational and shear force in the presence of carbon dioxide in a supercritical fluid state.</p>
+      <p id="p-00010-en" num="0010">PCT Patent Application No. PCT/CA2011/000285 relates to a method of regenerating vulcanized crumb rubber comprising the steps of mixing the crumb rubber and a lubricant at room temperature, transferring the mixture to a thermokinetic mixer having a rotor shaft containing blades to increase temperature of the mixture until a devulcanizing temperature is reached, reducing the temperature of the mixture and recovering the regenerated rubber. In the prior art, the method of regenerating vulcanized crumb rubber utilizes higher range of devulcanizing temperature, hence this requires increased energy consumption.</p>
+      <p id="p-00011-en" num="0011">The conventional rubber devulcanizing technologies as disclosed in preceding prior art documents are mostly impractical to produce a viable substitute to virgin rubber due to the limitation of scalability to large volume production. Other problems encountered by the conventional recycling technologies are intensive energy consumption, poor cure safety, poor material compatibility during processing, obtention of undesirable product properties and performance, as well as exhibiting poor shelf life.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00012-en" num="0012">As a result, it is desirable to introduce a method for producing devulcanized rubber in large production scale to provide a viable substitute to virgin material and the devulcanized rubber shall have its properties as a substitute to the original rubber. The method shall produce the devulcanized rubber via a highly energy efficient technique.</p>
+      <p id="p-00013-en" num="0013">It is an objective of the present invention to provide a method for producing devulcanized rubber to be as a viable substitute to virgin rubber.</p>
+      <p id="p-00014-en" num="0014">It is another objective of the present invention to provide a method for producing devulcanized rubber in large volume by establishing high scalability.</p>
+      <p id="p-00015-en" num="0015">It is further an objective of the present invention to provide a method for producing devulcanized rubber using a highly energy efficient technique at a controlled temperature range.</p>
+      <p id="p-00016-en" num="0016">It is still an objective of the present invention to provide a method for producing devulcanized rubber by the combined use of mechanical impact forces and a chemical composition.</p>
+      <p id="p-00017-en" num="0017">It is yet an objective of the present invention to provide a method for producing devulcanized rubber through recycling of rubber waste.</p>
+      <p id="p-00018-en" num="0018">It is also an objective of the present invention to provide an apparatus for producing devulcanized rubber by mechanical revolving means to generate impact forces.</p>
+      <p id="p-00019-en" num="0019">It is further another objective of the present invention to obtain a devulcanized rubber which has good maintenance of material properties similar to the virgin rubber.</p>
+      <p id="p-00020-en" num="0020">It is still another objective of the present invention to obtain a devulcanized rubber which is stable over rubber hardening so as to have a pro-longed shelf life.</p>
+      <p id="p-00021-en" num="0021">The present invention relates to a method for producing devulcanized rubber comprising the steps of providing vulcanized rubber particles with a pre-determined particle size and devulcanizing the vulcanized rubber particles, characterized in that the vulcanized rubber particles are devulcanized mechanically by impact forces and devulcanized chemically by a chemical composition, whereby the impact forces break sulphur-sulphur and sulphur-carbon bonds of the vulcanized rubber particles causing surfaces of the rubber to become receptive in reacting with the chemical composition and the chemical composition renders the sulphur passive to prevent reattachment of the bonds, of which the chemical composition comprises at least one accelerator, at least one inorganic activator and at least one organic activator.</p>
+      <p id="p-00022-en" num="0022">The present invention also relates to an apparatus for producing devulcanized rubber. The apparatus comprises a devulcanization tank in which the reaction between vulcanized rubber particles and a chemical composition is carried out, at least one mass stirrer positioned in the devulcanization tank in which the mass stirrer rotates in circular motion to generate impact forces, at least one rotating shaft positioned in the devulcanization tank in which the rotating shaft has at least one axial blade and at least one radial blade to facilitate impact forces generation and a blanket of cooling fluid enveloping the devulcanization tank to control the temperature, wherein the impact forces generated from the mass stirrer, the axial blade and the radial blade of the rotating shaft cause the vulcanized rubber particles to react with the chemical composition for producing devulcanized rubber.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWING</heading>
+      <p id="p-00023-en" num="0023">For the purpose of facilitating an understanding of the invention, there is illustrated in the accompanying drawings the preferred embodiments from an inspection of which when considered in connection with the following description, the invention, its construction and operation and many of its advantages would be readily understood and appreciated.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 1</figref> shows an apparatus (<b>100</b>) for producing devulcanized rubber according to the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00025-en" num="0025">The present invention relates to a method and an apparatus for producing devulcanized rubber. Hereinafter, the method and the apparatus shall be described according to the preferred embodiments of the present invention and by referring to the accompanying description and drawing. However, it is to be understood that limiting the description to the preferred embodiments of the invention and to the drawing is merely to facilitate discussion of the present invention and it is envisioned that those skilled in the art may devise various modifications without departing from the scope of the appended claim.</p>
+      <p id="p-00026-en" num="0026">As represented in the <figref>FIG. 1</figref>, the method and the apparatus according to the present invention will be hereinafter described in greater detail.</p>
+      <p id="p-00027-en" num="0027">The present invention discloses a method for producing devulcanized rubber comprising the steps of providing vulcanized rubber particles with a pre-determined particle size and devulcanizing the vulcanized rubber particles, characterized in that the vulcanized rubber particles are devulcanized mechanically by impact forces and devulcanized chemically by a chemical composition, whereby the impact forces break sulphur-sulphur and sulphur-carbon bonds of the vulcanized rubber particles causing surfaces of the rubber to become receptive in reacting with the chemical composition and the chemical composition renders the sulphur passive to prevent reattachment of the bonds, of which the chemical composition comprises at least one accelerator, at least one inorganic activator and at least one organic activator. However, the carbon-carbon bonds of the rubber shall be remained intact to maintain integrity of the rubber macromolecules.</p>
+      <p id="p-00028-en" num="0028">In the present invention, the rubber devulcanization or also known as rubber activation is effected by the mechanical impact forces on the rubber particulates and the addition of the chemical composition within the time frame when the vulcanized rubber particles are being receptive for chemical reaction. The impact forces break the sulphur-sulphur and sulphur-carbon bonds and therefore this causes the surfaces of the rubber to become receptive or active towards the chemical composition. Thereafter, the chemical composition reacts with the sulphur atoms of the rubber particles, making them passive to prevent reformation of the bonds.</p>
+      <p id="p-00029-en" num="0029">According to the present invention, the vulcanized rubber particles used are preferably within a size ranging from 20 to 140 Mesh, more preferably 40 Mesh, depending on the costing and recoverable properties of the rubber. The vulcanized rubber particles are preferably but not limited to powder form. The vulcanized rubber particles are obtained from waste rubber such as old tires, which are also known as End of Life Tires (ELT), and the batch size used in the production of devulcanized rubber varies. It would be obvious to a person skilled in the art that higher batch size decreases the efficiency to produce devulcanized rubber. Batch size of up to 1 or 2 tonnes of rubber could still be used. However, at this load of rubber, the apparatus may not provide optimum efficacy or performance. Therefore, the batch size which is used in the present invention is preferably but not limited to 350 kg since using this batch size is more manageable in processing as compared to higher loads of rubber.</p>
+      <p id="p-00030-en" num="0030">In a preferred embodiment of the present invention, the chemical composition comprises of at least an accelerator, at least an inorganic activator and at least an organic activator. The accelerator used in the present invention is preferably N-Cyclohexyl-2-benzothiazole sulfenamide (CBS) due to its non-carcinogenicity. Another non-carcinogenic accelerator which is alternatively used in the present invention is Di-isopropyl xanthogen polysulphide. It should be appreciated that any other types or classes of accelerators known to a person skilled in the art may also be used, for instance, Diphenylguanidine, 2-Mercaptobenzothiazole, 2-(n-Morpholinyl)-mercaptobenzothiazole and Hexamethylenetetramine. However, these accelerators have been found to contain nitrosamine, of which the nitrosamine is carcinogenic. As such, the devulcanized rubber produced using these accelerators may pose health issues and therefore they may not be the desired accelerators. Further, these accelerators contribute to issues in terms of cure safety to the devulcanized rubber. Since these accelerators other than the CBS are undesired in the present invention, it is therefore that the CBS is the preferred accelerator used in the present invention. Preferably, the accelerator is used in an amount ranging from 0.30 to 0.75 parts per hundred rubber (phr).</p>
+      <p id="p-00031-en" num="0031">In the present invention, the preferred inorganic activator is zinc oxide and it is used in an amount ranging from 0.30 to 0.70 parts per hundred rubber (phr). Further, the preferred organic activator is stearic acid and it is used in an amount ranging from 1.50 to 2.50 parts per hundred rubber (phr). Generally, the overall amount of chemical composition used ranges from 0.75 to 3.50 parts per hundred rubber (phr).</p>
+      <p id="p-00032-en" num="0032">The method for producing devulcanized rubber of the present invention is a highly energy efficient technique, wherein the step of devulcanizing the vulcanized rubber particles is performed at a temperature ranging from 60° C. to 100° C. and preferably at an optimum temperature of 80° C. Also, the batch time of devulcanizing the rubber ranges from 10 to 15 minutes.</p>
+      <p id="p-00033-en" num="0033">In another embodiment of the present invention, the method for producing devulcanized rubber further comprises a step of introducing a plasticizer or clay or a combination thereof to the devulcanized rubber. Both of the plasticizer and the clay are optionally added as further ingredients to the devulcanized rubber and each of these ingredients is used in an amount ranging from 0 to 15 parts per hundred rubber (phr).</p>
+      <p id="p-00034-en" num="0034">Preferably, the plasticizer used is napthenic oil for reducing viscosity of the reacted mixture. It should be noted that other types or classes of plasticizers known to a person skilled in the art may be used, such as reclaim rubber. It should be also noted that aromatic oils can be used as the plasticizer but napthenic oil is preferred since it is less carcinogenic as compared to the aromatic oils. The plasticizer impedes the devulcanization process of the rubber particles, thus it is preferably introduced after the rubber devulcanization process. In the present invention, clay is used as a filler. It should be known to the skilled person that the clay used herein also functions as a non-black reinforcing agent and a processing aid. The clay can be introduced into the process either prior to or after the devulcanizing step of rubber. The clay can be also introduced together with the chemical composition.</p>
+      <p id="p-00035-en" num="0035">Further, the method for producing devulcanized rubber of the present invention further comprises a step of shaping the devulcanized rubber into a desired form. In a preferred embodiment, the shaping step is performed after the step of introducing a plasticizer or clay or a combination thereof to the devulcanized rubber if the plasticizer and the clay are used as further ingredients.</p>
+      <p id="p-00036-en" num="0036">It is preferred that the step of shaping the devulcanized rubber is to be performed after the rubber devulcanization when the rubber is still being receptive, usually within a time frame of 24 hours. However, immediate processing after devulcanization is preferred to prevent the devulcanized rubber from retracting to its original vulcanized form.</p>
+      <p id="p-00037-en" num="0037">The shaping step is carried out by forming the devulcanized rubber into either extrudates, pellets, agglomerates, sheets or powder or any combination thereof. Specifically, the shaping step is performed by passing the devulcanized rubber through an extruder followed by a refiner mill. The end product would be in the form of agglomerates that is further cooled using a cooling conveyer or other cooler means and subsequently sent for packaging.</p>
+      <p id="p-00038-en" num="0038">In the present invention, an apparatus (<b>100</b>) for producing devulcanized rubber via a method as described above is illustrated in <figref>FIG. 1</figref>. The apparatus (<b>100</b>) for producing devulcanized rubber comprising a devulcanization tank (<b>101</b>) in which the reaction between vulcanized rubber particles and a chemical composition is carried out, at least one mass stirrer (<b>102</b>) positioned in the devulcanization tank (<b>101</b>) in which the mass stirrer (<b>102</b>) rotates in circular motion to generate impact forces, at least one rotating shaft (<b>103</b>) positioned in the devulcanization tank (<b>101</b>) in which the rotating shaft (<b>103</b>) has at least one axial blade (<b>104</b>) and at least one radial blade (<b>105</b>) to facilitate impact forces generation and a blanket of cooling fluid (<b>106</b>) enveloping the devulcanization tank (<b>101</b>) to control the temperature, wherein the impact forces generated from the mass stirrer (<b>102</b>), the axial blade (<b>104</b>) and the radial blade (<b>105</b>) of the rotating shaft (<b>103</b>) cause the vulcanized rubber particles to react with the chemical composition for producing devulcanized rubber.</p>
+      <p id="p-00039-en" num="0039">Further, the present invention claims that there is at least one mass stirrer (<b>102</b>) positioned in the devulcanization tank (<b>101</b>) in which the mass stirrer (<b>102</b>) rotates in circular motion to generate impact forces on the vulcanized rubber particles. Aside from the generation of impact forces, the mass stirrer (<b>102</b>) circulates the reaction mixture in the devulcanization tank (<b>101</b>) to ensure that the reaction mixture is homogeneous and stays in contact with the rotating shaft (<b>103</b>). The mass stirrer (<b>102</b>) is operated electrically by a motor.</p>
+      <p id="p-00040-en" num="0040">Besides, at least one rotating shaft (<b>103</b>) is positioned in the devulcanization tank (<b>101</b>) in which the rotating shaft (<b>103</b>) has at least one axial blade (<b>104</b>) and at least one radial blade (<b>105</b>) to facilitate impact forces generation. The rotating shaft (<b>103</b>) which operates independently from the mass stirrer (<b>102</b>) is driven by another motor. Other than facilitating the generation of impact forces, the axial blade (<b>104</b>) and the radial blade (<b>105</b>) of the rotating shaft (<b>103</b>) also ensure that the reaction mixture is formed into micron particle sizes for maximum reactivity.</p>
+      <p id="p-00041-en" num="0041">As claimed in the present invention, the impact forces generated from the mass stirrer (<b>102</b>), the axial blade (<b>104</b>) and the radial blade (<b>105</b>) of the rotating shaft (<b>103</b>) break the sulphur-sulphur and sulphur-carbon bonds of the vulcanized rubber particles and therefore causing the surfaces of the rubber to become receptive in reacting with the chemical composition.</p>
+      <p id="p-00042-en" num="0042">According to the present invention, the rotating shaft (<b>103</b>) further comprising a plurality of branching members (<b>107</b>) extended perpendicularly from the rotating shaft (<b>103</b>) with a first angle (a), as illustrated in <figref>FIG. 1</figref>. The first angle (a) is preferably 90°. In addition, the radial blade (<b>105</b>) is attached to the branching members (<b>107</b>) of the rotating shaft (<b>103</b>). The radial blade (<b>105</b>) is preferably trapezium in shape having an upper lateral with a second angle (b), as illustrated in <figref>FIG. 1</figref>. The second angle (b) is preferably 8°. The radial blade (<b>105</b>) is tilted from the branching members (<b>107</b>) at a third angle (c), as shown in <figref>FIG. 1</figref>. The third angle (c) ranges from 19° to 45°, and is preferably 45°.</p>
+      <p id="p-00043-en" num="0043">In a preferred embodiment of the present invention, the mass stirrer (<b>102</b>) of the apparatus (<b>100</b>) rotates at an optimum speed of 24 rpm. In the preferred embodiment, both the rotating shaft (<b>103</b>) and the branching members (<b>107</b>) rotate at a speed ranging from 2000-3300 rpm. In the present invention, the optimum speed of 3000 rpm is practically used for systems with large batch capacity in bulk volume rubber production. However, higher speeds of more than 3300 rpm are operable in small bench and lab units. Nevertheless, it would not be practical for actual processing of the devulcanized rubber at 500 kg/hour to 2 Mt/hour.</p>
+      <p id="p-00044-en" num="0044">In a preferred embodiment of the present invention, the apparatus (<b>100</b>) is enveloped with a blanket of cooling fluid (<b>107</b>) to control the temperature of the devulcanization tank (<b>101</b>) to a range of 60° C. to 100° C. via heat dissipation. The cooling fluid (<b>107</b>) is chilled water. Ethylene glycol can be also used as the cooling fluid (<b>107</b>) along with cryogenic cooling systems, however chilled water used with robust chilling system is preferred as chilled water is more cost effective as compared to ethylene glycol. Temperature control is for the purpose of preventing degeneration of the rubber and to ensure that only the sulphur bonds are broken so that recoverable properties of the rubber are maximized. At elevated temperatures, the high heat can cause scission of the main chain polymer thereby affecting the carbon to carbon bonds to be broken, which leads to depolymerisation and rubber damage.</p>
+      <p id="p-00045-en" num="0045">The resultant devulcanized rubber as obtained from the method as described in the present invention has good stability with delayed hardening to provide a pro-longed shelf life of more than 6 months to 1 year. The devulcanized rubber can be revulcanized by the addition of sulphur depending on the rubber properties as desired by adjusting the formulation or recipe of the virgin rubber compound to the revulcanized product.</p>
+      <heading id="h-00006-en" level="1">EXAMPLES</heading>
+      <heading id="h-00007-en" level="1">Example 1</heading>
+      <p id="p-00046-en" num="0046">As an exemplary, vulcanized rubber particles with a pre-determined size of 40 Mesh were added to the devulcanization tank (<b>101</b>) of the apparatus (<b>100</b>) of the present invention. The chemical composition was then added to the vulcanized rubber particles. As used in the example, the chemical composition comprises 0.30 parts per hundred rubber (phr) of N-Cyclohexyl-2-benzothiazole sulfenamide (CBS) as an accelerator, 0.30 parts per hundred rubber (phr) of zinc oxide as an inorganic activator and 1.50 parts per hundred rubber (phr) of stearic acid as an organic activator. The vulcanized rubber particles were devulcanized in the devulcanization tank (<b>101</b>) with the mass stirrer (<b>102</b>) at a speed of 24 rpm, and with the rotating shaft (<b>103</b>) and the branching members (<b>107</b>) at a speed of 2000 rpm. The rubber devulcanization was carried out at an optimum temperature of 80° C. for a processing period of about 10 minutes.</p>
+      <p id="p-00047-en" num="0047">Optionally, napthenic oil which was used as a plasticizer in an amount of 15 parts per hundred rubber (phr) and clay which was used as filler in an amount of 15 parts per hundred rubber (phr) were introduced to the devulcanized rubber. Optionally, the devulcanized rubber was shaped into agglomerates by passing the devulcanized rubber through an extruder followed by a refiner mill. The devulcanized rubber in the form of agglomerates was then cooled and sent for packaging.</p>
+      <heading id="h-00008-en" level="1">Example 2</heading>
+      <p id="p-00048-en" num="0048">In another exemplary, vulcanized rubber particles with a pre-determined size of 40 Mesh were added to the devulcanization tank (<b>101</b>) of the apparatus (<b>100</b>) as illustrated in <figref>FIG. 1</figref>. A chemical composition was then added to the vulcanized rubber particles, of which the chemical composition preferably comprising 0.75 parts per hundred rubber (phr) of N-Cyclohexyl-2-benzothiazole sulfenamide (CBS) as an accelerator, 0.70 parts per hundred rubber (phr) of zinc oxide as an inorganic activator and 2.50 parts per hundred rubber (phr) of stearic acid as an organic activator. In the devulcanization tank (<b>101</b>), the vulcanized rubber particles were devulcanized with the mass stirrer (<b>102</b>) at a speed of 24 rpm, and with the rotating shaft (<b>103</b>) and the branching members (<b>107</b>) at a speed of 3300 rpm. The rubber devulcanization was carried out at an optimum temperature of 80° C. for a processing period of about 15 minutes.</p>
+      <p id="p-00049-en" num="0049">Napthenic oil and clay were optionally introduced to the devulcanized rubber. The napthenic oil was used in an amount of 15 parts per hundred rubber (phr) as a plasticizer and the clay was used in an amount of 15 parts per hundred rubber (phr) as filler. Optionally, the devulcanized rubber was shaped into agglomerates by passing the devulcanized rubber through an extruder followed by a refiner mill. The devulcanized rubber in the form of agglomerates was then cooled and sent for packaging.</p>
+      <heading id="h-00009-en" level="1">Example 3</heading>
+      <p id="p-00050-en" num="0050">The devulcanized rubber produced from the method and apparatus (<b>100</b>) as claimed in the present invention was incorporated with virgin rubber to produce rubber compounds with desired physical properties.</p>
+      <p id="p-00051-en" num="0051">Table 1 below shows physical properties of the rubber compounds in terms of tensile strength (Mpa), elongation at break (%) and abrasion resistance after the addition of devulcanized rubber. From the table, the proportions of the devulcanized rubber being added to the virgin rubber range from 5% to 20% with the increment of 1%. The control used was a medium quality virgin compound where the virgin compound is used in the commercial manufacture of used automobile tires.</p>
+      <p id="p-00052-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="center" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Addition of </entry>
+                  <entry>Tensile Strength</entry>
+                  <entry>Elongation at</entry>
+                  <entry>Abrasion</entry>
+                </row>
+                <row>
+                  <entry>Devulcanized Rubber</entry>
+                  <entry>(Mpa)</entry>
+                  <entry>Break (%)</entry>
+                  <entry>Resistance</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="center" />
+              <colspec colname="2" colwidth="63pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="49pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Control</entry>
+                  <entry>15.58</entry>
+                  <entry>504</entry>
+                  <entry>178.2</entry>
+                </row>
+                <row>
+                  <entry> 5%</entry>
+                  <entry>16.12</entry>
+                  <entry>517</entry>
+                  <entry>180.6</entry>
+                </row>
+                <row>
+                  <entry> 6%</entry>
+                  <entry>16.14</entry>
+                  <entry>512</entry>
+                  <entry>179.0</entry>
+                </row>
+                <row>
+                  <entry> 7%</entry>
+                  <entry>15.81</entry>
+                  <entry>490</entry>
+                  <entry>176.4</entry>
+                </row>
+                <row>
+                  <entry> 8%</entry>
+                  <entry>15.76</entry>
+                  <entry>479</entry>
+                  <entry>175.0</entry>
+                </row>
+                <row>
+                  <entry> 9%</entry>
+                  <entry>15.83</entry>
+                  <entry>490</entry>
+                  <entry>171.8</entry>
+                </row>
+                <row>
+                  <entry>10%</entry>
+                  <entry>15.95</entry>
+                  <entry>491</entry>
+                  <entry>170.7</entry>
+                </row>
+                <row>
+                  <entry>11%</entry>
+                  <entry>15.63</entry>
+                  <entry>467</entry>
+                  <entry>177.7</entry>
+                </row>
+                <row>
+                  <entry>12%</entry>
+                  <entry>16.05</entry>
+                  <entry>474</entry>
+                  <entry>178.1</entry>
+                </row>
+                <row>
+                  <entry>13%</entry>
+                  <entry>16.00</entry>
+                  <entry>479</entry>
+                  <entry>167.2</entry>
+                </row>
+                <row>
+                  <entry>14%</entry>
+                  <entry>15.88</entry>
+                  <entry>465</entry>
+                  <entry>167.2</entry>
+                </row>
+                <row>
+                  <entry>15%</entry>
+                  <entry>15.60</entry>
+                  <entry>453</entry>
+                  <entry>175.3</entry>
+                </row>
+                <row>
+                  <entry>16%</entry>
+                  <entry>15.90</entry>
+                  <entry>450</entry>
+                  <entry>175.2</entry>
+                </row>
+                <row>
+                  <entry>17%</entry>
+                  <entry>15.70</entry>
+                  <entry>445</entry>
+                  <entry>177.1</entry>
+                </row>
+                <row>
+                  <entry>18%</entry>
+                  <entry>15.60</entry>
+                  <entry>460</entry>
+                  <entry>178.2</entry>
+                </row>
+                <row>
+                  <entry>19%</entry>
+                  <entry>15.80</entry>
+                  <entry>460</entry>
+                  <entry>170.2</entry>
+                </row>
+                <row>
+                  <entry>20%</entry>
+                  <entry>16.04</entry>
+                  <entry>456</entry>
+                  <entry>169.1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00053-en" num="0052">It should be appreciated that based on Table 1, a person skilled in the art is capable of determining the amount of devulcanized rubber required to be added to virgin compounds in order to obtain rubber compounds with desired physical properties.</p>
+      <heading id="h-00010-en" level="1">Example 4</heading>
+      <p id="p-00054-en" num="0053">Table 2 below shows the production of devulcanized rubber in three to four batches of 350 kg per hour using the method and apparatus (<b>100</b>) as claimed in the present invention.</p>
+      <p id="p-00055-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="91pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Present</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Technology</entry>
+                  <entry>Devulcanization</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Batch Size</entry>
+                  <entry>350 kg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Batch Time</entry>
+                  <entry>15-20 min</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>% Usage in New Tires</entry>
+                  <entry>10-20%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Shelf Life</entry>
+                  <entry>More than 6 months</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Energy Use</entry>
+                  <entry>Low</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Economy</entry>
+                  <entry>Good</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Scalability</entry>
+                  <entry>Yes</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Cure Safety</entry>
+                  <entry>Good</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00056-en" num="0054">The results disclosed in the table above shows that the method and apparatus (<b>100</b>) of the present invention provides high scalability in the production of devulcanized rubber at a low but controlled temperature, thus requiring lower energy usage.</p>
+      <p id="p-00057-en" num="0055">Further, the low energy usage also benefits in terms of cost. Besides, the devulcanized rubber produced from the present invention provides better cure safety, longer shelf life and is highly compatible with the manufacturing of new tires and offers predictable performance.</p>
+      <p id="p-00058-en" num="0056">The novel and inventive features of the present invention are hereinafter fully described and illustrated in the accompanying drawing and particularly defined in the appended claims; it being understood that various changes in the preferred embodiments may be without departing from the scope of the invention or scarifying any of the advantages of the present invention.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>.-<b>32</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>33</b>. A method for producing devulcanized rubber comprising the steps of:
+<claim-text>a) providing vulcanized rubber particles with a pre-determined particle size; and</claim-text><claim-text>b) devulcanizing the vulcanized rubber particles,</claim-text><claim-text>wherein the vulcanized rubber particles are devulcanized mechanically by impact forces and devulcanized chemically by a chemical composition, whereby the impact forces break sulphur-sulphur and sulphur-carbon bonds of the vulcanized rubber particles causing surfaces of the rubber to become receptive in reacting with the chemical composition and the chemical composition renders the sulphur passive to prevent reattachment of the bonds, of which the chemical composition comprises at least one accelerator, at least one inorganic activator and at least one organic activator, and</claim-text><claim-text>wherein the method for producing devulcanized rubber further comprises a step of introducing clay.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>34</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref>, wherein the method further comprising a step of introducing a plasticizer to the devulcanized rubber.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>35</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00003-en">claim 34</claim-ref>, wherein the plasticizer is used in an amount ranging from 0 to 15 parts per hundred rubber (phr).</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>36</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00003-en">claim 34</claim-ref>, wherein the plasticizer is napthenic oil.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>37</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00003-en">claim 34</claim-ref>, wherein the plasticizer is reclaim rubber.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>38</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref>, wherein the clay is introduced prior to the step of devulcanizing the vulcanized rubber particles.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>39</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref>, wherein the clay is introduced together with the chemical composition.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>40</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00007-en">claim 38</claim-ref>, wherein the clay is used in an amount ranging from 0 to 15 parts per hundred rubber (phr).</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>41</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref>, wherein the method further comprising a step of introducing a plasticizer and clay to the devulcanized rubber.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>42</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref>, wherein the method further comprising a step of shaping the devulcanized rubber into a desired form.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>43</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00011-en">claim 42</claim-ref>, wherein the shaping step is performed after the step of introducing a plasticizer to the devulcanized rubber.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>44</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00011-en">claim 42</claim-ref>, wherein the shaping step is performed after the step of introducing clay to the devulcanized rubber.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>45</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00011-en">claim 42</claim-ref>, wherein the shaping step is performed after the step of introducing a plasticizer and clay to the devulcanized rubber.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>46</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00011-en">claim 42</claim-ref>, wherein the shaping step is carried out by forming the devulcanized rubber into extrudates, pellets, agglomerates, sheets, powder or any of the combinations thereof.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>47</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00015-en">claim 46</claim-ref>, wherein the shaping step is performed by passing the devulcanized rubber through an extruder followed by a refiner mill.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>48</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref>, wherein the step of devulcanizing the vulcanized rubber particles is performed at a temperature ranging from 60° C. to 100° C.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>49</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref>, wherein the particle size of the vulcanized rubber ranges from 20 to 140 Mesh, preferably 40 Mesh.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>50</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref>, wherein the chemical composition is used in an amount ranging from 0 to 15 parts per hundred rubber (phr).</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>51</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref>, wherein the accelerator is used in an amount ranging from 0.30 to 0.75 parts per hundred rubber (phr).</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>52</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref>, wherein the accelerator is N-Cyclohexyl-2-benzothiazole sulfenamide (CBS).</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>53</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref>, wherein the accelerator is Di-isopropyl xanthogen polysulphide.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>54</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref>, wherein the inorganic activator is used in an amount ranging from 0.30 to 0.70 parts per hundred rubber (phr).</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>55</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref>, wherein the inorganic activator is zinc oxide.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>56</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref>, wherein the organic activator is used in an amount ranging from 1.50 to 2.50 parts per hundred rubber (phr).</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>57</b>. The method for producing devulcanized rubber as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref>, wherein the organic activator is stearic acid.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>58</b>. An apparatus (<b>100</b>) for producing devulcanized rubber via a method as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref> comprising:
+<claim-text>a devulcanization tank (<b>101</b>) in which the reaction between vulcanized rubber particles and a chemical composition is carried out;</claim-text><claim-text>at least one mass stirrer (<b>102</b>) positioned in the devulcanization tank (<b>101</b>) in which the mass stirrer (<b>102</b>) rotates in circular motion to generate impact forces;</claim-text><claim-text>at least one rotating shaft (<b>103</b>) positioned in the devulcanization tank (<b>101</b>) in which the rotating shaft (<b>103</b>) has at least one axial blade (<b>104</b>) and at least one radial blade (<b>105</b>) to facilitate impact forces generation; and</claim-text><claim-text>a blanket of cooling fluid (<b>106</b>) enveloping the devulcanization tank (<b>101</b>) to control the temperature, and</claim-text><claim-text>a plurality of branching members (<b>107</b>) extended perpendicularly from the rotating shaft (<b>103</b>),</claim-text><claim-text>wherein the impact forces generated from the mass stirrer (<b>102</b>), the axial blade (<b>104</b>) and the radial blade (<b>105</b>) of the rotating shaft (<b>103</b>) cause the vulcanized rubber particles to react with the chemical composition for producing devulcanized rubber.</claim-text></claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en">
+      <claim-text>
+        <b>59</b>. The apparatus (<b>100</b>) for producing devulcanized rubber as claimed in <claim-ref idref="clm-00027-en">claim 58</claim-ref>, wherein the radial blade (<b>105</b>) is attached to the branching members (<b>107</b>) of the rotating shaft (<b>103</b>).</claim-text>
+    </claim>
+    <claim num="29" id="clm-00029-en">
+      <claim-text>
+        <b>60</b>. An apparatus (<b>100</b>) for producing devulcanized rubber as claimed in <claim-ref idref="clm-00027-en">claim 58</claim-ref>, wherein the radial blade (<b>105</b>) is tilted from the branching members (<b>107</b>) at an angle ranging from 19° to 45°.</claim-text>
+    </claim>
+    <claim num="30" id="clm-00030-en">
+      <claim-text>
+        <b>61</b>. The apparatus (<b>100</b>) for producing devulcanized rubber as claimed in <claim-ref idref="clm-00027-en">claim 58</claim-ref>, wherein the blanket of cooling fluid (<b>106</b>) is used to control the temperature to a range of 60° C. to 100° C., preferably 80° C.</claim-text>
+    </claim>
+    <claim num="31" id="clm-00031-en">
+      <claim-text>
+        <b>62</b>. The apparatus (<b>100</b>) for producing devulcanized rubber as claimed in <claim-ref idref="clm-00030-en">claim 61</claim-ref>, wherein the cooling fluid is chilled water.</claim-text>
+    </claim>
+    <claim num="32" id="clm-00032-en">
+      <claim-text>
+        <b>63</b>. The apparatus (<b>100</b>) for producing devulcanized rubber as claimed in <claim-ref idref="clm-00030-en">claim 61</claim-ref>, wherein the cooling fluid is ethylene glycol.</claim-text>
+    </claim>
+    <claim num="33" id="clm-00033-en">
+      <claim-text>
+        <b>64</b>. Devulcanized rubber obtained from a method as claimed in <claim-ref idref="clm-00002-en">claim 33</claim-ref>.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247020A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150247020A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247020A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247020A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247020A1_00003.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150247020A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247020A1.PDF" type="pdf" size="461068" pages="8" />
+</lexisnexis-patent-document>

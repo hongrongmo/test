@@ -1,0 +1,2084 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246109A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021316" date-changed="20151227" time-changed="183443">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139215">
+        <country>US</country>
+        <doc-number>20150246109</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14642480</doc-number>
+        <date>20150309</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>A61K  39/145       20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>145</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K  39/12        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C07K  14/005       20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>A61K  39/145       20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>145</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K  39/00        20130101 LI20130603BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130603</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K  39/12        20130101 LI20150415BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150415</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K2039/5254      20130101 LA20131219BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2039</main-group>
+        <subgroup>5254</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131219</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61K2039/5256      20130101 LA20150415BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2039</main-group>
+        <subgroup>5256</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150415</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61K2039/545       20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2039</main-group>
+        <subgroup>545</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61K2039/58        20130101 LA20150225BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2039</main-group>
+        <subgroup>58</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150225</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61K2039/70        20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2039</main-group>
+        <subgroup>70</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C07K  14/005       20130101 LI20150414BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150414</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C07K2319/02        20130101 LA20150415BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>2319</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150415</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C12N  15/863       20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>863</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C12N2710/24143     20130101 LA20150415BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2710</main-group>
+        <subgroup>24143</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150415</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C12N2760/16034     20130101 LA20150415BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2760</main-group>
+        <subgroup>16034</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150415</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>C12N2760/16122     20130101 LA20150415BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2760</main-group>
+        <subgroup>16122</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150415</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>C12N2760/16134     20130101 LA20150415BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2760</main-group>
+        <subgroup>16134</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150415</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>C12N2799/023       20130101 LA20131022BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2799</main-group>
+        <subgroup>023</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131022</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">24</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">COMPOSITIONS, METHODS AND USES FOR POXVIRUS ELEMENTS IN VACCINE CONSTRUCTS AGAINST INFLUENZA VIRUS SUBTYPES OR STRAINS</invention-title>
+    <related-documents date-changed="20150903">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13555026</doc-number>
+              <date>20120720</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9005632</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006424</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13510601</doc-number>
+              <date>20121029</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9011874</doc-number>
+              </document-id>
+            </parent-grant-document>
+            <parent-pct-document>
+              <document-id>
+                <country>WO</country>
+                <doc-number>PCT/US10/57682</doc-number>
+                <date>20101122</date>
+              </document-id>
+            </parent-pct-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13555026</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61263327</doc-number>
+          <date>20091120</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Takeda Vaccines, Inc.</orgname>
+            <address>
+              <city>Deerfield</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Stinchcomb</last-name>
+            <first-name>Dan T.</first-name>
+            <address>
+              <city>Fort Collins</city>
+              <state>CO</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Osorio</last-name>
+            <first-name>Jorge E.</first-name>
+            <address>
+              <city>Mount Horeb</city>
+              <state>WI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Powell</last-name>
+            <first-name>Timothy D.</first-name>
+            <address>
+              <city>Fort Collins</city>
+              <state>CO</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Jones</last-name>
+            <first-name>Jeremy C.</first-name>
+            <address>
+              <city>Memphis</city>
+              <state>TN</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Brewoo</last-name>
+            <first-name>Joseph N.</first-name>
+            <address>
+              <city>Madison</city>
+              <state>WI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US10057682</doc-number>
+        <date>20101122</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2011063359</doc-number>
+        <date>20110526</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173462064">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246109</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150309</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173462063">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246109</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150309</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Embodiments of the present invention generally disclose methods, compositions and uses for generating and expressing poxvirus constructs. In some embodiments, constructs may contain an influenza virus gene segment. In certain embodiments, methods generally relate to making and using compositions of constructs including, but not limited to, poxvirus vaccine compositions having two or more influenza gene segments. In other embodiments, vaccine compositions are reported of use in a subject.</p>
+  </abstract>
+  <legal-data date-changed="20151227">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151124</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246109A1</docdb-publication-number>
+      <docdb-application-id>444208146</docdb-application-id>
+      <new-owner>NATIONAL INSTITUTES OF HEALTH (NIH), U.S. DEPT. OF</new-owner>
+      <free-text-description>CONFIRMATORY LICENSE;ASSIGNOR:INVIRAGEN, INC.;REEL/FRAME:037155/0270</free-text-description>
+      <effective-date>
+        <date>20151119</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">The present application is a divisional application of U.S. Non-Provisional application Ser. No. 13/555,026, filed Jul. 20, 2012, which is a continuation-in-part application of U.S. Non-Provisional application Ser. No. 13/510,601, filed as a 371 application on May 17, 2012, which claims priority to PCT Application No. PCT/US10/057682 filed on Nov. 22, 2010 (Nov. 20, 2010 fell on a Saturday), which claims the benefit of U.S. Provisional Patent Application Ser. No. 61/263,327, filed on Nov. 20, 2009. These applications are incorporated herein in their entirety by reference for all purposes.</p>
+    </related-apps>
+    <govt-interest>
+      <heading id="h-00002-en" level="1">FEDERALLY FUNDED RESEARCH</heading>
+      <p id="p-00002-en" num="0002">Some embodiments disclosed herein were supported in part by grant number 1R43A1061940-01 from the National Institutes of Health and grant number 5R41A1074308-02 also from the National Institutes of Health. The U.S. Government has certain rights to practice the subject invention.</p>
+    </govt-interest>
+    <summary>
+      <heading id="h-00003-en" level="1">FIELD</heading>
+      <p id="p-00003-en" num="0003">Embodiments of the present invention report methods, compositions and uses for generating vaccine compositions. In some embodiments, poxvirus elements can be used in viral constructs, for example, a construct of use in vaccines. In some embodiments, a poxvirus element may be a secretory signal. In certain embodiments, methods for making and using constructs for vaccine preparations that include, but are not limited to, using attenuated or modified vaccinia virus vectors that can express peptides derived from different organisms or different subtypes of organisms. In other embodiments, constructs may be generated for use in vaccination against influenza. In yet other embodiments, compositions and methods herein report pre-exposing a subject to a construct composition prior to administering a vaccine to the subject. In yet other embodiments, compositions and methods herein concern generating constructs of use in vaccinations for cross-protection against more than one subtype or strain of influenza virus.</p>
+      <heading id="h-00004-en" level="1">BACKGROUND</heading>
+      <p id="p-00004-en" num="0004">Vaccines to protect against viral infections have been effectively used to reduce the incidence of human disease. One of the most successful technologies for viral vaccines is to immunize animals or humans with a weakened or attenuated strain of the virus (a “live, attenuated virus”). Due to limited replication after immunization, the attenuated strain does not cause disease. However, the limited viral replication is sufficient to express the full repertoire of viral antigens and generates potent and long-lasting immune responses to the virus. Thus, upon subsequent exposure to a pathogenic strain of the virus, the immunized individual is protected from disease. These live, attenuated viral vaccines are amongst the most successful vaccines used in public health.</p>
+      <p id="p-00005-en" num="0005">Influenza is an orthomyxovirus with three genera, types A, B, and C. The types are distinguished by the nucleoprotein antigenicity. Influenza B is a human virus and does not appear to be present in an animal reservoir. Type A viruses exist in both human and animal populations, with significant avian and swine reservoirs.</p>
+      <p id="p-00006-en" num="0006">Annual influenza A virus infections have a significant impact in terms of human lives, between 500,000 and 1,000,000 die worldwide each year, and economic impact resulting from direct and indirect loss of productivity during infection. Of even greater concern is the ability of influenza A viruses to undergo natural and engineered genetic change that could result in the appearance of a virus capable of rapid and lethal spread within the population.</p>
+      <p id="p-00007-en" num="0007">One of the most dramatic events in influenza history was the so-called “Spanish Flu” pandemic of 1918-1919. In less than a year, between 20 and 40 million people died from influenza, with an estimated one fifth of the world's population infected. The US military was devastated by the virus near the end of World War I, with 80% of US army deaths between 1918 and 1919 due to influenza infection. Because it is a readily transmitted, primarily airborne pathogen, and because the potential exists for the virus to be genetically engineered into novel forms, influenza A represents a serious biodefense concern.</p>
+      <p id="p-00008-en" num="0008">The past two decades have seen the emergence of highly virulent avian H5N1 influenza viruses. H5N1 avian influenza first emerged in the human population when the virus crossed the avian to human species barrier in 1997. These viruses are currently endemic to poultry populations in South East Asia, where they initially emerged. Over the past decade, they have significantly broadened their host and geographic range with a current human mortality rate of approximately 60%. Compounding this threat is the resistance displayed by H5N1 viruses to both classes of influenza antivirals.</p>
+      <p id="p-00009-en" num="0009">Current public and scientific concern over the possible emergence of a pandemic strain of influenza, poxviruses or other pathogenic or non-pathogenic viruses requires effective preventative measures. Another challenge regarding generating vaccines has been to generate vaccines that protects against more than one strain of a virus</p>
+      <heading id="h-00005-en" level="1">SUMMARY</heading>
+      <p id="p-00010-en" num="0010">Embodiments of the present invention report methods, compositions and uses for generating novel vaccine compositions. In some embodiments, poxvirus elements can be used in vaccine constructs. In other embodiments, compositions and methods for administering poxvirus elements prior to receiving a vaccine can be used, for example, to circumvent interference from pre-exposure to poxvirus elements. In some embodiments, a poxvirus element may be a secretory signal or other poxvirus element. In certain embodiments, methods for making and using constructs for vaccine preparations including, but not limited to, using attenuated or modified vaccinia virus vectors expressing viral-bacterial, protozoal, fungal, or mammalian peptides to induce an immune response in a subject. In other embodiments, constructs may be generated for use in vaccines that protect against infectious diseases or in vaccines used as therapies (e.g. for cancer, diabetes, Alzheimer's disease, etc.). Some embodiments are of use as a therapeutic or as a prophylactic against a medical condition in a subject. In other embodiments, constructs may be generated for use in vaccination against viral diseases. In further embodiments, constructs may be generated for use in vaccines to protect from influenza.</p>
+      <p id="p-00011-en" num="0011">Embodiments of the present invention generally relate to methods, compositions and uses for expressing peptides (e.g. poxvirus associated peptides and non-poxvirus peptides) to stimulate immune responses. In some embodiments, viral peptide formulations presented herein can be used to boost an immune response in a subject before, during and/or after vaccination of the subject or to overcome pre-existing immunity (e.g. previous poxvirus exposure) in the subject. Certain embodiments report making and using constructs of the present invention for treating or protecting a subject having been exposed or likely to be exposed to a pathogen. In accordance with these embodiments a pathogen can include a bacterial, viral, protozoal or fungal pathogen. In some embodiments, a pathogen can be influenza virus.</p>
+      <p id="p-00012-en" num="0012">In accordance with embodiments disclosed herein, constructs may include, but are not limited to, attenuated or modified vaccinia virus vectors expressing bacterial-, viral-, fungal-, protozoal-associated gene segments (e.g. non-poxvirus peptides). For example, certain methods and compositions report making and using compositions having constructs including, but not limited to, attenuated or modified vaccinia virus vectors expressing influenza-associated gene segments in order to induce an immune response in a subject against the influenza. Certain compositions report constructs having antigens or peptides derived from influenza and associated with or combined with poxviruses related elements. Influenza gene or gene segments can include, but are not limited to, hemagglutinin (HA gene segment), neuraminidase (NA gene segment), nucleoprotein (NP gene segment), matrix protein (M gene segment), polymerase (P) and a combination thereof. Some embodiments report vaccine compositions capable of reducing or preventing infection in a subject caused by exposure to a poxvirus and/or influenza virus. Some embodiments concern using a fragment of one or more influenza gene segments for example, a fragment can include at least 6, or at least 8, or at least 10, or at least 15, or at least 20 contiguous etc amino acids of an influenza gene segment, up to the full length of the gene segment.</p>
+      <p id="p-00013-en" num="0013">In other embodiments, influenza fragments in a single construct can be from more than one influenza subtype or strain. In certain examples, a construct of use in a vaccine can contain one or more of the same gene segments of different strains or one or more different gene segments from different strains of influenza (e.g. HA, NA, NP and M). Some embodiments include constructs having one or more influenza gene segments from different strains where each segment has an associated signal sequence (e.g. naturally-occurring or artificial (e.g. from a different organism)). Some embodiments concern constructs that require a signal sequence in close proximity to one or more gene segments of the construct (e.g. C13L next to NP). Other embodiments concern secretory signal sequences fused to one or more influenza gene segments of constructs described herein (e.g. fused to either end of the gene segment). In other embodiments, certain naturally-occurring influenza gene segments used in constructs described are already associated with a secretory signal (e.g. HA). Constructs contemplated herein can further include a modified viral vector (e.g. MVA). In accordance with these embodiments, pharmaceutical compositions containing one or more of these constructs can be use to generate a vaccine capable of conferring protection in a subject from more than one influenza strain or variety. For example, a subject may be conferred protection from H1NI, H5N1, H3N2 or any other influenza strain or variety in a single composition vaccine.</p>
+      <p id="p-00014-en" num="0014">In some aspects, constructs of use as vaccine compositions, can include a secretory signal sequence alone or in combination with a translation control region sequence. In accordance with these embodiments, the secretory signal sequence can be one or more signal sequences from a poxvirus. In other embodiments, the secretory signal sequence can include, but are not limited to, tissue plasminogen activator (tPA) leader sequence, the co-factor leader sequence, the pre-proinsulin leader sequence, the invertase leader sequence, the immunoglobulin A leader sequence, the ovalbumin leader sequence, and the P-globin leader sequence or other proleader sequences and combinations thereof.</p>
+      <p id="p-00015-en" num="0015">In certain embodiments, a pre-boost of a construct may be used to induce a greater immune response in a subject to a subsequent vaccination. In some embodiments, a vaccinia virus derived gene sequence may be used to pre-boost a subject. In accordance with these embodiments, a pre-boost construct can contain modified vaccinia Ankara (MVA). It is contemplated that these pre-boosts can be administered to a subject by any method. For example, the pre-boost can be introduced intramuscularly or intradermally or by another method. In addition, a pre-boost may be administered to a subject followed by introduction of a construct having one or more elements derived from a pathogen or associated with a condition to boost an immune response in the subject. In certain examples, a pre-boost could be 6 months or less prior to a vaccination, or 5 months or less, or 4 months or less, or 3 months or less, or 1 month or less or a few weeks or immediately prior to administering a vaccine to a subject. Administration regimens are readily determinable by one skilled in the art for pre-boosts, boost and post-boosts related to vaccinating a subject against an infection or a condition.</p>
+      <p id="p-00016-en" num="0016">Other embodiments concern kits for making or using compositions disclosed. It is reported that a kit may include constructs having a modified vaccinia viral vector and one or more enterobacterial antigen.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00006-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00017-en" num="0017">The following drawings form part of the present specification and are included to further demonstrate certain embodiments. Some embodiments may be better understood by reference to one or more of these drawings alone or in combination with the detailed description of specific embodiments presented.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIGS. 1A and 1B</figref> represent exemplary plots of parameters in mice after intramuscular (IM) or intradermal (ID) introduction of various constructs of some embodiments described herein to the mice followed by challenge with influenza, <figref>FIG. 1A</figref>) Weight loss and <figref>FIG. 1B</figref>) Viral Lung titers on day 4 post-challenge.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIGS. 2A-2C</figref> represent exemplary plots of experiments where mice were vaccinated intradermal (ID) with various influenza challenge concentration and then examined on day 63 post-vaccination. Weight loss curves are displayed for some of the constructs <figref>FIG. 2A</figref>) MVA/IRES/tPA/HA, <figref>FIG. 2B</figref>) MVA/IRES/C13L/HA, and <figref>FIG. 2C</figref>) MVA/HA native.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 3</figref> represents an exemplary plot that illustrates various constructs and effects on long-term immune protection in mice against a viral insult.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 4</figref> represents an exemplary plot that illustrates cross-clade protection using various viral-derived antigens.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 5</figref> represents an exemplary plot of mice tested with certain constructs described herein, described herein to the mice followed by a viral challenge.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIGS. 6A and 6B</figref> represent exemplary plots of parameters in mice after intramuscular (IM) introduction of various constructs of some embodiments described herein to the mice followed by challenge with influenza, <figref>FIG. 6A</figref>) Weight loss and <figref>FIG. 6B</figref>) Survival post-challenge.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIGS. 7A and 7B</figref> represent exemplary plots of parameters in mice after intradermal (ID) introduction of various constructs of some embodiments described herein to the mice followed by challenge with influenza, <figref>FIG. 7A</figref>) Weight loss and <figref>FIG. 7B</figref>) Survival post-challenge.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIGS. 8A and 8B</figref> represent exemplary plots of parameters in mice after (<figref>FIG. 8A</figref>) intramuscular (IM) or (<figref>FIG. 8B</figref>) intradermal (ID) introduction of various constructs of some embodiments described herein to the mice followed by challenge with influenza.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 9</figref> represents an exemplary plot that illustrates viral titers in lung after introduction of various constructs of some embodiments described herein to the mice followed by challenge with influenza.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIGS. 10A and 10B</figref> represent exemplary plots of percent weight change in mice after introduction of 2 different constructs of some embodiments described herein having the HA gene segment in each construct followed by challenge with influenza. <figref>FIG. 10A</figref> represents construct MVA/HA and <figref>FIG. 10B</figref> represents construct MVA/IRES/tpa/HA.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 10C</figref> illustrates Table 1 which represents MVA influenza transfer vectors and constructs.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIGS. 11A and 11B</figref> represent exemplary plots of percent weight change in mice after introduction of 2 different constructs of some embodiments described herein followed by challenge with influenza. <figref>FIG. 11A</figref> represents construct MVA/IRES/C13L/HA and <figref>FIG. 11B</figref> represents construct MVA-GFP.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIGS. 12A and 12B</figref> represent exemplary plots of percent weight change in mice after introduction of 2 different constructs at various concentrations of some embodiments described herein followed by challenge with influenza. <figref>FIG. 12A</figref> represents construct MVA/IRES/tpa/HAt and <figref>FIG. 12B</figref> represents construct MVA/IRES/C13L/HAt.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIGS. 13A and 13B</figref> represent exemplary plots of survival in mice after introduction of 2 different constructs at various concentrations of some embodiments described herein followed by challenge with influenza. <figref>FIG. 13A</figref> represents construct MVA/HA and <figref>FIG. 13B</figref> represents construct MVA/IRES/tpa/HA.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIGS. 14A and 14B</figref> represent exemplary plots of survival in mice after introduction of 2 different constructs at various concentrations of some embodiments described herein followed by challenge with influenza. <figref>FIG. 14A</figref> represents construct MVA/IRES/tpa/HA and <figref>FIG. 14B</figref> represents construct MVA/IRES/C13L/HA.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIGS. 15A and 15B</figref> represent exemplary plots of survival in mice after introduction of 2 different constructs at various concentrations of some embodiments described herein followed by challenge with influenza (dpi represents days post infection). <figref>FIG. 15A</figref> represents construct MVA/IRES/tpa/HAt and <figref>FIG. 15B</figref> represents construct MVA/IRES/C13L/HAt.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIGS. 16A and 16B</figref> represent exemplary plots of clinical scores (e.g. physical and physiological parameters) in mice after introduction of 2 different constructs at various concentrations of some embodiments described herein followed by challenge with influenza. <figref>FIG. 16A</figref> represents construct MVA/HA and <figref>FIG. 16B</figref> represents construct MVA/IRES/tpa/HA.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIGS. 17A and 17B</figref> represent exemplary plots of clinical scores (e.g. physical and physiological parameters) in mice after introduction of 2 different constructs at various concentrations of some embodiments described herein followed by challenge with influenza. <figref>FIG. 17A</figref> represents construct MVA/IRES/C13L/HA and <figref>FIG. 17B</figref> represents construct MVA/IRES/tpa/HAt.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 18</figref> represents an exemplary plot of clinical scores (e.g. physical and physiological parameters) in mice after introduction of a construct at various concentrations of some embodiments described herein followed by challenge with influenza.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIGS. 19A and 19B</figref> represent exemplary plots of percent weight change (<figref>FIG. 19A</figref>) and assessed clinical scores (<figref>FIG. 19B</figref>) in mice after introduction of different constructs in mice pre-exposed to vaccinia followed by challenge with influenza.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 20</figref> represents an exemplary plot of survival of mice challenged above after exposure to the same constructs as in <figref>FIGS. 19A and 19B</figref>.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 21</figref> is a schematic representation of a recombinant plasmid construct.</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIGS. 22A-22E</figref> represent gel electrophoresis separation of constructs of certain embodiments contemplated herein. <figref>FIG. 22A</figref> represents construct MVA/HA1; <figref>FIG. 22B</figref> represents construct MVA/HA1/C13L/NP; <figref>FIG. 22C</figref> represents HA5 and construct MVA/HA5; <figref>FIG. 22D</figref> represents construct MVA/HA5/C13L/NP and <figref>FIG. 22E</figref> represents constructs MVA/NP and MVA/C13L/NP.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIGS. 23A-23H</figref> represent vaccine efficacy against homologous challenge of influenza virus. <figref>FIGS. 23A and 23B</figref> represent histogram plots of construct MVA/HA1 and MVA/GFP; <figref>FIGS. 23C and 23D</figref> represent days post challenge of various constructs; <figref>FIGS. 23E and 23F</figref> represent lung viral titer post challenge with various constructs and <figref>FIGS. 23G and 23H</figref> represent weight loss in an animal model post challenge after exposure to various constructs.</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIG. 24</figref> represents lung viral titers in vaccinated and control animals following challenge with an influenza virus.</p>
+      <p id="p-00043-en" num="0043">
+        <figref>FIGS. 25A-25D</figref> represents grafts representing exemplary immune responses following vaccinations of various constructs contemplated herein. <figref>FIGS. 25A</figref>, <b>25</b>B, <b>25</b>C and <b>25</b>D represent weight loss in an animal model post challenge after exposure to various constructs.</p>
+      <p id="p-00044-en" num="0044">
+        <figref>FIGS. 26A-26B</figref> represent effects of vector immunity on vaccine efficacy. <figref>FIG. 26A</figref> represents various vaccination regimens in an animal model. <figref>FIG. 26B</figref> represents percent survival post challenge using various vaccination regimens in the animal model.</p>
+      <p id="p-00045-en" num="0045">
+        <figref>FIG. 27</figref> is a graphic representation of examination of safety of vectored vaccine compositions of some embodiments herein.</p>
+      <p id="p-00046-en" num="0046">
+        <figref>FIG. 28</figref> represents an exemplary plasmid construct of some embodiments herein.</p>
+      <p id="p-00047-en" num="0047">
+        <figref>FIG. 29</figref> represents a histogram plot of exemplary immune responses following prime and booster vaccinations of various constructs contemplated herein.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00007-en" level="1">DEFINITIONS</heading>
+      <p id="p-00048-en" num="0048">As used herein, “a” or “an” can mean one or more than one of an item.</p>
+      <p id="p-00049-en" num="0049">As used herein the specification, “subject” or “subjects” can include, but are not limited to, mammals such as humans or mammals, domesticated or wild, for example dogs, cats, other household pets (e.g. hamster, guinea pig, mouse, rat), ferrets, rabbits, pigs, horses, cattle, prairie dogs, wild rodents, or zoo animals. A subject can be an adult or a child.</p>
+      <p id="p-00050-en" num="0050">As used herein, “about” can mean plus or minus ten percent.</p>
+      <p id="p-00051-en" num="0051">As used herein, “attenuated virus” can mean a virus that demonstrates reduced or no clinical signs of disease when administered to a subject such as a mammal (e.g. human or an animal).</p>
+      <p id="p-00052-en" num="0052">As used herein, “MSC” can mean multiple cloning site.</p>
+      <p id="p-00053-en" num="0053">As used herein, “dSP” can mean divergent vaccinia promoter.</p>
+      <p id="p-00054-en" num="0054">As used herein, “MVA” can mean modified vaccinia Ankara.</p>
+      <p id="p-00055-en" num="0055">As used herein, “EMCV” can mean encephalomyocarditis virus.</p>
+      <p id="p-00056-en" num="0056">As used herein, “IRES” can mean internal ribosome entry site from encephalomyocarditis virus or other viruses.</p>
+      <p id="p-00057-en" num="0057">As used herein, “IRES(A7)” can mean IRES from encephalomyocarditis virus with 7 adenosine residues in bifurcation loop; source—pCITE-1.</p>
+      <p id="p-00058-en" num="0058">As used herein, “IRES(A6)” can mean IRES from encephalomyocarditis virus mutated to have 6 adenosine residues in bifuraction loop.</p>
+      <p id="p-00059-en" num="0059">As used herein, “pDIIIgfp” can mean MVA del III gfp marker transfer plasmid.</p>
+      <p id="p-00060-en" num="0060">As used herein, “pI*” can mean transfer vector plasmids.</p>
+      <p id="p-00061-en" num="0061">As used herein, “tPA” can mean secretory signal from tissue plaminogen activator.</p>
+      <p id="p-00062-en" num="0062">As used herein, “se/l” can mean synthetic optimized early late poxvirus promoter.</p>
+      <p id="p-00063-en" num="0063">As used herein, “H6” can mean the vaccinia gene H6 early/late native poxvirus promoter.</p>
+      <p id="p-00064-en" num="0064">As used herein, “del III” can mean modified vaccinia Ankara deletion region III.</p>
+      <p id="p-00065-en" num="0065">As used herein, “GFP” can mean enhanced green fluorescent protein.</p>
+      <p id="p-00066-en" num="0066">As used herein, “CEF” can mean chicken embryo fibroblasts.</p>
+      <p id="p-00067-en" num="0067">As used herein, “RCN” can mean raccoon pox virus.</p>
+      <heading id="h-00008-en" level="1">DESCRIPTION</heading>
+      <p id="p-00068-en" num="0068">In the following sections, various exemplary compositions and methods are described in order to detail various embodiments. It will be obvious to one skilled in the art that practicing the various embodiments does not require the employment of all or even some of the details outlined herein, but rather that concentrations, times and other details may be modified through routine experimentation. In some cases, well-known methods or components have not been included in the description.</p>
+      <p id="p-00069-en" num="0069">Embodiments of the present invention concern methods, compositions and uses for generating novel vaccine compositions. In some embodiments, poxvirus elements can be used in vaccine constructs or in pre-immunization constructs for introduction to a subject. In certain embodiments, poxvirus elements can be used to pre-immunize a subject prior to receiving a vaccine. In some embodiments, a poxvirus element can be a secretory signal or other poxvirus element. Other embodiments concern methods for making and using constructs including, but not limited to, attenuated or modified vaccinia virus vectors expressing viral, bacterial, protozoal fungal, or mammalian derived peptides. In other embodiments, constructs may be generated for use in vaccines that protect against infectious diseases or in vaccines used as therapies (e.g. for cancer, diabetes, Alzheimer's disease, etc.) to boost an immune response in a subject. Some embodiments are of use as a therapeutic or as a prophylactic against a medical condition in a subject. In other embodiments, constructs may be generated for use in vaccination against viral diseases. In further embodiments, constructs may be generated for use in vaccines to protect from a pathogen. Some embodiments described herein concern constructs to protect against and/or treat a subject exposed to or having an influenza infection.</p>
+      <heading id="h-00009-en" level="2">Influenza Virus</heading>
+      <p id="p-00070-en" num="0070">Influenza is an orthomyxovirus. Three genera, types A, B, and C of influenza currently exist. Types A and B are the most clinically significant, causing mild to severe respiratory illness. Type A viruses exist in both human and animal populations, with significant avian and swine reservoirs. Although relatively uncommon, it is possible for nonhuman influenza A strains to infect humans by jumping from their natural host. In one specific example, the highly lethal Hong Kong avian influenza outbreak in humans in 1997 was due to an influenza A H5N1 virus that was an epidemic in the local poultry population at that time. In this case, the virus killed six of the 18 patients shown to have been infected.</p>
+      <p id="p-00071-en" num="0071">Annual seasonal influenza A or B virus infections have a significant impact on humanity both in terms of death, between 500,000 and 1,000,000 worldwide each year and economic impact resulting from direct and indirect loss of productivity during infection.</p>
+      <p id="p-00072-en" num="0072">In 2009, an influenza pandemic erupted. The virus isolated from patients in the United States was found to be made up of genetic elements from four different flu viruses—North American Mexican influenza, North American avian influenza, human influenza, and swine influenza virus typically found in Asia and Europe. This new strain appears to be a result of reassortment of human influenza and swine influenza viruses, in all four different strains of subtype H1N1.</p>
+      <p id="p-00073-en" num="0073">In certain embodiments, a virus can include an influenza virus infection, for example, influenza type A, B or C or subtype or strain thereof. Some embodiments include, but are not limited to, influenza A, H1N1 subtype or H1N1 of swine origin and strains. Other influenza A viruses may include, but are not limited to, H2N2, which caused Asian Flu in 1957; H3N2, which caused Hong Kong Flu in 1968; H5N1, a current pandemic threat; H7N7, which has unusual zoonotic potential; H1N2, endemic in humans and pigs; H9N2; H7N2; H7N3, H10N7 or combinations thereof. Other varieties can include, but are not limited to, A/Vietnam/1203/04 (H5N1), A/Norway/3487-2/09 (pandemic H1N1), A/Influenza/Puerto Rico/8/34 (seasonal H1N1) and seasonal H3N2 virus (A/Aichi/68) or others</p>
+      <p id="p-00074-en" num="0074">In certain embodiments, constructs having two or more influenza gene segments from different subtypes or strains can be directed toward prevention or treatment of seasonal influenza virus outbreaks. In other embodiments, construct having two or more influenza gene segments from different subtypes or strains can be directed toward prevention or treatment of pandemic influenza virus outbreaks. Other constructs can be used to target both seasonal and pandemic outbreaks of different subtypes or strains of influenza virus by using influenza gene segments specific for a given subtype or strain.</p>
+      <p id="p-00075-en" num="0075">Influenza A and B each contain 8 segments of negative sense ssRNA. Type A viruses can also be divided into antigenic subtypes on the basis of two viral surface glycoproteins, hemagglutinin (HA) and neuraminidase (N). There are currently 15 identified HA subtypes (designated H1 through H15) and 9 NA subtypes (N1 through N9) all of which can be found in wild aquatic birds. Embodiments of the present invention can include constructs having one or more of any influenza gene segment subtype or strain known in the art. Of all the possible (e.g. over 135) combinations of HA and NA, four (H1N1, H1N2, H2N2, and H3N2) have widely circulated in the human population since the virus was first isolated in 1933. Two of the more common subtypes of influenza A currently circulating in the human population are H3N2 and H1N1.</p>
+      <p id="p-00076-en" num="0076">Some embodiments include constructs having one or more influenza gene segments from different subtypes or strains where each gene segment has an associated signal sequence (e.g. naturally-occurring or artificial (e.g. from a different organism)). Some embodiments concern constructs that require a signal sequence in close proximity to one or more gene segments of the construct (e.g. C13L next to an NP influenza gene segment). Other embodiments concern secretory signal sequences fused to one or more influenza gene segments of constructs described herein (e.g. fused to either end of the gene segment). In other embodiments, certain naturally-occurring influenza gene segments used in constructs described are already associated with a secretory signal (e.g. HA).</p>
+      <p id="p-00077-en" num="0077">New type influenza A strains emerge due in part to genetic drift that can result in slight changes in the antigenic sites on the surface of the virus. This shift can lead to the human population experiencing epidemics of influenza infection every year. More drastic genetic changes can result in an antigenic shift (a change in the subtype of HA and/or NA) resulting in a new subtype capable of rapidly spreading in a susceptible population.</p>
+      <p id="p-00078-en" num="0078">Subtypes are sufficiently different as to make them non-crossreactive with respect to antigenic behavior; prior infection with one subtype (e.g. H1N1) can lead to no immunity to another (e.g. H3N2). It is this lack of crossreactivity that in certain cases allows a novel subtype to become pandemic as it spreads through an immunologically naïve population. In some embodiments, development of novel vaccine vectors and production techniques are disclosed herein for generating effective vaccine with broad cross-protective efficacy against various influenza subtypes or strains. Modified vaccinia Ankara (MVA) vector offers several advantages in such a vaccine such as; 1) safety, 2) stability, 3) rapid induction of humoral and cellular responses, and 4) multiple routes of inoculation. While several vaccines have been created using an MVA vector, most of them have been tested against homologous or closely related challenge viruses and provided limited to no protection against genetically divergent strains. In certain embodiments, vaccine constructs concern recombinant MVA vaccines expressing antigens (e.g. influenza gene segments) from two or more subtypes of influenza. Some embodiments concern influenza gene segments that are the same or different regions (e.g. HA, NA, M, NP) from two or more subtypes or strains. In certain embodiments, use of an NP segment can require a secretory signal sequence in close proximity to the gene segment in a construct. For example, certain embodiments concern fusing a secretory signal sequence to an influenza gene segment in a construct having one or more additional influenza gene segments within the same construct from different or the same influenza subtype. In certain embodiments, the constructs can be plasmid constructs.</p>
+      <p id="p-00079-en" num="0079">Although relatively uncommon, it is possible for nonhuman influenza A strains to transfer from their “natural” reservoir to humans. In one example, the highly lethal Hong Kong avian influenza outbreak in humans in 1997 was due to an influenza A H5N1 virus that was an epidemic in the local poultry population at that time. This virus transferred to other hosts (e.g. humans) from contaminated chickens.</p>
+      <p id="p-00080-en" num="0080">Some embodiments of the present invention report vaccine compositions including, but not limited a poxvirus and one or more poxvirus secretory signals associated with one or more non-poxvirus peptides. In certain embodiments, a vaccine composition may include a modified or attenuated poxvirus associated with one or more secretory poxvirus secretory signals associated with one or more non-poxvirus peptides. In other embodiments, recombinant modified vaccinia Ankara (MVA) vector associated with one or more poxvirus secretory signals associated with one or more non-poxvirus peptides. In other embodiments, a vaccine composition may include a recombinant modified vaccinia Ankara (MVA) vector associated with one or more influenza-associated peptides where at least one of the one or more influenza-associated peptides is associated with a poxvirus secretory signal. For example, a vaccine composition can include recombinant modified vaccinia Ankara (MVA) vector expressing influenza virus components. In accordance with this vaccine composition, an MVA construct expressing one or more influenza-associated antigens may be generated (e.g. HA, NP, NA, M, P, etc.) for use to vaccinate a subject against influenza. It is contemplated that vaccine constructs can contain a more conserved or highly conserved influenza genetic region or influenza associated peptide alone or in combination with a more variable influenza associated peptide. Alternatively, a vaccine construct contemplated herein can contain a peptide or the entire segment of an internal influenza gene region (e.g. M) or an externally (e.g. HA) exposed gene region.</p>
+      <p id="p-00081-en" num="0081">In one embodiment contemplated herein, a vaccine construct can contain two influenza gene segments from different subtypes. In accordance with this embodiment, the vaccine construct can contain a hemagglutinin (HA) gene segment from H1N1 and a nucleoprotein (NP) from H5N1 each associated with a secretory signal sequence (e.g. MVA/HA<sub>1</sub>/C13L/NP).</p>
+      <p id="p-00082-en" num="0082">In certain embodiments, influenza virus is selected from the group consisting of any influenza A subtype or strain, influenza A H3N2, influenza A H1N1, influenza A H1N1 swine-origin, avian influenza A H5N1, and influenza B.</p>
+      <p id="p-00083-en" num="0083">Certain embodiments of the present invention report compositions having constructs directed against poxviruses. For example, vaccine compositions may be directed to the prevention or reduced incidence of conditions associated with poxvirus or influenza viruses.</p>
+      <heading id="h-00010-en" level="2">Poxviridae</heading>
+      <p id="p-00084-en" num="0084">Poxviruses (members of the family Poxviridae) are viruses that can, as a family, infect both vertebrate and invertebrate animals. There are four known genera of poxviruses that may infect humans: orthopox, parapox, yatapox, molluscipox. Orthopox include, but are not limited to, variola virus, vaccinia virus, cowpox virus, monkeypox virus, and smallpox. Parapox include, but are not limited to, orf virus, pseudocowpox, bovine papular stomatitis virus; Yatapox: tanapox virus, yaba monkey tumor virus. Molluscipox include, but are not limited to, molluscum contagiosum virus (MCV). Some of the more common oixviruses are vaccinia and molluscum contagiousum, but monkeypox infections seem to be on the rise.</p>
+      <p id="p-00085-en" num="0085">Poxvirus family, vaccinia virus, has been used to successfully vaccinate against smallpox virus. Vaccinia virus is also used as an effective tool for foreign protein expression to elicit strong host immune response. Vaccinia virus enters cells mainly by cell fusion, although currently the receptor is not known. Virus contains three classes of genes, early, intermediate and late that are transcribed by viral RNA polymerase and associated transcription factors. Diseases caused by pox viruses have been known about for centuries.</p>
+      <heading id="h-00011-en" level="2">Orthopoxviruses</heading>
+      <p id="p-00086-en" num="0086">Certain embodiments of the present invention may include using modified or attenuated orthopoxviruses or orthopoxvirus associated genetic elements or peptides in vaccine compositions. Orthopoxvirus is a genus of the Poxviridae family, that includes many agents isolated from mammals, including, but not limited to, vaccinia, monkeypox, cowpox, camelpox, seal poxvirus, buffalo poxvirus, raccoon poxvirus, skunk poxvirus, vole poxvirus and ectromelia viruses. Members of Poxviridae have large linear double-stranded DNA, with genome sizes ranging from 130 to 300 kbp. One of the members of the genus is variola virus, which causes smallpox. Smallpox was previously eradicated using another orthopoxvirus, the vaccinia virus, as a vaccine.</p>
+      <heading id="h-00012-en" level="2">Modified Vaccinia Virus Ankara (MVA)</heading>
+      <p id="p-00087-en" num="0087">Some embodiments in the present invention report compositions and methods of use of recombinant vaccinia viruses derived from attenuated poxviruses that are capable of expressing predetermined or preconstucted genes or gene segments. Those skilled in the art recognize that other attenuated poxviruses can be generated by serial passage in cell culture or by deliberate deletion of poxviral genes. In certain embodiments, predetermined genes may be inserted at the site of a naturally occurring deletion in the MVA genome. In other embodiments, recombinant MVA viruses can be used, for example, for the production of polypeptides (e.g. antigens) or for encoding antigens of use for vaccine compositions capable of inducing an immune response in a subject administered the vaccine compositions.</p>
+      <p id="p-00088-en" num="0088">In certain embodiments, modified or attenuated poxviruses (e.g. modified vaccinia Ankara (MVA), NYVAC, LC16m8, or CVI-78), can be used in a subject (e.g. mammals such as humans) as a delivery system for pre-boost, boost or post-boost vaccination in order to induce immunity to a pathogen in the subject. It is contemplated herein that a subject may benefit from having more than one administration of a compositions disclosed herein. Previously, MVA was administered to over 120,000 individuals and proven to be a safe and effective vaccine against smallpox. In certain embodiments, recombinant MVA vaccine candidates have been shown to induce protective humoral and cellular immunity against diseases caused by viruses, bacteria, parasites, or tumors from which antigens or peptides were derived. Additional features that make MVA a suitable vector include its ability to induce protective immune responses when administered by different routes and its genetic and physical stability properties.</p>
+      <heading id="h-00013-en" level="2">Translational Control Sequences</heading>
+      <p id="p-00089-en" num="0089">Some embodiments may include an optional enhancer, for example, a translation control sequence. In certain embodiments, a translation control sequence may include an internal ribosomal entry site (IRES) (e.g. EMCV-IRES). Viral IRESs are classified into four groups: Group 1 (Cricket paralysis virus (CrPV), Plautia stali intestine virus (PSIV) and Taura syndrome virus (TSV)); Group 2 (Hepatitis C virus, (HCV), classical swine fever virus (CSFV) and porcine teschovirus 1 (PTV-1)); Group 3 (encephalomyocarditis virus (EMCV), foot-and-mouth-disease virus (FMDV) and Theiler's Murine Encephalomyelitis virus (TMEV)); and Group 4 (poliovirus (PV) and rhinovirus (RV)). In other embodiments, viral untranslated regions (UTRs) found 5′ to viral coding sequences can be used to direct translation. Any translation control sequence of use in viral constructs known in the art is contemplated.</p>
+      <heading id="h-00014-en" level="2">Secretory Signals</heading>
+      <p id="p-00090-en" num="0090">Alternatively, embodiments of the present invention may include constructs having one or more poxvirus secretory signal sequences in combination with other elements. Translation control sequences and/or poxvirus secretory signals were demonstrated to increase efficacy of certain vaccine constructs. In some embodiments, one or more poxvirus secretory signal sequences of constructs disclosed herein can include, but are not limited to, secretory signal sequence in the poxvirus genes C13L(putative), B8R (soluble interferon gamma receptor), B19R (interferon a/b receptor), A39R(semaphoring), M2L(putative), C13L(putative), C19L or other secretory signal sequences known in the art. Constructs disclosed herein can contain one or more secretory signal sequence.</p>
+      <p id="p-00091-en" num="0091">In some embodiments, when designing a construct, such that a protein is expressed, it may be necessary to incorporate into a first nucleic acid region a DNA sequence encoding a signal sequence, for example, in cleavable form, where the expressed protein is desired to be secreted. Without limiting embodiments of the present invention to any one theory or mode of action, a signal sequence can be a peptide that is present on proteins destined either to be secreted or to be membrane bound. These signal sequences can be found at the N-terminus of the protein and are generally cleaved from a mature form of a protein. The signal sequence generally interacts with the signal recognition particle and directs the ribosome to the endoplasmic reticulum where co-translational insertion takes place. Where the signal sequence is cleavable, it is generally removed by for example, a signal peptidase. The choice of signal sequence which is to be utilized may depend on the requirements of the particular situation and can be determined by the person of skill in the art. In the context of the exemplification provided herein, but without being limited in that regard, tPA, a poxvirus signal sequences from C13L or B8R may be used to facilitate secretion of a peptide, protein, gene segment or construct of interest. If a membrane protein is desired, both a 5′ cleavable signal sequence at the amino end of the protein and a non-cleavable membrane anchor at the 3′(carboxy) end of the protein may be needed. These could be provided within the vector or one or both could be encoded by the DNA of the protein of interest.</p>
+      <p id="p-00092-en" num="0092">Some embodiments of the present invention include, but are not limited to, compositions including one or more constructs. A construct may be designed to produce proteins that are cytoplasmically retained, secreted or membrane bound. Deciding what form a protein of interest may need to take can depend on the functional requirement of the protein. For example, anchored cell surface expression of a protein of interest can provide a convenient way for screening for molecules that interact with a protein or peptide of interest such as antibodies, antagonists, agonists or the like particularly to the extent that the protein is expressed on the membrane of an adherent cell type. Still further membrane anchored forms of proteins may be suitable for administration to a subject for example, for generating monoclonal antibodies to the protein. This may be due to host cells providing a convenient source of the protein that is likely to be correctly folded and have appropriate post-translational modifications, for example, glycosylation and disulphide bond formation. In addition, a host cell may provide adjuvant properties, for example, antigenic differences from a recipient subject, notably in major histocompatibility complexes (MHC).</p>
+      <p id="p-00093-en" num="0093">Alternatively, secreted proteins can be suitable where a protein is to be harvested and purified. A nucleic acid molecule encoding a signal sequence may be positioned in the construct at any suitable location which can be determined as a matter of routine procedure by a person of skill in the art. In some embodiments, a signal sequence may be positioned immediately 5′ to the nucleic acid sequence encoding a peptide, protein or construct of interest (such that it can be expressed as an immediately adjacent fusion with the protein of interest) but 3′ to a promoter such that expression of a signal sequence is placed under control of the promoter. A nucleic acid sequence encoding a signal sequence can form part of a first nucleic acid region of a construct.</p>
+      <p id="p-00094-en" num="0094">It is contemplated herein that constructs and vaccine compositions disclosed can be used as therapies for conditions such as diabetes, Alzheimer's and cancer or other condition. Constructs may be generated for use in vaccines that protect against or as therapies for certain conditions (e.g. for cancer, diabetes, Alzheimer's disease, etc.). In addition, vaccine compositions and pre-boost compositions described herein can be used in subjects to boost their immune system.</p>
+      <heading id="h-00015-en" level="2">Tumor Markers</heading>
+      <p id="p-00095-en" num="0095">Tumor markers and associated tumor peptides are contemplated for using in constructs described herein. Tumor markers and peptides associated with tumors (e.g. non-poxvirus peptides) can be used in combination with elements described herein in order to develop vaccines to treat or prevent cancer in a subject. Some tumor markers include, but are not limited to the following, 707-AP=707 alanine proline AFP=alpha (α)-fetoprotein, ART-4=adenocarcinoma antigen recognized by T cells 4, BAGE=B antigen; b-catenin/m, β-catenin/mutated, Bcr-abl=breakpoint cluster region-Abelson, CAMEL=CTL-recognized antigen on melanoma, CAP-1=carcinoembryonic antigen peptide-1, CASP-8=caspase-8, CDC27m=cell-divisioncycle, 27 mutated, CDK4/m=cycline-dependent kinase 4 mutated, CEA=carcinoembryonic antigen, CT=cancer/testis (antigen), Cyp-B=cyclophilin B, DAM=differentiation antigen melanoma (the epitopes of DAM-6 and DAM-10 are equivalent, but the gene sequences are different. DAM-6 and DAM-10, ELF2M=elongation factor 2 mutated, ETV6-AML1=Ets, variant gene 6/acute myeloid leukemia 1 gene ETS, G250=glycoprotein 250 GAGE=G antigen, GnT-V=N-acetylglucosaminyltransferase V, Gp100=glycoprotein 100 kD, HAGE=helicose antigen, HER-2/neu=human epidermal receptor-2/neurological, HLA-A*0201-R1701=arginine (R) to isoleucine (I) exchange at residue 170 of the α-helix of the α2-domain in the HLA-A2 gene, HPV-E7=human papilloma virus E7, HSP70-2M=heat shock protein 70-2 mutated, HST-2=human signet ring tumor-2, hTERT or hTRT=human telomerase reverse transcriptase, iCE=intestinal carboxyl, sterase, KIAA0205=name of the gene as it appears in databases, LAGE=L antigen, LDLR/FUT=low density lipid receptor/GDP-L-fucose: β-D-galactosidase 2-α-Lfucosyltransferase, MAGE=melanoma antigen, MART-1/Melan-A=melanoma, antigen recognized by T cells-1/Melanoma antigen A, MC1R=melanocortin 1 receptor, Myosin/m=myosin mutated, MUC1=mucin, MUM-1, -2, -3=melanoma, ubiquitous mutated 1, 2, 3 NA88-A=NA cDNA clone of patient M88, NY-ESO-1=New York-esophageous 1, P15=protein 15, p190 minor bcr-abl=protein of 190, KD bcr-abl, Pml/RARa=promyelocytic leukaemia/retinoic acid receptor α, FRAME=preferentially expressed antigen of melanoma, PSA=prostate-specific antigen, PSM=prostate-specific membrane antigen, RAGE=renal antigen, RU1 or RU2=renal, ubiquitous 1 or 2, SAGE=sarcoma antigen, SART-1 or SART-3=squamous antigen, rejecting tumor 1 or 3, TEL/AML1=translocation Ets-family leukemia/acute myeloid, leukemia 1, TPI/m=triosephosphate isomerase mutated, TRP-1=tyrosinase related, protein 1, or gp75, TRP-2=tyrosinase related protein 2, TRP-2/INT2=TRP-2/intron, WT1=Wilms' tumor gene and any other tumor antigen known in the art. In certain embodiments, a pre-boost having an MVA construct can be used alone or prior to administering a vaccine having a tumor antigen derived peptide to a subject in need thereof.</p>
+      <p id="p-00096-en" num="0096">Anti-microbial peptides are contemplated of use in constructs disclosed herein. Anti-microbial peptides can be expressed in constructs described and used alone or after a subject is administered a pre-immune boost to treat or prevent an infection.</p>
+      <heading id="h-00016-en" level="2">Selection Markers</heading>
+      <p id="p-00097-en" num="0097">In certain embodiments, additional selection markers may be used, for example, one may insert any number of selection markers which may be designed, for example, to facilitate the use of the vectors in a variety of ways, such as purification of a molecule of interest. For example, glutathione S-transferase (GST) gene fusion system provides a convenient means of harvesting a construct, protein or peptide of interest, Without limiting to any one theory or mode of action, a GST-fusion protein can be purified, by virtue of the GST tag, using glutathione agarose beads. Embodiments of the present invention should be understood to extend to constructs encoding a secretable GST-molecule fusion. This could be achieved, for example, by designing the sequence of a first nucleic acid region such that it encodes a cleavable signal sequence fused to a cleavable GST which is, in turn, fused to the molecule of interest. In another example, a fusion tag could be used. In accordance with these embodiments, a fusion tag can be between 360 bp of protein A (allowing purification of the secreted product) and beta lactamase (a bacterial enzyme which allows testing of supernatants by a simple colour reaction). Beta lactamase facilitates selection of an assay for a molecule of interest in the absence of an assay for molecule of interest. The protein A/beta lactamase fusion can be separated from the molecule of interest by a cleavage site to facilitate cleavage, so that after the molecule is purified, the tug can be easily removed.</p>
+      <p id="p-00098-en" num="0098">Other fusion tags that could be included to facilitate purification of a molecule or construct of interest of use for embodiments disclosed herein can include, but are not limited to, staphylococcal protein A, streptococcal protein G, hexahistidine, calmodulin-binding peptides and maltose-binding protein (e.g. the latter is also useful to help ensure correct folding of a molecule of interest). Yet another selectable marker may include an antibiotic resistance gene. Other embodiments may include an antibiotic resistance gene. These genes have previously been utilized in the context of bicistronic vectors as the selection marker or HAT-based selectable bicistronic vector may be used.</p>
+      <heading id="h-00017-en" level="2">Electrophoresis</heading>
+      <p id="p-00099-en" num="0099">Electrophoresis may be used to separate molecules (e.g. large molecules such as proteins or nucleic acids) based on their size and electrical charge. There are many variations of electrophoresis known in the art. A solution through which the molecules move may be free, usually in capillary tubes, or it may be embedded in a matrix. Common matrices include polyacrylamide gels, agarose gels, and filter paper.</p>
+      <p id="p-00100-en" num="0100">Proteins, peptides and/or antibodies or antibody fragments thereof may be detected partially or wholly purified, or analyzed by any means known in the art. In certain embodiments, methods for separating and analyzing molecules may be used such as gel electrophoresis and elution or column chromatography or other separation/purification methods.</p>
+      <p id="p-00101-en" num="0101">Any method known in the art for detecting, analyzing and/or measuring levels of antibodies or antibody fragments may be used in embodiments reported herein. For example, assays for antibodies or antibody fragments may include, but are not limited to, ELISA assays, chemiluminescence assays, flow cytometry, electroelution and other techniques known in the art.</p>
+      <heading id="h-00018-en" level="2">Imaging Agents and Radioisotopes</heading>
+      <p id="p-00102-en" num="0102">In certain embodiments, the claimed proteins or peptides may be linked to a secondary binding ligand or to an enzyme (an enzyme tag) that will generate a fluorescent, a luminescent, or a colored product upon contact with a substrate. Examples of suitable enzymes include luciferase, green fluorescent protein, urease, alkaline phosphatase, (horseradish) hydrogen peroxidase and glucose oxidase. The use and identification of such labels is well known to those of skill in the art.</p>
+      <p id="p-00103-en" num="0103">In other embodiments, labels or molecules capable of detecting peptides, antigens, constructs, antibodies or antibody fragments may include using aptamers, Methods for making and using aptamers are well known in the art and these methods and uses are contemplated herein. In addition, aptamers may be generated against construct elements disclosed herein and used for any purpose (e.g. purification, detection, modifying effects of the construct etc).</p>
+      <p id="p-00104-en" num="0104">Some embodiments can include methods for detecting and/or making polyclonal or monoclonal antibodies produced by a subject exposed to vaccine compositions disclosed in some embodiments of the present invention. For example, antibodies produced capable of inducing passive immunity to a subject may be isolated, analyzed and/or produced as a whole antibody or fragment thereof, or a polyclonal or a monoclonal antibody. Any means for producing or analyzing these antibodies or antibody fragments known in the art are contemplated.</p>
+      <heading id="h-00019-en" level="2">Nucleic Acid Amplification</heading>
+      <p id="p-00105-en" num="0105">Nucleic acid sequences used as a template for amplification can be isolated from viruses, bacteria, cells or cellular components contained in the biological sample, according to standard methodologies, A nucleic acid sequence may be genomic DNA or fractionated or Whole cell RNA. Where RNA is used, it may be desired to convert the to a complementary cDNA. In one embodiment, the RNA is whole cell RNA and is used directly as the template for amplification. Any method known in the art for amplifying nucleic acid molecules are contemplated (e.g. PCR, LCR, Qbeta Replicase etc).</p>
+      <heading id="h-00020-en" level="2">Expressed Proteins or Peptides</heading>
+      <p id="p-00106-en" num="0106">Genes can be expressed in any number of different recombinant DNA expression systems to generate large amounts of the polypeptide product, which can then be purified and used in methods and compositions reported herein. Any method known in the art for generating and using constructs is contemplated. In certain embodiments, genes or gene fragments encoding one or more polypeptide mays be inserted into an expression vector by standard cloning or subcloning techniques known in the art.</p>
+      <p id="p-00107-en" num="0107">Some embodiments, using a gene or gene fragment encoding a polypeptide may be inserted into an expression vector by standard subcloning techniques. An expression vector may be used which produces the recombinant polypeptide as a fusion protein, allowing rapid affinity purification of a peptide or protein. Examples of such fusion protein expression systems are the glutathione S-transferase system (Pharmacia. Piscataway, N.J.), the maltose binding protein system (NEB, Beverley, Mass.), the FLAG system (IBI, New Haven, Conn.), and the 6×His system (Qiagen, Chatsworth, Calif.).</p>
+      <heading id="h-00021-en" level="2">Pharmaceutical Compositions and Routes of Administration</heading>
+      <p id="p-00108-en" num="0108">Aqueous compositions of some embodiments herein can include an effective amount of a therapeutic protein, peptide, construct, epitopic core region, stimulator, inhibitor, and the like, dissolved or dispersed in a pharmaceutically acceptable carrier or aqueous medium. Aqueous compositions of vectors expressing any of the foregoing are also contemplated. The phrases “pharmaceutically or pharmacologically acceptable” refer to molecular entities and compositions that do not produce an adverse, allergic or other untoward reaction when administered to an animal, or a human, as appropriate.</p>
+      <p id="p-00109-en" num="0109">Aqueous compositions of some embodiments herein can include an effective amount of a therapeutic protein, peptide, construct, an effective amount of the compound, dissolved or dispersed in a pharmaceutically acceptable carrier or aqueous medium. Such compositions can also be referred to as inocula. As used herein, “pharmaceutically acceptable carrier” includes any and all solvents, dispersion media, coatings, antibacterial and antifungal agents, isotonic and absorption delaying agents and the like. The use of such media and agents for pharmaceutical active substances is well known in the art. Except insofar as any conventional media or agent is incompatible with the active ingredient, its use in the therapeutic compositions is contemplated. Supplementary active ingredients can also be incorporated into the compositions. For human administration, preparations should meet sterility, pyrogenicity, general safety and purity standards as required by FDA Office of Biologics standards.</p>
+      <p id="p-00110-en" num="0110">The biological material should be extensively dialyzed to remove undesired small molecular weight molecules and/or lyophilized for more ready formulation into a desired vehicle, where appropriate. The active compounds or constructs will then generally be formulated for parenteral administration, e.g., formulated for injection via the intravenous, intramuscular, sub-cutaneous, intralesional, intranasal or even intraperitoneal routes. Any route used for vaccination or boost of a subject can be used. The preparation of an aqueous composition that contains an active component or ingredient will be known to those of skill in the art in light of the present disclosure. Typically, such compositions can be prepared as injectables, either as liquid solutions or suspensions; solid forms suitable for use in preparing solutions or suspensions upon the addition of a liquid prior to injection can also be prepared; and the preparations can also be emulsified.</p>
+      <p id="p-00111-en" num="0111">Pharmaceutical forms suitable for injectable use can include sterile aqueous solutions or dispersions; formulations including sesame oil, peanut oil or aqueous propylene glycol; and sterile powders for the extemporaneous preparation of sterile injectable solutions or dispersions. In all cases the form must be sterile and must be fluid. It must be stable under the conditions of manufacture and storage and must be preserved against the contaminating action of microorganisms, such as bacteria and fungi.</p>
+      <p id="p-00112-en" num="0112">Solutions of the active compounds as free base or pharmacologically acceptable salts can be prepared in water suitably mixed with a surfactant, such as hydroxypropylcellulose. Dispersions can also be prepared in glycerol, liquid polyethylene glycols, and mixtures thereof and in oils. Under ordinary conditions of storage and use, these preparations may contain a preservative to prevent the growth of microorganisms.</p>
+      <p id="p-00113-en" num="0113">If formulations or constructs disclosed herein are used as a therapeutic to boost an immune response in a subject, a therapeutic agent can be formulated into a composition in a neutral or salt form. Pharmaceutically acceptable salts, include the acid addition salts (formed with the free amino groups of the protein) and which are formed with inorganic acids such as, for example, hydrochloric or phosphoric acids, or such organic acids as acetic, oxalic, tartaric, mandelic, and the like. Salts formed with the free carboxyl groups can also be derived from inorganic bases such as, for example, sodium, potassium, ammonium, calcium, or ferric hydroxides, and such organic bases as isopropylamine, trimethylamine, histidine, procaine and the like.</p>
+      <p id="p-00114-en" num="0114">A carrier can also be a solvent or dispersion medium containing, for example, water, ethanol, polyol (for example, glycerol, propylene glycol, and liquid polyethylene glycol, and the like), suitable mixtures thereof, and vegetable oils. The proper fluidity can be maintained, for example, by the use of a coating, such as lecithin, by the maintenance of the required particle size in the case of dispersion and by the use of surfactants. The prevention of the action of microorganisms can be brought about by various antibacterial and antifungal agents, for example, parabens, chlorobutanol, phenol, sorbic acid, thimerosal, and the like. In many cases, it will be preferable to include isotonic agents, for example, sugars or sodium chloride. Prolonged absorption of the injectable compositions can be brought about by the use in the compositions of agents delaying absorption, for example, aluminum monostearate and gelatin.</p>
+      <p id="p-00115-en" num="0115">Sterile injectable solutions can be prepared by incorporating the active compounds or constructs in the required amount in the appropriate solvent with various of the other ingredients enumerated above, as required, followed by filtered sterilization. Generally, dispersions are prepared by incorporating the various sterilized active ingredients into a sterile vehicle which contains the basic dispersion medium and the required other ingredients from those enumerated above. In the case of sterile powders for the preparation of sterile injectable solutions, the preferred methods of preparation are vacuum-drying and freeze-drying techniques which yield a powder of the active ingredient plus any additional desired ingredient from a previously sterile-filtered solution thereof. The preparation of more, or highly, concentrated solutions for direct injection is also contemplated, where the use of DMSO as solvent is envisioned to result in extremely rapid penetration, delivering high concentrations of the active agents to a small area.</p>
+      <p id="p-00116-en" num="0116">Upon formulation, solutions can be administered in a manner compatible with the dosage formulation and in such amount as is therapeutically effective. The formulations are easily administered in a variety of dosage forms, such as the type of injectable solutions described above, but slow release capsules or microparticles and microspheres and the like can also be employed.</p>
+      <p id="p-00117-en" num="0117">For parenteral administration in an aqueous solution, for example, the solution should be suitably buffered if necessary and the liquid diluent first rendered isotonic with sufficient saline or glucose. These particular aqueous solutions are especially suitable for intravenous, intramuscular, intradermal, intranasal, subcutaneous and intraperitoneal administration. In this connection, sterile aqueous media that can be employed will be known to those of skill in the art in light of the present disclosure. For example, one dosage could be dissolved in 1 ml of isotonic NaCl solution and either added to 1000 ml of hypodermoclysis fluid or injected at the proposed site of infusion, (see for example, “Remington's Pharmaceutical Sciences” 15th Edition, pages 1035-1038 and 1570-1580).</p>
+      <p id="p-00118-en" num="0118">The term “unit dose” refers to physically discrete units suitable for use in a subject, each unit containing a predetermined quantity of the construct composition or boost compositions calculated to produce desired responses, discussed above, in association with its administration, e.g., the appropriate route and treatment regimen. The quantity to be administered, both according to number of treatments or vaccinations and unit dose, depends on the subject to be treated, the state of the subject and the protection desired. The person responsible for administration will, in any event, determine the appropriate dose for the individual subject. For example, a subject may be administered a construct composition disclosed herein on a daily or weekly basis for a time period or on a monthly, bi-yearly or yearly basis depending on need or exposure to a pathogenic organism or to a condition in the subject (e.g. cancer).</p>
+      <p id="p-00119-en" num="0119">The active therapeutic agents may be formulated within a mixture to comprise about 0.0001 to 1.0 milligrams, or about 0.001 to 0.1 milligrams, or about 0.1 to 1.0 or even about 10 milligrams per dose or so. Alternatively active agents (e.g. constructs) may be formulated to comprise a certain number of constructs per dose known to produce a desired effect in a subject. Multiple doses can also be administered.</p>
+      <p id="p-00120-en" num="0120">In addition to the compounds formulated for parenteral administration, such as intravenous, intradermal or intramuscular injection, other pharmaceutically acceptable forms include, e.g., tablets or other solids for oral administration; liposomal formulations; time release capsules; biodegradable and any other form currently used.</p>
+      <p id="p-00121-en" num="0121">One may also use intranasal or inhalable solutions or sprays, aerosols or inhalants. Nasal solutions can be aqueous solutions designed to be administered to the nasal passages in drops or sprays. Nasal solutions can be prepared so that they are similar in many respects to nasal secretions. Thus, the aqueous nasal solutions usually are isotonic and slightly buffered to maintain a pH of 5.5 to 6.5. In addition, antimicrobial preservatives, similar to those used in ophthalmic preparations, and appropriate drug stabilizers, if required, may be included in the formulation. Various commercial nasal preparations are known and can include, for example, antibiotics and antihistamines and are used for asthma prophylaxis.</p>
+      <p id="p-00122-en" num="0122">Additional formulations which are suitable for other modes of administration can include suppositories and pessaries. A rectal pessary or suppository may also be used. In general, for suppositories, traditional binders and carriers may include, for example, polyalkylene glycols or triglycerides; such suppositories may be formed from mixtures containing the active ingredient in the range of 0.5% to 10%, preferably 1%-2%.</p>
+      <p id="p-00123-en" num="0123">Oral formulations can include excipients as, for example, pharmaceutical grades of mannitol, lactose, starch, magnesium stearate, sodium saccharine, cellulose, magnesium carbonate and the like. These compositions take the form of solutions, suspensions, tablets, pills, capsules, sustained release formulations or powders. In certain defined embodiments, oral pharmaceutical compositions will comprise an inert diluent or assimilable edible carrier, or they may be enclosed in hard or soft shell gelatin capsule, or they may be compressed into tablets, or they may be incorporated directly with the food of the diet. For oral therapeutic administration, the active compounds may be incorporated with excipients and used in the form of ingestible tablets, buccal tablets, troches, capsules, elixirs, suspensions, syrups, wafers, and the like. Such compositions and preparations should contain at least 0.1% of active compound. The percentage of the compositions and preparations may, of course, be varied and may conveniently be between about 2 to about 75% of the weight of the unit, or preferably between 25-60%. The amount of active compounds in such compositions is such that a suitable dosage can be obtained.</p>
+      <p id="p-00124-en" num="0124">The tablets, troches, pills, capsules and the like may also contain the following: a binder, as gum tragacanth, acacia, cornstarch, or gelatin; excipients, such as dicalcium phosphate; a disintegrating agent, such as corn starch, potato starch, alginic acid and the like; a lubricant, such as magnesium stearate; and a sweetening agent, such as sucrose, lactose or saccharin may be added or a flavoring agent, such as peppermint, oil of wintergreen, or cherry flavoring. When the dosage unit form is a capsule, it may contain, in addition to materials of the above type, a liquid carrier. Various other materials may be present as coatings or to otherwise modify the physical form of the dosage unit. For instance, tablets, pills, or capsules may be coated with shellac, sugar or both. A syrup of elixir may contain the active compounds sucrose as a sweetening agent methyl and propylparabens as preservatives, a dye and flavoring, such as cherry or orange flavor.</p>
+      <heading id="h-00022-en" level="2">Kits</heading>
+      <p id="p-00125-en" num="0125">Further embodiments concerns kits for use with the methods and compositions described herein. Some embodiments concern kits having one or more vaccine or boost compositions of use to prevent or treat subjects having or exposed to a pathogen or have a condition. In certain embodiments, a pathogen can include a viral, bacterial, fungal, or protozoan derived pathogen. A condition can include a chronic condition or a condition like cancer. Other embodiments concern kits having vaccine compositions of use to prevent or treat subjects having or exposed to influenza or poxvirus. Kits can be portable, for example, able to be transported and used in remote areas. Other kits may be of use in a health facility to treat a subject having been exposed to a virus or suspected of being at risk of exposure to a pathogen (e.g. viral pathogen). Kits can include one or more construct compositions that can be administered before, during and/or after exposure to a pathogen. Other kits can include dehydrated formulations of constructs contemplated herein in order to prolong the half-life of the constructs (e.g. for stockpiling the vaccinations in the event of an outbreak or providing treatments to remote areas).</p>
+      <p id="p-00126-en" num="0126">Other embodiments can concern kits for making and using molecular constructs described herein. In certain embodiments, compositions can include constructs having one or more of, attenuated or modified MVA and poxvirus secretory signals. Other constructs can also include at least one secretory signal sequence. Yet other embodiments can have a construct that includes translation control sequences (e.g. IRES). Other reagents for making and using constructs are contemplated.</p>
+      <p id="p-00127-en" num="0127">Kits can also include a suitable container, for example, vials, tubes, mini- or microfuge tubes, test tube, flask, bottle, syringe or other container. Where an additional component or agent is provided, the kit can contain one or more additional containers into which this agent or component may be placed. Kits herein will also typically include a means for containing the agent, composition and any other reagent containers in close confinement for commercial sale. Such containers may include injection or blow-molded plastic containers into which the desired vials are retained. Optionally, one or more additional agents such as other anti-viral agents, anti-fungal or anti-bacterial agents may be needed for compositions described, for example, for compositions of use as a vaccine.</p>
+      <p id="p-00128-en" num="0128">Dose ranges used during vaccination can vary depending on the nature of the live attenuated vaccine and viral vector used. For recombinant poxviruses these doses can range between 10<sup>5</sup>-10<sup>7 </sup>PFUs. In certain embodiments of the present invention, immunogenic doses can be as low as 10<sup>2 </sup>pfu. Frequency of vaccination can vary depending on the nature of the vaccine, the condition of the subject and also the route of administration used. One regimen can include a primary immunization (prime) followed up by a boost administration four to six weeks post-prime immunization. In certain embodiments of the present invention, improvements in antigen translation and expression can permit fewer and/or lower doses to be administered to a subject. Some embodiments concern intramuscular administration and/or intradermal vaccination of a subject.</p>
+      <p id="p-00129-en" num="0129">Any method known to one skilled in the art may be used for large scale production of recombinant peptides or proteins. In accordance with these embodiments, large-scale production of MVA can be used. For example, master and working seed stocks may be prepared under GMP conditions in qualified primary CEFs. Cells may be plated on large surface area flasks, grown to near confluence and infected at selected MOI and vaccine virus purified. Cells may be harvested and intracellular virus released by mechanical disruption, cell debris removed by large-pore depth filtration and host cell DNA digested with endonuclease. Virus particles may be subsequently purified and concentrated by tangential-flow filtration, followed by diafiltration. The resulting concentrated bulk vaccine may be formulated by dilution with a buffer containing stabilizers, filled into vials, and lyophilized. For use, the lyophilized vaccine may be reconstituted by addition of diluent.</p>
+      <p id="p-00130-en" num="0130">Poxviruses are known for their stability. The ability to lyophilize vaccinia for long term, room temperature storage and distribution was one of the key attributes that permitted widespread use of the vaccine and eradication of smallpox. Recently, it was demonstrated that Dryvax vaccinia virus stockpiled in the 60's was still potent after several decades. Procedures for lyophilization and storage of poxviruses are well know in the art and could be applied to the recombinant poxvirus vaccines for some embodiments disclosed herein.</p>
+      <p id="p-00131-en" num="0131">The following examples are included to demonstrate certain embodiments presented herein. It should be appreciated by those of skill in the art that the techniques disclosed in the examples that follow represent techniques discovered to function well in the practices disclosed herein. However, those of skill in the art should, in light of the present disclosure, appreciate that many changes can be made in the certain embodiments which are disclosed and still obtain a like or similar result without departing from the spirit and scope herein.</p>
+      <heading id="h-00023-en" level="1">EXAMPLES</heading>
+      <p id="p-00132-en" num="0132">Many constructs described herein were generated, separated and purified by methods disclosed herein (data not shown) for use in various studies. Some of these constructs are detailed m the descriptions below. In certain methods, constructs with and without influenza gene segments and peptides were generated and used in mouse models exposed to influenza challenges.</p>
+      <heading id="h-00024-en" level="1">Example 1</heading>
+      <p id="p-00133-en" num="0133">In one exemplary method, a construct composition including an influenza segment and a vaccinia secretory segment was tested for induction of immune protection against influenza challenge. <figref>FIGS. 1A and 1</figref> B illustrate a mouse model vaccinated and challenged with a virus. Here, Balb/C mice were vaccinated with MVA/IRES/tPA/HA (107 pfu) and challenged with VN/1203 63 (A/Vietnam/1203/04 (H5N1)-10<sup>4 </sup>TCID<sub>50</sub>) days post-vaccination. A) Weight loss, and B) Lungs titers, day 4 post-challenge. An MVA construct expressing an influenza segment elicited protection against the viral challenge. All the MVA vectored plague vaccines tested in this study were shown to be completely safe in severe combined immuno-deficient (SCID) mice. MVA has been stockpiled for use as a second-generation smallpox vaccine, with superior safety to the original live, attenuated vaccinia strains. Thus, a recombinant MVA/IRES/tPA/influenza segment vaccine has the potential to simultaneously provide protection against smallpox and influenza.</p>
+      <heading id="h-00025-en" level="1">Example 2</heading>
+      <p id="p-00134-en" num="0134">Dose Sparing: In another exemplary method, various constructs were tested in a range of doses to analyze their protective effects and to test some of the limitations in these dose ranges. <figref>FIGS. 2A-2C</figref> represents Balb/C mice (n=10) vaccinated ID with 105, 6 or 7 pfu and challenged with VN/1203 on day 63 post-vaccination. Weight loss curves are displayed for A) MVA/IRES/tPA/HA, B) MVA/IRES/C13L/HA, and C) MVA/HA native.</p>
+      <heading id="h-00026-en" level="1">Example 3</heading>
+      <heading id="h-00027-en" level="1">Long-Term and Cross-Clade Protection</heading>
+      <p id="p-00135-en" num="0135">
+        <figref>FIG. 3</figref> illustrates that certain vaccine constructs presented herein provide long-Term Immunity. Balb/C mice (n=7) were intradermally (ID) vaccinated with 105 (HA) and/or 107 (NP) pfu and challenged with VN/1203 at 28 wks post-vaccination</p>
+      <heading id="h-00028-en" level="1">Example 4</heading>
+      <heading id="h-00029-en" level="1">Heterologous Clade 2 Challenge</heading>
+      <p id="p-00136-en" num="0136">
+        <figref>FIG. 4</figref> illustrates cross-clade protection. Here, Balb/C mice (n=7) ID were vaccinated with 10<sup>5 </sup>(HA) or 10<sup>7 </sup>(NP) pfu/mouse, and challenged with VN/UT 28 wks post-vaccination.</p>
+      <heading id="h-00030-en" level="2">Safety</heading>
+      <p id="p-00137-en" num="0137">In another example, safeties of some of the vaccine constructs were assessed. <figref>FIG. 5</figref> represents mice tested with certain constructs described herein. In this example, SCID/Balb/C mice (n=6) were IP inoculated with 10<sup>8 </sup>pfu/animal MVA-influenza constructs or 10<sup>6 </sup>pfu/animal Wild Type Vaccinia and monitored for morbidity and pox lesions for 6 weeks.</p>
+      <p id="p-00138-en" num="0138">Experiments conducted in herein demonstrate that recombinant MVA influenza vaccines are safe &amp; efficacious. It was demonstrated that single dose intradermal injection was able to provides 100% protection from lethal challenge. In addition, dose sparing introductions at about 5×10<sup>5 </sup>offers 100% protection. In certain examples, protection was demonstrated to last up to 28 weeks. Other examples demonstrate that including NP in the constructs may provide cross-clade protection. Using a mouse model, it was demonstrated that recombinant MVA influenza vaccines are safe in SCID mice. These experiments demonstrate that MVA construct vaccinations may provide viable alternatives to traditional influenza vaccination, particularly for emerging virus subtypes.</p>
+      <p id="p-00139-en" num="0139">B8R was used as a Vaccinia IFN-gamma soluble receptor. C13L is associated with a non-expressed protein in Vaccinia that may be a serpin homologue. As indicated these sequences are not present in MVA. The signal scores are equivalent or better than those for tPA. The scores are similar and not significantly different in the context of other antigens.</p>
+      <p id="p-00140-en" num="0140">Putative Vaccinia signal sequences were analyzed and C13L signal was identified as a potent element for constructs generated and used herein. B8R signal could be more obvious as it is part of a known secreted Vaccinia protein.</p>
+      <heading id="h-00031-en" level="2">Poxvirus Alternative Secretory Signals.</heading>
+      <p id="p-00141-en" num="0141">Alternative signal sequences from orthopox virus have been identified to replace tPA in certain constructs for example, for secretion enhancement from MVA. In this example, tPA cleavage site is correctly identified in F1 construct according to program signal P 3.0. Predicted cleavage after AG of NgoMIV site. Hidden Markov model (HMM) score of 98.8%.</p>
+      <heading id="h-00032-en" level="1">Example 5</heading>
+      <heading id="h-00033-en" level="1">Exemplary Secretory Signal Sequences and Constructs</heading>
+      <p id="p-00142-en" num="0142">Some Options for constructs are outlined below.</p>
+      <p id="p-00143-en" num="0143">C13L, exemplary secretory signal sequence <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>i. VV-cop: 12510-12313 (complete DNA sequence: 12510-11971).</li><li>ii. Unknown protein function. Located near serpin homologues.</li><li>iii. VV-cop version has a deletion following the signal peptide that causes a frame shift and unrelated protein sequence prior to termination 44 aa later. The DNA sequence is present in comparison to orthopox orthologs. The last 100 bp are present at 179670-179767 as an inverted repeat. Full coding sequence equivalent to VV-WR, loci 206.</li><li>iv. Secretory signal:         <ul id="ul-00003-en" list-style="none"><li>1. 1 MMIYGLIACLIFVTSSIAASP 20 (SEQ ID NO:1)</li><li>2. Signal peptide score=10.3, probability=6.1×10<sup>−5</sup>, VV-WR 1.1×10<sup>−3</sup>.</li><li>3. Cleavage in F1 either AGA-DL (neural network) or SIA-SPAGAD (HMM) with 99.8% signal probability.</li></ul></li></ul></li></ul></p>
+      <p id="p-00144-en" num="0151">B8R exemplary secretory signal sequence <ul id="ul-00004-en" list-style="none"><li><ul id="ul-00005-en" list-style="none"><li>i. VV-cop:</li><li>ii. IFN-gamma soluble receptor gene:         <ul id="ul-00006-en" list-style="none"><li>1. B8R is secreted from the cell to bind host IFN-gamma</li><li>2. Secretory signal:             <ul id="ul-00007-en" list-style="none"><li>a. 1 MRYIIILAVLFINSIHAAKI (SEQ ID NO:2)</li><li>b. Signal peptide score=10.5, probability=4.1×10<sup>−4 </sup></li></ul></li><li>3. Cleavage with F1 either KAG-ADL (neural network) or HA-KAGAD (HMM) with 99.1% signal probability.</li></ul></li></ul></li></ul></p>
+      <p id="p-00145-en" num="0159">Signal sequence design with and without IRES.</p>
+      <p id="p-00146-en" num="0160">a. tPA without IRES.</p>
+      <p id="p-00147-en" num="0161">b. With IRES, insert into XmaI site, not SalI site: <ul id="ul-00008-en" list-style="none"><li><ul id="ul-00009-en" list-style="none"><li>i. C13L:         <ul id="ul-00010-en" list-style="none"><li>1) For, 5′ IRES, Xma, tm=64.7:</li></ul></li></ul></li></ul></p>
+      <p id="p-00148-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="196pt" align="right" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 3)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>a) 5′ TCGT<i>CCCGG</i><u><i>G</i>TTATTTTCCACCATATTGCCGT</u> 3′</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+        <ul id="ul-00011-en" list-style="none">
+          <li>
+            <ul id="ul-00012-en" list-style="none">
+              <li>
+                <ul id="ul-00013-en" list-style="none">
+                  <li>2) Rev, 3′ C13L-Ngom, tm=64.7 with IRES sequence:</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p id="p-00149-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="189pt" align="right" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 4)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>a) 5′TCGT<i>GCCGGC</i><b>TGGACTAGCGATGGATGAAGTC</b></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>
+                    <b>ACGAATATAAGACACGCTATTAATCCGTATATCAT</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>
+                    <u>
+                      <b>CAT</b>ATTATCATCGTGTTTTTCAAAGGA</u> 3′</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+        <ul id="ul-00014-en" list-style="none">
+          <li>
+            <ul id="ul-00015-en" list-style="none">
+              <li>
+                <ul id="ul-00016-en" list-style="none">
+                  <li>3) pI41(pI4,C13L) created and annotated in CLC.</li>
+                </ul>
+              </li>
+              <li>ii. B8R:         <ul id="ul-00017-en" list-style="none"><li>1) For, 5′ IRES, Xma, tm=64.7:</li></ul></li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p id="p-00150-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="196pt" align="right" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 5)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>a) 5′ TCGT<i>CCCGG</i><u><i>G</i>TTATTTTCCACCATATTGCCGT</u> 3′</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+        <ul id="ul-00018-en" list-style="none">
+          <li>
+            <ul id="ul-00019-en" list-style="none">
+              <li>
+                <ul id="ul-00020-en" list-style="none">
+                  <li>2) Rev, 3′ B8R-Ngom, tm=64.7 with IRES sequence:</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p id="p-00151-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="189pt" align="right" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 6)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>a) 5′TCGT<i>GCCGGC</i><b>TTTAGCGTGTATACTATTAATGA</b></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>
+                    <b>ACAAAACTGCGAGAATTATAATATATCT</b>
+                    <u>
+                      <b>CAT</b>ATTAT</u>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>
+                    <u>CATCGTGTTTTTCAAAGGA</u> 3′</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+        <ul id="ul-00021-en" list-style="none">
+          <li>
+            <ul id="ul-00022-en" list-style="none">
+              <li>
+                <ul id="ul-00023-en" list-style="none">
+                  <li>3) pI142(pI14,C13L) created and annotated in CLC.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p id="p-00152-en" num="0170">c. Without IRES: <ul id="ul-00024-en" list-style="none"><li><ul id="ul-00025-en" list-style="none"><li>i. C13L         <ul id="ul-00026-en" list-style="none"><li>1) For: 5′ C13L-Xma,Ngom,Nhe</li></ul></li></ul></li></ul></p>
+      <p id="p-00153-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="196pt" align="right" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 7)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>a) 5′<i>CCGGG</i><u>ATGATGATATACGGATTAATAGCGTGTCT</u></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>
+                    <u>TATATTCGTGACTTCATCCATCGCTAGTCCA</u>
+                    <img id="img-00001-en" he="2.46mm" wi="12.02mm" alt="custom-character" img-content="character" file="US20150246109A1_00034.PNG" img-format="png" original="US20150246109A1-20150903-P00001.TIF" />
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>3′</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+        <ul id="ul-00027-en" list-style="none">
+          <li>
+            <ul id="ul-00028-en" list-style="none">
+              <li>
+                <ul id="ul-00029-en" list-style="none">
+                  <li>2) Rev: 3′ C13L Xma, Ngom,Nhe</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p id="p-00154-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="196pt" align="right" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 8)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>a) 5′ <b>CTAG</b><img id="img-00002-en" he="2.46mm" wi="12.02mm" alt="custom-character" img-content="character" file="US20150246109A1_00035.PNG" img-format="png" original="US20150246109A1-20150903-P00002.TIF" /><u>TGGACTAGCGATGGATGAAGTC</u></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>
+                    <u>ACGAATATAAGACACGCTATTAATCCGTATATCATCA</u>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>
+                    <u>T<i>C</i></u> 3′</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+        <ul id="ul-00030-en" list-style="none">
+          <li>
+            <ul id="ul-00031-en" list-style="none">
+              <li>
+                <ul id="ul-00032-en" list-style="none">
+                  <li>3) pI44(sel,C13L) created and annotated in CLC.</li>
+                </ul>
+              </li>
+              <li>ii. B8R         <ul id="ul-00033-en" list-style="none"><li>1) For: 5′ B8R-Xma,Ngom,Nhe</li></ul></li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p id="p-00155-en" num="0000">
+        <tables id="tables-00007-en" num="00007">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="189pt" align="right" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 9)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>a) 5′<i>CCGGG</i><u>ATGAGATATATTATAATTCTCGCAGTTTT</u></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>
+                    <u>GTTCATTAATAGTATACACGCTAAA</u>
+                    <img id="img-00003-en" he="2.46mm" wi="10.24mm" alt="custom-character" img-content="character" file="US20150246109A1_00036.PNG" img-format="png" original="US20150246109A1-20150903-P00003.TIF" />
+                    <b>G</b> 3′</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+        <ul id="ul-00034-en" list-style="none">
+          <li>
+            <ul id="ul-00035-en" list-style="none">
+              <li>
+                <ul id="ul-00036-en" list-style="none">
+                  <li>2) Rev: 3′ B8R-Xma, Ngom,Nhe</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p id="p-00156-en" num="0000">
+        <tables id="tables-00008-en" num="00008">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="196pt" align="right" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 10)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>a) 5′<b>CTAG</b><img id="img-00004-en" he="2.46mm" wi="12.02mm" alt="custom-character" img-content="character" file="US20150246109A1_00037.PNG" img-format="png" original="US20150246109A1-20150903-P00004.TIF" /><u>TTTAGCGTGTATACTATTAATGA</u></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>
+                    <u>ACAAAACTGCGAGAATTATAATATATCTCAT</u>
+                    <i>C</i> 3′</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+        <ul id="ul-00037-en" list-style="none">
+          <li>
+            <ul id="ul-00038-en" list-style="none">
+              <li>
+                <ul id="ul-00039-en" list-style="none">
+                  <li>3) pI45(sel,B8R) created and annotated in CLC.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <heading id="h-00034-en" level="2">Materials and Methods</heading>
+      <heading id="h-00035-en" level="2">Construction of MVA Recombinant Vaccines</heading>
+      <p id="p-00157-en" num="0179">The transfer plasmid was used to generate recombinant MVA expressing influenza gene segments. Any method known in the art can be used to generate these constructs.</p>
+      <p id="p-00158-en" num="0180">Some Construct Test Groups include the following in the presence or absence of various native and non-IRES constructs (e.g. IRES, tPA, C13L and B8R).</p>
+      <p id="p-00159-en" num="0181">1. MVA/HA (IM) prime</p>
+      <p id="p-00160-en" num="0182">2. MVA/HA (IM) prime/boost</p>
+      <p id="p-00161-en" num="0183">3. MVA/HA (IM) prime+MVA/flagellin (Adjuvant)</p>
+      <p id="p-00162-en" num="0184">4. MVA/HA (ID) prime</p>
+      <p id="p-00163-en" num="0185">5. MVA/HA (ID) prime/boost</p>
+      <p id="p-00164-en" num="0186">6. MVA/HA (ID) prime+MVA/flagellin (Adjuvant)</p>
+      <p id="p-00165-en" num="0187">7. MVA/GFP prime/boost (IM)</p>
+      <p id="p-00166-en" num="0188">8. MVA/GFP prime/boost (IM) flagellin</p>
+      <p id="p-00167-en" num="0189">9. Formalin Inactivated VN/1203 5 μg (IM) prime/boost</p>
+      <p id="p-00168-en" num="0190">Some of these constructs have been generated in <i>E. coli</i>. Some constructs were expressed in CEF (chicken embryo fibroblasts, data not shown). Some constructs include one or more influenza gene segment(s) (e.g. HA, NA, NP, Hat, Some constructs include native or IRES or non-IRES constructs. Other constructs include native, C13L and IRES/C13L constructs with and without an pathogen associated gene segment.</p>
+      <heading id="h-00036-en" level="2">Immunization and Challenge</heading>
+      <p id="p-00169-en" num="0191">Groups of mice (e.g Harlan Sprague Dawley, Indianapolis, Ind.) received primary and booster immunizations with each vaccine candidate via intramuscular injections into hind legs. Then the mice were challenges with various viruses disclosed herein for protection.</p>
+      <heading id="h-00037-en" level="2">Serology</heading>
+      <p id="p-00170-en" num="0192">Serum samples were collected post-primary vaccination and post-boost (pre-challenge) by means known in the art to assess antibody titers against influenza or poxvirus.</p>
+      <heading id="h-00038-en" level="2">Statistical Analysis</heading>
+      <p id="p-00171-en" num="0193">The Student's t-test and the Log rank test were used to compare groups of data. Probability values &lt;0.05 were considered significant using the GraphPad Prism 5 software (La Jolla, Calif.) for all statistical analyses.</p>
+      <p id="p-00172-en" num="0194">Possible Secretory Signal Sequences of Use for Constructs Disclosed Herein</p>
+      <p id="p-00173-en" num="0000">
+        <tables id="tables-00009-en" num="00009">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="49pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="84pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>VV-cop</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>have SSP</entry>
+                  <entry>IN MVA</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>A13L</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>A14L</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>A39R</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>A41L</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>A56R</entry>
+                  <entry>yes</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>B19R</entry>
+                  <entry>no</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>B25R</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>B5R</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>B7R</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>B8R</entry>
+                  <entry>no</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>B9R</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>C11R</entry>
+                  <entry>yes</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>C13L</entry>
+                  <entry>no</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>C19L</entry>
+                  <entry>no</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>C3L</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>F5L</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>G3L</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>K2L</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>M2L</entry>
+                  <entry>no</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00174-en" num="0195">In certain experiments it was noted that IM vaccinations such as Prime/Boost scheme were very effective, that there was increased morbidity with prime only. An adjuvant may not be effective and that in certain experiments it was observed that there was an increase in morbidity &amp; mortality with the flagellin. In other experiments, ID Vaccinations using all tested schemes provide complete protection with the least morbidity occurring with prime/boost. An adjuvant was not contributing and adjuvant alone does not provide protection.</p>
+      <p id="p-00175-en" num="0196">Some dose ranges were tested in a mouse model for certain constructs disclosed herein. Some of the doses ranges were about 5×10<sup>5 </sup>to about 5×10<sup>7</sup>. Weight loss of test animals was one way to monitor effectiveness of vaccination formulations and constructs tested.</p>
+      <p id="p-00176-en" num="0197">
+        <figref>FIGS. 6A and 6B</figref> represent exemplary plots of parameters in mice after intramuscular (IM) introduction of various constructs of some embodiments described herein to the mice followed by challenge with influenza, A) Weight loss and B) Survival post-challenge.</p>
+      <p id="p-00177-en" num="0198">
+        <figref>FIGS. 7A and 7B</figref> represent exemplary plots of parameters in mice after intradermal (ID) introduction of various constructs of some embodiments described herein to the mice followed by challenge with influenza, A) Weight loss and B) Survival post-challenge/infection.</p>
+      <p id="p-00178-en" num="0199">
+        <figref>FIGS. 8A and 8B</figref> represent exemplary plots of parameters in mice after (A) intramuscular (IM) or (B) intradermal (ID) introduction of various constructs of some embodiments described herein to the mice followed by challenge with influenza. These exemplary experiments assess several clinical indications. The indications were graded in the mouse model on a scale of 0 to 4. 0=no signs of illness, 1=ruffled fur; 2=pitted coat, hunched posture, shivering and slow movement; 3=labored breathing, anorexia, little/no movement and 4=paralysis, moribund.</p>
+      <p id="p-00179-en" num="0200">
+        <figref>FIG. 9</figref> represents an exemplary plot that illustrates viral titers in lung after introduction of various constructs of some embodiments described herein to the mice followed by challenge with influenza. Mice were sacrificed in each group on day 4 (post challenge/infection, 3 mice per group) and lungs were homogenized and tittered on MDCKs. Log virus titer is presented.</p>
+      <p id="p-00180-en" num="0201">Table 1 represents some of the MVA influenza transfer vectors and constructs generated and tested.</p>
+      <p id="p-00181-en" num="0202">
+        <figref>FIGS. 10A and 10B</figref> represent exemplary plots of percent weight change in mice after introduction of 2 different constructs of some embodiments described herein having the HA gene segment in each construct followed by challenge with influenza. These construct were administered at different doses (5×10<sup>5 </sup>to 5×10<sup>7</sup>)</p>
+      <p id="p-00182-en" num="0203">
+        <figref>FIGS. 11A and 11B</figref> represent exemplary plots of percent weight change in mice after introduction of 2 different constructs of some embodiments described herein followed by challenge with influenza. In A), these construct were administered at different doses (5×105 to 5×107). In B. a traceable compound was linked to an MVA construct.</p>
+      <p id="p-00183-en" num="0204">
+        <figref>FIGS. 12A and 12B</figref> represent exemplary plots of percent weight change in mice after introduction of 2 different constructs at various concentrations of some embodiments described herein followed by challenge with influenza. These construct were administered at different doses (5×105 to 5×107).</p>
+      <p id="p-00184-en" num="0205">
+        <figref>FIGS. 13A and 13B</figref> represent exemplary plots of percent survival in mice after introduction of 2 different constructs at various concentrations of some embodiments described herein followed by challenge with influenza. These construct were administered at different doses (5×105 to 5×107). Some of the constructs included additional elements, tPA and IRES. It was observed at day 8 that mice having constructs with an IRES and tPA element had decreased survival than MVA/HA alone in a construct.</p>
+      <p id="p-00185-en" num="0206">
+        <figref>FIGS. 14A and 14B</figref> represent exemplary plots of survival in mice after introduction of 2 different constructs at various concentrations of some embodiments described herein followed by challenge with influenza. These construct were administered at different doses (5×105 to 5×107). Some of the constructs included additional elements, tPA and IRES sequences (A). It was observed at day 8 that mice having constructs with an IRES and tpa element had decreased survival than MVA/HA alone in a construct. When the tPA element was replaced with another secretory signal C13L, survival was 100 percent for the time period tested.</p>
+      <p id="p-00186-en" num="0207">
+        <figref>FIGS. 15A and 15B</figref> represent exemplary plots of survival in mice after introduction of 2 different constructs at various concentrations of some embodiments described herein followed by challenge with influenza (dpi represents days post infection). These construct were administered at different doses (5×105 to 5×107).</p>
+      <p id="p-00187-en" num="0208">
+        <figref>FIGS. 16A and 16B</figref> represent exemplary plots of clinical scores (e.g. physical and physiological parameters, see above scores from 0 to 4) in mice after introduction of 2 different constructs at various concentrations of some embodiments described herein followed by challenge with influenza. These construct were administered at different doses (5×105 to 5×107). In addition an MVA construct linked to a detectible marker was also introduced and followed in the mice.</p>
+      <p id="p-00188-en" num="0209">
+        <figref>FIGS. 17A and 17B</figref> represent exemplary plots of clinical scores (e.g. physical and physiological parameters) in mice after introduction of 2 different constructs at various concentrations of some embodiments described herein followed by challenge with influenza. These construct were administered at different doses (5×105 to 5×107). In addition an MVA construct linked to a detectible marker (GFP) was also introduced and followed in the mice.</p>
+      <p id="p-00189-en" num="0210">
+        <figref>FIG. 18</figref> represents an exemplary plot of clinical scores (e.g. physical and physiological parameters) in mice after introduction of a construct at various concentrations of some embodiments described herein followed by challenge with influenza. These construct were administered at different doses (5×105 to 5×107). In addition an MVA construct linked to a detectible marker (GFP) was also introduced and followed in the mice.</p>
+      <heading id="h-00039-en" level="1">Example 6</heading>
+      <p id="p-00190-en" num="0211">Groups of mice (n=8) were inoculated intradermally with modified vaccinia Ankara (MVA) three month prior to intradermal vaccination with MVA/flu vaccines expressing hemagglutinin and/or nucleoprotein in with or without secretory signal (C13L).</p>
+      <p id="p-00191-en" num="0000">
+        <tables id="tables-00010-en" num="00010">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>represents Antibody titers (Geometric mean titer - GMT) of serum</entry>
+                </row>
+                <row>
+                  <entry>samples following prime and booster (intradermal)</entry>
+                </row>
+                <row>
+                  <entry>vaccination with MVA/influenza vaccines in mice</entry>
+                </row>
+                <row>
+                  <entry>with pre-existing immunity to vaccinia:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="91pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Vaccine</entry>
+                  <entry>Sampling</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="77pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Construct</entry>
+                  <entry>Pre-Boost</entry>
+                  <entry>Post-Boost</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="77pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>MVA/HA</entry>
+                  <entry>3.61<sup>c</sup></entry>
+                  <entry>697.92<sup>a</sup></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MVA/C13L/HA</entry>
+                  <entry>1.00<sup>c</sup></entry>
+                  <entry>65.42<sup>b</sup></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MVA/C13L/NP</entry>
+                  <entry>1.00<sup>c</sup></entry>
+                  <entry>1.00<sup>c</sup></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MVA/HA/C13L/NP</entry>
+                  <entry>2.11<sup>c</sup></entry>
+                  <entry>697.92<sup>a</sup></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MVA/GFP</entry>
+                  <entry>1.00<sup>c</sup></entry>
+                  <entry>1.00<sup>c</sup></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="left" id="entry-00001-en">
+                    <sup>a-c</sup>group different letters differ significantly (P &lt; 0.05) by ANOVA</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00192-en" num="0212">
+        <figref>FIGS. 19A and 19B</figref> represent (A) mean weigh changes in immunized mice challenged with Influenza A/Vietnam/1203-H5N1 virus (10<sup>4 </sup>TCID<sub>50</sub>) 4 wks post-booster vaccination with MVA/Flu vaccines. Mice had pre-existing immunity to vaccinia. Mice immunized with MVA/Flu containing the hemagglutinin antigen did not lose weight; and (B) represents Clinical score of mice challenged with Influenza A/Vietnam/1203-H5N1 virus (10<sup>4 </sup>TCID<sub>50</sub>) 4 wks post-booster vaccination with MVA/Flu vaccines. Mice had pre-existing immunity to vaccinia prior to immunization of MVA/Flu vaccines. Clinical scores 0-4 are detailed above <figref>FIG. 20</figref> represents survival rates of immunized mice (using the same constructs as in <figref>FIGS. 19A</figref> and B above) challenged with Influenza A/Vietnam/1203-H5N1 virus (104 TCID50) 4 wks post-booster vaccination with MVA/Flu vaccines. Mice had pre-existing immunity to vaccinia prior to immunization of MVA/Flu vaccines. All mice immunized with MVA/Flu containing the hemagglutinin antigen survived challenge with lethal dose of Influenza A/Vietnam/1203-H5N1 virus.</p>
+      <heading id="h-00040-en" level="1">Example 7</heading>
+      <heading id="h-00041-en" level="1">In Vitro Expression of Influenza Virus Proteins by MVA/Flu Viruses</heading>
+      <p id="p-00193-en" num="0213">
+        <figref>FIG. 21</figref> represents a schematic construct of having two influenza gene segments from different subtypes each having a secretory signal associated with the gene segment. In certain examples, the secretory signal can be naturally occurring and in other examples it can be inserted next to or fused to the influenza gene segment, or a combination thereof.</p>
+      <p id="p-00194-en" num="0214">In one exemplary method, expression levels of the HAL HA5 and NP antigens of influenza virus were assessed by immunoblot analyses of proteins from CEF cells infected with the MVA/Flu recombinant viruses. Expression levels were evaluated in whole cell extracts and in cell culture supernatants 48 hr post-infection (<figref>FIG. 22</figref>). Both HA1 and HA5 proteins were detected (based on their predicted sizes) in whole cell extract (FIGS. <b>22</b>Ai and <b>22</b>Aii, FIGS. <b>22</b>Bi and <b>22</b>Bii) as well as in the culture supernatant (FIGS. <b>22</b>Bi and <b>22</b>Bii). To facilitate secretion of NP into the culture supernatant the C13L secretory signal sequence was fused to the 5′ end of the NP protein. As illustrated in <figref>FIG. 22C</figref> NP expression was detected in both cellular and supernatant fractions from cells infected with the MVA/C13L/NP virus. The native NP protein had the expected molecular weight of 56 kD (<figref>FIG. 22C</figref>). In contrast, the C13L/NP fusion protein appears slightly larger than the native NP suggesting that the signal peptide is not cleaved upon expression or secretion (<figref>FIG. 22C</figref>). Results indicate that the C13L secretory signal increases NP secretion into the culture supernatant as compared to the native NP construct. As with the single antigen constructs, recombinant viruses expressing both HA and NP proteins (MVA/HA1/C13L/NP and MVA/HA5/C13L/NP) demonstrated increased levels of NP protein in cellular fractions than the supernatant fraction (data not shown).</p>
+      <heading id="h-00042-en" level="1">Example 8</heading>
+      <heading id="h-00043-en" level="1">Efficacy of a Single Dose of MVA/Flu Vaccine Against Homologous Challenge</heading>
+      <p id="p-00195-en" num="0215">In another exemplary methods, groups of BALB/c mice (n=10) were vaccinated ID (intradermally) with a single dose of MVA/HA1 or MVA/HA5 recombinant vaccine and challenged by the IN route eight weeks later. Antibody titers were measured by hemagglutination Inhibition (HI) assays against A/Norway/3487-2/09(NW/09) or A/Vietnam/1203/04 (VN/1203), respectively and survival rates following challenge recorded. The vaccines elicited significantly higher (P≦0.05) HI titers (<figref>FIGS. 23A and 23B</figref>) compared to the control virus (MVA/GFP) and conferred complete protection against homologous challenge with NW/09 or VN/1203, respectively (<figref>FIGS. 23C and 23D</figref>). Although one out of three mice vaccinated with a single dose of MVA/HA1 or MVA/HA5 showed high titers of virus in their lungs on day 3 post challenge, the overall viral loads in the lungs of immunized mice were significantly lower (p&lt;0.05) compared to those from MVA/GFP immunized mice (<figref>FIGS. 23E and 23F</figref>). Furthermore, mice receiving a prime and boost immunization with MVA/Flu vaccine in subsequent studies, cleared the virus from their lungs three days post-challenge (<figref>FIG. 24</figref>). Mice in the control group lost weight and were humanely euthanized when they reached 20% weight loss. No significant (P&gt;0.05) weight losses were recorded in animals that received any of the MVA/Flu vaccines (MVA/HA1 or MVA/HA5) upon challenge with NW/09 or VN/1203, respectively (<figref>FIGS. 23G and 23H</figref>). In an ancillary long-term immunity study, mice were immunized with a single dose of MVA/HA5 and seven months later they were challenged with a lethal dose of VN/1203. All vaccinated animals were protected while control animals succumbed to challenge with a median survival day of seven.</p>
+      <heading id="h-00044-en" level="1">Example 9</heading>
+      <heading id="h-00045-en" level="1">Cross-Protective Immunity of MVA/Flu Vaccines</heading>
+      <p id="p-00196-en" num="0216">In yet another exemplary method, cross-protective efficacy of MVA/Flu vaccines expressing for example, both HA and NP influenza proteins (MVA/HA1/C13L/NP and MVA/HA5/C13L/NP) were tested against IN challenge with 100 LD50 of the H5N1 strain A/Vietnam/1203/04 (VN/1203) (1×104 pfu), the H1N1 pandemic strain A/Norway/3487-2/09 (NW/09) (1.0×106 pfu), the H1N1 seasonal strain A/Puerto Rico/8/34 (PR8) (3.99×105 pfu) or the H3N2 seasonal strain A/Aichi/2/68 (Aichi/68) (2.5×104 pfu) virus. Following prime and booster vaccinations, strong antibody titers were induced against the homologous virus strains; however no cross-reactive antibodies were detected against heterologous viruses (Table 3).</p>
+      <p id="p-00197-en" num="0217">In one example, the MVA/HA1/C13L/NP vaccine elicited strong HI antibody titers to NW/09 virus but failed to induce any antibody responses to the heterologous strains PR8 \, VN/1203 or Aichi/68 viruses (Table 3). Despite the lack of cross-reactivity in HA titers, complete protection against challenge with PR8 or VN/1203 was observed (Table 3). In addition, the MVA/HA1/C13L/NP vaccine conferred partial protection (57.1%) against challenge with Aichi/68 virus (Table 3). In the case of the MVA/HA5/C13L/NP virus, it did not induce any detectable antibody responses to any of the H1N1 viruses (NW/09 and PR8) or H3N2 (Aichi/68) virus. However, it did protect immunized mice against challenge with the H1N1 PR8 strain (Table 3). Analysis of lung viral loads following challenge with the H1N1 pandemic NW/09 strain showed significantly higher (P≦0.05) virus titers in mice vaccinated with MVA/HA5/C13L/NP or MVA/GFP virus as compared to mice immunized with MVA/HA1/C13L/NP virus (<figref>FIG. 24</figref>).</p>
+      <p id="p-00198-en" num="0218">Mice immunized with MVA/HA1/C13L/NP vaccine had no significant weight loss following challenge with the H5N1 VN/1203 strain whereas those immunized with the MVA/HA5/C13L/NP virus had significant weight loss upon challenge with H1N1 pandemic NW/09 strain (<figref>FIGS. 25A and 25B</figref>). Mice in the control group consistently lost weight upon challenge with VN/1203, NW/09, PR8 or Aichi/68 virus (<figref>FIGS. 25A</figref>, <b>25</b>B, <b>25</b>C and <b>25</b>D). In conjunction with the cross-protection survival data, mice immunized with MVA/HA5/C13L/NP demonstrated significant weight loss (P≦0.05) compared to mice immunized with MVA/HA1/C13L/NP upon challenge with the H3N2 Aichi/68 virus (<figref>FIG. 25D</figref>); however no significant differences in weight were recorded in mice immunized with MVA/HA1/C13L/NP or MVA/HA5/C13L/NP vaccines following challenge with seasonal H1N1 PR8 virus (<figref>FIG. 25C</figref>). Taken together, these data indicate that certain constructs can provide broader cross-protective immunity that others, for example, the MVA/HA1/C13L/NP vaccine that conferred complete protection from all three group 1 A strains and partial protection against the group 2 H3N2 strain. Surprisingly, the MVA/HA5/C13L/NP strain completely protected against heterologous challenge with the seasonal H1N1 strain, but not pandemic H1N1 strain, nor the H3N2 strain.</p>
+      <heading id="h-00046-en" level="1">Example 10</heading>
+      <heading id="h-00047-en" level="1">Vector Immunity</heading>
+      <p id="p-00199-en" num="0219">In another exemplary method, MVA was used to pre-expose a group of mice to an influenza vaccine having proteins from multiple subtypes. In these experiments, pre-exposure of mice to MVA significantly (P&lt;0.05) affected the neutralizing antibody titers elicited post-priming with MVA/HA5 vaccine. This effect could be reversed following a booster vaccination with the same virus (<figref>FIG. 26A</figref>). Moreover, pre-existing immunity to MVA did not have any significant impact on the protective efficacy of the vaccine after prime and booster immunizations (<figref>FIG. 26B</figref>).</p>
+      <heading id="h-00048-en" level="1">Example 11</heading>
+      <heading id="h-00049-en" level="1">Safety of the MVA/Flu Vaccine</heading>
+      <p id="p-00200-en" num="0220">In another method, SCID mice were injected intraperitoneally with the MVA/HA5 or MVA/C13L/NP viruses or the control MVA/GFP virus. These mice did not develop any pox lesions or any other signs of morbidity. In contrast, animals that were infected with vaccinia-Wyeth, developed pox lesions on their tails, feet and mouth region, and demonstrated gradual weight loss. By week four, the vaccinia-Wyeth group displayed average weight loss of approximately 11% in addition to ruffled fur, hunched posture and pox lesions (data not shown). Weight losses in the vaccinia-Wyeth group was significantly greater (P&lt;0.0001) than in groups that were infected with MVA/Flu vaccines (<figref>FIG. 27</figref>).</p>
+      <p id="p-00201-en" num="0000">
+        <tables id="tables-00011-en" num="00011">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="287pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Cross-protective immunity of MVA/Flu vaccines</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="center" />
+              <colspec colname="2" colwidth="224pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Challenge virus</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <colspec colname="4" colwidth="56pt" align="center" />
+              <colspec colname="5" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>H5N1</entry>
+                  <entry>H1N1pdm</entry>
+                  <entry>H1N1 seasonal</entry>
+                  <entry>H3N2 seasonal</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(VN/1203)</entry>
+                  <entry>(NW/09pdm)</entry>
+                  <entry>(PR8)</entry>
+                  <entry>(Aichi/68)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="center" />
+              <colspec colname="9" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Post-</entry>
+                  <entry />
+                  <entry>Post-</entry>
+                  <entry />
+                  <entry>Post-</entry>
+                  <entry />
+                  <entry>Post-</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Boost</entry>
+                  <entry />
+                  <entry>Boost</entry>
+                  <entry />
+                  <entry>Boost</entry>
+                  <entry />
+                  <entry>Boost</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Titer</entry>
+                  <entry>%</entry>
+                  <entry>Titer </entry>
+                  <entry>%</entry>
+                  <entry>Titer </entry>
+                  <entry>%</entry>
+                  <entry>Titer </entry>
+                  <entry>%</entry>
+                </row>
+                <row>
+                  <entry>Vaccines</entry>
+                  <entry>(GMT)</entry>
+                  <entry>Survival</entry>
+                  <entry>(GMT)</entry>
+                  <entry>Survival</entry>
+                  <entry>(GMT)</entry>
+                  <entry>Survival </entry>
+                  <entry>(GMT)</entry>
+                  <entry>Survival</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <colspec colname="7" colwidth="28pt" align="char" char="." />
+              <colspec colname="8" colwidth="28pt" align="char" char="." />
+              <colspec colname="9" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>MVA/HA<sub>1</sub>/C13L/NP</entry>
+                  <entry>&lt;20<sup>a</sup></entry>
+                  <entry>100</entry>
+                  <entry>373</entry>
+                  <entry>100</entry>
+                  <entry>&lt;20</entry>
+                  <entry>100</entry>
+                  <entry>&lt;20</entry>
+                  <entry>57.1</entry>
+                </row>
+                <row>
+                  <entry>MVA/HA<sub>5</sub>/C13L/NP</entry>
+                  <entry>149</entry>
+                  <entry>100</entry>
+                  <entry>&lt;20</entry>
+                  <entry>28.6</entry>
+                  <entry>&lt;20</entry>
+                  <entry>100</entry>
+                  <entry>&lt;20</entry>
+                  <entry>14.3</entry>
+                </row>
+                <row>
+                  <entry>MVA/GFP</entry>
+                  <entry>&lt;20</entry>
+                  <entry>0</entry>
+                  <entry>&lt;20</entry>
+                  <entry>28.6</entry>
+                  <entry>&lt;20</entry>
+                  <entry>14.3</entry>
+                  <entry>&lt;20</entry>
+                  <entry>28.6</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="left" id="entry-00002-en">
+                    <sup>a</sup>Below limit of detection. Hemagglutination inhibition antibody titers are presented as geometric mean</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00050-en" level="2">Materials and Methods</heading>
+      <heading id="h-00051-en" level="2">Cells and Viruses</heading>
+      <p id="p-00202-en" num="0221">Mardin-Darby canine kidney (MDCK) cells obtained from the American Type Culture Collection (ATCC, Manassas, Va.) were propagated in Dulbecco's Modified Eagle's Medium (DMEM) supplemented with 10% fetal bovine serum (FBS) and 1% antibiotics. Stocks of chicken embryo fibroblasts (CEF) were produced as previously described. The CEF were used for propagating modified vaccinia Ankara (MVA) virus. Highly pathogenic avian influenza (H5N1) virus (A/Vietnam/1203/04), pandemic H1N1 virus (A/Norway/3487-2/09), seasonal H1N1 virus (A/Puerto Rico/8/34) and H3N2 virus (A/Aichi/2/68) were obtained. The influenza viruses were propagated and titrated by TCID50 in MDCK cells with DMEM that contained 1% bovine serum albumin and 20 mM HEPES and were, stored as infectious stocks at −80° C. Viral stock titers were determined by endpoint dilution and recorded as 50% tissue culture infectious dose (TCID50) as previously described. Culture media for H1N1 and H3N2 viruses also included 1 μg/ml of trypsin treated with tosyl phenylalanyl chloromethyl ketone (TPCK). Work with H5N1 influenza virus was conducted in a BSL3+ facility in compliance with the UW Madison Office of Biological Safety.</p>
+      <p id="p-00203-en" num="0222">Construction of plasmids and production of MVA recombinant vaccines</p>
+      <p id="p-00204-en" num="0223">In one exemplary embodiment, transfer plasmid pdIIIGFP encoding green fluorescent protein were used to generate recombinant MVA viruses expressing influenza virus antigens as previously described but other methods can be used. Hemagglutinin (HA1) gene from H1N1pdm (A/California/04/09) and HA5 gene from H5N1 (A/VN1203/04) virus were synthesized after codon optimization for mammalian expression by GeneScript (Piscataway, N.J.). Coding regions of HA1 and HA5 proteins were amplified by PCR from the GeneScript constructs using 5′HA1 ssp/3′HA1 or 5′ HA5 ssp/3′ HA5, respectively, (Table 3) to generate appropriate restriction sites and their native secretory signals and then sub-cloned into plasmid pdIIIGFP, generating plasmids pdIIIGFP/HA1 and pdIIIGFP/HA5 respectively. An alternative transfer plasmid with a secretory signal, pdIIIGFP/C13L, was generated by inserting a linker, 5′/3′ C13L-ssp, (Table 3) fused with a secretory signal from vaccinia virus (from the N terminus of the C13L vaccinia gene) at the 5′ end of the multiple cloning site (MCS) such that antigens could be inserted in frame with the secretory signal. The entire coding region of nucleoprotein (NP) of H5N1 influenza virus (A/Vietnam/1203/04) was amplified by PCR from cDNA clone and then inserted into plasmid pdIIIGFP/C13L to generate the plasmid pdIIIGFP/C13L/NP. A dual transfer vector pdIIIGFP-d was constructed by inverting the GFP cassette in pdIIIGFP and then inserting a second promoter/MCS cassette in an inverted orientation to the primary promoter cassette (<figref>FIG. 21</figref>). The coding regions of HAL HA5 and C13L/NP were sub-cloned from the single expression constructs to generate dual expression constructs pdIIIGFP/HA1/C13L/NP and pdIIIGFP/HA5/C13L/NP, respectively (<figref>FIG. 21</figref>).</p>
+      <p id="p-00205-en" num="0224">The recombinant MVA/Flu viruses were generated as described previously for each HA and NP constructs. Briefly, CEF cells grown in 35 mm 6-well plates were infected with wild-type MVA at a multiplicity of infection (MOI) of 0.05 pfu/cell for one hour (h) and then transfected with each of the expression plasmids using Lipofectamine™ (Invitrogen, Carlsbad, Calif.). At 48-72 h post-transfection, cell monolayers were harvested, centrifuged at 500×g for 5 min at 4° C. and disrupted by freeze-thaw and sonication (2 times for 15 seconds using a Virtis600 at setting 3). The disrupted cell extracts containing possible recombinant viruses expressing GFP were plated onto fresh CEF and overlaid with 0.8% agarose. After 48-72 h of incubation, recombinant virus-generated plaques were detected by fluorescence using an inverted microscope and picked into media with a glass pipette. The cell/virus samples were sonicated and plated as described above. After three consecutive rounds of plaque purification, high titer virus stocks were prepared in CEF for subsequent in vitro and in vivo characterization.</p>
+      <p id="p-00206-en" num="0000">
+        <tables id="tables-00012-en" num="00012">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1" tabstyle="monospace">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="357pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 4</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Sequence of primers used for amplification of influenza virus proteins</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="224pt" align="left" />
+              <colspec colname="3" colwidth="98pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Restriction</entry>
+                </row>
+                <row>
+                  <entry>Primer</entry>
+                  <entry>PCR Primer Sequence<sup>a</sup></entry>
+                  <entry>Enzyme</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>5′ HA<sub>5</sub> </entry>
+                  <entry>5′-tctc<b>CCCGGG</b>atggagaaaatagtgcttctttttgcaa</entry>
+                  <entry>XmaI</entry>
+                </row>
+                <row>
+                  <entry>ssp</entry>
+                  <entry>tagtcagtcttgttaaaagtgatcagatttgcattggttaccat-3′</entry>
+                  <entry>(SEQ ID NO:11)</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>3′ HA<sub>5</sub></entry>
+                  <entry>5′-ggc<b>GGATCC</b>ttaaatgcaaattctgcattgt-3′</entry>
+                  <entry>NgomIV</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>(SEQ ID NO: 12)</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>5′HA<sub>1</sub> </entry>
+                  <entry>5′-gtga<b>CCCGGG</b>atgaaggccatcctggtcgtgctgctgtacaccttcg</entry>
+                  <entry>XmaI</entry>
+                </row>
+                <row>
+                  <entry>ssp</entry>
+                  <entry>ccaccgccaacgccgacacactgtgtatcgggtat-3′</entry>
+                  <entry>(SEQ ID NO: 13)</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>3′HA<sub>1</sub></entry>
+                  <entry>5′-gatcc<b>GCTAGC</b>tcagatacagat-3′</entry>
+                  <entry>NheI</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>(SEQ ID NO: 14)</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>5′ NP</entry>
+                  <entry>5′-gtga<b>GCCGGC</b>gcgtctcaaggcaccaaa-3′</entry>
+                  <entry>NgomIV</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>(SEQ ID NO: 15)</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>3′NP</entry>
+                  <entry>5′-gc<b>GAATTC</b>ttaattgtcatactcctctgcattgt-3′</entry>
+                  <entry>EcoRI</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>(SEQ ID NO: 16)</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>5′</entry>
+                  <entry>5′-<b>CCGGG</b>atgatgatatacggattaatagcgtgtcttatattcgtgacttc</entry>
+                  <entry>XmaI, NgomIV, NheI</entry>
+                </row>
+                <row>
+                  <entry>C13L-ssp</entry>
+                  <entry>atccatcgctagtcca<b>GCCGGCG</b>-3′</entry>
+                  <entry>(SEQ ID NO: 17)</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>3′ </entry>
+                  <entry>5′-<b>CTAGCGCCGGC</b>tggactagcgatggatgaagtcacgaatata</entry>
+                  <entry>XmaI, NgomIV, NheI</entry>
+                </row>
+                <row>
+                  <entry>C13L-ssp</entry>
+                  <entry>agacacgctattaatccgtatatcatcat<b>C</b>-3′</entry>
+                  <entry>(SEQ ID NO: 18)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="left" id="entry-00003-en">
+                    <sup>a</sup>Restriction enzyme sites are capitalized.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00052-en" level="2">In Vitro Expression of Influenza Virus Antigens</heading>
+      <p id="p-00207-en" num="0225">The in vitro expression of HA or NP antigens by recombinant MVA/Flu viruses was determined by immuno-blot analyses. CEF cells were seeded into 6-well plates and then infected with either of the recombinant viruses at a multiplicity of infection (MOI) of 0.5 pfu/cell under serum free conditions. At 48 h post-infection, the infected cells were harvested in the presence of a protease inhibitor cocktail (Mini Protease tabs, Roche Diagnostics, Indianapolis, Ind.), washed, resuspended in 1× loading buffer and heated to 95° C. for 5 min. The supernatants from the infected cells were centrifuged and concentrated by ultrafiltration with a 3 kDa cutoff membrane (Nanosep 3K Omega, Pall, Inc., East Hills, N.Y.). The concentrated supernatants were then combined with an equal volume of 2× gel loading buffer and heated to 95° C. for 5 min. Supernatant and cell samples were resolved by SDS polyacrylamide gel electrophoresis (SDS-PAGE) and transferred to a nitrocellulose membrane for immuno-blot analysis using anti-H1 (NR-15429, ferret polyclonal), anti-H5 (NR-2730, mouse monoclonal) or anti-NP (NR-4282, mouse monoclonal) antibodies (ATCC, BEI Resources, Manassas, Va.).</p>
+      <heading id="h-00053-en" level="2">Animal Studies</heading>
+      <p id="p-00208-en" num="0226">All mouse studies were conducted at University of Wisconsin-Madison animal facilities and were approved by its Interinstitutional Animal Care and Use Committee (IACUC). Challenge experiments involving H5N1 virus (A/Vietnam/1203/04) were conducted in an ABSL3+ facility in compliance with the University of Wisconsin-Madison Office of Biological Safety.</p>
+      <heading id="h-00054-en" level="2">Vaccine Efficacy</heading>
+      <p id="p-00209-en" num="0227">A series of experiments were performed to assess the immunogenicity and protective efficacy of MVA/Flu viruses (MVA/HA1, MVA/HA5, MVA/C13L/NP, MVA/HA1/C13L/NP and MVA/HA5/C13L/NP). Groups (n=10) of five week old BALB/c mice (Harlan, Indianapolis, Ind.) were vaccinated with 1×107 plaque forming unit (pfu) of recombinant MVA/Flu virus contained in 50 μl of PBS via the intradermal (ID) route. The animals received a single dose or two vaccine doses (28 days apart) and then blood samples were collected 28 and 56 days post-primary vaccination, respectively for serological analysis. At 56 days post-primary vaccination, mice were challenged by intranasal (IN) instillation under isoflurane anesthesia with 100 LD50 of either A/Vietnam/1203/04 (VN/1203) (1×104 pfu), A/Norway/3487-2/09 (NW/09) (1.0×106 pfu), A/Puerto Rico/8/34 (PR8) (3.99×105 pfu) or A/Aichi/2/68 (Aichi/68) (2.5×104 pfu) virus contained in 50 μl of PBS. At day three post-challenge, three mice from each group were euthanized and lung tissues were collected and homogenized using a mechanical homogenizer (MP Biochemicals, Solon, Ohio). Viral titers in the homogenates were quantified by plaque assay on MDCK cells. Body weight was measured on alternative days and survival rates were recorded daily for 14 days. Mice showing 20% or more of body weight loss were considered to have reached the experimental end point and were humanely euthanized.</p>
+      <heading id="h-00055-en" level="2">Vector Immunity</heading>
+      <p id="p-00210-en" num="0228">To assess the effect of pre-existing immunity to the vector virus on MVA/Flu vaccines, groups of 4 week old BALB/c mice (n=7) were first injected ID with MVA/GFP (1×107 pfu) virus and then vaccinated with the recombinant MVA/FLU vaccine (same route and dose) three months later. Following the initial MVA/GFP inoculation, mice were vaccinated with 2 doses (28 days apart) of either 1×107 pfu of MVA/HA5 or MVA/GFP virus followed (28 days post-boost) by a challenge with 100 LD50 of VN/1203 virus. Mice were monitored for morbidity and survival rates recorded over 14 days.</p>
+      <heading id="h-00056-en" level="2">Vaccine Safety</heading>
+      <p id="p-00211-en" num="0229">Safety of MVA/Flu viruses was evaluated in severe combined immunodeficiency (SCID) BALB/c mice. Briefly, 4-6 week old SCID mice (n=6) were injected intraperitoneally with 1×108 pfu of the MVA/HA5, MVA/C13L/NP, MVA/GFP virus, or 1×106 pfu of wild-type (WT) vaccinia virus (Wyeth strain). Mice were monitored for 9 weeks for morbidity including weight loss and appearance of pox lesions.</p>
+      <heading id="h-00057-en" level="2">Serology</heading>
+      <p id="p-00212-en" num="0230">Blood samples were collected from all animals via the maxillary vein at different time-points post-vaccination and prior to challenge to determine antibody titers by hemagglutination inhibition (HI) or by microneutralization assays. Briefly, aliquots of serum samples were treated with receptor destroying enzyme (RDE, Denka Seiken, TKY). One volume of pooled serum was added to three volumes of RDE, incubated at 37° C. for 16 hours, then heat-inactivated at 56° C. for 1 h. Hemagglutination inhibition (HI) assay was conducted by mixing 25 μl of two-fold serial dilutions of sera in with 8 HA units of virus re-suspended in the same volume of PBS and incubated in 96-well plates for 45 min at room temperature (RT). Following this, 50 μl of turkey red blood cells (0.5%) were added and plates were incubated at RT for 45 min. HI titers of sera were determined as the highest dilution that displayed hemagglutinin inhibition activity. For microneutralization assay, 50 μl of serially (two-fold) treated serum samples were added to 50 μl of virus containing 200 TCID50 units and then incubated at 37° C. for 1 hour. The virus-serum mixture from each dilution was added to duplicate wells of MDCK cells in 96-well plates, incubated at 37° C. for 72 hours, fixed and stained with 10% crystal violet in 10% formalin to determine the TCID. The titer was defined as the serum dilution resulting in complete neutralization of the virus.</p>
+      <heading id="h-00058-en" level="2">Statistical Analysis</heading>
+      <p id="p-00213-en" num="0231">One way ANOVA was used to evaluate the vaccine group effects on pre-boost and pre-challenge antibody titers. If the vaccine group effect was statistically significant (P&lt;0.05 by Kruskal-Wallis test), an all pair-wise comparison among groups was performed using an unadjusted P-value of 0.05. Survival analyses were performed to assess vaccine effectiveness against challenge viruses; reported P-values are from Fisher's exact test. Probability values &lt;0.05 were considered significant using the GraphPad Prism 5 software (La Jolla, Calif.) for all statistical analyses.</p>
+      <p id="p-00214-en" num="0232">
+        <figref>FIG. 21</figref>: Represents a schematic of a recombinant plasmid construction. Expression cassettes were generated by PCR for each of the influenza virus hemagglutinin antigens, HA1 and HA5 as described in the materials and methods. The cassettes were cloned into the pdIIIGFP vector and the resulting plasmids were designated as pdIIIGFP/HA1 and pdIIIGFP/HA5. The coding regions of HAL HA5 and C13L/NP were sub-cloned from the single expression constructs to generate dual expression constructs pdIIIGFP/HA1/C13L/NP and pdIIIGFP/HA5/C13L/NP. Homologous recombination into MVA was successfully completed and recombinant MVA/Flu viruses were identified by GFP expression. HA, NP and C13L are represented with orange, green and pink color codings. MCS1 and MCS2-multiple cloning sites; Flanks1 and Flanks2-open box, GFP-striped box; dSP—orthopoxvirus secretory signals, either p11 (gfp) or synthetic early/late promoter (MCS1/2) and delIII—MVA deletion region III.</p>
+      <p id="p-00215-en" num="0233">
+        <figref>FIG. 22</figref> illustrates expression of influenza virus proteins by recombinant MVA/flu viruses in infected cells. Monolayers of CEF cells were infected with exemplary recombinant MVA/flu constructs including, MVA/C13L/NP, MVA/HA1, MVA/HA5, MVA/HA1/C13L/NP or MVA/HA5/C13L/NP virus at MOI of 0.05 pfu/cell. At 48 h post-infection cells were harvested and subjected to SDS-PAGE followed by Western blot analysis. (A) HA expression in CEF cell (c) and supernatant (s) fractions detected with anti-H1 antibody in (Ai) MVA/HA1 and (Aii) MVA/HA1/C13L/NP. (B) HA expression in CEF cell (c) and supernatant (s) fractions detected with anti-H5 antibody in (Bi) MVA/HA5 and (Bii) MVA/HA5/C13L/NP. 50 ng of HA5 protein was loaded as a positive control for size (C) NP expression in CEF cell (c) and supernatant (s) fractions detected with anti-NP antibody in MVA/NP and MVA/C13L/NP. M indicates molecular weight markers.</p>
+      <p id="p-00216-en" num="0234">
+        <figref>FIG. 23</figref> represents an example of efficacy of MVA/Flu vaccine against homologous challenge: Mice were immunized with the (n=10) were challenged against pandemic H1N1 (NW/09) (A, C, E, G) or H5N1 (VN/1203) (B, D, F, H). Fifty-six days following primary immunization antibody titers were determined by HI assay (A, B). Mice were challenged 56 days post primary immunization and survival rates were recorded (C, D). Three days post-challenge lung viral load were determined (E, F) and clinical scores (weight) measured over 14 days post-challenge (G, H).</p>
+      <p id="p-00217-en" num="0235">
+        <figref>FIG. 24</figref> represents an example of lung viral titers in vaccinated and control animals following challenge with NW/09pdm: Mice (n=3) immunized with two doses (28 days apart) of MVA/HA1/C13L/NP or MVA/HA5/C13L/NP vaccine were challenged with A/H1N1pdm (NW/09) virus 28 days post-boost. Three days post-challenge lungs from mice were harvested and analyzed for viral load by plaque assay. Data points represent antibody titers per gram of tissue (PFU/g) in individual mice. Horizontal bars indicate the mean.</p>
+      <p id="p-00218-en" num="0236">
+        <figref>FIG. 25</figref> represents and example of cross protective efficacy of MVA/Flu vaccines: Mean weight of immunized mice (n=7) following challenge with A (VN/1203), B (NW/09), C (PR8) or D (Aichi/68).</p>
+      <p id="p-00219-en" num="0237">
+        <figref>FIG. 26</figref> represents an example of effects of vector immunity on vaccine efficacy: Cohorts of mice (n=7) were first injected with MVA vector and then received two doses of MVA/Flu vaccine three months later. Following prime and booster vaccinations, antibody titers were measured by microneutralization (A) and twenty eight days following the booster vaccination, mice were challenged with VN/1203 and survival rates were recorded (B).</p>
+      <p id="p-00220-en" num="0238">
+        <figref>FIG. 27</figref> represents an example of safety of MVA-vectored vaccines in SCID mice: Following inoculation of mice (n=6) with MVA/Flu vaccine (1×108 pfu) or with Wyeth strain of vaccinia virus (1×106 pfu), mice were monitored 9 weeks for (A) ruffleness, hunched posture, pox lesions and (B) for weight loss. Mean body weights are presented.</p>
+      <p id="p-00221-en" num="0239">
+        <figref>FIG. 28</figref> illustrates an exemplary plasmid construct of some embodiments disclosed herein. <figref>FIG. 29</figref> illustrates a histogram plot of cross-protective activity using certain constructs described herein.</p>
+      <p id="p-00222-en" num="0240">All of the COMPOSITIONS and METHODS disclosed and claimed herein can be made and executed without undue experimentation in light of the present disclosure. While the compositions and methods have been described in terms of preferred embodiments, it is apparent to those of skill in the art that variations maybe applied to the COMPOSITIONS and METHODS and in the steps or in the sequence of steps of the methods described herein without departing from the concept, spirit and scope herein. More specifically, certain agents that are both chemically and physiologically related may be substituted for the agents described herein while the same or similar results would be achieved. All such similar substitutes and modifications apparent to those skilled in the art are deemed to be within the spirit, scope and concept as defined by the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A construct comprising:
+<claim-text>a modified vaccinia virus construct having at least one poxvirus secretory signal sequence associated with a first influenza gene segment or fragment thereof, and</claim-text></claim-text>
+      <claim-text>at least a second influenza gene segment or fragment thereof,</claim-text>
+      <claim-text>wherein the influenza gene segments in the construct are capable of producing an immune response to more than one influenza subtype when introduced to a subject.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The construct of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the influenza gene segment comprises hemagglutinin (HA), neuraminidase (NA), nucleoprotein (NP), matrix (M) polymerase (P) or fragment thereof or a combination thereof.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The construct of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the fragment comprises at least 6, or at least 8, or at least 10 contiguous amino acids of the influenza gene segment.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The construct of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the poxvirus secretory signal sequence comprises, C13L, B8R or any other poxvirus secretory signal sequence.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The construct of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the poxvirus secretory signal sequence is fused to the influenza gene segment.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The construct of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising one or more translational control sequences.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The construct of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the vaccinia virus comprises modified vaccinia Ankara (MVA).</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The construct of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein at least one of the influenza gene segments comprises a naturally-occurring influenza gene segment comprising a naturally-occurring secretory signal sequence.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The construct of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the influenza gene segments are from different influenza subtypes or different influenza strains.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The construct of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein at least one influenza gene segment comprises an influenza gene segment from a seasonal influenza virus subtype.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The construct of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein at least one influenza gene segment comprises an influenza gene segment from a pandemic influenza virus subtype.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The construct of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first influenza gene segment comprises the influenza gene segment nucleoprotein (NP); and the second influenza gene segment comprises the influenza gene segment comprises hemagglutinin (HA).</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. A pharmaceutical composition comprising the construct of <claim-ref idref="clm-00001-en">claim 1</claim-ref>; and a pharmaceutically acceptable excipient.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The pharmaceutical composition of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, further comprising one or more additional poxvirus constructs having non-poxvirus antigens or fragments thereof.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. A method for inducing an immune response to more than one influenza virus infection in a subject comprising:
+<claim-text>administering a pharmaceutical composition comprising one or more construct of <claim-ref idref="clm-00001-en">claim 1</claim-ref> to the subject, wherein administration induces an immune response to more than one influenza virus subtype in the subject.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the influenza gene segment comprises hemagglutinin (HA), neuraminidase (NA), nucleoprotein (NP), matrix (M) or a combination thereof.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein at least one influenza gene segment is obtained from a seasonal influenza virus.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein at least one influenza gene segment is obtained from a pandemic influenza virus.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the subject has an influenza virus infection and the composition treats the influenza virus infection in the subject.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the composition reduces the onset of more than one influenza virus infection in the subject.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, further comprising administering a composition comprising: one or more poxvirus constructs prior to or at the same time as administering a composition comprising one or more construct of <claim-ref idref="clm-00001-en">claim 1</claim-ref> to the subject, wherein the composition is capable of inducing an immune response in the subject.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The method of <claim-ref idref="clm-00021-en">claim 21</claim-ref>, wherein the composition comprising one or more poxvirus constructs is administered to the subject between 6 months and immediately prior to the second composition.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein administration of the pharmaceutical composition comprises administering the composition intradermally, subcutaneously, intravenously, orally, intranasally, by inhalation or other mode of administration.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. A vaccine kit comprising;
+<claim-text>one or more pharmaceutical compositions of <claim-ref idref="clm-00013-en">claim 13</claim-ref>; and</claim-text><claim-text>at least one container. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00010.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00011.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00012.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00013.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00014.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00015.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00016.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00017.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00018.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00019.TIF" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00020.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00020.TIF" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00021.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00021.TIF" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00022.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00022.TIF" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00023.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00023.TIF" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00024.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00024.TIF" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00025.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00025.TIF" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00026.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00026.TIF" />
+    </figure>
+    <figure num="27">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00027.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00027.TIF" />
+    </figure>
+    <figure num="28">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00028.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00028.TIF" />
+    </figure>
+    <figure num="29">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00029.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00029.TIF" />
+    </figure>
+    <figure num="30">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00030.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00030.TIF" />
+    </figure>
+    <figure num="31">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00031.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00031.TIF" />
+    </figure>
+    <figure num="32">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00032.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00032.TIF" />
+    </figure>
+    <figure num="33">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00033.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246109A1-20150903-D00033.TIF" />
+    </figure>
+    <figure num="34">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00034.PNG" alt="image" img-content="undefined" img-format="png" original="US20150246109A1-20150903-P00001.TIF" inline="yes" />
+    </figure>
+    <figure num="35">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00035.PNG" alt="image" img-content="undefined" img-format="png" original="US20150246109A1-20150903-P00002.TIF" inline="yes" />
+    </figure>
+    <figure num="36">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00036.PNG" alt="image" img-content="undefined" img-format="png" original="US20150246109A1-20150903-P00003.TIF" inline="yes" />
+    </figure>
+    <figure num="37">
+      <img he="N/A" wi="N/A" file="US20150246109A1_00037.PNG" alt="image" img-content="undefined" img-format="png" original="US20150246109A1-20150903-P00004.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150246109A1.PDF" type="pdf" size="3369668" pages="62" />
+</lexisnexis-patent-document>

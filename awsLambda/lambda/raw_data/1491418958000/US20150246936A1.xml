@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246936A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021236" date-changed="20151214" time-changed="185339">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139013">
+        <country>US</country>
+        <doc-number>20150246936</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14425103</doc-number>
+        <date>20130829</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="regional">
+        <country>EP</country>
+        <doc-number>12182885</doc-number>
+        <date>20120904</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C07F   7/08        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>F</subclass>
+        <main-group>7</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C08G  18/38        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>38</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C08G  18/71        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>71</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C08G  18/72        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>72</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C07F   7/0818      20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>F</subclass>
+        <main-group>7</main-group>
+        <subgroup>0818</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C07F   7/1836      20130101 LI20141107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>F</subclass>
+        <main-group>7</main-group>
+        <subgroup>1836</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C08G  18/289       20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>289</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C08G  18/3893      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>3893</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C08G  18/718       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>718</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C08G  18/72        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>72</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C08G  18/73        20130101 LI20140612BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>73</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140612</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C08G  18/755       20130101 LI20140612BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>755</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140612</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C08G  18/758       20130101 LI20140612BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>758</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140612</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">16</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">ISOCYANATOSILANES WITH THIOURETHANE STRUCTURE</invention-title>
+    <references-cited date-changed="20151204">
+      <patent-citations name="patcit" date-changed="20151204" />
+      <citation>
+        <patcit num="1" dnum="US3627722A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>3627722</doc-number>
+            <kind>A</kind>
+            <name>SEITER GEORGE M</name>
+            <date>19711214</date>
+          </document-id>
+          <application-date>
+            <date>19700528</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US4031120A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4031120</doc-number>
+            <kind>A</kind>
+            <name>GERVASE NICHOLAS J</name>
+            <date>19770621</date>
+          </document-id>
+          <application-date>
+            <date>19760507</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US3149139A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>3149139</doc-number>
+            <kind>A</kind>
+            <date>19640915</date>
+          </document-id>
+          <application-date>
+            <date>19600908</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Bayer MaterialScience AG</orgname>
+            <role>03</role>
+            <address>
+              <city>Monheim Am Rhein</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Laas</last-name>
+            <first-name>Hans-Josef</first-name>
+            <address>
+              <city>Odenthal</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13067939</doc-number>
+        <date>20130829</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014037279</doc-number>
+        <date>20140313</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="164692912">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014037279</doc-number>
+            <kind>A1</kind>
+            <date>20140313</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246936</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104583222</doc-number>
+            <kind>A</kind>
+            <date>20150429</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2892905</doc-number>
+            <kind>A1</kind>
+            <date>20150715</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164692911">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014037279</doc-number>
+            <kind>A1</kind>
+            <date>20140313</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246936</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104583222</doc-number>
+            <kind>A</kind>
+            <date>20150429</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2892905</doc-number>
+            <kind>A1</kind>
+            <date>20150715</date>
+          </document-id>
+          <application-date>
+            <date>20130829</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The invention relates to a method for producing compounds containing isocyanate and silane groups by reacting at least A) one monomeric diisocyanate containing aliphatically, cycloaliphatically, araliphatically and/or aromatically bonded isocyanate groups with B) a mercaptosilane, characterised in that component A) is reacted with component B) in an equivalent ratio of isocyanate groups to mercapto groups of at least 06:01 to at most 40:1. Furthermore, the invention relates to the products which can be obtained using the method according to the invention, and to a composition containing compounds that contain isocyanate and silane groups. Moreover, the invention relates to the use of the products which can be obtained using the method according to the invention and the composition according to the invention as starting components in the production of silane group-containing polyurethanes, cross-linkable binders, varnish, and raw materials for sealants or adhesives.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150311</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246936A1</docdb-publication-number>
+      <docdb-application-id>444209773</docdb-application-id>
+      <new-owner>BAYER MATERIALSCIENCE AG, GERMANY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:LAAS, HANS-JOSEF;REEL/FRAME:035140/0802</free-text-description>
+      <effective-date>
+        <date>20150129</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <p id="p-00001-en" num="0001">The invention relates to a process for preparing compounds containing isocyanate groups and silane groups, to the products obtainable by this process and to a composition comprising compounds containing isocyanate groups and silane groups. The invention further relates to the use of the products obtainable by the process according to the invention and of the composition of compounds containing isocyanate groups and silane groups as a starting component in the preparation of polyurethanes containing silane groups, and in the production of crosslinkable binders and of raw materials for varnishes, sealants or adhesives.</p>
+      <p id="p-00002-en" num="0002">Isocyanatoorganosilanes, being compounds having two different reactive functionalities, are units of interest for chemical synthesis. They can react either with compounds bearing acidic hydrogen atoms via the isocyanate group or, for example in the presence of moisture, crosslink under polycondensation of the silane group. Isocyanatoorganosilanes are of particular significance for modification of hydroxy-functional polymers for a number of different applications.</p>
+      <p id="p-00003-en" num="0003">Isocyanatoalkylalkoxysilanes, as described, for example, in U.S. Pat. No. 3,494,951 or EP-A 0 649 850, enable, for example, the preparation of particularly low-viscosity silane-terminated prepolymers which are used as moisture-crosslinking adhesives and sealants (see, for example, EP-A 0 070 475, EP-A 0 372 561).</p>
+      <p id="p-00004-en" num="0004">According to the teaching of WO 2009/115079, alkoxysilane-containing reaction products of polyols, for example polyacrylate polyols and/or simple polyhydric alcohols, with isocyanatopropyltrimethoxysilane or isocyanatopropyltriethoxysilane can be cured thermally in the presence of suitable catalysts even with exclusion of water. Binders of this kind enable, inter alia, the formulation of automotive paints of very high scratch resistance.</p>
+      <p id="p-00005-en" num="0005">However, the industrial processes for preparing isocyanatoalkylalkoxysilanes are very inconvenient and costly. The products are obtained in only moderate yields and, moreover, with varying quality and inadequate storage stability. Efforts have therefore already been made to synthesize alternative compounds which have both an isocyanate group and a silane structure.</p>
+      <p id="p-00006-en" num="0006">EP-A 1 136 495 describes a process for preparing low-monomer 1:1 mono adducts from specific secondary aminoalkylalkoxysilanes and diisocyanates, in which the co-reactants are reacted with one another using a large molar excess of isocyanate and, thereafter, the unconverted monomeric diisocyanates are removed by distillation. Aminosilanes used in this process are the aspartic esters which are known from EP-A 0 596 360, are obtainable by reaction of dialkyl maleates and aminosilanes and, according to the teaching of EP-A 1 136 495, form storage-stable adducts with isocyanates, in contrast to other simple secondary aminosilanes. As shown by in-house studies, the urea structures formed in the reaction of the silane-functional aspartic esters with isocyanates are indeed stable to redissociation, while simple N-alkylaminosilanes, with respect to isocyanate groups, act like standard blocking agents and are released again at elevated temperature.</p>
+      <p id="p-00007-en" num="0007">During the thin-film distillation of reaction mixtures based on such simple N-alkylaminosilanes, even if a very high excess of diisocyanate has been chosen at the start, thermal urea cleavage and subsequently recombination, given that diisocyanate monomer has already partly distilled off, cause formation not only of the desired isocyanatosilane (1:1 mono adduct) but also of very high proportions of disilylated bisurea (2:1 bis adduct) as an unwanted by-product, which is no longer available for further conversion.</p>
+      <p id="p-00008-en" num="0008">Even though the reaction, described in EP-A 1 136 495, of diisocyanates with silane-functional aspartic esters, in contrast, gives urea groups which are stable to redissociation under the conditions of a thin-film distillation, this process has another serious disadvantage.</p>
+      <p id="p-00009-en" num="0009">As known from EP-A 0 807 649, adducts of isocyanates onto aspartic esters containing alkoxysilane groups react even at comparatively mild temperatures of 50-160° C., with elimination of the alcohol from one of the ester groups and cyclization, to give hydantoin derivatives. This reaction inevitably also takes place in the process of EP-A 1 136 495 because of the thermal stress during the thin-film distillation. The monoalcohol released either reacts with the desired isocyanatosilane with urethanization and loss of NCO functionality in the target molecule or is distilled out of the product together with excess monomeric diisocyanate. The resultant diisocyanate distillate contaminated by the alcohol or by the urethane that forms cannot be reused in the synthesis process without further purification and may need to be disposed of in a costly manner.</p>
+      <p id="p-00010-en" num="0010">A further method already known in principle for preparation of isocyanates containing silane groups is that of reacting polyisocyanates with mercaptosilanes. JP-A 60233133 describes, for example, the equimolar reaction of hexamethylene diisocyanate (HDI) with 3-mercaptopropyltrimethoxysilane. The reaction product which, as well as the 1:1 adduct, because of the statistical course of the reaction, contains considerable proportions of 2:1 bis adduct and monomeric, unconverted diisocyanate is used as such without further purification or monomer removal for modification of a polyamide. JP-A 61047774 describes the use of these reaction products as formation components for hotmelt adhesives.</p>
+      <p id="p-00011-en" num="0011">JP-A 61218631 also describes the use of reaction products of diisocyanates and mercaptosilanes for hotmelt adhesives. The reaction mixtures obtained through the equimolar reaction of diisocyanates and mercaptosilanes serve here for modification of polyester resins.</p>
+      <p id="p-00012-en" num="0012">DE-A 2540080 describes the use of different isocyanatosilanes, including adducts of polyisocyanates and silanes that are reactive toward isocyanate groups, for example including mercaptosilanes, in a ratio of equivalents of isocyanate groups to groups that are reactive toward isocyanates of at least 2:1, in specific adhesive compositions. In the specific examples of DE-A 2540080, however, isocyanatosilanes based on mercaptosilanes are not used.</p>
+      <p id="p-00013-en" num="0013">U.S. Pat. No. 4,246,369, however, discloses that aliphatic and aromatic thiols are blocking agents for isocyanates, which are eliminated again at only low temperatures.</p>
+      <p id="p-00014-en" num="0014">There was therefore a need for novel isocyanatosilanes, especially thermally stable isocyanatosilanes, which can be prepared in a simple process.</p>
+      <p id="p-00015-en" num="0015">It was therefore an object of the present invention to provide a process for preparing thermally stable and storage-stable isocyanatosilanes, which is based on raw materials of good availability and is additionally economically viable. Through the process according to the invention, the desired products should be preparable in a reliable and reproducible manner and without excessively large proportions of unwanted by-products.</p>
+      <p id="p-00016-en" num="0016">This object is achieved in accordance with the invention by a process for preparing compounds containing isocyanate groups and silane groups, by reacting at least <ul id="ul-00001-en" list-style="none"><li>A) a monomeric diisocyanate having aliphatically, cycloaliphatically, araliphatically and/or aromatically bonded isocyanate groups with</li><li>B) a mercaptosilane, <br /> characterized in that component A) is reacted with component B) in a ratio of equivalents of isocyanate groups to mercapto groups of at least 6:1 to at most 40:1. </li></ul></p>
+      <p id="p-00017-en" num="0019">The process according to the invention is based on the surprising observation that thiourethanes formed from standard mercaptoalkylsilanes and diisocyanates, unlike the above-described N-alkylaminosilanes, are entirely stable under the conditions of a thin-film distillation. The person skilled in the art was unable to take any hint at all from any of the abovementioned publications that it is possible, in spite of the known thermal lability of thiourethanes, to work up reaction mixtures of diisocyanates and mercaptosilanes by distillation without breakdown; U.S. Pat. No. 4,246,369 even teaches that the opposite is the case. This surprising stability of thiourethane formation allows simple distillation of the unconverted monomers out of the desired isocyanatosilane (1:1 mono adduct) in reaction mixtures of mercaptosilanes and molar excess amounts of diisocyanates, without formation of an increased proportion of 2:1 bis adduct at the same time. Thus, it is also possible to achieve reactions with ratios of equivalents of isocyanate groups to mercapto groups of 6:1 to 40:1. Within this range, it is possible to reduce the formation of unwanted 2:1 bis adduct to an economically acceptable proportion and nevertheless to achieve sufficient conversion.</p>
+      <p id="p-00018-en" num="0020">In a preferred embodiment of the invention, mercaptosilanes of the general formula (I) or mixtures thereof are used as component B)</p>
+      <p id="p-00019-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="16.51mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150246936A1_00001.PNG" img-format="png" original="US20150246936A1-20150903-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00020-en" num="0000">in which <ul id="ul-00002-en" list-style="none"><li>R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>are identical or different radicals and each is a saturated or unsaturated, linear or branched, aliphatic or cycloaliphatic radical or an optionally substituted aromatic or araliphatic radical having up to 18 carbon atoms, which may optionally contain up to 3 heteroatoms from the group of oxygen, sulfur, nitrogen, and</li><li>X is a linear or branched organic radical having at least 2 carbon atoms.</li></ul></p>
+      <p id="p-00021-en" num="0023">Particularly preferred mercaptosilanes B) for the process according to the invention are those of the general formula (I) in which <ul id="ul-00003-en" list-style="none"><li>R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>are identical or different radicals and each is a saturated, linear or branched, aliphatic or cycloaliphatic radical having up to 6 carbon atoms, which may optionally contain up to 3 oxygen atoms and</li><li>X is a linear or branched alkylene radical having 2 to 10 carbon atoms.</li></ul></p>
+      <p id="p-00022-en" num="0026">Very particularly preferred mercaptosilanes B) are those of the general formula (I) in which <ul id="ul-00004-en" list-style="none"><li>R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>are each alkyl radicals having up to 6 carbon atoms and/or alkoxy radicals containing up to 3 oxygen atoms, with the proviso that at least one of the R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>radicals is such an alkoxy radical and</li><li>X is a propylene radical (—CH<sub>2</sub>—CH<sub>2</sub>—CH<sub>2</sub>—).</li></ul></p>
+      <p id="p-00023-en" num="0029">Further preferred mercaptosilanes B) are those of the general formula (I) in which <ul id="ul-00005-en" list-style="none"><li>R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>are identical or different radicals and each is methyl, methoxy or ethoxy, with the proviso that at least one of the R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>radicals is a methoxy or ethoxy radical and</li><li>X is a propylene radical (—CH<sub>2</sub>—CH<sub>2</sub>—CH<sub>2</sub>—).</li></ul></p>
+      <p id="p-00024-en" num="0032">Suitable mercaptosilanes B) are, for example, 2-mercaptoethyltrimethylsilane, 2-mercaptoethylmethyldimethoxysilane, 2-mercaptoethyltrimethoxysilane, 2-mercaptoethyltriethoxysilane, 3-mercaptopropylmethyldimethoxysilane, 3-mercaptopropyldimethylmethoxysilane, 3-mercaptopropyltrimethoxysilane, 3-mercaptopropylmethyldiethoxysilane, 3-mercaptopropyltriethoxysilane, 3-mercaptopropylethyldimethoxysilane, 3-mercaptopropylethyldiethoxysilane and/or 4-mercaptobutyltrimethoxysilane.</p>
+      <p id="p-00025-en" num="0033">Suitable starting compounds A) for the process according to the invention are any desired diisocyanates which have aliphatically, cycloaliphatically, araliphatically and/or aromatically ring bonded isocyanate groups and can be prepared by any desired processes, for example by phosgenation or by a phosgene-free route, for example by urethane cleavage.</p>
+      <p id="p-00026-en" num="0034">Preferred diisocyanates are, for example, those of the general formula (II)</p>
+      <p id="p-00027-en" num="0000">[in-line-formulae]OCN—Y—NCO  (II)[/in-line-formulae]</p>
+      <p id="p-00028-en" num="0000">in which Y is a linear or branched, aliphatic or cycloaliphatic radical having 4 to 18 carbon atoms or an optionally substituted aromatic or araliphatic radical having 6 to 18 carbon atoms.</p>
+      <p id="p-00029-en" num="0035">Suitable examples are 1,4-diisocyanatobutane, 1,6-diisocyanatohexane (HDI), 1,5-diisocyanato-2,2-dimethylpentane, 2,2,4- or 2,4,4-trimethyl-1,6-diisocyanatohexane, 1,10-diiisocyanatodecane, 1,3- and 1,4-diisocyanatocyclohexane, 1,4-diisocyanato-3,3,5-trimethylcyclohexane, 1,3-diisocyanato-2-methylcyclohexane, 1,3-diisocyanato-4-methylcyclohexane, 1-isocyanato-3,3,5-trimethyl-5-isocyanatomethylcyclohexane (isophorone diisocyanate; IPDI), 1-isocyanato-1-methyl-4(3)-isocyanatomethylcyclohexane, 2,4′- and 4,4′-diisocyanatodicyclohexylmethane (H<sub>12</sub>-MDI), 1,3- and 1,4-bis(isocyanatomethyl)cyclohexane, 4,4′-diisocyanato-3,3′-dimethyldicyclohexylmethane, 4,4′-diisocyanato-3,3′,5,5′-tetramethyldicyclohexylmethane, 4,4′-diisocyanato-1,1′-bi(cyclohexyl), 4,4′-diisocyanato-3,3′-dimethyl-1,1′-bi(cyclohexyl), 4,4′-diisocyanato-2,2′,5,5′-tetramethyl-1,1′-bi(cyclohexyl), 1,8-diisocyanato-p-menthane, 1,3-diisocyanatoadamantane, 1,3-dimethyl-5,7-diisocyanatoadamantane, 1,3- and 1,4-bis(isocyanatomethyl)benzene, 1,3- and 1,4-bis(1-isocyanato-1-methylethyl)benzene (TMXDI), bis(4-(1-isocyanato-1-methylethyl)phenyl) carbonate, phenylene 1,3- and 1,4-diisocyanate, tolylene 2,4- and 2,6-diisocyanate and any desired mixtures of these isomers, diphenylmethane 2,4′- and/or 4,4′-diisocyanate and naphthylene 1,5-diisocyanate and any desired mixtures of such diisocyanates. Further diisocyanates that are likewise suitable can additionally be found, for example, in Justus Liebigs Annalen der Chemie, volume 562 (1949) p. 75-136.</p>
+      <p id="p-00030-en" num="0036">Preferred starting components A) are diisocyanates of the general formula (II) in which Y is a linear or branched, aliphatic or cycloaliphatic radical having 6 to 13 carbon atoms.</p>
+      <p id="p-00031-en" num="0037">Particularly preferred starting components A) for the process according to the invention are 1,6-diisocyanatohexane, 1-isocyanato-3,3,5-trimethyl-5-isocyanatomethylcyclohexane, 2,4′- and/or 4,4-diisocyanatodicyclohexylmethane or any desired mixtures of these diisocyanates.</p>
+      <p id="p-00032-en" num="0038">To perform the process according to the invention, the diisocyanates A) are reacted with the mercaptosilanes B) at temperatures of 20 to 200° C., preferably 40 to 160° C. This is done by using components A) and B) in a ratio of equivalents of isocyanate groups (component A) to mercapto groups (component B) of at least 6:1 to at most 40:1, preferably of 8:1 to at most 30:1 and more preferably of 10:1 to at most 25:1.</p>
+      <p id="p-00033-en" num="0039">The reaction of the starting components A) and B) in the process according to the invention can be executed in solution or without solvent in substance, but is preferably executed without solvent.</p>
+      <p id="p-00034-en" num="0040">The process of the invention can be performed without the use of catalysts. The reaction can optionally also be accelerated using customary catalysts known from polyurethane chemistry. Examples include tertiary amines, for example triethylamine, tributylamine, dimethylbenzylamine, diethylbenzylamine, pyridine, methylpyridine, dicyclohexylmethylamine, dimethylcyclohexylamine, N,N,N′,N′-tetramethyldiaminodiethyl ether, bis(dimethylaminopropyl)urea, N-methyl- or N-ethylmorpholine, N-cocomorpholine, N-cyclohexylmorpholine, N,N,N′,N′-tetramethylethylenediamine, N,N,N′,N′-tetramethyl-1,3-butanediamine, N,N,N′,N′-tetramethyl-1,6-hexanediamine, pentamethyldiethylenetriamine, N-methylpiperidine, N-dimethylaminoethylpiperidine, N,N′-dimethylpiperazine, N-methyl-N′-dimethylaminopiperazine, 1,2-dimethylimidazole, 2-methylimidazole, N,N-dimethylimidazole-β-phenylethylamine, 1,4-diazabicyclo[2.2.2]octane (DABCO) and bis(N,N-dimethylaminoethyl) adipate, amidines, for example 1,5-diazabicyclo[4.3.0]nonene (DBN), 1,8-diazabicyclo[5.4.0]undec-7-ene (DBU) and 2,3-dimethyl-3,4,5,6-tetrahydropyrimidine, alkanolamine compounds, for example triethanolamine, triisopropanolamine, N-methyldiethanolamine, N-ethyldiethanolamine, dimethylaminoethanol and 2-(N,N-dimethylaminoethoxy)ethanol, N,N′,N″-tris(dialkylaminoalkyl)hexahydrotriazines, for example N, N′,N″-tris(dimethylaminopropyl)-s-hexahydrotriazine, bis(dimethylaminoethyl) ether and metal salts, for example inorganic and/or organic compounds of iron, lead, bismuth, zinc and/or tin in customary oxidation states of the metal, for example iron(II) chloride, iron(III) chloride, bismuth(III) bismuth(III) 2-ethylhexanoate, bismuth(III) octoate, bismuth(III) neodecanoate, zinc chloride, zinc 2-ethylcaproate, tin(II) octoate, tin(II) ethylcaproate, tin(II) palmitate, dibutyltin(IV)dilaurate (DBTL), dibutyltin(IV)dichloride or lead octoate.</p>
+      <p id="p-00035-en" num="0041">Preferred catalysts for use are tertiary amines, amidines and tin compounds of the type specified.</p>
+      <p id="p-00036-en" num="0042">Particularly preferred catalysts are 1,4-diazabicyclo[2.2.2]octane (DABCO), 1,5-diazabicyclo[4.3.0]nonene (DBN), 1,8-diazabicyclo[5.4.0]undec-7-ene (DBU) and dibutyltin(IV)dilaurate (DBTL).</p>
+      <p id="p-00037-en" num="0043">The catalysts mentioned by way of example can be used individually or in the form of any desired mixtures with one another in the preparation of the inventive isocyanatosilanes and are used, if at all, in amounts of 0.001% to 1.0% by weight, preferably 0.01% to 0.5% by weight, calculated as the total amount of catalysts used, based on the total amount of the starting compounds used.</p>
+      <p id="p-00038-en" num="0044">The progress of the reaction in the process according to the invention can be monitored by determining the NCO content by titrimetric means, for example. On attainment of the desired NCO content, generally after full urethanization, the reaction is stopped.</p>
+      <p id="p-00039-en" num="0045">In a preferred embodiment of the invention, after the reaction of components A) with B), any unconverted excess of monomeric diisocyanates A) is separated from the reaction product apart from a residual content of less than 1% by weight, preferably of less than 0.5% by weight, more preferably of less than 0.3% by weight, based on the total mass of the reaction product.</p>
+      <p id="p-00040-en" num="0046">This is preferably done by freeing the reaction mixture of excess monomeric diisocyanates by thin-film distillation under reduced pressure, for example at a pressure of below 1.0 mbar, preferably below 0.5 mbar, more preferably below 0.2 mbar, under very gentle conditions, for example at a temperature of 100 to 200° C., preferably of 120 to 180° C.</p>
+      <p id="p-00041-en" num="0047">The distillates obtained can be used without any problem for another reaction with mercaptosilanes.</p>
+      <p id="p-00042-en" num="0048">In a further, although less preferred embodiment of the process according to the invention, the monomeric isocyanates are separated from the thiourethane formed by extraction with suitable solvents inert toward isocyanate and silane groups, for example aliphatic or cycloaliphatic hydrocarbons such as pentane, hexane, heptane, cyclopentane or cyclohexane.</p>
+      <p id="p-00043-en" num="0049">Irrespective of the type of workup, the products of the process according to the invention obtained are clear, virtually colorless compounds containing isocyanate and silane groups, which, depending on the starting diisocyanate chosen, are liquids of low to high viscosity and have NCO contents of 6.0% to 13.5% by weight, preferably 7.0% to 12.0% by weight, more preferably 8.0% to 11.5% by weight, and residual contents of monomeric starting diisocyanates of less than 1.0% by weight, preferably of less than 0.5% by weight, more preferably of less than 0.3% by weight, based on the total mass of the reaction product.</p>
+      <p id="p-00044-en" num="0050">The invention likewise provides a composition comprising <ul id="ul-00006-en" list-style="none"><li>a) compounds of the general formula (III) containing isocyanate groups and silane groups,</li></ul></p>
+      <p id="p-00045-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="16.51mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150246936A1_00002.PNG" img-format="png" original="US20150246936A1-20150903-C00002.TIF" />
+        </chemistry>
+        <ul id="ul-00007-en" list-style="none">
+          <li>b) compounds of the general formula (IV) containing silane groups</li>
+        </ul>
+      </p>
+      <p id="p-00046-en" num="0000">
+        <chemistry id="chem-00003-en" num="00003">
+          <img id="img-00003-en" he="19.13mm" wi="74.17mm" alt="embedded image" img-content="chem" file="US20150246936A1_00003.PNG" img-format="png" original="US20150246936A1-20150903-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00047-en" num="0000">and <ul id="ul-00008-en" list-style="none"><li>c) monomeric diisocyanates having aliphatically, cycloaliphatically, araliphatically and/or aromatically bonded isocyanate groups, <br /> where </li><li>R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>are identical or different radicals and each is a saturated or unsaturated, linear or branched, aliphatic or cycloaliphatic radical or an optionally substituted aromatic or araliphatic radical having up to 18 carbon atoms, which may optionally contain up to 3 heteroatoms from the group of oxygen, sulfur, nitrogen,</li><li>X is a linear or branched organic radical having at least 2 carbon atoms and</li><li>Y is a linear or branched, aliphatic or cycloaliphatic radical having 4 to 18 carbon atoms or an optionally substituted aromatic or araliphatic radical having 6 to 18 carbon atoms. <br /> characterized in that component a) makes up a proportion of ≧85% by weight, preferably ≧90% by weight, component b) a proportion of ≦15% by weight, preferably ≦10% by weight, of the total mass of components a) and b), and component c) makes up ≦1% by weight of the overall composition. </li></ul></p>
+      <p id="p-00048-en" num="0057">In a preferred embodiment of the invention, component b) makes up a proportion of 2% to 15% by weight, preferably 2% to 10% by weight, of the total mass of components a) and b).</p>
+      <p id="p-00049-en" num="0058">Preferably, in the formulae (III) and (IV), <ul id="ul-00009-en" list-style="none"><li>R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>are identical or different radicals which are each a saturated, linear or branched, aliphatic or cycloaliphatic radical having up to 6 carbon atoms, which may optionally contain up to 3 oxygen atoms and</li><li>X is a linear or branched alkylene radical having 2 to 10 carbon atoms.</li></ul></p>
+      <p id="p-00050-en" num="0061">More preferably, in the formulae (III) and (IV), <ul id="ul-00010-en" list-style="none"><li>R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>are identical or different radicals which are each an alkyl radical having up to 6 carbon atoms and/or alkoxy radicals containing up to 3 oxygen atoms, with the proviso that at least one of the R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>radicals is such an alkoxy radical and</li><li>X is a propylene radical (—CH<sub>2</sub>—CH<sub>2</sub>—CH<sub>2</sub>—).</li></ul></p>
+      <p id="p-00051-en" num="0064">Most preferably, in the formulae (III) and (IV), <ul id="ul-00011-en" list-style="none"><li>R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>are identical or different radicals which are each methyl, methoxy or ethoxy, with the proviso that at least one of the R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>radicals is a methoxy or ethoxy radical and</li><li>X is a propylene radical (—CH<sub>2</sub>—CH<sub>2</sub>—CH<sub>2</sub>—).</li></ul></p>
+      <p id="p-00052-en" num="0067">Preferably, in the formulae (III) and (IV), <ul id="ul-00012-en" list-style="none"><li>Y is a linear or branched, aliphatic or cycloaliphatic radical having 6 to 13 carbon atoms.</li></ul></p>
+      <p id="p-00053-en" num="0069">The preferred embodiments specified above for starting component A) likewise apply to the monomeric diisocyanates c).</p>
+      <p id="p-00054-en" num="0070">The invention especially also provides for the use of the inventive compounds containing isocyanate groups and silane groups or of the inventive composition as starting components in the preparation of polyurethanes containing silane groups, or in the production of crosslinkable binders and of crosslinkable raw materials for varnishes, sealants or adhesives. The polyurethanes containing silane groups or crosslinkable binders are preferably used for production of raw materials for varnishes, sealants or adhesives.</p>
+      <p id="p-00055-en" num="0071">The invention further provides polyurethanes containing silane groups, prepared using the inventive compounds containing isocyanate groups and silane groups or the inventive composition.</p>
+      <p id="p-00056-en" num="0072">These can be prepared by reacting the inventive compounds containing isocyanate groups and silane groups or the inventive composition with any desired polyols, preferably at least difunctional polyols, for example simple polyhydric alcohols, ether alcohols or ester alcohols, or standard polymeric polyether polyols, polyester polyols, polycarbonate polyols and/or polyacrylate polyols known from polyurethane chemistry.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00001-en" level="1">EXAMPLES</heading>
+      <p id="p-00057-en" num="0073">All percentages are based on weight, unless stated otherwise.</p>
+      <p id="p-00058-en" num="0074">The NCO contents were determined by titrimetric means to DIN EN ISO 11909.</p>
+      <p id="p-00059-en" num="0075">The residual monomer contents were measured to DIN EN ISO 10283 by gas chromatography with an internal standard.</p>
+      <p id="p-00060-en" num="0076">The proportions of bis adduct (formed from two molecules of mercaptosilane and one molecule of diisocyanate) were determined by gel permeation chromatography based on DIN 55672-1 (Gel permeation chromatography (GPC)—Part 1: Tetrahydrofuran (THF) as elution solvent) at room temperature, with the alteration that a flow rate of 0.6 ml/min rather than 1.0 ml/min was employed. The proportions of bis adduct in area % taken from the chromatograms, which were determined with software support, were each equated approximately to proportions in % by weight and reported as such, based on the total amount of mono adduct and bis adduct.</p>
+      <p id="p-00061-en" num="0077">All the viscosity measurements were made with a Physica MCR 51 rheometer from Anton Paar Germany GmbH (DE) to DIN EN ISO 3219.</p>
+      <heading id="h-00002-en" level="1">Example 1</heading>
+      <heading id="h-00003-en" level="1">Inventive</heading>
+      <p id="p-00062-en" num="0078">1680 g (10 mol) of hexamethylene diisocyanate (HDI) were admixed at a temperature of 80° C. under dry nitrogen with 196 g (1.0 mol) of mercaptopropyltrimethoxysilane and, after addition of 0.05 g (25 ppm) of 1,4-diazabicyclo[2.2.2]octane (DABCO), the mixture was stirred for 1 hour until an NCO content of 42.5%, corresponding to a full conversion, had been attained. Subsequently, the unconverted monomeric HDI was removed on a thin-film evaporator at a temperature of 140° C. and a pressure of 0.1 mbar. This gave a virtually colorless, clear isocyanatosilane having the following characteristic data:</p>
+      <p id="p-00063-en" num="0000">NCO content: 11.2%</p>
+      <heading id="h-00004-en" level="2">Monomeric HDI: 0.19%</heading>
+      <p id="p-00064-en" num="0079">Viscosity (23° C.): 80 mPas <br /> Proportion of bis adduct: 4.1% </p>
+      <heading id="h-00005-en" level="1">Example 2</heading>
+      <heading id="h-00006-en" level="1">Inventive</heading>
+      <p id="p-00065-en" num="0080">By the process described in example 1, 1008 g (6 mol) of HDI were reacted with 196 g (1.0 mol) of mercaptopropyltrimethoxysilane in the presence of 0.03 g (25 ppm) of DABCO. On attainment of an NCO content of 38.4%, corresponding to full conversion, the unconverted monomeric HDI was removed by thin-film distillation as described in example 1, and a virtually colorless, clear isocyanatosilane was obtained with the following characteristic data:</p>
+      <p id="p-00066-en" num="0000">NCO content: 10.8%</p>
+      <heading id="h-00007-en" level="2">Monomeric HDI: 0.18%</heading>
+      <p id="p-00067-en" num="0081">Viscosity (23° C.): 133 mPas <br /> Proportion of bis adduct: 7.0% </p>
+      <heading id="h-00008-en" level="1">Example 3</heading>
+      <heading id="h-00009-en" level="1">Inventive</heading>
+      <p id="p-00068-en" num="0082">By the process described in example 1, 1680 g (10 mol) of HDI were reacted with 180 g (1.0 mol) of mercaptopropylmethyldimethoxysilane in the presence of 0.05 g (25 ppm) of DABCO. On attainment of an NCO content of 42.9%, corresponding to full conversion, the unconverted monomeric HDI was removed by thin-film distillation as described in example 1, and a virtually colorless, clear isocyanatosilane was obtained with the following characteristic data:</p>
+      <p id="p-00069-en" num="0000">NCO content: 11.6%</p>
+      <heading id="h-00010-en" level="2">Monomeric HDI: 0.15%</heading>
+      <p id="p-00070-en" num="0083">Viscosity (23° C.): 77 mPas <br /> Proportion of bis adduct: 4.0% </p>
+      <heading id="h-00011-en" level="1">Example 4</heading>
+      <heading id="h-00012-en" level="1">Inventive</heading>
+      <p id="p-00071-en" num="0084">1680 g (10 mol) of hexamethylene diisocyanate (HDI) were admixed under dry nitrogen at a temperature of 80° C. with 238 g (1.0 mol) of mercaptopropyltriethoxysilane and, after addition of 0.05 g (25 ppm) of dibutyltin dilaurate (DBTL), the mixture was stirred for 3 hours until an NCO content of 41.6%, corresponding to full conversion, had been attained. Subsequently, the unconverted monomeric HDI was removed by thin-film distillation as described in example 1, and a virtually colorless, clear isocyanatosilane was obtained with the following characteristic data:</p>
+      <p id="p-00072-en" num="0000">NCO content: 9.9%</p>
+      <heading id="h-00013-en" level="2">Monomeric HDI: 0.15%</heading>
+      <p id="p-00073-en" num="0085">Viscosity (23° C.): 92 mPas <br /> Proportion of bis adduct: 4.3% </p>
+      <heading id="h-00014-en" level="1">Example 5</heading>
+      <heading id="h-00015-en" level="1">Inventive</heading>
+      <p id="p-00074-en" num="0086">By the process described in example 4, 2220 g (10 mol) of isophorone diisocyanate (IPDI) were reacted with 196 g (1.0 mol) of mercaptopropyltrimethoxysilane in the presence of 0.06 g (25 ppm) of DBTL. On attainment of an NCO content of 33.0%, corresponding to full conversion, the unconverted monomeric IPDI was removed in a thin-film evaporator at a temperature of 150° C. and a pressure of 0.1 mbar. This gave a virtually colorless, clear isocyanatosilane having the following characteristic data:</p>
+      <p id="p-00075-en" num="0000">NCO content: 9.7%</p>
+      <heading id="h-00016-en" level="2">Monomeric IPDI: 0.23%</heading>
+      <p id="p-00076-en" num="0087">Viscosity (23° C.): 5400 mPas <br /> Proportion of bis adduct: 4.8% </p>
+      <heading id="h-00017-en" level="1">Example 6</heading>
+      <heading id="h-00018-en" level="1">Inventive</heading>
+      <p id="p-00077-en" num="0088">By the process described in example 4, 2620 g (10 mol) of 4,4′-diisocyanatodicyclohexylmethane (H<sub>12</sub>-MDI) were reacted with 196 g (1.0 mol) of mercaptopropyltrimethoxysilane in the presence of 0.07 g (25 ppm) of DBTL. On attainment of an NCO content of 28.3%, corresponding to full conversion, the unconverted monomeric H<sub>12</sub>-MDI was removed in a thin-film evaporator at a temperature of 150° C. and a pressure of 0.1 mbar. This gave a virtually colorless, clear isocyanatosilane having the following characteristic data:</p>
+      <p id="p-00078-en" num="0000">NCO content: 8.6%</p>
+      <heading id="h-00019-en" level="2">Monomeric H<sub>12</sub>-MDI: 0.20%</heading>
+      <p id="p-00079-en" num="0089">Viscosity (23° C.): 15200 mPas <br /> Proportion of bis adduct: 6.0% </p>
+      <heading id="h-00020-en" level="1">Example 7</heading>
+      <heading id="h-00021-en" level="1">Inventive</heading>
+      <p id="p-00080-en" num="0090">By the process described in example 1, 504 g (3 mol) of HDI were reacted with 196 g (1.0 mol) of mercaptopropyltrimethoxysilane in the presence of 0.02 g (25 ppm) of DABCO. On attainment of an NCO content of 30.0%, corresponding to full conversion, the unconverted monomeric HDI was removed by thin-film distillation as described in example 1, and a virtually colorless, clear isocyanatosilane was obtained with the following characteristic data:</p>
+      <p id="p-00081-en" num="0000">NCO content: 10.0%</p>
+      <heading id="h-00022-en" level="2">Monomeric HDI: 0.21%</heading>
+      <p id="p-00082-en" num="0091">Viscosity (23° C.): 143 mPas <br /> Proportion of bis adduct: 13.5% </p>
+      <heading id="h-00023-en" level="1">Example 8</heading>
+      <heading id="h-00024-en" level="1">Comparative</heading>
+      <p id="p-00083-en" num="0092">By the process described in example 1, 336 g (2 mol) of HDI were reacted with 196 g (1.0 mol) of mercaptopropyltrimethoxysilane in the presence of 0.01 g (25 ppm) of DABCO. On attainment of an NCO content of 23.7%, corresponding to full conversion, the unconverted monomeric HDI was removed by thin-film distillation as described in example 1, and a virtually colorless, clear isocyanatosilane was obtained with the following characteristic data:</p>
+      <p id="p-00084-en" num="0000">NCO content: 9.1%</p>
+      <heading id="h-00025-en" level="2">Monomeric HDI: 0.12%</heading>
+      <p id="p-00085-en" num="0093">Viscosity (23° C.): 165 mPas <br /> Proportion of bis adduct: 21.0% </p>
+      <p id="p-00086-en" num="0094">The example shows that isocyanatosilanes formed from diisocyanates and mercaptosilanes and prepared using a smaller excess of isocyanate groups than the minimum according to the invention contain very high proportions of 2:1 bis adduct, and for that reason are unsuitable as units for preparation of polyurethanes containing silane groups.</p>
+      <heading id="h-00026-en" level="1">Example 9</heading>
+      <heading id="h-00027-en" level="1">Comparative</heading>
+      <p id="p-00087-en" num="0095">168 g (1.0 mol) of hexamethylene diisocyanate (HDI) were admixed under dry nitrogen at a temperature of 80° C. with 196 g (1.0 mol) of mercaptopropyltrimethoxysilane and, after addition of 0.05 g (25 ppm) of dibutyltin dilaurate (DBTL), the mixture was stirred for 3 hours until an NCO content of 11.5%, corresponding to full conversion, had been attained. This gave a virtually colorless, clear silane-modified isocyanate mixture having the following characteristic data:</p>
+      <p id="p-00088-en" num="0000">NCO content: 11.5%</p>
+      <heading id="h-00028-en" level="2">Monomeric HDI: 5.69%</heading>
+      <heading id="h-00029-en" level="2">Viscosity (23° C.):</heading>
+      <p id="p-00089-en" num="0096">Proportion of bis adduct: 38.9%</p>
+      <p id="p-00090-en" num="0097">The example shows that the equimolar reaction of a diisocyanate with a mercaptosilane without subsequent thin-film distillation results in a product mixture in which not only the desired 1:1 mono adduct but also high proportions of the 2:1 bis adduct and very high contents of monomeric HDI are present.</p>
+      <heading id="h-00030-en" level="1">Example 10</heading>
+      <heading id="h-00031-en" level="1">Comparative</heading>
+      <p id="p-00091-en" num="0098">To 1680 g (10 mol) of hexamethylene diisocyanate (HDI) at room temperature under dry nitrogen were added 235 g (1.0 mol) of N-butylaminopropyltrimethoxysilane within one hour, and the mixture was stirred for one further hour until an NCO content of 41.7%, corresponding to full conversion, had been attained. Subsequently, the unconverted monomeric HDI was removed on a thin-film evaporator at a temperature of 140° C. and a pressure of 0.1 mbar. This gave a pale yellow, clear isocyanatosilane having the following characteristic data:</p>
+      <p id="p-00092-en" num="0000">NCO content: 5.6%</p>
+      <heading id="h-00032-en" level="2">Monomeric HDI: 1,9%</heading>
+      <p id="p-00093-en" num="0099">Viscosity (23° C.): 1000 mPas <br /> Proportion of bis adduct: 47.1% </p>
+      <p id="p-00094-en" num="0100">The example shows that reaction products of isocyanates with secondary aminosilanes behave like blocked polyisocyanates and are redissociated back to the reactants at relatively high temperatures. In spite of an initially high molar excess of HDI, thermal urea cleavage and subsequent recombination in a thin-film evaporator leads to a product mixture containing high proportions of monomeric HDI and HDI/mercaptosilane bis adduct.</p>
+      <heading id="h-00033-en" level="1">Example 11</heading>
+      <heading id="h-00034-en" level="1">Comparative</heading>
+      <p id="p-00095-en" num="0101">To 1680 g (10 mol) of hexamethylene diisocyanate (HDI) at room temperature under dry nitrogen were added 351 g (1.0 mol) of an adduct of aminopropyltrimethoxysilane onto diethyl maleate prepared according to example 5 of EP-A 0 596 360 within one hour, and the mixture was stirred for one further hour until an NCO content of 39.3%, corresponding to full conversion, had been attained. Subsequently, the unconverted monomeric HDI was removed on a thin-film evaporator at a temperature of 140° C. and a pressure of 0.1 mbar. This gave a yellow/brown product having the following characteristic data:</p>
+      <p id="p-00096-en" num="0000">NCO content: 8.3%</p>
+      <heading id="h-00035-en" level="2">Monomeric HDI: 0.12%</heading>
+      <p id="p-00097-en" num="0102">Viscosity (23° C.): 470 mPas</p>
+      <p id="p-00098-en" num="0103">The example shows that the isocyanatosilane containing urea groups formed is unstable under the conditions of the thin-film distillation. According to analysis (GPC, <sup>13</sup>C NMR), about 30% of the urea groups originally present in the addition product have reacted by the mechanism described in EP-A 0 807 649 with elimination of ethanol to give hydantoin structures. The HDI obtained as the distillate of the thin-film process is contaminated by HDI ethyl urethanes.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>.-<b>15</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>16</b>. A process for preparing compounds containing isocyanate groups and silane groups, comprising reacting at least
+<claim-text>A) a monomeric diisocyanate having aliphatically, cycloaliphatically, araliphatically and/or aromatically bonded isocyanate groups</claim-text><claim-text>with</claim-text><claim-text>B) a mercaptosilane,</claim-text><claim-text>wherein component A) is reacted with component B) in a ratio of equivalents of isocyanate groups to mercapto groups of at least 6:1 to at most 40:1.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>17</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 16</claim-ref>, wherein mercaptosilanes of the general formula (I) or mixtures thereof are used as component B)</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00004">
+          <img id="imgc-00001-en" he="16.51mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150246936A1_00004.PNG" img-format="png" original="US20150246936A1-20150903-C00004.TIF" />
+        </chemistry><claim-text>in which</claim-text><claim-text>R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>are identical or different radicals and each is a saturated or unsaturated, linear or branched, aliphatic or cycloaliphatic radical or an optionally substituted aromatic or araliphatic radical having up to 18 carbon atoms, which may optionally contain up to 3 heteroatoms from the group of oxygen, sulfur, nitrogen, and</claim-text><claim-text>X is a linear or branched organic radical having at least 2 carbon atoms.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>18</b>. The process as claimed in <claim-ref idref="clm-00003-en">claim 17</claim-ref>, wherein mercaptosilanes of the general formula (I) or mixtures thereof are used as component B), where
+<claim-text>R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>are identical or different radicals and each is a saturated, linear or branched, aliphatic or cycloaliphatic radical having up to 6 carbon atoms, which may optionally contain up to 3 oxygen atoms and</claim-text><claim-text>X is a linear or branched alkylene radical having 2 to 10 carbon atoms.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>19</b>. The process as claimed in <claim-ref idref="clm-00004-en">claim 18</claim-ref>, wherein mercaptosilanes of the general formula (I) or mixtures thereof are used as component B), where
+<claim-text>R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>are identical or different radicals and each is an alkyl radical having up to 6 carbon atoms and/or alkoxy radicals containing up to 3 oxygen atoms, with the proviso that at least one of the R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>radicals is such an alkoxy radical, and</claim-text><claim-text>X is a propylene radical (—CH<sub>2</sub>—CH<sub>2</sub>—CH<sub>2</sub>—).</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>20</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 16</claim-ref>, wherein monomeric diisocyanates of the general formula (II) or mixtures thereof are used as component A)
+<claim-text>OCN—Y—NCO  (II)</claim-text><claim-text>where</claim-text><claim-text>Y is a linear or branched, aliphatic or cycloaliphatic radical having 4 to 18 carbon atoms or an optionally substituted aromatic or araliphatic radical having 6 to 18 carbon atoms.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>21</b>. The process as claimed in <claim-ref idref="clm-00006-en">claim 20</claim-ref>, wherein component A) is 1,6-diisocyanatohexane, 1-isocyanato-3,3,5-trimethyl-5-isocyanatomethylcyclohexane, 2,4′- and/or 4,4′-diisocyanatodicyclohexylmethane or a mixture thereof.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>22</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 16</claim-ref>, wherein component A) is reacted with component B) in a ratio of equivalents of isocyanate groups to mercapto groups of at least 8:1 to at most 30:1.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>23</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 16</claim-ref>, wherein, after the reaction of components A) with B), any unconverted excess of monomeric diisocyanates A) is removed from the reaction product down to a residual content of less than 1% by weight, based on the total mass of the reaction product.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>24</b>. The process as claimed in <claim-ref idref="clm-00009-en">claim 23</claim-ref>, wherein the monomeric diisocyanates are removed by thin-film distillation.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>25</b>. A compound containing isocyanate groups and silane groups, obtained by the process as claimed in <claim-ref idref="clm-00002-en">claim 16</claim-ref>.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>26</b>. A composition comprising
+<claim-text>a) a compound of the general formula (III) containing isocyanate groups and silane groups,</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00002-en" num="00005">
+          <img id="imgc-00002-en" he="16.51mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150246936A1_00005.PNG" img-format="png" original="US20150246936A1-20150903-C00005.TIF" />
+        </chemistry><claim-text>b) a compound of the general formula (IV) containing silane groups</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00003-en" num="00006">
+          <img id="imgc-00003-en" he="19.13mm" wi="74.17mm" alt="embedded image" img-content="chem" file="US20150246936A1_00006.PNG" img-format="png" original="US20150246936A1-20150903-C00006.TIF" />
+        </chemistry><claim-text>and</claim-text><claim-text>c) a monomeric diisocyanate having aliphatically, cycloaliphatically, araliphatically and/or aromatically bonded isocyanate groups,</claim-text><claim-text>where</claim-text><claim-text>R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>are identical or different radicals and each is a saturated or unsaturated, linear or branched, aliphatic or cycloaliphatic radical or an optionally substituted aromatic or araliphatic radical having up to 18 carbon atoms, which may optionally contain up to 3 heteroatoms from the group of oxygen, sulfur, nitrogen, and</claim-text><claim-text>X is a linear or branched organic radical having at least 2 carbon atoms,</claim-text><claim-text>Y is a linear or branched, aliphatic or cycloaliphatic radical having 4 to 18 carbon atoms or an optionally substituted aromatic or araliphatic radical having 6 to 18 carbon atoms,</claim-text><claim-text>wherein component a) makes up a proportion of ≧85% by weight, component b) a proportion of ≦15% by weight, of the total mass of components a) and b), and component c) makes up ≦1% by weight of the overall composition.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>27</b>. The composition as claimed in <claim-ref idref="clm-00014-en">claim 28</claim-ref>, wherein component b) makes up a proportion of 2% to 15% by weight, of the total mass of components a) and b).</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>28</b>. A method for preparing polyurethanes containing silane groups comprising utilizing the compound containing isocyanate groups and silane groups as claimed in <claim-ref idref="clm-00011-en">claim 25</claim-ref> or of the composition as claimed in <claim-ref idref="clm-00012-en">claim 26</claim-ref> as a starting component.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>29</b>. A method for producing crosslinkable raw materials for varnishes, sealants or adhesives or of crosslinkable binders comprising utilizing the compound containing isocyanate groups and silane groups as claimed in <claim-ref idref="clm-00011-en">claim 25</claim-ref> or of the composition as claimed in <claim-ref idref="clm-00012-en">claim 26</claim-ref> as a starting component.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>30</b>. A polyurethane containing silane groups, obtained from the compound containing isocyanate groups and silane groups as claimed in <claim-ref idref="clm-00011-en">claim 25</claim-ref> or the composition as claimed in <claim-ref idref="clm-00012-en">claim 26</claim-ref>.</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246936A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246936A1-20150903-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246936A1_00002.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246936A1-20150903-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246936A1_00003.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246936A1-20150903-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246936A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246936A1-20150903-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246936A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246936A1-20150903-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150246936A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246936A1-20150903-C00006.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150246936A1.PDF" type="pdf" size="365631" pages="8" />
+</lexisnexis-patent-document>

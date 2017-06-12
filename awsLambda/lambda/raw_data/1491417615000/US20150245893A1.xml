@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150245893A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021606" date-changed="20160112" time-changed="151854">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140949">
+        <country>US</country>
+        <doc-number>20150245893</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14636858</doc-number>
+        <date>20150303</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160112">
+      <classification-ipcr sequence="1">
+        <text>A61C  15/04        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>C</subclass>
+        <main-group>15</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61Q  19/00        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>19</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B65D  43/16        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>65</class>
+        <subclass>D</subclass>
+        <main-group>43</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>B65D  43/22        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>65</class>
+        <subclass>D</subclass>
+        <main-group>43</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160112">
+      <classification-cpc sequence="1">
+        <text>A61C  15/043       20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>C</subclass>
+        <main-group>15</main-group>
+        <subgroup>043</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A45D  40/18        20130101 LI20160106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>40</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B65D  43/22        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>65</class>
+        <subclass>D</subclass>
+        <main-group>43</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">MULTIPURPOSE FILAMENT DISPENSING DEVICE</invention-title>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>61947083</doc-number>
+              <date>20140303</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006368</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kelchlin</last-name>
+            <first-name>Christopher Edwin</first-name>
+            <address>
+              <city>Buffalo</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kelchlin</last-name>
+            <first-name>Christopher Edwin</first-name>
+            <address>
+              <city>Buffalo</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173464304">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245893</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150303</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173464302">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245893</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150303</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A multipurpose filament dispensing device serves the dual purpose of dispensing a filament, such as dental floss, while simultaneously forming a cap on a container of a topical composition. The device can either function as a standalone dispenser for storing and dispensing the filament, or serve as a cap for the container while simultaneously storing and dispensing the filament. The filament is rotatably extracted from an internal spool. The device dispenses a desired amount of filament from the spool, extending the filament from a raised outlet to a depressed cutting member. The downward slope of the filament facilitates grasping and manipulating of the filament. After extracting a desired unit length of the filament, the filament may be cut at a unit length with a sharp edge on the cutting member. The device forms a detachable cap over a container of topical composition, such as lip balm.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE DISCLOSURE</heading>
+      <p id="p-00001-en" num="0001">The present disclosure relates generally to a multipurpose filament dispensing device. More so, a multipurpose filament dispensing device dispenses a filament from a raised outlet and extends the filament to a depressed cutting member to enable facilitated grasping and cutting of the filament, while simultaneously capping an opening on a container of a topical composition.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE DISCLOSURE</heading>
+      <p id="p-00002-en" num="0002">The following background information may present examples of specific aspects of the prior art (e.g., without limitation, approaches, facts, or common wisdom) that, while expected to be helpful to further educate the reader as to additional aspects of the prior art, is not to be construed as limiting the present disclosure, or any embodiments thereof, to anything stated or implied therein or inferred thereupon.</p>
+      <p id="p-00003-en" num="0003">Typically, oral hygiene is a significant concern to many individuals. It is common practice for many to brush their teeth twice a day, once in the morning and once in the evening. Another important oral hygiene step is dental flossing. While teeth brushing may remove plaque formed on the surface of the teeth, dental floss assists in removing plaque that may form in between adjacent teeth.</p>
+      <p id="p-00004-en" num="0004">It is known that dental floss is a cord of thin filaments used to remove food and dental plaque from between teeth. The floss is gently inserted between the teeth and wiped along the teeth sides, especially close to the gums or underneath them. Toothbrushes do not clean between teeth or below the gum line. Used as an addition to tooth brushing as part of regular oral hygiene flossing can reduce gingivitis and halitosis compared to tooth brushing alone. In dentistry, floss is classed as an interdental cleaning aid.</p>
+      <p id="p-00005-en" num="0005">In many instances, lip balm is a wax-like substance applied topically to the lips of the mouth to moisturize and relieve chapped or dry lips, angular cheilitis, stomatitis, or cold sores. The primary purpose of lip balm is to provide an occlusive layer on the lip surface to seal moisture in lips and protect them from external exposure. Dry air, cold temperatures, and wind all have a drying effect on skin by drawing moisture away from the body.</p>
+      <p id="p-00006-en" num="0006">Often, the hygiene for the mouth is performed at the same time to save time and effort. Thus, brushing teeth, flossing, applying lip balm, and chewing breath mints and gum. These different forms of hygiene generally utilize variously sized containers and applicators. Maintaining the myriad containers, applicators, and capping members in one place, and also organizing everything to be sufficiently compact for portability can be problematic.</p>
+      <p id="p-00007-en" num="0007">Other proposals have involved combining a dental floss cap with a toothpaste cap. The problem with these devices is that they are limited to capping toothpaste, and access to the dental floss can be difficult, as the dental floss dispenses generally parallel to the top surface of the cap. Thus, an unaddressed need exists in the industry to address the aforementioned deficiencies and inadequacies. Even though the above cited methods for a dental floss dispenser and capping member meets some of the needs of the market, a multipurpose filament dispensing device that dispenses a filament from a raised outlet, and extends the filament to a depressed cutting member to enable facilitated grasping and cutting of the filament, while capping a container of topical ointment is still desired.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE DISCLOSURE</heading>
+      <p id="p-00008-en" num="0008">The present disclosure is directed to a multipurpose filament dispensing device that dispenses a filament from a raised outlet, and extends the filament to a depressed cutting member to enable facilitated grasping and cutting of the filament. The device also caps an opening on a container of a topical composition. The device comprises an outer housing that substantially encases an inner housing. Both housings are arranged to work together to efficiently dispense the filament and cap the opening in the container.</p>
+      <p id="p-00009-en" num="0009">The outer housing engages the opening in the container and forms a protective casing for the inner housing. The outer housing is defined by a cavity, an outlet end, a mounting end, and a lid. In one embodiment, the outer housing is generally circular and has a diameter substantially the same as the container that is being capped. The lid is configured to regulate access to the cavity. In one embodiment, a hinge forms a junction between the lid and the dispensing end to enable pivotal movement of the lid between an open position and a closed position.</p>
+      <p id="p-00010-en" num="0010">The mounting end is oppositely positioned from the dispensing end and configured to enable engagement with an opening of a container. The mounting end can mate with the opening on the container through various mechanism, including, without limitation, threaded engagement, frictional fit, interlocking ridges, magnets, and screws. In this manner, the outer housing forms a cap to the opening of the container.</p>
+      <p id="p-00011-en" num="0011">The inner housing encases a spool that carries the filament and facilitates grasping, manipulating, and cutting of the filament. The inner housing is defined by a dispensing end, a cap end, and an interior chamber. The inner housing is disposed to position inside the cavity of the outer housing, wherein the dispensing end and the outlet end are in a spaced-apart parallel arrangement. In one embodiment, the inner housing snaps/locks inside the cavity of the outer housing.</p>
+      <p id="p-00012-en" num="0012">The dispensing end of the inner housing comprises a raised outlet, a depression, and a protrusion. The raised outlet is in communication with the interior chamber of the inner housing. In one embodiment, the raised outlet may include a generally circular opening that enables passage of the filament from the interior chamber. The depression and the protrusion enable secure positioning of components for accessing, manipulating, and cutting the filament, as described below.</p>
+      <p id="p-00013-en" num="0013">The device may further include a spool post. The spool post is disposed in the interior chamber of the inner housing. The spool post extends along the length of the inner housing and rotatably mounts the post inside the inner housing. The spool is configured to carry a filament. The filament winds around the spool for storage, and may be unwound to dispense the filament from the elevated outlet. The filament may include, without limitation, dental floss.</p>
+      <p id="p-00014-en" num="0014">The device may further include a panel that is used for cutting the filament. The panel is disposed to engage the depression of the dispensing end. Specifically, the panel is substantially shaped to rest flush inside the depression. The panel is defined by a panel opening and a cutting member. The panel opening is configured to interlock with the protrusion of the dispensing end. In one embodiment, the panel opening enables passage of the protrusion and a heat staking process is used to interlock the panel opening and the depression. However, in other embodiments, the panel opening may interlock with the protrusion through a frictional fit, a ridged mating, a magnetic lock, or an adhesive. In any case, the panel positions securely inside the depression of the dispensing end.</p>
+      <p id="p-00015-en" num="0015">As discussed above, the cutting member has a generally sharp edge. The sharp edge of the cutting member is configured to enable separation of a unit length of dispensed filament from a section of filament wound on the spool. The sharp edge may form a semi-circular shape, though the radius may be increased or decreased to affect the cutting capacity. The cutting member extends from the panel at a slope. The slope creates a gap that facilitates passing the filament over the sharp edge.</p>
+      <p id="p-00016-en" num="0016">Additionally, since the panel, and thereby the cutting member, are disposed in the depression, the raised outlet is generally at a higher elevation. Thus, as the filament dispenses from the raised outlet, the filament extends at a downward angle towards the cutting member. This sloped extension of filament from the raised outlet to the cutting member forms a space beneath the filament that facilitates manipulation and grasping of the filament. In essence, the difference in elevation between the raised outlet and the cutting member is configured to enable facilitated cutting of the filament.</p>
+      <p id="p-00017-en" num="0017">One objective of the present disclosure is to a provide multipurpose filament dispensing device that dispenses dental floss and caps an opening in an existing container of a topical composition, such as lip balm or can be as a stand-alone device.</p>
+      <p id="p-00018-en" num="0018">Another objective is to provide a multipurpose filament dispensing device that is configured to extend the filament at a downward angle from the raised outlet so as to form a space between the filament and the dispensing end of the inner housing, so that the filament is more easily grasped and manipulated for dispensing and cutting.</p>
+      <p id="p-00019-en" num="0019">Another objective is to provide a multipurpose filament dispensing device having a cap end on the inner housing that restricts passage of the topical ointment that extrudes form the opening in the container.</p>
+      <p id="p-00020-en" num="0020">Yet another objective is to provide a multipurpose filament dispensing device that utilizes heat staking to fasten a panel to a depression in a dispensing end.</p>
+      <p id="p-00021-en" num="0021">Yet another objective is to provide an inexpensive way to manufacture and easy to use multipurpose filament dispensing device and cap for an opening of a pre-existing container.</p>
+      <p id="p-00022-en" num="0022">Other systems, devices, methods, features, and advantages will be or become apparent to one with skill in the art upon examination of the following drawings and detailed description. It is intended that all such additional systems, methods, features, and advantages be included within this description, be within the scope of the present disclosure, and be protected by the accompanying claims and drawings.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00023-en" num="0023">The disclosure will now be described, by way of example, with reference to the accompanying drawings, in which:</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 1</figref> illustrates a detailed perspective view of an exemplary multipurpose filament dispensing device, in accordance with an embodiment of the present disclosure;</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 2</figref> illustrates a exploded view of the multipurpose filament dispensing device, in accordance with an embodiment of the present disclosure;</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 3</figref> illustrates an elevated side view of the multipurpose filament dispensing device, in accordance with an embodiment of the present disclosure;</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 4</figref> illustrates a cross sectioned perspective side view of the multipurpose filament dispensing device generally taken along section A-A of <figref>FIG. 3</figref> with a close-up of an exemplary lid that is latched to an exemplary dispensing end of an outer housing, in accordance with an embodiment of the present disclosure;</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 5A</figref> illustrates a perspective top view of the inner housing of the multipurpose filament dispensing device, in accordance with an embodiment of the present disclosure;</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 5B</figref> illustrates an prospective bottom view of the inner housing of the multipurpose filament dispensing device, in accordance with an embodiment of the present disclosure;</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 5C</figref> illustrates a side view of the inner housing of the multipurpose filament dispensing device, in accordance with an embodiment of the present disclosure;</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 5D</figref> illustrates a side view of the inner housing multipurpose of the filament dispensing device, in accordance with an embodiment of the present disclosure;</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 5E</figref> illustrates a bottom view of the inner housing of the multipurpose filament dispensing device, in accordance with an embodiment of the present disclosure;</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 6A</figref> illustrates a side view of the multipurpose filament dispensing device connected to an exemplary container of topical ointment, in accordance with an embodiment of the present disclosure;</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 6B</figref> illustrates a sectioned side view of the multipurpose filament dispensing device, the section generally taken along section H-H of <figref>FIG. 6A</figref>, detailing an interior chamber of the inner housing inside the outer housing connected to an exemplary container of topical ointment, in accordance with an embodiment of the present disclosure; and</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 7</figref> illustrates a flowchart diagram of an exemplary method for dispensing a filament and capping an opening with a multipurpose filament dispensing device, in accordance with an embodiment of the present disclosure.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00036-en" num="0036">Like reference numerals refer to like parts throughout the various views of the drawings.</p>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE DISCLOSURE</heading>
+      <p id="p-00037-en" num="0037">The following detailed description is merely exemplary in nature and is not intended to limit the described embodiments or the application and uses of the described embodiments. As used herein, the word “exemplary” or “illustrative” means “serving as an example, instance, or illustration.” Any implementation described herein as “exemplary” or “illustrative” is not necessarily to be construed as preferred or advantageous over other implementations. All of the implementations described below are exemplary implementations provided to enable persons skilled in the art to make or use the embodiments of the disclosure and are not intended to limit the scope of the disclosure, which is defined by the claims. For purposes of description herein, the terms “upper,” “lower,” “left,” “rear,” “right,” “front,” “vertical,” “horizontal,” and derivatives thereof shall relate to the disclosure as oriented in <figref>FIG. 1</figref>. Furthermore, there is no intention to be bound by any expressed or implied theory presented in the preceding technical field, background, brief summary or the following detailed description. It is also to be understood that the specific devices and processes illustrated in the attached drawings, and described in the following specification, are simply exemplary embodiments of the inventive concepts defined in the appended claims. Hence, specific dimensions and other physical characteristics relating to the embodiments disclosed herein are not to be considered as limiting, unless the claims expressly state otherwise.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIGS. 1-6</figref> reference a multipurpose filament dispensing device <b>100</b>, hereinafter “device” that serves the dual purpose of dispensing a filament <b>101</b>, while also capping an opening <b>103</b> on a container <b>105</b> of topical ointment. Typical containers of topical ointment such as lip balm are universal in size and shape and thus filament dispensing device <b>100</b> can be used interchangeably with the variety of manufactured lip balm containers or can be used as a standalone item. The device <b>100</b> can either function as a standalone dispenser for storing and dispensing the filament, or serve as a cap for the container while simultaneously storing and dispensing the filament. In one embodiment, the device <b>100</b> dispenses the filament from a raised outlet <b>122</b> and extends the filament to a depressed cutting member <b>144</b> to facilitate grasping, manipulating, and cutting of the filament. The device <b>100</b> may also mate with an opening of the container to form a detachable cap thereto.</p>
+      <p id="p-00039-en" num="0039">In some embodiments, the filament can be rotatably extracted from an internal spool <b>138</b> in the device <b>100</b>. The filament is wound around the spool <b>138</b> for storage, and unwound for dispensing. After extracting a desired unit length of the filament, the filament is extended at a slope from a raiser outlet to a depressed cutting member <b>144</b>, and finally cut to a desired unit length. The slope creates a space beneath the filament that facilitates handling of the filament. The filament may include, without limitation, dental floss, a string, and an interdental cleaning member.</p>
+      <p id="p-00040-en" num="0040">In some embodiments, the device <b>100</b> forms a detachable cap over the container. The container may hold a topical composition. The topical composition may include, without limitation, a lip balm, a lip salve, or other lip application. The topical composition dispenses from an opening in the container. In one embodiment, the device <b>100</b> detaches from the opening to enable access to the topical composition. In yet another embodiment, the filament and/or the topical composition can be compacted into the attached container, such that space is optimized to enhance portability. In one embodiment, the device <b>100</b> can be small enough to fit in a purse or pocket.</p>
+      <p id="p-00041-en" num="0041">As referenced in <figref>FIG. 1</figref>, the device <b>100</b> dispenses a filament from a raised outlet <b>122</b>, and extends the filament to a depressed cutting member <b>144</b> to enable facilitated grasping and cutting of the filament. The device <b>100</b> also caps an opening on a container of a topical composition. The device <b>100</b> comprises an outer housing <b>102</b> that substantially encases an inner housing <b>118</b>. Both housings <b>102</b>, <b>118</b> are arranged to work together to efficiently dispense the filament efficiently, and securely cap the opening in an attached container.</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIG. 2</figref> illustrates an exploded view of the device <b>100</b>, illustrating how the inner housing <b>118</b> is sized to snap/lock inside the outer housing <b>102</b>. Inner housing <b>118</b> encases a spool <b>138</b> that carries a roll of filament. The inner housing <b>118</b> also facilitates grasping, manipulating, and cutting of the filament <b>101</b>. The inner housing <b>118</b> is defined by a dispensing end <b>120</b>, a circular wall end <b>128</b>, and an interior chamber <b>130</b>. The inner housing <b>118</b> is disposed to position inside the cavity <b>104</b> of the outer housing <b>102</b>, wherein the dispensing end <b>120</b> and the outlet end <b>106</b> are in a spaced-apart parallel arrangement. In one embodiment, the inner housing <b>118</b> snaps/locks inside the cavity <b>104</b> of the outer housing <b>102</b>. Suitable materials for the inner housing <b>118</b> may include, without limitation, a rigid polymer, polyurethane, polyvinylchloride, rubber, metal, fiberglass, and wood.</p>
+      <p id="p-00043-en" num="0043">Device <b>100</b> includes a panel <b>140</b> that includes a cutting member <b>144</b> that has a sharp edge <b>146</b> that is capable of cutting the filament to a desired unit length during use. The panel <b>140</b> is disposed to engage the depression <b>124</b> of the dispensing end <b>120</b>. Specifically, the panel <b>140</b> is substantially shaped to rest flush inside the depression <b>124</b> of the dispensing end <b>120</b>. The panel <b>140</b> is defined by a panel opening <b>142</b> and a cutting member <b>144</b>. The panel opening <b>142</b> is configured to interlock with the protrusion <b>126</b> of the dispensing end <b>120</b>.</p>
+      <p id="p-00044-en" num="0044">In one embodiment, heat staking is used to fasten the panel <b>140</b> to the dispensing end <b>120</b>. In this process, the panel opening <b>142</b> enables passage of the protrusion <b>126</b>. The polymers are then melted to form a unitary piece that interlocks the panel opening <b>142</b> and the depression <b>124</b>. This may create a mushrooming effect. However, in other embodiments, the panel opening <b>142</b> may interlock with the protrusion <b>126</b> through a frictional fit, a ridged mating, a magnetic lock, or an adhesive. In any case, the panel <b>140</b> positions securely inside the depression <b>124</b> of the dispensing end <b>120</b>. The panel <b>140</b> is fabricated from a thin sheet of metal or other sturdy material capable of positioning a cutting member <b>144</b>.</p>
+      <p id="p-00045-en" num="0045">Cutting member <b>144</b> serves to cut the filament at a desired unit length. The cutting member <b>144</b> is disposed at one end of the panel <b>140</b>. The cutting member <b>144</b> has a generally sharp edge <b>146</b>, such as a blade, a razor or a jagged section of metal. The sharp edge <b>146</b> of the cutting member <b>144</b> is configured to help guide the filament to enable separation of a unit length of dispensed filament from a section of filament wound on the spool <b>138</b>. The sharp edge <b>146</b> may be formed in a semi-circular shape to allow for cutting from either side of the blade; though the radius may be increased or decreased to affect the cutting capacity. The cutting member <b>144</b> extends from the panel <b>140</b> at a slope. The slope creates a space between the cutting member <b>144</b> and panel <b>140</b> that that facilitates cutting the filament.</p>
+      <p id="p-00046-en" num="0046">Additionally, since the panel <b>140</b>, and thereby the cutting member <b>144</b>, are disposed within the depression <b>124</b>, the raised outlet <b>122</b> is generally at a higher elevation (<figref>FIG. 1</figref>). Thus, as the filament dispenses from the raised outlet <b>122</b>, the filament extends at a downward angle towards the cutting member <b>144</b> for cutting. This sloped extension of filament from the raised outlet <b>122</b> to the cutting member <b>144</b> forms a space beneath the filament that facilitates manipulation and grasping of the filament. In essence, the difference in elevation between the raised outlet <b>122</b> and the cutting member <b>144</b> is configured to enable facilitated cutting of the filament.</p>
+      <p id="p-00047-en" num="0047">
+        <figref>FIG. 3</figref> illustrates an elevated side view of the multipurpose filament dispensing device, in accordance with an embodiment of the present disclosure. <figref>FIG. 4</figref> illustrates a cross sectioned perspective side view of the multipurpose filament dispensing device generally taken along section A-A of <figref>FIG. 3</figref> with a close-up of an exemplary lid that is latched to an exemplary dispensing end of an outer housing, in accordance with an embodiment of the present disclosure. Outer housing <b>102</b> engages the opening in the container and forms a protective casing for the inner housing <b>118</b>. The outer housing <b>102</b> is defined by an upper cavity <b>104</b>, a lower cavity <b>109</b>, an outlet end <b>106</b>, a mounting end <b>114</b>, and a lid <b>110</b>. The outer housing upper cavity and lower cavity is separated by wall <b>129</b>. In one embodiment, the outer housing <b>102</b> is generally circular and has a diameter substantially the same as the container that is being capped. The lid <b>110</b> is configured to regulate access to the cavity <b>104</b>. In one embodiment, a hinge <b>108</b> forms a junction between the lid <b>110</b> and the outlet end <b>106</b> of the outer housing <b>102</b> to enable pivotal movement of the lid <b>110</b> between an open position and a closed position. The lid <b>110</b> has a latching member <b>116</b>. The latching member <b>116</b> frictionally engages indentation <b>148</b> of the lid <b>110</b> proximate to the perimeter ridge <b>112</b> for securing the lid <b>110</b> in the closed position and for enabling latching member to engage a bottom edge of the lid <b>110</b>. When the lid is in a closed position and locked, the perimeter ridge <b>112</b> allows for easy engagement of the lid. The slight indentation allows the user to gain purchase with a fingernail or an edge of the finger to grip and open the lid. The outside surface of the housing is generally smooth so it is necessary to have an indentation to allow the user a place to engage and easily flip the lid open.</p>
+      <p id="p-00048-en" num="0048">
+        <figref>FIG. 5A</figref> illustrates a perspective top view of the inner housing of the multipurpose filament dispensing device, in accordance with an embodiment of the present disclosure, the dispensing end <b>120</b> of the inner housing <b>118</b> is disposed distally from the container. The dispensing end <b>120</b> comprises a raised outlet <b>122</b>, a depression <b>124</b>, and a protrusion <b>126</b>. The raised outlet <b>122</b> is in communication with the interior chamber <b>130</b> of the inner housing <b>118</b>.</p>
+      <p id="p-00049-en" num="0049">In one embodiment, the depression <b>124</b> may have a generally rectangular shape and occupy one side of the dispensing end <b>120</b>. The protrusion <b>126</b> may include a generally conical shape. In yet another embodiment, the inner housing <b>118</b> may have an indentation <b>148</b> on the dispensing end <b>120</b>. The indentation <b>148</b> frictionally engages the latching member of the lid <b>110</b> while the lid is in the closed position to form a more securely closed cap.</p>
+      <p id="p-00050-en" num="0050">A filament guide <b>119</b> is used to guide one end of the filament from the spool <b>138</b> to the raised outlet <b>122</b>. The filament guide may include a channel that is sized and dimensioned to receive and guide a free end of the filament from the spool <b>138</b> to the raised outlet <b>122</b>. The filament guide <b>119</b> is a channel that works in conjunction with raised outlet <b>122</b> which is a generally C-shaped opening. The filament is pulled along the channel through the gap of the C-shaped opening to the exterior of the housing. If raised outlet <b>122</b> was configured with a “closed” <b>0</b>-shaped opening it would be difficult to thread the filament through the opening. Once the inner housing is placed within the outer housing the gap of filament guide <b>119</b> is effectively closed by the exterior wall of the outer housing. The filament used in this device may include, without limitation, dental floss, string, and dental related flossing members.</p>
+      <p id="p-00051-en" num="0051">
+        <figref>FIG. 5B</figref> illustrates an prospective bottom view of the inner housing of the multipurpose filament dispensing device, in accordance with an embodiment of the present disclosure Spool post <b>132</b> is disposed in the interior chamber <b>130</b> of the inner housing <b>118</b>. The spool post <b>132</b> is configured to rotatably hold a spool <b>138</b> that carries the filament <b>101</b>. The spool post <b>132</b> extends along the length of the inner housing the spool housing. The spool <b>138</b> rotatably mounts to the spool post and is configured to carry filament. The filament winds around the spool <b>138</b> for storage, and may be unwound to dispense the filament from the elevated outlet.</p>
+      <p id="p-00052-en" num="0052">
+        <figref>FIG. 5C</figref> illustrates a side view of the inner housing of the multipurpose filament dispensing device, in accordance with an embodiment of the present disclosure. <figref>FIG. 5D</figref> illustrates a side view of the inner housing of the multipurpose filament dispensing device, in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00053-en" num="0053">
+        <figref>FIG. 5E</figref> illustrates a bottom view of the multipurpose filament dispensing device, in accordance with an embodiment of the present disclosure. Raised outlet <b>122</b> has a generally C-shaped circular opening that enables passage of the filament from the interior chamber <b>130</b>. However, in other embodiments, the raised outlet <b>122</b> may take other shapes, including, without limitation, cubicle, rectangular, and triangular. The depression <b>124</b> and the protrusion <b>126</b> enable secure positioning of components for accessing, manipulating, and cutting the filament, as described below. Spool post <b>132</b> is cylindrical post operatively arranged to rotatably accommodate a spool of filament. The spool post is fixed to the center of under-side of dispensing end of the inner housing. The spool post extends the length of the inner housing wall and is of sufficient length to hover above wall <b>129</b> of the outer housing when the inner housing is inserted into the outer housing.</p>
+      <p id="p-00054-en" num="0054">In one embodiment, the depression <b>124</b> may have a generally rectangular shape and occupy one side of the dispensing end <b>120</b>. The protrusion <b>126</b> may include a generally conical shape. In yet another embodiment, the inner housing <b>118</b> may have an indentation <b>148</b> on the dispensing end <b>120</b>. The indentation <b>148</b> frictionally engages the latching member of the lid <b>110</b> while the lid is in the closed position to form a more securely closed cap.</p>
+      <p id="p-00055-en" num="0055">A filament guide may be used to guide one end of the filament from the spool <b>138</b> to the raised outlet <b>122</b>. The filament guide may include a channel that is sized and dimensioned to receive and guide a free end of the filament from the spool <b>138</b> to the raised outlet <b>122</b>. The filament may include, without limitation, dental floss, string, and dental related flossing members.</p>
+      <p id="p-00056-en" num="0056">
+        <figref>FIG. 6A</figref> illustrates a side view of the multipurpose filament dispensing device connected to an exemplary container of topical ointment, in accordance with an embodiment of the present disclosure. <figref>FIG. 6B</figref> illustrates a sectioned side view of the multipurpose filament dispensing device, the section generally taken along section H-H of <figref>FIG. 6A</figref>, detailing an interior chamber of the inner housing inside the outer housing connected to an exemplary container of topical ointment, in accordance with an embodiment of the present disclosure. The mounting end <b>114</b> of the outer housing <b>102</b> is oppositely positioned from the outlet end <b>106</b>, and configured to enable engagement with the opening of the container. The mounting end <b>114</b> can mate with the opening through various mechanisms, including, without limitation, threaded engagement, frictional fit, interlocking ridges, magnets, and screws. In this manner, the outer housing <b>102</b> forms a cap to the opening. Suitable materials for the outer housing <b>102</b> may include, without limitation, a rigid polymer, polyurethane, polyvinylchloride, rubber, metal, fiberglass, and wood. In another embodiment, the outer housing <b>102</b> displays indicia, graphics, text, and logos to help identify the topical composition and the filament.</p>
+      <p id="p-00057-en" num="0057">Cavity <b>109</b> of outer housing <b>102</b> is cylindrical he shaped and configured to fit over an opening <b>103</b> of container <b>105</b> that is in this example a container of topical composition such as lip balm or the like. The cylindrical cavity at the top of lip balm container will typically contain a movable cylindrical stick of lip balm. A fastening means <b>107</b> positions proximate mounting end <b>114</b> and serves to fasten the device <b>100</b> to the outside of the typical cylindrical lip balm container. The fastening means may include, without limitation, a lip that engages a channel, a threaded mating surface, and a magnet and the like. It should be readily apparent that the outer housing <b>102</b>, positioned atop the container, helps inhibit contamination of the topical composition by external elements and also protects against undesirable drying of the topical composition. In this manner, the device <b>100</b> optimizes space by combining the container capping function and the filament dispensing functions.</p>
+      <p id="p-00058-en" num="0058">
+        <figref>FIG. 7</figref> illustrates a flowchart diagram of an exemplary method <b>200</b> for dispensing a filament and capping an opening with a multipurpose filament dispensing device <b>100</b>. The method <b>200</b> utilizes the device <b>100</b> for the dual purpose of dispensing a filament, while also capping an opening. In one embodiment, the method <b>200</b> enables the device <b>100</b> to dispense the filament from a raised outlet <b>122</b> and extend the filament to a depressed cutting member <b>144</b> to facilitate grasping, manipulating, and cutting of the filament. The method <b>200</b> also allows the device <b>100</b> to mate with an opening of a container of topical composition.</p>
+      <p id="p-00059-en" num="0059">The method <b>200</b> may include an initial Step <b>202</b> of providing a spool <b>138</b>, the spool <b>138</b> configured to enable carrying a filament. The filament may include dental floss. However, in other embodiments, any filament in a variety of industries and arts may be used. The method <b>200</b> may further comprise a Step <b>204</b> of positioning the spool <b>138</b> in an inner housing <b>118</b>. A spool post <b>132</b> is disposed in the interior chamber <b>130</b> of the inner housing <b>118</b>. The spool <b>138</b> is configured to carry a filament. The filament winds around the spool <b>138</b> for storage, and may be unwound to dispense the filament from the elevated outlet. A filament guide serves to guide one end of the filament from the spool <b>138</b> to the raised outlet <b>122</b>. The filament guide may include a channel that is sized and dimensioned to receive and guide the filament from the spool <b>138</b> to the raised outlet <b>122</b>. The filament may include, without limitation, dental floss.</p>
+      <p id="p-00060-en" num="0060">A Step <b>206</b> includes positioning the inner housing <b>118</b> inside an outer housing <b>102</b>. The inner housing <b>118</b> is disposed to position inside the cavity <b>104</b> of the outer housing <b>102</b>, wherein the dispensing end <b>120</b> and the outlet end <b>106</b> are in a spaced-apart parallel arrangement. In some embodiments of the method <b>200</b>, a Step <b>208</b> comprises providing a container having an opening. The device <b>100</b> forms a detachable cap over the container. The container may hold a topical composition. The topical composition may include, without limitation, a lip balm, a lip salve, or other lip application. The topical composition dispenses from an opening in the container. The device <b>100</b> detaches from the opening to enable access to the topical composition.</p>
+      <p id="p-00061-en" num="0061">A Step <b>210</b> includes engaging the opening with a mounting end <b>114</b> of the outer housing <b>102</b>. The outer housing <b>102</b> of the device <b>100</b> may be configured to fit over an opening of a container that contains a topical composition. A fastening member positions on the lower edge of the mounting end <b>114</b> and serves to secure the device <b>100</b> to the container. In some embodiments, a Step <b>212</b> may include dispensing the filament through a raised outlet <b>122</b>. The dispensing end <b>120</b> of the inner housing <b>118</b> is comprised of a raised outlet <b>122</b>, a depression <b>124</b>, and a protrusion <b>126</b>. The raised outlet <b>122</b> is in communication with the interior chamber <b>130</b> of the inner housing <b>118</b>. In one embodiment, the raised outlet <b>122</b> may include a generally circular opening that enables passage of the filament from the interior chamber <b>130</b>.</p>
+      <p id="p-00062-en" num="0062">A Step <b>214</b> comprises extending the filament from the raised outlet <b>122</b> to a cutting member <b>144</b>, the extension forming a downward slope. Since the panel <b>140</b>, and thereby the cutting member <b>144</b>, are disposed in the depression <b>124</b>, the raised outlet <b>122</b> is generally at a higher elevation. Thus, as the filament dispenses from the raised outlet <b>122</b>, the filament extends at a downward angle towards the cutting member <b>144</b> for cutting. This sloped extension of filament from the raised outlet <b>122</b> to the cutting member <b>144</b> forms a space beneath the filament that facilitates manipulation and grasping of the filament. A final Step <b>216</b> includes separating a unit length of dispensed filament from a section of filament wound on the spool <b>138</b>. The cutting member <b>144</b> serves to cut the filament at a desired length. The cutting member <b>144</b> is disposed at one end of the panel <b>140</b>.</p>
+      <p id="p-00063-en" num="0063">The cutting member <b>144</b> has a generally sharp edge <b>146</b>, such as a razor or a jagged section of metal. The sharp edge <b>146</b> of the cutting member <b>144</b> is configured to enable separation of a unit length of dispensed filament from a section of filament wound on the spool <b>138</b>. Though, specifically, the small space where the panel <b>140</b> and cutting member <b>144</b> meet is where the filament is cut. Therefore the filament can be cut on either side of the slope.</p>
+      <p id="p-00064-en" num="0064">These and other advantages of the disclosure will be further understood and appreciated by those skilled in the art by reference to the following written specification, claims and appended drawings.</p>
+      <p id="p-00065-en" num="0065">Since many modifications, variations, and changes in detail can be made to the described preferred embodiments of the disclosure, it is intended that all matters in the foregoing description and shown in the accompanying drawings be interpreted as illustrative and not in a limiting sense. Thus, the scope of the disclosure should be determined by the appended claims and their legal equivalence.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What I claim is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A multipurpose filament dispensing device for dispensing a filament and capping a container, the device comprising:
+<claim-text>an outer housing, the outer housing defined by an upper cavity and a lower cavity separated by an internal wall, an outlet end, a mounting end, and a lid,</claim-text><claim-text>the lid configured to regulate access to the upper cavity, the mounting end of the lower cavity configured to enable engagement with an opening of the container;</claim-text><claim-text>an inner housing, the inner housing defined by a dispensing end, a cap end, and an interior chamber,</claim-text><claim-text>the inner housing disposed to position inside the upper cavity of the outer housing, wherein the dispensing end and the outlet end are in a spaced-apart parallel arrangement,</claim-text><claim-text>the dispensing end having a raised outlet, a depression, and a protrusion,</claim-text><claim-text>the raised outlet arranged in communication with the interior chamber of the inner housing;</claim-text><claim-text>a spool post, the spool post disposed in the interior chamber of the inner housing;</claim-text><claim-text>a spool, the spool disposed to rotatably mount the spool post, the spool configured to enable carrying a filament; and</claim-text><claim-text>a panel, the panel disposed to engage the depression of the dispensing end, the panel defined by a panel opening and a cutting member,</claim-text><claim-text>the panel opening configured to interlock with the protrusion of the dispensing end,</claim-text><claim-text>the cutting member having a generally sharp edge, the cutting member disposed at a generally lower elevation than the raised outlet,</claim-text><claim-text>wherein the difference in elevation between the raised outlet and the cutting member is configured to enable facilitated access to the filament,</claim-text><claim-text>wherein the sharp edge of the cutting member is configured to enable separation of a unit length of dispensed filament from a section of filament wound on the spool.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the filament is a dental floss.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the container contains a topical composition.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The device of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the topical composition is a lip balm.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the container has a generally cylindrical shape with a diameter that substantially matches the diameter of the mounting end of the outer housing.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the outer housing comprises a hinge, the hinge configured to enable the lid to pivotally move between an open positon and a closed position relative to the outlet end.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The device of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the outlet end has a perimeter ridge</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The device of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the lid has a latching member.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The device of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the perimeter ridge is configured to leave a gap between the exterior of the housing and the edge of the lid to enable a finger to lift the lid.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the inner housing exterior wall has a longitudinal gap as a filament guide, the filament guide configured to guide the filament from the spool to the raised outlet.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the spool post comprises a cylindrical post, the post configured to rotatably hold the spool in the exterior of the inner housing.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the panel opening and the protrusion from the dispensing end are interlocked through a heat staking process.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the panel is substantially rectangular.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the panel is a metal composition.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cutting member extends form the panel at an upward angle.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cutting member forms a substantially semicircular shape having a sharp edge.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en" independent="true">
+      <claim-text>
+        <b>17</b>. A method for dispensing a filament and capping an opening with a multipurpose filament dispensing device, the method comprising:
+<claim-text>providing a spool, the spool configured to enable carrying a filament;</claim-text><claim-text>positioning the spool in an inner housing;</claim-text><claim-text>positioning the inner housing inside an outer housing;</claim-text><claim-text>providing a container having an opening;</claim-text><claim-text>engaging the opening with a mounting end of the outer housing;</claim-text><claim-text>dispensing the filament through a raised outlet;</claim-text><claim-text>extending the filament from the raised outlet to a cutting member, the extension forming a downward slope; and</claim-text><claim-text>separating a unit length of dispensed filament from a section of filament wound on the spool.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, further including, pivotally moving a lid that is hinged at an outlet end of the outer housing between an open position and a closed position.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, further including interlocking a protrusion from the dispensing end of the inner housing to a panel opening from a panel through a heat staking process.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en" independent="true">
+      <claim-text>
+        <b>20</b>. A multipurpose filament dispensing device for dispensing a dental floss and capping an opening, the device comprising:
+<claim-text>an outer housing, the outer housing defined by an upper cavity and a lower cavity separated by an interior wall, an outlet end, a mounting end, and a lid,</claim-text><claim-text>the lid configured to regulate access to the upper cavity by pivotally moving between an open position and a closed position on a hinge, the mounting end configured to enable engagement with an opening of a container, the container containing a topical ointment;</claim-text><claim-text>an inner housing, the inner housing defined by a dispensing end, a cap end, and an interior chamber,</claim-text><claim-text>the inner housing disposed to position inside the upper cavity of the outer housing, wherein the dispensing end and the outlet end are in a spaced-apart parallel arrangement,</claim-text><claim-text>the dispensing end having a raised outlet, a depression, and a protrusion,</claim-text><claim-text>the raised outlet arranged in communication with the interior chamber of the inner housing;</claim-text><claim-text>a spool post, the spool post disposed in the interior chamber of the inner housing;</claim-text><claim-text>a spool, the spool disposed to rotatably mount the spool post, the spool configured to enable carrying a dental floss; and</claim-text><claim-text>a panel, the panel disposed to engage the depression of the dispensing end through heat staking, the panel shaped substantially the same as the depression, the panel defined by a panel opening and a cutting member,</claim-text><claim-text>the panel opening configured to interlock with the protrusion of the dispensing end through a heat staking process,</claim-text><claim-text>the cutting member having a generally sharp edge and semicircular shape, the cutting member disposed at a generally lower elevation than the raised outlet,</claim-text><claim-text>wherein the difference in elevation between the raised outlet and the cutting member is configured to enable facilitated access to the dental floss,</claim-text><claim-text>wherein the sharp edge of the cutting member is configured to enable separation of a unit length of dispensed dental floss from a section of dental floss wound on the spool. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150245893A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150245893A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150245893A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245893A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150245893A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245893A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150245893A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245893A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150245893A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245893A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150245893A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245893A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150245893A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245893A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150245893A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245893A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150245893A1_00009.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150245893A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150245893A1.PDF" type="pdf" size="598383" pages="14" />
+</lexisnexis-patent-document>

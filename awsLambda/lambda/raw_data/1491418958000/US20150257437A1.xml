@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257437A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030128" date-changed="20151027" time-changed="110523">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314683">
+        <country>US</country>
+        <doc-number>20150257437</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14204316</doc-number>
+        <date>20140311</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151027">
+      <classification-ipcr sequence="1">
+        <text>A24C   5/34        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>24</class>
+        <subclass>C</subclass>
+        <main-group>5</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>G06T   7/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>06</class>
+        <subclass>T</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>H04N   7/18        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>04</class>
+        <subclass>N</subclass>
+        <main-group>7</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151027">
+      <classification-cpc sequence="1">
+        <text>A24C   5/34        20130101 FI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>24</class>
+        <subclass>C</subclass>
+        <main-group>5</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A24C   5/3412      20130101 LI20151016BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>24</class>
+        <subclass>C</subclass>
+        <main-group>5</main-group>
+        <subgroup>3412</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151016</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>G06T   7/001       20130101 LI20151019BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>06</class>
+        <subclass>T</subclass>
+        <main-group>7</main-group>
+        <subgroup>001</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151019</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>G06T2207/30128     20130101 LA20151019BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>06</class>
+        <subclass>T</subclass>
+        <main-group>2207</main-group>
+        <subgroup>30128</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151019</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>H04N   7/181       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>04</class>
+        <subclass>N</subclass>
+        <main-group>7</main-group>
+        <subgroup>181</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">22</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">Smoking Article Inspection System and Associated Method</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>R.J. Reynolds Tobacco Company</orgname>
+            <role>02</role>
+            <address>
+              <city>Winston-Salem</city>
+              <state>NC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Wood</last-name>
+            <first-name>Gary Lee</first-name>
+            <address>
+              <city>Rural Hall</city>
+              <state>NC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hiatt</last-name>
+            <first-name>Derwin</first-name>
+            <address>
+              <city>Walnut Cove</city>
+              <state>NC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>McCann</last-name>
+            <first-name>Larry</first-name>
+            <address>
+              <city>King</city>
+              <state>NC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Shockley</last-name>
+            <first-name>Mike</first-name>
+            <address>
+              <city>Tobaccoville</city>
+              <state>NC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Nuckols</last-name>
+            <first-name>Eddie</first-name>
+            <address>
+              <city>Mocksville</city>
+              <state>NC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hall</last-name>
+            <first-name>David R.</first-name>
+            <address>
+              <city>Kernersville</city>
+              <state>NC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Brantley</last-name>
+            <first-name>Frank</first-name>
+            <address>
+              <city>Winston-Salem</city>
+              <state>NC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="8" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Martin</last-name>
+            <first-name>Isaac</first-name>
+            <address>
+              <city>Lewisville</city>
+              <state>NC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="9" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Sama</last-name>
+            <first-name>Martin</first-name>
+            <address>
+              <city>Tobaccoville</city>
+              <state>NC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="10" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Reddell</last-name>
+            <first-name>Charles</first-name>
+            <address>
+              <city>Mount Airy</city>
+              <state>NC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="11" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Whitley</last-name>
+            <first-name>Mike</first-name>
+            <address>
+              <city>Winston-Salem</city>
+              <state>NC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173667650">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257437</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015138440</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150310</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173667649">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257437</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015138440</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150310</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Smoking article inspection systems configured to inspect smoking articles are provided. The systems may include imaging devices configured to capture images of an exterior of the smoking article and an analysis unit configured to analyze the images captured by the imaging devices. The analysis unit may execute an edge detection tool configured to determine a position of the smoking article based on an edge location of the smoking article and a defect detection tool configured to determine whether the smoking article is defective after the position of the smoking article is determined. The imaging devices may be configured to capture images of the smoking articles during the assembly thereof. Thereby, the analysis unit may determine any operations during assembly causing damage to the smoking article from analysis of the images of the smoking article captured during assembly. Related methods are also provided.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140618</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257437A1</docdb-publication-number>
+      <docdb-application-id>444510566</docdb-application-id>
+      <new-owner>R.J. REYNOLDS TOBACCO COMPANY, NORTH CAROLINA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:WOOD, GARY LEE;HIATT, DERWIN;MCCANN, LARRY;AND OTHERS;SIGNING DATES FROM 20140422 TO 20140424;REEL/FRAME:033130/0731</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20140709</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257437A1</docdb-publication-number>
+      <docdb-application-id>444510566</docdb-application-id>
+      <new-owner>R.J. REYNOLDS TOBACCO COMPANY, NORTH CAROLINA</new-owner>
+      <free-text-description>CORRECTIVE ASSIGNMENT TO CORRECT THE NAME OF THE FIFTH LISTED ASSIGNOR PREVIOUSLY RECORDED ON REEL 033130 FRAME 0731. ASSIGNOR(S) HEREBY CONFIRMS THE CORRECT NAME OF THE FIFTH LISTED ASSIGNOR IS EDDIE NUCKOLS;ASSIGNORS:WOOD, GARY LEE;HIATT, DERWIN;MCCANN, LARRY;AND OTHERS;SIGNING DATES FROM 20140422 TO 20140424;REEL/FRAME:033282/0896</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE DISCLOSURE</heading>
+      <p id="p-00001-en" num="0001">The present disclosure relates to smoking articles and more particularly to smoking article inspection systems and related methods. The smoking articles may be made or derived from tobacco, or otherwise incorporate tobacco, and may be intended for human consumption.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE DISCLOSURE</heading>
+      <p id="p-00002-en" num="0002">Popular smoking articles, such as cigarettes, typically have a substantially cylindrical rod shaped structure and include a charge, roll, or column of smokable material such as shredded tobacco (e.g., in cut filler form) surrounded by a paper wrapper thereby forming a so-called “smokable rod” or “tobacco rod.” Normally, a cigarette has a cylindrical filter element aligned in an end-to-end relationship with the tobacco rod. Typically, a filter element comprises cellulose acetate tow plasticized using a plasticizer such as triacetin, and the tow is circumscribed by a paper material known as “plug wrap.”</p>
+      <p id="p-00003-en" num="0003">The filter element may be attached to one end of the tobacco rod using a circumscribing wrapping material known as “tipping material” or “tipping paper,” in order to provide a so-called “filtered cigarette.” More particularly, the tipping material, which may be air impermeable, may circumscribe at least a portion of both the filter element and the tobacco rod to secure the filter element to the tobacco rod. The inner surface of the tipping material may be fixedly secured to the outer surface of the plug wrap circumscribing the filter tow and the outer surface of the wrapping material/paper wrapper surrounding the smokable material of the tobacco rod, using a suitable adhesive. Accordingly, the filter element and the tobacco rod may be connected to one another. The adhesive may also function to secure the overlapping ends of the tipping material circumscribing the filter element and tobacco rod. The tipping material and plug wrap may be perforated in order to provide dilution of drawn mainstream smoke with ambient air.</p>
+      <p id="p-00004-en" num="0004">The above described steps may be performed largely, or entirely, by high-speed automated machinery. During automated production of cigarettes, certain defects may occur. It follows that, due to the high speed nature of the cigarette manufacturing process, many of the defects that may occur may not be readily apparent or otherwise detected before the completed smoking article is packaged for sale. As such, defects may not be discovered until an end user opens the package of smoking articles. Such a situation is generally undesirable to the perception of the quality of the product. As such, there exists a need for an apparatus and method for inspecting smoking articles, such as filtered cigarettes, for defects prior to the products being packaged for distribution and sale. It may also be desirable for such a solution to be readily implemented with respect to existing cigarette production machinery.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE DISCLOSURE</heading>
+      <p id="p-00005-en" num="0005">The above and other needs are met by aspects of the present disclosure which, in one aspect, provides a smoking article inspection system configured to inspect a smoking article comprising a smokable rod and a filter element connected by a tipping material. The smoking article inspection system may comprise one or more imaging devices configured to respectively capture one or more images of an exterior of the smoking article and an analysis unit configured to analyze the images captured by the one or more imaging devices. The analysis unit may be configured to execute an edge detection tool configured to determine a position of the smoking article based on an edge location of the smoking article and a defect detection tool configured to determine whether the smoking article is defective after the position of the smoking article is determined.</p>
+      <p id="p-00006-en" num="0006">In some embodiments the edge detection tool may be further configured to determine a second edge location of the smoking article to determine a plurality of boundaries of the smoking article. Further, the defect detection tool may be configured to perform at least one of determining an edge location of the tipping material, detecting a plurality of perforations extending through the tipping material, detecting a contrast between a dark portion and a light portion of the smoking article, determining a color of the smoking article, detecting a pattern, and identifying segments of the filter element. The one or more imaging devices may include at least one of an imaging device configured to capture the one or more images of a longitudinal length of a two-up filtered smoking article assembly during application of the tipping material thereto, an imaging device configured to capture the one or more images of the longitudinal length of the two-up filtered smoking article assembly after creation of a plurality of perforations extending through the tipping material, an imaging device configured to capture the one or more images of the longitudinal length of the smoking article after division of the two-up filtered smoking article assembly, and an imaging device configured to capture the one or more images of a terminus of the smoking article. The smoking article inspection system may additionally include a cleaning device configured to direct a flow of air proximate at least one of the one or more imaging devices to prevent collection of debris thereon.</p>
+      <p id="p-00007-en" num="0007">In an additional aspect a smoking article inspection system configured to inspect a smoking article comprising a smokable rod and a filter element connected by a tipping material is provided. The smoking article inspection system may include a plurality of imaging devices configured to respectively capture one or more images of an exterior of the smoking article. The imaging devices may be configured to capture the images of the smoking article during assembly of the smoking article, wherein assembly of the smoking article comprises a plurality of operations. The smoking article inspection system may additionally include an analysis unit configured to analyze the images captured by the imaging devices. The analysis unit may be configured to execute a defect detection tool configured to determine whether the smoking article is defective from the images thereof, and, if the smoking article is determined to be defective, to determine the one of the operations causing damage to the smoking article from analysis of the images of the smoking article captured during assembly.</p>
+      <p id="p-00008-en" num="0008">In some embodiments the analysis unit may be further configured to execute an edge detection tool configured to determine a position of the smoking article based on an edge location of the smoking article. The defect detection tool may be configured to determine whether the smoking article is defective after the position of the smoking article is determined. The edge detection tool may be further configured to determine a second edge location of the smoking article. The defect detection tool may be configured to perform at least one of determining an edge location of the tipping material, detecting a plurality of perforations extending through the tipping material, detecting a contrast between a dark portion and a light portion of the smoking article, determining a color of the smoking article, detecting a pattern, and identifying segments of the filter element. The imaging devices may include at least one of an imaging device configured to capture the one or more images of a longitudinal length of a two-up filtered smoking article assembly during application of the tipping material thereto, an imaging device configured to capture the one or more images of the longitudinal length of the two-up filtered smoking article assembly after creation of a plurality of perforations extending through the tipping material, an imaging device configured to capture the one or more images of the longitudinal length of the smoking article after division of the two-up filtered smoking article assembly, and an imaging device configured to capture the one or more images of a terminus of the smoking article. The smoking article inspection system may additionally include a cleaning device configured to direct a flow of air proximate at least one of the imaging devices to prevent collection of debris thereon.</p>
+      <p id="p-00009-en" num="0009">In an additional aspect, a method is provided for inspecting a smoking article comprising a smokable rod and a filter element connected by a tipping material. The method may include capturing one or more images of an exterior of the smoking article, determining a position of the smoking article based on an edge location of the smoking article, and determining whether the smoking article is defective after the position of the smoking article is determined.</p>
+      <p id="p-00010-en" num="0010">In some embodiments the method may additionally include determining a second edge location of the smoking article to determine a plurality of boundaries of the smoking article. Further, determining whether the smoking article is defective may include at least one of determining an edge location of the tipping material, detecting a plurality of perforations extending through the tipping material, detecting a contrast between a dark portion and a light portion of the smoking article, determining a color of the smoking article, detecting a pattern, and identifying segments of the filter element. Capturing the one or more images of the exterior of the smoking article may include at least one of capturing the one or more images of a longitudinal length of a two-up filtered smoking article assembly during application of the tipping material thereto, capturing the one or more images of the longitudinal length of the two-up filtered smoking article assembly after creation of a plurality of perforations extending through the tipping material, capturing the one or more images of the longitudinal length of the smoking article after division of the two-up filtered smoking article assembly, and capturing the one or more images of a terminus of the smoking article. The method may additionally include directing a flow of air proximate one or more imaging devices configured to capture the one or more images to prevent collection of debris thereon.</p>
+      <p id="p-00011-en" num="0011">In an additional aspect, a method is provided for inspecting a smoking article comprising a smokable rod and a filter element connected by a tipping material. The method may include capturing a plurality of images of an exterior of the smoking article during assembly of the smoking article, wherein assembly of the smoking article comprises a plurality of operations. Further, the method may include determining whether the smoking article is defective from the images thereof. If the smoking article is determined to be defective, the method may additionally include determining the one of the operations causing damage to the smoking article from analysis of the images of the smoking article captured during assembly.</p>
+      <p id="p-00012-en" num="0012">In some embodiments the method may additionally include determining a position of the smoking article based on an edge location of the smoking article before determining whether the smoking article is defective. Further, the method may include determining a second edge location of the smoking article to determine a plurality of boundaries of the smoking article. Determining whether the smoking article is defective may include at least one of determining an edge location of the tipping material, detecting a plurality of perforations extending through the tipping material, detecting a contrast between a dark portion and a light portion of the smoking article, determining a color of the smoking article, detecting a pattern, and identifying segments of the filter element. Capturing the one or more images of the exterior of the smoking article may include at least one of capturing the one or more images of a longitudinal length of a two-up filtered smoking article assembly during application of the tipping material thereto, capturing the one or more images of the longitudinal length of the two-up filtered smoking article assembly after creation of a plurality of perforations extending through the tipping material, capturing the one or more images of the longitudinal length of the smoking article after division of the two-up filtered smoking article assembly, and capturing the one or more images of a terminus of the smoking article. The method may additionally include directing a flow of air proximate one or more imaging devices configured to capture the one or more images to prevent collection of debris thereon.</p>
+      <p id="p-00013-en" num="0013">Aspects of the present disclosure may also be readily implemented with respect to existing smoking article production machinery. As such, aspects of the present disclosure may be implemented to improve the physical integrity and/or aesthetic qualities of the formed smoking articles. Aspects of the present disclosure thus address the above needs and provide these and other advantages as otherwise detailed herein.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00014-en" num="0014">In order to assist the understanding of aspects of the disclosure, reference will now be made to the appended drawings, which are not necessarily drawn to scale and in which like reference numerals refer to like elements. The drawings are exemplary only, and should not be construed as limiting the disclosure. For the various figures, in order to clearly show the configurations of the various wrapping materials, the thicknesses of those wrapping materials of the various filtered cigarettes may be exaggerated. Most preferably, the wrapping materials are tightly wrapped around the filtered cigarettes to provide a tight or snug fit, to provide a cigarette having acceptable physical integrity, and to provide an aesthetically pleasing appearance.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 1</figref> illustrates a cross-sectional view through a smoking article according to an example embodiment of the present disclosure;</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 2</figref> illustrates a cross-sectional view through a two-up smoking article assembly according to an example embodiment of the present disclosure;</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 3</figref> illustrates a schematic view of a smoking article maker according to an example embodiment of the present disclosure;</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 4</figref> illustrates a schematic view of a smoking article inspection system according to an example embodiment of the present disclosure;</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 5</figref> illustrates an enlarged view of a first imaging device of the smoking article inspection system of <figref>FIG. 4</figref> according to an example embodiment of the present disclosure;</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 6</figref> is a screenshot from a monitor including images captured by the first imaging device according to an example embodiment of the present disclosure;</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 7</figref> illustrates an enlarged view of a second imaging device of the smoking article inspection system of <figref>FIG. 4</figref> according to an example embodiment of the present disclosure;</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 8</figref> is a screenshot from a monitor including images captured by the second imaging device according to an example embodiment of the present disclosure;</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 9</figref> illustrates an enlarged view of a third imaging device of the smoking article inspection system of <figref>FIG. 4</figref> according to an example embodiment of the present disclosure;</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 10</figref> is a screenshot from a monitor including images captured by the third imaging device according to an example embodiment of the present disclosure;</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 11</figref> illustrates an enlarged view of a fourth imaging device of the smoking article inspection system of <figref>FIG. 4</figref> according to an example embodiment of the present disclosure;</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 12</figref> is a screenshot from a monitor including images captured by the fourth imaging device according to an example embodiment of the present disclosure;</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 13</figref> illustrates a schematic view of components of an analysis unit of the smoking article inspection system of <figref>FIG. 4</figref> according to an example embodiment of the present disclosure;</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 14</figref> illustrates a schematic view of the analysis unit of <figref>FIG. 13</figref> including additional components according to an example embodiment of the present disclosure;</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 15</figref> is a screenshot from a monitor showing detection of edge locations of a two-up smoking article assembly according to an example embodiment of the present disclosure;</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIGS. 16A-D</figref> are images of defective two-up smoking article assemblies that may be captured by the first imaging device of the smoking article inspection system of <figref>FIG. 4</figref>;</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIGS. 17A and 17B</figref> are images of defective two-up smoking article assemblies that may be captured by the second imaging device of the smoking article inspection system of <figref>FIG. 4</figref>;</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIGS. 18A-D</figref> are images of defective smoking articles that may be captured by the third imaging device of the smoking article inspection system of <figref>FIG. 4</figref>;</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIGS. 19A-D</figref> are images of defective smoking articles that may be captured by the fourth imaging device of the smoking article inspection system of <figref>FIG. 4</figref>;</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 20</figref> schematically illustrates a method for inspecting a smoking article including determining a position of the smoking article according to an example embodiment of the present disclosure; and</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 21</figref> schematically illustrates a method for inspecting a smoking article including determining the operations causing damage to the smoking article according to an example embodiment of the present disclosure.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE ASPECTS OF THE DISCLOSURE</heading>
+      <p id="p-00036-en" num="0036">The present disclosure now will be described more fully hereinafter with reference to the accompanying drawing. The disclosure may be embodied in many different forms and should not be construed as limited to the aspects set forth herein; rather, these aspects are provided so that this disclosure will satisfy applicable legal requirements.</p>
+      <p id="p-00037-en" num="0037">Referring to <figref>FIG. 1</figref>, there are shown components of a smoking article in the form of a filtered cigarette <b>100</b>. The cigarette <b>100</b> includes a generally cylindrical rod <b>102</b> of a charge or roll of smokable filler material <b>104</b> contained in a circumscribing wrapping material <b>106</b>. The rod <b>102</b> is conventionally referred to as a “smokable rod” or “tobacco rod.” The ends of the tobacco rod are open to expose the smokable filler material. At one end of the tobacco rod <b>102</b> is the lighting end <b>108</b> (or “lighting end terminus”), and at the other end is shown a filter element <b>110</b>.</p>
+      <p id="p-00038-en" num="0038">The filter element <b>110</b> or other suitable mouthpiece is typically positioned adjacent one end of the tobacco rod <b>102</b> such that the filter element and tobacco rod are axially aligned in an end-to-end relationship, preferably abutting one another. The filter element <b>110</b> may have a generally cylindrical shape, and the diameter thereof may be essentially equal to the diameter of the tobacco rod <b>102</b>. The ends of the filter element <b>110</b> may be open to permit the passage of air and smoke therethrough. The filter element <b>110</b> includes filter material <b>112</b> (e.g., plasticized cellulose acetate tow) that is overwrapped along the longitudinally extending surface thereof with by a plug wrap <b>114</b>. The filter element <b>110</b> can comprise two or more filter segments (not shown), and/or flavor additives incorporated therein.</p>
+      <p id="p-00039-en" num="0039">The filter element <b>110</b> is attached to the tobacco rod <b>102</b> by a tipping material <b>116</b> which circumscribes both the entire length of the filter element and an adjacent region of the tobacco rod. Opposite to the tobacco rod <b>102</b>, the filter element <b>110</b> includes a mouth end <b>118</b> (or “mouth end terminus”). The inner surface of the tipping material <b>116</b> is fixedly secured to the outer surface of the plug wrap <b>114</b> and the outer surface of the wrapping material <b>106</b> of the tobacco rod, using a suitable adhesive (e.g., a water-based adhesive of the type traditionally employed by cigarette manufacturers for application of tipping paper during filtered cigarette manufacture). That is, the tipping material <b>116</b> extends around the longitudinally extending periphery of substantially the entire length of the plug wrap <b>114</b>, and a portion of the longitudinally extending periphery of the wrapping material <b>106</b> of the tobacco rod <b>102</b>, in a region of the tobacco rod immediately adjacent to the filter element <b>110</b>. Optionally, the smoking article <b>110</b> may be ventilated or air-diluted by air dilution provisions, such as a plurality or series of perforations <b>120</b>, each of which extends through the tipping material <b>116</b> and the plug wrap <b>114</b>. Adhesive may also be applied to a longitudinally extending seam line or lap zone (not shown) of the tipping material, such as is conventionally employed during cigarette manufacture.</p>
+      <p id="p-00040-en" num="0040">In some instances, the cigarette may also possess one or more additional layers of tipping material (not shown) overlying and circumscribing the inner layer of tipping material. All or selected portions of the inner surface of the additional tipping material can be fixedly secured to the outer surface of the inner tipping material. As such, in some aspects, the additional tipping material may overlie the entire length of the filter element and the adjacent region of the tobacco rod. In one aspect, both tipping materials may extend essentially equal distances along the region of the tobacco rod that is adjacent the filter element. For certain cigarettes, the inner and outer tipping materials may be substantially identical in overall dimension (e.g., those tipping materials have comparable thicknesses, widths, and lengths). In embodiments in which the cigarette is ventilated or air-diluted, air dilution provisions such as a series of perforations may extend through the outer tipping material, the inner tipping material, and the plug wrap. Adhesive can be applied to each of the tipping materials using techniques generally similar to those employed conventionally for tipping material application during cigarette manufacture.</p>
+      <p id="p-00041-en" num="0041">Referring to <figref>FIG. 2</figref>, there is shown a representative “two-up” filtered smoking article assembly <b>200</b> (e.g., a two-up cigarette) that can be subdivided along hashed line 2-2 in order to provide two filtered cigarettes <b>100</b>A, <b>100</b>B having a configuration as described with respect to <figref>FIG. 1</figref>. In addition, representative manners or methods for providing preferred types of cigarettes are described with reference to <figref>FIG. 2</figref>. A “two-up” filter segment <b>202</b> is provided. That representative filter segment <b>202</b> possesses filter material circumscribed by plug wrap, as in <figref>FIG. 1</figref>. Two tobacco rods <b>102</b>A, <b>102</b>B are aligned at each end of the “two-up” filter segment <b>202</b>. A layer of tipping material <b>116</b> (e.g., a so-called “patch” of tipping material) is wrapped around the aligned components, such that the tipping material circumscribes the entire length of the “two-up” filter segment <b>202</b>, and a portion of the length of each tobacco rod <b>102</b>A, <b>102</b>B in the respective regions thereof adjacent the filter segment. Typically, that layer of tipping material <b>116</b> circumscribes about 3 mm to about 4 mm of the length of each tobacco rod <b>102</b>A, <b>102</b>B. As such, the so-called two-up filtered smoking article assembly <b>200</b> is provided. For certain preferred aspects, the tipping material <b>116</b> may be selected from types of tipping material, and applied in a particular manner, comparable to that traditionally used for commercial filtered cigarette manufacture. Optionally, the cigarette can be air diluted (e.g., using laser perforation techniques) by forming at least one circumscribing ring of perforations through the layer of tipping material <b>116</b> and underlying plug wrap. Then, the two-up filtered smoking article assembly <b>200</b> is cut in half (i.e., through the “two-up filter segment <b>202</b> along hashed line 2-2), perpendicular to its longitudinal axis, to provide two finished cigarettes <b>100</b>A, <b>100</b>B. As such, the two finished cigarettes <b>100</b>A, <b>100</b>B are each characterized by a smooth mouth end terminus, wherein the mouth end terminus of the filter material, plug wrap, and tipping material are all in the same plane.</p>
+      <p id="p-00042-en" num="0042">Popular smoking articles, such as cigarettes, have a substantially cylindrical rod shaped structure and include a charge, roll, or column of smokable material such as shredded tobacco (e.g., in cut filler form) surrounded by a paper wrapper thereby forming a so-called “smokable rod” or “tobacco rod.” Normally, a cigarette has a cylindrical filter element aligned in an end-to-end relationship with the tobacco rod. Typically, a filter element comprises cellulose acetate tow plasticized using a plasticizer such as triacetin, and the tow is circumscribed by a paper material known as “plug wrap.”</p>
+      <p id="p-00043-en" num="0043">The filter material can vary, and can be any material of the type that can be employed for providing a tobacco smoke filter for cigarettes. Preferably a traditional cigarette filter material is used, such as cellulose acetate tow, gathered cellulose acetate web, polypropylene tow, gathered cellulose acetate web, gathered paper, strands of reconstituted tobacco, or the like. Especially preferred is filamentary tow such as cellulose acetate, polyolefins such as polypropylene, or the like. One filter material that can provide a suitable filter rod is cellulose acetate tow having 3 denier per filament and 40,000 total denier. As another example, cellulose acetate tow having 3 denier per filament and 35,000 total denier can provide a suitable filter rod. As another example, cellulose acetate tow having 8 denier per filament and 40,000 total denier can provide a suitable filter rod. For further examples, see the types of filter materials set forth in U.S. Pat. No. 3,424,172 to Neurath; U.S. Pat. No. 4,811,745 to Cohen et al.; U.S. Pat. No. 4,925,602 to Hill et al.; U.S. Pat. No. 5,225,277 to Takegawa et al. and U.S. Pat. No. 5,271,419 to Arzonico et al.; each of which is incorporated herein by reference in its entirety.</p>
+      <p id="p-00044-en" num="0044">Normally a plasticizer such as triacetin is applied to the filamentary tow in traditional amounts using known techniques. Other suitable materials or additives used in connection with the construction of the filter element will be readily apparent to those skilled in the art of cigarette filter design and manufacture. See, for example, U.S. Pat. No. 5,387,285 to Rivers.</p>
+      <p id="p-00045-en" num="0045">In some embodiments, filter rods, and the filter elements formed therefrom, may incorporate one or more objects therein. Representative types of filter elements incorporating objects, and representative types of cigarettes possessing filter elements incorporating objects, such as flavor-containing capsules or pellets, can possess the types of components, format and configuration, and can be manufactured using the types of techniques and equipment set forth in U.S. Pat. No. 4,862,905 to Green, Jr. et al.; U.S. Pat. No. 7,115,085 to Deal; U.S. Pat. No. 7,479,098 to Thomas et al.; U.S. Pat. No. 7,740,019 to Nelson et al.; and U.S. Pat. No. 7,972,254 to Stokes et al. and U.S. Patent Application Publication No. 2012/0037546 to Dixon et al., which are incorporated herein by reference in their entireties. See also U.S. Patent Application Publication Nos. 2011/0162662 to Nikolov et al.; 2011/0162665 to Burov et al.; 2012/0077658 to Nikolov et al.; 2012/0245006 to Henley et al.; and 2012/0245007 to Henley et al., which are incorporated herein by reference in their entireties.</p>
+      <p id="p-00046-en" num="0046">Cigarette filter rods can be used to provide multi-segment filter rods. Such multi-segment filter rods can be employed for the production of filtered cigarettes possessing multi-segment filter elements. An example of a two-segment filter element is a filter element possessing a first cylindrical segment incorporating activated charcoal particles (e.g., a “dalmatian” type of filter segment) at one end, and a second cylindrical segment that is produced from a filter rod, with or without objects inserted therein. The production of multi-segment filter rods can be carried out using the types of rod-forming units that have been employed to provide multi-segment cigarette filter components. Multi-segment cigarette filter rods can be manufactured, for example, using a cigarette filter rod making device available under the brand name Mufti from Hauni-Werke Korber &amp; Co. KG of Hamburg, Germany. Representative types of filter designs and components, including representative types of segmented cigarette filters, are set forth in U.S. Pat. No. 4,920,990 to Lawrence et al.; U.S. Pat. No. 5,012,829 to Thesing et al.; U.S. Pat. No. 5,025,814 to Raker; U.S. Pat. No. 5,074,320 to Jones et al.; U.S. Pat. No. 5,105,838 to White et al.; U.S. Pat. No. 5,271,419 to Arzonico et al.; U.S. Pat. No. 5,360,023 to Blakley et al.; U.S. Pat. No. 5,396,909 to Gentry et al.; U.S. Pat. No. 5,718,250 to Banerjee et al.; U.S. Pat. No. 6,761,174 to Jupe et al.; and U.S. Pat. No. 7,240,678 to Crooks et al.; U.S. Patent Application Publication Nos. 2004/0261807 to Dube et al. and 2007/0056600 to Coleman III, et al.; PCT Publication No. WO 03/009711 to Kim; and PCT Publication No. WO 03/047836 to Xue et al.; which are incorporated herein by reference.</p>
+      <p id="p-00047-en" num="0047">The plug wrap can vary. See, for example, U.S. Pat. No. 4,174,719 to Martin. Typically, the plug wrap is a porous or non-porous paper material. Suitable plug wrap materials are commercially available. Exemplary plug wrap papers ranging in porosity from about 1,100 CORESTA units to about 26,000 CORESTA units are available from Schweitzer-Maudit International as Porowrap 17-M1, 33-M1, 45-M1, 70-M9, 95-M9, 150-M4, 150-M9, 240M9S, 260-M4 and 260-M4T; and from Miquel-y-Costas as 22HP90 and 22HP150. Non-porous plug wrap materials typically exhibit porosities of less than about 40 CORESTA units, and often less than about 20 CORESTA units.</p>
+      <p id="p-00048-en" num="0048">Exemplary non-porous plug wrap papers are available from Olsany Facility (OP Paprina) of the Czech Republic as PW646; Wattenspapier of Austria as FY/33060; Miquel-y-Costas of Spain as 646; and Schweitzer-Mauduit International as MR650 and 180. Plug wrap paper can be coated, particularly on the surface that faces the filter material, with a layer of a film-forming material. Such a coating can be provided using a suitable polymeric film-forming agent (e.g., ethylcellulose, ethylcellulose mixed with calcium carbonate, nitrocellulose, nitrocellulose mixed with calcium carbonate, or a so-called lip release coating composition of the type commonly employed for cigarette manufacture). Alternatively, a plastic film (e.g., a polypropylene film) can be used as a plug wrap material. For example, non-porous polypropylene materials that are available as ZNA-20 and ZNA-25 from Treofan Germany GmbH &amp; Co. KG can be employed as plug wrap materials.</p>
+      <p id="p-00049-en" num="0049">Filter rods can be manufactured using a rod-making apparatus, and an exemplary rod-making apparatus includes a rod-forming unit. Representative rod-forming units are available as KDF-2, KDF-2E, KDF-3, and KDF-3E from Hauni-Werke Korber &amp; Co. KG; and as Polaris-ITM Filter Maker from International Tobacco Machinery. Filter material, such as cellulose acetate filamentary tow, typically is processed using a conventional filter tow processing unit. For example, filter tow can be bloomed using bussel jet methodologies or threaded roll methodologies. An exemplary tow processing unit has been commercially available as E-60 supplied by Arjay Equipment Corp. of Winston-Salem, N.C. Other exemplary tow processing units have been commercially available as AF-2, AF-3 and AF-4 from Hauni-Werke Korber &amp; Co. KG and as Candor-ITM Tow Processor from International Tobacco Machinery. Other types of commercially available tow processing equipment, as are known to those of ordinary skill in the art, can be employed. Other types of filter materials, such as gathered paper, nonwoven polypropylene web or gathered strands of shredded web, can be provided using the types of materials, equipment and techniques set forth in U.S. Pat. No. 4,807,809 to Pryor et al. and U.S. Pat. No. 5,025,814 to Raker. In addition, representative manners and methods for operating a filter material supply units and filter-making units are set forth in U.S. Pat. No. 4,281,671 to Bynre; U.S. Pat. No. 4,850,301 to Green, Jr. et al.; U.S. Pat. No. 4,862,905 to Green, Jr. et al.; U.S. Pat. No. 5,060,664 to Siems et al.; U.S. Pat. No. 5,387,285 to Rivers and U.S. Pat. No. 7,074,170 to Lanier, Jr. et al. Other types of technologies for supplying filter materials to a filter rod-forming unit are set forth in U.S. Pat. No. 4,807,809 to Pryor et al. and U.S. Pat. No. 5,025,814 to Raker; which are incorporated herein by reference.</p>
+      <p id="p-00050-en" num="0050">Cigarette rods are manufactured using a cigarette making machine, such as a conventional automated cigarette rod making machine. Exemplary cigarette rod making machines are of the type commercially available from Molins PLC or Hauni-Werke Korber &amp; Co. KG. For example, cigarette rod making machines of the type known as MIA (commercially available from Molins PLC) or PROTOS (commercially available from Hauni-Werke Korber &amp; Co. KG) can be employed. A description of a PROTOS cigarette making machine is provided in U.S. Pat. No. 4,474,190 to Brand, at col. 5, line 48 through col. 8, line 3, which is incorporated herein by reference. Types of equipment suitable for the manufacture of cigarettes also are set forth in U.S. Pat. No. 4,781,203 to La Hue; U.S. Pat. No. 4,844,100 to Holznagel; U.S. Pat. No. 5,156,169 to Holmes et al.; U.S. Pat. No. 5,191,906 to Myracle, Jr. et al.; U.S. Pat. No. 6,647,870 to Blau et al.; U.S. Pat. No. 6,848,449 to Kitao et al.; U.S. Pat. No. 6,904,917 to Kitao et al.; U.S. Pat. No. 7,210,486 to Hartman; U.S. Pat. No. 7,234,471 to Fitzgerald et al.; U.S. Pat. No. 7,275,548 to Hancock et al.; and U.S. Pat. No. 7,281,540 to Barnes et al.; each of which is incorporated herein by reference.</p>
+      <p id="p-00051-en" num="0051">The components and operation of conventional automated cigarette making machines will be readily apparent to those skilled in the art of cigarette making machinery design and operation. For example, descriptions of the components and operation of several types of chimneys, tobacco filler supply equipment, suction conveyor systems and garniture systems are set forth in U.S. Pat. No. 3,288,147 to Molins et al.; U.S. Pat. No. 3,915,176 to Heitmann et al; U.S. Pat. No. 4,291,713 to Frank; U.S. Pat. No. 4,574,816 to Rudszinat; U.S. Pat. No. 4,736,754 to Heitmann et al. U.S. Pat. No. 4,878,506 to Pinck et al.; U.S. Pat. No. 5,060,665 to Heitmann; U.S. Pat. No. 5,012,823 to Keritsis et al. and U.S. Pat. No. 6,360,751 to Fagg et al.; and U.S. Patent Application Publication No. 2003/0136419 to Muller; each of which is incorporated herein by reference. The automated cigarette making machines of the type set forth herein provide a formed continuous cigarette rod or smokable rod that can be subdivided into formed smokable rods of desired lengths.</p>
+      <p id="p-00052-en" num="0052">A cigarette is employed by a smoker by lighting the lighting end terminus thereof opposite the filter element and burning the tobacco rod. The smoker then receives mainstream smoke into his/her mouth by drawing on the opposite end (e.g., the filter element or mouth end terminus) of the cigarette. Accordingly, drawn mainstream smoke may be diluted with ambient air by the perforations and/or off-line air dilution techniques described above. For cigarettes that are air diluted or ventilated, the amount or degree of air dilution or ventilation can vary. Frequently, the amount of air dilution for an air diluted cigarette is greater than about 10 percent, generally is greater than about 20 percent, often is greater than about 30 percent, and sometimes is greater than about 40 percent. Typically, the upper level for air dilution for an air diluted cigarette is less than about 80 percent, and often is less than about 70 percent. As used herein, the term “air dilution” is the ratio (expressed as a percentage) of the volume of air drawn through the air dilution provisions to the total volume and air and smoke drawn through the cigarette and exiting the extreme mouth end portion of the cigarette.</p>
+      <p id="p-00053-en" num="0053">The dimensions of a representative filtered cigarette can vary. Preferred cigarettes are rod-shaped, and can have diameters of about 7.5 mm (e.g., circumferences of about 20 mm to about 27 mm, often about 22.5 mm to about 25 mm); and can have total lengths of about 70 mm to about 120 mm, often about 80 mm to about 100 mm. The length of the filter element can vary. Typical filter elements can have total lengths of about 15 mm to about 40 mm, often about 20 mm to about 35 mm. For a typical dual-segment filter element, the downstream or mouth end filter segment often has a length of about 10 mm to about 20 mm; and the upstream or tobacco rod end filter segment often has a length of about 10 mm to about 20 mm.</p>
+      <p id="p-00054-en" num="0054">During the manufacture of filtered smoking articles, such as filtered cigarettes, certain defects may occur. Accordingly, embodiments of the present disclosure are directed to systems and methods for inspecting smoking articles. More particularly, the present disclosure is directed to inspection of smoking articles during the manufacture thereof and tools employed in analyzing images of smoking articles to determine whether the assembled smoking articles are defective and the operation causing such defect.</p>
+      <p id="p-00055-en" num="0055">In this regard, <figref>FIG. 3</figref> schematically illustrates a smoking article or cigarette maker <b>300</b>. In one embodiment the cigarette maker <b>300</b> may comprise a MAX <b>90</b> cigarette maker from Hauni-Werke Korber &amp; Co. KG of Hamburg, Germany. The cigarette maker <b>300</b> may include a plurality of substantially cylindrical rotatable devices such as cylinders or drums. In the illustrated embodiment, the cigarette maker <b>300</b> includes first through eleventh drums <b>302</b>A-K. The drums <b>302</b>A-K may be configured to transport smoking articles, in various stages of completion, between various stations performing operations thereon.</p>
+      <p id="p-00056-en" num="0056">The smoking articles may generally progress from drum-to-drum in a direction corresponding to an increasing state of completion as indicated by arrow <b>304</b>. In this regard, tipping paper may be applied to the smoking article at the third drum <b>302</b>C, perforations may be cut (e.g., laser cut) in the tipping paper and the plug wrap at the fourth drum <b>302</b>D, the smoking articles may be divided from a two-up smoking article assembly into two completed smoking articles at the fifth drum <b>302</b>E, the completed smoking articles may be inspected at the eighth drum <b>302</b>H, and defective smoking articles may be ejected at the ninth drum <b>302</b>I. The remaining drums may be configured to transport the smoking articles between the various drums where operations are performed on the smoking articles, reposition the smoking articles, and/or perform other functions. Accordingly, the remaining drums may comprise transfer drums in some embodiments.</p>
+      <p id="p-00057-en" num="0057">The smoking articles may generally be held in contact with the drums, with each smoking article oriented such that a longitudinal axis thereof is parallel to a rotational axis of the drum that the smoking article is in contact therewith. For example, the smoking articles may be held in channels or flutes in the drums via gravity, via suction applied thereto, and/or via contact therewith by one or more mechanical mechanisms. Gravity or other means and mechanisms may be employed to transfer the smoking articles between the drums.</p>
+      <p id="p-00058-en" num="0058">It may be desirable to inspect the smoking articles prior to packaging and transport of the smoking articles for sale. Accordingly, the cigarette maker <b>300</b> may include an inspection system in some embodiments. In this regard, as noted above, the smoking articles may be inspected at the eighth drum <b>302</b>H in some embodiments. As further noted above, the smoking articles may be completed by the time they reach the eight drum <b>302</b>H. Accordingly, the completed smoking articles may be inspected prior to packaging and transport to consumers.</p>
+      <p id="p-00059-en" num="0059">However, Applicant has determined that it may be desirable to inspect the smoking articles at additional or alternative stages during the manufacture thereof. In this regard, <figref>FIG. 4</figref> schematically illustrates a smoking article inspection system <b>400</b> configured to inspect a smoking article. As described above, the smoking article may comprise a smokable rod <b>102</b> and a filter element <b>110</b> connected by a tipping material <b>112</b> (see, e.g., <figref>FIG. 1</figref>). The inspected smoking articles may be inspected in various states of completion. In this regard, the smoking articles may comprise two-up smoking article assemblies <b>200</b> in some embodiments (see, e.g., <figref>FIG. 2</figref>), individual, completed, as-formed smoking articles <b>100</b> (see, e.g., <figref>FIG. 1</figref>), or components thereof in any state of completion.</p>
+      <p id="p-00060-en" num="0060">The smoking article inspection system <b>400</b> may comprise an inspection apparatus <b>402</b>. Further, the smoking article inspection system <b>400</b> may include an analysis unit <b>404</b>. Accordingly, the analysis unit <b>404</b> may analyze data captured by the inspection apparatus <b>402</b>.</p>
+      <p id="p-00061-en" num="0061">In one embodiment the inspection apparatus <b>402</b> may comprise one or more infrared cameras, x-ray devices, magnetic resonance imaging (MRI) devices, thermal imaging devices, microphones, and/or visible spectrum imaging devices. In one embodiment, the inspection apparatus <b>402</b> comprises a plurality of imaging devices <b>402</b>A-D configured to respectively capture one or more images of an exterior of the smoking article (e.g., cameras configured to capture images in the visible light spectrum). As discussed hereinafter, the images may be captured of a longitudinal periphery of each smoking article or the longitudinal ends thereof. Accordingly, the analysis unit <b>404</b> may be configured to analyze the images captured by the one or more imaging devices <b>402</b>A-D. Further, in some embodiments one or more of the imaging devices <b>402</b>A-D may include an illumination source <b>406</b>A-D associated therewith, which may illuminate the exterior of the smoking articles in order to facilitate capturing images thereof.</p>
+      <p id="p-00062-en" num="0062">In some embodiments the imaging devices <b>402</b>A-D may be configured to capture images in color. Further, the imaging devices <b>402</b>A-D may comprise high-speed cameras in some embodiments. For example, the imaging devices <b>402</b>A-D may be configured to capture at least about thirty frames per second in one embodiment, at least about fifty frames per second in an additional embodiment, and at least about sixty frames per second in a preferred embodiment. Accordingly, the imaging devices <b>402</b>A-D may be configured to capture images of the smoking articles while the smoking articles move at relatively high speeds during the production thereof.</p>
+      <p id="p-00063-en" num="0063">In one embodiment the imaging devices <b>402</b>A-D may comprise the In-Sight 7000 Series Vision System, from Cognex Corp. of Natick, Mass. In this embodiment the imaging devices <b>402</b>A-D may include integral illumination sources. Accordingly, the separate illumination sources <b>406</b>A-D may be omitted in some embodiments.</p>
+      <p id="p-00064-en" num="0064">As noted above, Applicant has determined that it may be desirable to inspect the smoking articles at various stages of completion. By inspecting the smoking articles during assembly thereof, it may be possible to determine which operations in the assembly process are causing defects. Thereby, repairs and/or adjustments may be made to the particular operations causing the defects. In another embodiment it may be possible to remove defective smoking articles prior to completion thereof to save resources or reduce the risk of the defective smoking article continuing in the production process. For example, after a partially-completed smoking article is determined to be defective, the smoking article may be removed prior to completion thereof. In this regard, the determination of whether a smoking article is defective may be made during the production thereof (e.g., prior to completion) in one embodiment. By way of further example, defective smoking article removal devices (e.g., ejectors) may additionally or alternatively be positioned downstream of the first imaging device <b>402</b>A and/or the second imaging device <b>402</b>B in some embodiments. Thereby, by removing the defective, partially-completed smoking articles, material savings may occur by avoiding the unnecessary addition of materials thereto and/or unnecessary wear to the cigarette maker <b>300</b> may be avoided by preventing usage of wear items such as cutting blades thereon. In another embodiment it may be possible to adjust parameters of the assembly operations performed by the cigarette maker <b>300</b> and/or it may be possible to identify defective components of the smoking articles (e.g., defective tipping material supplied to the cigarette maker) in order to avoid the defects. Note, however, that in an alternate embodiment the determination of whether a smoking article is defective may be made after the completion of the smoking article, for example, in instances in which the operation of the cigarette maker <b>300</b> appears to be stable and proper.</p>
+      <p id="p-00065-en" num="0065">In one embodiment the imaging devices <b>402</b>A-D may be configured to capture the images of the smoking article during and after assembly of the smoking article. In this regard, in the embodiment in <figref>FIG. 4</figref>, a first imaging device <b>402</b>A is configured to capture images of the smoking articles at the third drum <b>302</b>C, a second imaging device <b>402</b>B is configured to capture images of the smoking articles at the fourth drum <b>302</b>D, the third imaging device <b>402</b>C is configured to capture images of the smoking articles at the eighth drum <b>302</b>H, and the fourth imaging device <b>402</b>D is configured to capture images of the smoking articles at the ninth drum <b>302</b>I. Example positions of the imaging devices <b>402</b>A-D with respect to the drums <b>302</b>C, D, H, I are illustrated in <figref>FIG. 3</figref>.</p>
+      <p id="p-00066-en" num="0066">Various control schemes may be employed to keep track of the smoking articles as they are assembled. In this regard, in one embodiment timing mechanisms may be employed to determine the identity of a smoking article for which an image is captured thereof. For example, the amount of time associated with moving through the cigarette maker <b>300</b> from the start to each of the imaging devices <b>402</b>A-D may be proportional to the rotational speed of the drums <b>302</b>A-K. Accordingly, the time at which an image of a smoking article is captured may be employed to identify the smoking article. In another embodiment the identity of a smoking article may be determined by maintaining a count of the number of smoking articles having images thereof captured. In some embodiments the count may be based on the number of images captured, regardless of whether a smoking article appears therein, in order to account for removed (e.g., removed as defective) or missing (e.g., fallen from one of the drums <b>302</b>A-K) smoking articles. In a further embodiment, identification of the smoking articles may be based on the number of rotations of the drums <b>302</b>A-K and/or the rotational position thereof. In this regard, the number of rotations of the drums <b>302</b>A-K and the rotational position thereof may directly correspond to the position of the smoking articles in the cigarette maker <b>300</b>. For example, the drums <b>302</b>A-K may be rotationally synchronized. However, various other techniques may be employed to identify each of the smoking articles having images captured thereof. Identification of smoking articles using one of the above-mentioned techniques or various other techniques may be important in that removal of defective smoking articles may occur downstream of the locations at which the images of the smoking articles are captured. Thereby, the position of the smoking articles must be known and tracked such that the correct smoking articles, identified as defective, may be removed.</p>
+      <p id="p-00067-en" num="0067">The smoking article inspection system <b>400</b> may additionally include a network <b>408</b> (e.g., a local network or the internet). The analysis unit <b>404</b> may connect to the imaging devices <b>402</b>A-D through the network <b>408</b>. In another embodiment the analysis unit <b>404</b> may communicate directly with the imaging devices <b>402</b>A-D. Further, the smoking article inspection system <b>400</b> may include one or more monitor(s) <b>410</b>. The monitors <b>410</b> may be configured to display images captured by the imaging devices <b>402</b>A-D and/or information provided by the analysis unit <b>404</b>.</p>
+      <p id="p-00068-en" num="0068">
+        <figref>FIG. 5</figref> illustrates an enlarged perspective view of the third drum <b>302</b>C and the first imaging device <b>402</b>A. Tobacco rods and filter elements may be transferred to the third drum <b>302</b>C by transfer drums <b>302</b>A, B. The third drum <b>302</b>C may comprise a roll drum, at which tipping material is applied to the tobacco rod and the filter rod to form the two-up smoking article assembly <b>200</b> (see, e.g., <figref>FIG. 2</figref>).</p>
+      <p id="p-00069-en" num="0069">The third drum <b>302</b>C may include a plurality of grooves, slots, or channels <b>306</b>C at the circumference thereof oriented parallel to the rotational axis of the third drum. Each of the channels <b>306</b>C may be configured to receive a two-up filtered smoking article assembly <b>200</b>. In order to retain the two-up filtered smoking article assemblies in the channels <b>306</b>C, one or more suction ports <b>308</b>C may be respectively positioned in the channels <b>306</b>C. Accordingly, suction applied to the suction ports <b>308</b>C may retain the two-up filtered smoking article assemblies <b>200</b> in the channels <b>306</b>C as the roll drum <b>302</b>C rotates. Thereby, the tipping material <b>116</b> may be applied to form the two-up smoking article assembly <b>200</b> (see, e.g., <figref>FIG. 2</figref>).</p>
+      <p id="p-00070-en" num="0070">As illustrated, the first imaging device <b>402</b>A may be generally aimed toward the circumference of the third drum <b>302</b>C. Accordingly, the first imaging device <b>402</b>A may be positioned, aimed, and focused to capture images of at least a portion of a longitudinal length of a two-up filtered smoking article assembly <b>200</b> before, during, or after application of the tipping material thereto. A debris shield <b>412</b>A may be configured to block debris from a lens <b>414</b>A of the first imaging device <b>402</b>A. In this regard, tobacco crumbs, paper particles, dust, and/or other materials may release from the smoking articles during assembly thereof, which could coat the lens <b>414</b>A and impair the image capturing abilities of the first imaging device <b>402</b>A. As illustrated, the debris shield <b>412</b>A may include a lip <b>416</b>A positioned proximate the outer surface of the third drum <b>302</b>C and oriented substantially tangentially to a portion thereof. Accordingly, the lip <b>416</b>A may provide further protection in terms of directing debris away from the lens <b>414</b>A of the first imaging device <b>402</b>A which may release from the smoking articles on the third drum <b>302</b>C substantially tangentially. These and various other techniques configured to prevent build-up of debris on lenses of the imaging devices, which are described hereinafter, may be employed at any of the imaging devices <b>402</b>A-D.</p>
+      <p id="p-00071-en" num="0071">
+        <figref>FIG. 6</figref> illustrates an example screenshot <b>418</b>A including first and second images <b>420</b>A, <b>422</b>A of at least a portion of the longitudinal length of the two-up smoking article assembly <b>200</b>. The images <b>420</b>A, <b>422</b>A may be captured by the first imaging device <b>402</b>A. The images <b>420</b>A, <b>422</b> may be outputted on a monitor (e.g., monitor <b>410</b>), which may be connected to one or more of the imaging devices <b>402</b>A-D and/or the analysis unit <b>404</b>.</p>
+      <p id="p-00072-en" num="0072">In one embodiment the first image <b>420</b>A is the most recent image captured by the first imaging device <b>402</b>A. Accordingly, an operator of the cigarette maker <b>300</b> may be apprised of the current status of the two-up filtered smoking article assemblies <b>200</b> at the third drum <b>302</b>C. For example, as illustrated, the images may show the tipping material immediately following attachment to the two-up smoking article assembly and prior to completed wrapping thereabout. The second image <b>422</b>A, which may be displayed simultaneously with the first image <b>420</b>A, may be the most recently-detected defective two-up smoking article assembly <b>200</b> at the third drum <b>302</b>C. Accordingly, the operator may also be apprised of detected defects occurring in the two-up filtered smoking article assemblies <b>200</b> at the third drum <b>302</b>C. Techniques and tools employed by the analysis unit <b>404</b> for detecting defects using the images <b>420</b>A, <b>422</b>A are discussed below.</p>
+      <p id="p-00073-en" num="0073">In some embodiments the first imaging device <b>402</b>A captures images of a plurality of the two-up smoking article assemblies <b>200</b> in each image. For example, in the embodiment illustrated in <figref>FIG. 6</figref>, the first imaging device <b>402</b>A captures images of two of the two-up filtered smoking article assemblies <b>200</b> in each of the images. Capturing multiples of the two-up smoking article assemblies <b>200</b> in each image may provide various advantages.</p>
+      <p id="p-00074-en" num="0074">For example, in some embodiments the rotational speed of the third drum <b>302</b>C may cause the two-up smoking article assemblies <b>200</b> to pass the first imaging device <b>402</b>A at a rate that exceeds the frame rate of the first imaging device. Accordingly, capturing multiples of the two-up smoking article assemblies <b>200</b> in each image may allow for inspection of each of the two-up smoking article assemblies. Thus, capturing images of multiples of the two-up smoking article assemblies <b>200</b> may allow for inspection of each of the two-up smoking article assemblies despite frame rate limitations of the first imaging device <b>402</b>A.</p>
+      <p id="p-00075-en" num="0075">Further, in embodiments in which the frame rate of the first imaging device <b>402</b>A is sufficient to capture individual images of each of the two-up smoking article assemblies <b>200</b> passing thereby, capturing multiple image of the two-up smoking article assemblies may still provide benefits. In this regard, in some embodiments each image may capture at least two of the two-up smoking article assemblies <b>200</b> such that at least two images are captured of each two-up smoking article assembly in successive frames. By capturing more than one image of each two-up smoking article assembly <b>200</b>, the smoking article inspection system <b>400</b> may analyze and inspect the multiple images of each two-up smoking article assembly such that each two-up smoking article assembly is inspected multiple times at the third drum <b>302</b>C. Accordingly, multiple images of each two-up smoking article assembly may be captured without requiring a higher frame rate of the imaging device, which may not be available or which may be cost prohibitive.</p>
+      <p id="p-00076-en" num="0076">Note that the remainder of the disclosure generally describes and illustrates capturing images of individual smoking articles, as opposed to multiple smoking articles in each image. However, multiple smoking articles may be captured in each image at any of the drums. Accordingly, the disclosure is not limited to the example embodiments disclosed herein.</p>
+      <p id="p-00077-en" num="0077">
+        <figref>FIG. 7</figref> illustrates an enlarged perspective view of the fourth drum <b>302</b>D and the second imaging device <b>402</b>B. The fourth drum <b>302</b>D may include a plurality of grooves, slots, or channels <b>306</b>D at the circumference thereof oriented parallel to the rotational axis of the fourth drum. The channels <b>306</b>D may be configured to respectively receive one or more two-up filtered smoking article assemblies <b>200</b> from the third drum <b>302</b>C. In order to retain the two-up filtered smoking article assemblies in the channels <b>306</b>D, one or more suction ports <b>308</b>D may be respectively positioned in the channels. Accordingly, suction applied to the suction ports <b>308</b>D may retain the two-up filtered smoking article assemblies <b>200</b> in the channels <b>306</b>D as the fourth drum <b>302</b>D rotates.</p>
+      <p id="p-00078-en" num="0078">The fourth drum <b>302</b>D may comprise a perforation drum, at which the perforations <b>120</b> (see, e.g., <figref>FIG. 1</figref>) are formed in the two-up smoking article assembly <b>200</b> (see, e.g., <figref>FIG. 2</figref>). In this regard, the cigarette maker <b>300</b> may include a laser <b>310</b>. The laser <b>310</b> may be configured to direct one or more laser beams at the two-up smoking article assembly <b>200</b> to form the perforations <b>120</b> therein.</p>
+      <p id="p-00079-en" num="0079">As illustrated, the second imaging device <b>402</b>B may be generally aimed toward the circumference of the fourth drum <b>302</b>D. Accordingly, the second imaging device <b>402</b>B may be positioned, aimed, and focused to capture images of at least a portion of a longitudinal length of a two-up filtered smoking article assembly <b>200</b> after the perforations <b>120</b> are cut therein. In this regard, as illustrated, a lens <b>414</b>B of the second imaging device <b>402</b>B may be directed at a location on the outer surface of the fourth drum <b>302</b>D downstream of the laser <b>310</b>. In this regard, the fourth drum <b>302</b>D and the remaining drums may rotate in a generally counterclockwise direction in terms of the orientation illustrated in <figref>FIGS. 3 and 7</figref>.</p>
+      <p id="p-00080-en" num="0080">
+        <figref>FIG. 8</figref> illustrates an example screenshot <b>418</b>B including first and second images <b>420</b>B, <b>422</b>B of at least a portion of the longitudinal length of the two-up smoking article assembly <b>200</b>. The images <b>420</b>B, <b>422</b>B may be captured by the second imaging device <b>402</b>B. The images <b>420</b>B, <b>422</b>B may be outputted on a monitor (e.g., monitor <b>410</b>), which may be connected to one or more of the imaging devices <b>402</b>A-D and/or the analysis unit <b>404</b>.</p>
+      <p id="p-00081-en" num="0081">In one embodiment the first image <b>420</b>B is the most recent image captured by the second imaging device <b>402</b>B. Accordingly, an operator may be apprised of the current status of the two-up filtered smoking article assemblies <b>200</b> before, during, or after formation of the perforations <b>120</b> therein, depending on the particular placement of the second imaging device <b>402</b>B. In the illustrated embodiment, the second imaging device <b>402</b>B is configured to capture images of the two-up smoking article assemblies <b>200</b> following formation of the perforations therein.</p>
+      <p id="p-00082-en" num="0082">The second image <b>422</b>B is the most recently-detected defective two-up filtered smoking article assembly <b>200</b> at the fourth drum <b>302</b>D. Accordingly, the operator may also be apprised of detected defects occurring in the two-up filtered smoking article assemblies <b>200</b>. Techniques and tools employed by the analysis unit <b>404</b> for detecting defects using the images <b>420</b>B, <b>422</b>B are discussed below.</p>
+      <p id="p-00083-en" num="0083">After the perforations <b>120</b> are formed in the two-up smoking article assembly <b>200</b>, the two-up smoking article assembly may be directed to the fifth drum <b>302</b>E. A cutting device <b>312</b> may be positioned proximate the fifth drum <b>302</b>E (see, <figref>FIG. 7</figref>). As schematically illustrated in <figref>FIG. 7</figref>, the cutting device <b>312</b>, which may comprise a cutting wheel, may be positioned under and behind the fifth drum <b>302</b>E in terms of the illustrated perspective. Accordingly, the two-up filtered smoking article assembly <b>200</b> may be divided into two individual, completed, as-formed smoking articles <b>100</b>. Thereafter, after division of the two-up filtered smoking article assembly <b>200</b> into two smoking articles <b>100</b>, the smoking articles may be transported downstream by transport drums <b>302</b>F, G to the eighth drum <b>302</b>H.</p>
+      <p id="p-00084-en" num="0084">
+        <figref>FIG. 9</figref> illustrates an enlarged perspective view of the eighth drum <b>302</b>H and the third imaging device <b>402</b>C. The eighth drum <b>302</b>H may include a plurality of securing mechanisms <b>313</b> at the circumference thereof. The securing mechanisms <b>313</b> may be configured to engage one or both of the lighting end <b>108</b> and the mouth end <b>118</b> of a smoking article <b>100</b> (see, e.g., <figref>FIG. 1</figref>). For example, the securing mechanisms <b>313</b> may engage each smoking article <b>100</b> via friction and/or via vacuum applied to the smoking article through the securing mechanisms that acts upon the lighting end <b>108</b> and/or the mouth end <b>118</b> of the smoking article. In some embodiments the securing mechanisms <b>313</b> may be configured to rotate each of the smoking articles <b>100</b> about the respective longitudinal axes thereof.</p>
+      <p id="p-00085-en" num="0085">Due to rotation of the eighth drum <b>302</b>H, the smoking articles <b>100</b> may be directed in front of the third imaging device <b>402</b>C. Further, by optionally rotating the smoking articles <b>100</b> about the longitudinal axes thereof using the securing mechanisms <b>313</b>, the third imaging device <b>402</b>C may capture the entirety of the circumference of at least a portion of the longitudinal length of each of the smoking articles <b>100</b>. In this regard, the eighth drum <b>302</b>H may comprise an inspection drum configured to facilitate inspection of the completed smoking articles <b>100</b>.</p>
+      <p id="p-00086-en" num="0086">As illustrated in <figref>FIG. 9</figref>, the third imaging device <b>402</b>C may be generally aimed toward the circumference of the eighth drum <b>302</b>H. Accordingly, the third imaging device <b>402</b>C may be positioned, aimed, and focused to capture images of at least a portion of a longitudinal length of a completed smoking article <b>100</b>. In this regard, as illustrated, a lens <b>414</b>C of the third imaging device <b>402</b>C may be directed at a location on the outer surface of the eighth drum <b>302</b>H.</p>
+      <p id="p-00087-en" num="0087">As noted above, various techniques may be employed to prevent build-up of debris on lenses of imaging devices. In this regard, whereas the third imaging device <b>402</b>C is oriented at an upward angle in the embodiment of the smoking article inspection system <b>400</b> illustrated in <figref>FIG. 2</figref>, in another embodiment the imaging device <b>402</b>C may be oriented at a downward angle, as shown in <figref>FIG. 9</figref>. Accordingly, build-up of debris on a lens <b>414</b>C of the third imaging device <b>402</b>C may be reduced. Further, the smoking article inspection system <b>400</b> may include a cleaning device <b>424</b>C configured to direct a flow of air proximate the lens <b>414</b><i>c </i>of the third imaging device <b>402</b>C or between the third imaging device and the eighth drum <b>302</b>H during operation of the cigarette maker <b>300</b> to prevent collection of debris (e.g., tobacco crumbs, dust, etc.) on the lens of the third imaging device. As noted above, these apparatuses and techniques may be employed with any of the imaging devices discussed herein.</p>
+      <p id="p-00088-en" num="0088">
+        <figref>FIG. 10</figref> illustrates an example screenshot <b>418</b>C including first and second images <b>420</b>C, <b>422</b>C of at least a portion of the longitudinal length of the smoking article <b>100</b>. The images <b>420</b>C, <b>422</b>C may be captured by the third imaging device <b>402</b>C. The images <b>420</b>C, <b>422</b>C may be outputted on a monitor (e.g., monitor <b>410</b>), which may be connected to one or more of the imaging devices <b>402</b>A-D and/or the analysis unit <b>404</b>.</p>
+      <p id="p-00089-en" num="0089">In one embodiment the first image <b>420</b>C is the most recent image captured by the third imaging device <b>402</b>C. Accordingly, an operator may be apprised of the current status of the smoking articles <b>100</b> in their final, completed form. The second image <b>422</b>C is the most recently-detected defective smoking article <b>100</b> at the eighth drum <b>302</b>H. Accordingly, the operator may also be apprised of detected defects occurring in the smoking articles <b>100</b>. Techniques and tools employed by the analysis unit <b>404</b> for detecting defects using the images <b>420</b>C, <b>422</b>C are discussed below.</p>
+      <p id="p-00090-en" num="0090">After the smoking articles <b>100</b> are inspected at the eighth drum <b>302</b>H, the smoking articles may be transferred to the ninth drum <b>302</b>I. In this regard, <figref>FIG. 11</figref> illustrates an enlarged perspective view of the ninth drum <b>302</b>I and the fourth imaging device <b>402</b>D. The ninth drum <b>302</b>I may include a plurality of grooves, slots, or channels <b>306</b>I at the circumference thereof oriented parallel to the rotational axis of the ninth drum. The channels <b>306</b>I may be configured to respectively receive a completed smoking article <b>100</b>. In order to retain the smoking articles <b>100</b> in the channels <b>306</b>I, one or more suction ports <b>308</b>I may be respectively positioned in the channels <b>306</b>I.</p>
+      <p id="p-00091-en" num="0091">Accordingly, suction applied to the suction ports <b>308</b>I may retain the smoking articles <b>100</b> in the channels <b>306</b>I as the ninth drum <b>302</b>I rotates.</p>
+      <p id="p-00092-en" num="0092">Due to rotation of the ninth drum <b>302</b>I, the smoking articles <b>100</b> may be directed in front of the fourth imaging device <b>402</b>D. In this regard, as illustrated in <figref>FIG. 11</figref>, the fourth imaging device <b>402</b>D may be generally aimed toward the outer edge of the ninth drum <b>302</b>I. Thus, whereas the other imaging devices <b>402</b>A-C may be configured to capture at least a portion of the longitudinal length of the smoking articles (e.g., at least including a tipping material, at which the majority of defects may occur), the fourth imaging device <b>402</b>D may be positioned, aimed, and focused to capture images of a terminus of the smoking article. For example, in one embodiment the fourth imaging device <b>402</b>D may capture images of the lighting end <b>108</b> of the smoking article <b>100</b>. In another embodiment the fourth imaging device <b>400</b> may capture image of the mouth end <b>118</b> of the smoking article <b>100</b>. Thus, whereas the other imaging devices <b>402</b>A-C may be oriented substantially perpendicularly to a rotational axis of the drums associated therewith (e.g., within 30 degrees of perpendicular), the fourth imaging device <b>402</b>D may be oriented substantially parallel with a rotational axis of the ninth drum <b>302</b>I (e.g., within 30 degrees of parallel). Further, the smoking article inspection system <b>400</b> may include a cleaning device <b>424</b>D configured to direct a flow of air at or proximate a lens <b>414</b>D of the fourth imaging device <b>402</b>D to prevent collection of debris thereon.</p>
+      <p id="p-00093-en" num="0093">
+        <figref>FIG. 12</figref> illustrates an example screenshot <b>418</b>D including first and second images <b>420</b>D, <b>422</b>D of a terminus of the smoking article <b>100</b>. More particularly, the images <b>420</b>D, <b>422</b>D illustrate the mouth end <b>118</b> of the smoking article <b>100</b>. The images <b>420</b>D, <b>422</b>D may be captured by the fourth imaging device <b>402</b>D. The images <b>420</b>D, <b>422</b>D may be outputted on a monitor (e.g., monitor <b>410</b>), which may be connected to one or more of the imaging devices <b>402</b>A-D and/or the analysis unit <b>404</b>.</p>
+      <p id="p-00094-en" num="0094">In one embodiment the first image <b>420</b>D is the most recent image captured by the fourth imaging device <b>402</b>D. Accordingly, an operator may be apprised of the current status of the smoking articles <b>100</b> in their final, completed form. The second image <b>422</b>D may be the most recently-detected defective smoking article <b>100</b> at the ninth drum <b>302</b>I. Accordingly, the operator may also be apprised of detected defects occurring in the smoking articles <b>100</b>. Techniques and tools employed by the analysis unit <b>404</b> for detecting defects using the images <b>420</b>D, <b>422</b>D are discussed below.</p>
+      <p id="p-00095-en" num="0095">In example embodiments illustrated in <figref>FIGS. 13 and 14</figref>, an apparatus <b>500</b> is provided that may be employed by devices performing functions in accordance with example embodiments of the present disclosure. The apparatus <b>500</b> may be embodied, for example, as any device hosting, including, controlling, comprising, or otherwise forming a portion of the imaging devices <b>402</b>A-D, the analysis unit <b>404</b>, and/or the monitors <b>408</b>. In a preferred embodiment the apparatus <b>500</b> may be embodied in or as the analysis unit <b>404</b>. However, embodiments of the apparatus <b>500</b> may also be embodied on a plurality of other devices such as for example where instances of the apparatus may be embodied on the network <b>408</b>. As such, embodiments of the apparatus <b>500</b> illustrated in <figref>FIGS. 13 and 14</figref> are merely examples and may include more, or in some cases, less than the components shown in <figref>FIGS. 13 and 14</figref>.</p>
+      <p id="p-00096-en" num="0096">With further regard to <figref>FIGS. 13 and 14</figref>, the apparatus <b>500</b> may be configured to analyze the images captured by the imaging devices <b>402</b>A-D and/or other data captured by the inspection apparatus <b>402</b>. As depicted in <figref>FIG. 13</figref>, the apparatus <b>500</b> may include or otherwise be in communication with a processor <b>502</b>, a memory device <b>504</b>, and a communication interface <b>506</b>. The memory device <b>504</b> may include non-transitory and tangible memory that may be, for example, volatile and/or non-volatile memory. The memory device <b>504</b> may be configured to store information, data, files, applications, instructions or the like. For example, the memory device <b>504</b> could be configured to buffer input data for processing by the processor <b>502</b>. Additionally or alternatively, the memory device <b>504</b> could be configured to store instructions for execution by the processor <b>502</b>.</p>
+      <p id="p-00097-en" num="0097">The apparatus <b>500</b> may, in some embodiments, be a user terminal or a fixed communication device or computing device such as a server configured to employ an example embodiment of the present disclosure. However, in some embodiments, the apparatus <b>500</b> may be physically embodied as a chip or chip set. The chip or chipset may constitute means for performing one or more operations for providing the functionalities described herein.</p>
+      <p id="p-00098-en" num="0098">The processor <b>502</b> may be embodied in a number of different ways. For example, the processor <b>502</b> may be embodied as one or more of various processing means such as a coprocessor, a microprocessor, a controller, a digital signal processor (DSP), processing circuitry, or various other processing devices including integrated circuits such as, for example, a special-purpose computer chip, or other hardware processor. In an example embodiment, the processor <b>502</b> may be configured to execute instructions stored in the memory device <b>504</b> or otherwise accessible to the processor. Alternatively or additionally, the processor <b>502</b> may be configured to execute hard coded functionality. As such, the processor <b>502</b> may be capable of performing operations according to embodiments of the present disclosure while configured accordingly. Alternatively, when the processor <b>502</b> is embodied as an executor of software instructions, the instructions may specifically configure the processor to perform the operations described herein. The processor <b>502</b> may include a clock, an arithmetic logic unit (ALU) and logic gates configured to support operation of the processor, amongst other components.</p>
+      <p id="p-00099-en" num="0099">The communication interface <b>506</b> may be any means such as a device or circuitry embodied in either hardware, software, or a combination thereof that is configured to receive and/or transmit data. In this regard, the communication interface <b>506</b> may include, for example, an antenna and supporting hardware and/or hardwired components and/or software. Accordingly, the communication interface <b>506</b> may provide for communication with external devices such as the network <b>406</b>, the imaging devices <b>402</b>A-D, and the monitors <b>408</b>.</p>
+      <p id="p-00100-en" num="0100">As mentioned above, embodiments of the apparatus <b>500</b> may include more, or in some cases less, than the components shown in <figref>FIG. 13</figref>. In this regard, <figref>FIG. 14</figref> illustrates an embodiment of the apparatus <b>500</b> comprising additional components or modules configured to analyze images captured by the imaging devices <b>402</b>A-D or other data provided by the inspection apparatus <b>402</b> as discussed in detail below. The apparatus <b>500</b> may include or otherwise be in communication with the processor <b>502</b>, the memory device <b>504</b>, and the communication interface <b>506</b> as described above with respect to <figref>FIG. 13</figref>.</p>
+      <p id="p-00101-en" num="0101">In some embodiments the apparatus <b>500</b> may further comprise a user interface <b>508</b>. The user interface <b>508</b> may be in communication with the processor <b>502</b> to receive an indication of a user input at the user interface and/or to provide an audible/visible, mechanical (e.g., haptic) or other output to the user. As such, the user interface <b>502</b> may include, for example, a keyboard, a mouse, a joystick, a display/monitor, a touch screen, a microphone, a speaker, a dial, and/or other input/output mechanisms. The processor <b>502</b> may be configured to control at least some functions of one or more elements of the user interface <b>508</b>.</p>
+      <p id="p-00102-en" num="0102">In some embodiments the apparatus <b>500</b> may further comprise a defect detection module <b>510</b>. The processor <b>502</b> may be configured to control at least some functions of one or more elements of the defect detection module <b>510</b>. The defect detection module <b>510</b> may be configured to execute a defect detection tool configured to determine whether a smoking article is defective based on the data provided by the inspection apparatus <b>402</b>. Thus, for example, the defect detection tool may determine whether a smoking article is defective based on images captured by the imaging devices <b>402</b>A-D. In this regard, the defect detection tool may be configured to determine an edge location of the tipping material, detect a plurality of perforations extending through the tipping material and spacing thereof, detect a contrast between a dark portion and a light portion of the smoking article, determine a color of the smoking article, detect a pattern, identify segments of the filter element, and/or perform various other functions configured to detect defects. Some defects that may be detected include tobacco crumbs under the tipping material, patches of tipping material glued to a drum, extra patches of tipping material, tobacco that is glued between the filter and the tobacco rod, wrinkled tipping material, laser holes that are on top of one another as opposed to properly spaced apart (e.g., due to the smoking article not rolling correctly on the fourth drum <b>302</b>D), exposed capsules or charcoal at the mouth end of the filter element, absence of a string in the filter element (in embodiments of smoking articles including string filter elements), missing tipping material, misaligned (e.g., tilted tipping material), improperly positioned tipping material (e.g., along the longitudinal axis of the smoking article), misaligned tobacco rod and filter element (e.g., non-axial alignment), etc. Various other examples of defects that may be detected are described below.</p>
+      <p id="p-00103-en" num="0103">In some embodiments the apparatus <b>500</b> may further comprise a position determination module <b>512</b>. The processor <b>502</b> may be configured to control at least some functions of one or more elements of the position determination module <b>512</b>. The position determination module <b>512</b> may be configured to determine a position of the smoking article. For example, the position determination module may be configured to execute an edge detection tool configured to determine a position of the smoking article based on an edge location of the smoking article. The edge detection tool may be configured to detect the location of various edges of the smoking article. For example, the edge detection tool may detect edges at an outer perimeter of the smoking article (e.g., upper and lower horizontal edges (x-axis) and left and right vertical edges (y-axis) at the termini of the smoking article or the two-up smoking article assembly). The edge location of various other features of the smoking article (e.g., vertical and horizontal edges of the tipping material and/or edges of any other of the components of the smoking article and/or interfaces therebetween) may also be detected in order to determine a position of the smoking article. The edges may be detected for both the tobacco rod and the filter element in some embodiments to determine the position of the smoking article.</p>
+      <p id="p-00104-en" num="0104">The defect detection module <b>510</b> may function in conjunction with the position determination module <b>512</b>. In this regard, the position of the smoking article may be employed in the determination of whether the smoking article is defective. For example, the alignment of the tipping material may be compared to the overall alignment of smoking article. Thus, whether the smoking article is defective may be determined after the position of the smoking article is determined in some embodiments.</p>
+      <p id="p-00105-en" num="0105">By way of example, <figref>FIG. 15</figref> illustrates execution of the edge detection tool in relation to an image <b>426</b>B of the two-up smoking article assembly <b>200</b> which may be captured by the second imaging device <b>402</b>B. As illustrated, the edge detection tool may detect left and right edges <b>428</b>B, <b>430</b>B of the tipping material <b>116</b>. Further, the edge detection tool may detect upper and lower edges <b>432</b>B, <b>434</b>B of the tipping material <b>116</b>. Accordingly, based on these edge locations and/or locations of various other portions or components of the smoking article, the position of the tipping material and/or the smoking article may be determined. In this regard, detection of one edge location may provide information with respect to the position of the smoking article. However, detection of a second edge may provide additional information. In this regard, if the smoking article is bent or otherwise structurally misconfigured, detection of a single edge may provide incomplete information with respect to the position of the smoking article. Further, detection of multiple edges may provide information with respect to the size of the smoking article or components thereof, which provides additional positional information. Note that the position of the smoking article may additionally or alternatively be determined based off of the position of the tobacco rod and/or other components of the smoking article other than the tipping material to later determine whether the tipping material is properly aligned with the remainder of the smoking article in some embodiments. Accordingly, determination of first and second edge locations may include determination of boundaries (e.g., external boundaries) of the smoking article or components thereof.</p>
+      <p id="p-00106-en" num="0106">Thus, as described by way of example with respect to <figref>FIG. 15</figref>, the position of the smoking article, in any state of assembly (e.g., embodied as completed smoking articles <b>100</b> or as two-up smoking article assemblies <b>200</b>), may be determined. Thereafter, the defect detection tool may detect any defects in the smoking article. In this regard, <figref>FIGS. 16A-D</figref> illustrate various examples of defects that may be detected in images that may be captured by the first imaging device <b>402</b>A. Various example of defects that may be detected in images captured by the first imaging device <b>402</b>A include the absence of the tipping material, skewed tipping material, mispositioned tipping material (e.g., along the longitudinal axis of the smoking article), and debris and stains. Note that in the illustrated embodiment the first imaging device captures images of the tipping material during attachment to the two-up smoking article assemblies. Thus, by determining the position of an upper edge, a lower edge, and/or side edges of the partially attached tipping material and determining the position of the remainder of the smoking article, it may be possible to determine whether the tipping material is properly aligned with the smoking article prior to completing wrapping the tipping material about the smoking article.</p>
+      <p id="p-00107-en" num="0107">By way of particular examples, <figref>FIG. 16A</figref> illustrates an image of a two-up smoking article assembly <b>200</b> including an improperly-attached tipping material <b>116</b>. In this regard, <figref>FIG. 16A</figref> illustrates a defect in the form of a simulated gap <b>432</b>A which may be detected. For example, the gap <b>432</b>A may be detected by determining a color of the smoking article and determining that a detected color of the smoking article (e.g., black) does not match a desired color of the smoking article (e.g., white). Similarly, the defect detection tool may detect a contrast between the gap <b>432</b>A (a dark portion) and the remainder of the tipping material <b>116</b> (a light portion) to determine that there is a defect. The gap <b>432</b>A may also be detected by determining edge locations of the tipping material <b>116</b>, wherein the lower edge of the tipping material is out of place with respect to the remainder of the smoking article.</p>
+      <p id="p-00108-en" num="0108">
+        <figref>FIGS. 16B-D</figref> illustrate additional example defects that may be detected in images that may be captured by the first imaging device <b>402</b>A. <figref>FIG. 16B</figref> illustrates a two-up smoking article assembly <b>200</b> to which a second tipping material <b>434</b>A is improperly attached. The second tipping material <b>434</b>A may be detected by the defect detection tool by determining the locations of the edges of the tipping materials <b>116</b>, <b>434</b>A, which may deviate from the desired positions. Further, detection of the edge locations may indicate that the tipping material <b>116</b> is wrinkled. <figref>FIG. 16C</figref> illustrates a two-up smoking article assembly <b>200</b> in which debris <b>436</b>A (e.g., tobacco crumbs) are on the tipping material <b>116</b>. The tobacco crumbs <b>436</b>A may be detected by the color or contrast thereof. <figref>FIG. 16D</figref> illustrates a two-up smoking article assembly <b>200</b> in which a stray partial patch of tipping material <b>438</b>A is attached thereto. The stray partial patch of tipping material <b>438</b>A may be detected by the defect detection tool by determining the locations of the edges of the tipping materials <b>116</b>, <b>438</b>A, which may deviate from the desired positions.</p>
+      <p id="p-00109-en" num="0109">Further, returning to <figref>FIG. 6</figref>, the image <b>422</b>A includes a defect in the form of debris <b>440</b>A such as tobacco crumbs, which may be detected by the color or contrast thereof. Note also, as illustrated in <figref>FIG. 6</figref>, that various segments of the two-up filter segment <b>202</b> are visually identifiable (e.g., via contrast and/or color) in the image <b>422</b>A, which may be captured by the first imaging device <b>402</b>A. Accordingly, defects with respect to the filter element missing segments thereof or including improperly arranged segments may be detected based on deviations from an expected pattern (e.g., patterns of color or contrast).</p>
+      <p id="p-00110-en" num="0110">
+        <figref>FIGS. 17A and 17B</figref> illustrate examples of defects that may be detected in images that may be captured by the second imaging device <b>402</b>B. In one embodiment the tipping material <b>116</b> should be completely attached to the remainder of the smoking article at the point at which the second imaging device <b>402</b>B captures images of the smoking article. Various example of defects that may be detected by images captured by the second imaging device <b>402</b>B include the absence of the tipping material, skewed/tilted tipping material, mispositioned tipping material (e.g., along the longitudinal axis of the smoking article), debris and stains, tobacco at the edge of the tipping material, and absence or mispositioning of the perforations. By way of particular examples, <figref>FIG. 17A</figref> illustrates an image of a two-up smoking article assembly <b>200</b> including simulated debris, stains, or damage <b>442</b>B, which may be detected by the color or contrast thereof. Further, <figref>FIG. 17B</figref> illustrates an image of a two-up smoking article assembly <b>200</b> wherein the tipping material <b>116</b> includes a loose end <b>444</b>B, which may be detected by determining edge locations of the tipping material. Returning to <figref>FIG. 8</figref>, image <b>422</b>B illustrates simulated debris <b>446</b>B at the ends of the tipping material <b>116</b>.</p>
+      <p id="p-00111-en" num="0111">
+        <figref>FIGS. 18A-D</figref> illustrate examples of defects that may be detected in images that may be captured by the third imaging device <b>402</b>C. Various examples of defects that may be detected in images captured by the second imaging device <b>402</b>B include the absence of the tipping material, skewed/tilted tipping material, mispositioned tipping material (e.g., along the longitudinal axis of the smoking article), debris, damage, stains, tobacco at the edge of the tipping material, and absence or mispositioning of the perforations. By way of particular examples, <figref>FIGS. 18A and 18B</figref> illustrate images of smoking articles <b>100</b> including simulated debris or damage <b>448</b>C, <b>450</b>C, which may be detected by the color or contrast thereof. Further, <figref>FIG. 18C</figref> illustrates an image of a smoking article <b>100</b> wherein the tipping material <b>116</b> does not include the perforations <b>120</b>, which may be determined by failing to detect a pattern associated with the perforations. Additionally, <figref>FIG. 18D</figref> illustrates an image of a smoking article, wherein debris <b>452</b>C (e.g., tobacco crumbs) is present, which may be detected by the color or contrast thereof, and the tipping material <b>116</b> is poorly wrapped, which may be detected by determining an edge location of the end of the tipping material. Returning to <figref>FIG. 10</figref>, image <b>422</b>C illustrates debris <b>454</b>C on the tipping material <b>116</b>.</p>
+      <p id="p-00112-en" num="0112">
+        <figref>FIGS. 19A-D</figref> illustrate examples of defects that may be detected in images that may be captured by the fourth imaging device <b>402</b>D of the mouth end <b>118</b> of the filter material <b>112</b>. In <figref>FIGS. 19A-B</figref> the images are captured at a slight angle with respect to the longitudinal axis of the smoking articles <b>100</b> (e.g., within 30 degrees of parallel), whereas in <figref>FIGS. 19C and 19D</figref> the images are captured at an angle parallel to the longitudinal axis of the smoking articles. In <figref>FIGS. 19A and 19B</figref> the smoking article <b>100</b> includes a filter element with a traditional, plain mouth end <b>118</b>, whereas the smoking articles in <figref>FIGS. 19C and 19D</figref> include so-called “straw” filter elements which include a recessed middle portion. Various examples of defects that may be detected in images captured by the second imaging device <b>402</b>B include the absence of a string, presence of an exposed or visible capsule, out-of-round or otherwise deformed filter elements, debris, damage, and stains.</p>
+      <p id="p-00113-en" num="0113">By way of particular example, <figref>FIG. 19A</figref> illustrates an image of a smoking article <b>100</b> including simulated debris <b>456</b>D configured to simulate exposed charcoal at the mouth end <b>118</b> of the filter material <b>112</b>, which may be detected by the color or contrast thereof relative to the expected color of the filter material. <figref>FIG. 19B</figref> illustrates an image of a smoking article <b>100</b> including a defect <b>458</b>D in the form of a stain or exposed capsule at the mouth end <b>118</b> of the filter material <b>112</b>, which may be detected by the color or contrast thereof relative to the expected color of the filter material (e.g., white). <figref>FIG. 19C</figref> illustrates an image of a smoking article <b>100</b> wherein the mouth end <b>118</b> deviates from a desired round configuration, which may be detected by determining an outer and/or inner edge of the mouth end of the smoking article or by failing to detect an expected pattern (e.g., a round shape) of the mouth end of the smoking article. <figref>FIG. 19D</figref> illustrates an image of a smoking article <b>100</b> wherein the mouth end <b>118</b> includes a damaged portion, which may be detected by determining an inner edge location of the mouth end of the smoking article or by failing to detect an expected pattern (e.g., a round shape) of the inner portion of the mouth end of the smoking article. Returning to FIG. <b>12</b>, image <b>422</b>D illustrates the end of a smoking article <b>100</b> including a misplaced string <b>460</b>D, wherein the position of the string extending through the filter element differs from a desired position (e.g., coaxial with a longitudinal axis of the smoking article). The misplaced string <b>460</b>D may be detected by the color or contrast thereof relative to the color of the filter material and the position thereof may be compared to a desired position.</p>
+      <p id="p-00114-en" num="0114">Thus, as described above, various defects in the smoking articles may be detected. Further, these defects may be detected during assembly of the smoking article. In this regard, assembly of the smoking article may include a plurality of operations, as described above. For example, the operations may include attaching the tipping material, cutting the perforations in the filter, and dividing the two-up smoking article assembly. Accordingly, when the analysis unit <b>404</b> determines that a smoking article is defective, the analysis unit may be further configured to determine the one of the operations causing damage to the smoking article from analysis of the images of the smoking article. Thus, as described above defective smoking articles may be removed at various points during the assembly process and/or repairs or adjustments may be made to the particular operations causing the defects. Accordingly, the assembly process may be improved relative to embodiments in which the smoking articles are only inspected after completion.</p>
+      <p id="p-00115-en" num="0115">As noted above, in one embodiment the inspection apparatus <b>402</b> may include one or more imaging devices <b>402</b>A-D. However, the inspection apparatus may include various alternative or additional devices in other embodiments. For example, in one embodiment the inspection apparatus may include one or more microphones that may detect sounds occurring during the production of smoking articles. Accordingly, variations in sounds from expected sounds may indicate that an error is occurring in the production process that could cause defects in the smoking articles. For example, when a piece of tipping material becomes attached to one of the drums, the piece of tipping material may produce certain sounds during rotation therewith. Accordingly, the microphone may detect any abnormal noises by comparing detected noises to noises associated with proper operation of the cigarette maker.</p>
+      <p id="p-00116-en" num="0116">In an additional aspect methods for inspecting a smoking article comprising a smokable rod and a filter element connected by a tipping material are provided. In this regard, the method illustrated in <figref>FIG. 20</figref> includes capturing one or more images of an exterior of the smoking article at operation <b>602</b>. Further, the method may include determining a position of the smoking article based on an edge location of the smoking article at operation <b>604</b>. Additionally, the method may include determining whether the smoking article is defective at operation <b>606</b> after the position of the smoking article is determined at operation <b>604</b>.</p>
+      <p id="p-00117-en" num="0117">In some embodiments the method may further comprise determining a second edge location of the smoking article to determine a plurality of boundaries of the smoking article. Additionally, determining whether the smoking article is defective may include at least one of determining an edge location of the tipping material, detecting a plurality of perforations extending through the tipping material, detecting a contrast between a dark portion and a light portion of the smoking article, determining a color of the smoking article, detecting a pattern, and identifying segments of the filter element. Further, capturing the one or more images of the exterior of the smoking article at operation <b>602</b> may include capturing the one or more images of a longitudinal length of a two-up filtered smoking article assembly during application of the tipping material thereto, capturing the one or more images of the longitudinal length of the two-up filtered smoking article assembly after creation of a plurality of perforations extending through the tipping material, capturing the one or more images of the longitudinal length of the smoking article after division of the two-up filtered smoking article assembly, and capturing the one or more images of a terminus of the smoking article. The method may further include directing a flow of air proximate one or more imaging devices configured to capture the one or more images to prevent collection of debris thereon.</p>
+      <p id="p-00118-en" num="0118">
+        <figref>FIG. 21</figref> illustrates an additional method for inspecting a smoking article comprising a smokable rod and a filter element connected by a tipping material. As illustrated, the method may include capturing a plurality of images of an exterior of the smoking article during assembly of the smoking article, wherein assembly of the smoking article comprises a plurality of operations at operation <b>702</b>. Additionally, the method may include determining whether the smoking article is defective from the images thereof at operation <b>704</b>. Further, if the smoking article is determined to be defective, the method may include determining the one of the operations causing damage to the smoking article from analysis of the images of the smoking article of the smoking article at operation <b>706</b>.</p>
+      <p id="p-00119-en" num="0119">In some embodiments the method may further comprise determining a position of the smoking article based on an edge location of the smoking article before determining whether the smoking article is defective. Additionally, the method may include determining a second edge location of the smoking article to determine a plurality of boundaries of the smoking article. Determining whether the smoking article is defective at operation <b>704</b> may comprise at least one of determining an edge location of the tipping material, detecting a plurality of perforations extending through the tipping material, detecting a contrast between a dark portion and a light portion of the smoking article, determining a color of the smoking article, detecting a pattern, and identifying segments of the filter element. Capturing the one or more images of the exterior of the smoking article at operation <b>702</b> may comprise at least one of capturing the one or more images of a longitudinal length of a two-up filtered smoking article assembly during application of the tipping material thereto, capturing the one or more images of the longitudinal length of the two-up filtered smoking article assembly after creation of a plurality of perforations extending through the tipping material, capturing the one or more images of the longitudinal length of the smoking article after division of the two-up filtered smoking article assembly, and capturing the one or more images of a terminus of the smoking article. The method may further comprise directing a flow of air proximate one or more imaging devices configured to capture the one or more images to prevent collection of debris thereon.</p>
+      <p id="p-00120-en" num="0120">Many modifications and other embodiments of the disclosure will come to mind to one skilled in the art to which this disclosure pertains having the benefit of the teachings presented in the foregoing descriptions and the associated drawings. Therefore, it is to be understood that the disclosure is not to be limited to the specific embodiments disclosed herein and that modifications and other embodiments are intended to be included within the scope of the appended claims. Although specific terms are employed herein, they are used in a generic and descriptive sense only and not for purposes of limitation.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A smoking article inspection system configured to inspect a smoking article comprising a smokable rod and a filter element connected by a tipping material, the smoking article inspection system comprising:
+<claim-text>one or more imaging devices configured to respectively capture one or more images of an exterior of the smoking article; and</claim-text><claim-text>an analysis unit configured to analyze the images captured by the one or more imaging devices, the analysis unit being configured to execute:
+<claim-text>an edge detection tool configured to determine a position of the smoking article based on an edge location of the smoking article; and</claim-text><claim-text>a defect detection tool configured to determine whether the smoking article is defective after the position of the smoking article is determined.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The smoking article inspection system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the edge detection tool is further configured to determine a second edge location of the smoking article to determine a plurality of boundaries of the smoking article.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The smoking article inspection system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the defect detection tool is configured to perform at least one of:
+<claim-text>determining an edge location of the tipping material;</claim-text><claim-text>detecting a plurality of perforations extending through the tipping material;</claim-text><claim-text>detecting a contrast between a dark portion and a light portion of the smoking article;</claim-text><claim-text>determining a color of the smoking article;</claim-text><claim-text>detecting a pattern; and</claim-text><claim-text>identifying segments of the filter element.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The smoking article inspection system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the one or more imaging devices comprise at least one of:
+<claim-text>an imaging device configured to capture the one or more images of a longitudinal length of a two-up filtered smoking article assembly during application of the tipping material thereto;</claim-text><claim-text>an imaging device configured to capture the one or more images of the longitudinal length of the two-up filtered smoking article assembly after creation of a plurality of perforations extending through the tipping material;</claim-text><claim-text>an imaging device configured to capture the one or more images of the longitudinal length of the smoking article after division of the two-up filtered smoking article assembly; and</claim-text><claim-text>an imaging device configured to capture the one or more images of a terminus of the smoking article.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The smoking article inspection system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a cleaning device configured to direct a flow of air proximate at least one of the one or more imaging devices to prevent collection of debris thereon.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en" independent="true">
+      <claim-text>
+        <b>6</b>. A smoking article inspection system configured to inspect a smoking article comprising a smokable rod and a filter element connected by a tipping material, the smoking article inspection system comprising:
+<claim-text>a plurality of imaging devices configured to respectively capture one or more images of an exterior of the smoking article, the imaging devices being configured to capture the images of the smoking article during assembly of the smoking article, wherein assembly of the smoking article comprises a plurality of operations; and</claim-text><claim-text>an analysis unit configured to analyze the images captured by the imaging devices, the analysis unit being configured to execute a defect detection tool configured to determine whether the smoking article is defective from the images thereof, and, if the smoking article is determined to be defective, to determine the one of the operations causing damage to the smoking article from analysis of the images of the smoking article captured during assembly.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The smoking article inspection system of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the analysis unit is further configured to execute an edge detection tool configured to determine a position of the smoking article based on an edge location of the smoking article, the defect detection tool being configured to determine whether the smoking article is defective after the position of the smoking article is determined.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The smoking article inspection system of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the edge detection tool is further configured to determine a second edge location of the smoking article to determine a plurality of boundaries of the smoking article.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The smoking article inspection system of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the defect detection tool is configured to perform at least one of determining an edge location of the tipping material;
+<claim-text>detecting a plurality of perforations extending through the tipping material;</claim-text><claim-text>detecting a contrast between a dark portion and a light portion of the smoking article;</claim-text><claim-text>determining a color of the smoking article;</claim-text><claim-text>detecting a pattern; and</claim-text><claim-text>identifying segments of the filter element.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The smoking article inspection system of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the imaging devices comprise at least one of:
+<claim-text>an imaging device configured to capture the one or more images of a longitudinal length of a two-up filtered smoking article assembly during application of the tipping material thereto;</claim-text><claim-text>an imaging device configured to capture the one or more images of the longitudinal length of the two-up filtered smoking article assembly after creation of a plurality of perforations extending through the tipping material;</claim-text><claim-text>an imaging device configured to capture the one or more images of the longitudinal length of the smoking article after division of the two-up filtered smoking article assembly; and</claim-text><claim-text>an imaging device configured to capture the one or more images of a terminus of the smoking article.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The smoking article inspection system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a cleaning device configured to direct a flow of air proximate at least one of the imaging devices to prevent collection of debris thereon.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. A method for inspecting a smoking article comprising a smokable rod and a filter element connected by a tipping material, the method comprising:
+<claim-text>capturing one or more images of an exterior of the smoking article;</claim-text><claim-text>determining a position of the smoking article based on an edge location of the smoking article; and</claim-text><claim-text>determining whether the smoking article is defective after the position of the smoking article is determined.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, further comprising determining a second edge location of the smoking article to determine a plurality of boundaries of the smoking article.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein determining whether the smoking article is defective comprises at least one of:
+<claim-text>determining an edge location of the tipping material;</claim-text><claim-text>detecting a plurality of perforations extending through the tipping material;</claim-text><claim-text>detecting a contrast between a dark portion and a light portion of the smoking article;</claim-text><claim-text>determining a color of the smoking article;</claim-text><claim-text>detecting a pattern; and</claim-text><claim-text>identifying segments of the filter element.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein capturing the one or more images of the exterior of the smoking article comprises at least one of:
+<claim-text>capturing the one or more images of a longitudinal length of a two-up filtered smoking article assembly during application of the tipping material thereto;</claim-text><claim-text>capturing the one or more images of the longitudinal length of the two-up filtered smoking article assembly after creation of a plurality of perforations extending through the tipping material;</claim-text><claim-text>capturing the one or more images of the longitudinal length of the smoking article after division of the two-up filtered smoking article assembly; and</claim-text><claim-text>capturing the one or more images of a terminus of the smoking article.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, further comprising directing a flow of air proximate one or more imaging devices configured to capture the one or more images to prevent collection of debris thereon.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en" independent="true">
+      <claim-text>
+        <b>17</b>. A method for inspecting a smoking article comprising a smokable rod and a filter element connected by a tipping material, the method comprising:
+<claim-text>capturing a plurality of images of an exterior of the smoking article during assembly of the smoking article, wherein assembly of the smoking article comprises a plurality of operations;</claim-text><claim-text>determining whether the smoking article is defective from the images thereof; and</claim-text><claim-text>if the smoking article is determined to be defective, determining the one of the operations causing damage to the smoking article from analysis of the images of the smoking article captured during assembly.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, further comprising determining a position of the smoking article based on an edge location of the smoking article before determining whether the smoking article is defective.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method <claim-ref idref="clm-00018-en">claim 18</claim-ref>, further comprising determining a second edge location of the smoking article to determine a plurality of boundaries of the smoking article.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein determining whether the smoking article is defective comprises at least one of:
+<claim-text>determining an edge location of the tipping material;</claim-text><claim-text>detecting a plurality of perforations extending through the tipping material;</claim-text><claim-text>detecting a contrast between a dark portion and a light portion of the smoking article;</claim-text><claim-text>determining a color of the smoking article;</claim-text><claim-text>detecting a pattern; and</claim-text><claim-text>identifying segments of the filter element.</claim-text></claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The method of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein capturing the one or more images of the exterior of the smoking article comprises at least one of:
+<claim-text>capturing the one or more images of a longitudinal length of a two-up filtered smoking article assembly during application of the tipping material thereto;</claim-text><claim-text>capturing the one or more images of the longitudinal length of the two-up filtered smoking article assembly after creation of a plurality of perforations extending through the tipping material;</claim-text><claim-text>capturing the one or more images of the longitudinal length of the smoking article after division of the two-up filtered smoking article assembly; and</claim-text><claim-text>capturing the one or more images of a terminus of the smoking article.</claim-text></claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The method of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, further comprising directing a flow of air proximate one or more imaging devices configured to capture the one or more images to prevent collection of debris thereon.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00015.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00016.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00017.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00018.TIF" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00020.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00019.TIF" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00021.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00020.TIF" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00022.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00021.TIF" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150257437A1_00023.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257437A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257437A1.PDF" type="pdf" size="2079502" pages="37" />
+</lexisnexis-patent-document>

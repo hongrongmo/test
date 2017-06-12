@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257662A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030157" date-changed="20151020" time-changed="081924">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315394">
+        <country>US</country>
+        <doc-number>20150257662</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14205737</doc-number>
+        <date>20140312</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151020">
+      <classification-ipcr sequence="1">
+        <text>A61B   5/024       20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>024</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B   5/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61B   5/1455      20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>1455</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>H04R   1/10        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>04</class>
+        <subclass>R</subclass>
+        <main-group>1</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151020">
+      <classification-cpc sequence="1">
+        <text>A61B   5/02427     20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>02427</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   5/02405     20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>02405</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B   5/14552     20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>14552</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B   5/6803      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>6803</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B   5/7207      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>7207</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B   5/746       20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>746</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>H04R   1/1091      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>04</class>
+        <subclass>R</subclass>
+        <main-group>1</main-group>
+        <subgroup>1091</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>H04R2430/00        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>04</class>
+        <subclass>R</subclass>
+        <main-group>2430</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>H04R2499/10        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>04</class>
+        <subclass>R</subclass>
+        <main-group>2499</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">15</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">PHYSIOLOGICAL FUNCTION DETECTING EARPHONE AND DETECTING METHOD THEREOF</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Cheng Uei Precision Industry Co., Ltd.</orgname>
+            <role>03</role>
+            <address>
+              <city>New Taipei City</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lee</last-name>
+            <first-name>James Cheng</first-name>
+            <address>
+              <city>New Taipei City</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Wu</last-name>
+            <first-name>Kuo Yang</first-name>
+            <address>
+              <city>New Taipei City</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lu</last-name>
+            <first-name>Bor Kuan</first-name>
+            <address>
+              <city>New Taipei City</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hu</last-name>
+            <first-name>Wen Shung</first-name>
+            <address>
+              <city>New Taipei City</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173668698">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257662</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173668697">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257662</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A physiological function detecting earphone includes an earphone body, an earplug mounted at one side of the earphone body and defining a window, a light processing module including a light sensing module towards the window, and a signal processing module. A detecting method includes steps: the participant inserts the earplug in the ear canal thereof; the light sensing module senses the changes of light emitted through the window and then reflected by the wall of the ear canal; the light processing module processes the reflected light of changes to get PPG signals; the signal processing module receives and processes the PPG signals to get physiological information of the participant. The window opened in the earplug can gather the light in a narrow area of the ear canal so that reduces effect of manufacturing material on transmittance of light and improves accuracy of the PPG signals and the physiological information.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140312</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257662A1</docdb-publication-number>
+      <docdb-application-id>444511004</docdb-application-id>
+      <new-owner>CHENG UEI PRECISION INDUSTRY CO., LTD., TAIWAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:LEE, JAMES CHENG;WU, KUO YANG;LU, BOR KUAN;AND OTHERS;SIGNING DATES FROM 20131208 TO 20140310;REEL/FRAME:032413/0739</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">1. Field of the Invention</p>
+      <p id="p-00002-en" num="0002">The present invention relates to an earphone, and more particularly to a physiological function detecting earphone and a detecting method thereof.</p>
+      <p id="p-00003-en" num="0003">2. The Related Art</p>
+      <p id="p-00004-en" num="0004">The autonomic nervous system (ANS) is the part of the peripheral nervous system that acts as a control system, functioning largely below the level of consciousness, and controls visceral functions. The ANS affects heart rate, blood pressure, mood changes, life stress and so on. Therefore, if a person can early detect his autonomic nervous variation, personal health can be paid attention as early as possible to prevent individual physiological or psychological disease. Heart rate variability (HRV) is commonly used to show the ANS of variation in the time interval between heartbeats. Methods used to detect beats include: ECG, blood pressure, ballistocardiograms and the pulse wave signal derived from the photoplethysmography (PPG).</p>
+      <p id="p-00005-en" num="0005">A traditional physiological function detecting earphone for detecting the HRV includes an earphone body, a light source and a light sensor. The earphone body has an earplug made of pervious to light material. In use, the earplug of the earphone body is inserted into the ear canal of a participant, then light emitted by the light source penetrates through the earplug and is reflected by the wall of the ear canal, and last the light sensor senses the reflected light of changes in a period of time to get PPG signals so as to detect the HRV.</p>
+      <p id="p-00006-en" num="0006">However, manufacturing material of the earplug has an effect on transmittance of light through the earplug. Furthermore, the earphone is apt to move in the ear canal along with the shaking of the participant, so that will easily cause an interspace between the earplug and the wall of the ear canal. As a result, the light outside the ear canal can go into the ear canal through the interspace so that will affect the PPG signals got by the light sensor and ultimately affect the accuracy of the HRV.</p>
+      <p id="p-00007-en" num="0007">Therefore, a physiological function detecting earphone capable of overcoming the abovementioned problems is required.</p>
+      <heading id="h-00002-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00008-en" num="0008">An object of the present invention is to provide a physiological function detecting earphone which includes an earphone body, an earplug mounted at one side of the earphone body, a light processing module and a signal processing module. At least one window is opened through the earplug. The light processing module includes an inner ring spacer, at least one light sensing module disposed on one end face of the inner ring spacer and facing to the window of the earplug, a signal amplifier and an A/D converter which are disposed on the inner ring spacer and coupled with the light sensing module. The light sensing module includes a visible light source for emitting at least one wavelength of light through the window of the earplug, and a light sensor for sensing reflected light of changes by the wall of the ear canal of a participant. The signal amplifier and the A/D converter process the reflected light of changes to get PPG signals. The signal processing module is coupled with the signal amplifier and the A/D converter via the inner ring spacer for receiving and processing the PPG signals to get physiological information of the participant.</p>
+      <p id="p-00009-en" num="0009">Another object of the present invention is to provide a detecting method of the physiological function detecting earphone. The detecting method includes the steps: the participant inserts the earplug of the physiological function detecting earphone in the ear canal thereof; the light sensor senses the changes of light which is emitted by the visible light source through the window and then reflected by the wall of the ear canal of the participant; the signal amplifier and the A/D converter process the reflected light of changes to get the PPG signals; and the signal processing module receives and processes the PPG signals to get physiological information of the participant.</p>
+      <p id="p-00010-en" num="0010">As described above, the physiological function detecting earphone utilizes the window opened in the earplug to gather the light in a narrow area of the ear canal of the participant so as to reduce the effect of the manufacturing material on the transmittance of light. So the physiological function detecting earphone can effectively improve the accuracy of the PPG signals and the physiological information of the participant.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00011-en" num="0011">The present invention will be apparent to those skilled in the art by reading the following description thereof, with reference to the attached drawings, in which:</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 1</figref> is a perspective view of a physiological function detecting earphone according to an embodiment of the present invention;</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 2</figref> is an exploded view of the physiological function detecting earphone of <figref>FIG. 1</figref>;</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 3</figref> is a partly exploded view of the physiological function detecting earphone of <figref>FIG. 1</figref>;</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 4</figref> is a sectional view of an earplug of the physiological function detecting earphone of <figref>FIG. 2</figref>; and</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 5</figref> and <figref>FIG. 6</figref> are flow diagrams showing two detecting methods of the physiological function detecting earphone of <figref>FIG. 1</figref>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF THE EMBODIMENT</heading>
+      <p id="p-00017-en" num="0017">Referring to <figref>FIG. 1</figref> and <figref>FIG. 2</figref>, a physiological function detecting earphone <b>1</b> according to an embodiment of the present invention includes an earphone body <b>10</b>, an inserting body <b>20</b>, a loudspeaker <b>30</b>, a light processing module <b>40</b>, an accelerometer <b>50</b> and a signal processing module <b>60</b>.</p>
+      <p id="p-00018-en" num="0018">One side of the earphone body <b>10</b> defines a first sound hole <b>11</b>. The inserting body <b>20</b> is mounted at the one side of the earphone body <b>10</b> and is used to be inserted into the ear canal of a participant. The inserting body <b>20</b> includes a holder <b>21</b>, a holding frame <b>22</b> and an earplug <b>23</b>. The holder <b>21</b> is substantially of cylindric shape and is formed by the circumferentia of the first sound hole <b>11</b> perpendicularly extending sideward. At least one opening <b>211</b> is opened through the inside, the outside and the free edge of the holder <b>21</b>.</p>
+      <p id="p-00019-en" num="0019">The holding frame <b>22</b> has a discoid cover board <b>221</b> covering the end mouth of the holder <b>21</b>. The periphery of the cover board <b>221</b> perpendicularly extends to form at least one inserting board <b>223</b> made of pervious to light material and inserted in the opening <b>211</b> of the holder <b>21</b>. In practice, the cover board <b>221</b> can be made of lightproof material.</p>
+      <p id="p-00020-en" num="0020">Referring to <figref>FIG. 1</figref>, <figref>FIG. 2</figref> and <figref>FIG. 4</figref>, the earplug <b>23</b> is made of lightproof material and has a cylindric sleeve <b>231</b> worn around the holder <b>21</b> and the holding frame <b>22</b>. The outer edge of the sleeve <b>231</b> extends towards the earphone body <b>10</b> to form a substantial bowl-shaped guiding portion <b>232</b>. At least one window <b>234</b> is opened through the earplug <b>23</b>. In detail, the window <b>234</b> includes a first window <b>2341</b> and a second window <b>2342</b> which are opened in the sleeve <b>231</b> and the guiding portion <b>232</b> respectively and are in alignment with each other. The earplug <b>23</b> is mounted outside the holder <b>21</b> and the holding frame <b>22</b> with the inserting board <b>223</b> being exposed through the window <b>234</b>. The outside of the guiding portion <b>232</b> is partly concaved inward to form a groove <b>235</b> around the second window <b>2342</b> for deforming the guiding portion <b>232</b> easily. The free edge of the guiding portion <b>232</b> perpendicularly protrudes inward to form a light blocking eave <b>236</b>. The sleeve <b>231</b> and the light blocking eave <b>236</b> abut against the one side of the earphone body <b>10</b> for blocking the light outside the ear canal of the participant.</p>
+      <p id="p-00021-en" num="0021">Referring to <figref>FIG. 2</figref> and <figref>FIG. 3</figref>, the light processing module <b>40</b> includes an inner ring spacer <b>41</b>, at least one light sensing module <b>42</b> disposed on one end face of the inner ring spacer <b>41</b> and facing to the window <b>234</b> of the earplug <b>23</b>, a signal amplifier <b>43</b> and an A/D converter <b>44</b> which are disposed on the inner ring spacer <b>41</b> and coupled with the light sensing module <b>42</b>. In detail, the light sensing module <b>42</b> together with a part of the inner ring spacer <b>41</b> are located in the holder <b>21</b> and face to the inserting board <b>223</b> of the holding frame <b>22</b>. The light sensing module <b>42</b> includes a visible light source <b>421</b> for emitting at least one wavelength of light through the inserting board <b>223</b> of the holding frame <b>22</b> and the window <b>234</b> of the earplug <b>23</b>, and a light sensor <b>423</b> for sensing reflected light of changes by the wall of the ear canal of the participant. The signal amplifier <b>43</b> and the A/D converter <b>44</b> process the reflected light of changes to get PPG signals.</p>
+      <p id="p-00022-en" num="0022">In detail, the inner ring spacer <b>41</b> includes a FPC board <b>411</b> and a connecting frame <b>412</b> connected with one end of the FPC board <b>411</b>. The FPC board <b>411</b> is positioned in the earphone body <b>10</b> and the connecting frame <b>412</b> is positioned in the holder <b>21</b> of the inserting body <b>20</b>. The connecting frame <b>412</b> defines at least one fitting surface <b>4121</b> facing to the inserting board <b>223</b> of the holding frame <b>22</b> and the window <b>234</b> of the earplug <b>23</b>. The light sensing module <b>42</b> is disposed on the fitting surface <b>4121</b>, and the signal amplifier <b>43</b> and the AID converter <b>44</b> are disposed on the FPC board <b>411</b>.</p>
+      <p id="p-00023-en" num="0023">Referring to <figref>FIG. 2</figref>, the signal processing module <b>60</b> is coupled with the signal amplifier <b>43</b> and the AID converter <b>44</b> via the inner ring spacer <b>41</b> for receiving and processing the PPG signals to get physiological information of the participant. In detail, the signal processing module <b>60</b> includes a processor <b>61</b> and a wireless transmission module <b>63</b>. The processor <b>61</b> receives the PPG signals and change cycle of the PPG signals and further works out the time interval of each change cycle. Then the processor <b>61</b> describes a continuous variation of waveform and records physiological status of the participant by the HRV analytical method. The wireless transmission module <b>63</b> transmits the continuous variation of waveform and the physiological status of the participant to a display interface <b>70</b>. The physiological status includes PPG curve chart, heart rate, HRV, degree of blood oxygen saturation and so on. The signal processing module <b>60</b> further includes at least one connector <b>62</b> capable of transmitting the continuous variation of waveform and the physiological status of the participant to the display interface <b>70</b>.</p>
+      <p id="p-00024-en" num="0024">The display interface <b>70</b> can be a portable electronic product, such as a smart phone and a smart watch. According to the physiological information provided by the physiological function detecting earphone <b>1</b>, the display interface <b>70</b> can instantly change the types of music to make the music change along with the physiological status of the participant.</p>
+      <p id="p-00025-en" num="0025">Referring to <figref>FIG. 2</figref> again, the light sensing module <b>42</b> further includes an invisible light source <b>422</b> disposed in one place with the visible light source <b>421</b> and the light sensor <b>423</b>. Preferably, the visible light source <b>421</b> emits red light at a wavelength of about 610˜700 nanometers which is more easily reflected by blood to get better signal contrast. According to the characteristics of the invisible light source <b>422</b>, degree of blood oxygen saturation can be worked out by comparing reflected signals from the invisible light source <b>422</b> with the reflected light from the visible light source <b>421</b>. It is worth mentioning that the invisible light source <b>422</b> can be omitted when monitoring the heart rate and the HRV.</p>
+      <p id="p-00026-en" num="0026">Referring to <figref>FIG. 2</figref> again, the physiological function detecting earphone <b>1</b> further includes an accelerometer <b>50</b> disposed on another end face of the inner ring spacer <b>41</b> and facing to another window <b>234</b> of the earplug <b>23</b>. In detail, the accelerometer <b>50</b> is disposed on another fitting surface <b>4121</b> of the connecting frame <b>412</b> of the inner ring spacer <b>41</b> and faces to the inserting board <b>223</b> of the holding frame <b>22</b> and the window <b>234</b> of the earplug <b>23</b>. The accelerometer <b>50</b> is coupled with the signal processing module <b>60</b> for continuously transmitting displacement information to the signal processing module <b>60</b> in use. Then the signal processing module <b>60</b> judges work start point of the light sensing module <b>42</b> and controls on-off states of the light sensing module <b>42</b> according to the displacement information so as to capture appropriate ranges from the PPG signals and further get the physiological information of the participant.</p>
+      <p id="p-00027-en" num="0027">In this invention, the window <b>234</b> of the earplug <b>23</b> and the accelerometer <b>50</b> can effectively eliminate transmittance of light error caused by the manufacturing material of the earplug <b>23</b> and the shaking of the participant. Furthermore, the physiological function detecting earphone <b>1</b> can monitor sleep states of the participant by means of the accelerometer <b>50</b> and the light sensing module <b>42</b>. So, the physiological function detecting earphone <b>1</b> can be further used in patients with sleep apnea so as to send an alarm in case of symptoms.</p>
+      <p id="p-00028-en" num="0028">Referring to <figref>FIG. 2</figref> and <figref>FIG. 3</figref>, the cover board <b>221</b> of the holding frame <b>22</b> defines a second sound hole <b>222</b> penetrating through a middle part thereof. A third sound hole <b>233</b> is circled by the sleeve <b>231</b> of the earplug <b>23</b> and penetrates through the sleeve <b>231</b>. The connecting frame <b>412</b> of the inner ring spacer <b>41</b> defines a fourth sound hole <b>4122</b>. The first sound hole <b>11</b>, the second sound hole <b>222</b>, the third sound hole <b>233</b> and the fourth sound hole <b>4122</b> are in alignment with one another to form a sound track, and the fourth sound hole <b>4122</b> is aligned between the first sound hole <b>11</b> and the second sound hole <b>222</b>. The loudspeaker <b>30</b> is positioned in the earphone body <b>10</b> and faces to the first, fourth, second and third sound holes <b>11</b>, <b>4122</b>, <b>222</b> and <b>233</b>.</p>
+      <p id="p-00029-en" num="0029">Referring to <figref>FIG. 2</figref> and <figref>FIG. 5</figref>, a detecting method of the physiological function detecting earphone <b>1</b> includes the following steps.</p>
+      <p id="p-00030-en" num="0030">Step <b>1</b>: the participant inserts the earplug <b>23</b> of the physiological function detecting earphone <b>1</b> in the ear canal thereof.</p>
+      <p id="p-00031-en" num="0031">Step <b>2</b>: the signal processing module <b>60</b> receives the displacement information monitored by the accelerometer <b>50</b> and then controls on-off states of the light sensing module <b>42</b> according to the displacement information.</p>
+      <p id="p-00032-en" num="0032">Step <b>3</b>: when the light sensing module <b>42</b> is on, the light sensor <b>423</b> senses the changes of light which is emitted by the visible light source <b>421</b> through the window <b>234</b> and then reflected by the wall of the ear canal of the participant.</p>
+      <p id="p-00033-en" num="0033">Step <b>4</b>: the signal amplifier <b>43</b> and the A/D converter <b>44</b> process the reflected light of changes to get the PPG signals.</p>
+      <p id="p-00034-en" num="0034">Step <b>5</b>: the signal processing module <b>60</b> receives and processes the PPG signals to get physiological information of the participant.</p>
+      <p id="p-00035-en" num="0035">Step <b>6</b>: the physiological information of the participant is transmitted to the display interface <b>70</b> by wireless or wire transmission.</p>
+      <p id="p-00036-en" num="0036">In other embodiments, the light sensing module <b>42</b> can keep being on. The signal processing module <b>60</b> directly captures appropriate ranges from the PPG signals to get physiological information of the participant according to the displacement information.</p>
+      <p id="p-00037-en" num="0037">Referring to <figref>FIG. 2</figref> and <figref>FIG. 6</figref>, another detecting method of the physiological function detecting earphone <b>1</b> includes the following steps.</p>
+      <p id="p-00038-en" num="0038">Step <b>1</b>: the participant inserts the earplug <b>23</b> of the physiological function detecting earphone <b>1</b> in the ear canal thereof.</p>
+      <p id="p-00039-en" num="0039">Step <b>2</b>: the light sensing module <b>42</b> keeps being on, and the light sensor <b>423</b> senses the changes of light which is emitted by the visible light source <b>421</b> through the window <b>234</b> and then reflected by the wall of the ear canal of the participant.</p>
+      <p id="p-00040-en" num="0040">Step <b>3</b>: the signal amplifier <b>43</b> and the A/D converter <b>44</b> process the reflected light of changes to get the PPG signals.</p>
+      <p id="p-00041-en" num="0041">Step <b>4</b>: the signal processing module <b>60</b> simultaneously receives the displacement information monitored by the accelerometer <b>50</b> and the PPG signals from the light processing module <b>40</b>.</p>
+      <p id="p-00042-en" num="0042">Step <b>5</b>: the signal processing module <b>60</b> captures appropriate ranges from the PPG signals according to the displacement information and then processes to get physiological information of the participant.</p>
+      <p id="p-00043-en" num="0043">Step <b>6</b>: the physiological information of the participant is transmitted to the display interface <b>70</b> by wireless or wire transmission.</p>
+      <p id="p-00044-en" num="0044">In the detecting methods, the signal processing module <b>60</b> processes the PPG signals to describe a continuous variation of waveform and then record physiological status of the participant by the HRV analytical method.</p>
+      <p id="p-00045-en" num="0045">As described above, the physiological function detecting earphone <b>1</b> according to the present invention utilizes the window <b>234</b> opened in the earplug <b>23</b> to gather the light in a narrow area of the ear canal of the participant so as to reduce the effect of the manufacturing material on the transmittance of light, and further utilizes the accelerometer <b>50</b> to eliminate the effect of the shaking of the participant on the transmittance of light. So the physiological function detecting earphone <b>1</b> can effectively improve the accuracy of the PPG signals and the physiological information of the participant.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A physiological function detecting earphone, comprising:
+<claim-text>an earphone body;</claim-text><claim-text>an earplug mounted at one side of the earphone body, at least one window being opened through the earplug;</claim-text><claim-text>a light processing module including an inner ring spacer, at least one light sensing module disposed on one end face of the inner ring spacer and facing to the window of the earplug, a signal amplifier and an A/D converter which are disposed on the inner ring spacer and coupled with the light sensing module, the light sensing module including a visible light source for emitting at least one wavelength of light through the window of the earplug, and a light sensor for sensing reflected light of changes by the wall of the ear canal of a participant, the signal amplifier and the A/D converter processing the reflected light of changes to get PPG signals; and</claim-text><claim-text>a signal processing module coupled with the signal amplifier and the A/D converter via the inner ring spacer for receiving and processing the PPG signals to get physiological information of the participant.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The physiological function detecting earphone as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the inner ring spacer includes a FPC board and a connecting frame connected with one end of the FPC board, the FPC board is positioned in the earphone body and the connecting frame is positioned in the earplug, the connecting frame defines at least one fitting surface facing to the window of the earplug, the light sensing module is disposed on the fitting surface, the signal amplifier and the A/D converter are disposed on the FPC board.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The physiological function detecting earphone as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the light sensing module further includes an invisible light source disposed in one place with the visible light source and the light sensor, degree of blood oxygen saturation can be worked out by comparing reflected signals from the invisible light source with the reflected light from the visible light source.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The physiological function detecting earphone as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the visible light source emits red light at a wavelength of about 610˜700 nanometers.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The physiological function detecting earphone as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the one side of the earphone body defines a first sound hole of which the circumferentia perpendicularly extends sideward to form a holder, at least one opening is opened through the inside, the outside and the free edge of the holder, a holding frame has a cover board covering the end mouth of the holder, the periphery of the cover board perpendicularly extends to form at least one inserting board made of pervious to light material and inserted in the opening of the holder, the light sensing module together with a part of the inner ring spacer are located in the holder and face to the inserting board, the earplug is mounted outside the holder and the holding frame with the inserting board being exposed through the window.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The physiological function detecting earphone as claimed in <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the earplug is made of lightproof material and has a sleeve worn around the holder and the holding frame, the outer edge of the sleeve extends towards the earphone body to form a substantial bowl-shaped guiding portion, the window includes a first window and a second window which are opened in the sleeve and the guiding portion respectively and are in alignment with each other.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The physiological function detecting earphone as claimed in <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the outside of the guiding portion is partly concaved inward to form a groove around the second window.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The physiological function detecting earphone as claimed in <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the free edge of the guiding portion perpendicularly protrudes inward to form a light blocking eave, the sleeve and the light blocking eave abut against the one side of the earphone body.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The physiological function detecting earphone as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the signal processing module includes a processor and a wireless transmission module, the processor receives the PPG signals and change cycle of the PPG signals and further works out the time interval of each change cycle, then the processor describes a continuous variation of waveform and records physiological status of the participant by the HRV analytical method, the wireless transmission module transmits the continuous variation of waveform and the physiological status of the participant to a display interface.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The physiological function detecting earphone as claimed in <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the signal processing module further includes at least one connector capable of transmitting the continuous variation of waveform and the physiological status of the participant to the display interface.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The physiological function detecting earphone as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising an accelerometer which is disposed on another end face of the inner ring spacer and faces to another window of the earplug, the accelerometer is coupled with the signal processing module for continuously transmitting a displacement information to the signal processing module in use, the signal processing module judges work start point of the light sensing module and controls on-off states of the light sensing module.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. A detecting method of the physiological function detecting earphone, comprising the steps:
+<claim-text>the participant inserting the earplug of the physiological function detecting earphone in the ear canal thereof;</claim-text><claim-text>the light sensor sensing the changes of light which is emitted by the visible light source through the window and then reflected by the wall of the ear canal of the participant;</claim-text><claim-text>the signal amplifier and the A/D converter processing the reflected light of changes to get the PPG signals; and</claim-text><claim-text>the signal processing module receiving and processing the PPG signals to get physiological information of the participant.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The detecting method as claimed in <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein after the earplug is inserted in the ear canal of the participant, the signal processing module receives the displacement information monitored by the accelerometer and then controls on-off states of the light sensing module according to the displacement information.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The detecting method as claimed in <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein after the earplug is inserted in the ear canal of the participant, the signal processing module simultaneously receives the displacement information monitored by the accelerometer and the PPG signals from the light processing module, then the signal processing module captures appropriate ranges from the PPG signals according to the displacement information and processes to get the physiological information of the participant.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The detecting method as claimed in <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the signal processing module processes the PPG signals to describe a continuous variation of waveform and then record physiological status of the participant by the HRV analytical method.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257662A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257662A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257662A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257662A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257662A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257662A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257662A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257662A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257662A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257662A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257662A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257662A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257662A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257662A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257662A1_00008.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257662A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257662A1.PDF" type="pdf" size="406071" pages="11" />
+</lexisnexis-patent-document>

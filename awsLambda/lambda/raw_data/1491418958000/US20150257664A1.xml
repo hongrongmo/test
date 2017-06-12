@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257664A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030158" date-changed="20151020" time-changed="081925">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315408">
+        <country>US</country>
+        <doc-number>20150257664</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14658936</doc-number>
+        <date>20150316</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A61B   5/024       20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>024</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A61B   5/02444     20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>02444</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   5/02438     20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>02438</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B2503/40        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2503</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B2562/166       20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2562</main-group>
+        <subgroup>166</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">24</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">HEART MONITORING SENSOR</invention-title>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61954548</doc-number>
+          <date>20140317</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Avatar Engineering Corporation</orgname>
+            <address>
+              <city>Fountain Hills</city>
+              <state>AZ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Esposito</last-name>
+            <first-name>Anthony G.</first-name>
+            <address>
+              <city>Fountain Hills</city>
+              <state>AZ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173668723">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257664</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150316</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173668721">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257664</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150316</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A heart monitoring sensor having a printed circuit board with a depressed inner area, which, together with a flexible bulb extending from a perimeter for the depressed area, forms a sealed cavity. A sensor, such as a pressure sensor, is mounted within the sealed cavity. The bulb is releasably attached to the exterior of an animal near a heart pulse-detection point, and pressure changes within the cavity from the animal's heart pulse are sensed by the pressure sensor. The sensor output is provided outside the heart monitor by wired or wireless connection. In a particular embodiment, the sensor may be an active ranging sensor, and may range off of a reflective inner surface of the bulb. The active ranging sensor may be sonar, light reflective, (such as lidar), or Doppler. For a horse, the preferred location is in a natural depression underneath the horse's tail near the horse's dock.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of U.S. provisional patent application 61/954,548 filed Mar. 17, 2014 by the same inventor.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF ART</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to a sensor for monitoring a heart rhythm, for example, of a horse. The present invention more closely relates to a equine heart rate sensor attachable under a horse tail near the horses dock.</p>
+      <heading id="h-00003-en" level="1">STATEMENT REGARDING FEDERALLY SPONSORED RESEARCH AND DEVELOPMENT</heading>
+      <p id="p-00003-en" num="0003">None.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00004-en" num="0004">A pressure transducer within a sealed cavity at least partially bounded by an elastic and resilient bulb shaped to be secured proximate a vein or artery near the skin surface, for example, under the tail of a horse near the dock to sense blood pressure variations in the caudal vein or artery.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">DESCRIPTION OF THE FIGURES OF THE DRAWINGS</heading>
+      <p id="p-00005-en" num="0005">The present invention will hereinafter be described in conjunction with the following drawing figures, wherein like numerals denote like elements, and</p>
+      <p id="p-00006-en" num="0006">
+        <figref>FIG. 1</figref> is a left side elevation view illustrating an exemplary embodiment of a heart monitoring sensor installed on a horse, according to a preferred embodiment of the present invention;</p>
+      <p id="p-00007-en" num="0007">
+        <figref>FIG. 2</figref> is a side elevation cross-sectional view illustrating an exemplary embodiment of the heart monitoring sensor discussed above in regard to <figref>FIG. 1</figref>, according to a preferred embodiment of the present invention;</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 3</figref> is a top plan view illustrating an exemplary embodiment of the heart monitoring sensor of <figref>FIG. 2</figref>, according to a preferred embodiment of the present invention;</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 4</figref> is a diagrammatic view illustrating an exemplary embodiment of the heart monitoring sensor of <figref>FIG. 2</figref>, according to a preferred embodiment of the present invention;</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 5</figref> is a top plan view illustrating a second exemplary embodiment of the heart monitoring sensor, according to a preferred embodiment of the present invention;</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 6</figref> is a side elevation view illustrating the exemplary embodiment of the heart monitoring sensor of <figref>FIG. 1</figref>, according to a preferred embodiment of the present invention;</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 7</figref> is a side elevation view illustrating another exemplary embodiment of the heart monitoring sensor, according to a preferred embodiment of the present invention; and</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 8</figref> is a side elevation view illustrating yet another exemplary embodiment of the heart monitoring sensor, according to a preferred embodiment of the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 1</figref> is a left side elevation view illustrating an exemplary embodiment of a heart monitoring sensor <b>200</b> (see <figref>FIG. 2</figref>) installed on a horse <b>100</b>, according to a preferred embodiment of the present invention. Visible in this view is a wrap <b>104</b> for securing the heart monitoring sensor <b>200</b> to the underside of the tail <b>102</b> of the horse <b>100</b> near the horse's dock <b>106</b> to sense the pressure in the caudal vein or artery <b>108</b>. This positioning of the sensor reduces any distractions to the horse <b>100</b> as is common with neck-mounted sensors or difficulty in remaining connected, as is common with leg-mounted sensors. The uses and adaptations of the present invention are not limited to horses, which are used herein as an example, as the device can be useful with any mammal that has a heartbeat and a vein or artery near enough to the skin to allow a pulse to be detected.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 2</figref> is a side elevation cross-sectional view illustrating an exemplary embodiment of the heart monitoring sensor <b>200</b> discussed above in regard to <figref>FIG. 1</figref>, according to a preferred embodiment of the present invention. Printed circuit board (PCB) <b>202</b> has a lower, or depressed inner surface <b>212</b> that is covered by a flexible and resilient bulb <b>204</b> that extends from the PCB <b>202</b> to a point above the PCB <b>202</b> to form sealed cavity <b>206</b>. Bulb <b>204</b> may be seated and sealed on top of PCB <b>202</b>, as shown, or seated and sealed on depressed inner surface <b>212</b>: either perimeter will serve. Sealed cavity <b>206</b> contains, for example, a pressure transducer <b>208</b> that produces a signal which can be accessed at connector <b>210</b>. In exemplary operation, bulb <b>204</b> is secured against the underside of the horse's tail <b>102</b> such that pressure in the caudal vein or artery <b>108</b> compresses or releases pressure on bulb <b>204</b>, causing pressure transducer <b>208</b> to change the pressure-dependent signal it generates. The signals are processed into data elsewhere, and the data is used to evaluate the health of the horse <b>100</b>.</p>
+      <p id="p-00016-en" num="0016">In various embodiments, connector <b>210</b> may be located at various locations on the external surfaces of PCB <b>202</b>. The signal pathway through the PCB may be through an interplane connection and/or a plated though hole. In a particular embodiment, connector <b>210</b> may be omitted, and the signals may be transmitted wirelessly from inside the sealed cavity <b>206</b> using additional electronics (see <figref>FIG. 4</figref>). In another particular embodiment, the connector <b>210</b> may be a wireless antenna.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 3</figref> is a top plan view illustrating an exemplary embodiment of the heart monitoring sensor <b>200</b> of <figref>FIG. 2</figref>, according to a preferred embodiment of the present invention. Bulb <b>204</b> is shown as transparent beyond the sealed edges. The relative size and shape of the pressure transducer <b>208</b> is not a limitation of the invention. Small size and weight is preferred for the entire heart monitoring sensor <b>200</b>.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 4</figref> is a diagrammatic view illustrating an exemplary embodiment of the heart monitoring sensor <b>200</b> of <figref>FIG. 2</figref>, according to a preferred embodiment of the present invention. Additional electronics that may be mounted on the PCB <b>202</b> in addition to pressure transducer <b>208</b> include a preamplifier <b>402</b> for amplifying the signals produced by the pressure transducer <b>208</b>, a microcontroller <b>404</b> to control, for example, sampling rate and to, for further example, format signals for transmission, and a transceiver <b>406</b> for transmitting sampled signals to a data processing facility and for receiving instructions for the microcontroller <b>404</b>. The additional electronics <b>402</b>, <b>404</b>, and <b>406</b> may be mounted within the cavity <b>206</b> or on the external surface of PCB <b>202</b>. The listed additional electronics <b>402</b>, <b>404</b>, and <b>406</b> are merely exemplary and does not preclude other or additional electronics on the heart monitoring sensor <b>200</b>.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 5</figref> is a top plan view illustrating a second exemplary embodiment of the heart monitoring sensor <b>500</b>, according to a preferred embodiment of the present invention. Heart monitoring sensor <b>500</b> illustrates that the shape of heart monitoring sensor <b>200</b> is not a limitation of the invention. The oval heart monitoring sensor <b>500</b> uses a PCB <b>502</b> with a lowered, or depresses, inner surface <b>512</b> that is covered by bulb <b>504</b> to make a sealed cavity over pressure transducer <b>208</b>. Connector <b>410</b> has the same scope as with heart monitoring sensor <b>200</b>. A cross section AA′ would look like <figref>FIG. 1</figref>, except for the placement of connector <b>410</b>.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 6</figref> is a side elevation view illustrating the exemplary embodiment of the heart monitoring sensor of <figref>FIG. 1</figref>, according to a preferred embodiment of the present invention. As can be seen in <figref>FIG. 6</figref>, the tail <b>102</b> has a natural depression <b>602</b> on the underside of the tail <b>102</b> and shaping the heart monitoring sensor <b>200</b> or <b>500</b> to fit conformally in this depression is preferred. In some embodiments, a conformal shape designed to fit horses <b>100</b> generally is within the scope of the present invention. In another embodiment, the shape may be customized to fit a particular horse <b>100</b> or other creature. Various sizes, adapted to various sizes or breeds of horses, are also within the scope of the invention, as a heart monitoring sensor <b>200</b> for a Clydesdale may not be a good fit for an American Quarter Horse. Once emplaced in the depression <b>602</b>, the heart monitoring sensor <b>200</b> or <b>500</b> may be secured by wrap <b>104</b>, or similarly effective means.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 7</figref> is a side elevation view illustrating another exemplary embodiment of the heart monitoring sensor <b>700</b>, according to a preferred embodiment of the present invention. In yet another embodiment, the heart monitoring sensor may be optical or sonic and may use or omit the bulb <b>204</b>. In this illustrated optical embodiment, an optical sensor (transceiver <b>708</b>) measures pressure changes as the changes over time in the range from transceiver <b>706</b> to the surface of the horse <b>100</b> in cavity <b>602</b>. The frequency of the output signal <b>702</b> and the reflected signal <b>704</b> is naturally much higher than the frequency of the pulse of horse <b>100</b>. Consequently, good resolution of the pulse rate may be obtained. In a particular embodiment, the Doppler signature of the pulse may be exploited for remote vibration sensing.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 8</figref> is a side elevation view illustrating yet another exemplary embodiment of the heart monitoring sensor <b>800</b>, according to a preferred embodiment of the present invention. In this illustrated optical embodiment, a transparent membrane <b>802</b> may be used over cavity <b>804</b> to prevent contamination of the transceiver <b>708</b>. Membrane <b>802</b> may be rigid or flexible.</p>
+      <p id="p-00023-en" num="0023">In yet another optical embodiment, the bulb <b>204</b> is used with an additional reflective surface on the underside of the bulb <b>204</b>. The distance between transceiver <b>708</b> and the underside of bulb <b>204</b> is repeatedly measured over time to determine the pulse rate. Again, the Doppler signature of the horse pulse may be exploited for remote vibration sensing.</p>
+      <p id="p-00024-en" num="0024">In sonic embodiments, similar to the optic embodiment of <figref>FIG. 7</figref>, the collection of data regarding range changes over time are found by sound ranging. Preferably, the frequency of the air vibrations are above 25 KHz, to prevent distracting the horse <b>100</b> or the rider. As with the optical embodiments, the frequency of the sound is high compared to the frequency of a horse's pulse, and so good resolution can be obtained. The Doppler signature of the horse pulse may be exploited for remote vibration sensing. Sound ranging to the underside of the bulb <b>204</b> is also within the scope of the present invention, and has the advantage of reducing the risk of contamination of the transceiver.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>I claim:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A heart sensor comprising,
+<claim-text>a. a printed circuit board having a depressed portion;</claim-text><claim-text>b. a flexible bulb extending from a perimeter of said depressed portion to a distance above said printed circuit board, wherein said bulb and said depressed portion form a sealed cavity;</claim-text><claim-text>c. a sensor within said sealed cavity; and</claim-text><claim-text>d. a sensor signal pathway from said sensor within said cavity to at least one point outside said cavity.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The heart sensor of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a preamplifier and a microcontroller mounted on said printed circuit board within said cavity.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The heart sensor of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a device for securing said heart sensor to the body of a living creature.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The heart sensor of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a water-resistant covering for said printed circuit board.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The heart sensor of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said bulb comprises a reflective inner surface.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The heart sensor of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said sensor comprises one of a pressure transducer and a remote vibration sensor.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The heart sensor of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein said ranging sensor determines range from said sensor to a reflective inner surface of said bulb.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The heart sensor of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein said ranging sensor is at least one of a sonar ranging sensor and a light-ranging sensor.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The heart sensor of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said sensor signal pathway comprises a wireless signal pathway.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The heart sensor of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said sensor signal pathway comprises one of an inter-plane connection and a through-hole connection on said printed circuit board.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The heart sensor of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the combination of said printed circuit board and said bulb comprise a shape conformal to a portion of a living creature's body.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The heart sensor of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein a combination of said printed circuit board and said bulb comprise a shape conformal to a natural depression on the underside of a horse's tail.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The heart sensor of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, further comprising a device for releasably attaching at least said combination of said printed circuit board and said bulb to said horse's tail.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en" independent="true">
+      <claim-text>
+        <b>14</b>. A heart sensor comprising,
+<claim-text>a. a printed circuit board having a depressed portion;</claim-text><claim-text>b. a flexible bulb extending from a perimeter of said depressed portion to a distance above said printed circuit board, wherein said bulb and said depressed portion form a sealed cavity;</claim-text><claim-text>c. a sensor within said sealed cavity;</claim-text><claim-text>d. a sensor signal pathway from said sensor within said cavity to at least one point outside said cavity;</claim-text><claim-text>e. a preamplifier mounted on said printed circuit board within said cavity;</claim-text><claim-text>f. a microcontroller mounted on said printed circuit board within said cavity; and</claim-text><claim-text>g. a device for securing said heart sensor to the body of a living creature.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The heart sensor of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said bulb comprises a reflective inner surface.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The heart sensor of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said sensor comprises at least one of a pressure transducer and a ranging sensor.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The heart sensor of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein a combination of said printed circuit board and said bulb comprise a shape conformal to a natural depression on the underside of a horse's tail.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en" independent="true">
+      <claim-text>
+        <b>18</b>. A heart sensor comprising,
+<claim-text>a. a printed circuit board having a depressed portion;</claim-text><claim-text>b. a flexible bulb extending from a perimeter of said depressed portion to a distance above said printed circuit board, wherein said bulb and said depressed portion form a sealed cavity;</claim-text><claim-text>c. a sensor within said sealed cavity;</claim-text><claim-text>d. a sensor signal pathway from said sensor within said cavity to at least one point outside said cavity;</claim-text><claim-text>e. a preamplifier mounted on said printed circuit board within said cavity;</claim-text><claim-text>f. a microcontroller mounted on said printed circuit board within said cavity; and</claim-text><claim-text>g. a device for securing said heart sensor to the body of a living creature.</claim-text></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The heart sensor of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein:
+<claim-text>a. said bulb comprises a reflective inner surface;</claim-text><claim-text>b. said sensor comprises at least one of a pressure transducer and a ranging sensor;</claim-text><claim-text>c. wherein said ranging sensor determines range from said sensor to said reflective inner surface of said bulb; and</claim-text><claim-text>d. said ranging sensor is at least one of a sonar ranging sensor and a light-ranging sensor.</claim-text></claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The heart sensor of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the combination of said printed circuit board and said bulb comprise a shape conformal to a portion of a living creature's body.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en" independent="true">
+      <claim-text>
+        <b>21</b>. A heart sensor comprising,
+<claim-text>a. a printed circuit board (PCB) having a depressed portion;</claim-text><claim-text>b. a sensor within said depressed portion;</claim-text><claim-text>c. wherein said sensor is operable to detect a pulse when said PCB is abutted against an animal's skin in a position where a vein or artery is close to the surface of the skin;</claim-text><claim-text>d. a sensor signal pathway from said sensor within said cavity to at least one point outside said cavity.</claim-text></claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The heart sensor of <claim-ref idref="clm-00021-en">claim 21</claim-ref>, wherein said sensor comprises a pressure transducer.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The heart sensor of <claim-ref idref="clm-00021-en">claim 21</claim-ref>, wherein said sensor comprises a remote vibration sensor.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The heart sensor of <claim-ref idref="clm-00023-en">claim 23</claim-ref>, wherein said remote vibration sensor comprises one of and optical sensor and a sonic sensor.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257664A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257664A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257664A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257664A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257664A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257664A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257664A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257664A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257664A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257664A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257664A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257664A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257664A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257664A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257664A1_00008.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257664A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257664A1.PDF" type="pdf" size="559681" pages="10" />
+</lexisnexis-patent-document>

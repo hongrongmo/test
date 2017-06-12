@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246000A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021251" date-changed="20151013" time-changed="074835">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139112">
+        <country>US</country>
+        <doc-number>20150246000</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14714433</doc-number>
+        <date>20150518</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>A61K   9/51        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>51</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K  31/365       20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>365</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>A61K   9/5153      20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>5153</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K   9/16        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K   9/4858      20130101 LI20150107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>4858</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K  31/365       20130101 LI20150107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>365</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">23</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">DRUG DELIVERY SYSTEM AND METHOD FOR THE TREATMENT OF NEURO-DEGENERATIVE DISEASE</invention-title>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13720157</doc-number>
+              <date>20121219</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9034347</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007144</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61577426</doc-number>
+          <date>20111219</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Aphios Corporation</orgname>
+            <address>
+              <city>Woburn</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Board of Supervisors of the Louisiana State University and Agricultural and Mechanical College</orgname>
+            <address>
+              <city>Shreveport</city>
+              <state>LA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Castor</last-name>
+            <first-name>Trevor Percival</first-name>
+            <address>
+              <city>Arlington</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Alexander</last-name>
+            <first-name>Jonathan Steven</first-name>
+            <address>
+              <city>Shreveport</city>
+              <state>LA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Purdum</last-name>
+            <first-name>Geoffrey</first-name>
+            <address>
+              <city>Hamilton</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Rios</last-name>
+            <first-name>J. David</first-name>
+            <address>
+              <city>Burlington</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Schrott</last-name>
+            <first-name>Lisa M.</first-name>
+            <address>
+              <city>Decatur</city>
+              <state>GA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Tyler</last-name>
+            <first-name>Theodore A.</first-name>
+            <address>
+              <city>Framingham</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Vizcaino</last-name>
+            <first-name>Maria I.</first-name>
+            <address>
+              <city>New Haven</city>
+              <state>CT</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173461908">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246000</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150518</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173461907">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246000</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150518</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Embodiments of the present invention are directed to the oral administration of Bryostatins for the treatment of neuro-degenerative disease.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150717</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246000A1</docdb-publication-number>
+      <docdb-application-id>444207938</docdb-application-id>
+      <new-owner>APHIOS CORPORATION, MASSACHUSETTS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:PURDUM, GEOFFREY;TYLER, THEODORE A.;VIZCAINO, MARIA I.;AND OTHERS;SIGNING DATES FROM 20150114 TO 20150717;REEL/FRAME:036123/0848</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150717</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246000A1</docdb-publication-number>
+      <docdb-application-id>444207938</docdb-application-id>
+      <new-owner>BOARD OF SUPERVISORS OF THE LOUISIANA STATE UNIVER</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:ALEXANDER, JONATHAN STEVEN;SCHROTT, LISA M.;SIGNING DATES FROM 20141220 TO 20150119;REEL/FRAME:036123/0975</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims priority to U.S. provisional patent application Ser. No. 61/577,426, filed Dec. 19, 2011, the entire contents of which is incorporated by reference herein.</p>
+    </related-apps>
+    <govt-interest>
+      <heading id="h-00002-en" level="1">STATEMENT REGARDING FEDERAL SUPPORT</heading>
+      <p id="p-00002-en" num="0002">This invention was made with Federal support including National Institutes of Health Grant No. 1R44Ago34760-01A1.</p>
+    </govt-interest>
+    <summary>
+      <heading id="h-00003-en" level="1">FIELD OF INVENTION</heading>
+      <p id="p-00003-en" num="0003">Inventions of the present application are directed to the treatment of neuro-degenerative diseases such as Hutchinson Disease, Parkinson's disease, Down's syndrome and Alzheimer's disease.</p>
+      <heading id="h-00004-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00004-en" num="0004">Neuro-degenerative diseases, such as Alzheimer's disease, Hutchinson's Disease, Parkinson's disease, Kuru, Creutzfeldt-Jakob disease and other spongiform encephalopathies remain major health problems. Currently there are very limited means to treat these diseases. With respect to Alzheimer's, Hutchinson's and Parkinson's diseases, these diseases tend to manifest themselves in older individuals and as the diseases progress; the afflicted individuals are less able to care for themselves. It is therefore highly desirable to have simple therapies which can be administered (e.g. oral formulations) without the need for specially trained healthcare providers.</p>
+      <heading id="h-00005-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00005-en" num="0005">Embodiments of the present invention are directed to drug delivery systems, dosage forms and methods for the treatment of neuro-degenerative diseases. Turning first to embodiments directed to an article of manufacture, one embodiment features an effective amount of a Bryostatin-1 in a biopolymer. The biopolymer comprises a plurality of microspheres in which the spheres have a diameter between one to 1000 nanometers. The neuro-degenerative diseases which are the object of treatment in the present invention are exemplified by Alzheimer's disease, Hutchinson's Disease, Parkinson's disease, Kuru, Creutzfeldt-Jakob disease, Down's syndrome and spongiform encephalopathies.</p>
+      <p id="p-00006-en" num="0006">As used herein, the term “a Bryostatin” refers to any and all Bryostatins and derivatives thereof. Twenty Bryostatins have been identified and certain examples feature a Bryostatin that is Bryostatin-1.</p>
+      <p id="p-00007-en" num="0007">Embodiments of the present invention feature a biopolymer which is resistant to acid. For example, without limitation, one biopolymer is a poly (D, L-lactide-coglycoside). This biopolymer has two components. Embodiments of the present invention feature a poly (D, L-lactide-co-glycoside) having a ratio of lactide and glycoside of 25-75% lactide with the remaining comprising glycoside. A common ratio is 50:50 lactide to glycoside as determined by weight. This biopolymer is resistant to gastric acid degradation and allows oral delivery of the drug to the small intestine for absorption.</p>
+      <p id="p-00008-en" num="0008">Embodiments of the present invention feature spheres that are lyophilized for reconstitution in an aqueous solution. Another embodiment features spheres held in suspension for oral administration and/or held in an oral dosage form selected from the group of tablets, capsules, gel caps, and powders. Suspensions for oral administration are preferably flavored to improve patient acceptance.</p>
+      <p id="p-00009-en" num="0009">A further embodiment of the present invention is directed to a method of treating neuro-degenerative disease. The method comprises the steps of administering an effective amount of a Bryostatin held in a plurality of spheres, each sphere comprising a biopolymer and Bryostatin, and each sphere having a diameter of one to 1000 nanometers.</p>
+      <p id="p-00010-en" num="0010">Embodiments of the present method feature a Bryostatin selected from the group consisting of Bryostatins 1-20.</p>
+      <p id="p-00011-en" num="0011">One embodiment of the present invention features a biopolymer which is resistant to acid. For example, without limitation, one acid resistant biopolymer is a poly (D, L-lactide-coglycoside). Poly (D, L-lactide-co-glycoside) has a ratio of lactide and glycoside. A preferred ratio is 25-75% lactide with the remaining comprising glycoside.</p>
+      <p id="p-00012-en" num="0012">Preferably, the microspheres are lyophilized for reconstitution in an aqueous solution, or held in suspension for oral administration or held in an oral dosage form selected from the group of tablets, capsules, gel caps, and powders.</p>
+      <p id="p-00013-en" num="0013">As a further article of manufacture, embodiments of the present invention feature an effective amount of a Bryostatin dissolved in pharmaceutically acceptable oil for oral administration for the treatment of neuro-degenerative disease. As used herein, the term “pharmaceutically acceptable oil” refers to oils which are reasonably well tolerated for oral ingestion in small amounts of 5 to 10 milliliters. Embodiments of the present invention feature olive oil. Other embodiments comprise, by way of example, without limitation include, cotton seed oil, cod liver oil, castor oil, safflower oil, peanut oil, sesame oil, corn oil, vegetable oils, oils originating with animals, and other oils commonly used in the food industry. The oil is preferably administered in a gel cap.</p>
+      <p id="p-00014-en" num="0014">An effective amount of Bryostatin for humans is about 0.1 to 3.0 mg per day in the pharmaceutically acceptable oil and approximately 100 micrograms to 2 mg per day as in the microsphere.</p>
+      <p id="p-00015-en" num="0015">A further embodiment of the present invention is directed to a method of treating neuro-degenerative disease comprising the steps of administering orally an effective amount of a Bryostatin dissolved in pharmaceutically acceptable oil.</p>
+      <p id="p-00016-en" num="0016">Thus, as a treatment for neuro-degenerative diseases, embodiments of the present invention feature dosage forms and methods for the oral administration of an effective amount of a Bryostatin. These and other features and advantages of the present invention will be apparent upon reading the text of the detailed description below as well as viewing the accompanying drawings.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00006-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 1</figref> depicts a microsphere embodying features of the present invention; and,</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 2</figref> depicts an apparatus for making one or more microspheres of the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00007-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00019-en" num="0019">Embodiments of the present invention will be described with respect to a drug delivery system, dosage form and method for the treatment of neuro-degenerative diseases exemplified by Alzheimer's disease, with the understanding that the discussion relates to other neuro-degenerative diseases as well. This discussion will feature the preferred embodiments of the invention with the understanding that features of the invention are capable of modification and alteration without departing from the teaching.</p>
+      <p id="p-00020-en" num="0020">Turning first to <figref>FIG. 1</figref>, a microsphere, generally designated by the numeral <b>11</b> embodying features of the present invention is depicted. The microsphere <b>11</b>, when combined with an adequate number of like microspheres comprises an effective dose of a Bryostatin in a biopolymer. Each microsphere <b>11</b> has a diameter of one to 1000 nanometers. Although depicted as a microsphere, the article of manufacture may have an irregular shape, roughness, or be filamentous in form.</p>
+      <p id="p-00021-en" num="0021">As used herein, the term “a Bryostatin” refers to any and all Bryostatins and derivatives thereof. Examples of the present invention feature ‘bryoids’ which is a term that refers to a naturally occurring fractions of Bryostatins purified to about 95% chromatographic purity. Bryostatins are isolated in accordance with Castor, U.S. Pat. No. 5,750,709 and Castor “Supercritical fluid Isolation of Bryostatin-1, Phase II Final Report, SBIR Grant No. 5 R44 CA64017-03, Apr. 21 2001.</p>
+      <p id="p-00022-en" num="0022">Embodiments of the present invention feature a biopolymer resistant to acid. For the purpose of the present discussion, resistance to acid refers to stomach acids at a pH of approximately 1 to 3 for a period of time of about 0.5 to 4.0 hours. One biopolymer is a poly (D, L-lactide-coglycoside). This biopolymer has two components, a lactide and a glycoside component. Embodiments of the present invention feature a poly (D, L-lactide-co-glycoside) having a ratio of lactide and glycoside of 25-75% lactide with the remaining comprising glycoside. A common ratio is 50:50 lactide to glycoside as determined by weight. This biopolymer is resistant to acid degradation and allows oral delivery of the drug to the small intestine for absorption.</p>
+      <p id="p-00023-en" num="0023">Embodiments of the present invention feature microspheres that are lyophilized for reconstitution in an aqueous solution. Another embodiment features microspheres held in suspension for oral administration and/or held in an oral dosage form selected from the group of tablets, capsules, gel caps, and powders. Methods of making tablets, capsules, gel caps and powders are well known in the art. (Remington, ‘The Science and Practice of Pharmacy’-20<sup>th </sup>Edition Lippincott, Williams and Williams). Suspensions for oral administration are preferably flavored to improve patient acceptance.</p>
+      <p id="p-00024-en" num="0024">Another embodiment of the present invention features pharmaceutically orally acceptable oil containing an effective amount of Bryostatin. An amount of oil for administration is determined, and an effective amount of Bryostatin is dissolved in such oil in a manner known in the art. Preferably, the amount of oil which is intended for oral administration is enclosed in a gel cap in a manner known in the art. For example, Vitamin D and Vitamin E supplements are often enclosed in gel cap formulations.</p>
+      <p id="p-00025-en" num="0025">The present method and apparatus will be described with respect to <figref>FIG. 2</figref> which depicts in schematic form a polymer sphere apparatus, generally designated by the numeral <b>13</b>. The polymer sphere apparatus is comprised of the following major elements: a polymer vessel <b>15</b>, a Bryostatin drug injection assembly <b>17</b>, an admixture chamber <b>19</b>, a depressurization vessel <b>21</b>, and an orifice nozzle <b>23</b>.</p>
+      <p id="p-00026-en" num="0026">Polymer vessel <b>15</b> is in fluid communication with a supercritical critical or near critical syringe pump <b>25</b> via conduits <b>27</b><i>a, </i><b>27</b><i>b </i>and <b>27</b><i>c. </i>Supercritical, critical or near critical pump <b>25</b> is in fluid communication with a source of supercritical, critical or near critical fluid.</p>
+      <p id="p-00027-en" num="0027">Polymer vessel <b>15</b> is also in fluid communication with a modifier syringe pump <b>31</b> via conduit <b>33</b> which intersects with conduit <b>27</b><i>a </i>at junction <b>35</b>. Modifier syringe pump <b>31</b> is in communication with a source of modifiers and/or entrainers (not shown).</p>
+      <p id="p-00028-en" num="0028">Polymer vessel <b>15</b> is loaded with polymer. This polymer vessel receives supercritical, critical or near critical fluid from supercritical critical or near critical pump <b>25</b> via conduits <b>27</b><i>a, </i><b>27</b><i>b </i>and <b>27</b><i>c. </i>Polymer vessel <b>15</b> receives modifiers and/or entrainers from modifier pump <b>31</b> via conduit <b>33</b>. Polymer is dissolved in the supercritical, critical or near critical fluid and modifier to form a polymer solution. Formation of the polymer solution is facilitated by circulating the polymers and supercritical, critical or near critical fluid in a loop with a conduits <b>27</b><i>d, </i><b>27</b><i>d, </i><b>27</b><i>e, </i><b>27</b><i>f, </i>and <b>27</b><i>g, </i>a master valve <b>29</b>, a static mixer <b>31</b>, and a circulation pump <b>33</b>.</p>
+      <p id="p-00029-en" num="0029">Polymer vessel <b>15</b> is in fluid communication with admixture chamber <b>19</b> via conduits <b>37</b> and <b>39</b>. Admixture chamber <b>19</b> is also in fluid communication with Bryostatin drug injection assembly <b>17</b>. Bryostatin drug injection assembly <b>17</b> comprises Bryostatin drug syringe pump <b>43</b>, a source of a Bryostatin <b>41</b> and conduit <b>45</b>. Bryostatin drug syringe pump <b>43</b> is in communication with a source of Bryostatin material and pressurizes and compels such material through conduit <b>45</b>. Conduit <b>45</b> is in communication with admixture chamber via conduits <b>39</b> which intersects conduit <b>45</b> at junction <b>47</b>. Preferably, junction <b>47</b> is a mixing “T”.</p>
+      <p id="p-00030-en" num="0030">Admixture vessel <b>19</b> is in the nature of an inline mixer and thoroughly mixes incoming streams from the polymer vessel <b>15</b> and Bryostatin drug injection assembly <b>17</b>. Admixture vessel <b>19</b> is in communication with orifice nozzle <b>23</b> via conduit <b>49</b>. Orifice nozzle <b>23</b> is in the nature of a back pressure regulator and has a nozzle defining one or more orifices which discharge into depressurization vessel <b>21</b> via conduit <b>51</b>. Preferably orifice nozzle <b>23</b> controls pressure and decompression rates such that a supercritical critical or near critical carbon dioxide enters the orifice at a rate of about 0.425 mls/min and 0.075 mls/min acetone or about 0.5 mls/min carbon dioxide and ethanol combined to maintain system pressure at 2,500 psig.</p>
+      <p id="p-00031-en" num="0031">The operating pressure of the system can be preset at a precise level via a computerized controller (not shown) that is part of the syringe pumps. Temperature control in the system is achieved by enclosing the apparatus <b>11</b> in ¼″ Lexan sheet while utilizing a Neslab heating/cooling system coupled with a heat exchanger (not shown) to maintain uniform temperature throughout the system.</p>
+      <p id="p-00032-en" num="0032">In a typical experimental run, polymeric materials were first packed into the polymer vessel <b>15</b>. Supercritical critical or near critical fluid and an ethanolic solution of Bryostatin drug were charged into the supercritical, critical or near critical syringe pumps <b>25</b> and <b>31</b>, respectively, and brought to the desired operating pressure. In the alternative, an ethanol solution of Bryostatin drug is charged into bioactive syringe pump <b>43</b>.</p>
+      <p id="p-00033-en" num="0033">The system is pressurized with the supercritical critical or near critical fluid via supercritical, critical or near critical syringe pump <b>25</b> to the pressure level equal to that set in modifier syringe pump <b>31</b> and Bryostatin drug syringe pump <b>43</b>, and maintained at this level with the nozzle orifice <b>23</b>. The dynamic operating mode for all pumps is set so that each pump can be operated at its own desired flow rate. The supercritical critical or near critical stream flows through the polymer vessel <b>15</b>, dissolves polymer and contacts the Bryostatin drug stream at junction <b>47</b>. The mixture of supercritical critical nears critical fluid, Bryostatin drug and polymer materials is then passed through admixture chamber <b>19</b> for further mixing. Finally, the mixed solution entered orifice nozzle <b>23</b> and was injected into a 10% sucrose solution containing 0.1% polyvinyl alcohol, 40% ethanol with trace acetic acid in the depressurization vessel <b>21</b>. As a result of supercritical fluid decompression, polymer spheres containing Bryostatin drug are formed in the 10% sucrose solution, 0.1% polyvinyl alcohol, 40% ethanol with trace acetic acid. The expanded supercritical fluid exits the system via a vent line on the depressurization vessel <b>21</b>.</p>
+      <p id="p-00034-en" num="0034">The polymer spheres are in the nature of microspheres <b>11</b>. These microspheres <b>11</b> are frozen at −80° degrees Centigrade and lyophilized.</p>
+      <p id="p-00035-en" num="0035">Oil based Bryostatin solutions are dissolved in olive oil with vitamin E as a preservative and lecithin and medium chain triglyceride emulsifiers to increase bioavailability. The oil with the dissolved Bryostatin is encapsulated in gel capsules with a nitrogen purge and head. In the alternative, the oil with dissolved Bryostatin is administered as a liquid dosage form. However, those skilled in the art recognize that oily formulations are not normally well received due to taste and texture. The oil with dissolved Bryostatin may also be emulsified and administered as a liquid formulation. Emulsification may mask some of the less desirable taste and texture associated with oil based oral formulations.</p>
+      <heading id="h-00008-en" level="1">EXAMPLES</heading>
+      <p id="p-00036-en" num="0036">Bryostatin Microspheres</p>
+      <p id="p-00037-en" num="0037">Microspheres comprising polymers and Bryostatin 1 were prepared in accordance with the methods described above. The results are summarized in Table 1 below.</p>
+      <p id="p-00038-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="259pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Summary of Polymer Nanoencapsulation of Bryostatin-1 Experiments</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="left" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="42pt" align="center" />
+              <colspec colname="7" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Particle</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>P</entry>
+                  <entry>T</entry>
+                  <entry>Size </entry>
+                  <entry>Bryo-1</entry>
+                  <entry>Encapsulation</entry>
+                </row>
+                <row>
+                  <entry>Expt. No.</entry>
+                  <entry>SFS</entry>
+                  <entry>(bars)</entry>
+                  <entry>(° C.)</entry>
+                  <entry>(nm)</entry>
+                  <entry>(mg/100 mls)</entry>
+                  <entry>(%)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>ALZ-01-</entry>
+                  <entry>CO<sub>2</sub>:Acetone::95:5</entry>
+                  <entry>171</entry>
+                  <entry>45</entry>
+                  <entry>259 </entry>
+                  <entry>0.0511</entry>
+                  <entry>11.4</entry>
+                </row>
+                <row>
+                  <entry>01</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>ALZ-02-</entry>
+                  <entry>Freon-22</entry>
+                  <entry>205</entry>
+                  <entry>22</entry>
+                  <entry>973 </entry>
+                  <entry>0.3089</entry>
+                  <entry>16.8</entry>
+                </row>
+                <row>
+                  <entry>01</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>ALZ-03-</entry>
+                  <entry>CO<sub>2</sub>:Ethanol::85:15</entry>
+                  <entry>171</entry>
+                  <entry>45</entry>
+                  <entry>246*</entry>
+                  <entry>0.0027</entry>
+                  <entry>71.3</entry>
+                </row>
+                <row>
+                  <entry>01</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>ALZ-04-</entry>
+                  <entry>CO<sub>2</sub>:Acetone::95:5</entry>
+                  <entry>171</entry>
+                  <entry>45</entry>
+                  <entry>215*</entry>
+                  <entry>0.0160</entry>
+                  <entry>50.8</entry>
+                </row>
+                <row>
+                  <entry>01</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>ALZ-05-</entry>
+                  <entry>CO<sub>2</sub>:Acetone::95:5</entry>
+                  <entry>171</entry>
+                  <entry>45</entry>
+                  <entry>254*</entry>
+                  <entry>0.1323</entry>
+                  <entry>84.0</entry>
+                </row>
+                <row>
+                  <entry>01</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>ALZ-06-</entry>
+                  <entry>CO<sub>2</sub>:Acetone::85:15</entry>
+                  <entry>171</entry>
+                  <entry>45</entry>
+                  <entry>251*</entry>
+                  <entry>0.2374</entry>
+                  <entry>82.3</entry>
+                </row>
+                <row>
+                  <entry>01</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="left" id="entry-00001-en">*After lyophilization and reconstitution</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00039-en" num="0038">The nanospheres appear stable at 4-25° C. (Centigrade) for at least one week duration. Further, the nanospheres appear stable in solutions at about pH 1.13 at 37° C. (Centigrade), similar to a stomach environment.</p>
+      <p id="p-00040-en" num="0039">Results further suggest that nanospheres with Bryostatins and Bryostatin 1, in particular, induce alpha-secretase processing of amyloid precursor protein (APP) to s-APP alpha, and activate protein kinase C (PKC) isoforms alpha, delta and epsilon (measured by membrane translocation) in the SH-SY5Y neuroblastoma cell line. These events are well-described cell and pharmacological events associated with prevention of beta-secretase mediated formation of beta-amyloid, the presumptive cause of dementia in human Alzheimer's disease and in the sweAPP/PS1 mouse model of Alzheimer's disease.</p>
+      <p id="p-00041-en" num="0040">Oil-Based Formulations for Liquid-Fill Gel Capsules</p>
+      <p id="p-00042-en" num="0041">Based on the hydrophobicity of Bryostatin-1, we developed an oil-based formulation of Bryostatin-1.</p>
+      <p id="p-00043-en" num="0042">A stock solution of 82 mg/100 mL of Bryostatin-1 was used. Isopropyl alcohol, Extra Virgin olive oil, sesame oil, and vegetable oil were all used as solvents.</p>
+      <p id="p-00044-en" num="0043">Thirty microliters of the stock solution were placed in each of 4 clean, dry HPLC vials. The ethanol was allowed to evaporate, leaving 25 micrograms in the vial. Then, 1.0 mL of the solvent was placed in the vial and vortexed to ensure proper mixing. These samples were then injected on a normal phase HPLC system, with a gradient of 10%-70% isopropyl alcohol in hexane as the mobile phase (specifically developed for this experiment).</p>
+      <p id="p-00045-en" num="0044">The concentration of each vial theoretically should be 2.5 mg/100 mL. The results are listed in Table 2.</p>
+      <p id="p-00046-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Concentrations of Bryostatin in Different Solvents</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="133pt" align="left" />
+              <colspec colname="2" colwidth="70pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Concentration</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Solvent</entry>
+                  <entry>(mg/100 mL)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="133pt" align="left" />
+              <colspec colname="2" colwidth="70pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Isopropyl Alcohol</entry>
+                  <entry>2.6035</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Extra Virgin Olive Oil</entry>
+                  <entry>2.9945</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Vegetable Oil</entry>
+                  <entry>2.5475</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Extra Virgin olive containing mixed natural</entry>
+                  <entry>2.4431</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>tocopherol antioxidants to improve stability,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>and lecithin and medium chain triglyceride</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>emulsifiers to increase bioavailability.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00047-en" num="0045">The data in Table 2 indicates that Bryostatin-1 is soluble in a variety of different types of oil. The reason for the higher concentrations than the standard (isopropyl alcohol) is due to the baseline. While attempting a baseline subtraction for each oil, there was negative absorbance so the blank IPA sample was subtracted from each sample's baseline. While this incorporates a little more area for integration, the amount of Bryostatin in the oil was quantifiable. In addition, the sesame oil had an integration area that was much larger than the peak itself. When manipulating the review application within the Millennium HPLC software, it was seen that the peak itself had a similar area to that of the standard (Bryostatin in IPA).</p>
+      <p id="p-00048-en" num="0046">Bryostatin-1 is soluble in a variety of oils, with the best results in Extra Virgin Olive Oil, Vegetable Oil, and Extra Virgin Olive Oil with excipients. Bryostatin-1 is formulated to a specific concentration in Extra Virgin olive containing mixed natural tocopherol antioxidants to improve stability, and lecithin and medium chain triglyceride emulsifiers to increase bioavailability. This formulation is then encapsulated in gel capsules with a N<sub>2 </sub>purge and head. Targeted concentrations are in the range of 10 to 25 82 g/mL.</p>
+      <p id="p-00049-en" num="0047">Water Maze Studies</p>
+      <p id="p-00050-en" num="0048">Mouse strain B6C3-Tg carrying mutant Swedish Amyloid precursor protein (sweAPP) and PS1 (presenilin-1) genes associated with early onset Alzheimer's disease were subjected to water maze tests at 5-6 months of age. These tests suggest that mice that received Bryostatin-1 at a dose of 5 micrograms/mouse on alternative days orally in an oil formulation showed significant protection against Alzheimer's disease mediated memory loss produced by the APP/PS1 mutations as compared with memory acquisition skills seen in control animals.</p>
+      <p id="p-00051-en" num="0049">Therefore, we have described the present invention with respect to preferred embodiments with the understanding that these embodiments are capable of modification and alteration without departing from the teaching herein. Therefore, the present invention should not be limited to the precise details, but should encompass the subject matter of the claims that follow.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. As an article of manufacture, an effective amount of a Bryostatin in a biopolymer said biopolymer comprising a plurality of spheres in which said spheres have a diameter of one to 1000 nanometers, for the treatment of neuro-degenerative disease.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The article of manufacture of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said a Bryostatin is selected from the group consisting of Bryostatins 1-20.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The article of manufacture of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said biopolymer is resistant to acid.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The article of manufacture of <claim-ref idref="clm-00003-en">claim 3</claim-ref> wherein said biopolymer is a poly (D, L-lactide-coglycoside).</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The article of manufacture of <claim-ref idref="clm-00004-en">claim 4</claim-ref> wherein said poly (D, L-lactide-co-glycoside) has a ratio of lactide and glycoside of 25-75% lactide.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The article of manufacture of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said microspheres are lyophilized for reconstitution in an aqueous solution.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The article of manufacture of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said microspheres are held in suspension for oral administration.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The article of manufacture of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said microspheres are held in an oral dosage form selected from the group of tablets, capsules, gel caps, and powders.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en" independent="true">
+      <claim-text>
+        <b>9</b>. A method of treating neuro-degenerative disease comprising the steps of administering an effective amount of a Bryostatin held in a plurality of microspheres, each microsphere comprising a biopolymer and Bryostatin said microspheres having a diameter of one to 1000 nanometers.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref> wherein said Bryostatin is selected from the group consisting of Bryostatins 1-20.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref> wherein said biopolymer is resistant to acid.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref> wherein said biopolymer is a poly (D, L-lactide-coglycoside).</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein said poly (D, L-lactide-co-glycoside) has a ratio of lactide and glycoside of 25-75% lactide.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref> wherein said microspheres are lyophilized for reconstitution in an aqueous solution.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref> wherein said microspheres are held in suspension for oral administration.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref> wherein said microspheres are held in an oral dosage form selected from the group of tablets, capsules, gelatin capsules, and powders.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en" independent="true">
+      <claim-text>
+        <b>17</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The article of manufacture of <claim-ref idref="clm-00017-en">claim 17</claim-ref> wherein said neuro-degenerative disease in selected from the group consisting of Alzheimer's Disease, Hutchinson's Disease, Parkinson's Disease, Down's Syndrome, Kuru, Creutzfeldt-Jakob Disease and spongiform encephalopathies.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The article of manufacture of <claim-ref idref="clm-00017-en">claim 17</claim-ref> wherein said effective amount of Bryostatin is approximately 3-10 ug per kilogram body weight per day.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en" independent="true">
+      <claim-text>
+        <b>20</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref> wherein said effective amount of Bryostatin is approximately 3-10 ug per kilogram body weight per day.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en" independent="true">
+      <claim-text>
+        <b>22</b>. A method of treating a neuro-degenerative disease comprising the step of orally administering an effective amount of a Bryostatin.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The article of manufacture of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said Bryostatin is selected from the group consisting of Bryostatins 1-20.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246000A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246000A1-20150903-D00001.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246000A1.PDF" type="pdf" size="352590" pages="6" />
+</lexisnexis-patent-document>

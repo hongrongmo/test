@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150245987A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021613" date-changed="20150918" time-changed="025316">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121141046">
+        <country>US</country>
+        <doc-number>20150245987</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14436234</doc-number>
+        <date>20131023</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="regional">
+        <country>EP</country>
+        <doc-number>12189990</doc-number>
+        <date>20121025</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>A61K   8/81        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>81</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A45D   7/04        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>7</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A45D   7/06        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>7</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61K   8/46        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>46</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>A61Q   5/04        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>5</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>A61K   8/8147      20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>8147</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A45D   7/04        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>7</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A45D   7/06        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>7</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K   8/46        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>46</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61K   8/8111      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>8111</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61K2800/594       20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2800</main-group>
+        <subgroup>594</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61Q   5/04        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>5</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61Q   5/12        20130101 LI20150325BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>5</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150325</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">15</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">COMPOSITION AND PROCESS FOR PERMANENT SHAPING OF HUMAN HAIR</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>KAO GERMANY GMBH</orgname>
+            <role>03</role>
+            <address>
+              <city>Darmstadt</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Schneider</last-name>
+            <first-name>Jörg</first-name>
+            <address>
+              <city>Griesheim</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Wood</last-name>
+            <first-name>Jonathan</first-name>
+            <address>
+              <city>Weinheim</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13072178</doc-number>
+        <date>20131023</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014064156</doc-number>
+        <date>20140501</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="165465487">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245987</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014064156</doc-number>
+            <kind>A3</kind>
+            <date>20141127</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2911749</doc-number>
+            <kind>A2</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014064156</doc-number>
+            <kind>A2</kind>
+            <date>20140501</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165465486">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245987</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014064156</doc-number>
+            <kind>A3</kind>
+            <date>20141127</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2911749</doc-number>
+            <kind>A2</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014064156</doc-number>
+            <kind>A2</kind>
+            <date>20140501</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Present invention relates to a composition and a process for the permanent shaping of human hair used both for the permanent waving of human hair with an excellent waving effect as well as for the straightening of either naturally or chemically curled hair wherein optimum hair conditioning is observed. The present invention is an aqueous composition for permanent shaping and/or straightening hair based on at least one reducing agent and comprising further aqueous dispersed droplets of ethylene/octene copolymer stabilized with ethylene/sodium acrylate copolymer. Present invention is at the same time on the process for permanent shaping wherein the composition of the invention is used.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150416</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015245987A1</docdb-publication-number>
+      <docdb-application-id>444207914</docdb-application-id>
+      <new-owner>KAO GERMANY GMBH, GERMANY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:SCHNEIDER, JOERG;WOOD, JONATHAN;SIGNING DATES FROM 20150330 TO 20150408;REEL/FRAME:035426/0589</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <p id="p-00001-en" num="0001">Present invention relates to a composition and a process for the permanent shaping of human hair used both for the permanent waving of human hair with an excellent waving effect as well as for the straightening of either naturally or chemically curled hair wherein optimum hair conditioning is observed.</p>
+      <p id="p-00002-en" num="0002">It is generally known that permanent waving is carried out in two steps, the reductive splitting of the cysteine disulfide bonds in the hair by a reducing agent and the subsequent neutralization by application of an oxidizing agent, whereby the cysteine disulfide bonds are restored.</p>
+      <p id="p-00003-en" num="0003">The reducing agent still most frequently used today is thioglycolic acid, also in form of the salts thereof, in particular its ammonium salt, although numerous other thio compounds have been proposed for this purpose, which, however, mostly did not succeed.</p>
+      <p id="p-00004-en" num="0004">The compositions containing thioglycolates are customarily applied at a pH-value between 7 and 10, in particular 8.5 and 9.5.</p>
+      <p id="p-00005-en" num="0005">Such compositions vary in their waving and/or straightening performance and, therefore, there is still need for further improvement, especially in permanent shaping of damaged to strongly damaged hair and in particular for permanent shaping hair streaks including parts with various damage level in length and also improvement in hair condition after such carrying our permanent shaping process.</p>
+      <p id="p-00006-en" num="0006">The present invention starts from the task of providing a composition for the permanent shaping of human hair with excellent waving and straightening performance, especially homogeneous curling and straightening efficiency on hair comprising parts with various degree of damage. Hair waved or straightened with composition disclosed herein looks and feels natural upon touching by hand and has improved shine. For waved hair it is especially important that the hair has excellent elasticity and bounce.</p>
+      <p id="p-00007-en" num="0007">Accordingly, the first object of the present invention is an aqueous composition for permanent shaping and/or straightening hair based on at least one reducing agent and comprising further ethylene/octene copolymer dispersed in an aqueous medium comprising ethylene/sodium acrylate copolymer.</p>
+      <p id="p-00008-en" num="0008">Further object of the present invention is the use of an aqueous composition comprising at least one reducing agent and ethylene/octene copolymer dispersed in an aqueous medium comprising ethylene/sodium acrylate copolymer for permanent shaping and/or straightening hair. Additionally hair is well conditioned with the use in terms of feeling natural upon touching by hand, shine elasticity and bounce.</p>
+      <p id="p-00009-en" num="0009">Further object of the present invention is a process for permanent shaping hair comprising the steps wherein hair is washed or shampooed or made wet and applied an aqueous composition comprising at least one reducing agent and ethylene/octene copolymer dispersed in an aqueous medium comprising ethylene/sodium acrylate copolymer and processed for 1 to 30 min and rinsed off from hair and subsequently an aqueous composition comprising at least one oxidizing agent is applied and after processing of 1 to 30 min optionally rinsed off from hair.</p>
+      <p id="p-00010-en" num="0010">Further object of the present invention is a process for permanent shaping hair comprising the steps wherein hair is shampooed or washed or made wet and applied an aqueous composition comprising at least one reducing agent and processed for 1 to 30 min and rinsed off from hair and subsequently an aqueous composition comprising at least one oxidizing agent is applied and after processing of 1 to 30 min optionally rinsed off from hair wherein one of the two composition comprises ethylene/octene copolymer dispersed in an aqueous medium comprising ethylene/sodium acrylate copolymer.</p>
+      <p id="p-00011-en" num="0011">In a further object of the present invention is a process for permanent shaping hair comprising the steps wherein hair is shampooed or washed or made wet and applied an aqueous composition comprising at least one reducing agent and processed for 1 to 30 min and rinsed off from hair and subsequently an aqueous composition comprising at least one oxidizing agent preferably selected from hydrogen peroxide or sodium bromate and ethylene/octene copolymer dispersed in an aqueous medium comprising ethylene/sodium acrylate copolymer and after processing of 1 to 30 min optionally rinsed off from hair.</p>
+      <p id="p-00012-en" num="0012">Still further object the present invention is a process for permanent shaping hair comprising the steps wherein hair is shampooed or washed or made wet and applied an aqueous composition comprising at least one reducing agent and processed for 1 to 30 min and rinsed off from hair and subsequently an aqueous composition comprising at least one inorganic salt is applied onto hair and without rinsing of the composition a third aqueous composition comprising at least one oxidizing agent is applied and after processing of 1 to 30 min optionally rinsed off from hair wherein at least one of the three compositions comprises ethylene/octene copolymer dispersed in an aqueous medium comprising ethylene/sodium acrylate copolymer.</p>
+      <p id="p-00013-en" num="0013">In the above processes, in case the process is carried out for curling of hair, hair is wound on the curlers either after shampooing or washing or wetting or during the application of the reducing agent or after application of the reducing agent. The curlers are taken off from hair after rinsing off the reducing agent or after application of intermediate treatment or before application of the oxidizing agent or after application of the oxidizing agent or at the end of the processing time of oxidizing agent. The time of wounding onto curlers and taking them off is very much dependent on the curling strength aimed. For stronger curls it is preferred that the wounding onto curlers is done before application of the reducing agent and curlers are taken off at the end of the processing time of oxidizing agent.</p>
+      <p id="p-00014-en" num="0014">Ethylene/octene copolymer dispersed in an aqueous medium comprising ethylene/sodium acrylate copolymer is a commercially available raw material under the trade name EcoSmooth Silk from Dow Chemical Company comprising 40 to 44% active matter.</p>
+      <p id="p-00015-en" num="0015">Concentration of ethylene/octene copolymer is in the range of 0.001 to 5%, preferably 0.01 to 3% and more preferably 0.02 to 2% and most preferably 0.05 to 1% by weight calculated to total composition. It should be noted that in case all compositions, i.e. reducing composition and intermediate treatment composition and oxidizing composition comprise ethylene/octene copolymer dispersed in an aqueous medium comprising ethylene/sodium acrylate copolymer the concentration mentioned here is in each composition and calculated to total of each composition.</p>
+      <p id="p-00016-en" num="0016">The permanent shaping compositions according to the invention comprise at least one reducing compound at a concentration of at least 0.5%, preferably at least 1%, more preferably at least 2% and most preferably at least 2.5% by weight calculated to total composition. Preferred are thioglycolic acid and thiolactic acid as well as the salts thereof, in particular the ammonium and ethanolamine salts. Further useful thio compounds are in particular cysteine or the hydrochloride thereof, homocysteine, cysteamine, N-acetyl cysteine, thioglycerol, ethanediol monothioglycolate, 1,2-propyleneglycol monothioglycolate (see also WO-A 93/1791), 1-3-propanediol monothioglycolate or the isomer mixture resulting therefrom, 1,3-butanediol and 1,4-butanediol monothioglycolate and the isomer mixtures therefrom, polyethylene glycol, such as di-, tri- and tetraethyleneglycol monothioglycolates, glycerol monothiolactate and further thio acids and the esters thereof, as well as mixtures thereof.</p>
+      <p id="p-00017-en" num="0017">The use of inorganic reducing sulfur compounds such as sodium hydrogen sulfite is basically also possible.</p>
+      <p id="p-00018-en" num="0018">The total reduction agent content in the compositions according to the invention customarily amounts from 0.5 to 15%, preferably 1.0 to 12.5%, more preferably 2.0 to 12.5%, most preferably 2.5 to 12.5% by weight, calculated to total composition.</p>
+      <p id="p-00019-en" num="0019">The permanent shaping compositions containing reducing agents can, if necessary, comprise alkalizing agents. Their quantity is dependent on the reducing agent and the desired pH-value of the composition. Reducing agent compositions preferably contain 0.1% to 5%, in particular 0.5% to 2.5% by weight thereof, calculated to the total composition. Alkalizing agents preferred within the scope of the invention are ammonium carbamate, ammonia and/or ammonium(bi)carbonate, monoethanolamine and triethanolamine. It is desirable to adjust the pH-value between about 6.5 and 10.5, preferably about 7 to 9.5.</p>
+      <p id="p-00020-en" num="0020">Permanent shaping compositions according to the invention are suited for use both for the permanent waving, i.e. curling of human hair and for the straightening, i.e. smoothing thereof.</p>
+      <p id="p-00021-en" num="0021">The viscosity best suited for the permanent shaping compositions according to the invention proved to be in the range of 1 to 10,000 mPa·s, preferably about 1 to about 5,000 mPa·s, measured at 20° C. in a Brookfield viscosimeter (no. 5 spindle), whereas the viscosity suited for the straightening compositions is preferably higher in a range up to 50,000 mPa·s, preferably up to 30,000 mPa·s measured at 20° C. in a Brookfield viscosimeter (no. 5 spindle).</p>
+      <p id="p-00022-en" num="0022">The viscosity is adjusted by addition of the appropriate amounts of thickening agents known per se, such as cellulose derivatives. Thickening may as well be realized by formulating a composition in form of an emulsion with the use of C<sub>10</sub>-C<sub>22</sub>-fatty alcohols, in mixture with long mono alkyl chain quaternary ammonium surfactants.</p>
+      <p id="p-00023-en" num="0023">Permanent shaping compositions according to the present invention preferably comprise surfactants selected from anionic, nonionic, cationic and amphoteric ones. Their proportion ranges from 0.05% to 10%, in particular from 0.1% to 5% by weight, calculated to total composition.</p>
+      <p id="p-00024-en" num="0024">Suitable anionic surfactants are especially the known alkyl ether sulfates and carboxylic acids, in particular in form of their alkali salts, as well as protein fatty acid condensates.</p>
+      <p id="p-00025-en" num="0025">Suitable nonionic surfactants, which are preferred within the scope of the invention, are in particular C<sub>8</sub>-C<sub>18</sub>-fatty alcohol polyglycol ethers, fatty acid polyglycol esters, fatty acid alkanolamides, amineoxides, and especially C<sub>8</sub>-C<sub>18</sub>-alkyl polyglucosides.</p>
+      <p id="p-00026-en" num="0026">Also possible is the incorporation of amphoteric surfactants, such as the known alkyl betaines, alkyl amido betaines, and alkyl amphoacetates.</p>
+      <p id="p-00027-en" num="0027">Further according to a further preferred embodiment, permanent shaping compositions comprise at least one cationic surfactant according to general formula</p>
+      <p id="p-00028-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="13.63mm" wi="19.90mm" alt="embedded image" img-content="chem" file="US20150245987A1_00001.PNG" img-format="png" original="US20150245987A1-20150903-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00029-en" num="0000">where R<sub>1</sub>s a saturated or unsaturated, branched or non-branched alkyl chain with 8-24 C atoms or</p>
+      <p id="p-00030-en" num="0000">[in-line-formulae]R<sub>5</sub>CONH(CH<sub>2</sub>)<sub>n </sub>[/in-line-formulae]</p>
+      <p id="p-00031-en" num="0000">where R<sub>5 </sub>is saturated or unsaturated, branched or non-branched alkyl chain with 7-21 C atoms and n has typical value of 1-4 or</p>
+      <p id="p-00032-en" num="0000">[in-line-formulae]R<sub>6</sub>CO O(CH<sub>2</sub>)<sub>n </sub>[/in-line-formulae]</p>
+      <p id="p-00033-en" num="0000">where R<sub>6 </sub>is saturated or unsaturated, branched or non-branched alkyl chain with 7-21 C atoms and n has typical value of 1-4, and</p>
+      <p id="p-00034-en" num="0028">R<sub>2 </sub>is a saturated or unsaturated, branched or non-branched alkyl chain with 1-24 C atoms or</p>
+      <p id="p-00035-en" num="0000">[in-line-formulae]R<sub>5</sub>CONH(CH<sub>2</sub>)<sub>n </sub>[/in-line-formulae]</p>
+      <p id="p-00036-en" num="0000">where R<sub>5 </sub>is saturated or unsaturated, branched or non-branched alkyl chain with 7-21 C atoms and n has typical value of 1-4 or</p>
+      <p id="p-00037-en" num="0000">[in-line-formulae]R<sub>6</sub>COO(CH<sub>2</sub>)<sub>n </sub>[/in-line-formulae]</p>
+      <p id="p-00038-en" num="0000">where R<sub>6 </sub>is saturated or unsaturated, branched or non-branched alkyl chain with 7-21 C atoms and n has typical value of 1-4, <br /> and R<sub>3 </sub>and R<sub>4 </sub>are same or different lower alkyl chain with 1 to 4 carbon atoms which may be substituted with one or two hydroxyl group, and X is chloride, bromide or methosulfate. </p>
+      <p id="p-00039-en" num="0029">Concantration of cationic surfactant is in the range from 0.05% to 5%, preferably 0.1% to 2.5% by weight, calculated to total composition.</p>
+      <p id="p-00040-en" num="0030">Suitable long-chain quaternary ammonium compounds are in particular cetyl trimethyl ammonium chloride, dimethyl dicetyl ammonium chloride, trimethyl cetyl ammonium bromide chloride, stearyl trimethyl ammonium chloride, dimethyl stearyl benzyl ammonium chloride, benzyl tetradecyl dimethyl ammonium chloride, dimethyl dihydrogenated tallow ammonium chloride, lauryl pyridinium chloride, lauryl dimethyl benzyl ammonium chloride, lauryl trimethyl ammonium chloride, tris-(oligooxyethyl) alkyl ammonium phosphate, cetyl pyridinium chloride, etc.</p>
+      <p id="p-00041-en" num="0031">Further, permanent shaping compositions of the present invention may comprise additional cationic polymer. Basically suitable are all cationic polymers listed under the generic name “Polyquaternium” in the CTFA International Cosmetic Ingredient Dictionary. Examples are Polyquaternium 4, Polyquaternium 5, Polyquaternium 6, Polyquaternium 7, Polyquaternium 10, Polyquaternium 11, Polyquaternium 16, Polyquaternium 22 and Polyquaternium 28, Polyquaternium 2, Polyquaternium 87, and Polyquaternium 39,</p>
+      <p id="p-00042-en" num="0032">The cationic polymers also include the quaternized products of graft polymers from organopolysiloxanes and polyethyl oxazolines described in EP-A 524 612 and EP-A 640 643. Such polymer is known with its CTFA name Polysilicone-9.</p>
+      <p id="p-00043-en" num="0033">Concentration of one or more additional cationic polymers is in the range from 0.05% to 2.5%, preferably 0.1% to 1.5% by weight, calculated to total composition.</p>
+      <p id="p-00044-en" num="0034">Permanent shaping compositions of present invention can comprise additionally at least one organic solvent. Suitable organic solvents are 2-methyl-1,3-propanediol, mono and dialcohols or the ethers thereof, in particular mono-C<sub>1</sub>-C<sub>3</sub>-alkyl ether, ethanol, n-propanol, isopropyl alcohol, 1-methoxypropanol, 1-ethoxypropanol and ethoxydiglycol, diols and their esters 1,3- and 1,4-butanediol, diethyleneglycol and the monomethyl and monoethyl ether thereof, dipropylene glycol and the monomethyl and monoethyl ether thereof, glycerol, hexanetriol, ethyl carbitol, benzyl alcohol, benzyloxy ethanol, phenoxyethanol, propylene carbonate, N-alkyl pyrrolidone, and urea or their mixture preferably in an amount from about 0.1% to 10% by weight, calculated to the total composition.</p>
+      <p id="p-00045-en" num="0035">Permanent shaping composition of the present invention may further comprise ceramide type of compound such as cetyl-PG-hydroxyethylpalmitamide.</p>
+      <p id="p-00046-en" num="0036">Further optional ingredient are sterols, especially the phytosterols as preferred hair restructuring agents. Especially preferred ones are of plant origin for example ergosterol, sitosterol, stigmasterol, fucosterol, brassicasterol, fungisterol, campesterol, zymosterol, ascosterol, cerevisterol, episterol, faecosterol, spinasterol. Among those phytosterols, the ones found in “Avocadin” which is the unsaponified fraction of the avocado oil is more preferred.</p>
+      <p id="p-00047-en" num="0037">Optionally fatty acids of C10 to C22 may be incorporated into the compositions of the present invention at a concentration of preferably 0.01 to 2.5% by weight calculated to total composition.</p>
+      <p id="p-00048-en" num="0038">Another preferred compound in the permanent shaping composition of the present invention is silicone compounds and especially aminated silicones such as amodimethicone available from for example Dow Corning under the brand names Dow Corning 949 Emulsion, Dow Corning 2-8177 Emuslion and Dow Corning 2-8194. Concentration of silicones, especially amodimethicone, is in the range of 0.05 to 2.5%, preferably 0.1 to 1% by weight calculated to total composition.</p>
+      <p id="p-00049-en" num="0039">Additionally, one or more natural oil component may be incorporated into the compositions of the present invention. Suitable are such as olive oil, almond oil, avocado oil, wheatgerm oil, ricinus oil or their mixture. Concentration of these natural oil ingredients should be 0.01 to 2.5%, preferably 0.01. to 1%, more preferably 0.05 to 0.5% by weight, calculated to total composition.</p>
+      <p id="p-00050-en" num="0040">Further additional compounds may be present in the permanent shaping compositions of the present invention is ubichinone of the formula</p>
+      <p id="p-00051-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="25.91mm" wi="45.38mm" alt="embedded image" img-content="chem" file="US20150245987A1_00002.PNG" img-format="png" original="US20150245987A1-20150903-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00052-en" num="0000">where n is a number between 1 and 10. Preferred ubichinones are the ones where n is a number between 6 and 10 and especially preferred is Ubichinone 50 where n is 10, also known as Coenzyme Q10. Concentration ubichinone of the above formula in permanent shaping compositions of the present invention is from 0.0001 to 1%, preferably from 0.0002 to 0.75%, more preferably from 0.0002 to 0.5% and most preferably from 0.0005 to 0.5% by weight, calculated to total composition.</p>
+      <p id="p-00053-en" num="0041">In another preferred embodiment of the present invention, composition comprises one or more fatty alcohol with a chain length of 12 to 24 C atoms. Concentration of one or more fatty alcohol is in the range of 1 to 15%, preferably 1 to 10%, more preferably 2 to 7.5 and most preferably 2 to 5% by weight calculated to total composition.</p>
+      <p id="p-00054-en" num="0042">Suitable non limiting examples are lauryl alchohol, myristyl alcohol, cetyl alcohol, stearyl alcohol cetearyl alcohol, behenyl alcohol and their mixtures. Preferred are cetyl alcohol, stearyl alcohol cetearyl alcohol, behenyl alcohol and their mixtures. Particularly preferred are cetyl alcohol, stearyl alcohol and their 1 to 1, by weight, mixture cetearyl alcohol.</p>
+      <p id="p-00055-en" num="0043">The compositions used according to the invention can naturally comprise all the substances customarily found in permanent shaping compositions, a list of which will not be given here, and are preferably present as solutions, gels with a higher or lower viscosity, emulsions or creams. They can be single-phase products or compositions packed into separate packaging which are united upon application, as they are disclosed, for example, in DE-C 43 04 828.</p>
+      <p id="p-00056-en" num="0044">In order to avoid repetition, reference is here made to the state of the art as it is described, for example, in “Ullmann's Encyclopedia of Industrial Chemistry”, Vol. A12 (1986), pages 588 to 591, and in particular to the monography of K. Schrader, “Grundlagen and Rezepturen der Kosmetika”, 2<sup>nd</sup>. Ed. (1989, Huthig Buchverlag) pages 823 to 840, as well as the article by D. Hollenberg et. al. in “Seifen-Öle-Fette-Wachse”, 117 (1991), pages 81 to 87.</p>
+      <p id="p-00057-en" num="0045">The oxidizing composition may also comprise one or more of the above mentioned ingredients. In any case oxidizing composition comprises at least one oxidizing agent preferably selected from hydrogen peroxide or sodium bromate and preferably at a concentration of 0.5 to 10% by weight calculated to total composition. Oxidizing composition comprising hydrogen peroxide has a pH between 2 and 5, preferably between 2 and 4 and the oxidizing compositions comprising bromate has a pH approximately 6.5 to 7.5.</p>
+      <p id="p-00058-en" num="0046">The intermediate treatment composition comprises at least one inorganic salt and has a pH value between 2.5 to 6, preferably 3 to 5.5 and most preferably 3 to 5. The inorganic salt concentration may very between 1 and 20% and preferably 2 and 15% and more preferably 5 and 15% by weight calculated to total of the composition. Intermediate treatmenmt composition may also comprise additionally</p>
+      <p id="p-00059-en" num="0047">A straightening process may also be carried out in a different process wherein hair is washed and/or shampooed and dried and an aqueous reducing composition comprising at least one reducing agent is applied onto hair and processed for 5 to 45 min and rinsed off from hair and hair is dried the dry hair physically straighten with hot iron at a temperature of 130 to 210° C. and subsequently an aqueous oxidizing composition comprising at least one oxidizing agent, preferably hydrogen peroxide or sodium bromate at a concentration of 0.5 to 10% by weight calculated to total of oxidizing composition, is applied onto hair and left on the hair 1 to 20 min and optionally rinsed off, wherein at least one of the two compositions comprises ethylene/octene copolymer dispersed in an aqueous medium comprising ethylene/sodium acrylate copolymer.</p>
+      <p id="p-00060-en" num="0048">In a further straightening process after physically straightening hair with hot iron at a temperature of 130 to 210° C. and prior to application of the oxidizing agent an intermediate treatment composition comprising at least one inorganic salt may be applied onto hair and without rinsing off hair is treated as disclosed above.</p>
+      <p id="p-00061-en" num="0049">The compositions used in permanent shaping process are offered to the users preferably in the form of a kit. Accordingly, further object of the present invention is a kit for permanent shaping hair which comprises at least two compositions kept separately wherein one of the compositions is an aqueous composition and comprises at least one reducing agent and the other composition is an aqueous composition and comprises at least one oxidizing agent preferably selected from sodium bromate and hydrogen peroxide and furthermore at least one of the two compositions comprises ethylene/octene copolymer dispersed in an aqueous medium comprising ethylene/sodium acrylate copolymer.</p>
+      <p id="p-00062-en" num="0050">In a further preferred embodiment of the present invention is that the kit comprises optionally a third composition comprising at least one inorganic salt and optionally comprising ethylene/octene copolymer dispersed in an aqueous medium comprising ethylene/sodium acrylate copolymer.</p>
+      <p id="p-00063-en" num="0051">The following examples are to illustrate the invention, but not to limit it.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00001-en" level="1">EXAMPLE 1</heading>
+      <p id="p-00064-en" num="0052" />
+      <p id="p-00065-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="left" />
+              <colspec colname="2" colwidth="98pt" align="left" />
+              <colspec colname="3" colwidth="91pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Ammonium thioglycolate (60%)</entry>
+                  <entry>21.3 (% by wt.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ammonium hydrogen carbonate</entry>
+                  <entry>5.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>1,3-butylene gylcol</entry>
+                  <entry>3.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>EcoSmooth Silk</entry>
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PEG-40-Hydrogenated castor oil</entry>
+                  <entry>0.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Perfume</entry>
+                  <entry>0.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ammonia, 25%</entry>
+                  <entry>ad pH 8.3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Water</entry>
+                  <entry>ad 100.0</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00066-en" num="0053">With this composition the hair was permanently waved for about 15 minutes, rinsed and neutralized for about 8 minutes with a customary 2.5% H<sub>2</sub>0<sub>2 </sub>composition. Homogeneous wave appearance was obtained which had excellent elasticity and bounce and improved shine and felt natural and soft upon touching. Exclusion of EcoSmooth Silk was resulted in less homogeneous perm appearance.</p>
+      <p id="p-00067-en" num="0054">Additionally EcoSmooth Silk was removed from the reducing composition and was added at the same concentration into the oxidizing composition and hair was permed with a reducing composition without EcoSmooth Silk and an oxidizing composition with EcoSmooth Silk. Here again Homogeneous wave appearance was obtained which had excellent elasticity and bounce and improved shine and felt natural and soft upon touching. It should be noted the results were slightly better and preferred compared to the results obtained when EcoSmooth Silk was comprised in reducing composition.</p>
+      <p id="p-00068-en" num="0055">In a third trial, EcoSmooth Silk was used in both reducing and oxidizing agent whereas the concentrations were halved, i.e. in each composition 0.5% EcoSmooth Silk was used. Homogeneous wave appearance was obtained which had excellent elasticity and bounce and improved shine and felt natural and soft upon touching. When compared the perming efficiency, results obtained with this trial were superior to the previous results described above.</p>
+      <p id="p-00069-en" num="0056">In the above process the use of intermediate treatment according to following composition improved the perming result further.</p>
+      <heading id="h-00002-en" level="2">Intermediate Treatment Composition</heading>
+      <p id="p-00070-en" num="0057" />
+      <p id="p-00071-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="left" />
+              <colspec colname="3" colwidth="126pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Asparagic acid</entry>
+                  <entry>0.25% by weight</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Glutamic acid</entry>
+                  <entry>0.50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Alanin DL</entry>
+                  <entry>0.25</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Magnesium sulfate</entry>
+                  <entry>10.00</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Water</entry>
+                  <entry>q.s. to 100</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00072-en" num="0058">The above composition had a pH of 4.10.</p>
+      <heading id="h-00003-en" level="1">EXAMPLE 2</heading>
+      <heading id="h-00004-en" level="1">Straightening Composition</heading>
+      <p id="p-00073-en" num="0059" />
+      <p id="p-00074-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="21pt" align="left" />
+              <colspec colname="2" colwidth="91pt" align="left" />
+              <colspec colname="3" colwidth="105pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Thioglycolic acid</entry>
+                  <entry>8.0 (% by wt.)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>C<sub>16</sub>-C<sub>22</sub>-Fatty alcohol mixture</entry>
+                  <entry>3.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Oleth-50</entry>
+                  <entry>2.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Laureth-23</entry>
+                  <entry>1.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>EcoSmooth Silk</entry>
+                  <entry>2.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ethanol</entry>
+                  <entry>5.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Perfume</entry>
+                  <entry>0.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Monoethanolamine</entry>
+                  <entry>ad pH 9.3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Water</entry>
+                  <entry>ad 100.0</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00075-en" num="0060">This composition is an effective smoothing composition for kinky hair.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An aqueous composition for the permanent shaping of human hair, comprising at least one reducing agent and ethylene/octene copolymer dispersed in an aqueous medium comprising ethylene/sodium acrylate copolymer.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the at least one reducing agent is selected from thioglycolic acid, thiolactic acid and their salts, cystein and its hydrochloride salt, and acetylcystein at a concentration of 0.5 to 15% by weight, calculated to total composition.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the ethylene/octene copolymer is present at a concentration in the range of 0.001 to 5% by weight calculated to total composition.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. Composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein it comprises at least one cationic polymer.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. Composition The composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising at least one surfactant selected from anionic, nonionic, cationic and amphoteric surfactants a concentration of 0.05 to 10% by weight, calculated to total composition.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. Process for permanent shaping hair comprising the steps in order: hair is washed or shampooed or made wet and applied a composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> and processed for 1 to 30 min and rinsed off from hair and an aqueous composition comprising at least one oxidizing agent is applied and after processing of 1 to 30 min optionally rinsed off from hair.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The process according to <claim-ref idref="clm-00006-en">claim 6</claim-ref>, further comprising a step wherein hair is wound onto curlers
+<claim-text>a—after shampooing or washing or wetting, or</claim-text><claim-text>b—during the application of the composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, or</claim-text><claim-text>c—after application of the composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The process according to <claim-ref idref="clm-00006-en">claim 6</claim-ref>, further comprising a step wherein curlers are taken off from hair
+<claim-text>a—after rinsing off the composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, or</claim-text><claim-text>b—after application of an aqueous composition comprising at least one oxidizing agent, or</claim-text><claim-text>c—at the end of the processing time of oxidizing agent.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The process according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a step wherein an aqueous composition comprising at least one inorganic salt is applied onto hair after rinsing off the composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> and before applying oxidizing agent comprising composition and is not rinsed off.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The process according to <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the aqueous oxidizing composition comprising at least one oxidizing agent comprises additionally ethylene/octene copolymer dispersed in an aqueous medium comprising ethylene/sodium acrylate copolymer.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The process according to <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the aqueous oxidizing composition comprises at least one oxidizing agent selected from hydrogen peroxide and sodium bromate and preferably comprised at a concentration in the range of 0.5 to 10% by weight calculated to total composition, and the composition comprising hydrogen peroxide has a pH between 2 and 5, the composition comprising sodium bromate has a pH between 6.5 and 7.5.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. Process for straightening hair comprising the steps, in order: wherein hair is washed and/or shampooed and dried and a composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> is applied onto hair and processed for 5 to 45 min and rinsed off from hair and hair is dried and the dry hair physically straighten with hot iron at a temperature of 130 to 210° C. and to the hair is applied an aqueous oxidizing composition comprising at least one oxidizing agent chosen from hydrogen peroxide and sodium bromate at a concentration of 0.5 to 10% by weight calculated to total of oxidizing composition, and left on the hair 1 to 20 min and optionally rinsed off.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The process according to <claim-ref idref="clm-00012-en">claim 12</claim-ref> further comprising application of an aqueous intermediate treatment comprising at least one inorganic salt is applied onto hair after physically straightening hair with hot iron at a temperature of 130 to 210° C. and prior to application of the oxidizing agent.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en" independent="true">
+      <claim-text>
+        <b>14</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en" independent="true">
+      <claim-text>
+        <b>15</b>. (canceled) </claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150245987A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150245987A1-20150903-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150245987A1_00002.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150245987A1-20150903-C00002.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150245987A1.PDF" type="pdf" size="315469" pages="6" />
+</lexisnexis-patent-document>

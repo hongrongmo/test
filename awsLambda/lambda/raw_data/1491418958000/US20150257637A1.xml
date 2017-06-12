@@ -1,0 +1,1413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257637A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030134" date-changed="20151002" time-changed="033550">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314808">
+        <country>US</country>
+        <doc-number>20150257637</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14667052</doc-number>
+        <date>20150324</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A61B   1/31        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>31</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B   1/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61B  17/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A61B   1/31        20130101 FI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>31</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   1/00087     20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>00087</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B  17/00234     20130101 LI20140508BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>00234</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140508</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B  17/12013     20130101 LI20150422BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>12013</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150422</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B  17/30        20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B  18/04        20130101 LA20150422BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>18</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150422</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61B  18/1442      20130101 LA20150422BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>18</main-group>
+        <subgroup>1442</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150422</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61B  18/1485      20130101 LA20150422BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>18</main-group>
+        <subgroup>1485</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150422</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61B2017/00358     20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>00358</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61B2017/3452      20130101 LA20150422BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>3452</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150422</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61B2018/005       20130101 LA20150422BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2018</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150422</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>A61B2018/00589     20130101 LA20150422BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2018</main-group>
+        <subgroup>00589</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150422</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>A61B2218/007       20130101 LA20150422BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2218</main-group>
+        <subgroup>007</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150422</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">19</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">GENTLE HEMORRHOID TREATMENT OFFERING A SUBSTANTIALLY PAINLESS HEALING</invention-title>
+    <related-documents date-changed="20150917">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14106600</doc-number>
+              <date>20131213</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9011317</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006670</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13282439</doc-number>
+              <date>20111026</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8632458</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14001066</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13094173</doc-number>
+              <date>20110426</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8968275</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13282439</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61328005</doc-number>
+          <date>20100426</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>COVIDIEN LP</orgname>
+            <address>
+              <city>Mansfield</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Piskun</last-name>
+            <first-name>Gregory</first-name>
+            <address>
+              <city>Morganville</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Gutelius</last-name>
+            <first-name>Patrick</first-name>
+            <address>
+              <city>Monroe</city>
+              <state>CT</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Shikhman</last-name>
+            <first-name>Oleg</first-name>
+            <address>
+              <city>Trumbull</city>
+              <state>CT</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173667842">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257637</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150324</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173667840">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257637</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150324</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The teachings provided herein are directed to a methods and devices for treating a hemorrhoid in a subject in a manner that produces substantially less post-procedural pain in the subject, the method minimizing or avoiding a removing or a necrosis of a rectal tissue fold.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150325</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257637A1</docdb-publication-number>
+      <docdb-application-id>444510956</docdb-application-id>
+      <new-owner>COVIDIEN LP, MASSACHUSETTS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:HET SYSTEMS, LLC;REEL/FRAME:035249/0788</free-text-description>
+      <effective-date>
+        <date>20140414</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150325</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257637A1</docdb-publication-number>
+      <docdb-application-id>444510956</docdb-application-id>
+      <new-owner>HET SYSTEMS, LLC, NEW JERSEY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:MACROPLATA, INC.;REEL/FRAME:035249/0609</free-text-description>
+      <effective-date>
+        <date>20140409</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20150325</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257637A1</docdb-publication-number>
+      <docdb-application-id>444510956</docdb-application-id>
+      <new-owner>MACROPLATA, INC., NEW JERSEY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:PISKUN, GREGORY;GUTELIUS, PATRICK;SHIKHMAN, OLEG;SIGNINGDATES FROM 20120229 TO 20120305;REEL/FRAME:035249/0533</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND</heading>
+      <p id="p-00001-en" num="0001">1. Field of the Invention</p>
+      <p id="p-00002-en" num="0002">The teachings provided herein are directed to methods and devices for gently treating a hemorrhoid in a subject in manner that produces substantially less post-procedural pain in the subject, the method avoiding a removing or a necrosis of a rectal tissue fold.</p>
+      <p id="p-00003-en" num="0003">2. Description of the Related Art</p>
+      <p id="p-00004-en" num="0004">Hemorrhoids present a worldwide problem that needs a gentle, yet effective, treatment with substantially less post-procedural pain. Moreover, those of skill in the art would appreciate having less complex and less expensive equipment for administering the treatment. Bleeding from hemorrhoids is the most common cause of rectal bleeding, which may cause anemia or be responsible for the person's substantially decreased quality of life. Prolapsed hemorrhoids, in particular, can create a quite serious discomfort to a patient, and the situation can get worse as the patient avoids the painful state-of-the-art treatments. As the patient avoids treatment, for example, a hemorrhoidal tissue can become redundant and/or suspensory ligaments can weaken. The hemorrhoid and/or lower rectal tissue folds, mucosal and submucosal, can then prolapse outside the rectum and cause bleeding and pain to the patient. The tissue, in effect, starts to become prone for prolapse; mobile from its original, healthy position in the patient; and move in and out of the anus creating inflammation, discomfort, pain, bleeding, infection, and the like. When further left untreated, the prolapse becomes more frequent and more prominent. Finally, hemorrhoids would become constantly prolapsed or would prolapse with a minor strain only, for example, during light coughing, sneezing, or even after walking or standing for a few minutes.</p>
+      <p id="p-00005-en" num="0005">Current, state-of-the-art treatments are typically not gentle but, rather, are cumbersome for the physician and painful to the patient. The most popular methods generally call for use by a colorectal surgeon, in addition to an assistant. And, such methods often require the use of the expensive and demanding-in-use, multi-component instruments. Another group of the instruments for gastroenterologists requires costly and complex endoscope equipment, such as a power source, an optical fiber arrangement and camera system, and a computer processor. These treatments are associated with significant tissue trauma and, for example, can be designed to include tissue banding, cutting and/or stapling devices that lead to the removal, and/or intentional necrosis of rectal tissue, resulting in a substantial post-procedural pain.</p>
+      <p id="p-00006-en" num="0006">Accordingly, one of skill will appreciate having a method of treating a hemorrhoid, or other such anorectal lesion, that (i) is simple, easy to learn, less cumbersome, and more cost-effective than current, state-of-art methods, in that it does not require the use of the more complex, cumbersome, and expensive systems; (ii) can be used without an assistant; (iii) can be readily learned and used by a gastroenterologist, or another non-surgical specialist, rather than being suited moreso for a colorectal surgeon with specialized training; (iv) is gentle for at least the reason that it does not require cutting, banding, and/or stapling for the removal, and/or intentional necrosis of, rectal tissue; (v) gently secures the rectal tissue with a controlled or limited pressure and for a limited time to avoid tissue damage during the occluding of a vascular supply to a hemorrhoid; and, as a result, (vi) facilitates an ischemic regression of a hemorrhoid with substantially less post procedural pain than the current procedures which are directed to a traumatic removal or necrosis of the rectal tissue. Those skilled in the art, and also the patients receiving hemorrhoid treatments, will appreciate having such a simple and cost-effective method of gently obtaining (vii) a loss of bulk and weight in the hemorrhoid without the unnecessary trauma and increased post-procedural pain in the patient that is now commonplace in the art.</p>
+      <heading id="h-00002-en" level="1">SUMMARY</heading>
+      <p id="p-00007-en" num="0007">The teachings provided herein are directed to methods and devices for treating a hemorrhoid in a subject in a manner that produces substantially less post-procedural pain in the subject, the method avoiding a removing or a necrosis of a rectal tissue.</p>
+      <p id="p-00008-en" num="0008">The teachings include a method of treating a hemorrhoid while minimizing tissue damage and substantially reducing post-procedural pain. Generally speaking, the method includes identifying a rectal tissue that comprises a vascular supply to a hemorrhoid, folding the rectal tissue to create a fold, securing the fold, and occluding the vascular supply to the hemorrhoid to facilitate an ischemic regression of the hemorrhoid, wherein the folding, securing, and occluding are all done gently to avoid a removal and/or a necrosis of the rectal tissue. The method can include inserting a therapeutic anoscope into an anus of a subject having the hemorrhoid, the anoscope operable to (i) form a fold in a rectal tissue orally to the hemorrhoid and above a dentate line in the subject; (ii) gently secure the fold; (iii) create a work space above the dentate line; and, (iv) provide a visualization of the rectal tissue without an image transmission through optic fibers.</p>
+      <p id="p-00009-en" num="0009">The method can include gently securing the fold in the rectal tissue using a limited pressure to avoid a removal or a necrosis of the rectal tissue, the fold having the vascular supply for the hemorrhoid. Finally, the method can include occluding the vascular supply to the hemorrhoid in a targeted manner to otherwise minimize damage to the rectal tissue, the occluding including a component selected from the group consisting of heat, energy, or ligation. In addition to the other benefits set-forth herein, the gentle methods provided by the teachings can result in substantially less post-operative pain than a method of treating hemorrhoids that does not avoid the removal or the necrosis of the rectal tissue. The terms “minimize,” “minimizing,” “minimized,” “avoid,” “avoiding,” “avoided,” can be used interchangeably in some embodiments. Tissue damage can be minimized or avoided, for example, where a procedure is directed to reducing an amount of any unnecessary tissue damage that may otherwise be associated with a procedure. The gentle procedures taught herein, for example, are directed to preserving tissue during a hemorrhoid treatment by avoiding or minimizing the removal or the necrosis of the rectal tissue fold from the gentle procedures that lead to the tissue-preserving ischemic regressions of hemorrhoidal tissue.</p>
+      <p id="p-00010-en" num="0010">It should be appreciated that the methods can be used to treat most any condition that could benefit from an ischemic regression of a hemorrhoid. For example, the methods can further comprise preventing, inhibiting, reducing, or eliminating a prolapse of the hemorrhoid.</p>
+      <p id="p-00011-en" num="0011">The anoscope used in the methods can comprise a cylindrical, or substantially cylindrical, body for insertion into the subject, the cylindrical body creating a work space having a sufficient volume to perform the occluding of the vascular supply to the hemorrhoid. In such embodiments, the cylindrical, or substantially cylindrical, body comprises a side window and a convex surface that promotes an entry of the rectal tissue into the window for the gently securing of the rectal tissue.</p>
+      <p id="p-00012-en" num="0012">The methods can include the use of a limited pressure on the rectal tissue for the gently securing of the fold, such that the tissue damage is minimized or avoided, prevented, or substantially prevented. In some embodiments, the limited pressure can range from, for example, about 50 kPa to about 500 kPa. Any system known to one of skill in the art can be used to control the amount of pressure applied to the tissue. For example, in some embodiments, the limited pressure can be obtained from the use of a spring-regulated pressure that facilitates the gently securing of the fold.</p>
+      <p id="p-00013-en" num="0013">The methods can include occluding the vascular supply to the hemorrhoid in a targeted manner to avoid unnecessary tissue damage. In some embodiments, the targeted manner includes gently securing the fold into a constant tissue fold configuration for a suturing to selectively ligate the vascular supply during the occluding while otherwise avoiding the removal or the necrosis of the rectal tissue.</p>
+      <p id="p-00014-en" num="0014">The occluding can be achieved using any method known to one of skill, to the extent that the method is gentle enough to avoid trauma to the patient in a manner consistent with the teachings herein. The occluding, for example, can include a selective and focused application of heat, energy, or ligation to the vascular supply to the hemorrhoid, the application limited to occluding the vascular supply while otherwise minimizing damage to the tissue. As such, the method can be applied in a targeted manner to minimized trauma to the patient. In some embodiments, the targeted manner can include heating at a temperature of about 50° C. to about 65° C. for an effective time to selectively coagulate the vascular supply during the occluding while avoiding the removal or the necrosis of the rectal tissue fold. In some embodiments, the targeted manner includes heating at a temperature of about 50° C. to about 65° C. for an effective time, the heating including applying an energy from a plurality of discrete regions on the pinching surfaces to a corresponding plurality of discrete areas on the fold to selectively coagulate the vascular supply during the occluding while preserving the remainder of the fold to avoid the removal or the necrosis of the rectal tissue fold.</p>
+      <p id="p-00015-en" num="0015">The methods can include gently securing a fold of rectal tissue comprising the vascular supply to the hemorrhoid, and the gently securing can include any method known to one of skill that is gentle enough to avoid unnecessary trauma to the patient in a manner consistent with the teachings herein. The gentle securing can be used to create a constant tissue fold configuration to facilitate the occluding of the vascular supply to the hemorrhoid. The teachings provided herein include a means for securing the fold with a controlled pressure to provide the constant tissue fold configuration.</p>
+      <p id="p-00016-en" num="0016">The controlled pressure can come from any configuration or orientation that gently secures the fold. In some embodiments, the body of the anoscope has a central axis, and the controlled pressure is applied at an angle ranging from about 0 degrees to about 90 degrees from the central axis. In some embodiments, the orientation in which the controlled pressure is applied can be adjusted in the anoscope. In some embodiments, the adjusting of the orientation can be done outside of the patient's body and, in some embodiments, after insertion of the anoscope into the patient's body.</p>
+      <p id="p-00017-en" num="0017">The teachings are also directed to the therapeutic anoscopes. In some embodiments, the anoscope for treating a hemorrhoid in a subject can be designed to avoid trauma associated with removing a rectal tissue. The anoscope can include a cylindrical, or substantially cylindrical, anoscope body having a lumen, a proximal opening, a distal end configured for a first point of entry into an anus of a subject, and a side window having a shutter and pinching surfaces to form a fold in a rectal tissue orally to a hemorrhoid. The pinching surfaces can be configured to gently secure the fold with a limited pressure above a dentate line in a subject. The anoscope body can have any configuration that will support a mechanism that will operably function with the methods taught herein. In some embodiments, the anoscope body can be configured for providing a length sufficient to position the pinching surfaces above the dentate line in the subject. And, in some embodiments, the anoscope body can be configured for providing a volume in the lumen sufficient for receiving the fold of the rectal tissue for the occluding of the vascular supply to the hemorrhoid. In some embodiments, the shutter can be configured for opening the window to allow the rectal tissue to enter the window during the treatment of the hemorrhoid in the subject; creating the fold in the rectal tissue orally to the hemorrhoid; and, gently securing the fold with the limited pressure above the dentate line to avoid the removal or the necrosis of the rectal tissue that creates the trauma to the subject. The anoscope can be configured to (i) provide a visualization of the rectal tissue without an image transmission through optic fibers and (ii) facilitate an ischemic regression of the hemorrhoid through the occluding to treat the hemorrhoid in a manner that provides substantially less post procedural pain to the subject than a hemorrhoid treatment procedure that does not avoid the removal or the necrosis of the rectal tissue.</p>
+      <p id="p-00018-en" num="0018">In some embodiments, the anoscope includes a means for securing the fold with a controlled pressure to provide a constant tissue fold configuration, the means including the structures taught herein, and variations that have substantially the same structure, that perform the gentle securing of tissue that is taught herein. In some embodiments, the anoscopes gently secure the tissues using limited pressure ranging from about 50 kPa to about 1000 kPa.</p>
+      <p id="p-00019-en" num="0019">In some embodiments, the volume is sufficient for a suturing to selectively ligate the vascular supply during the occluding while otherwise avoiding the removal or the necrosis of the rectal tissue. And, in some embodiments, the volume is sufficient for an application of heat at a temperature of about 50° C. to about 65° C. for an effective time to selectively coagulate the vascular supply during the occluding while avoiding a necorsis of the rectal tissue fold. Moreover, in some embodiments, the volume is sufficient for an application of an RF energy to selectively coagulate the vascular supply during the occluding while avoiding a necrosis of the rectal tissue fold. In some embodiments, the RF energy or heat can be applied such that the temperature is ramped at a desired rate and heated for an effective amount of time to occlude the vascular supply to the hemorrhoid while otherwise minimizing damage to tissue surrounding the vascular supply.</p>
+      <p id="p-00020-en" num="0020">In some embodiments, the anoscope body has a central axis, and the limited pressure is applied in the same, or substantially same, plane as a plane formed by the rectal tissue fold before the pinching, and at an angle ranging from about 0 degrees to about 90 degrees from the central axis. And, in some embodiments, the anoscope body can be at least partially translucent or transparent to facilitate viewing of a tissue, for example.</p>
+      <p id="p-00021-en" num="0021">In some embodiments, a therapeutic anoscope is presented for treating a prolapsed hemorrhoid in a subject in a manner that creates substantially less post-procedural pain. The anoscope can have a cylindrical, or substantially cylindrical, anoscope body having a lumen, a proximal opening, a distal end configured for a first point of entry into an anus of a subject. The body can also include a side window having a shutter and pinching surfaces to form a fold in a rectal tissue orally to a prolapsed hemorrhoid and gently secure the fold with a limited pressure above a dentate line in a subject. The anoscope body can be configured for providing a length sufficient to position the pinching surfaces above the dentate line in the subject; and, providing a volume in the lumen sufficient for receiving the fold of the rectal tissue for an occluding of a vascular supply to the hemorrhoid. The shutter can be configured for opening the window to allow the rectal tissue to enter the window during a treatment of a hemorrhoid in the subject; creating the fold in the rectal tissue orally to the prolapsed hemorrhoid; and, gently securing the fold with a limited pressure ranging from about 50 kPa to about 1000 kPa above the dentate line to avoid a removal or a necrosis of the rectal tissue that creates a significant trauma to the subject. It should be appreciated that, in some embodiments, the rectal tissue can incorporate at least a portion of a hemorrhoid in a rectal tissue fold where, in some embodiments, the entire hemorrhoid may be incorporated. And, the anoscope can function to (i) directly visualize the rectal tissue without an endoscope having optic fibers and (ii) facilitate an ischemic regression of the prolapsed hemorrhoid through the occluding. The anoscopes taught herein can be used to treat the hemorrhoid in a manner that provides substantially less post procedural pain to the subject than a procedure that does not avoid the removal or the necrosis of the rectal tissue that creates trauma to the subject, facilitating the ischemic regression that results in a loss of bulk and weight in the prolapsed hemorrhoid.</p>
+      <p id="p-00022-en" num="0022">It should be appreciated that the pinching surfaces that gently secure the tissue can have any configuration known to one of skill to accomplish the act of gently securing, for example, the fold of tissue for the occluding of the vascular supply to the hemorrhoid. The configuration should provide a securing surface and pressure that is gentle enough to avoid or minimize trauma to the patient in a manner consistent with the teachings herein. In some embodiments, the pinching surfaces can have an arcuate shape to facilitate a recruiting of the rectal tissue into the lumen of the body of the anoscope. And, in some embodiments, the pinching surfaces have a plurality of discrete regions on the pinching surfaces corresponding to a plurality of discrete areas on the fold to selectively coagulate the vascular supply during the occluding while preserving the remainder of the fold to avoid the removal or the necrosis of the rectal tissue.</p>
+      <p id="p-00023-en" num="0023">The teachings are directed to a system for treating a hemorrhoid in a subject in a manner that creates substantially less post-procedural pain. In some embodiments, the system comprises a therapeutic anoscope as taught herein; and, an occlusion device operable for a targeted application of heat, energy, or ligation to the vascular supply to the hemorrhoid, the targeted application otherwise avoiding damage to the rectal tissue. In some embodiments, the occlusion device applies RF energy to the vascular supply to the hemorrhoid. In some embodiments, the occlusion device facilitates an application of a suture to the vascular supply to the hemorrhoid. And, in some embodiments, the occlusion device applies heat to the vascular supply to the hemorrhoid at a temperature ranging from about 50° C. to about 65° C. for an effective time to selectively coagulate the vascular supply during the occluding while avoiding a necrosis of the rectal tissue fold.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE FIGURES</heading>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 1</figref> illustrates an anus and rectum of a subject having an internal hemorrhoid and an external hemorrhoid, according to some embodiments.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIGS. 2A-2C</figref> illustrate state-of-the-art treatment methods that produce significantly more post-procedural pain than the gentle treatments set-forth herein.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIGS. 3A-3F</figref> illustrate a method of treating a prolapsed hemorrhoid, according to some embodiments.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIGS. 4A-4F</figref> illustrate the occlusion of the vascular supply to the hemorrhoid that leads to the ischemic regression of the hemorrhoidal tissue, according to some embodiments.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIGS. 5A-5C</figref> illustrate a method and device for gently securing and suturing a fold of rectal tissue above a dentate line and orally to a hemorrhoid, according to some embodiments.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIGS. 6A-6D</figref> illustrates a therapeutic anoscope for treating a hemorrhoid in a subject while avoiding a trauma associated with removing a rectal tissue, according to some embodiments.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIGS. 7A and 7B</figref> illustrate an exploded view of therapeutic anoscopes with and without components for delivering energy for occlusion of a vascular supply to a hemorrhoid, according to some embodiments.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIGS. 8A-8F</figref> illustrate aspects of therapeutic anoscopes with and without components for delivering energy for occlusion of a vascular supply to a hemorrhoid, according to some embodiments.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00032-en" num="0032">The teachings provided herein are directed to methods and devices for treating a hemorrhoid in a subject in a manner that produces substantially less post-procedural pain in the subject, the method avoiding a removing or a necrosis of a rectal tissue.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 1</figref> illustrates an anus and rectum of a subject having an internal hemorrhoid and an external hemorrhoid, according to some embodiments. The rectum <b>105</b> and anus <b>110</b> are separated by a dentate line <b>115</b>. The internal hemorrhoid <b>120</b> is enlarged and is located below the dentate line <b>115</b>, and external hemorrhoid <b>125</b> is located exterior to the anus <b>110</b>. Both the internal hemorrhoid <b>120</b> and the external hemorrhoid <b>125</b> are masses of vascular tissue that can bleed, itch, and be painful to the subject. Hemorrhoids can be classed as “early” or “advanced,” where the early hemorrhoids further classed as “grade I” or “grade II” hemorrhoids, and the advanced hemorrhoids are further classed as “grade III” or “grade IV” hemorrhoids. Grade I hemorrhoids bleed but do not prolapse outside the anal canal. Grade II hemorrhoids can suffer a mild prolapse and retract spontaneously. Grade III hemorrhoids can prolapse and require manual replacement into the anal canal. Grade IV hemorrhoids can be prolapsed tissue that can no longer be manually replaced. As tissue becomes redundant and/or suspensory ligaments weaken, the hemorrhoid and/or lower rectal tissues, whether mucosal or submucosal, can prolapsed outside the rectum causing bleeding, pain, and discomfort. There are about 13.2 million people with symptomatic hemorrhoids in the US only, and over 1 million new cases are diagnosed annually.</p>
+      <p id="p-00034-en" num="0034">It should be appreciated by one of skill that the teachings set-forth herein can also be useful, in some embodiments, in the treatment of other superficial lesions, lesions other than hemorrhoids in some embodiments. Such lesions can include, but are not limited to rectal mucosal polyps, warts, and radiation proctitis.</p>
+      <p id="p-00035-en" num="0035">The teachings provided herein are also directed to a method of treating a hemorrhoid while minimizing tissue damage and substantially reducing post-procedural pain. Generally speaking, the methods can include identifying a rectal tissue that comprises a vascular supply to a hemorrhoid, folding the rectal tissue to create a fold, securing the fold, and occluding the vascular supply to the hemorrhoid to facilitate an ischemic regression of the hemorrhoid, wherein the folding, securing, and occluding are all done gently to avoid a removal and/or a necrosis of the rectal tissue. As such, one of skill will appreciate having gentle methods of treatment that result in substantially less post-procedural pain over existing, state-of-the-art treatments. One of skill will appreciate that early hemorrhoids are often currently treated using rubber banding devices and infrared coagulation, for example, and advanced hemorrhoids are often currently treated using staples or Doppler-guided suture-based techniques, such as the popular PPH procedure (Procedure for Prolapse and Hemorrhoids) that respectively excises or suture-ligates the superior hemorrhoidal blood supply and pulls the prolapsed hemorrhoidal tissue into the anal canal.</p>
+      <p id="p-00036-en" num="0036">The term “substantially” can be used, for example, to refer to an amount that one of skill would consider to be marked improvement over the comparison. In some embodiment, a substantial improvement can be a greater that 20%. In some embodiments, a substantial improvement can be greater than 30%, 40%, or 50%. In some embodiments, a substantial improvement can be greater than 60%, 70%, or 80%. And, in some embodiments, a substantial improvement can be greater than 90%, 95%, or 99%. Also, the perception of pain varies significantly from patient to patient, depending on culture, gender, age, social status, previous experience with pain, and other factors. Without intending to be limited to any theory or mechanism of action, what is mild discomfort or “no pain” for one person, could be expressed as painful or somewhat painful by another, etcetera. As a result, it should also be appreciated that one of skill could consider a post-procedural sensation to be “relatively painless,” for example, when the majority of the patients, such as greater than 50%, 60%, 70%, or 80% of the patients in some embodiments, define or describe the sensation as painless including, for example, a sensation without pain or a sensation having mild-to-moderate discomfort only.</p>
+      <p id="p-00037-en" num="0037">The PPH method is an example of a procedure that, although popular, creates a substantial trauma to the subject, and often much more trauma than is needed to treat a target area having a small lesion. The procedure includes pulling prolapsed tissue into a device for excision, the device having circular stapling mechanism for stapling the remaining unexcised tissue circumferentially around the target region of the rectoanal region having the hemorrhoid. And, this circumferential trauma is required by this technique, even if the pathology is focal. As a result, there are substantial risks with this method that include, for example, (i) the substantial trauma that creates a substantial amount of post-procedural pain; (ii) pulling too much muscle tissue into the device and excising the muscle with the hemorrhoid; (iii) sepsis from the trauma; and (iv) the possibility of chronic pain and chronic fecal urgency after the procedure. The PPH procedure is an example of a procedure that is not only significantly traumatic to the patient and, as a result, is typically performed by a colorectal surgeon, but it's also capital intensive. Once popular, this method has a growing disfavor in the surgical community. Suture-based devices are in development, as they can be effective with less pain, but these still suffer the need for high capital equipment, a steep learning curve, and for at least these reasons, a growing disfavor among surgeons.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIGS. 2A-2C</figref> illustrate state-of-the-art treatment methods that produce significantly more post-procedural pain than the gentle treatments set-forth herein. <figref>FIG. 2A</figref> illustrates a rubber band ligation <b>205</b>, which includes a strangulation of a small portion of the hemorrhoid <b>210</b> with a rubber band <b>215</b>. The method uses an anoscope <b>220</b> with a rubber band delivery device <b>225</b>. As with the PPH procedure, there is substantial post-procedural pain for about 5-7 days, substantial discomfort in the subject, a limited success rate, and is a procedure that is considered tedious with a steep learning curve and, as a result, is typically performed by a colorectal surgeon. <figref>FIG. 2B</figref> illustrates an infrared coagulation method that uses an endoscope <b>240</b> and an energy delivery device <b>245</b>, the system 250 of which can be considered capital intensive and cumbersome. In addition, such methods are considered ineffective, being labeled as a method of “shooting-in-the-dark” with a small focus of energy <b>255</b> at a small and hard-to-locate target <b>260</b> for treatment of the hemorrhoid <b>210</b>. <figref>FIG. 2C</figref> illustrates a heat and energy based method that is designed for a direct destruction of the hemorrhoid <b>210</b> with a monopolar electrical probe <b>280</b>. As with other the state-of-the-art methods, the destruction creates an excessive tissue trauma, and significant pain to the subject. Moreover, the procedure requires a prolonged, tedious application time of about 15 minutes to about 30 minutes, as well as high capital equipment costs.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIGS. 3A-3F</figref> illustrate a method of treating a prolapsed hemorrhoid, according to some embodiments. As shown in <figref>FIG. 3A</figref>, internal hemorrhoids <b>320</b>,<b>321</b> are forming in a subject <b>301</b> in the subject's rectum <b>305</b> orally to the dentate line <b>315</b>. <figref>FIG. 3B</figref> shows the manner in which an internal hemorrhoid <b>320</b> can become mobile and move toward the anus <b>310</b> due to the bulk and weight of the increased volume of blood <b>322</b> in the vasculature of the hemorrhoid <b>320</b>. <figref>FIG. 3C</figref> shows the internal hemorrhoid <b>320</b> after it has prolapsed exterior to the anus <b>310</b>. <figref>FIG. 3D</figref> shows the insertion of a therapeutic anoscope <b>350</b> as taught herein. The anoscope <b>350</b> includes a window <b>355</b> having a shutter <b>360</b> that is positioned orally to the dentate line <b>315</b> and opened for an entry of rectal tissue <b>365</b> into the lumen <b>370</b> of the anoscope <b>350</b>.</p>
+      <p id="p-00040-en" num="0040">The method can include inserting the anoscope <b>350</b> into the anus <b>310</b> of the subject <b>301</b> having the hemorrhoid <b>320</b>, the anoscope <b>350</b> operable for (i) forming a fold <b>375</b> in the rectal tissue <b>365</b> orally to the hemorrhoid <b>320</b> and above the dentate line <b>315</b> in the subject <b>301</b>; (ii) gently securing the fold <b>375</b>; (iii) creating a work space <b>380</b> above the dentate line <b>315</b>; and, (iv) providing a visualization <b>385</b> of the rectal tissue <b>365</b> without use of other apparatus such as, for example, an image transmission through optical fibers. As shown in <figref>FIG. 3F</figref>, the method can include gently securing the fold <b>375</b> in the rectal tissue <b>365</b> using a limited pressure between pinching surfaces <b>356</b>,<b>361</b> created by the shutter <b>360</b> and the window <b>355</b> to avoid a removal or a necrosis of the rectal tissue <b>365</b>, the fold <b>375</b> having the vascular supply <b>399</b> for the hemorrhoid <b>320</b>. Finally, the method can include occluding the vascular supply <b>399</b> to the hemorrhoid in a targeted manner to otherwise avoid damage to the rectal tissue <b>365</b>, the occluding including a component selected from the group consisting of heat, energy, ligation, or a combination thereof. In addition to the other benefits set-forth herein, the gentle methods provided can result in substantially less post-operative pain than a method of treating hemorrhoids that does not avoid the removal or the necrosis of the rectal tissue. As shown in <figref>FIGS. 3A-3F</figref>, the methods can be used to treat most any condition that could benefit from an ischemic regression of a hemorrhoid, including the preventing, inhibiting, reducing, or eliminating of a prolapse of the hemorrhoid.</p>
+      <p id="p-00041-en" num="0041">The methods can include gently securing a fold of rectal tissue comprising the vascular supply to the hemorrhoid, and the gently securing can include any method known to one of skill that is gentle enough to avoid a significant trauma to the patient while effective enough to obtain the occlusion of the vascular supply to the hemorrhoid that leads to the ischemic regression of the hemorrhoidal tissue. The term “effective,” can be used to describe an amount or a result that obtains, either in full or at least substantially, a desired outcome. For example, if an ischemic regression of a tissue is sought through an occlusion of a vascular supply to the tissue, the occlusion can be considered effective where there is at least some ischemic regression, at least in some embodiments. In some embodiments, the outcome can be at least substantially obtained where there is a desired reduction in the degree or extent of symptoms present. For example, a desired reduction can be substantial, in some embodiments, where the degree or extent of symptoms is reduced by 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100%, or any 5% increment therein. In some embodiments, an outcome can be at least substantially obtained where the outcome is obtained in a reasonable amount of time. A reasonable amount of time may be, for example, 1 week, 2 weeks, 1 month, 2 months, 3 months, 6 months, or the like, depending on the type and extent of outcome desired.</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIGS. 4A-4F</figref> illustrate the occlusion of the vascular supply to the hemorrhoid that leads to the ischemic regression of the hemorrhoidal tissue, according to some embodiments. As shown in <figref>FIG. 4A</figref>, the gently securing can be used to create a constant tissue fold configuration <b>402</b> to facilitate the occluding of the vascular supply <b>499</b> to the hemorrhoid <b>420</b>. <figref>FIG. 4A</figref> also shows a means for securing the fold <b>475</b> with a controlled pressure using the therapeutic anoscope <b>450</b> to provide the constant tissue fold configuration <b>402</b> to the rectal tissue <b>465</b>. The structure of the means can include opposing pinching surfaces <b>456</b>, <b>461</b> having, for example a distal contact surface <b>456</b> of the window <b>455</b> that is opposing a distal contact surface <b>461</b> of the shutter <b>460</b>. The controlled pressure <b>403</b> can be provided by any means for controlling the pressure, or force per unit area, applied to the rectal tissue <b>465</b>. The terms “controlled” and “limited” can be used interchangeably, in some embodiments. In some embodiments, a pressure is “controlled” where the user has substantial control over the amount of pressure applied, and the type of control can include a variety of control mechanisms known to one of skill. In some embodiments, a pressure is “limited” where there is a pressure-governing mechanism in place, and the type of governing can include a variety of governing mechanisms known to one of skill. It should be appreciated that pressure can be regulated as any form of pressure, for example, mechanical, pneumatic, hydraulic, or the like, where one of skill can control or limit pressure using known methods.</p>
+      <p id="p-00043-en" num="0043">The methods can include the use of a limited pressure on the rectal tissue for the gently securing of the fold, such that the tissue damage is avoided, prevented, or substantially prevented. Any mechanism known to one of skill in the art can be used to control or limit the amount of pressure applied to the tissue to avoid damage to the tissue. In some embodiments, a means for controlling the pressure, or force per unit area, can include, for example, a spring mechanism that limits the pressure applied to the rectal tissue <b>465</b> to what is applied by the spring to the pinching surfaces <b>456</b>,<b>461</b>, the spring preventing a user from applying a pressure greater than the pressure that creates a compression of the spring. In some embodiments, a means for controlling the pressure, or force per unit area, can include, for example, a material having a modulus of elasticity that prevents a user from applying a pressure greater than the pressure that creates a strain of the material. In some embodiments, a means for controlling the pressure, or force per unit area, can include, for example, a material having a hardness that prevents a user from applying a pressure greater than the pressure that creates a compression of the material. In some embodiments, a component in the anoscope or treatment system including the anoscope, can include any one or any combination of such pressure limiting systems.</p>
+      <p id="p-00044-en" num="0044">The methods can include occluding the vascular supply to the hemorrhoid in a targeted manner to avoid unnecessary tissue damage. The occluding can be achieved using any method known to one of skill, to the extent that the method is gentle enough to avoid trauma to the patient while effective enough to obtain the ischemic regression of the hemorrhoidal tissue. The occluding, for example, can include a selective and focused application of heat, energy, ligation, or a combination thereof, to the vascular supply to the hemorrhoid, the application limited to occluding the vascular supply while otherwise avoiding damage to the tissue. As such, the method can be applied in a targeted manner to avoid trauma to the patient.</p>
+      <p id="p-00045-en" num="0045">
+        <figref>FIG. 4B</figref> shows the application of heat <b>444</b> to the rectal tissue <b>465</b> in combination with the gently securing of the rectal tissue <b>465</b>. <figref>FIG. 4C</figref> shows the vascular supply <b>499</b> after the gently securing, still flowing venous and arterial blood through the fold <b>402</b> and to the hemorrhoid <b>420</b>, after which the heat <b>444</b> is applied for the occlusion <b>455</b> of the blood flow <b>477</b>. <figref>FIG. 4E</figref> shows an ischemic regression <b>486</b> of the hemorrhoid <b>420</b> after the occlusion <b>455</b> has been obtained. The fold <b>475</b> remains in place and regresses over time as well, as shown in <figref>FIG. 4F</figref>. <figref>FIG. 4F</figref> illustrates a successful treatment.</p>
+      <p id="p-00046-en" num="0046">The pressure used to gently secure the fold can vary according to a number of factors. One of skill will appreciate, for example, that not all tissue will respond to pressure in the same manner, as there are variations within and between subjects due to any number of reasons known in the art, including heterogeneity of tissue within and between patients, the age of the patient, the patient's health and/or condition treated, and the like. And, it will be appreciated that the response of tissue to increases in pressure may not be linear, in some embodiments, as increased forces applied to small contact areas may cause proportionally more damage to tissue when compared to equal pressures applied to the same tissue using relatively larger contact areas. Likewise, temperature can have an effect, as the application of pressure to a tissue can show an increased amount of damage to the tissue when the pressure is applied at an increased temperature.</p>
+      <p id="p-00047-en" num="0047">In some embodiments, the limited pressure can range from, for example, about 50 kPa to about 1000 kPa, about 50 kPa to about 750 kPa, about 50 kPa to about 500 kPa, about 75 kPa to about 800 kPa, about 100 kPa to about 600 kPa, about 100 kPa to about 300 kPa, about 50 kPa to about 400 kPa, about 50 kPa to about 250 kPa, about 25 kPa to about 500 kPa, about 500 kPa to about 1000 kPa, about 500 kPa to about 750 kPa, about 750 kPa to about 1000 kPa, or any range therein. In some embodiments, the limited pressure can be about 10 kPa, about 20 kPa, about 30 kPa, about 40 kPa, about 50 kPa, about 60 kPa, about 70 kPa, about 80 kPa, about 90 kPa, about 100 kPa, about 110 kPa, about 120 kPa, about 130 kPa, about 140 kPa, about 150 kPa, about 160 kPa, about 170 kPa, about 180 kPa, about 190 kPa, about 200 kPa, 210 kPa, about 220 kPa, about 230 kPa, about 240 kPa, about 250 kPa, about 260 kPa, about 270 kPa, about 280 kPa, about 290 kPa, about 300 kPa, 310 kPa, about 320 kPa, about 330 kPa, about 340 kPa, about 350 kPa, about 360 kPa, about 370 kPa, about 380 kPa, about 390 kPa, about 400 kPa, about 500 kPa, about 600 kPa, about 700 kPa, about 800 kPa, about 900 kPa, about 1000 kPa, or any 5 kPa increment therein.</p>
+      <p id="p-00048-en" num="0048">In some embodiments, a contact area of a pinching surface can range from about 20 mm<sup>2 </sup>to about 1000 mm<sup>2</sup>, from about 20 mm<sup>2 </sup>to about 1000 mm<sup>2</sup>, from about 40 mm<sup>2 </sup>to about 800 mm<sup>2</sup>, from about 50 mm<sup>2 </sup>to about 500 mm<sup>2</sup>, from about 75 mm<sup>2 </sup>to about 750 mm<sup>2</sup>, from about 90 mm<sup>2 </sup>to about 900 mm<sup>2</sup>, from about 100 mm<sup>2 </sup>to about 300 mm<sup>2</sup>, from about 175 mm<sup>2 </sup>to about 400 mm<sup>2</sup>, from about 200 mm<sup>2 </sup>to about 500 mm<sup>2</sup>, from about 40 mm<sup>2 </sup>to about 400 mm<sup>2</sup>, from about 45 mm<sup>2 </sup>to about 450 mm<sup>2</sup>, from about 50 mm<sup>2 </sup>to about 100 mm<sup>2</sup>, or any range therein. In some examples the contact area of a pinching surface can be, for example, about 50 mm<sup>2</sup>, about 60 mm<sup>2</sup>, about 70 mm<sup>2</sup>, about 80 mm<sup>2</sup>, about 90 mm<sup>2</sup>, about 100 mm<sup>2</sup>, about 110 mm<sup>2</sup>, about 120 mm<sup>2</sup>, about 130 mm<sup>2</sup>, about 140 mm<sup>2</sup>, about 150 mm<sup>2</sup>, about 160 mm<sup>2</sup>, about 170 mm<sup>2</sup>, about 180 mm<sup>2</sup>, about 190 mm<sup>2</sup>, about 200 mm<sup>2</sup>, about 210 mm<sup>2</sup>, about 220 mm<sup>2</sup>, about 230 mm<sup>2</sup>, about 240 mm<sup>2</sup>, about 250 mm<sup>2</sup>, about 260 mm<sup>2</sup>, about 270 mm<sup>2</sup>, about 280 mm<sup>2</sup>, about 290 mm<sup>2</sup>, about 300 mm<sup>2</sup>, or any 5 mm<sup>2 </sup>increment therein.</p>
+      <p id="p-00049-en" num="0049">In some embodiments, the force applied to a contact area can range from about 100 g to about 5000 g, from about 200 g to about 4000 g, from about 300 g to about 3000 g, from about 200 g to about 2000 g, from about 300 g to about 1000 g, from about 500 g to about 1000 g, or any range therein. In some embodiments, the force can be about 200 g, 300 g, 400 g, 500 g, 600 g, 700 g, 800 g, 900 g, 1000 g, 1100 g, 1200 g, 1300 g, 1400 g, 1500 g, 1600 g, 1700 g, 1800 g, 1900 g, 2000 g, 2100 g, 2200 g, 2300 g, 2400 g, 2500 g, 2600 g, 2700 g, 2800 g, 2900 g, 3000 g, 3100 g, 3200 g, 3300 g, 3400 g, 3500 g, 3600 g, 3700 g, 3800 g, 3900 g, 4000 g, or any 10 g increment therein.</p>
+      <p id="p-00050-en" num="0050">In some embodiments, the targeted manner can include heating at a temperature of about 50° C. to about 65° C. for an effective time to selectively coagulate the vascular supply during the occluding while avoiding the removal or the necrosis of the rectal tissue. In some embodiments, the targeted manner includes heating at a temperature of about 50° C. to about 65° C. for an effective time, the heating including applying an energy from a plurality of discrete regions on the pinching surfaces to a corresponding plurality of discrete areas on the fold to selectively coagulate the vascular supply during the occluding while preserving the remainder of the fold to avoid the removal or the necrosis of the rectal tissue fold. In some embodiments, the heating can be at a temperature ranging from about 30° C. to about 70° C., from about 35° C. to about 65° C., from about 40° C. to about 60° C., from about 45° C. to about 55° C., from about 50° C. to about 65° C., or any range therein. In some embodiments, heating can be at a temperature of about 40° C., about 45° C., about 50° C., about 55° C., about 60° C., about 65° C., about 70° C., or any 10° C. increment therein.</p>
+      <p id="p-00051-en" num="0051">The heating can be applied for a limited amount of time, or obtained or applied by ramping to the temperature over a period of time. Accordingly, the temperature can be applied as a constant temperature for an effective time, a ramping to a temperature over an effective time, a ramping to a temperature that is applied for an effective time, a ramping down from a temperature, or any combination thereof. One of skill will appreciate that the selection of the desired temperature/time procedure for applying an occlusion energy, for example, will be a function of occluding the vascular supply to the hemorrhoid most effectively with the least tissue damage. In some embodiments, the heating can be applied for a time ranging from about 1 sec to about 120 seconds, from about 5 sec to about 90 seconds, from about 10 sec to about 60 seconds, from about 5 sec to about 30 seconds, from about 1 sec to about 5 seconds, from about 5 sec to about 10 seconds, from about 10 sec to about 30 seconds, or any range therein. In some embodiments the ramping time to a temperature can range from about 1 sec to about 120 seconds, from about 5 sec to about 90 seconds, from about 10 sec to about 60 seconds, from about 5 sec to about 30 seconds, from about 1 sec to about 5 seconds, from about 5 sec to about 10 seconds, from about 10 sec to about 30 seconds, or any range therein. An “effective amount of time” or an “effective time” is the amount of time that produces a desired extent of occlusion of the vascular supply to the hemorrhoid. In some embodiments, the vascular supply can be occluded during an effective amount of time by 75%, 80%, 85%, 90%, 95%, 97%, 99%, 100%, or any 1% increment therein. In some embodiments, the effective amount of time can result in less than 100% occlusion, and the vascular supply reaches 100% occlusion without further therapy. In some embodiments, less than 100% occlusion is desired during the effective time to avoid unnecessary damage to tissue and still achieve ischemic regression of the hemorrhoid.</p>
+      <p id="p-00052-en" num="0052">The application of heat and/or energy in the occlusion can be absent in some embodiments. In some embodiments, for example, the targeted manner includes gently securing the fold into a constant tissue fold configuration for a suturing of the rectal tissue orally to the hemorrhoid to selectively ligate the vascular supply to the hemorrhoid. A careful suturing that otherwise avoids the removal or the necrosis of the rectal tissue again avoids damage to the tissue, substantially reducing trauma and an associate post-procedural pain to the patient. In some embodiments, however, the suturing can be accompanied by an application of heat and/or energy as taught herein.</p>
+      <p id="p-00053-en" num="0053">
+        <figref>FIGS. 5A-5C</figref> illustrate a method and device for gently securing and suturing a fold of rectal tissue above a dentate line and orally to a hemorrhoid, according to some embodiments. <figref>FIGS. 5A and 5B</figref> illustrate a therapeutic anoscope <b>550</b> operable for (i) forming a fold <b>575</b> in the rectal tissue <b>565</b> orally to the hemorrhoid <b>520</b> and above the dentate line <b>515</b> in the subject <b>501</b>; (ii) gently securing the fold <b>575</b>; (iii) creating a work space <b>580</b> above the dentate line <b>515</b>; and, (iv) providing a visualization <b>585</b> of the rectal tissue <b>565</b> without use of other apparatus such as, for example, an image transmission through optical fibers. As shown in <figref>FIG. 5B</figref>, the method can include gently securing the fold <b>575</b> in the rectal tissue <b>565</b> using a limited pressure between pinching surfaces <b>556</b>, <b>561</b> created by the shutter <b>560</b> and the window <b>555</b> to avoid a removal or a necrosis of the rectal tissue <b>565</b>, the fold <b>575</b> having the vascular supply <b>599</b> for the hemorrhoid <b>520</b>. Finally, <figref>FIG. 5C</figref> shows that the method can include occluding the vascular supply <b>599</b> to the hemorrhoid in a targeted manner to otherwise avoid damage to the rectal tissue <b>565</b>, the occluding <b>555</b> including a suturing <b>569</b> to ligate the vascular supply <b>599</b> and stop or reduce the flow of blood <b>577</b> to ischemically regress the hemorrhoid <b>520</b>. The anoscope is shown in <figref>FIG. 5A</figref> as having a proximal handle <b>509</b> and a distal handle <b>511</b> operably attached to the shutter <b>560</b>, the proximal handle <b>509</b> slidably attached to the distal handle <b>511</b>, such that the longitudinal axis <b>560</b><i>a </i>of the shutter <b>560</b> slides in a direction that is parallel or substantially parallel to the longitudinal axis <b>512</b><i>a </i>of the body <b>512</b> of the anoscope <b>550</b>. The longitudinal axis <b>509</b><i>a </i>of the proximal handle <b>509</b> and/or the longitudinal axis <b>511</b><i>a </i>of the distal handle <b>511</b> can be in a pistol-grip orientation to the longitudinal axis <b>512</b><i>a </i>of the body <b>512</b> to allow for a comfortable grip and manipulation of the anoscope <b>550</b> during use.</p>
+      <p id="p-00054-en" num="0054">The controlled or limited pressure, or force per unit area, can come from any configuration or orientation that gently secures the fold. In some embodiments, the body of the anoscope has a central axis, and the controlled pressure is applied at an angle ranging from about 0 degrees to about 90 degrees from the central axis. In some embodiments, the orientation in which the controlled pressure is applied can be adjusted in the anoscope. In some embodiments, the adjusting of the orientation can be done outside of the patient's body and, in some embodiments, after insertion of the anoscope into the patient's body, for example, in situ during a procedure to avoid a need to remove, adjust, and re-insert the therapeutic anoscope.</p>
+      <p id="p-00055-en" num="0055">The teachings are also directed to a anoscope used with the methods taught herein. An anoscope used in the methods can comprise any scaffolding structure and means for performing the steps of the methods described herein, namely identifying a rectal tissue that comprises a vascular supply to a hemorrhoid, folding the rectal tissue to create a fold, securing the fold, and occluding the vascular supply to the hemorrhoid to facilitate an ischemic regression of the hemorrhoid, wherein the folding, securing, and occluding are all done gently to avoid a removal and/or a necrosis of the rectal tissue. For example, any means for creating the work space in the subject can be fashioned for use as an anoscope, and any means for gently securing a fold of tissued orally to the hemorrhoid and above the dentate line can also be used in the occluding. The means for creating the work space can be, for example, a static or dynamically expandable framework of panels or struts, an inflatable scaffolding, a rigid cylinder, a transparent structure, and the like, the scaffolding having a means for receiving a rectal tissue to facilitate gently securing a fold in the rectal tissue for gently occluding the vascular supply to the hemorrhoid. In some embodiments, the work space can be creating using a cylindrical, or substantially cylindrical, body for insertion into the subject, the cylindrical body creating a work space having a sufficient volume to perform the occluding of the vascular supply to the hemorrhoid. In such embodiments, the cylindrical, or substantially cylindrical, body can comprise a side window and, optionally, a convex surface or bulge that can be designed to help promote an entry of the rectal tissue into the window for the gently securing of the rectal tissue. In some embodiments, the body of the anoscope is operably attached to a distal handle, and the distal handle is operable attached to a proximal handle, the proximal handle being operably attached to a shutter component for closing the window and applying a controlled, or limited, pressure to a rectal tissue. Consistent with the teachings herein, the controlled, or limited, pressure is a design feature that's incorporated by mechanism, materials, or a combination thereof, into the anoscope to avoid applying an amount of pressure that unnecessarily creates tissue damage. In some embodiments, the anoscope can have a pistol-grip configuration, as shown in <figref>FIG. 5A</figref>, for example, making the device easy for a user to hold and manipulate during a treatment. A pistol-grip configuration can be configured, for example, such that the longitudinal axis of the proximal and/or distal handle can have an angle with the axis of the body that is about 200, about 250, about 30°, about 35°, about 40°, about 45°, or any 1° increment therein.</p>
+      <p id="p-00056-en" num="0056">
+        <figref>FIGS. 6A-6D</figref> illustrates a therapeutic anoscope for treating a hemorrhoid in a subject while avoiding a trauma associated with removing a rectal tissue, according to some embodiments. The therapeutic anoscope <b>650</b> can include a cylindrical, or substantially cylindrical, anoscope body <b>612</b> having a lumen <b>614</b>, a proximal opening <b>616</b>, a distal end <b>618</b> configured for a first point of entry into an anus of a subject, and a side window <b>655</b> having a shutter <b>660</b> and pinching surfaces <b>656</b>,<b>661</b> to form a fold in a rectal tissue orally to a hemorrhoid. The pinching surfaces <b>656</b>,<b>661</b> can be configured to gently secure the fold <b>575</b> with a limited pressure above a dentate line in a subject. The anoscope body <b>612</b> can have any configuration that will support a visualization, and a gentle tissue capturing and securing mechanism that will operably function as taught using the methods taught herein.</p>
+      <p id="p-00057-en" num="0057">
+        <figref>FIGS. 6A-6D</figref> show a proximal handle <b>609</b> and a distal handle <b>611</b> in a pistol-grip orientation with the body <b>612</b> of the anoscope <b>650</b>. The proximal handle <b>609</b> is operable attached to the shutter <b>660</b> and the distal handle <b>611</b>. The distal handle <b>611</b> is operably attached to the body <b>612</b>. <figref>FIGS. 6A and 68</figref> show a side and bottom view of the anoscope <b>650</b> in a shutter-open position, and <figref>FIGS. 6C and 6D</figref> show a side and bottom view of the anoscope <b>650</b> in a shutter-closed position. <figref>FIGS. 68 and 6D</figref> show a portion of a retraction coil spring <b>688</b> that provides a tension for retracting the shutter from the shutter-closed position to the shutter-open position. And, <figref>FIGS. 6A and 6C</figref> show a latch-type locking mechanism <b>689</b> for securing the shutter <b>660</b> in the shutter-closed position. The shutter-closed position includes the slightly retracted position of the shutter <b>660</b> as described herein in which a tissue is gently secured under a controlled, or limited, pressure for the occlusion of the vascular supply to the hemorrhoid. This is because the shutter <b>660</b> can be operably and slidably attached to the proximal handle, for example, using a compression coil spring <b>687</b> (not shown) that limits the amount of pressure that can be applied by the pinching surfaces <b>656</b>,<b>661</b> to the fold of tissue.</p>
+      <p id="p-00058-en" num="0058">
+        <figref>FIGS. 7A and 7B</figref> illustrate an exploded view of therapeutic anoscopes with and without components for delivering energy for occlusion of a vascular supply to a hemorrhoid, according to some embodiments. The anoscope <b>750</b> has a proximal handle <b>709</b> and a distal handle <b>711</b>. The proximal handle <b>709</b> is operable attached to the shutter <b>760</b>. The distal handle <b>711</b> and the body <b>712</b> are formed in a two-piece assembly configuration, whereas the shutter <b>760</b> and the proximal handle <b>709</b> are each single-piece units. The distal handle is operably attached to the body in a pistol-grip configuration. <figref>FIGS. 7A and 7B</figref> show a compression coil spring <b>787</b> that limits the amount of pressure that can be applied by the pinching surfaces <b>756</b>,<b>761</b> to the fold of tissue. There is also a retraction coil spring <b>788</b> (not shown) that provides a tension for retracting the shutter from the shutter-closed position to the shutter-open position. A latch-type locking mechanism <b>789</b> is also provided for securing the shutter <b>760</b> in the shutter-closed position. The shutter-closed position includes the slightly retracted position of the shutter <b>760</b> as described herein in which a tissue is gently secured under a controlled, or limited, pressure for the occlusion of the vascular supply to the hemorrhoid. This is because the shutter <b>760</b> can be operably and slidably attached to the proximal handle, for example, using the compression coil spring <b>787</b> that limits the amount of pressure that can be applied by the pinching surfaces <b>756</b>,<b>761</b> to the fold of tissue. <figref>FIG. 7B</figref> also shows electrical components <b>733</b><i>a</i>,<b>733</b><i>b</i>,<b>733</b><i>c</i>,<b>733</b><i>d</i>,<b>733</b><i>e </i>for delivering an energy to the pinching surfaces <b>756</b>,<b>761</b> for occluding the vascular supply the hemorrhoid. Input <b>733</b><i>a </i>provides a circuit for the flow of an energy through a window contact <b>733</b><i>b </i>and a shutter contact <b>733</b><i>c </i>as they are brought a sufficiently close proximity for the transfer of the energy, such as during the gently securing of the fold of rectal tissue to occlude the vascular supply to the hemorrhoid. Connectors <b>733</b><i>d</i>,<b>733</b><i>e </i>provide a connection between the input <b>733</b><i>a </i>and the shutter contact <b>733</b><i>c</i>. As the contacts <b>733</b><i>b</i>,<b>733</b><i>c </i>are brought in close proximity during the gently securing of the tissue, the circuit closes, energy passes, and the occlusion of the vascular supply occurs.</p>
+      <p id="p-00059-en" num="0059">The pinching surfaces can have any configuration that one of skill believes will effectively pinch and gently secure a fold of rectal tissue as described herein. In some embodiments, the pinching surfaces can be arcuate in shape to facilitate the grasping or pinching of the tissue as it enters the window of the body of the anoscope. The arcuate shape can reflect the convex shape of the body in regions adjacent to the window. Likewise, the shutter can also have an arcuate shape. The pinching surfaces can also have a contact surface that is smooth or rough, with raised protrusions, dimples, ridges, and the like. In some embodiments, the pinching surfaces can have a series of vertical small electrodes having gaps in-between the electrodes. An example of such a configuration could include serrations, channels, or grooves, of any of a variety of configurations. Such an arrangement can provide an application of energy in spots or islands, rather than uniformly across the pinching surface, to allow delivery of more energy to a thicker tissue in a focused manner, allowing tissue to remain untreated between the gaps to help ensure a minimal amount of damage to the rectal tissue and, at least, avoid necrosis in the tissue fold.</p>
+      <p id="p-00060-en" num="0060">Energy can be applied to the fold selectively, and in a targeted manner, in some embodiments. That is, in some embodiments, energy is not applied all around the tissue tissue fold but, rather, is selectively applied in a targeted manner to occlude the vascular supply to the hemorrhoid while pursuing the least damage to the surrounding, collateral tissue. In some embodiments, the result of the application of energy includes coagulated vessels, sclerosis, and no substantial necrosis in the tissue fold. In some embodiments, the tissue fold can be between about 1 mm to about 6 mm in thickness when compressed. And, in some embodiments, the tissue fold can be between about 2 mm to about 4 mm in thickness when compressed. In some embodiments, the thickness of the tissue fold can be about 0.5 mm, 1.0 mm, 2.5 mm, 3.5 mm, 4.5 mm, 5.5 mm, 6.5 mm, 7.5 mm, or any 0.5 mm increment therein. As described herein, the effective treatment time for an application of energy can vary. It should be appreciated that heterogeneity of tissue can naturally be a part of a tissue fold, and the thickness and heterogeneity of tissue can affect the treatment time that is found to be effective. In some embodiments, the temperature of an applied heat ranges from about 50° C. to about 65° C., and the treatment time can range, for example, from about 8 seconds to about 25 seconds.</p>
+      <p id="p-00061-en" num="0061">In some embodiments, a heterogeneous tissue fold can be exposed to a moderate temperature, between about 50° C. and about 65° C., and the tissue is simultaneously compressed. The pressure, temperature, and time of application of energy is balanced to target the endothelium of the vessels and some submuscosa, and the collateral tissue is spared. The entire fold becomes moderately ischemic and form a beneficial scar.</p>
+      <p id="p-00062-en" num="0062">
+        <figref>FIGS. 8A-8F</figref> illustrate aspects of therapeutic anoscopes with and without components for delivering energy for occlusion of a vascular supply to a hemorrhoid, according to some embodiments. <figref>FIGS. 8A and 8C</figref> show an anoscope <b>850</b> configured for delivering energy without any additional system components, save for an energy source (not shown), whereas <figref>FIGS. 8B and 8D</figref> show an anoscope <b>850</b> that is not configured to deliver an energy in the absence of a separate system component, meaning that the anoscope <b>850</b> in <figref>FIGS. 8B and 8D</figref> could be used with the delivery of an energy, but the energy would derive from a separate component through the body <b>812</b>. As can be seen in <figref>FIGS. 8A</figref> and B, the body <b>812</b> can be transparent or translucent to assist the user of the anoscope <b>850</b>. In some embodiments, the anoscope body <b>812</b> can be configured for providing a length <b>813</b> sufficient to position the pinching surfaces <b>856</b>,<b>861</b> above the dentate line in the subject. The length <b>813</b> can include two component distances, such as a window distance <b>813</b><i>a </i>and a viewing port distance <b>813</b><i>b</i>. Window distance <b>813</b><i>a </i>is the distance from the distal end <b>812</b><i>b </i>of the anoscope body <b>812</b> to the proximal side <b>855</b><i>a </i>of the window <b>855</b>. The viewing port distance <b>813</b><i>b </i>is the distance from the distal end <b>812</b><i>b </i>of the anoscope body <b>812</b> to the proximal end <b>812</b><i>a </i>of the anoscope body <b>812</b>.</p>
+      <p id="p-00063-en" num="0063">In some embodiments, the anoscope body <b>812</b> can be configured for providing a volume <b>817</b> in the lumen <b>819</b> sufficient for receiving the fold of the rectal tissue for the occluding of the vascular supply to the hemorrhoid. Volume can be considered proportional to diameter, in embodiments that use a round, or substantially round, cylindrically shaped body <b>812</b>. The distal end <b>812</b><i>b </i>of the body <b>812</b> can range in diameter, for example, from about 1.0 cm to about 3.0 cm, from about 1.5 cm to about 2.5 cm, from about 1.6 cm to about 2.3 cm, from about 1.2 cm to about 2.7 cm, or any range therein. The region of the body <b>812</b> that includes the window <b>855</b> can range in diameter, for example, from about 1.0 cm to about 4.0 cm, from about 1.5 cm to about 3.5 cm, from about 1.8 cm to about 3.3 cm, from about 1.4 cm to about 2.0 cm, or any range therein. And, as taught herein, the region around the window <b>855</b> can have a convex region, or bulging portion, that can help facilitate entry of a rectal tissue into the window <b>855</b>. The proximal end <b>812</b><i>a </i>of the body <b>812</b> can range in diameter, as well, and one of skill will be able to select a diameter that provides a visualization <b>885</b> of the fold for a particular device, as well as an adequate entry of another component as needed during a hemorrhoid treatment procedure. The anoscope <b>850</b> can be configured to (i) provide a visualization <b>895</b> of the rectal tissue without an image transmission through optic fibers and (ii) facilitate an ischemic regression of the hemorrhoid through the occluding to treat the hemorrhoid in a manner that provides substantially less post procedural pain to the subject than a hemorrhoid treatment procedure that does not avoid the removal or the necrosis of the rectal tissue.</p>
+      <p id="p-00064-en" num="0064">The window <b>855</b> of the anoscope <b>850</b> can have dimensions that facilitate entry of the rectal tissue into the window <b>855</b>. In some embodiments, the window <b>855</b> can have a width <b>855</b><i>a </i>ranging from about 0.5 cm to about 2.5 cm, from about 0.75 cm to about 2.25 cm, from about 1.0 cm to about 2.0 cm, from about 0.75 cm to about 1.75 cm, or any range therein. In some embodiments, the window <b>855</b> can have a length from about 0.5 cm to about 3.5 cm, from about 0.75 cm to about 3.0 cm, from about 1.0 cm to about 2.5 cm, from about 0.75 cm to about 2.75 cm, or any range therein.</p>
+      <p id="p-00065-en" num="0065">In some embodiments, the shutter <b>860</b> can be configured for opening the window <b>855</b> to allow the rectal tissue to enter the window <b>855</b> during the treatment of the hemorrhoid in the subject; creating the fold in the rectal tissue orally to the hemorrhoid; and, gently securing the fold with the limited pressure above the dentate line to avoid the removal or the necrosis of the rectal tissue that creates the trauma to the subject. And, as shown in <figref>FIGS. 8E and 8F</figref>, and as otherwise described herein, the anoscope <b>850</b> can have a retraction coil spring <b>888</b> and a compression coil spring <b>887</b>, the retraction coil spring provide a tension for returning the shutter from a closed, or tissue securing, position to an open position, and the compression coil spring controlling, or limiting, the pressure that can be applied to the rectal tissue by the pinching surfaces of the anoscope.</p>
+      <p id="p-00066-en" num="0066">In some embodiments, the volume <b>817</b> is sufficient for a suturing to selectively ligate the vascular supply during the occluding while otherwise avoiding the removal or the necrosis of the rectal tissue fold. And, in some embodiments, the volume <b>817</b> is sufficient for an application of heat at a temperature of about 50° C. to about 65° C. for an effective time to selectively coagulate the vascular supply during the occluding while avoiding a necrosis of the rectal tissue fold. Moreover, in some embodiments, the volume <b>817</b> is sufficient for an application of an RF energy to selectively coagulate the vascular supply during the occluding while avoiding a necrosis of the rectal tissue fold. In some embodiments, the RF energy or heat can be applied such that the temperature is ramped at a desired rate and heated for an effective amount of time to occlude the vascular supply to the hemorrhoid while otherwise avoiding damage to tissue surrounding the vascular supply. The anoscope <b>850</b> also provides a visualization <b>885</b>, a proximal handle <b>809</b>, a distal handle <b>811</b>, a shutter <b>860</b>, and a locking mechanism <b>889</b>.</p>
+      <p id="p-00067-en" num="0067">In some embodiments, the anoscope body has a central axis, and the limited pressure is applied in the same, or substantially same, plane as a plane formed by the rectal tissue before the pinching, and at an angle ranging from about 0 degrees to about 90 degrees from the central axis. And, in some embodiments, the anoscope body is translucent or transparent.</p>
+      <p id="p-00068-en" num="0068">In some embodiments, a therapeutic anoscope is presented for treating a prolapsed hemorrhoid in a subject in a manner that creates substantially less post-procedural pain. The anoscope can have a cylindrical, or substantially cylindrical, anoscope body having a lumen, a proximal opening, a distal end configured for a first point of entry into an anus of a subject. The body can also include a side window having a shutter and pinching surfaces to form a fold in a rectal tissue orally to a prolapsed hemorrhoid and gently secure the fold with a limited pressure above a dentate line in a subject. The anoscope body can be configured for providing a length sufficient to position the pinching surfaces above the dentate line in the subject; and, providing a volume in the lumen sufficient for receiving the fold of the rectal tissue for an occluding of a vascular supply to the hemorrhoid. The shutter can be configured for opening the window to allow the rectal tissue to enter the window during a treatment of a hemorrhoid in the subject; creating the fold in the rectal tissue orally to the prolapsed hemorrhoid; and, gently securing the fold with a limited pressure ranging from about 50 kPa to about 1000 kPa above the dentate line to avoid a removal or a necrosis of the rectal tissue that creates a trauma to the subject. It should be appreciated that, in some embodiments, the rectal tissue can incorporate at least a portion of a hemorrhoid in a rectal tissue fold where, in some embodiments, the entire hemorrhoid may be incorporated. And, the anoscope can function to (i) directly visualize the rectal tissue without an endoscope having optic fibers and (ii) facilitate an ischemic regression of the prolapsed hemorrhoid through the occluding. The anoscopes taught herein can be used to treat the hemorrhoid in a manner that provides substantially less post procedural pain to the subject than a procedure that does not avoid the removal or the necrosis of the rectal tissue that creates trauma to the subject, facilitating the ischemic regression that results in a loss of bulk and weight in the prolapsed hemorrhoid.</p>
+      <p id="p-00069-en" num="0069">It should be appreciated that the pinching surfaces that gently secure the tissue can have any configuration known to one of skill to accomplish the act of gently securing the fold for the occluding of the vascular supply to the hemorrhoid. The configuration should provide a securing surface and pressure that is gentle enough to avoid trauma to the patient in a manner consistent with the teachings herein. In some embodiments, the pinching surfaces can have an arcuate shape to facilitate a recruiting of the rectal tissue into the lumen of the body of the anoscope. And, in some embodiments, the pinching surfaces have a plurality of discrete regions on the pinching surfaces corresponding to a plurality of discrete areas on the fold to selectively coagulate the vascular supply during the occluding while preserving the remainder of the fold to avoid the removal or the necrosis of the rectal tissue fold.</p>
+      <p id="p-00070-en" num="0070">A system for treating a hemorrhoid in a subject in a manner that creates substantially less post-procedural pain is also provided herein. In some embodiments, the system comprises a therapeutic anoscope; and, an occlusion device operable for a targeted application of heat, energy, or ligation to the vascular supply to the hemorrhoid, the targeted application otherwise avoiding damage to the rectal tissue. In some embodiments, the occlusion device applies RF energy to the vascular supply to the hemorrhoid. In some embodiments, the occlusion device facilitates an application of a suture to the vascular supply to the hemorrhoid. And, in some embodiments, the occlusion device applies heat to the vascular supply to the hemorrhoid at a temperature ranging from about 50° C. to about 65° C. for an effective time to selectively coagulate the vascular supply during the occluding while avoiding a necrosis of the rectal tissue fold.</p>
+      <p id="p-00071-en" num="0071">Without intending to be limited to any theory or mechanism of action, the following examples are provided to further illustrate the teachings presented herein. It should be appreciated that there are several variations contemplated within the skill in the art, and that the examples are not intended to be construed as providing limitations to the claims.</p>
+      <heading id="h-00005-en" level="1">Example 1</heading>
+      <heading id="h-00006-en" level="1">Comparison with Current Methods</heading>
+      <p id="p-00072-en" num="0072">This example compares current methods to the therapeutic anoscope methods taught herein, described as “gentle systems”. The parameters compared are invasiveness, pain, cost, and effectiveness. The methods used as a comparison to the teachings provided herein are the energy-based methods and rubber band methods currently used in the treatment of hemorrhoids. Table 1 describes the comparison.</p>
+      <p id="p-00073-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="133pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>State-of-the-art</entry>
+                  <entry>The gentle-</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="35pt" align="left" />
+              <colspec colname="5" colwidth="35pt" align="left" />
+              <colspec colname="6" colwidth="35pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Doppler-</entry>
+                  <entry>systems</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Energy-</entry>
+                  <entry>Rubber</entry>
+                  <entry />
+                  <entry>suture-</entry>
+                  <entry>taught</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>based</entry>
+                  <entry>banding</entry>
+                  <entry>Staples</entry>
+                  <entry>based</entry>
+                  <entry>herein</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Invasiveness</entry>
+                  <entry>+</entry>
+                  <entry>+/++</entry>
+                  <entry>++++</entry>
+                  <entry>++</entry>
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry>Pain</entry>
+                  <entry>+/+++</entry>
+                  <entry>+/++</entry>
+                  <entry>+++</entry>
+                  <entry>++/+++</entry>
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry>Cost</entry>
+                  <entry>+++</entry>
+                  <entry>+</entry>
+                  <entry>++++</entry>
+                  <entry>++++</entry>
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry>Effectiveness</entry>
+                  <entry>+</entry>
+                  <entry>++</entry>
+                  <entry>+++/++++</entry>
+                  <entry>+++/++++</entry>
+                  <entry>+++</entry>
+                </row>
+                <row>
+                  <entry>Procedure </entry>
+                  <entry>+/++</entry>
+                  <entry>+/++</entry>
+                  <entry>++++</entry>
+                  <entry>++++</entry>
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry>Time</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00074-en" num="0073">The ratings from low to high are rated by the number of “+” symbols in a category, where the fewer number of symbols indicate “low” and the higher number of symbols “high.” As can be seen, the gentle systems taught herein clearly outperform the state-of-the-art systems in most every category, as well as when averaged across all categories.</p>
+      <heading id="h-00007-en" level="1">Example 2</heading>
+      <heading id="h-00008-en" level="1">Hemorrhoidal Superior Vessels Ligation Using Bipolar RF Energy and Gentle Securing for Treatment of Internal Hemorrhoids</heading>
+      <p id="p-00075-en" num="0074">This example was a study of the effectiveness of an embodiment that uses a bipolar RF energy application, as described herein. Twenty-two patients having stages internal hemorrhoids at stages I-IIIA were treated. Table 2 describes the stages.</p>
+      <p id="p-00076-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="63pt" align="left" />
+              <colspec colname="5" colwidth="21pt" align="left" />
+              <colspec colname="6" colwidth="77pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="6" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Anal</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>bleeding</entry>
+                  <entry>Defintion</entry>
+                  <entry>Prolapse</entry>
+                  <entry>Definition</entry>
+                  <entry>Stage</entry>
+                  <entry>Definition</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Mild</entry>
+                  <entry>Small amount</entry>
+                  <entry>Mild</entry>
+                  <entry>Reduces</entry>
+                  <entry>I</entry>
+                  <entry>Bleeding only, no</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>of blood on</entry>
+                  <entry />
+                  <entry>spontaneously</entry>
+                  <entry />
+                  <entry>hemorrhoidal prolapse</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>paper</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Moderate</entry>
+                  <entry>Moderate or</entry>
+                  <entry>Moderate</entry>
+                  <entry>Requires occasional</entry>
+                  <entry>II</entry>
+                  <entry>Mild hemorrhoidal</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>more</entry>
+                  <entry>early</entry>
+                  <entry>or periodic manual</entry>
+                  <entry />
+                  <entry>prolapsed with</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>significant</entry>
+                  <entry />
+                  <entry>reduction (usually</entry>
+                  <entry />
+                  <entry>spontaneous reduction</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>amount of</entry>
+                  <entry />
+                  <entry>during constipation)</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>blood on paper</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Severe</entry>
+                  <entry>Bood is</entry>
+                  <entry>Moderate</entry>
+                  <entry>Requires routine</entry>
+                  <entry>IIa</entry>
+                  <entry>Mild hemorrhoidal</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>dripping in</entry>
+                  <entry>advanced</entry>
+                  <entry>manual reduction</entry>
+                  <entry />
+                  <entry>prolapsed, requiring</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>toilet bowl</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>occasional or periodic</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>manual reduction (usually</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>during constipation), may</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>or may not have bleeding</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Severe</entry>
+                  <entry>Cannot be effectively</entry>
+                  <entry>IIIb</entry>
+                  <entry>Moderate hemorrhoidal</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>reduced</entry>
+                  <entry />
+                  <entry>prolapsed, requiring</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>routine manual reduction,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>may or may not have</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>bleeding</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>IV Severe prolapsed, may</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>or may not have bleeding</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables> Table 3 describes the distribution of conditions among the twenty-two patients. </p>
+      <p id="p-00077-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="42pt" align="left" />
+              <colspec colname="5" colwidth="21pt" align="left" />
+              <colspec colname="6" colwidth="42pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="6" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Patients #(%</entry>
+                  <entry />
+                  <entry>Patients #(%</entry>
+                  <entry />
+                  <entry>Patients #(%</entry>
+                </row>
+                <row>
+                  <entry>Bleeding</entry>
+                  <entry>total)</entry>
+                  <entry>Prolapse</entry>
+                  <entry>total)</entry>
+                  <entry>Stage</entry>
+                  <entry>total)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Mild</entry>
+                  <entry> 4(18.2)</entry>
+                  <entry>Mild</entry>
+                  <entry>10(45.5)</entry>
+                  <entry>I</entry>
+                  <entry> 6(27.3)</entry>
+                </row>
+                <row>
+                  <entry>Moderate</entry>
+                  <entry>12(54.5)</entry>
+                  <entry>Moderate</entry>
+                  <entry> 6(27.3)</entry>
+                  <entry>II</entry>
+                  <entry>10(45.5)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>early</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Severe</entry>
+                  <entry> 6(27.3)</entry>
+                  <entry />
+                  <entry />
+                  <entry>IIIa</entry>
+                  <entry> 6(27.3)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>IIIb</entry>
+                  <entry> 0(0%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>IV</entry>
+                  <entry> 0(0%)</entry>
+                </row>
+                <row>
+                  <entry>Total</entry>
+                  <entry>22(100%0</entry>
+                  <entry />
+                  <entry>15(72.3)</entry>
+                  <entry />
+                  <entry>22(100)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00078-en" num="0075">The therapeutic anoscope provided RF energy across the rectal tissue under a gentle compression, as described herein, to occlude the vascular supply to the hemorrhoid in order to avoid unnecessary damage to the surrounding tissues. The anoscope has a temperature sensor and is inserted intra-anally and the horizontal tissue fold just proximal to the internal hemorrhoid is clamped. The RF energy then is delivered to the clamped tissue until the tissue temperature reaches 55-60° C. The time of RF application ranged from 7 seconds to 29.6 seconds.</p>
+      <p id="p-00079-en" num="0076">All internal hemorrhoids in left lateral, right anterior, and right posterior positions were treated during one procedure. The twenty two patients (100%) were followed at 4 weeks after the procedure. Sixteen patients (73%) were available at an average 13.1 months follow-up [range: 12.7-17.1 months].</p>
+      <p id="p-00080-en" num="0077">At 4 weeks follow-up, 3 patients reported 1 episode of mild anal bleeding (13.6% vs. 100% pre-operatively or 86.7% improvement in the group), 1 patient reported mild prolapse (4.5% vs. 72.3% pre-operatively or 67.8% improvement in the group). Among 3 patients who reported mild bleeding at 4 weeks follow-up, 1 patient pre-operatively had moderate bleeding and moderate prolapse, 1 patient pre-operatively had moderate bleeding and no prolapse, and 1 patient pre-operatively had severe bleeding and mild prolapse. At an average 16.7 months follow-up, two patients who had mild anal bleeding at 4 weeks follow-up reported no anal bleeding, and one patient was not available for a long-term follow-up. The patient, who reported a mild prolapse and no bleeding at 4 weeks follow-up, pre-operatively had severe bleeding and mild prolapse. This patient reported a resolution of the prolapse at 13.3 months follow-up. The information on the symptomatic patients at 4 weeks follow-up is summarized in Table 4.</p>
+      <p id="p-00081-en" num="0078">At an average 13.1 months follow-up, 1 patient reported episodic mild anal bleeding (4.5% vs. 100% in the group or 95.5% improvement), which pre-operatively reported severe bleeding and mild prolapse. None of the patients reported prolapse at an average 13.1 months follow-up. All patients reported “significant improvement” in their hemorrhoidal symptoms at an average follow-up of 13.1 months. The information on the symptomatic patient at 13.3 months follow-up is summarized in Table 5.</p>
+      <p id="p-00082-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="70pt" align="left" />
+              <colspec colname="4" colwidth="63pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" rowsep="1">TABLE 4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Symptoms at an</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Symptoms at </entry>
+                  <entry>Pre-operative</entry>
+                  <entry>averae 13.1 months</entry>
+                </row>
+                <row>
+                  <entry>Patient</entry>
+                  <entry>4 weeks</entry>
+                  <entry>symptoms</entry>
+                  <entry>follow-up</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>1</entry>
+                  <entry>Mild anal </entry>
+                  <entry>Moderate bleeding and</entry>
+                  <entry>No bleeding and no</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>bleeding</entry>
+                  <entry>moderate early</entry>
+                  <entry>prolapsed</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>prolapsed</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>2</entry>
+                  <entry>Mild anal </entry>
+                  <entry>Moderate bleeding, no</entry>
+                  <entry>No bleeding and no</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>bleeding</entry>
+                  <entry>prolapsed</entry>
+                  <entry>prolapsse</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry>3</entry>
+                  <entry>Mild anal </entry>
+                  <entry>Severe bleeding, mild</entry>
+                  <entry>No bleeding and no</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>bleeding</entry>
+                  <entry>prolapsed</entry>
+                  <entry>prolapsed</entry>
+                </row>
+                <row>
+                  <entry>4</entry>
+                  <entry>Mild prolapsed</entry>
+                  <entry>Mild prolapsed and </entry>
+                  <entry>No bleeding and no</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>severe bleeding</entry>
+                  <entry>prolapse</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00083-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="left" />
+              <colspec colname="3" colwidth="70pt" align="left" />
+              <colspec colname="4" colwidth="56pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" rowsep="1">TABLE 5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Symptoms at 13.3</entry>
+                  <entry>Pre-operative</entry>
+                  <entry>Symtpoms at 4</entry>
+                </row>
+                <row>
+                  <entry>Patient</entry>
+                  <entry>months follow-up</entry>
+                  <entry>symptoms</entry>
+                  <entry>weeks follow-up</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>1</entry>
+                  <entry>Mild bleeding </entry>
+                  <entry>Severe bleeding, mild</entry>
+                  <entry>No bleeding, no</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>and mild</entry>
+                  <entry>prolapsed, severe</entry>
+                  <entry>prolapsed, anal </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>anal pain, persistent</entry>
+                  <entry>anal pain secondary</entry>
+                  <entry>pain secondary to</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>anal fissure</entry>
+                  <entry>to anal fissure</entry>
+                  <entry>persistent anal </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>fissure</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00084-en" num="0079">The methods taught herein, as used with the bipolar RF energy for occlusion of the superior hemorrhoidal blood supply for the treatment of the early symptomatic internal hemorrhoids (stages I-III early) showed significant improvement in pre-operative bleeding and prolapse. When compared to the pre-operative symptoms, at an average 13.1 months follow-up, the mild-to-severe anal bleeding resolved in 95.5% (improved in 100%) and mild-to-early moderate hemorrhoidal prolapse resolved in 100% of the studied patients. Of 22 initially treated patients, 16 patients (73%) were available for an average 13.1 months follow-up.</p>
+      <heading id="h-00009-en" level="1">Example 3</heading>
+      <heading id="h-00010-en" level="1">Hemorrhoidal Superior Vessels Ligation Using Gentle Securing of a Rectal Tissue Fold and Suturing for Treatment of Internal Hemorrhoids</heading>
+      <p id="p-00085-en" num="0080">This example illustrates a suture technique. The rectal tissue is first identified and gently secured using a therapeutic anoscope as described herein. The tissue fold is the gently sutured to occlude the vascular supply to the hemorrhoid.</p>
+      <p id="p-00086-en" num="0081">The suture technique includes placing two sutures, led by needles that are approximately 1.5 cm to 2.5 cm in length. The sutures are substantially parallel to each other and are passed through the lateral aspects of the tissue fold. Both needles are then pulled outside the body of the anoscope along with the attached threads. The distal ends of the sutures, after the needles are cut off, are tied to each other using conventional surgical knots to form the first set of knots. By pulling on the proximal ends of the threads, the first surgical set of knots is delivered into the body of the anoscope and then pressed against the posterior surface of the tissue fold. The second set of surgical knots is then tied between the proximal ends of two threads and, using a surgeon's finger or an instrument, is delivered into the body of the anoscope and then pushed against the anterior surface of the tissue fold.</p>
+      <p id="p-00087-en" num="0082">The locking mechanism of the anoscope is then released, the gently secured tissue is released, and the anoscope is removed from the rectum. The tissue fold stays suture-fixed after the anoscope is removed. The suture assumes an oval configuration with the two sets of knots, constructs the superior hemorrhoidal blood supply, as well as constricts and fixes the redundant tissue in a gentle manner to avoid any unnecessary tissue damage to the patient.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>34</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>35</b>. A method of treating a hemorrhoid comprising:
+<claim-text>inserting an anoscope into an anus of a subject having a hemorrhoid;</claim-text><claim-text>forming a fold of rectal tissue above the hemorrhoid and a dentate line in the subject, the fold of rectal tissue including a vascular supply to the hemorrhoid;</claim-text><claim-text>securing the fold of rectal tissue with a pressure in a range of 10 kPa to 1000 kPa; and</claim-text><claim-text>occluding the vascular supply to the hemorrhoid in a targeted manner using heat, energy, or ligation to avoid removal of or necrosis of rectal tissue.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>36</b>. The method of <claim-ref idref="clm-00002-en">claim 35</claim-ref>, further including limiting the time period for securing the fold of rectal tissue to avoid removal or necrosis of the rectal tissue.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>37</b>. The method of <claim-ref idref="clm-00002-en">claim 35</claim-ref>, further comprising incorporating a portion of the hemorrhoid into the fold.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>38</b>. The method of <claim-ref idref="clm-00002-en">claim 35</claim-ref>, wherein securing the fold includes securing the fold with a pressure in the range of 50 kPa to 1000 kPa.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>39</b>. The method of <claim-ref idref="clm-00002-en">claim 35</claim-ref>, wherein forming a fold of rectal tissue includes positioning the rectal tissue between pinching surfaces of the anoscope.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>40</b>. The method of <claim-ref idref="clm-00002-en">claim 35</claim-ref>, wherein occluding the vascular supply to the hemorrhoid in a targeted manner includes heating the fold of rectal tissue at a temperature in a range of 50° C. to 65° C.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>41</b>. The method of <claim-ref idref="clm-00007-en">claim 40</claim-ref>, wherein heating the fold of rectal tissue includes applying an energy from a plurality of discrete regions on the pinching surfaces of the anoscope to a corresponding plurality of discrete areas on the fold of rectal tissue.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>42</b>. The method of <claim-ref idref="clm-00002-en">claim 35</claim-ref>, wherein occluding the vascular supply to the hemorrhoid in a targeted manner includes heating the fold of rectal tissue at a temperature in a range of 50° C. to 65° C.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>43</b>. The method of <claim-ref idref="clm-00002-en">claim 35</claim-ref>, wherein securing the fold of rectal tissue includes applying pressure to the fold of rectal tissue at an angle ranging from about 0 degrees to about 90 degrees from a central axis of the anoscope.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>44</b>. The method of <claim-ref idref="clm-00002-en">claim 35</claim-ref>, wherein occluding the vascular supply to the hemorrhoid in a targeted manner includes providing RF energy to the fold of rectal tissue.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>45</b>. The method of <claim-ref idref="clm-00002-en">claim 35</claim-ref>, wherein securing the fold of rectal tissue includes actuating a handle of the anoscope to move a shutter of the anoscope to compress the fold of rectal tissue.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>46</b>. A method of facilitating ischemic regression of a hemorrhoid comprising:
+<claim-text>inserting an anoscope into an anus of a patient having a hemorrhoid;</claim-text><claim-text>identifying rectal tissue that has a vascular supply to the hemorrhoid;</claim-text><claim-text>forming a fold of rectal tissue above the hemorrhoid and a dentate line;</claim-text><claim-text>securing the fold of rectal tissue between pinching surfaces of the anoscope; and</claim-text><claim-text>subsequently occluding the vascular supply to the hemorrhoid without removing the rectal tissue within the fold of rectal tissue to achieve ischemic regression of the hemorrhoid, wherein occluding the vascular supply to the hemorrhoid includes heating the fold of rectal tissue to a temperature within a range of 50° C. to 65° C.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>47</b>. The method of <claim-ref idref="clm-00013-en">claim 46</claim-ref>, further including limiting the time period for securing the fold of rectal tissue to avoid removal or necrosis of the rectal tissue.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>48</b>. The method of <claim-ref idref="clm-00013-en">claim 46</claim-ref>, wherein forming a fold of rectal tissue includes positioning the rectal tissue between pinching surfaces of the anoscope.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>49</b>. The method of <claim-ref idref="clm-00015-en">claim 48</claim-ref>, wherein heating the fold of rectal tissue includes applying an energy from a plurality of discrete regions on the pinching surfaces of the anoscope to a corresponding plurality of discrete areas on the fold of rectal tissue.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>50</b>. The method of <claim-ref idref="clm-00013-en">claim 46</claim-ref>, wherein securing the fold of rectal tissue includes applying pressure to the fold of rectal tissue at an angle ranging from about 0 degrees to about 90 degrees from a central axis of the anoscope.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>51</b>. The method of <claim-ref idref="clm-00013-en">claim 46</claim-ref>, wherein heating the fold of rectal tissue to a temperature within a range of 50° C. to 65° C. includes providing RF energy to the fold of rectal tissue.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>52</b>. The method of <claim-ref idref="clm-00013-en">claim 46</claim-ref>, further including facilitating visualization of the fold of rectal tissue by forming the anoscope at partially from a translucent or transparent material.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257637A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257637A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257637A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257637A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257637A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257637A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257637A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257637A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257637A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257637A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257637A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257637A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257637A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257637A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257637A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257637A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257637A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257637A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257637A1_00010.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257637A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257637A1.PDF" type="pdf" size="1426067" pages="21" />
+</lexisnexis-patent-document>

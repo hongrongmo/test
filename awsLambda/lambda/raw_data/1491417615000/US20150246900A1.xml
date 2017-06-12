@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246900A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021226" date-changed="20151128" time-changed="225957">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121138928">
+        <country>US</country>
+        <doc-number>20150246900</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14438995</doc-number>
+        <date>20131028</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>IN</country>
+        <doc-number>4484CHE2012</doc-number>
+        <date>20121029</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C07D 401/12        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>401</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C07D 213/75        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>213</main-group>
+        <subgroup>75</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C07D 401/12        20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>401</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C07D 213/75        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>213</main-group>
+        <subgroup>75</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">7</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">Process for the Synthesis of Dabigatran and Its Intermediates</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Biophore India Pharmeuticals PVT. Ltd.</orgname>
+            <role>03</role>
+            <address>
+              <city>Hyderabad</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Pullagurla</last-name>
+            <first-name>Manik Reddy</first-name>
+            <address>
+              <city>Hyderabad</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Rangisetty</last-name>
+            <first-name>Jagadeesh Babu</first-name>
+            <address>
+              <city>Hyderabad</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Nandakumar</last-name>
+            <first-name>Mecheril Valsan</first-name>
+            <address>
+              <city>Hyderabad</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>IN13000652</doc-number>
+        <date>20131028</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014068587</doc-number>
+        <date>20140508</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="165476590">
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>4484CHE2012</doc-number>
+            <kind>A</kind>
+            <date>20140502</date>
+          </document-id>
+          <application-date>
+            <date>20121029</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014068587</doc-number>
+            <kind>A2</kind>
+            <date>20140508</date>
+          </document-id>
+          <application-date>
+            <date>20131028</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246900</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20131028</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014068587</doc-number>
+            <kind>A3</kind>
+            <date>20140717</date>
+          </document-id>
+          <application-date>
+            <date>20131028</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165476589">
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>4484CHE2012</doc-number>
+            <kind>A</kind>
+            <date>20140502</date>
+          </document-id>
+          <application-date>
+            <date>20121029</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014068587</doc-number>
+            <kind>A2</kind>
+            <date>20140508</date>
+          </document-id>
+          <application-date>
+            <date>20131028</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246900</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20131028</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014068587</doc-number>
+            <kind>A3</kind>
+            <date>20140717</date>
+          </document-id>
+          <application-date>
+            <date>20131028</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention describes an improved process for the preparation of Dabigatran Etexilate (Formula-I), a pharmaceutically acceptable salt for the treatment of thromboses, cardiovascular diseases etc. and intermediates involved in the synthesis.</p>
+    <p id="p-a-00002-en" num="0000">
+      <chemistry id="chema-00001-en" num="00001">
+        <img id="imga-00001-en" he="74.59mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150246900A1_00001.PNG" img-format="png" original="US20150246900A1-20150903-C00001.TIF" />
+      </chemistry>
+    </p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150429</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246900A1</docdb-publication-number>
+      <docdb-application-id>444209703</docdb-application-id>
+      <new-owner>BIOPHORE INDIA PHARMACEUTICALS PVT. LTD., INDIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:PULLAGURLA, MANIK REDDY;RANGISETTY, JAGADEESH BABU;NANDAKUMAR, MECHERIL VALSAN;REEL/FRAME:035524/0683</free-text-description>
+      <effective-date>
+        <date>20150422</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present nvention describes an improved process for the preparation of Dabigatran Etexilate (1), a pharmaceutically acceptable salt for the treatment of thromboses, cardiovascular diseases etc., and its intermediates involved in the synthesis.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">Dabigatran Etexilate, chemically known as β-Alanine, N[[2-[[[4-[[[(hexyloxy)carbonyl]amino]iminomethyl]phenyl]amino]methyl]-1-methyl-1H-benzimidazol-5-yl]carbonyl]-N-2-pyridinyl-, ethyl ester, methanesulfonate, is a thrombin inhibitor. Dabigatran etexilate was first described in International patent application WO 98/37075 and the process for manufacture was reported in WO 2006/000353 and also in <i>J. Med. Chem, </i>2002, 45, 1757 by N. Hauel et al.</p>
+      <p id="p-00003-en" num="0003">Two general routes have been reported for the synthesis of Dabigatran etexilate. The first processwas disclosed in WO98/37075 and a modification of the first route has been described in WO 2006/000353. Both the synthetic routes start from the 3-nitro-4-methylamono-benzoic acid and are presented in Scheme 1.</p>
+      <p id="p-00004-en" num="0000">
+        <chemistry id="chem-00001-en" num="00002">
+          <img id="img-00001-en" he="227.08mm" wi="157.56mm" alt="embedded image" img-content="chem" file="US20150246900A1_00002.PNG" img-format="png" original="US20150246900A1-20150903-C00002.TIF" />
+        </chemistry>
+        <chemistry id="chem-00002-en" num="00003">
+          <img id="img-00002-en" he="50.12mm" wi="106.00mm" alt="embedded image" img-content="chem" file="US20150246900A1_00003.PNG" img-format="png" original="US20150246900A1-20150903-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00005-en" num="0004">Both the routes involved three common intermediates II, III and VI, of which VI can be obtained from either IV or V depending on the substituted glycine used for the synthesis. According to the previous reports, all the intermediates required column purification to prepare substantially pure Dabigatran and the processes are not suitable for industrial scale production of the same. The synthesis of intermediate II has been reported in several patents and require either a chromatographic purification or a tedious purification procedure such as converting into the HCl salt followed by recrystallization to obtain 97% pure intermediate II. In both cases, the yield is less than 50%. Similarly, Intermediate III is one of the key intermediates in the Dabigatran synthesis and the process involves the reduction of nitro group either by hydrogenation in presence of Pd/C or in presence of sodium dithionate.Both the methods resulted in the formation of product with higher level of impurities. WO 2002/004397 reports the product as a solid and in US 20110082299 the intermediate is reported as a dark red coloured viscous liquid and used without further purification. However, it is essential that the key intermediate III must be very pure to obtain the intermediate VI as very purecompound thereby isolating the Dabigatran API with required purity in the final stage.</p>
+      <p id="p-00006-en" num="0005">Similarly, the intermediates IV and V prepared by either CDI or PPA mediated coupling with glycine derivatives tbllowed by acetic acid mediated cyclizationresulted in the formation of highly impure products, and purified by either column chromatography or by converting the crude reaction mixture to suitable salts. Both the methods afforded low yield and purity thereby the process is not suitable for the commercial scale production of Dabigatran.</p>
+      <heading id="h-00003-en" level="1">OBJECT OF THE INVENTION</heading>
+      <p id="p-00007-en" num="0006">The primary object of the invention is to develop an improved process Rif the industrial scale production of Dabigatran.</p>
+      <p id="p-00008-en" num="0007">Another object of the invention is to provide a is to provide a suitable purification method for preparation of intermediate II.</p>
+      <p id="p-00009-en" num="0008">Another aspect of the invention is to provide an improved process for preparation of compound of formula III.</p>
+      <p id="p-00010-en" num="0009">Further object of the invention is to provide an efficient process for preparation of compound of formula IV.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00011-en" num="0010">Most of the prior art processes for the synthesis of Dabigatran requires tedious purification methods for the intermediates II, III, IV, V and VI. In earlier reports, the intermediate II was purified either by preparing the HCl or HBr salt or by column chromatography, which resulted low yield and purity of II.</p>
+      <p id="p-00012-en" num="0011">One aspect of the invention was to obtain a suitable method fur purifying the intermediate II in the free base form. The known art for the purification of intermediate II is by converting it in to the corresponding acid salts and recrystallization of the salt, which in turn would result in the yield loss.</p>
+      <p id="p-00013-en" num="0012">Inventors have found a novel method of purifying the free base of intermediate II by recrystallizing the compound in an aprotic solvent such as hexane, toluene, xylene etc. Preferably the solvent used was hexane or a mixture of toluene and hexane.</p>
+      <p id="p-00014-en" num="0013">The temperature used for the recrystallization was from 50-100° C. followed by cooling to 30-0° C.</p>
+      <p id="p-00015-en" num="0000">
+        <chemistry id="chem-00003-en" num="00004">
+          <img id="img-00003-en" he="34.04mm" wi="58.59mm" alt="embedded image" img-content="chem" file="US20150246900A1_00004.PNG" img-format="png" original="US20150246900A1-20150903-C00004.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00016-en" num="0014">The reduction of intermediate II to the corresponding amino compound (III) was reported using hydrogenation in presence of Pd/C or with sodium dithionate. Both the methods yielded the product with higher level of impurities, which needs lengthy purification methods. The main drawback with the reported sodium dithionate reduction in WO 2009111997 was the formation of impurities. The intermediate III was isolated as brown viscous oil and proceeded to the next stage without further purification. The inventors have fbund that such process without purification results in low yields and low purity of the Formula IV, the key intermediate in the dabigatran synthesis.</p>
+      <p id="p-00017-en" num="0015">Another aspect of the invention was to develop an economical and scalable process for the preparation of III without affecting the yield and purity. Inventors have found that the combination of sodium dithionate with an organic or inorganic base as reducing agent dramatically simplified the reduction process and yielded intermediate III with excellent yield and purity as a solid.</p>
+      <p id="p-00018-en" num="0016">The inorganic base used was Na<sub>2</sub>CO<sub>3</sub>, K<sub>2</sub>CO<sub>3</sub>, NaHCO<sub>3 </sub>and the like or an organic base such as triethyl amine, pyridine, DIPEA and preferably potassium carbonate.</p>
+      <p id="p-00019-en" num="0017">The reduction was carried out in presence of a base in a water miscible solvent such as tetrahydrofuran, alcohols, acetone, or ether solvents in combination with water preferably in a mixture of dioxane and water. The product was purified by recrystallization using ethyl acetate as solvent.</p>
+      <p id="p-00020-en" num="0000">
+        <chemistry id="chem-00004-en" num="00005">
+          <img id="img-00004-en" he="34.04mm" wi="59.01mm" alt="embedded image" img-content="chem" file="US20150246900A1_00005.PNG" img-format="png" original="US20150246900A1-20150903-C00005.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00021-en" num="0018">Since intermediate IV is a key intermediate in the synthesis of Dabigatran, substantially pure IV is necessary to achieve good conversion and purity in the next stages of the process. In the prior art the synthesis has been achieved by the CDI mediated amide formation in THF at 66-70° C. fur 5 h, followed by the acetic acid mediated cyclization. The reaction produces a highly impure intermediate IV and it required tedious procedure for the purification such as column chromatography or converting it into the corresponding acid salts, In US 20110224441, the intermediate IV was purified by making the oxalate salt, in WO 2008095928 as the HBr salt and in WO 98/37075 the same was purified by column chromatography.</p>
+      <p id="p-00022-en" num="0019">Another object of the invention provides an improved process fur the conversion of intermediate III to IV using DCC or EDC optionally in the presence of HOBt at 25-35° C. followed by acetic acid mediated cyclization to the corresponding benzimadazole intermediate IV. The advantage of the new methodology compared with the reported CDI mediated coupling reaction is the milder reaction conditions and low level of impurity formation during the process.</p>
+      <p id="p-00023-en" num="0020">The reaction may also be carried using DCC or EDC in presence of an activating agent such as HOBT, N-hydroxy succinimide, DMAP etc. in aprotic solvent at temperatures ranging from 20-40° C.</p>
+      <p id="p-00024-en" num="0021">The present invention also provides a method for purifying the intermediate IV in the free base form by recrystallization using a suitable solvent. The solvent used for the recrystallization was selected from ethyl acetate, isobutyl acetate, isopropyl acetate, IPA at temperatures ranging from 0-25° C. and preferably ethyl acetate or IPA.</p>
+      <p id="p-00025-en" num="0000">
+        <chemistry id="chem-00005-en" num="00006">
+          <img id="img-00005-en" he="38.35mm" wi="74.25mm" alt="embedded image" img-content="chem" file="US20150246900A1_00006.PNG" img-format="png" original="US20150246900A1-20150903-C00006.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00026-en" num="0022">Intermediate VI was prepared by the reaction of IV with HCl and ethanol followed by reaction with ammonium carbonate using a known art for converting cyano to the corresponding amidines.</p>
+      <p id="p-00027-en" num="0023">Dabigatran synthesis was completed by the reaction of intermediate VI with n-hexyl ehloroformate in presence of a suitable base in a protic solvent or water or mixture of water and an organic solvent.</p>
+      <p id="p-00028-en" num="0024">Finally the dabigatran free base was converted in to the mesylate salt by reacting with methanesulphonic acid in acetone.</p>
+      <p id="p-00029-en" num="0025">The present invention is schematically represented as follows.</p>
+      <p id="p-00030-en" num="0000">
+        <chemistry id="chem-00006-en" num="00007">
+          <img id="img-00006-en" he="207.86mm" wi="157.90mm" alt="embedded image" img-content="chem" file="US20150246900A1_00007.PNG" img-format="png" original="US20150246900A1-20150903-C00007.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00031-en" num="0026">In conclusion, the authors have disclosed an improved industrial scale process for the synthesis of Dabigatran and its intermediates.</p>
+      <heading id="h-00005-en" level="1">EXAMPLE 1</heading>
+      <p id="p-00032-en" num="0027">Preparation of Ethyl 3-[[4-(methylamino)-3-nitrobenzoyl](pyridin-2-yl)amino]-propanoate (II)</p>
+      <p id="p-00033-en" num="0000">
+        <chemistry id="chem-00007-en" num="00008">
+          <img id="img-00007-en" he="91.02mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150246900A1_00008.PNG" img-format="png" original="US20150246900A1-20150903-C00008.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00034-en" num="0028">100 g of compound I was dissolved in 1 L of dichloromethane under nitrogen atmosphere and cooled to 0-5° C. Thionyl chloride was added to the reaction mixture for 1 h and the reaction mixture was boiled to reflux. Maintained the reaction mass under the same temperature for 5-6 h. After completion of the reaction, excess thionyl chloride was removed by co-distillation with dichloromethane and finally the solvent was completely removed under vacuum. The acid chloride was then dissolved in dichloromethane under an inert atmosphere and triethyl amine was added to the reaction mixture. To the reaction mixture was added slowly a solution of ethyl-3-(pyridine-2-ylamino) propanoate in dichloromethane. The reaction mixture was maintained at the same temperature for another 6-12 h. After completion of the reaction, the reaction mass was diluted water and extracted the product with dichloromethane. The combined organic layers were separated and dried over anhydrous sodium sulphate. The solvent was distilled off under vacuum and the product was purified by hexane.</p>
+      <p id="p-00035-en" num="0029">Yield: 80%, HPLC: &gt;98%</p>
+      <heading id="h-00006-en" level="1">EXAMPLE 2</heading>
+      <p id="p-00036-en" num="0030">Preparation of Ethyl 3-[[3-amino-4-(triethylamino)benzoyl](pyridin-2-yl)amino]-propanoate (III)</p>
+      <p id="p-00037-en" num="0000">
+        <chemistry id="chem-00008-en" num="00009">
+          <img id="img-00008-en" he="71.97mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150246900A1_00009.PNG" img-format="png" original="US20150246900A1-20150903-C00009.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00038-en" num="0031">100 g of compound II was dissolved in 1 L of a mixture of dioxane and water and heated the reaction mixture to 50° C. Sodium dithionate (4.5 equiv.) and potassium carbonate (0.3 equiv.) was added to the reaction mixture and maintained at the same temperature for 2-6 h. After completion of the reaction, filtered the reaction mixture and evaporated the solvent. Water was added to the crude mixture and extracted the product with ethyl acetate. The organic layer was dried over anhydrous sodium sulphate and filtered. The solvent was removed under vacuum yielded the compound III as a brown viscous liquid. The product was purified by recrystallization from ethylacetate.</p>
+      <p id="p-00039-en" num="0032">Yield 80%; HPLC: &gt;98%</p>
+      <heading id="h-00007-en" level="1">EXAMPLE-3</heading>
+      <p id="p-00040-en" num="0033">Preparation of 3-([2-[(4-cyanophenyl amino)-methyl]-1-methyl-1H-benzimidazole-5-carbonyl]-pyridin-2-yl-amino)ethyl Propionate (IV).</p>
+      <p id="p-00041-en" num="0000">
+        <chemistry id="chem-00009-en" num="00010">
+          <img id="img-00009-en" he="91.19mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150246900A1_00010.PNG" img-format="png" original="US20150246900A1-20150903-C00010.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00042-en" num="0034">100 g of compound III was dissolved in dichloromethane under nitrogen atmosphere. Added 41 mL of triethyl amine and 39 g of HOBT to the reaction mass and stirred tzar 15 minutes. Cooled to 20° C. and added 77 g of N-(4-Cyanophenyl) glycine and a solution of DCC in dichloromethane to the reaction mass and stirred for 30 minutes. Filtered the precipitated solids, dried the filtrate with anhydrous sodium sulphate and removed solvent under vacuum. Acetic acid was added to the crude mass and refluxed for 2-6 h. After completion of the reaction, cooled the reaction mixture to room temperature and water was added. The pH of the solution was adjusted to 6-8 and extracted the product with dichloromethane. The organic layer was collected, dried over sodium sulphate and removed under vacuum. The crude material obtained was purified by recrystallization in ethyl acetate.</p>
+      <p id="p-00043-en" num="0035">Yield: 84%, HPLC: &gt;97%</p>
+      <heading id="h-00008-en" level="1">EXAMPLE-4</heading>
+      <p id="p-00044-en" num="0036">Preparation of N-[([(amidinophenyl)-amino]methyl)-1-methyl-1H-benzimidazole-5-carbonyl]-N-(2-pyridyl)-3-aminopropionic Acid (VI)</p>
+      <p id="p-00045-en" num="0000">
+        <chemistry id="chem-00010-en" num="00011">
+          <img id="img-00010-en" he="53.59mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150246900A1_00011.PNG" img-format="png" original="US20150246900A1-20150903-C00011.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00046-en" num="0037">100 g of compound IV was dissolved in a mixture of 500 mL of dichloromethane and 50 mL of ethanol and cooled the reaction mixture to 0° C. Dry HCl gas was passed through the solution for 5-7 h and stirred the reaction mixture at room temperature for another 36 h. After completion of the reaction, ethanol was removed from the reaction mixture and 200 g of ammonium carbonate and 500 mL of ethanol was added. Stirred the reaction mass for another 24 h. Filtered the solids and the solvent was removed under vacuum. The product was purified by recrystallization using a mixture ethyl acetate and ethanol.</p>
+      <p id="p-00047-en" num="0038">Yield: 90%, HPLC: &gt;98%</p>
+      <heading id="h-00009-en" level="1">EXAMPLE-5:</heading>
+      <p id="p-00048-en" num="0039">Preparation of Ethyl N-[(N′-hexyloxycarbonyl)amidino]phenyl)amino[methyl)-1-methyl-1H-benzimidazole-5-carbonyl]-N-(2-pyridyl)-3-aminopropionate Mesylate (VI)</p>
+      <p id="p-00049-en" num="0000">
+        <chemistry id="chem-00011-en" num="00012">
+          <img id="img-00011-en" he="88.48mm" wi="126.24mm" alt="embedded image" img-content="chem" file="US20150246900A1_00012.PNG" img-format="png" original="US20150246900A1-20150903-C00012.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00050-en" num="0040">Method: A</p>
+      <p id="p-00051-en" num="0041">50 g of compound VI was dissolved in 400 ml of acetone and 250 ml of Water,Cool reaction mixture to 10-15° C. 30 g of Potassium carbonate added lot wise and 3.25 ml of n-hexyl chloroformate was added slowly to the reaction mixture and stirred for another 1 h. After completion of the reaction the precipitated product is filtered of washed with acetone/Water and material was recrystallized by using acetone and Water. Product is dissolved in 250 ml of acetone and cooled to 10-15° C. 7 g of methane sulphonic acid in acetone was slowly added to the reaction mixture with stirring and the precipitated material was isolated by filtration. The product was purified by recrystallizating from acetone. Yield: 60 g (80-85%) HPLC purity 99.5%.</p>
+      <p id="p-00052-en" num="0042">Method B:</p>
+      <p id="p-00053-en" num="0043">100 g of compound VI was dissolved in 500 mL of dry dichloromethane and cooled the reaction mixture to 0-5° C. 100 mL of triethyl amine was slowly added to the reaction mixture and stirred for 15 minutes. Added 65 mL of n-hexyl chloroformate to the reaction mixture for a period of 15 minutes and the stirring was continued for another ih. After completion of the reaction, water was added to the reaction mixture and extracted the product with dichloromethane. The organic layer was dried over anhydrous sodium sulphate and removed the solvent under vacuum. The crude reaction mixture was purified by recrystallization using ethyl acetae. The product thus obtained was dissolved in 500 mL of acetone and cooled the solution to 0-5° C. 10 mL of Methane sulphonic acid was slowly added to the reaction mixture. The precipitated solid was isolated and purified by recrystallization using acetone.</p>
+      <p id="p-00054-en" num="0044">Yield 75%, HPLC: ≧99.5%</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>We claim:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A process for reduction of compound of formula II to III in the presence of sodium dithionate in the presence of a base</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00013">
+          <img id="imgc-00001-en" he="75.86mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150246900A1_00013.PNG" img-format="png" original="US20150246900A1-20150903-C00013.TIF" />
+        </chemistry>
+      </claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The process as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the base employed is selected from inorganic bases like sodium carbonate, potassium carbonate and sodium bicarbonate.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The process as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the base employed is selected from organic bases like triethylamine, pyridine and DIPEA.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en" independent="true">
+      <claim-text>
+        <b>4</b>. A process for converting compound of formula III to IV by treating the compound III with DCC or EDC in presence of an activating agent, followed by acetic acid mediated cyclization to IV</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00002-en" num="00014">
+          <img id="imgc-00002-en" he="62.57mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150246900A1_00014.PNG" img-format="png" original="US20150246900A1-20150903-C00014.TIF" />
+        </chemistry>
+      </claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The process as claimed in <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the activating agent employed is selected from hydroxybenzotriazole HOBt), 4-dimethylaminopyridine (DMAP) and N-hydroxysuccinimide.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The process of <claim-ref idref="clm-00004-en">claim 4</claim-ref> wherein the compound of formula IV is further used for preparation of Dabigatran.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>
+        <b>7</b>. A process for preparation of Dabigatran which comprises the steps of:
+<claim-text>i) reduction of compound of formula II to III in the presence of sodium dithionate in the presence of a base;</claim-text><claim-text>ii) treatment of III with DCC or EDC in presence of an activating agent, followed by acetic acid mediated cyclization to IV.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246900A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246900A1-20150903-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246900A1_00002.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246900A1-20150903-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246900A1_00003.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246900A1-20150903-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246900A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246900A1-20150903-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246900A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246900A1-20150903-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150246900A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246900A1-20150903-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150246900A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246900A1-20150903-C00007.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150246900A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246900A1-20150903-C00008.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150246900A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246900A1-20150903-C00009.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150246900A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246900A1-20150903-C00010.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150246900A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246900A1-20150903-C00011.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150246900A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246900A1-20150903-C00012.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150246900A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246900A1-20150903-C00013.TIF" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150246900A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246900A1-20150903-C00014.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150246900A1.PDF" type="pdf" size="302926" pages="8" />
+</lexisnexis-patent-document>

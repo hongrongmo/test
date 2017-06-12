@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257976A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030219" date-changed="20150928" time-changed="061042">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121316024">
+        <country>US</country>
+        <doc-number>20150257976</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14722789</doc-number>
+        <date>20150527</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A61J   1/16        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>J</subclass>
+        <main-group>1</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A45F   5/02        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>45</class>
+        <subclass>F</subclass>
+        <main-group>5</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A61J   1/16        20130101 FI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>J</subclass>
+        <main-group>1</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A45C2200/05        20130101 LA20130617BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>C</subclass>
+        <main-group>2200</main-group>
+        <subgroup>05</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130617</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A45F   5/02        20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>F</subclass>
+        <main-group>5</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A45F2200/0566      20130101 LA20130617BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>F</subclass>
+        <main-group>2200</main-group>
+        <subgroup>0566</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130617</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">17</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">TRANSPORTABLE AND SURFACE-MOUNTING SYSTEM FOR AN AUTO-INJECTION CASE</invention-title>
+    <related-documents date-changed="20150917">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13608441</doc-number>
+              <date>20120910</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007227</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61536888</doc-number>
+          <date>20110920</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Puglisi</last-name>
+            <first-name>Gregory</first-name>
+            <address>
+              <city>Dix Hills</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Puglisi</last-name>
+            <first-name>Gregory</first-name>
+            <address>
+              <city>Dix Hills</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173669773">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257976</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150527</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173669765">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257976</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150527</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">An auto-injection device holder includes a main body having at least a front wall, a back wall and a bottom wall, and an open top. The walls define a cavity for receiving at least partially therein at least one auto-injection device. An electrical circuit is mounted to the main body to provide information to a user of the auto-injection device holder. A switch is mounted on a wall of the main body and may be pressed by a user of the holder. The electrical circuit includes a read only memory having pertinent information stored digitally therein. When the switch is activated, the information stored digitally in the read only memory is converted to an analog signal which is provided to the speaker so that the user may hear the pertinent information, such as instructions on how to use the auto-injection device held by the holder.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is related to U.S. Provisional Application Ser. No. 61/536,888, which was filed on Sep. 20, 2011, and is entitled “Transportable and Surface-Mounting System for an Auto-Injection Case”, the disclosure of which is hereby incorporated by reference and on which priority is hereby claimed.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">1. Field of the Invention</p>
+      <p id="p-00003-en" num="0003">The present invention relates to devices and systems for the storage and transportation of auto-injection devices.</p>
+      <p id="p-00004-en" num="0004">2. Description of the Related Art</p>
+      <p id="p-00005-en" num="0005">Anaphylaxis is a severe allergic reaction that is rapid in onset and can be life-threatening Anaphylaxis can be triggered by a variety of substances including foods, medications, latex, and bee venom, but can also occur in the absence of allergens, for example, during physical exercise, or even with no known trigger. Because these and other sources of allergy are prevalent in everyday life, one who is at risk cannot predict when they may come in contact with a potential trigger. When anaphylaxis occurs, it typically is very rapid in onset and requires immediate treatment to help reverse or abort the allergic reaction. As a result, many people with known allergies must have the appropriate medication readily available at all times.</p>
+      <p id="p-00006-en" num="0006">In order to treat anaphylaxis, many allergy sufferers utilize a device that enables them to quickly administer an appropriate medication, such as epinephrine. These devices are commonly referred to as “auto-injection devices” or “auto-injectors”, and are exemplified by the injector sold by DEY L.P., under the trademark EpiPen®. Auto-injection devices generally contain one or two doses of epinephrine and include a needle for quickly injecting the medication intramuscularly. In most cases, it is recommended that individuals at risk for anaphylaxis have an auto-injection device readily available at all times.</p>
+      <p id="p-00007-en" num="0007">There are several difficulties associated with the storage of auto-injector devices. For example, the medicament contained within the device must be properly stored, timely administered, and have its efficacy maintained. First, an auto-injector device, such as the EpiPen® device, is approximately the size of a large magic marker, and can be easily misplaced, leading to a delay in the treatment of a reaction. Second, delivery of medicament from an auto-injector must be immediate, and specific instructions must be followed to ensure proper delivery of the medicament at the time of an anaphylactic reaction. Third, users must guard against the medicament within the device from becoming less efficacious, and therefore, potentially ineffective at the time of use. Loss of efficacy can occur with exposure to UV light, temperature extremes, and use of the device after the expiration date. A delay in use, improper use of the auto-injector, or loss of medication efficacy, may lead to worsening of an allergic reaction, and is a risk factor for worsening anaphylaxis, and increases the risk of death.</p>
+      <p id="p-00008-en" num="0008">In response to some of the above issues, several protective cases have been developed for carrying auto-injection devices while shielding them from both mechanical forces and UV radiation, such as is disclosed in U.S. Pat. No. 6,595,362 (Penney, et al.) and U.S. Pat. No. 5,950,827 (Odom, et al.). Each patent discloses a case that surrounds and completely encloses an auto-injection device, protecting the device from damage and completely shielding it from light. Both types of cases are of appropriate size and can be easily carried by a user, for example, in a typical pants pocket.</p>
+      <p id="p-00009-en" num="0009">While some protective cases for auto-injection devices, such as those disclosed by the Odom, et al. and Penney, et al. patents, have alleviated some of the problems associated with the storage of such a device, other difficulties persist. For example, in places visited regularly, such as a home or office, such cases are often stored out of view, in pockets or drawers, making them easily forgotten when traveling and difficult to locate in times of urgent need. This latter issue is highlighted in situations where the device user, who is often most capable of locating the device, is suffering an anaphylactic reaction and unable either to self-medicate or to describe the device location. In addition, these types of cases are intended to replace the existing carrying cases, thereby concealing the recognizable auto-injection device. This potentially delays the ability of a bystander to locate the device for individuals undergoing a reaction, and unable to communicate because of age or the reaction itself.</p>
+      <p id="p-00010-en" num="0010">More recently, U.S. Pat. No. 7,434,686 (Prindle) addresses some of these problems by disclosing a storage system for auto-injection devices that holds the devices at a location where anaphylaxis is more likely to occur or where an allergy sufferer is frequently found. Such a system could be used in place of, or in addition to, having each individual sufferer carry a device everywhere with him/her, and would hold devices ready at critical locations, such as a home or office, restaurants, malls, and schools.</p>
+      <p id="p-00011-en" num="0011">While conventional storage systems for auto-injection devices, such as the one disclosed by the Prindle patent, have alleviated some of the problems associated with each individual sufferer having to carry a device everywhere with him/her, and having devices ready at critical locations, other difficulties persist. For example, the storage system disclosed by the Prindle patent maintains the auto-injection device in a fixed location, as the device requires screws to support it on a flat surface. Therefore, the convenience for allergy sufferers to be able to easily move the device to another location is lost with use of the Prindle storage system. The Prindle patent also teaches complete enclosure of the auto-injection device, which creates the potential for an allergy sufferer or care provider not to recognize that an auto-injection device is present within the storage unit. Further, because the Prindle storage system is completely enclosed, it requires the user to open the storage unit in order to access the device. This could potentially delay access to the auto-injection device if one undergoing a reaction or a care provider is not familiar with its proper use or if the opening device malfunctions.</p>
+      <heading id="h-00003-en" level="1">OBJECTS AND SUMMARY OF THE INVENTION</heading>
+      <p id="p-00012-en" num="0012">An object of the present invention is to provide a surface-mounting system for auto-injectors that enables a user to store an auto-injection device(s), shielding the medicament within the device from UV light, but at the same time not concealing the device, and providing unobstructed access to the auto-injector(s), thereby making it easily recognizable and quickly located and accessed in times of need.</p>
+      <p id="p-00013-en" num="0013">It is another object of the present invention to provide a system that enables the auto-injection device to be highly visible, thereby significantly reducing the potential for an allergy sufferer or care provider to not even recognize that an auto-injection device is present.</p>
+      <p id="p-00014-en" num="0014">It is still another object of the present invention to provide an audio prompting circuit mounted to a housing or case for an auto-injector which can be activated to play a recording that contains vital information such as instructions for proper use of the auto-injector(s) contained within the case.</p>
+      <p id="p-00015-en" num="0015">In accordance with one embodiment of the present invention, a case or holder is provided for temporarily mounting an auto-injector to a surface without concealing the auto-injector. The case includes a main body having a front wall and an opposite back wall, a cavity defined by and between the front and back walls, and a bottom wall. The back wall contains a mounting strip fixed to an exterior surface of the back wall for temporarily or permanently mounting the case to a supporting wall or other surface, such as the front or side of a refrigerator. The strip may be a Velcro™ hook and loop fastener, which releasably engages a mating Velcro™ fastener mounted on the wall or surface. Or, for example, the mounting strip may be a magnetic structure for mounting the case or holder to a metal surface, such as a refrigerator or other appliance. The back wall may contain holes, allowing the case to be fixed to a wall by nails or screws.</p>
+      <p id="p-00016-en" num="0016">The front wall contains a surface to display vital information, such as name and emergency contacts and/or information describing the proper use of the auto-injector contained within the case. In addition, an indicator of the auto-injector expiration date can be contained within or mounted on the front wall of the case. Furthetmore, the bottom wall of the case preferably incorporates an electrical circuit that can be activated to provide pre-recorded vital information such as instructions for proper use of the auto-injector(s) contained within the case.</p>
+      <p id="p-00017-en" num="0017">In accordance with another embodiment of the present invention, a case is provided for temporarily mounting one or more auto-injectors to an article of clothing. The case, which may be made of a soft material, includes a front wall and opposite back wall, and a pair of lateral side walls extending between the front and back walls to form therewith a cavity for receiving and removably holding the auto-injectors. The back wall includes a mounting clip fixed to the exterior surface of the back wall for mounting the case or holder to an article of clothing. The front wall may include a space for displaying vital information, such as name and emergency contacts and/or information describing the proper use of the auto-injector contained within the case. In addition, an indicator of the auto-injector expiration date may be mounted on the front wall or a lateral side wall of the case. Preferably housed within the cavity of the case is an electrical circuit which can be activated to play a recording that contains vital information such as instructions for proper use of the auto-injector(s) contained within the case.</p>
+      <p id="p-00018-en" num="0018">In accordance with yet another embodiment of the present invention, a holder is provided for housing a pair of auto-injector devices. The holder includes either front and back walls, or a single hollow tubular member. The front and back walls or single hollow tubular member defines an orifice, which receives a portion of the outer casing of at least one auto-injector device. The holder may further include an electrical circuit which can be activated to play a recording that contains vital information such as instructions for proper use of the auto-injector(s) contained within the holder.</p>
+      <p id="p-00019-en" num="0019">In accordance with still another embodiment of the present invention, a holder of an auto-injector device has a tubular member and a cap releasably mounted on the tubular member on an open end thereof. The holder may further include an electrical circuit which can be activated by opening the cap of the holder which plays a recording that contains vital information such as instructions for proper use of the auto-injector(s) contained within the holder.</p>
+      <p id="p-00020-en" num="0020">In accordance with a further embodiment of the present invention, a display board containing vital information such as instructions for proper use of an auto-injector is outfitted with an audio system which can be activated by opening the cap of the holder which plays a recording that contains vital information such as instructions for proper use of an auto-injector.</p>
+      <p id="p-00021-en" num="0021">These and other objects, features and advantages of the present invention will be apparent from the following detailed description of illustrative embodiments thereof, which is to be read in connection with the accompanying drawings.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 1</figref> is a top plan view of a first embodiment of a device of the present invention.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 2</figref> is a front isometric view of the first embodiment of a device of the present invention.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 3</figref> is rear right perspective view of the first embodiment of a device of the present invention.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 4</figref> is front left perspective view of the first embodiment of a device of the present invention.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 5</figref> is a rear right elevational view of the first embodiment of a device of the present invention, with a cutaway section.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 6</figref> is front right perspective view of a second embodiment of a device of the present invention.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 7</figref> is front elevational view of the second embodiment of a device of the present invention.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 8</figref> is a right elevational view of the second embodiment of a device of the present invention.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 9</figref> is a top plan view of the second embodiment of a device of the present invention.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 10</figref> is a front right elevational view of the second embodiment of a device of the present invention, with a cutaway section.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 11</figref> is right side elevational view of a third embodiment of a device of the present invention.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 12</figref> is front elevational view of the third embodiment of a device of the present invention.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 13</figref> is front right elevational view of a fourth embodiment of a device of the present invention, and illustrating two auto-injector devices held thereby.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 14</figref> is a rear elevational view of the fourth embodiment of a device of the present invention.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 15</figref> is another front right elevational view of the fourth embodiment of a device of the present invention, with a cutaway section.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 16</figref> is a front left elevational view of a fifth embodiment of a device of the present invention.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 17</figref> is a rear right elevational view of the fifth embodiment of a device of the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS</heading>
+      <p id="p-00039-en" num="0039">In accordance with a first embodiment of the present invention, as shown in <figref>FIGS. 1-5</figref>, a case or holder <b>1</b> is provided for housing at least one auto-injector device. In a preferred embodiment, the case <b>1</b> includes a main body having a front wall <b>2</b>, an oppositely disposed back wall <b>3</b>, and a bottom wall <b>4</b> affixed to the front wall and back wall of the case.</p>
+      <p id="p-00040-en" num="0040">The front wall <b>2</b> is preferably generally convex in shape. More specifically, the front wall <b>2</b> extends generally axially outwardly from a front surface of the back wall <b>3</b> to define with the back wall <b>3</b> and bottom wall <b>4</b> a cavity <b>5</b> to receive and store at least one auto-injector device. The cavity <b>5</b> has preferably a generally trapezoidal shape when viewed from the top of the case <b>1</b>, as shown in <figref>FIG. 2</figref>.</p>
+      <p id="p-00041-en" num="0041">In a second embodiment shown in <figref>FIGS. 6-10</figref>, which is one that may be worn by a user, the front and back walls <b>2</b>,<b>3</b> are joined by left and right lateral walls <b>6</b>,<b>7</b> to form the cavity <b>5</b>, as shown in <figref>FIG. 6</figref>. The left and right lateral walls <b>6</b>,<b>7</b> extend parallel to each other and between the front and back walls <b>2</b>,<b>3</b>. The left and right lateral walls <b>6</b>,<b>7</b> are also joined to the bottom wall <b>4</b> at one end thereof, similar to the front and back walls <b>2</b>,<b>3</b> of the holder shown in <figref>FIG. 3</figref>. The cavity <b>5</b> in this second embodiment of <figref>FIGS. 6-10</figref> has an overall rectangular shape. The walls <b>2</b>, <b>3</b>, <b>4</b>, <b>6</b>, <b>7</b> are preferably formed from a flexible or soft material, such as leather or vinyl, so that the holder may be comfortably worn by a user and affixed to his belt or other portion of his clothing</p>
+      <p id="p-00042-en" num="0042">In the wearable embodiment of the holder shown in <figref>FIGS. 6-10</figref>, a portion of the back wall <b>3</b> extends beyond the vertical length of the front wall <b>2</b> such that a portion of the back wall <b>3</b> defines a flap that can be folded over a portion of the front wall <b>2</b> and may be releasably secured thereto by mating Velcro™ hook and loop fasteners affixed to the front and back walls <b>2</b>, <b>3</b>, snaps <b>41</b>, or other fasteners, to selectively cover and uncover a top opening of the cavity <b>5</b> so that the auto-injector may be removed therefrom.</p>
+      <p id="p-00043-en" num="0043">Returning to the first embodiment, and as shown in <figref>FIG. 2</figref>, a separator wall <b>10</b> may be situated in the cavity <b>5</b> of the holder or case <b>1</b> between the front and back walls <b>2</b>,<b>3</b> and along at least a portion of the height of the walls <b>2</b>,<b>3</b>. The separator wall <b>10</b> is provided to physically separate multiple auto-injectors housed within the cavity <b>5</b>. This separator wall <b>10</b> may be included in the wall-mountable holder of <figref>FIGS. 1-5</figref> or the wearable holder of <figref>FIGS. 6-10</figref>.</p>
+      <p id="p-00044-en" num="0044">Again returning to the first embodiment shown in <figref>FIGS. 1-5</figref>, it will be seen that the case <b>1</b> may also include a top wall <b>12</b>. The top wall <b>12</b> extends between the front wall <b>2</b> and the back wall <b>3</b>, and is situated opposite the bottom wall <b>4</b>. The top wall <b>12</b> includes at least one opening <b>13</b> extending through its thickness. The opening <b>13</b> is of a size and shape to allow it to receive removably a portion of the outer casing <b>14</b> of an auto-injector device. The overall depth of the holder <b>1</b> measured from the bottom wall <b>4</b> to the top wall <b>12</b> is preferably such that the auto-injector device projects outwardly from the opening <b>13</b> in the top wall <b>12</b> so that it may be quickly and easily grasped by a user in an emergency situation. A similarly structured top wall <b>12</b>, with one or more device-receiving openings <b>13</b>, may be included in the wearable holder of <figref>FIGS. 6-10</figref>, as well.</p>
+      <p id="p-00045-en" num="0045">In the first embodiment of the holder shown in <figref>FIG. 2</figref> of the drawings, the front surface of the front wall <b>2</b> is cut away in two places to form a front recessed portion <b>16</b> and a second, side recessed portion or slot <b>17</b>. The front recessed portion <b>16</b> is defined by two opposite, lateral slots <b>16</b><i>a </i>and <b>16</b><i>b. </i>The slots <b>16</b><i>a </i>and <b>16</b><i>b </i>are provided to receive a flexible information sheet <b>50</b> (see <figref>FIG. 1</figref>) on which is contained important information, such as the patient's name, emergency contact information, and instructions for using the auto-injector held by the case <b>1</b>. The information sheet <b>50</b> is removably held in place on the front wall <b>2</b> of the holder <b>1</b> by having its opposite lateral edges received by the slots <b>16</b><i>a </i>and <b>16</b><i>b. </i>A transparent, plastic film or sheet <b>52</b> (see <figref>FIG. 1</figref>) may be placed in front of the information sheet <b>50</b> and situated at its lateral edges within slots <b>16</b><i>a </i>and <b>16</b><i>b </i>to provide protection for the information sheet <b>50</b>.</p>
+      <p id="p-00046-en" num="0046">The second, side recessed portion or slot <b>17</b> also includes an information sheet <b>54</b> removably or fixedly mounted therein with preferably the months of the year in descending order printed thereon. An indicator piece <b>19</b> is held in place in slot <b>17</b> and is slidable along the length thereof The indicator piece <b>19</b> is rectangular in shape, and includes a rectangular viewing opening <b>56</b> situated at its center and between two parallel bars <b>58</b>. The rectangular opening <b>56</b> is dimensioned to be of sufficient size to display at least a portion of the month (or an abbreviation of the month) printed on the information sheet <b>54</b> within slot <b>17</b>.</p>
+      <p id="p-00047-en" num="0047">The purpose of the months printed on the information sheet <b>54</b> is to remind the user when the auto-injector held by the case <b>1</b> has reached its expiration date and must be replaced. The user may slide the indicator piece <b>19</b> along the length of slot <b>17</b> and position the indicator piece <b>19</b> so that the replacement month of the auto-injector (e.g., March) is visible to the user through the rectangular opening <b>56</b> of the indicator piece <b>19</b>.</p>
+      <p id="p-00048-en" num="0048">In the wearable version of the holder shown in <figref>FIGS. 6-10</figref>, a similarly structured front recessed portion <b>16</b> and side recessed portion or slot <b>17</b> may be formed respectively in the front wall <b>2</b> and lateral walls <b>6</b>, <b>7</b>. Alternatively, the front wall <b>2</b> may include a first information sheet <b>70</b> having an adhesive backing that is removably affixed to the front wall <b>2</b> and has lines and spaces to write important information thereon, such as an identification of the particular allergies that afflict the user, or emergency contact information. A second information sheet <b>72</b>, also with an adhesive backing, may be removably affixed to an outer surface of the holder, such as the front wall <b>2</b> or one of the lateral walls <b>6</b>, <b>7</b>, with the months of the year or abbreviations thereof which the user may mark or circle to indicate the month the auto-injector devices expire and need to be replaced.</p>
+      <p id="p-00049-en" num="0049">The auto-injector holder <b>1</b> of the present invention may be secured or mounted to a stationary surface or, as shown in the embodiment of <figref>FIGS. 6-10</figref>, may be worn by a person on his belt. With respect to the embodiment of the holder shown in <figref>FIGS. 1-5</figref>, in order to secure or mount the holder <b>1</b> to a stationary surface, the outside surface of the back wall <b>3</b> may contain a mounting fastener <b>21</b>. The mounting fastener <b>21</b> can be an adhesive tape, a magnet, Velcro™ hook and loop fastener, a snap, or any other type of fastener or fastening material that is adapted to adhere to a stationary surface and support the weight of the holder <b>1</b>. Alternatively, a portion of the back wall <b>3</b> of the holder preferably extends beyond the vertical length of the front wall <b>2</b> to define a mounting flange <b>8</b>, as shown in <figref>FIGS. 2 and 3</figref>. The flange <b>8</b> of the holder <b>1</b> may include one or more openings <b>60</b> formed through the thickness thereof, such as key hole openings, to receive a screw, nail or hook to allow the holder <b>1</b> to be secured or mounted to a supporting wall or surface.</p>
+      <p id="p-00050-en" num="0050">In yet another embodiment of the present invention, the wearable holder may include a clip <b>32</b>, as shown in <figref>FIG. 8</figref>, which extends from the outside surface of the back wall <b>3</b> to allow a wearer to attach the holder <b>1</b> to an article of clothing, such as a belt.</p>
+      <p id="p-00051-en" num="0051">In yet another embodiment of the present invention, and as shown in <figref>FIGS. 13</figref>, <b>14</b> and <b>15</b>, the holder <b>1</b> may be formed as a sleeve which is adapted to surround one or more auto-injector devices and their casings. The sleeve <b>62</b> may be formed with a first wall <b>64</b> and a second wall <b>66</b>. The first and second walls <b>64</b>, <b>66</b> are joined together at their lateral edges in such a manner that they bulge outwardly from each other at their centers, thereby defining a cavity <b>67</b> for receiving one or more auto-injector devices and their casings securely therein. The front and back walls <b>64</b>, <b>66</b> are formed from a semi-rigid, but resilient, material, such as cardboard, such that the sleeve <b>62</b> may be expanded at its center to receive and retain the auto-injector device or devices by squeezing the joined lateral edges of the walls <b>64</b>, <b>66</b> towards one another.</p>
+      <p id="p-00052-en" num="0052">As mentioned previously, each of the embodiments of the holder <b>1</b>, including the sleeve <b>62</b> embodiment, preferably includes an electrical circuit for providing pertinent information to the user, such as an auto-injector ordering information, or directions on how to use the auto-injector. The electrical circuit <b>39</b> may include a speaker <b>40</b>, a switch <b>41</b> provided on an exposed surface of the holder <b>1</b> (which term includes sleeve <b>62</b>) for the user to activate the electrical circuit, a read only memory (ROM) <b>42</b>, a microprocessor <b>43</b> and a power source <b>44</b>, such as a battery. The electrical circuit <b>39</b> is preferably mounted within the cavity of the holder. As mentioned previously, the ROM <b>42</b> stores an audio recording of instructions on how to use the auto-injection device. The switch <b>41</b> is mounted on an exposed surface, such as the outside surface of the side or front wall of the holder <b>1</b> (or on one of the first and second walls <b>64</b>, <b>66</b> of the sleeve <b>62</b>). When the switch <b>41</b> is activated, the power source <b>44</b> powers the electrical circuit, and the microprocessor <b>43</b> causes the recording stored in the ROM <b>42</b> to play through the speaker <b>44</b> the instructions on how to use the auto-injection device for the user to hear. A plurality of holes <b>74</b> may be formed through the thickness of a wall of the holder and which is situated in alignment with the speaker <b>44</b>, if the speaker is not directly exposed on a wall of the holder.</p>
+      <p id="p-00053-en" num="0053">In yet another embodiment of the present invention, shown in <figref>FIGS. 11 and 12</figref>, the holder <b>1</b> may include a protective casing or container <b>51</b> for the auto-injector. The container <b>51</b> includes a tubular body <b>53</b>, and a cap <b>52</b> mounted on an open end of the tubular body <b>53</b>. The body <b>53</b> includes an electrical circuit <b>39</b>, such as described previously with respect to the other embodiments, to provide instructions to the user on how to use the auto-injection device held within the container <b>51</b>. A switch <b>41</b> may be mounted on the cap <b>52</b> or in the container <b>51</b>, and is activated when the cap <b>52</b> is opened. When activated, the switch <b>41</b> causes the electrical circuit <b>39</b> to play through a speaker <b>40</b> situated within the container <b>41</b> instructions for the user to hear on how to use the auto-injection device housed by container <b>51</b>, or other pertinent information regarding the auto-injector. <figref>FIG. 12</figref> merely shows the situation where one or more containers <b>51</b> may be held together using an S-clamp <b>70</b>, as is well known in the art, where one or more of the containers <b>51</b> include the electrical circuit <b>39</b> for providing pertinent information to the user.</p>
+      <p id="p-00054-en" num="0054">A fifth embodiment of the present invention is shown in <figref>FIGS. 16 and 17</figref>. This embodiment is not a holder for an auto-injection device, but rather is a device which is mountable to a refrigerator or another appliance, or to a supporting surface, such as a wall, and provides pertinent information to a user of an auto-injection device in printed form and/or verbally through an electrical circuit <b>39</b>.</p>
+      <p id="p-00055-en" num="0055">In this embodiment, a planar, rectangular informational member <b>58</b> has at least one display surface <b>59</b>, which can be used to display printed information, such as a patient's name, emergency contact information, the date the medicine in the auto-injector expires, and instructions for using the auto-injector. The display surface <b>59</b> can be written on by the user to display information entered by the user. The display surface <b>59</b> may have mounted thereon a removable printed sheet containing such information.</p>
+      <p id="p-00056-en" num="0056">The informational member <b>58</b> preferably also includes an electrical circuit <b>39</b> such as described previously with respect to the other embodiments of the present invention. The electrical circuit <b>39</b> is mounted within the informational member <b>58</b> or on the rear side thereof</p>
+      <p id="p-00057-en" num="0057">On an exposed surface of the informational member <b>58</b>, such as the front side thereof, there is an activation switch <b>41</b>, such as a push button switch. The electrical circuit <b>39</b> preferably includes the various components described previously, including a speaker <b>40</b>, a ROM <b>42</b>, a microprocessor <b>43</b>, a power source <b>44</b> and the activation switch <b>41</b>, as shown in <figref>FIG. 17</figref>.</p>
+      <p id="p-00058-en" num="0058">When a user would like to hear verbal instructions as to how to use the auto-injector, he presses switch <b>41</b>, which activates the electrical circuit. The electrical circuit causes the speaker <b>40</b> to play back the recorded instructions or other pertinent information, stored in the ROM <b>42</b>, so that the user may hear the instructions or pertinent information.</p>
+      <p id="p-00059-en" num="0059">The rear surface <b>60</b> of the informational member <b>58</b> may be mounted and secured to a supporting surface, as mentioned previously. Mounting means <b>68</b> for securing the informational member <b>58</b> to the supporting surface, such as a refrigerator or wall, may include one or more magnets, Velcro™ hook and loop fastening material, adhesive tape or any other well known mounting means.</p>
+      <p id="p-00060-en" num="0060">Although illustrative embodiments of the present invention have been described herein with reference to the accompanying drawings, it is to be understood that the invention is not limited to those precise embodiments and that various other changes and modifications may be effected herein by one skilled in the art without departing from the scope or spirit of the invention.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An auto-injection device holder, which comprises:
+<claim-text>a main body, the main body including a front wall, a back wall disposed opposite the front wall, and a bottom wall, the front wall and the back wall together defining a top opening, the front wall, back wall and bottom wall together defining a cavity for receiving therein through the top opening at least one auto-injection device.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. An auto-injection device holder as defined by <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the main body further includes a separator wall situated in the cavity and disposed between the front wall and the back wall, the separator wall being provided to physically separate one auto-injection device received in the cavity from another auto-injection device received in the cavity.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. An auto-injection device holder as defined by <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the main body further includes a top wall, the top wall extending between the front wall and the back wall and being situated opposite the bottom wall and in proximity to the top opening, the top wall having at least one opening formed through the thickness thereof for receiving therein the at least one auto-injection device.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. An auto-injection device holder as defined by <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the front wall of the main body includes a first recessed portion; and wherein the holder further comprises a first information sheet, the first information sheet being mounted within the first recessed portion.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. An auto-injection device holder as defined by <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the front wall of the main body includes a second recessed portion; and wherein the holder further comprises a second information sheet, the second information sheet being mounted within the second recessed portion, the second information sheet having indicia printed thereon relating to the months of a calendar year.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. An auto-injection device holder as defined by <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein at least one wall of the main body has formed therein an information sheet receiving slot; and
+<claim-text>wherein the holder further comprises:</claim-text><claim-text>an information sheet, the information sheet being mounted in the information sheet receiving slot, the information sheet having indicia printed thereon relating to the months of a calendar year; and</claim-text><claim-text>an indicator piece, the indicator piece being slideably mounted on the main body in alignment with the information sheet receiving slot and in proximity to the information sheet, the indicator piece being generally rectangular in shape and including first and second spaced apart, parallelly disposed bars, the first and second bars defining between them a viewing window, the indicator piece being positionable with respect to the information sheet receiving slot such that the viewing window may be situated in alignment with selected indicia printed on the information sheet.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>
+        <b>7</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. An auto-injection device holder as defined by <claim-ref idref="clm-00001-en">claim 1</claim-ref>, which further comprises:
+<claim-text>mounting means for mounting the holder to a supporting surface, the mounting means being situated on the back wall of the main body.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. An auto-injection device holder as defined by <claim-ref idref="clm-00001-en">claim 1</claim-ref>, which further comprises:
+<claim-text>an electrical circuit, the electrical circuit being mounted to the main body, the electrical circuit providing information to a user of the holder.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. An auto-injection device holder as defined by <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the electrical circuit includes a speaker, a switch mounted on a wall of the main body and exposed thereon so as to be activatable by a user of the holder, a read only memory, the read only memory having the information stored digitally therein, a microprocessor, the microprocessor being electrically coupled to the read only memory, the switch and the speaker, and a power source, the power source being electrically coupled to the microprocessor.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. An auto-injection device holder as defined by <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the main body further includes an extended portion of the back wall, the extended portion having at least one opening formed through the thickness thereof for mounting the holder to a supporting surface.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en" independent="true">
+      <claim-text>
+        <b>14</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en" independent="true">
+      <claim-text>
+        <b>15</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en" independent="true">
+      <claim-text>
+        <b>16</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en" independent="true">
+      <claim-text>
+        <b>17</b>. (canceled)</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257976A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257976A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257976A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257976A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257976A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257976A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257976A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257976A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257976A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257976A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257976A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257976A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257976A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257976A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257976A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257976A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257976A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257976A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257976A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257976A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257976A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257976A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150257976A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257976A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150257976A1_00013.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257976A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257976A1.PDF" type="pdf" size="489231" pages="17" />
+</lexisnexis-patent-document>

@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252154A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021802" date-changed="20150921" time-changed="060132">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229149">
+        <country>US</country>
+        <doc-number>20150252154</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14408173</doc-number>
+        <date>20130617</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>NL</country>
+        <doc-number>2009016</doc-number>
+        <date>20120615</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>C08J   5/18        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>5</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B29C  43/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>29</class>
+        <subclass>C</subclass>
+        <main-group>43</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C08J   5/04        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>5</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>C08J   5/18        20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>5</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B29B  15/125       20130101 LI20140211BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>125</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140211</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B29C  43/003       20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>C</subclass>
+        <main-group>43</main-group>
+        <subgroup>003</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>B29C  70/202       20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>C</subclass>
+        <main-group>70</main-group>
+        <subgroup>202</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>B29C  70/504       20130101 LI20140215BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>C</subclass>
+        <main-group>70</main-group>
+        <subgroup>504</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140215</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>B29K2067/003       20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>K</subclass>
+        <main-group>2067</main-group>
+        <subgroup>003</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>B29K2069/00        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>K</subclass>
+        <main-group>2069</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>B29K2071/00        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>K</subclass>
+        <main-group>2071</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>B29K2081/06        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>K</subclass>
+        <main-group>2081</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>B29K2101/12        20130101 LA20140211BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>K</subclass>
+        <main-group>2101</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140211</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>B29K2313/00        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>K</subclass>
+        <main-group>2313</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>B29L2007/008       20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>L</subclass>
+        <main-group>2007</main-group>
+        <subgroup>008</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C08J   5/042       20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>5</main-group>
+        <subgroup>042</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>C08J   5/043       20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>5</main-group>
+        <subgroup>043</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>C08J2379/08        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2379</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">METHOD FOR MANUFACTURING AN ELEMENT OF THERMOPLASTIC COMPOSITE MATERIAL AND AN ELEMENT OF THERMOPLASTIC COMPOSITE MATERIAL OBTAINED THEREWITH</invention-title>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>TEN CATE ADVANCED COMPOSITES B.V.</orgname>
+            <address>
+              <city>Nijverdal</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>NL</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lenferink</last-name>
+            <first-name>Robertus Gerardus</first-name>
+            <address>
+              <city>Tubbergen</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>De Leeuw</last-name>
+            <first-name>Roger</first-name>
+            <address>
+              <city>Almelo</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>NL13050428</doc-number>
+        <date>20130617</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2013187767</doc-number>
+        <date>20131219</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="163551974">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2861409</doc-number>
+            <kind>A1</kind>
+            <date>20150422</date>
+          </document-id>
+          <application-date>
+            <date>20130617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013274967</doc-number>
+            <kind>A1</kind>
+            <date>20150122</date>
+          </document-id>
+          <application-date>
+            <date>20130617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2876839</doc-number>
+            <kind>A1</kind>
+            <date>20131219</date>
+          </document-id>
+          <application-date>
+            <date>20130617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015521660</doc-number>
+            <kind>A</kind>
+            <date>20150730</date>
+          </document-id>
+          <application-date>
+            <date>20130617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>NL</country>
+            <doc-number>2009016</doc-number>
+            <kind>C</kind>
+            <date>20131217</date>
+          </document-id>
+          <application-date>
+            <date>20120615</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2013187767</doc-number>
+            <kind>A1</kind>
+            <date>20131219</date>
+          </document-id>
+          <application-date>
+            <date>20130617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252154</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20130617</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="163551973">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2861409</doc-number>
+            <kind>A1</kind>
+            <date>20150422</date>
+          </document-id>
+          <application-date>
+            <date>20130617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013274967</doc-number>
+            <kind>A1</kind>
+            <date>20150122</date>
+          </document-id>
+          <application-date>
+            <date>20130617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2876839</doc-number>
+            <kind>A1</kind>
+            <date>20131219</date>
+          </document-id>
+          <application-date>
+            <date>20130617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015521660</doc-number>
+            <kind>A</kind>
+            <date>20150730</date>
+          </document-id>
+          <application-date>
+            <date>20130617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>NL</country>
+            <doc-number>2009016</doc-number>
+            <kind>C</kind>
+            <date>20131217</date>
+          </document-id>
+          <application-date>
+            <date>20120615</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2013187767</doc-number>
+            <kind>A1</kind>
+            <date>20131219</date>
+          </document-id>
+          <application-date>
+            <date>20130617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252154</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20130617</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The invention relates to a method for manufacturing an element of thermoplastic composite material, for instance a plate or sheet, comprising the following steps, to be performed in suitable sequence, of: a) providing a web; b) dissolving a thermoplastic in a solvent; c) arranging the solvent with plastic dissolved therein on the web; d) pressing the solvent with plastic dissolved therein into the web; e) heating the web for the purpose of evaporating the solvent, wherein the plastic remains behind in the web; and f) allowing the web to cool and thus allowing the plastic to cure so as to obtain the element. The invention also relates to an element of thermoplastic composite material obtained by applying the method according to the invention, which element comprises a thermoplastic, for instance plate-like or sheet-like body in which the web is embedded as reinforcement.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <p id="p-00001-en" num="0001">The invention relates to a method for manufacturing an element of thermoplastic composite material, for instance a plate or sheet.</p>
+      <p id="p-00002-en" num="0002">The manufacture of an element of thermoplastic composite material can take place using different, per se known methods. A thermoplastic can be arranged in different ways here in a web in order to obtain a plastic element in which the web is embedded as reinforcement. The currently known methods each have their own specific drawbacks however, such as the high cost of for instance fine grinding of the thermoplastic or being able to arrange the thermoplastic only with difficulty in the web.</p>
+      <p id="p-00003-en" num="0003">It is an object of the invention to at least partially obviate the above stated drawbacks. It is a particular object of the invention to provide an alternative method with which an element of thermoplastic composite material can be manufactured in simple and/or relatively inexpensive and/or rapid manner.</p>
+      <p id="p-00004-en" num="0004">The method of the type stated in the preamble comprises for this purpose according to the invention the following steps, to be performed in suitable sequence, of:</p>
+      <p id="p-00005-en" num="0005">a) providing a web;</p>
+      <p id="p-00006-en" num="0006">b) dissolving a thermoplastic in a solvent;</p>
+      <p id="p-00007-en" num="0007">c) arranging the solvent with plastic dissolved therein on the web;</p>
+      <p id="p-00008-en" num="0008">d) pressing the solvent with plastic dissolved therein into the web;</p>
+      <p id="p-00009-en" num="0009">e) heating the web for the purpose of evaporating the solvent, wherein the plastic remains behind in the web; and</p>
+      <p id="p-00010-en" num="0010">f) allowing the web to cool and thus allowing the plastic to cure so as to obtain the element.</p>
+      <p id="p-00011-en" num="0011">Because the thermoplastic is dissolved in the solvent according to the invention, it is not necessary for the plastic to be ground fine, whereby costs can be saved.</p>
+      <p id="p-00012-en" num="0012">The mixture of thermoplastic and solvent has a lower viscosity than a non-dissolved melted plastic, whereby the mixture can flow easily between separate filaments of the web and arranging of the plastic in the web can take place in simple manner.</p>
+      <p id="p-00013-en" num="0013">Step c) can for instance take place by drawing the web through a bath filled with solvent having plastic dissolved therein. This web drawn through the bath can subsequently be pulled in step d) through two pressure rollers disposed close to each other for the purpose of pressing the solvent with plastic dissolved therein into the web. The two pressure rollers are disposed here at a predetermined distance from each other so that the web with solvent and plastic dissolved therein will have a predetermined thickness.</p>
+      <p id="p-00014-en" num="0014">Step e) can for instance take place by heating the web with solvent and plastic dissolved therein in an oven. After or during cooling and curing of the web with plastic, the web with plastic can be rolled onto a roll to enable easy storage and transport of the composite element.</p>
+      <p id="p-00015-en" num="0015">The web can be any random web such as, though not exclusively, a non-woven, a fabric, a sheet or the like.</p>
+      <p id="p-00016-en" num="0016">It will therefore be apparent that the term web should not be interpreted here as being limited to a non-crimp fabric (NCF), even though the web can indeed be such in an embodiment of the method according to the invention. Web is understood here to mean any random web or material such as, though not exclusively, a non-woven, a fabric, a sheet or the like.</p>
+      <p id="p-00017-en" num="0017">An embodiment of the method according to the invention further comprises the step, to be performed after step e), of:</p>
+      <p id="p-00018-en" num="0018">g) pressing the web with plastic or the element at increased temperature in order to flatten the web with plastic or the element.</p>
+      <p id="p-00019-en" num="0019">A composite element with a flat surface is hereby obtained in simple manner.</p>
+      <p id="p-00020-en" num="0020">The thickness of the web or element can also be set by performing step g).</p>
+      <p id="p-00021-en" num="0021">The increased temperature preferably lies around or above the softening temperature of the plastic. It is however also possible to perform step g) at a temperature below the softening temperature. The maximum temperature for performing step g) is the temperature at which degradation of the plastic which is still acceptable takes place. Increased temperature is therefore understood here to mean a temperature suitable for performing step g), in particular a temperature lying a maximum of 70° C. below the softening temperature of the chosen plastic up to a maximum of the (acceptable) degradation temperature of the chosen plastic. For a large number of suitable plastics the increased temperature lies in practical manner between about 140° C. and 360° C.</p>
+      <p id="p-00022-en" num="0022">The web with plastic can for instance be pressed immediately following step e), when it is still warm, wherein step f) takes place after step g) so that it is not necessary to heat the web twice.</p>
+      <p id="p-00023-en" num="0023">Alternatively, step g) can take place before step f), wherein the element is heated again. This is advantageous for instance when a number of elements obtained in step f) are pressed together in order to obtain a stiff composite plate.</p>
+      <p id="p-00024-en" num="0024">The web can be any random web. The web particularly comprises mutually connected fibres. The fibres can for instance be mutually connected by interweaving, adhesion or stitching.</p>
+      <p id="p-00025-en" num="0025">The fibres are preferably chosen from the group comprising glass fibre, aramid fibre, carbon fibre and polyester fibre. Such fibres impart a strong reinforcement to the plastic.</p>
+      <p id="p-00026-en" num="0026">In order to obtain a composite element which is strong and/or stiff in one direction and for instance resilient in other directions, the fibres in the web can extend in one direction. Such a web is also referred to as a unidirectional fibre.</p>
+      <p id="p-00027-en" num="0027">The web can also comprise a number of layers, in each of which the fibres extend in one direction and wherein the fibres of the different layers extend in different directions. A stiff composite element is hereby obtained which has a relatively low weight. The fibres of the different layers can for instance be arranged at an angle of 45° to each other, wherein four layers are arranged on each other to obtain a composite element which is equally stiff and/or strong in substantially all directions. The directions of the fibres can be chosen subject to the desired load on the composite element.</p>
+      <p id="p-00028-en" num="0028">It is noted that it may be the case that one layer at a time of the number of layers is formed with the method according to the invention, these layers being pressed together at increased temperature so as to obtain the composite element. An increased quality of the impregnated web or element can be obtained by pressing the plastic per layer into the web. It may alternatively be the case that the web of step a) has the number of layers. An advantage of a web having the number of layers in step a) is that there is a relatively small chance of for instance breakage or splitting of the web during manufacture of the composite element. It is an advantage of the method according to the invention that a web with such a number of layers, which is therefore relatively thick, can be easily and/or properly impregnated with the plastic.</p>
+      <p id="p-00029-en" num="0029">The web with fibres extending in one direction or the web with the number of layers as described above both have the advantage that no crimp occurs. Such webs are also referred to as non-crimp fabrics. Because of their properties, composite elements comprising such non-crimp fabrics are suitable for diverse applications.</p>
+      <p id="p-00030-en" num="0030">The plastic is preferably chosen from the group comprising polyetherimide (PEI), polyethersulfone (PESU), polycarbonate (PC), polyether ether ketone (PEEK), polyester/polyethylene terephthalate (PET) and mixtures thereof.</p>
+      <p id="p-00031-en" num="0031">Particularly a combination of a non-crimp fabric and polyetherimide (PEI) produces a composite element which, because of its properties, is suitable for diverse high-grade purposes. Such a composite element is for instance suitable for manufacturing components of vehicles such as cars, trucks, boats, aircraft, helicopters and space vehicles.</p>
+      <p id="p-00032-en" num="0032">Particularly a combination of a non-crimp fabric comprising glass fibre or carbon fibre with PEI produces a composite material having high temperature resistance, low flammability, good impact resistance and low moisture absorption.</p>
+      <p id="p-00033-en" num="0033">The solvent is preferably chosen from the group comprising n-methyl-2-pyrrolidone (NMP) and dimethylacetamide (DMAC).</p>
+      <p id="p-00034-en" num="0034">Such solvents are relatively inexpensive and/or less harmful to the environment or people compared to other known solvents.</p>
+      <p id="p-00035-en" num="0035">In an embodiment of the method according to the invention the quantity of solvent in the mixture of solvent with plastic dissolved therein amounts to a minimum of 50% by volume, a minimum of 55% by volume, a minimum of 60% by volume, a minimum of 65% by volume, a minimum of 70% by volume, a minimum of 75% by volume or a minimum of 80% by volume.</p>
+      <p id="p-00036-en" num="0036">With such a minimum volume of solvent a good impregnation of the web can be provided, since at such a minimum volume of solvent the viscosity of the mixture of solvent and plastic dissolved therein is sufficiently low so that the mixture can flow relatively well into the web.</p>
+      <p id="p-00037-en" num="0037">A ratio of plastic and solvent of 1 to 2.5 is found to be a particularly good one, this amounting to about 71% by volume of solvent.</p>
+      <p id="p-00038-en" num="0038">Applicant has found that, with a view to the improved impregnation, the quantity of solvent in the mixture can even be chosen such that, after steps c) and d) have been performed, the web can comprise less plastic than is desirable. It can be advantageous for this purpose for the method to comprise the steps of repeating the steps c)-e) after performing the steps c)-e) and prior to step f) or after performing the steps c)-f). Following heating or cooling of the web the solvent with plastic dissolved therein is here once again arranged on the web, wherein the web is then pressed once again, wherein the web is subsequently heated once again and then optionally cools again. Relatively good impregnation of the plastic in the web hereby takes place twice, wherein the final quantity of plastic in the web is as desired. This can increase the quality of the element.</p>
+      <p id="p-00039-en" num="0039">Alternatively, the steps c) and d) can be repeated after performing the steps c) and d) and prior to steps e) and f). The solvent with plastic dissolved therein is arranged once again on the web here following pressing, wherein the web is subsequently pressed once again, wherein the web is then heated and subsequently cools.</p>
+      <p id="p-00040-en" num="0040">The invention further relates to an element of thermoplastic composite material obtained by applying the method according to any of the foregoing claims, which element comprises a thermoplastic, for instance plate-like or sheet-like body in which the web is embedded as reinforcement.</p>
+      <p id="p-00041-en" num="0041">Because of its properties such an element is suitable for diverse purposes such as, though not exclusively, for manufacturing components of vehicles such as cars, trucks, boats, aircraft, helicopters and space vehicles.</p>
+      <p id="p-00042-en" num="0042">According to the invention the element of thermoplastic composite material can be manufactured as described above relatively inexpensively using the method according to the invention when compared to such an element of thermoplastic composite material manufactured by another method. The composite element manufactured with the method according to the invention is hereby suitable for applications in which cost is an important factor.</p>
+      <p id="p-00043-en" num="0043">The element according to the invention can be modelled to any desired form, wherein modelling preferably takes place during heating.</p>
+    </summary>
+    <description-of-drawings>
+      <p id="p-00044-en" num="0044">The invention will be further elucidated with reference to figures shown in a drawing, in which:</p>
+      <p id="p-00045-en" num="0045">
+        <figref>FIG. 1</figref> shows schematically the method according to the invention; and</p>
+      <p id="p-00046-en" num="0046">
+        <figref>FIGS. 2A-2C</figref> each show a web particularly suitable for the method according to the invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00047-en" num="0047">
+        <figref>FIG. 1</figref> shows schematically the steps of the method for manufacturing an element of composite material according to the invention.</p>
+      <p id="p-00048-en" num="0048">Provided in a first step is a web <b>2</b> rolled onto a roll <b>1</b>. Web <b>2</b> is a fibre web with mutually connected fibres of glass, aramid, carbon or polyester.</p>
+      <p id="p-00049-en" num="0049">Web <b>2</b> is subsequently drawn off the roll <b>1</b> and collected in a web buffer <b>3</b>. Collecting a supply of web <b>2</b> enables easy replacement of an empty roll by a fresh roll without the further process having to be halted. The process according to the invention can in this way take place continuously.</p>
+      <p id="p-00050-en" num="0050">In a following step the web <b>2</b> is pulled through a bath <b>4</b> filled with a mixture <b>5</b> of solvent with thermoplastic dissolved therein, for instance by means of pulling rollers, so that the mixture <b>5</b> of solvent and plastic adheres to web <b>2</b>. Dissolving of the plastic in the solvent can for instance take place during heating or stirring, wherein bath <b>4</b> is filled with the mixture <b>5</b> after dissolving of the plastic in the solvent. The plastic comprises for instance a synthetic resin granulate, which granulate can dissolve easily in the solvent. The solvent is for instance n-methyl-2-pyrrolidone (NMP) and dimethylacetamide (DMAC). The plastic is for instance polyetherimide (PEI), polyethersulfone (PESU), polycarbonate (PC), polyether ether ketone (PEEK), polyester/polyethylene terephthalate (PET) or mixtures thereof.</p>
+      <p id="p-00051-en" num="0051">In a subsequent step the web <b>2</b> with the mixture <b>5</b> of solvent with plastic dissolved therein is carried through a pinch of two driven pressure rollers <b>6</b> disposed adjacently of each other, wherein the mixture <b>5</b> is pressed into web <b>2</b>. The two pressure rollers <b>6</b> are disposed here at a predetermined distance <b>7</b> from each other so that web <b>2</b> with mixture <b>5</b> has a predetermined thickness.</p>
+      <p id="p-00052-en" num="0052">The web <b>2</b> with the mixture <b>5</b> pressed into it is subsequently heated in an oven, wherein the solvent evaporates out of web <b>2</b>. The evaporation of the solvent is indicated in <figref>FIG. 1</figref> with numeral <b>8</b>.</p>
+      <p id="p-00053-en" num="0053">The combination of web <b>2</b> with the plastic is then collected in a second web buffer <b>9</b>, after which web <b>2</b> is arranged on a roll <b>10</b>. The second web buffer <b>9</b> here also provides the advantage that the process according to the invention can take place continuously without this process having to be halted during removal of a full roll <b>10</b> and arranging of a new empty roll. Web <b>2</b> with the plastic cools in the second web buffer <b>9</b> in order to obtain a composite element.</p>
+      <p id="p-00054-en" num="0054">The thus obtained composite element can optionally then be pressed at increased temperature for the purpose of flattening the element, or a number of thus obtained composite elements can be pressed together to obtain a stiff composite element (not shown).</p>
+      <p id="p-00055-en" num="0055">
+        <figref>FIGS. 2A-2C</figref> each show a non-crimp fabric web <b>2</b>A-<b>2</b>C. The fibre web <b>2</b>A of <figref>FIG. 2A</figref> has four layers <b>20</b>-<b>24</b> arranged on each other, wherein the fibres of layers <b>20</b>-<b>24</b> extend in different directions. The fibres of the upper layer <b>20</b> extend here in the length of fibre web <b>2</b>A, this direction being defined here as 0°. The fibres of the layer <b>21</b> extending immediately below layer <b>20</b> extend perpendicularly of the fibres of layer <b>20</b>, or at an angle of 90°. The fibres of the layer <b>22</b> extending immediately below layer <b>21</b> extend at an angle of 45° to the fibres of layer <b>20</b>. The fibres of the layer <b>23</b> extending immediately below layer <b>22</b> extend in the same direction as the fibres of layer <b>21</b>, i.e. at an angle of 90° to the fibres of layer <b>20</b>. The fibres of the lower layer <b>24</b> extend at an angle of −45° to the fibres of layer <b>20</b>. The fibres of fibre web <b>2</b>A are held together by a stitching thread. The arrangement of fibre layers <b>20</b>-<b>24</b> in four different directions (−45°, 0°, 45°, 90°), is also referred to as quadraxial.</p>
+      <p id="p-00056-en" num="0056">It is noted that the directions of the fibres of layers <b>20</b>-<b>24</b> can be chosen as desired, for instance subject to the desired load on the composite element. The fibres of all layers <b>20</b>-<b>24</b> can for instance be disposed in the lengthwise direction of fibre web <b>2</b>A, so that a so-called unidirectional non-crimp fabric is obtained.</p>
+      <p id="p-00057-en" num="0057">It is further noted that fibre web <b>2</b>A can comprise any random number of fibre layers. Fibre web <b>2</b> can for instance comprise two layers disposed at respective angles of 0° and ±45°, or 0° and 90°, also referred to as biaxial. Alternatively, fibre web <b>2</b>A can comprise three layers disposed at respective angles of 0°, ±45° and 90°, also referred to as triaxial.</p>
+      <p id="p-00058-en" num="0058">
+        <figref>FIG. 2B</figref> shows a fibre web <b>2</b>B, all layers of which are disposed in one direction, i.e. in the lengthwise direction of fibre web <b>2</b>B. The different fibre filaments of fibre web <b>2</b>B are mutually connected by stitching thread.</p>
+      <p id="p-00059-en" num="0059">
+        <figref>FIG. 2C</figref> shows a fibre web <b>2</b>C, the outer layer of which is disposed at an angle of 45°.</p>
+      <p id="p-00060-en" num="0060">It is noted that the invention is not limited to the shown embodiments, but also extends to variants within the scope of the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. Method for manufacturing an element of thermoplastic composite material, for instance a plate or sheet, comprising the following steps, to be performed in suitable sequence, of:
+<claim-text>a) providing a web;</claim-text><claim-text>b) dissolving a thermoplastic in a solvent;</claim-text><claim-text>c) arranging the solvent with plastic dissolved therein on the web;</claim-text><claim-text>d) pressing the solvent with plastic dissolved therein into the web;</claim-text><claim-text>e) heating the web for the purpose of evaporating the solvent, wherein the plastic remains behind in the web; and</claim-text><claim-text>f) allowing the web to cool and thus allowing the plastic to cure so as to obtain the element.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. Method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising the step, to be performed after step e), of:
+<claim-text>g) pressing the web with plastic or the element at increased temperature in order to flatten the web with plastic or the element.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. Method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the web comprises mutually connected fibres.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. Method as claimed in <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the fibres are chosen from the group comprising glass fibre, aramid fibre, carbon fibre and polyester fibre.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. Method as claimed in <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the fibres in the web extend in one direction.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. Method as claimed in <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the web comprises a number of layers, in each of which the fibres extend in one direction and wherein the fibres of the different layers extend in different directions.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. Method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the plastic is chosen from the group comprising polyetherimide (PEI), polyethersulfone (PESU), polycarbonate (PC), polyether ether ketone (PEEK), polyester/polyethylene terephthalate (PET) and mixtures thereof.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. Method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the solvent is chosen from the group comprising n-methyl-2-pyrrolidone (NMP) and dimethylacetamide (DMAC).</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. Method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the quantity of solvent in the mixture of solvent with plastic dissolved therein amounts to a minimum of 50% by volume, a minimum of 55% by volume, a minimum of 60% by volume, a minimum of 65% by volume, a minimum of 70% by volume, a minimum of 75% by volume or a minimum of 80% by volume.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. Method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, comprising of repeating the steps c)-e) after performing the steps c)-e) and prior to step f) or after performing the steps c)-f).</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. Method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, comprising of repeating the steps c) and d) after performing the steps c) and d) and prior to the steps e) and f).</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. Element of thermoplastic composite material obtained by applying the method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, which element comprises a thermoplastic, for instance plate-like or sheet-like body in which the web is embedded as reinforcement.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252154A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150252154A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252154A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252154A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252154A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252154A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150252154A1_00004.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150252154A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150252154A1.PDF" type="pdf" size="307328" pages="6" />
+</lexisnexis-patent-document>

@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252329A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021823" date-changed="20151228" time-changed="083416">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229324">
+        <country>US</country>
+        <doc-number>20150252329</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14432987</doc-number>
+        <date>20131008</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>C12N   5/071       20100101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20100101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>5</main-group>
+        <subgroup>071</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C12M   1/12        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>M</subclass>
+        <main-group>1</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>G01N  33/50        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>50</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>C12N   5/0688      20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>5</main-group>
+        <subgroup>0688</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12M  23/04        20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>M</subclass>
+        <main-group>23</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12M  25/02        20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>M</subclass>
+        <main-group>25</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C12N2513/00        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2513</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C12N2533/30        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2533</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>G01N  33/5044      20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>5044</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">23</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">METHODS AND APPARATUS FOR CULTURING CILIATED CELLS</invention-title>
+    <related-documents date-changed="20150910">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61711541</doc-number>
+          <date>20121009</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>THE UNIVERSITY OF NORTH CAROLINA  AT CHAPEL HILL</orgname>
+            <address>
+              <city>Chapel Hill</city>
+              <state>NC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ostrowski</last-name>
+            <first-name>Lawrence E.</first-name>
+            <address>
+              <city>Durham</city>
+              <state>NC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US13063896</doc-number>
+        <date>20131008</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014058891</doc-number>
+        <date>20140417</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173566189">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252329</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131008</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173566187">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252329</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131008</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A cell culture assembly includes a cell culturing device and a layer of ciliated cells. The cell culturing device includes at least one member defining an endless, substantially elliptical channel. The layer of ciliated cells is disposed in the elliptical channel.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150403</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252329A1</docdb-publication-number>
+      <docdb-application-id>444310717</docdb-application-id>
+      <new-owner>THE UNIVERSITY OF NORTH CAROLINA AT CHAPEL HILL, N</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:OSTROWSKI, LAWRENCE E.;REEL/FRAME:035329/0183</free-text-description>
+      <effective-date>
+        <date>20150402</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <related-apps>
+      <heading id="h-00001-en" level="1">RELATED APPLICATION(S)</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of and priority from U.S. Provisional Patent Application No. 61/711,541, filed Oct. 9, 2012, the disclosure of which is incorporated herein by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to cell culturing devices and methods and, more particularly, cell culturing devices and methods for culturing ciliated cells.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">Mucociliary clearance (MCC) is an important innate defense mechanism, and reduced MCC is a component of many airway diseases, including chronic obstructive pulmonary disease (COPD), cystic fibrosis (CF), primary ciliary dyskinesia and asthma. Although there are many studies of the individual components of MCC, there are fewer investigations of the integrated system, in part because of the difficulty of performing MCC studies in vivo. For example, while the effects of many agents on ciliary beat frequency (CBF) have been documented in the literature, the direct effects of agents that stimulate CBF on the rate of MCC are limited. While there are methods in place to measure MCC in whole animals, these techniques are difficult, expensive, and time-consuming. There is also at least one method to study mucociliary transport (MCT) in vitro; however, this method is inconsistent, variable, and also requires significant interpretation.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00004-en" num="0004">According to embodiments of the present invention, a cell culture assembly includes a cell culturing device and a layer of ciliated cells. The cell culturing device includes at least one member defining an endless, substantially elliptical channel. The layer of ciliated cells is disposed in the elliptical channel.</p>
+      <p id="p-00005-en" num="0005">In some embodiments, the cell culturing device includes a semipermeable membrane forming a floor of the channel and supporting the layer of ciliated cells. In some embodiments, the membrane is porous. The cell culture assembly may include a culture medium in fluid contact with the layer of ciliated cells through the membrane. In some embodiments, the membrane is formed of a material selected from the group consisting of polycarbonate, mixed cellulose esters, polyester and polytetrafluoroethylene (PTFE). Reference indicia may be provided on the membrane to assist in measuring a rate of ciliary transport by the layer of ciliated cells.</p>
+      <p id="p-00006-en" num="0006">According to some embodiments, the cell culture assembly includes a side wall and reference indicia on the side wall to assist in measuring a rate of ciliary transport by the layer of ciliated cells.</p>
+      <p id="p-00007-en" num="0007">In some embodiments, the cell culture assembly includes at least one tracking bead on the layer of ciliated cells to assist in measuring a rate of ciliary transport by the layer of ciliated cells.</p>
+      <p id="p-00008-en" num="0008">The cell culture assembly may be configured such that the ciliated cells spontaneously orient themselves to transport a material on the layer of ciliated cells in a continuous pattern around the elliptical channel.</p>
+      <p id="p-00009-en" num="0009">According to some embodiments, the layer of ciliated cells is a layer of ciliated airway epithelial cells. In some embodiments, the cell culture assembly includes a layer of a transport fluid on top of the layer of ciliated airway epithelial cells. In some embodiments, the cells are human bronchial epithelial cells. In some embodiments, the transport fluid is mucus.</p>
+      <p id="p-00010-en" num="0010">According to some embodiments, the channel has a substantially uniform width about its full circumference.</p>
+      <p id="p-00011-en" num="0011">In some embodiments, the cell culturing device includes a floor of the channel supporting the layer of ciliated cells, and the floor has a curved cross-sectional profile.</p>
+      <p id="p-00012-en" num="0012">According to method embodiments of the present invention, a method for culturing ciliated cells includes: providing a cell culturing device including at least one member defining an endless, substantially elliptical channel; and placing a layer of ciliated cells in the elliptical channel.</p>
+      <p id="p-00013-en" num="0013">In some embodiments, the cell culturing device includes a semipermeable membrane forming a floor of the channel, and the method includes placing the layer of ciliated cells on the membrane such that the layer of ciliated cells is supported thereby. The method may include providing a culture medium in the cell culturing device and contacting the layer of ciliated cells with the culture medium through the membrane.</p>
+      <p id="p-00014-en" num="0014">According to some embodiments, the ciliated cells spontaneously orient themselves to transport a material on the layer of ciliated cells in a continuous pattern around the elliptical channel.</p>
+      <p id="p-00015-en" num="0015">The method may include using the cell culturing device to screen, test, examine, and/or compare the effectiveness of one or more drugs and/or chemical agents for their effect on improving mucociliary transport by the layer of ciliated cells.</p>
+      <p id="p-00016-en" num="0016">According to embodiments of the present invention, a cell culturing device for culturing a layer of cells includes at least one member defining an endless, substantially elliptical channel, and a semipermeable membrane forming a floor of the channel to receive and support the layer of cells.</p>
+      <p id="p-00017-en" num="0017">In some embodiments, the cell culturing device is configured such that, when the layer of cells is a layer of ciliated cells, the cell culturing device causes the ciliated cells to spontaneously orient themselves to transport a material on the layer of cells in a continuous pattern around the elliptical channel.</p>
+      <p id="p-00018-en" num="0018">According to method embodiments of the present invention, a method for culturing ciliated cells comprising: culturing ciliated cells in a cell culturing device; and using the cell culturing device to screen, test, examine, and/or compare the effectiveness of one or more drugs and/or chemical agents for their effect on improving mucociliary transport by the layer of ciliated cells.</p>
+      <p id="p-00019-en" num="0019">Further features, advantages and details of the present invention will be appreciated by those of ordinary skill in the art from a reading of the figures and the detailed description of the embodiments that follow, such description being merely illustrative of the present invention.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 1</figref> is a top, plan view of an MCT culturing device (MCTD) according to embodiments of the present invention.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 2</figref> is a cross-sectional view of the MCTD of <figref>FIG. 1</figref> taken along the line <b>2</b>-<b>2</b> in <figref>FIG. 1</figref>.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 3</figref> is a fragmentary, top plan view of a culturing system, including the MCTD of <figref>FIG. 1</figref>, and a layer of ciliated cells plated in the MCTD to form a cell culture assembly.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 4</figref> is a cross-sectional view of the cell culture assembly of <figref>FIG. 3</figref> taken along the line <b>4</b>-<b>4</b> of <figref>FIG. 3</figref> and a heater block.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 5</figref> is a flow chart representing methods according to embodiments of the present invention.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 6</figref> is a fragmentary, top plan view showing the movement of fluorescent beads in the airway surface liquid of HAE cells cultured in the MCTD.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 7</figref> is a graph representing experimental overall average rate of MCT for four HAE cell cultures each plated in a respective MCTD.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 8</figref> is a graph representing the effect of decreasing temperatures on CBF and MCT speed as experimentally measured using the MCTD.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 9</figref> is a graph representing the effect of increasing temperatures on CBF and MCT speed as experimentally measured using the MCTD.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 10A</figref> is a graph representing the effect of temperature on CBF and MCT speed as experimentally determined by raising the temperature of the cell culture step-wise in the MCTD.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 10B</figref> is a graph wherein the data of <figref>FIG. 10A</figref> is replotted to demonstrate the linear relationship between CBF and MCT speed.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIGS. 11</figref>, <b>12</b>A and <b>12</b>B are graphs showing the effect on CBF and MCT speed of stimulation by ATPγS of HAE cells cultured in the MCTD.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 13</figref> is a graph representing the effect of Bovine Salivary Mucin (BSM) concentration on the MCT speed of HAE cells cultured in the MCTD.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 14</figref> is a cross-sectional view of an MCTD according to further embodiments of the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION OF EMBODIMENTS OF THE INVENTION</heading>
+      <p id="p-00034-en" num="0034">The present invention now will be described more fully hereinafter with reference to the accompanying drawings, in which illustrative embodiments of the invention are shown. In the drawings, the relative sizes of regions or features may be exaggerated for clarity. This invention may, however, be embodied in many different forms and should not be construed as limited to the embodiments set forth herein; rather, these embodiments are provided so that this disclosure will be thorough and complete, and will fully convey the scope of the invention to those skilled in the art.</p>
+      <p id="p-00035-en" num="0035">It will be understood that, although the terms first, second, etc. may be used herein to describe various elements, components, regions, layers and/or sections, these elements, components, regions, layers and/or sections should not be limited by these terms. These terms are only used to distinguish one element, component, region, layer or section from another region, layer or section. Thus, a first element, component, region, layer or section discussed below could be termed a second element, component, region, layer or section without departing from the teachings of the present invention.</p>
+      <p id="p-00036-en" num="0036">Spatially relative terms, such as “beneath”, “below”, “lower”, “above”, “upper” and the like, may be used herein for ease of description to describe one element or feature's relationship to another element(s) or feature(s) as illustrated in the figures. It will be understood that the spatially relative terms are intended to encompass different orientations of the device in use or operation in addition to the orientation depicted in the figures. For example, if the device in the figures is turned over, elements described as “below” or “beneath” other elements or features would then be oriented “above” the other elements or features. Thus, the exemplary term “below” can encompass both an orientation of above and below. The device may be otherwise oriented (rotated 90° or at other orientations) and the spatially relative descriptors used herein interpreted accordingly.</p>
+      <p id="p-00037-en" num="0037">As used herein, the singular forms “a”, “an” and “the” are intended to include the plural forms as well, unless expressly stated otherwise. It will be further understood that the terms “includes,” “comprises,” “including” and/or “comprising,” when used in this specification, specify the presence of stated features, integers, steps, operations, elements, and/or components, but do not preclude the presence or addition of one or more other features, integers, steps, operations, elements, components, and/or groups thereof. It will be understood that when an element is referred to as being “connected” or “coupled” to another element, it can be directly connected or coupled to the other element or intervening elements may be present. As used herein, the term “and/or” includes any and all combinations of one or more of the associated listed items.</p>
+      <p id="p-00038-en" num="0038">Unless otherwise defined, all terms (including technical and scientific terms) used herein have the same meaning as commonly understood by one of ordinary skill in the art to which this invention belongs. It will be further understood that terms, such as those defined in commonly used dictionaries, should be interpreted as having a meaning that is consistent with their meaning in the context of this specification and the relevant art and will not be interpreted in an idealized or overly formal sense unless expressly so defined herein.</p>
+      <p id="p-00039-en" num="0039">Numbers presented in parentheses represent citations to the references listed at the end of the Detailed Description of the Embodiments of the Invention.</p>
+      <p id="p-00040-en" num="0040">Methods and apparatus according to embodiments of the present invention can provide a simple, reproducible device for studying mucociliary transport (MCT) in vitro. According to embodiments of the invention, ciliated cells are cultured in a cell culturing device (the MCT culturing device) having a closed elliptical (according to some embodiments, circular) channel defining a corresponding elliptical track. Preliminary studies have demonstrated that culturing ciliated airway epithelial cells in the channel of a MCT culturing device as described will result in the development of MCT in a continuous fashion along the track and around the MCT culturing device. A device as disclosed can have broad applications to both basic scientific studies of the process of MCT and to the development and testing of therapeutics designed to improve mucociliary clearance (MCC) in a wide range of airway diseases, including chronic obstructive pulmonary disease (COPD), cystic fibrosis (CF), and asthma (Fahy and Dickey 2010).</p>
+      <p id="p-00041-en" num="0041">With reference to <figref>FIG. 5</figref>, a method or process for culturing ciliated cells in accordance with embodiments of the invention includes providing a cell culturing device defining an endless, substantially elliptical channel (Block <b>20</b>), and placing or culturing a layer of ciliated cells in the elliptical channel (Block <b>22</b>). The culturing device may be constructed as described below. The placed ciliated cells may spontaneously orient themselves to transport material (e.g., mucus) on the layer of ciliated cells in a continuous pattern around the elliptical channel. The cell culturing device may be further used to screen, test, examine and/or compare the effectiveness of one or more drugs or chemical agents for their effect on MCT.</p>
+      <p id="p-00042-en" num="0042">With reference to <figref>FIGS. 1-4</figref>, an exemplary MCT culturing device (MCTD) <b>100</b> according to embodiments of the present invention is shown therein. The MCT culturing device <b>100</b> may be used in combination with a culturing vessel <b>50</b> and a culture medium <b>52</b>, which collectively form a culturing system (MCTS) <b>10</b>. The MCTS system <b>10</b> may further include a heater block <b>60</b> and a heater block cover <b>62</b> (<figref>FIG. 4</figref>) to selectively and controllably heat the MCT culturing device <b>100</b>. The MCTS system <b>10</b> may also include a video camera and microscope <b>64</b> for capturing and recording movement in the MCT culturing device <b>100</b>.</p>
+      <p id="p-00043-en" num="0043">The MCT culturing device <b>100</b> includes an annular or cylindrical outer wall or member <b>110</b>, an inner member <b>120</b>, and a floor member <b>130</b>. The outer member <b>110</b> and the floor member <b>130</b> define a cavity <b>116</b> in which the inner member <b>120</b> is disposed. The inner member <b>120</b> includes a bottom wall <b>124</b> and an upstanding, annular or cylindrical sidewall <b>122</b>. The bottom wall <b>124</b> can be bonded to the floor member <b>130</b> by a layer of adhesive <b>134</b>. A plurality of support or spacer feet <b>112</b> depend from the outer member <b>110</b>.</p>
+      <p id="p-00044-en" num="0044">An annular inner wall surface <b>110</b>A of the outer member <b>110</b>, an opposing annular wall surface <b>122</b>A of the sidewall <b>122</b>, and an annular surface section <b>130</b>A of the floor member <b>130</b> collectively define an annular channel <b>140</b>. According to some embodiments and as shown, the channel <b>140</b> is continuous, is closed or endless, and is elliptical in shape. According to some embodiments, the channel <b>140</b> is substantially circular in shape (a circle being a special kind of ellipse). According to some embodiments, the surfaces <b>110</b>A and <b>122</b>A are substantially concentric. The channel <b>140</b> defines a track <b>142</b> for MCT, as discussed herein.</p>
+      <p id="p-00045-en" num="0045">According to some embodiments, the channel <b>140</b> has a width W in the range of from about 0.5 mm to 6 mm and, according to some embodiments, the channel width W is in the range of from about 0.5 mm to 2 mm. According to some embodiments, the channel width W is substantially uniform about the entire length or circumference of the channel <b>140</b>. According to some embodiments, the channel <b>140</b> has a height H of at least about 5 mm. According to some embodiments, the channel <b>140</b> has an outer diameter D in the range of from about 2 mm to 30 mm.</p>
+      <p id="p-00046-en" num="0046">According to some embodiments and as shown, the floor member <b>130</b> is a semipermeable or porous membrane. The membrane may be formed of any suitable material(s). According to some embodiments, the membrane is formed of a material selected from the group consisting of polycarbonate, mixed cellulose esters, polyester and polytetrafluoroethylene (PTFE). The membrane may be coated with or incorporate collagen or other matrices for the culturing of the cells.</p>
+      <p id="p-00047-en" num="0047">The inner and outer members <b>110</b>, <b>120</b> may be formed of any suitable material(s). According to some embodiments, the members <b>110</b>, <b>120</b> and the surfaces <b>110</b>A and <b>122</b>A are formed of a rigid polymeric material. According to some embodiments, the polymeric material is or includes polystyrene or nylon.</p>
+      <p id="p-00048-en" num="0048">The culturing vessel <b>50</b> and the culture medium <b>52</b> may be of known, conventional or any other suitable type and construction. Such devices and mediums are well known to those of skill in the art and will not be described in detail herein. According to some embodiments, the MCT culturing device <b>100</b> and the culturing vessel <b>50</b> are relatively sized so that multiple MCT culturing devices <b>100</b> can be placed in side-by-side arrangement in the vessel <b>50</b> to enable high throughput screening (HTS), for example. The vessel <b>50</b> may be a flask, a culture dish, or a <b>6</b>, <b>24</b>, <b>96</b> or <b>384</b> well culture plate, for example.</p>
+      <p id="p-00049-en" num="0049">In some embodiments, the MCT culturing device <b>100</b> includes a 30 mm diameter outer member <b>110</b> surrounding an approximately 18 mm diameter inner wall <b>122</b>. This results in a circular membrane track <b>142</b> with a width W of about 4 to 5 mm. This size MCT culturing device <b>100</b> can be used in a standard 6-well culture plate <b>50</b>. However, the size of the device <b>100</b> can be modified to fit any standard cell culture vessel, including, but not limited to, <b>12</b>, <b>24</b>, <b>48</b>, <b>96</b>, and <b>384</b> well-plates.</p>
+      <p id="p-00050-en" num="0050">An MCT culturing device (e.g., the MCT culturing device <b>100</b>) and a culturing system (e.g., the culturing system <b>10</b>) may be used as follows in accordance with embodiments of the present invention to induce and observe MCT in a ciliated cell sample. With reference to <figref>FIGS. 3 and 4</figref>, a sample or layer of ciliated cells C are seeded, plated or placed on the membrane surface <b>130</b>A of the MCT culturing device <b>100</b> to form a cell culture assembly <b>5</b>. According to some embodiments, which may include each of the embodiments discussed and disclosed herein, the cells C are ciliated cells. A layer of transport fluid M is disposed on top of the layer of cells C. In some embodiments, the transport fluid M is endogenous mucus. In other embodiments, the transport fluid M is exogenous (added) mucus.</p>
+      <p id="p-00051-en" num="0051">The device <b>100</b> is placed in the vessel <b>50</b> such that the culture medium <b>52</b> contacts at least the bottom or basolateral side of the membrane <b>130</b> (e.g., the upper level of the culture medium <b>52</b> is at or above the height of the membrane <b>130</b>). The layer of transport fluid M may be exposed to the overlying air or other atmosphere as shown. According to some embodiments, the device <b>100</b> and method position and contain the ciliated cells C in an orientation that causes the ciliated cells C to organize their activity in a synchronous fashion, so that the layer of ciliated cells C thereby transports the fluid M in a pre-defined, circular pattern or direction T in the channel <b>140</b> and along the track <b>142</b>. The porous membrane <b>130</b> material supports the growth and differentiation of the ciliated cells C. The ciliated cells C, being cultured at the air/liquid interface, are nourished by the culture medium <b>52</b> which is in fluid contact with the ciliated cells C.</p>
+      <p id="p-00052-en" num="0052">According to some embodiments, the ciliated cells C are epithelial cells and, in some embodiments, are human airway epithelial (HAE) cells. It has been found that ciliated epithelial cells, when cultured in the described MCT culturing device <b>100</b>, will spontaneously orient themselves in such a manner as to transport materials in a continuous circular pattern that can be measured and studied.</p>
+      <p id="p-00053-en" num="0053">In some embodiments, an MCT culturing device (e.g., the device <b>100</b>) as described herein is used for screening agents to improve MCC. Therapeutic agents or treatments known to increase/decrease ciliary beat frequency (CBF) are tested using the MCT culturing device for their ability to increase/decrease the rate of transport in the MCT culturing device.</p>
+      <p id="p-00054-en" num="0054">Impaired MCC is an important contributing factor to many debilitating airway diseases, including CF and COPD (a chronic disease that affects more than 200 million people). Efficient mucociliary clearance (MCC) is the result of the coordinated regulation of multiple cellular systems, including the production and secretion of mucin, the regulation of ion and fluid transport, and the coordinated beating of cilia. In cystic fibrosis (CF), inactivating mutations in the CFTR protein prevent the secretion of chloride onto the apical surface of the airways. As a result, the mucous layer becomes dehydrated and MCC is impaired. The reduction in MCC renders the CF individual more susceptible to viral and/or bacterial infections. Infections cause an increase in mucin secretion, and this leads to a further dehydration of the airway surface liquid. While normal mucus may contain approximately 2% solids, CF mucus typically contains 6-8% solids, which studies have shown results in the collapse of the periciliary layer and a complete inhibition of MCC (Button, Cai et al. 2012). Thus, there is strong evidence that reduced MCC plays a key role in the initiation and progression of CF lung pathogenesis. The role of MCC in CF lung disease is further evidenced by clinical studies that have demonstrated that agents that improve MCC also improve patient outcome. Thus, inhaling DNase, which is proposed to reduce mucus viscosity and improve MCC by cleaving the abundant DNA found in CF mucus, has been a standard of care for almost 20 years (Wagener and Kupfer 2012). More recently, the inhalation of hypertonic saline (Donaldson, Bennett et al. 2006) or mannitol (Aitken, Bellon et al. 2012) to rehydrate the airway surface and improve MCC has been demonstrated to improve lung function in CF patients. However, neither of these agents is completely effective at restoring MCC and preventing disease progression in CF, and it is clear that improved treatments are still necessary.</p>
+      <p id="p-00055-en" num="0055">While there have been many studies of the individual components of MCC, including the regulation of mucus secretion (Davis and Dickey 2008), ciliary beat frequency (Salathe 2007), and airway liquid secretion/absorption (Boucher 2003), there have been far fewer studies of MCC. This is in large part due to the difficulties of studying an integrated system that involves multiple cell types and directional transport. Thus, most studies of MCC to date have been performed using whole animal models that require specialized techniques and have limited throughput (Foster, Walters et al. 2001; Sabater, Wanner et al. 2002; Grubb, Jones et al. 2004; Hua, Zeman et al. 2010). For this reason, our understanding of the detailed mechanisms controlling efficient MCC are limited, and the development of new therapeutics to improve MCC has also been hampered.</p>
+      <p id="p-00056-en" num="0056">The development of a simple, reproducible device (namely, an MCT culturing device as described herein in accordance with embodiments of the present invention) will allow for detailed in vitro studies of the MCT system and may stimulate research in this area. In addition, the MCT culturing device and system as disclosed herein can allow for relatively high-throughput screening of potential therapeutic agents, either singly or in combination, including agents that increase CBF (e.g., salmeterol (Bennett, Almond et al. 2006)), decrease mucus production (e.g., azithromycin (Ribeiro, Hurd et al. 2009)) or viscosity (e.g., N-acetylcysteine (Suk, Boylan et al. 2011)), or increase mucus hydration (e.g., amiloride (Zhou, Treis et al. 2008)).</p>
+      <p id="p-00057-en" num="0057">One of the difficulties with developing agents to improve MCC is that, as mentioned above, MCC is the result of the complex interplay of several different components. And while there are many assays that are capable of measuring the effect of potential therapeutic agents on individual components of MCC (e.g., mucus viscosity (Rancourt, Tai et al. 2004), ciliary beat frequency (Morse, Smullen et al. 2001), etc.) there are fewer assays that directly measure the effect on the overall system. Typically, measurement of MCC requires the use of radioactive tracers in humans or large animals (e.g., sheep) (Donaldson, Corcoran et al. 2007; Hirsh, Zhang et al. 2008). These assays are expensive and the number of compounds that can be tested are limited. Although a few laboratories have measured MCC in mouse models (Grubb, Jones et al. 2004; Hua, Zeman et al. 2010; Ostrowski, Yin et al. 2010), these studies are labor intensive and still require the use of animals.</p>
+      <p id="p-00058-en" num="0058">In in vitro studies of MCT, it has been observed that well-differentiated cultures of human bronchial epithelial (HBE) cells grown at the air/liquid interface (ALI) occasionally develop areas of circular mucociliary transport (MCT) (Matsui, Grubb et al. 1998; Matsui, Randell et al. 1998). These “mucus hurricanes” have been very useful to researchers in the field, and have been important to our developing understanding of MCC (Tarran and Boucher 2002; Tarran 2004). However, these cultures suffer from several disadvantages that make them less than ideal for purposes of drug screening/development. For example, the development of these areas of MCT is occasional, rather than reproducible, and the size and location of the MCT is random within the culture dish. More importantly, because of the orientation of these areas of MCT, mucus tends to accumulate in the center, and the speed of transport depends on the distance from the center of “hurricane”. Thus this system is inadequate for the standardized testing and comparison of the effect of novel agents on MCT. The lack of a suitable in vitro system for MCT studies represents a critical gap in our ability to develop new therapeutics targeting this innate defense mechanism.</p>
+      <p id="p-00059-en" num="0059">MCT culturing devices and systems as disclosed herein (e.g., the MCT culturing device <b>100</b> and the culturing system <b>10</b>) can provide continuous, directional (elliptical or substantially circular) MCT in a uniform and reproducible manner. It is believed that this phenomena results from the inventive MCT culturing device because the cultured cilia will spontaneously beat in the direction of least resistance and organize into a metachronal wave capable of transporting mucus. Applying this concept, airway epithelial cells are cultured in a relatively narrow, ring-shaped channel so that the path of least resistance for MCT is around the culture channel in a circular pattern that encompasses the entire circumference of the MCT culturing device.</p>
+      <p id="p-00060-en" num="0060">The MCT culturing device results in a more reproducible generation of MCT in vitro, because the ciliated cells are “directed” or “guided” to organize their ciliary activity in a pre-defined circular pattern. A plurality of such MCT culturing devices may be provided having a uniform width and diameter, which can allow for the standardization of measurements of MCT and thus increase the ease and speed of measurements. The MCT culturing device can also allow multiple repeat measures of the same cells under the same conditions, because once MCT is organized, the physical constraints of the MCT culturing device will make it unlikely that the pattern of MCT will change. The MCT culturing device can also be adapted for HTS of new therapeutic agents, which is not currently feasible using other techniques to study MCT.</p>
+      <p id="p-00061-en" num="0061">According to some method embodiments of the present invention, an MCT culturing device as disclosed herein is employed as follows. Human airway epithelial cells are plated in the track and cultured at the air-to-liquid interface (ALI) using standard conditions until ciliated cell differentiation occurs (Gray, Guzman et al. 1996; Fulcher, Gabriel et al. 2005). The cultures are monitored for the spontaneous development of MCT in a circular pattern around the track. The number of cultures that develop MCT and the direction of flow (clockwise (CW) or counterclockwise (CCW)) is determined. Marker or tracking beads can be added to the mucus layer and tracked or monitored and recorded to measure the rate of MCT. In particular, fluorescent beads may be added to the mucus layer and the rate of MCT can be measured by fluorescent microscopy (Worthington and Tarran 2011). The rate of MCT may also be measured by visually observing masses (“globs”) of endogenous mucus and/or debris move around the track without added fluorescent beads.</p>
+      <p id="p-00062-en" num="0062">The size and dimensions of the MCT culturing device may be varied to improve its usefulness. For example, a narrower track (e.g., the track <b>142</b>) may increase the number of cultures that successfully generate circular MCT. The MCT culturing device may also be scaled down to 24, 96 and/or 384 well formats so that it can be utilized for HTS of therapeutic agents. Reducing the size of the MCT culturing device can provide other advantages, including a decreased cost of production and the use of fewer cells and reagents.</p>
+      <p id="p-00063-en" num="0063">An external flow may be applied to the cell culture in the MCT culturing device during the differentiation period to orient the direction of MCT. The application of flow may increase the success rate of generating circular MCT.</p>
+      <p id="p-00064-en" num="0064">MCT culturing devices as described herein may also be used to culture airway epithelial cells from mice (You, Richer et al. 2002), dogs (Kondo, Finkbeiner et al. 1991), pigs, or other vertebrate animal species. Such expanded utility of the MCT culturing device may be valuable because mouse, dog, and porcine cells are more readily available than human cells. In addition, the ability to study MCT using cells from genetically modified mouse lines would be a further advantage of the system.</p>
+      <p id="p-00065-en" num="0065">As noted above, it has been previously observed that well-differentiated cultures of human bronchial epithelial (HBE) cells grown at the air/liquid interface (ALI) occasionally develop areas of circular mucociliary transport (MCT) (Matsui, Grubb et al. 1998; Matsui, Randell et al. 1998). However, the random occurrence of these hurricanes limits their usefulness as a screening assay. Because there is evidence that cilia can spontaneously coordinate their beat pattern (as evidenced by the formation of mucus hurricanes), and that cilia “prefer” to beat in the direction of least resistance, the inventors hypothesized that if placed in a narrow, circular track, the developing cilia would self-organize to produce continuous, directed, mucociliary transport. This circular track is believed to have several advantages: 1) because the track is narrow, cilia communication occurs over shorter distances than in a large culture dish; 2) because the track is defined by two edges, the cilia are “directed” to beat in either a plus or minus direction around the track; 3) the mucus is be transported around the track, therefore it does not accumulate; and 4) the flow of mucus around the track further refines the coordination of the cilia.</p>
+      <heading id="h-00007-en" level="1">Example 1</heading>
+      <p id="p-00066-en" num="0066">An MCT culturing device (MCTD) and the MCT system (MCTS) generally configured as shown for the MCTD <b>100</b> and MCTS <b>10</b> were constructed. The MCTD was constructed on a 30 mm Millicell™ cell culture insert (Millipore, Ireland). The base of an approximately 15 mm diameter central cylinder of cell culture compatible material (nylon, polystyrene) was attached to the center interior of the cell culture insert with an inert, silicone-based sealer. The approximately 4.0 mm outer ring or track defined in the bottom of the cell culture insert between the central cylinder and the cell culture insert was then coated with human Type IV collagen at ˜90 μg/cm<sup>2</sup>, air-dried, and UV-irradiated. All subsequent cell culture procedures were carried out essentially as previously described in detail (Gray, Guzman et al. 1996; Fulcher, Gabriel et al. 2005), with the following modifications. Primary or passage 1 HBE cells prepared by the University of North Carolina Cell and Tissue Culture Facility were plated on the MCTD (i.e., in the track; 500,000 or 250,000 cells/cm<sup>2</sup>, respectively) and fed basally with ALI media, 3×/week, for the first two weeks of culture. For the remainder of the experiment, cultures were routinely fed twice weekly. Cultures were washed to remove mucus and cell debris at each media change with 1-2 ml of phosphate buffered saline (PBS) that was added to the apical surface and allowed to incubate for 5 minutes. Cultures were examined at the time of media change and the extent of ciliation and the development of continuous, circular transport was recorded. Typically, cultures developed continuous MCT after approximately six weeks of culture. Not all cultures developed continuous circular MCT. Many cultures developed large areas of transport (½ to ⅔ of the culture dish), but failed to transport completely around the culture. Some cultures “dehydrated” between media changes and only exhibit complete MCT after the PBS wash. The inventors believe that a portion of this variability is dependent on the variability in the donor cells. There also is an apparent lot-to-lot variability in the Millicell™ cell culture inserts used to construct the device.</p>
+      <p id="p-00067-en" num="0067">Briefly, to perform a typical MCT experiment, the MCTD was washed and refed on day 0 as described above (although the details can vary, depending on the goal of the experiment). The following day, the culture was examined for the presence of MCT. If present, the insert was placed in a culture dish containing HEPES buffer and transferred to a heating block on the stage of a Nikon™ TE-2000 microscope. High speed videos were recorded from four equally spaced positions around the MCTD. Ciliary beat frequency (CBF) was determined by whole field analysis using the SAVA™ software program (Sisson, Stoner et al. 2003), and the speed and direction of particle transport were determined by tracking particles of debris in the mucus. Alternatively, a small volume of fluid (0.5 μl) containing fluorescent beads was added to the mucus layer, and after equilibration (5-10 minutes), the motion of the fluorescent beads was recorded and analyzed using fluorescent microscopy. Typically, the speed of 3-5 particles was measured in each field at each time point and averaged. As shown in <figref>FIG. 6</figref>, the addition of fluorescent beads to the endogenous mucus layer provided an easy method for measuring the rate of MCT. <figref>FIG. 6</figref> is a prolonged-exposure image showing the movement of 3 μm fluorescent beads (light grey) in the airway surface liquid (ASL) of human airway epithelial cells cultured in the inventive MCT culturing device. The motion of each particle is shown as a medium grey “track”. The image was recorded over approximately 7 seconds.</p>
+      <p id="p-00068-en" num="0068">Mucociliary transport around the track was routinely observed in the cultures. Some cultures did not develop MCT around the entire dish, most likely due to imperfections in the formation of the track (i.e., excess sealer disrupting the flow). Mucociliary transport rates were determined by recording the movement of fluorescent beads with a fluorescent microscope and measuring the distance traveled over time. Measurements were obtained using several different size beads (1, 3, or 10 μm) on multiple days. <figref>FIG. 7</figref> shows data collected from several MCTD cultures exhibiting circular MCT obtained from several different donors (codes) over time. The data shows that once established, circular MCT can be maintained for periods of several weeks and that the rate of MCT is relatively constant, both between different codes and between measures of the same code.</p>
+      <p id="p-00069-en" num="0069">The overall average rate of MCT from these four cultures was 6.2 mm/min, which agrees well with estimates of in vivo MCC rates (Grubb, Jones et al. 2004; Ostrowski, Yin et al. 2010). In <figref>FIG. 7</figref>, each symbol represents cultures from a different donor, and each point represents a single culture. Importantly, one of the cultures included in this data (triangles) was obtained from a CF donor, and demonstrates that when cultured under these in vitro conditions, CF cells are also capable of developing continuous MCT. All other cultures were non-CF controls.</p>
+      <p id="p-00070-en" num="0070">According to further method embodiments, studies as described above may be executed as follows. Multiple MCT culturing devices plated with human ciliated cells are cultured and examined under identical or substantially the same conditions. The method may be used to establish the reproducibility of the inventive culturing method or technique and to establish the normal baseline rate of MCT in the MCT culturing system.</p>
+      <p id="p-00071-en" num="0071">In an exemplary method as described, circular cultures of human bronchial epithelial (HBE) cells that have developed MCT are washed (e.g., 3× with phosphate buffered saline (PBS)) to remove mucus and accumulated cell debris. After a prescribed time period (twenty-four hours later), tracking media (e.g., 2 μL of a suspension of 10 micron fluorescent polystyrene beads (Polysciences, Inc.)) is carefully added to the apical fluid layer with a micropipette. The culture is placed on the stage of a fluorescent microscope and the transport of the tracking media (beads) is recorded on an attached DVD recorder. The video is analyzed by measuring the time required for individual tracking media (i.e., bead particles) to travel a fixed distance (determined with a scale bar). The rate of MCT for each MCT culturing device can be determined from the average of at least a prescribed number (e.g., five) different particles measured within a prescribed time period (e.g., the first five minutes after addition of the beads).</p>
+      <p id="p-00072-en" num="0072">According to methods of the present invention, to determine the effect of the width of the channel or track on the development of MCT, MCT culturing devices having channels with different sized widths W (<figref>FIG. 1</figref>) are constructed and provided. Human airway epithelial cells from different donors are each plated on an MCT culturing device of each size, cultured as above, and the incidence and rate of MCT measured.</p>
+      <p id="p-00073-en" num="0073">To test the effect of externally applied flow on the development of MCT, HBE cells may be cultured on an MCT culturing cell as described herein. At the time ciliated cell differentiation is first evident, a small volume of PBS (e.g., approximately 2 ml) is added to the surface of the culture dish. The dish is then swirled gently for a period of time (e.g., two minutes) in either the CW or CCW direction and the PBS removed. This process is repeated daily for a period of time (e.g., over the next two weeks or until MCT is observed). In each experiment, one or more cultures are swirled CW, one or more cultures are swirled CCW, and multiple cultures are stationary. The time at which MCT develops and the direction of flow will be recorded for each MCT culturing device. Flow may also be generated by using a variety of devices to rotate, rock, or shake the MCT device in a regular pattern to generate a directional flow of fluid. In some embodiments, directional flow may also be applied by a system of tubing and pumps. The application of directional flow may increase the number of MCT devices that establish MCT and/or improve the extent of MCT in individual devices.</p>
+      <p id="p-00074-en" num="0074">Similarly, airway epithelial cells from other mammalian sources such as mice, dogs, or pigs (e.g., cultures of mouse, dog, or pig bronchial or tracheal epithelial cells) may be cultured and studied as above.</p>
+      <p id="p-00075-en" num="0075">According to some method embodiments, treatments known to increase/decrease ciliary beat frequency (CBF) are tested for their ability to increase/decrease the rate of transport in the MCT culturing device to calibrate or validate the usefulness of the MCT culturing device for screening agents to improve MCC. Differentiated cultures of airway epithelial cells that are demonstrating active MCT undergo treatments to increase/decrease CBF and the effect on MCT is measured. These studies can be used to demonstrate that MCT in the closed circular culture track of the MCT culturing device can be regulated similarly to the in vivo situation.</p>
+      <heading id="h-00008-en" level="1">Example 2</heading>
+      <p id="p-00076-en" num="0076">To determine if the rate of MCT around the track could be regulated, ciliary beat frequency (CBF) and the rate of MCT were measured in a single culture immediately after removal from the cell culture incubator (˜37° C.). The cell culture media in the basal compartment of the culture dish was then replaced with cold media (˜0.4° C.) and the measurements were repeated. As shown in Table 1 (showing the effect of low temperature on CBF and MCT in a circular culture of HAE cells), the change to cold temperature reduced the CBF from 13.0 to 4.2 Hz, while the rate of MCT was reduced from 12.4 to 6.7 mm/min. This data demonstrates the rate of MCT can be regulated, and therefore the device can be utilized to identify agents that improve MCT.</p>
+      <p id="p-00077-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="84pt" align="left" />
+              <colspec colname="1" colwidth="49pt" align="center" />
+              <colspec colname="2" colwidth="84pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ciliary Beat</entry>
+                  <entry>Mucociliary</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Frequency</entry>
+                  <entry>Transport</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="char" char="." />
+              <colspec colname="3" colwidth="84pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>At 37 degree</entry>
+                  <entry>13.0</entry>
+                  <entry>12.4 mm/min</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>After 4 degree</entry>
+                  <entry>4.2</entry>
+                  <entry> 6.7 mm/min</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>media change</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00009-en" level="1">Example 3</heading>
+      <p id="p-00078-en" num="0077">In a further application of the MCTD to study factors affecting MCC, the inventors investigated the relationship between ciliary beat frequency and the rate (speed) of MCT as follows using HAE cells cultured in the MCTD as described. Multiple experiments were performed in which CBF and the rate of MCT was simultaneously measured as the temperature of the culture was varied. Three different protocols were examined: 1) the experiment was started at 37° C. and the culture was allowed to cool to 25° C.; 2) the culture was cooled on ice and the temperature was increased to 37° C.; and 3) the temperature of the culture was increased in a step-wise fashion from 24.5° C. to 39.5° C.</p>
+      <p id="p-00079-en" num="0078">
+        <figref>FIG. 8</figref> shows a representative experiment in which HAE cells cultured in the MCTD and demonstrating continuous circular MCT were monitored over time while the culture was allowed to cool from 37° C. to 25° C. CBF and MCT were measured through the observation period and plotted as a function of time. The result shown is from one representative experiment. The insert shows the linear relationship between CBF and MCT.</p>
+      <p id="p-00080-en" num="0079">
+        <figref>FIG. 9</figref> shows the result of one representative experiment in which HAE cells cultured in the MCTD and demonstrating continuous circular MCT were monitored over time while the temperature was raised from 0° C. to 37° C. CBF and MCT were measured throughout the observation period and plotted as a function of time. The insert shows the linear relationship between CBF and MCT.</p>
+      <p id="p-00081-en" num="0080">
+        <figref>FIG. 10A</figref> shows a representative experiment in which the temperature of the HAE cell culture was raised in a step-wise fashion and the CBF and MCT were measured at each step (after the temperature had stabilized), demonstrating that with increasing CBF, the rate of MCT also increases. As reflected in <figref>FIG. 10A</figref>, a culture in the inventive MCT culturing device demonstrating continuous circular MCT was incubated at a series of increasing temperatures in a step-wise fashion from 24.5° C. to 39.5° C. Each point illustrated in <figref>FIG. 10A</figref> represents the speed of a single particle (dots) or the average CBF (diamonds) determined from a high-speed video. The data shown is from a single experiment. The linear relationship between CBF and MCT is clearly illustrated in <figref>FIG. 10B</figref>, in which the data from <figref>FIG. 10A</figref> is replotted.</p>
+      <p id="p-00082-en" num="0081">Table 2 shows the relationship between CBF and MCT speed as determined from three different experimental protocols (sd=standard deviation; n=number of experiments). Overall, the inventors found an almost linear relationship between ciliary beat frequency and the rate of mucus transport, with an increase of 1 Hz in CBF corresponding to an increase of approximately 8 μm/sec.</p>
+      <p id="p-00083-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Dependence of mucus speed on CBF ((μm/s)/Hz)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="77pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>37→25° C.</entry>
+                  <entry>0→37° C.</entry>
+                  <entry>25→37 in steps</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="21pt" align="left" />
+              <colspec colname="2" colwidth="70pt" align="char" char="." />
+              <colspec colname="3" colwidth="35pt" align="char" char="." />
+              <colspec colname="4" colwidth="77pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>mean</entry>
+                  <entry>9.5</entry>
+                  <entry>15.0</entry>
+                  <entry>7.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>sd</entry>
+                  <entry>5.5</entry>
+                  <entry>9.1</entry>
+                  <entry>4.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>n</entry>
+                  <entry>3</entry>
+                  <entry>8</entry>
+                  <entry>6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00010-en" level="1">Example 4</heading>
+      <p id="p-00084-en" num="0082">To further characterize the utility of the MCTD as a screening assay, we have begun to investigate the response of CBF and MCT to different test agents. <figref>FIG. 11</figref> illustrates changes in CBF and MCT speed in response to stimulation by ATPγS. <figref>FIG. 11</figref> illustrates an experiment in which an HAE cell culture displaying circular MCT was first treated with a small amount of buffer followed by the addition (to the apical surface) of an equal amount of buffer containing 1 mM ATPγS. Both CBF and MCT speed increased following treatment with ATPγS. Although both the addition of carrier and the addition of ATPγS increased CBF and MCT, averaging the results from four different experiments/donors (codes) revealed that only the increase caused by ATPγS was significant under these conditions (<figref>FIGS. 12A and 12B</figref>). <figref>FIGS. 12A and 12B</figref> illustrate the effect of ATPγS on CBF and MCT in cultures of human airway epithelial cells. Both CBF and MCT were significantly increased in cultures treated with ATPγS (* indicates significantly different from carrier, p&lt;0.05; # indicates significantly different from baseline, p&lt;0.05).</p>
+      <p id="p-00085-en" num="0083">Clearly, the addition of fluid to the apical surface of the MCTD (as in these pilot studies) can affect the measurement of CBF and MCT. According to some embodiments, an aerosol system can be used to deliver test agents to the MCTD (e.g., to its apical surface). These studies provide additional evidence that the MCTD can be useful to measure the effect of different agents on MCT.</p>
+      <heading id="h-00011-en" level="1">Example 5</heading>
+      <p id="p-00086-en" num="0084">
+        <figref>FIG. 13</figref> shows the results of experiments wherein HAE cultures were grown in the MCTD, washed to remove the endogenous mucus, and then incubated with Bovine Salivary Mucin (BSM) at different concentrations. The speed of the MCT in each culture was measured by tracking the movement of particles in or on the BSM around the track of the MCTD.</p>
+      <p id="p-00087-en" num="0085">It will be appreciated that MCT culturing devices and methods according to embodiments of the present invention can provide a number of advantages.</p>
+      <p id="p-00088-en" num="0086">The inventive MCT culturing device (MCTD) and system can take advantage of the tendency of HBE cells to spontaneously organize their beating in the direction of least resistance. By integrating a circular track into an ALI culture system (Gray, Guzman et al. 1996; Fulcher, Gabriel et al. 2005), the inventors have demonstrated that cultures of HBE cells can be regularly generated that exhibit coordinated MCT around the entire circular track. This directed system of MCT has many advantages over the earlier studies of random areas of MCT. For example, in the MCTD, all cultures transport continuously over the same distance and diameter, making measurements of MCT easier to standardize and compare. In addition, because the mucus is transported in a continuous circle, there is no accumulation in the center of the “hurricane”, which can lead to large variations in the thickness (height) of the mucus from the edge to the center. Because the direction and distance of transport in the MCTD is maintained, cultures can be washed free of endogenous mucus and test solutions can be studied. Finally, replicate cultures from the same donor sample can be studied under the same conditions, and the same culture can be studied multiple times.</p>
+      <p id="p-00089-en" num="0087">The inventive MCT culturing device can be used in an in vitro assay suitable for screening novel therapeutics designed to improve MCC in CF patients. The availability of a robust screening system is clearly an aid to the development of new therapeutic agents, as evidenced by the rapid progress towards obtaining small molecule correctors of CFTR function enabled by the development of high-throughput screening programs (Pedemonte, Lukacs et al. 2005).</p>
+      <p id="p-00090-en" num="0088">The MCT culturing device can provide a cell culture device that reproducibly generates MCT in cultures of ciliated epithelial cells. The MCT culturing device can be designed to make the device amenable to studies/measures of MCT.</p>
+      <p id="p-00091-en" num="0089">The MCT culturing device can be constructed to have a standardized geometry to allow for high throughput measures of MCT, for the purpose of screening drugs for their effect on MCT or for any other purpose that would benefit from the ability to make measures of MCT. The MCT culturing device can be scaled down to fit in standard cell culture wells of 6, 12, 24, 48, 96, 384, and possibly other formats.</p>
+      <p id="p-00092-en" num="0090">The MCT culturing device can be used with human ciliated cells as well as with ciliated cells from other species, notably dogs, mice, and pigs.</p>
+      <p id="p-00093-en" num="0091">The MCT culturing device can be sensitive to manipulations that are known to have an effect on MCT, and therefore the device can be used for screening drugs/agents that may increase/improve MCC.</p>
+      <p id="p-00094-en" num="0092">Various modifications may be made to the MCT culturing devices as disclosed herein in accordance with embodiments of the invention. For example, rather than providing the spacer feet <b>112</b> that rest on the floor of the vessel <b>50</b>, the MCT culturing device <b>100</b> can be suspended in the cell culture media <b>52</b> by hanging the MCT culturing device <b>100</b> from the sides of the surrounding vessel <b>50</b>, or by any other suitable technique that will elevate the membrane <b>130</b> above the floor of the vessel <b>50</b>.</p>
+      <p id="p-00095-en" num="0093">While the device <b>100</b> is shown and described as including a discrete inner member <b>120</b> mounted within an outer member <b>110</b> and supported by a separately formed floor or membrane <b>130</b>, other constructions may be employed, in accordance with embodiments of the invention, depending on the required functionality of the device. For example, the inner and outer annular walls defining the channel may be formed as a unit with the membrane installed therein. In some embodiments, the inner and outer walls and the floor may all three be formed as a monolithic or unitary structure (i.e., in a case where the floor is not a membrane). Accordingly, the constructions shown in <figref>FIGS. 1-4</figref> and disclosed in this paragraph are not exhaustive of the possible constructions.</p>
+      <p id="p-00096-en" num="0094">The materials used to make the MCT culturing device may also be optimized. This may include the material used to make the members <b>110</b>, <b>120</b> themselves and any coatings used to improve the MCT properties of the MCT culturing device. This may also include the porous cell culture membrane <b>130</b> and any coatings to improve cell attachment and growth.</p>
+      <p id="p-00097-en" num="0095">The MCT culturing device may include additional features to facilitate the rapid and reproducible measurement of MCT. This may include an integrated numbering/bar coding system, an integrated scale bar in visible and/or fluorescent materials, and/or indentations or other alignment keys to allow the MCT culturing devices to be positioned reproducibly in the vessel <b>50</b> or other instruments for the measurement of MCT, the delivery of drugs, the automated changing of media or solutions, etc. Scale markings on the MCT culturing device may be used to automate the measurements.</p>
+      <p id="p-00098-en" num="0096">By way of example, the MCT culturing device <b>100</b> as illustrated in <figref>FIGS. 1-4</figref> includes reference indicia <b>150</b> (<figref>FIG. 1</figref>; e.g., etched or printed) on the top rim of the outer member <b>110</b> forming a scale bar <b>152</b>. The MCT culturing device <b>100</b> as illustrated also includes a series of visible or fluorescent tracking lines <b>154</b> on the floor member <b>130</b>. These indicia may be used to assist in measuring the transport of endogenous mucus or fluorescent particles, for example.</p>
+      <p id="p-00099-en" num="0097">As discussed above, the cell culturing procedure may include artificially creating flow to improve or direct the orientation of the cilia.</p>
+      <p id="p-00100-en" num="0098">The cell culture system <b>10</b> and methods may include a prescribed culture medium formulation <b>52</b>.</p>
+      <p id="p-00101-en" num="0099">A prescribed or standardized “test mucin solution” could be provided to users interested in measuring MCT under a defined set of conditions.</p>
+      <p id="p-00102-en" num="0100">In some embodiments, the MCT culturing device is used to culture human lung epithelial cells. In some embodiments, the MCT culturing device is used to culture human brain ependymal cells or human ciliated oviduct cells. The MCT culturing device may be used to culture dog, mouse, pig, frog, or other vertebrate animal epithelial cells.</p>
+      <p id="p-00103-en" num="0101">With reference to <figref>FIG. 14</figref>, an MCT culturing device <b>200</b> according to further embodiments is shown therein in cross-section. The device <b>200</b> corresponds to and may be used in the same manner as the device <b>100</b> except that the portion <b>230</b>B of the floor member <b>230</b> (e.g., a membrane) forming a portion of the channel <b>240</b> has an engagement surface <b>230</b>A that is curved or arcuate in cross-section. According to some embodiments and as illustrated, the cross-sectional profile is concave and, in some embodiments, substantially U-shaped. The surface <b>230</b>A thus forms an annular or toroidal half-pipe.</p>
+      <p id="p-00104-en" num="0102">In use, the ciliated cells C may be plated on the surface <b>230</b>A as described above with regard to the surface <b>130</b>A and, in some embodiments, such that the cells C extend along the bottom of the “U” of the channel and up the side walls of the floor member <b>230</b>. The curved profile configuration may enhance the development of MCT and/or create a more narrow, central channel, at a specified distance, that may make it easier to perform uniform measurements. In some embodiments, the curved profile floor surface <b>230</b>A replicates or simulates the shape of a trachea (e.g., a human trachea).</p>
+      <p id="p-00105-en" num="0103">The following references are hereby incorporated herein by reference and are referenced in the description above. <ul id="ul-00001-en" list-style="none"><li>Aitken, M. L., G. Bellon, et al. (2012). “Long-term inhaled dry powder mannitol in cystic fibrosis: an international randomized study.” <i>American Journal of Respiratory and Critical Care Medicine </i>185(6): 645-652.</li><li>Bennett, W. D., M. A. Almond, et al. (2006). “Effect of salmeterol on mucociliary and cough clearance in chronic bronchitis.” <i>Pulm Pharmacol Ther </i>19(2): 96-100.</li><li>Boucher, R. C. (2003). “Regulation of airway surface liquid volume by human airway epithelia.” <i>Pflugers Arch </i>445(4): 495-498.</li><li>Boucher, R. C. (2007). “Airway surface dehydration in cystic fibrosis: pathogenesis and therapy.” <i>Annu Rev Med </i>58: 157-170.</li><li>Boucher, R. C. (2007). “Evidence for airway surface dehydration as the initiating event in CF airway disease.” <i>J Intern Med </i>261(1): 5-16.</li><li>Button, B., L. H. Cai, et al. (2012). “A periciliary brush promotes the lung health by separating the mucus layer from airway epithelia.” <i>Science </i>337(6097): 937-941.</li><li>Davis, C. W. and B. F. Dickey (2008). “Regulated airway goblet cell mucin secretion.” <i>Annu Rev Physiol </i>70: 487-512.</li><li>Donaldson, S. H., W. D. Bennett, et al. (2006). “Mucus clearance and lung function in cystic fibrosis with hypertonic saline.” <i>N Engl J Med </i>354(3): 241-250.</li><li>Donaldson, S. H., T. E. Corcoran, et al. (2007). “Mucociliary clearance as an outcome measure for cystic fibrosis clinical research.” <i>Proc Am Thorac Soc </i>4(4): 399-405.</li><li>Fahy, J. V. and B. F. Dickey (2010). “Airway mucus function and dysfunction.” <i>N Engl J Med </i>363(23): 2233-2247.</li><li>Foster, W. M., D. M. Walters, et al. (2001). “Methodology for the measurement of mucociliary function in the mouse by scintigraphy.” <i>J Appl Physiol </i>90(3): 1111-1117.</li><li>Fulcher, M. L., S. Gabriel, et al. (2005). “Well-differentiated human airway epithelial cell cultures.” <i>Methods Mol Med </i>107: 183-206.</li><li>Gray, T. E., K. Guzman, et al. (1996). “Mucociliary differentiation of serially passaged normal human tracheobronchial epithelial cells.” <i>Am. J. Respir. Cell Mol. Biol. </i>14: 104-112.</li><li>Grubb, B. R., J. H. Jones, et al. (2004). “Mucociliary transport determined by in vivo microdialysis in the airways of normal and CF mice.” <i>Am J Physiol Lung Cell Mol Physiol </i>286(3): L588-595.</li><li>Hirsh, A. J., J. Zhang, et al. (2008). “Pharmacological properties of N-(3,5-diamino-6-chloropyrazine-2-carbonyl)-N′-4-[4-(2,3-dihydroxypropoxyl)phenyl]butyl-guanidine methanesulfonate (552-02), a novel epithelial sodium channel blocker with potential clinical efficacy for cystic fibrosis lung disease.” <i>The Journal of pharmacology and experimental therapeutics </i>325(1): 77-88.</li><li>Hua, X., K. L. Zeman, et al. (2010). “Noninvasive real-time measurement of nasal mucociliary clearance in mice by pinhole gamma scintigraphy.” <i>J Appl Physiol </i>108(1): 189-196.</li><li>Kondo, M., W. E. Finkbeiner, et al. (1991). “A simple technique for culture of highly differentiated cells from dog tracheal epithelium.” <i>Am. J. Physiol. </i>(<i>Lung Cell. Mol. Physiol. </i>5) 261: L106-L117.</li><li>Matsui, H., B. R. Grubb, et al. (1998). “Evidence for periciliary liquid layer depletion, not abnormal ion composition, in the pathogenesis of cystic fibrosis airways disease.” <i>Cell </i>95(7): 1005-1015.</li><li>Matsui, H., S. H. Randell, et al. (1998). “Coordinated clearance of periciliary liquid and mucus from airway surfaces.” <i>J Clin Invest </i>102(6): 1125-1131.</li><li>Morse, D. M., J. L. Smullen, et al. (2001). “Differential effects of UTP, ATP, and adenosine on ciliary activity of human nasal epithelial cells.” <i>Am J Physiol Cell Physiol </i>280(6): C1485-1497.</li><li>Ostrowski, L. E., W. Yin, et al. (2010). “Conditional deletion of dnaic1 in a murine model of primary ciliary dyskinesia causes chronic rhinosinusitis.” <i>Am J Respir Cell Mol Biol </i>43(1): 55-63.</li><li>Pedemonte, N., G. L. Lukacs, et al. (2005). “Small-molecule correctors of defective DeltaF508-CFTR cellular processing identified by high-throughput screening.” J Clin Invest 115(9): 2564-2571.</li><li>Rancourt, R. C., S. Tai, et al. (2004). “Thioredoxin liquefies and decreases the viscoelasticity of cystic fibrosis sputum.” <i>American journal of physiology. Lung cellular and molecular physiology </i>286(5): L931-938.</li><li>Ribeiro, C. M., H. Hurd, et al. (2009). “Azithromycin treatment alters gene expression in inflammatory, lipid metabolism, and cell cycle pathways in well-differentiated human airway epithelia.” <i>PLoS One </i>4(6): e5806.</li><li>Sabater, J. R., A. Wanner, et al. (2002). “Montelukast prevents antigen-induced mucociliary dysfunction in sheep.” <i>Am J Respir Crit Care Med </i>166(11): 1457-1460.</li><li>Salathe, M. (2007). “Regulation of mammalian ciliary beating.” <i>Annu Rev Physiol </i>69: 401-422.</li><li>Sisson, J. H., J. A. Stoner, et al. (2003). “All-digital image capture and whole-field analysis of ciliary beat frequency.” <i>J Microsc </i>211(Pt 2): 103-111.</li><li>Suk, J. S., N. J. Boylan, et al. (2011). “N-acetylcysteine Enhances Cystic Fibrosis Sputum Penetration and Airway Gene Transfer by Highly Compacted DNA Nanoparticles.” <i>Mol Ther. </i></li><li>Tarran, R. (2004). “Regulation of airway surface liquid volume and mucus transport by active ion transport.” <i>Proc Am Thorac Soc </i>1: 42-46.</li><li>Tarran, R. and R. C. Boucher (2002). “Thin-film measurements of airway surface liquid volume/composition and mucus transport rates in vitro.” <i>Methods Mol Med </i>70: 479-492.</li><li>Wagener, J. S. and O. Kupfer (2012). “Dornase alfa (Pulmozyme).” <i>Current opinion in pulmonary medicine </i>18(6): 609-614.</li><li>Worthington, E. N. and R. Tarran (2011). “Methods for ASL measurements and mucus transport rates in cell cultures.” <i>Methods Mol Biol </i>742: 77-92.</li><li>You, Y., E. J. Richer, et al. (2002). “Growth and differentiation of mouse tracheal epithelial cells: selection of a proliferative population.” <i>Am J Physiol Lung Cell Mol Physiol </i>283(6): L1315-1321.</li><li>Zhou, Z., D. Treis, et al. (2008). “Preventive but not late amiloride therapy reduces morbidity and mortality of lung disease in betaENaC-overexpressing mice.” <i>Am J Respir Crit Care Med </i>178(12): 1245-1256.</li></ul></p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>That which is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A cell culture assembly comprising:
+<claim-text>a cell culturing device including at least one member defining an endless, substantially elliptical channel; and</claim-text><claim-text>a layer of ciliated cells disposed in the elliptical channel.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The cell culture assembly of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the cell culturing device includes a semipermeable membrane forming a floor of the channel and supporting the layer of ciliated cells.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The cell culture assembly of <claim-ref idref="clm-00002-en">claim 2</claim-ref> wherein the membrane is porous.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The cell culture assembly of <claim-ref idref="clm-00003-en">claim 3</claim-ref> including culture medium contacting the layer of ciliated cells through the membrane.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The cell culture assembly of <claim-ref idref="clm-00002-en">claim 2</claim-ref> wherein the membrane is formed of a material selected from the group consisting of polycarbonate, mixed cellulose esters, polyester and polytetrafluoroethylene (PTFE).</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The cell culture assembly of <claim-ref idref="clm-00002-en">claim 2</claim-ref> including reference indicia on the membrane to assist in measuring a rate of ciliary transport by the layer of ciliated cells.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The cell culture assembly of <claim-ref idref="clm-00001-en">claim 1</claim-ref> including a side wall and reference indicia on the side wall to assist in measuring a rate of ciliary transport by the layer of ciliated cells.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The cell culture assembly of <claim-ref idref="clm-00001-en">claim 1</claim-ref> including at least one tracking bead on the layer of ciliated cells to assist in measuring a rate of ciliary transport by the layer of ciliated cells.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The cell culture assembly of <claim-ref idref="clm-00001-en">claim 1</claim-ref> configured such that the ciliated cells spontaneously orient themselves to transport a material on the layer of ciliated cells in a continuous pattern around the elliptical channel.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The cell culture assembly of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the layer of ciliated cells is a layer of ciliated airway epithelial cells.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The cell culture assembly of <claim-ref idref="clm-00010-en">claim 10</claim-ref> wherein the layer of ciliated airway epithelial cells is a layer of human bronchial epithelial cells.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The cell culture assembly of <claim-ref idref="clm-00010-en">claim 10</claim-ref> including a layer of a transport fluid on top of the layer of ciliated airway epithelial cells.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The cell culture assembly of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the transport fluid is mucus.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The cell culture assembly of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the channel has a substantially uniform width about its full circumference.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The cell culture assembly of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein:
+<claim-text>the cell culturing device includes a floor of the channel supporting the layer of ciliated cells; and</claim-text><claim-text>the floor has a curved cross-sectional profile.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en" independent="true">
+      <claim-text>
+        <b>16</b>. A method for culturing ciliated cells, the method comprising:
+<claim-text>providing a cell culturing device including at least one member defining an endless, substantially elliptical channel; and</claim-text><claim-text>placing a layer of ciliated cells in the elliptical channel.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00016-en">claim 16</claim-ref> wherein the cell culturing device includes a semipermeable membrane forming a floor of the channel, and the method includes placing the layer of ciliated cells on the membrane such that the layer of ciliated cells is supported thereby.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00017-en">claim 17</claim-ref> including providing a culture medium in the cell culturing device and contacting the layer of ciliated cells with the culture medium through the membrane.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00016-en">claim 16</claim-ref> wherein the ciliated cells spontaneously orient themselves to transport a material on the layer of ciliated cells in a continuous pattern around the elliptical channel.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00016-en">claim 16</claim-ref> including using the cell culturing device to screen, test, examine, and/or compare the effectiveness of one or more drugs and/or chemical agents for their effect on improving mucociliary transport by the layer of ciliated cells.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en" independent="true">
+      <claim-text>
+        <b>21</b>. A cell culturing device for culturing a layer of cells, the cell culturing device comprising:
+<claim-text>at least one member defining an endless, substantially elliptical channel; and</claim-text><claim-text>a semipermeable membrane forming a floor of the channel to receive and support the layer of cells.</claim-text></claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The cell culturing device of <claim-ref idref="clm-00021-en">claim 21</claim-ref> configured such that, when the layer of cells is a layer of ciliated cells, the cell culturing device causes the ciliated cells to spontaneously orient themselves to transport a material on the layer of cells in a continuous pattern around the elliptical channel.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en" independent="true">
+      <claim-text>
+        <b>23</b>. A method for culturing ciliated cells comprising:
+<claim-text>culturing ciliated cells in a cell culturing device; and</claim-text><claim-text>using the cell culturing device to screen, test, examine, and/or compare the effectiveness of one or more drugs and/or chemical agents for their effect on improving mucociliary transport by the layer of ciliated cells.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252329A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150252329A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252329A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252329A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252329A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252329A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150252329A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252329A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150252329A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252329A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150252329A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252329A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150252329A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252329A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150252329A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252329A1-20150910-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150252329A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252329A1-20150910-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150252329A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252329A1-20150910-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150252329A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252329A1-20150910-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150252329A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252329A1-20150910-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150252329A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252329A1-20150910-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150252329A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252329A1-20150910-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150252329A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252329A1-20150910-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150252329A1_00016.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150252329A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150252329A1.PDF" type="pdf" size="1341898" pages="25" />
+</lexisnexis-patent-document>

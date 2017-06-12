@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259585A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030131" date-changed="20151002" time-changed="033526">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314785">
+        <country>US</country>
+        <doc-number>20150259585</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14418466</doc-number>
+        <date>20130729</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012168106</doc-number>
+        <date>20120730</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>C09J 183/06        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>183</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C08K   3/26        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>C09J 183/06        20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>183</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C08G  77/12        20130101 LA20150703BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>77</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150703</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C08G  77/20        20130101 LA20150703BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>77</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150703</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C08K   3/26        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C08K2003/265       20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>2003</main-group>
+        <subgroup>265</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C08L  83/04        20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>83</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C08L  83/04        20130101 LI20150703BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>83</main-group>
+            <subgroup>04</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150703</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08L  83/00        20130101 LI20150703BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>83</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150703</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>C08L  83/00        20130101 LI20150703BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>83</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150703</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>4</rank-number>
+          <classification-cpc>
+            <text>C08K2003/265       20130101 LA20150703BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>K</subclass>
+            <main-group>2003</main-group>
+            <subgroup>265</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150703</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>5</rank-number>
+          <classification-cpc>
+            <text>C08K   5/56        20130101 LI20150703BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>K</subclass>
+            <main-group>5</main-group>
+            <subgroup>56</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150703</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">14</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">TWO-PART CURABLE LIQUID SILICONE RUBBER COMPOSITION</invention-title>
+    <references-cited date-changed="20150929">
+      <patent-citations name="patcit" date-changed="20150929" />
+      <citation>
+        <patcit num="1" dnum="US2009270542A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090270542</doc-number>
+            <kind>A1</kind>
+            <name>TAKUMAN OSAMU [JP], et al</name>
+            <date>20091029</date>
+          </document-id>
+          <application-date>
+            <date>20070509</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US2011300766A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110300766</doc-number>
+            <kind>A1</kind>
+            <name>CARBARY LAWRENCE [US], et al</name>
+            <date>20111208</date>
+          </document-id>
+          <application-date>
+            <date>20100217</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US5371163A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5371163</doc-number>
+            <kind>A</kind>
+            <name>WILSON STEVEN W [US]</name>
+            <date>19941206</date>
+          </document-id>
+          <application-date>
+            <date>19931102</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US2012164406A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20120164406</doc-number>
+            <kind>A1</kind>
+            <name>DEFAUX PIERRE [FR], et al</name>
+            <date>20120628</date>
+          </document-id>
+          <application-date>
+            <date>20100603</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US2006264133A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060264133</doc-number>
+            <kind>A1</kind>
+            <name>KRAJEWSKI MARK T [US], et al</name>
+            <date>20061123</date>
+          </document-id>
+          <application-date>
+            <date>20060728</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>DOW CORNING TORAY CO., LTD.</orgname>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>JP</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Tasaki</last-name>
+            <first-name>Tomoko</first-name>
+            <address>
+              <city>Chiba</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Tsuji</last-name>
+            <first-name>Yuichi</first-name>
+            <address>
+              <city>Chiba</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13071090</doc-number>
+        <date>20130729</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014021469</doc-number>
+        <date>20140206</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150917">
+      <main-family family-id="164195570">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150039766</doc-number>
+            <kind>A</kind>
+            <date>20150413</date>
+          </document-id>
+          <application-date>
+            <date>20130729</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2880081</doc-number>
+            <kind>A1</kind>
+            <date>20150610</date>
+          </document-id>
+          <application-date>
+            <date>20130729</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104470974</doc-number>
+            <kind>A</kind>
+            <date>20150325</date>
+          </document-id>
+          <application-date>
+            <date>20130729</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015523414</doc-number>
+            <kind>A</kind>
+            <date>20150813</date>
+          </document-id>
+          <application-date>
+            <date>20130729</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259585</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130729</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014021469</doc-number>
+            <kind>A1</kind>
+            <date>20140206</date>
+          </document-id>
+          <application-date>
+            <date>20130729</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164195566">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150039766</doc-number>
+            <kind>A</kind>
+            <date>20150413</date>
+          </document-id>
+          <application-date>
+            <date>20130729</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2880081</doc-number>
+            <kind>A1</kind>
+            <date>20150610</date>
+          </document-id>
+          <application-date>
+            <date>20130729</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104470974</doc-number>
+            <kind>A</kind>
+            <date>20150325</date>
+          </document-id>
+          <application-date>
+            <date>20130729</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015523414</doc-number>
+            <kind>A</kind>
+            <date>20150813</date>
+          </document-id>
+          <application-date>
+            <date>20130729</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259585</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130729</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014021469</doc-number>
+            <kind>A1</kind>
+            <date>20140206</date>
+          </document-id>
+          <application-date>
+            <date>20130729</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A two-part curable liquid silicone rubber composition is composed of a first liquid composition and a second liquid composition, which are stored separately and yield upon mixing a silicone rubber-forming composition. The silicone rubber-forming composition comprises: (A) a diorganopolysiloxane having an average of at least 2 alkenyl groups in a molecule; (B) a silicon-bonded hydrogen atom-containing organopolysiloxane composed of (B-1) an organopolysiloxane having an average of not more than 2 silicon-bonded hydrogen atoms in a molecule only in side molecular chains and (B-2) an organopolysiloxane having 2 silicon-bonded hydrogen atoms only at both molecular terminals; (C) a calcium carbonate powder; and (D) a platinum-based catalyst. The two-part curable liquid silicone rubber composition provides a cured product with suppressed fluctuations of properties even if the mixing ratio of a first composition and a second composition is changed.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150728</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259585A1</docdb-publication-number>
+      <docdb-application-id>444514761</docdb-application-id>
+      <new-owner>DOW CORNING TORAY CO., LTD., JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:TASAKI, TOMOKO;REEL/FRAME:036198/0608</free-text-description>
+      <effective-date>
+        <date>20150114</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a two-part curable liquid silicone rubber composition composed of a first composition and a second composition, which are stored separately and yield upon mixing a silicone rubber forming composition.</p>
+      <p id="p-00002-en" num="0002">Priority is claimed on Japanese Patent Application No. 2012-168106, filed on Jul. 30, 2012, the content of which is incorporated herein by reference.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00003-en" num="0003">In silicone rubber compositions which contain a calcium carbonate powder and which are cured by a hydrosilylation reaction, the calcium carbonate powder contains alkaline components as impurities, and therefore involve problems such as hydrogen gas being generated during storage due to reactions with organopolysiloxanes having silicon-bonded hydrogen atoms, which are contained as curing agents in the composition. As a result, for example, silicone rubber compositions comprising a diorganopolysiloxane having at least 2 alkenyl groups in a molecule, a calcium carbonate powder substantially surface treated with a diorganopolysiloxane, an organopolysiloxane having at least 2 silicon-bonded hydrogen atoms in a molecule and a platinum group metal-type catalyst have been proposed (see Japanese Unexamined Patent Application Publication No. 2002-38016).</p>
+      <p id="p-00004-en" num="0004">In such cases, storing an addition reaction curable silicone rubber composition as two components is a commonly used means, and storing a calcium carbonate-containing addition reaction curable silicone rubber composition as two components has also been proposed. In addition, Japanese Unexamined Patent Application Publication No. 2002-38016 proposes a two-part composition composed of a first liquid, which contains an alkenyl groups-containing diorganopolysiloxane and calcium carbonate surface treated with a diorganopolysiloxane, and a second liquid, which contains an organohydrogenpolysiloxane, a platinum group metal-type catalyst and an adhesion-imparting agent.</p>
+      <p id="p-00005-en" num="0005">Japanese Unexamined Patent Application Publication Nos. 2006-117823, 2006-335872 and 2010-163478 indicate that by not blending calcium carbonate in a liquid that contains an organohydrogenpolysiloxane having an average of 2 or more silicon-bonded hydrogen atoms in a molecule, a composition that contains a curing agent undergoes little change in viscosity even when two liquids are stored for long periods, these liquids can be uniformly mixed at a volume ratio of 1:1 by means of a motionless mixer such as a static mixer, and it is possible to provide a two-liquid silicone rubber composition able to achieve the initially designed physical properties of a silicone rubber and adhesive properties to a silicone rubber.</p>
+      <p id="p-00006-en" num="0006">However, there is no recitation in any of these Patent Documents regarding changes in physical properties and/or adhesion in cases where the volume ratio, upon mixing, when forming a silicone rubber forming composition by mixing the separately stored first composition and second composition, varies.</p>
+      <p id="p-00007-en" num="0007">An object of the present invention is to provide a two-part curable liquid silicone rubber composition composed of a first composition and a second composition that are stored separately, in which the physical properties and the adhesion to silicone rubber of a cured product thereof do not decline when mixed even in cases where a mixture ratio of the first composition to the second composition varies.</p>
+      <heading id="h-00003-en" level="1">DISCLOSURE OF INVENTION</heading>
+      <p id="p-00008-en" num="0008">A two-part curable liquid silicone rubber composition of the present invention is composed of a first liquid composition and a second liquid composition, which are stored separately and yield upon mixing a silicone rubber forming composition comprising: <ul id="ul-00001-en" list-style="none"><li>(A) 100 parts by mass of a diorganopolysiloxane having an average of at least 2 alkenyl groups in a molecule;</li><li>(B) a silicon-bonded hydrogen atom-containing organopolysiloxane composed of (B-1) and (B-2) described below in an amount such that a molar ratio of silicon-bonded hydrogen atoms in component (B) relative to alkenyl groups in component (A) is from 0.01 to 20;     <ul id="ul-00002-en" list-style="none"><li>(B-1) an organopolysiloxane having an average of not more than 2 silicon-bonded hydrogen atoms in a molecule only in side molecular chains in an amount such that a molar ratio of silicon-bonded hydrogen atoms in component (B-1) relative to silicon-bonded hydrogen atoms in component (B) is from 0.05 to 1.00,</li><li>(B-2) an organopolysiloxane having 2 silicon-bonded hydrogen atoms only at both molecular terminals in an amount such that a molar ratio of silicon-bonded hydrogen atoms in component (B-2) relative to silicon-bonded hydrogen atoms in component (B) is from 0.00 to 0.95,</li></ul></li><li>(C) from 1 to 200 parts by mass of a calcium carbonate powder; and</li><li>(D) a platinum-based catalyst in an amount required to cure the present composition, the first liquid composition comprising components (A), (C), and (D), but not (B-1) and (B-2), and the second liquid composition comprising components (A), (B-1), (B-2), and (C), but not (D).</li></ul></p>
+      <p id="p-00009-en" num="0015">Component (C) is preferably a light or precipitated calcium carbonate powder.</p>
+      <p id="p-00010-en" num="0016">Furthermore, the first composition and/or the second composition preferably comprises (E) an amorphous silica powder in an amount of from 0.1 to 100 parts by mass per 100 parts by mass of component (A).</p>
+      <p id="p-00011-en" num="0017">The two-part curable liquid silicone rubber composition described above is useful as an adhesive or sealer for a silicone rubber coated fabric.</p>
+      <heading id="h-00004-en" level="1">EFFECTS OF INVENTION</heading>
+      <p id="p-00012-en" num="0018">With the two-part curable liquid silicone rubber composition of the present invention, the excellent physical properties and the adhesion to silicone rubber of a cured product thereof are maintained upon mixing a first composition and a second composition that are stored separately, even in cases where a mixture ratio of the first composition to the second composition varies.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00013-en" num="0019">The two-part curable liquid silicone rubber composition of the present invention is described in detail below.</p>
+      <p id="p-00014-en" num="0020">Component (A) is a main component of the two-part curable liquid silicone rubber composition of the present invention, and is a diorganopolysiloxane having an average of at least 2 alkenyl groups in a molecule. Examples of the alkenyl groups in component (A) include vinyl groups, allyl groups, butenyl groups, pentenyl groups, hexenyl groups, and heptenyl groups. Of these, vinyl groups are preferable. Moreover, examples of silicon-bonded organic groups in component (A) other than alkenyl groups include methyl groups, ethyl groups, propyl groups, butyl groups, pentyl groups, hexyl groups, and similar alkyl groups; phenyl groups, tolyl groups, xylyl groups, and similar aryl groups; and 3-chloropropyl groups, 3,3,3-trifluoropropyl groups, and similar halogenated alkyl groups. Of these, methyl groups and phenyl groups are preferable. A molecular structure of component (A) is substantially straight, but a portion of the molecular chain may be partially branched provided that the object of the present invention is not inhibited. A viscosity at 25° C. of component (A) is not limited, but is preferably in a range from 100 to 1,000,000 mPa·s, and more preferably in a range from 100 to 500,000 mPa·s.</p>
+      <p id="p-00015-en" num="0021">Examples of the diorganopolysiloxane for component (A) described above include dimethylpolysiloxanes capped at both molecular terminals with dimethylvinylsiloxy groups, copolymers of dimethylsiloxane and methylvinylsiloxane capped at both molecular terminals with dimethylvinylsiloxy groups; copolymers of dimethylsiloxane and methylvinylsiloxane capped at both molecular terminals with trimethylsiloxy groups; diorganopolysiloxanes in which a part or all of the methyl groups thereof are substituted by ethyl groups, propyl groups, or similar alkyl groups, phenyl groups, tolyl groups, or similar aryl groups, 3,3,3-trifluoropropyl groups, or similar halogenated alkyl groups; diorganopolysiloxanes in which a part or all of the vinyl groups thereof are substituted by allyl groups, propenyl groups, or similar alkenyl groups; and mixtures of two or more of the diorganopolysiloxanes described above.</p>
+      <p id="p-00016-en" num="0022">Component (B) is a curing agent which undergoes a crosslinking reaction with component (A) in the presence of component (E), which is described later, so as to crosslink the silicone rubber forming composition of the present invention, and is composed of (B-1) an organopolysiloxane having an average of not more than 2 silicon-bonded hydrogen atoms in a molecule only in side molecular chains, or component (B-1) and (B-2) an organopolysiloxane having 2 silicon-bonded hydrogen atoms only at both molecular terminals. By using such component (B), it is possible to impart the two-part curable liquid silicone rubber composition of the present invention with characteristics such as an obtained cured product undergoing little change in physical properties or adhesive properties to a silicone rubber even if the mixing ratio varies when the separately stored first and second compositions are mixed.</p>
+      <p id="p-00017-en" num="0023">A content of component (B) is an amount such that a molar ratio of silicon-bonded hydrogen atoms in component (B) to alkenyl groups in component (A) is from 0.01 to 20, preferably from 0.1 to 5, and more preferably from 0.5 to 3.</p>
+      <p id="p-00018-en" num="0024">Component (B-1) is an organopolysiloxane having an average of not more than 2 silicon-bonded hydrogen atoms in a molecule only in side molecular chains, preferably has an average of less than 2 silicon-bonded hydrogen atoms in a molecule only in side molecular chains, and more preferably has an average of not less than 1 and less than 2 silicon-bonded hydrogen atoms in a molecule only in side molecular chains. If the average number of silicon-bonded hydrogen atoms in the side molecular chains in component (B-1) exceeds 2, there are concerns that fluctuations will occur in the physical properties and adhesive properties to a silicone rubber of a cured product when fluctuations in the mixing ratio occur when the first composition and the second composition, which are stored separately, are mixed, as described below.</p>
+      <p id="p-00019-en" num="0025">A molecular structure of component (B-1) is not particularly limited, but can be, for example, a resin product having a straight chain, branched chain, cyclic or three dimensional mesh-like structure. Examples of silicon-bonded organic groups in component (B-1) include methyl groups, ethyl groups, propyl groups, butyl groups, pentyl groups, hexyl groups, and similar alkyl groups; phenyl groups, tolyl groups, xylyl groups, and similar aryl groups; benzyl groups, phenethyl groups, and similar aralkyl groups; and 3-chloropropyl groups, 3,3,3-trifluoropropyl groups, and similar halogenated alkyl groups. Of these, methyl groups are preferable. A kinetic viscosity at 25° C. of component (B-1) is not particularly limited, but is preferably within a range of from 1 to 1,000,000 mm<sup>2</sup>/s.</p>
+      <p id="p-00020-en" num="0026">Examples of the organopolysiloxane for component (B-1) include copolymers of dimethylsiloxane and methyl hydrogen siloxane capped at both molecular terminals with trimethylsiloxy groups, copolymers of methylsiloxane, diphenylsiloxane and methyl hydrogen siloxane capped at both molecular terminals with trimethylsiloxy groups, and mixtures thereof.</p>
+      <p id="p-00021-en" num="0027">A content of component (B-1) is an amount such that a molar ratio of silicon-bonded hydrogen atoms in component (B-1) to silicon-bonded hydrogen atoms in component (B) is within a range of from 0.05 to 1.00, preferably within a range of from 0.07 to 0.90, and more preferably within a range of from 0.10 to 0.70. This is because if the content of component (B-1) falls within the above-mentioned range, the obtained two-part curable liquid silicone rubber composition exhibits sufficient curability and a silicone rubber obtained by curing the two-part curable liquid silicone rubber composition exhibits excellent mechanical characteristics.</p>
+      <p id="p-00022-en" num="0028">The organopolysiloxane for component (B-2) has 2 silicon-bonded hydrogen atoms only at both molecular terminals. A molecular structure of component (B-2) is not particularly limited, but can be, for example, a resinous product having a straight chain, branched chain, cyclic or three dimensional mesh-like structure. Examples of silicon-bonded organic group in component (B-2) include methyl groups, ethyl groups, propyl groups, butyl groups, pentyl groups, hexyl groups, and similar alkyl groups; phenyl groups, tolyl groups, xylyl groups, and similar aryl groups; benzyl groups, phenethyl groups, and similar aralkyl groups; and 3-chloropropyl groups, 3,3,3-trifluoropropyl groups, and similar halogenated alkyl groups. Of these, methyl groups are preferable. A kinetic viscosity at 25° C. of component (B-2) is not particularly limited, but is preferably within a range of from 1 to 1,000,000 mm<sup>2</sup>/s.</p>
+      <p id="p-00023-en" num="0029">Examples of the organopolysiloxane for component (B-2) include dimethylpolysiloxanes capped at both molecular terminals with dimethylhydrogensiloxy groups, copolymers of dimethylsiloxane and methylphenylsiloxane capped at both molecular terminals with dimethylhydrogensiloxy groups, and mixtures of two or more of these organopolysiloxanes.</p>
+      <p id="p-00024-en" num="0030">A content of component (B-2) is an amount such that a molar ratio of silicon-bonded hydrogen atoms in component (B-2) to silicon-bonded hydrogen atoms in component (B) is within a range of from 0 to 0.95, preferably within a range of from 0.10 to 0.93, and more preferably within a range of from 0.30 to 0.90. This is because if the content of component (B-2) falls within the above-mentioned range, the obtained two-part curable liquid silicone rubber composition exhibits sufficient curability and a silicone rubber obtained by curing the two-part curable liquid silicone rubber composition exhibits excellent mechanical characteristics.</p>
+      <p id="p-00025-en" num="0031">Component (B-1) and/or (B-2) is compounded only in the separately stored second liquid composition, and is preferably not simultaneously compounded with component (D) described below and stored.</p>
+      <p id="p-00026-en" num="0032">Component (C) is a calcium carbonate powder to enhance adhesion of the present composition to silicone rubber. A BET specific surface area of component (C) is not particularly limited, but is preferably from 5 to 50 m<sup>2</sup>/g, and more preferably from 10 to 50 m<sup>2</sup>/g. Examples of the calcium carbonate powders for component (C) include heavy or dry-ground calcium carbonate powder, light or precipitated calcium carbonate powder, and these calcium carbonate powders surface-treated with fatty acids, resin acids, or similar organic acids. Of these, light or precipitated calcium carbonate powders are preferable, in particular, those that are surface-treated with fatty acids, resin acids, or similar organic acids.</p>
+      <p id="p-00027-en" num="0033">A content of component (C) is within a range of from 1 to 200 parts by mass, preferably within a range of from 5 to 200 parts by mass, and more preferably within a range of from 10 to 100 parts by mass per 100 parts by mass of component (A). This is because if the content of component (C) is below the lower limit of the range described above, adhesion of the present composition to silicone rubber will tend to decline and, on the other hand, if above the upper limit of the range described above, it will be difficult to prepare a uniform silicone rubber composition.</p>
+      <p id="p-00028-en" num="0034">Component (D) is a platinum-based catalyst to accelerate curing of the present composition. Examples of the platinum-based catalyst for component (D) include fine platinum powders, platinum black, chloroplatinic acid, platinum tetrachloride, alcohol solution of chloroplatinic acid, platinum-olefin complexes, platinum-alkenylsiloxane complexes, platinum-carbonyl complexes, as well as powdered methyl methacrylate resins, polycarbonate resins, polystyrene resins, silicone resins, or similar thermoplastic organic resins in which the platinum-based catalyst is dispersed.</p>
+      <p id="p-00029-en" num="0035">A content of component (D) is not particularly limited provided that it is sufficient to cure the present composition, but is preferably an amount such that the platinum metal in component (D) is within a range of from 0.01 to 500 parts by mass and more preferably within a range of from 0.1 to 100 parts by mass per 1,000,000 parts by mass of component (A).</p>
+      <p id="p-00030-en" num="0036">Component (D) is compounded only in the separately stored first liquid composition, and is preferably not simultaneously compounded with component (B) described above and stored.</p>
+      <p id="p-00031-en" num="0037">The first liquid composition and/or the second liquid composition may further comprise (E) a silica powder for enhancing the mechanical strength of the silicone rubber obtained by curing the composition. Examples of component (E) include fumed silica, precipitated silica, baked silica, crushed quartz, and the aforementioned silica powders surface-treated with organoalkoxysilanes, organohalosilanes, organosilazanes, or similar organosilicon compounds. In order to sufficiently improve the mechanical strength of the obtained adhesive cured product, a silica powder having a BET specific surface area of not less than 50 m<sup>2</sup>/g is preferably used as component (E).</p>
+      <p id="p-00032-en" num="0038">A content of component (E) can be determined as desired, but in order to improve the mechanical strength of the obtained silicone rubber, is preferably within a range of from 1 to 100 parts by mass and more preferably within a range of from 1 to 50 parts by mass per 100 parts by mass of component (A) in the silicone rubber forming composition obtained by mixing the first liquid composition and the second liquid composition.</p>
+      <p id="p-00033-en" num="0039">Additionally, the first liquid composition and/or the second liquid composition may comprise, as an optional component, fumed titanium oxide, diatomaceous earth, aluminum oxide, aluminosilicate, silver, nickel, or a similar inorganic filler; or the aforementioned inorganic fillers surface-treated with the organosilicon compound described above.</p>
+      <p id="p-00034-en" num="0040">Additionally, examples of an adhesion-imparting agent that the first liquid composition and/or the second liquid composition may comprise, which enhances the adhesion properties thereof, include methyl trimethoxysilane, vinyl trimethoxysilane, allyltrimethoxysilane, 3-methacryloxypropyltrimethoxysilane, 3-glycidoxypropyltrimethoxysilane, 3-aminopropyltrimethoxysilane, N-(2-aminoethyl)-3-aminopropyl trimethoxysilane, bis(trimethoxysilyl)propane, bis(trimethoxysilyl)hexane, or a similar silane coupling agent; tetraethyl titanate, tetrapropyl titanate, tetrabutyl titanate, tetra(2-ethylhexyl) titanate, titanium ethyl acetonate, titanium acetyl acetonate, or a similar titanium compound; aluminum ethylacetoacetate diisopropylate, aluminum tris(ethylacetoacetate), alkylacetoacetate aluminum diisopropylate, aluminum tris(acetylacetonate), aluminum monoacetylacetonate bis(ethylacetoacetate), or a similar aluminum compound; and zirconium acetylacetonate, zirconium butoxyacetylacetonate, zirconium bisacetylacetonate, and zirconium ethylacetoacetate, or a similar zirconium compound. A content of these adhesion-imparting agents is not particularly limited, but is preferably within a range of from 0.01 to 10 parts by mass per 100 parts by mass of component (A) in the silicone rubber forming composition obtained by mixing the first liquid composition and the second liquid composition.</p>
+      <p id="p-00035-en" num="0041">Furthermore, examples of a curing inhibitor that the first liquid composition and/or the second liquid composition preferably comprises in order to enhance the storage stability and handling/workability thereof include 2-methyl-3-butyn-2-ol, 3,5-dimethyl-1-hexyn-3-ol, 2-phenyl-3-butyn-2-ol, ethynylcyclohexanol, or similar acetylene-based compounds; 3-methyl-3-penten-1-yne, 3,5-dimethyl-3-hexen-1-yne, or similar en-yne compounds; 1,3,5,7-tetramethyl-1,3,5,7-tetravinylcyclotetrasiloxane, 1,3,5,7-tetramethyl-1,3,5,7-tetrahexenylcyclotetrasiloxane, methylvinylsiloxane capped at both molecular terminals with silanol groups, methylvinylsiloxane-dimethylsiloxane copolymers capped at both molecular terminals with silanol groups, or similar organosiloxane compounds having 5 mass % or more vinyl groups in a molecule; benzotriazole or similar triazoles, phosphines, mercaptans, hydrazines, or other curing inhibitors.</p>
+      <p id="p-00036-en" num="0042">A content of these curing inhibitors is not particularly limited, but is preferably within a range of from 0.001 to 5 parts by mass per 100 parts by mass of component (A) in the silicone rubber forming composition obtained by mixing the first liquid composition and the second liquid composition.</p>
+      <p id="p-00037-en" num="0043">The two-part curable liquid silicone rubber composition of the present invention comprises the separately stored first liquid composition comprising components (A), (C), and (D), but not (B-1) and/or (B-2), and the second liquid composition comprising components (A), (B-1) and/or (B-2), and (C), but not (D). The first liquid composition and the second liquid composition are preferably mixed at a mixture ratio of 1:1 (expressed as a volume ratio) and used as the silicone rubber forming composition. This is because in cases where the mixture ratio is unintentionally changed at any type of flow rate measurement device attached to a dispensing device such as a gear pump, pail pump, drum pump, or the like, changes in the formulation of the silicone rubber forming composition will be relatively small.</p>
+      <p id="p-00038-en" num="0044">Moreover, a difference in viscosity between the first liquid composition and the second liquid composition is preferably small. This is because a small difference in viscosity leads to the advantage of maintaining a constant mixture ratio of the first liquid composition and the second liquid composition at any type of flow rate measurement device attached to a dispensing device such as a gear pump, pail pump, drum pump, or the like.</p>
+      <p id="p-00039-en" num="0045">With the two-part curable liquid silicone rubber composition of the present invention, the first liquid composition and the second liquid composition are stored separately. Silicone rubber formation is provided by producing a silicone rubber forming composition by mixing the first liquid composition and the second liquid composition immediately prior to use. Preferably, an apparatus is used that comprises: a first tank in which the first liquid composition is stored and a second tank in which the second liquid composition is stored; a feeding apparatus that supplies a specific amount of each liquid composition to a mixing device via a dispensing device and a flow rate control device connected to each of the tanks; a mixing device such as a pin mixer or similar dynamic mixer or static mixer for mixing the first liquid composition and the second liquid composition; and a device for dispensing the silicone rubber forming composition obtained from the mixing device.</p>
+      <p id="p-00040-en" num="0046">Methods for preparing the first liquid composition and the second liquid composition are not particularly limited, and these liquid compositions can be prepared by mixing components (A) to (E) and, as necessary, additional optional components. In cases when it is necessary to add these other optional components, these other optional components may be added when preparing the base compound or, alternately, in cases when these other optional components degrade as a result of hot mixing, are preferably added when adding components (B) to (E). Additionally, when preparing the base compound, the organosilicon compound may be added and component (E) may be subjected to an in-situ surface treatment. The composition may be prepared using a two-roll mill, a kneader mixer, a Ross® mixer, or similar known mixing device.</p>
+      <heading id="h-00006-en" level="1">EXAMPLES</heading>
+      <p id="p-00041-en" num="0047">Practical Examples and Comparative Examples of the silicone rubber composition of the present invention are described in detail below. Note that the viscosity in the Examples is the value at 25° C. and silicone rubber characteristics are measured as follows.</p>
+      <heading id="h-00007-en" level="2">[Physical Properties of the Silicone Rubber]</heading>
+      <p id="p-00042-en" num="0048">The silicone rubber was fabricated by allowing the silicone rubber composition to sit at rest for one day at 25° C. Asker C hardness of this silicone rubber is measured using a type C hardness tester as stipulated in JIS K 7312. Additionally, a sample having a deformed grip portion in the form of a No. 7 dumbbell stipulated by JIS K6251 was fabricated by allowing this silicone rubber composition to sit at rest for one day at 25° C. Next, the tensile strength and elongation of the sample was measured in accordance with the methods stipulated in JIS K6251.</p>
+      <heading id="h-00008-en" level="2">[Adhesion Strength to Silicone Rubber]</heading>
+      <p id="p-00043-en" num="0049">Adhesion strength of the silicone rubber composition to silicone rubber was measured as follows in accordance with the method stipulated in JIS K 6854. Specifically, the silicone rubber composition was applied in the form of a 50 mm-wide strip onto a nylon base material coated with 30 g/m<sup>2 </sup>of silicone rubber. Then, a silicone rubber-coated nylon tape was overlaid on the nylon tape on which the silicone rubber composition was applied so that the composition formed a 0.5 mm-thick layer between the silicone rubber-coated nylon tapes. The coated base material was allowed to sit at rest for one day at 25° C. to cure the composition, whereby a sample was fabricated. Then, adhesive strength to silicone rubber was measured by subjecting the obtained silicone rubber-coated nylon tape to a T-shaped peeling test at a peeling speed of 200 mm/min.</p>
+      <heading id="h-00009-en" level="1">Practical Example 1</heading>
+      <p id="p-00044-en" num="0050">A first liquid composition was prepared by mixing: 98.0 parts by mass of a dimethylpolysiloxane capped at both molecular terminals with dimethylvinylsiloxy groups and having a viscosity of 40,000 mPa·s; 2.0 parts by mass of a dimethylpolysiloxane having vinyl groups at both molecular terminals and on the side molecular chains and having a viscosity of 350 mPa·s (vinyl group content: 0.93% by mass, average number of vinyl groups on the molecular side chains: 2.5); 3.0 parts by mass of fumed silica surface-treated with dimethyldichlorosilane and having a BET specific surface area of about 110 m<sup>2</sup>/g; 25 parts by mass of precipitated calcium carbonate powder surface-treated with fatty acids and having a BET specific surface area of 18 m<sup>2</sup>/g (Hakuenka CCR, manufactured by Shiraishi Kogyo Kaisha, Ltd.); 3.0 parts by mass of dimethylpolysiloxane capped at both molecular terminals with silanol groups and having a viscosity of 40 mPa·s; a 1,3-divinyltetramethyl disiloxane solution of a 1,3-divinyltetramethyl disiloxane platinum complex (included at an amount such that the amount of platinum metal in the catalyst is 50 parts by mass per 1,000,000 parts by mass of the present composition); and 2.0 parts by mass of a pigment paste in which 40 parts by mass of red iron oxide are compounded with 60 parts by mass of a dimethylpolysiloxane capped at both molecular terminals with dimethylvinylsiloxy groups and having a viscosity of 10,000 mPa·s.</p>
+      <p id="p-00045-en" num="0051">In addition, a second liquid composition was prepared by mixing: 98.9 parts by mass of a dimethylpolysiloxane capped at both molecular terminals with dimethylvinylsiloxy groups and having a viscosity of 40,000 mPa·s; 3.0 parts by mass of fumed silica surface-treated with dimethyldichlorosilane and having a BET specific surface area of approximately 110 m<sup>2</sup>/g; 30 parts by mass of a precipitated calcium carbonate powder surface-treated with a fatty acid and having a BET specific surface area of 18 m<sup>2</sup>/g (Hakuenka CCR manufactured by Shiraishi Kogyo Kaisha, Ltd.); 6.0 parts by mass of a dimethylpolysiloxane capped at both molecular terminals with silanol groups and having a viscosity of 40 mPa·s; 1.05 parts by mass of a copolymer of dimethylsiloxane and methylhydrogensiloxane capped at both molecular terminals with trimethylsiloxy groups, which had a kinetic viscosity of 21 mm<sup>2</sup>/s, had an average of 1.9 silicon-bonded hydrogen atoms in a molecule in side chains and had a silicon-bonded hydrogen atom content of approximately 0.098% by mass (at an amount where the molar ratio of silicon-bonded hydrogen atoms in the mixture relative to silicon-bonded vinyl groups contained in the total composition was 0.10); and 5.10 parts by mass of a dimethylpolysiloxane capped at both molecular terminals with dimethylhydrogensiloxy groups, which had a kinetic viscosity of 10 mm<sup>2</sup>/s and a silicon-bonded hydrogen atom content of approximately 0.016% by mass (at an amount where the molar ratio of silicon-bonded hydrogen atoms in the mixture relative to silicon-bonded vinyl groups contained in the total composition was 0.90).</p>
+      <p id="p-00046-en" num="0052">Silicone rubber compositions were mixed and prepared such that mass ratios of the first liquid composition to the second liquid composition were 110:100, 100:100, and 100:110. The physical properties and adhesive strength and adhesion ratio of the silicone rubber obtained by curing this silicone rubber composition were measured and the results thereof were recorded in Table 1.</p>
+      <heading id="h-00010-en" level="1">Practical Example 2</heading>
+      <p id="p-00047-en" num="0053">A third liquid composition was prepared in the same way as in Practical Example 1, except that 0.90 parts by mass of a copolymer of dimethylsiloxane and methylhydrogensiloxane capped at both molecular terminals with trimethylsiloxy groups, which had a kinetic viscosity of 19 mm<sup>2</sup>/s, had an average of 2.0 silicon-bonded hydrogen atoms in a molecule in side chains and had a silicon-bonded hydrogen atom content of approximately 0.12% by mass, was used instead of 1.05 parts by mass of a copolymer of dimethylsiloxane and methylhydrogensiloxane capped at both molecular terminals with trimethylsiloxy groups, which had a kinetic viscosity of 21 mm<sup>2</sup>/s, had an average of 1.9 silicon-bonded hydrogen atoms in a molecule in side chains and had a silicon-bonded hydrogen atom content of approximately 0.098% by mass, which was used in the second liquid composition in Practical Example 1.</p>
+      <p id="p-00048-en" num="0054">Silicone rubber compositions were mixed and prepared such that mass ratios of the first liquid composition of Practical Example 1 to the third liquid composition were 110:100, 100:100, and 100:110. The physical properties and adhesive strength and adhesion ratio of the silicone rubber obtained by curing this silicone rubber composition were measured and the results thereof were recorded in Table 1.</p>
+      <heading id="h-00011-en" level="1">Practical Example 3</heading>
+      <p id="p-00049-en" num="0055">A fourth liquid composition was prepared in the same way as in Practical Example 1, except that a mixture of 0.70 parts by mass of a copolymer of dimethylsiloxane and methylhydrogensiloxane capped at both molecular terminals with trimethylsiloxy groups, which had a kinetic viscosity of 21 mm<sup>2</sup>/s, had an average of 1.9 silicon-bonded hydrogen atoms in a molecule in side chains and had a silicon-bonded hydrogen atom content of approximately 0.098% by mass, and 0.15 parts by mass of a copolymer of dimethylsiloxane and methylhydrogensiloxane capped at both molecular terminals with trimethylsiloxy groups, which had a kinetic viscosity of 3 mm<sup>2</sup>/s, had an average of 1.0 silicon-bonded hydrogen atoms in a molecule in side chains and had a silicon-bonded hydrogen atom content of approximately 0.25% by mass, was used instead of 1.05 parts by mass of a copolymer of dimethylsiloxane and methylhydrogensiloxane capped at both molecular terminals with trimethylsiloxy groups, which had a kinetic viscosity of 21 mm<sup>2</sup>/s, had an average of 1.9 silicon-bonded hydrogen atoms in a molecule in side chains and had a silicon-bonded hydrogen atom content of approximately 0.098% by mass, which was used in the second liquid composition in Practical Example 1.</p>
+      <p id="p-00050-en" num="0056">Silicone rubber compositions were mixed and prepared such that mass ratios of the first liquid composition of Practical Example 1 to the fourth liquid composition were 110:100, 100:100, and 100:110. The physical properties and adhesive strength and adhesion ratio of the silicone rubber obtained by curing this silicone rubber composition were measured and the results thereof were recorded in Table 1.</p>
+      <heading id="h-00012-en" level="1">Practical Example 4</heading>
+      <p id="p-00051-en" num="0057">A fifth liquid composition was prepared in the same way as in Practical Example 1, except that the amount of the copolymer of dimethylsiloxane and methylhydrogensiloxane capped at both molecular terminals with trimethylsiloxy groups, which had a kinetic viscosity of 21 mm<sup>2</sup>/s, had an average of 1.9 silicon-bonded hydrogen atoms in a molecule in side chains and had a silicon-bonded hydrogen atom content of approximately 0.098% by mass, which was used in the second liquid composition in Practical Example 1, was changed from 1.05 parts by mass to 2.84 parts by mass and the amount of the dimethylpolysiloxane capped at both molecular terminals with dimethylhydrogensiloxy groups, which had a kinetic viscosity of 10 mm<sup>2</sup>/s and a silicon-bonded hydrogen atom content of approximately 0.016% by mass, which was used in the second liquid composition in Practical Example 1, was changed from 5.10 parts by mass to 4.03 parts by mass.</p>
+      <p id="p-00052-en" num="0058">Silicone rubber compositions were mixed and prepared such that mass ratios of the first liquid composition of Practical Example 1 to the fifth liquid composition were 110:100, 100:100, and 100:110. The physical properties and adhesive strength and adhesion ratio of the silicone rubber obtained by curing this silicone rubber composition were measured and the results thereof were recorded in Table 1.</p>
+      <heading id="h-00013-en" level="1">Practical Example 5</heading>
+      <p id="p-00053-en" num="0059">A sixth liquid composition was prepared in the same way as in Practical Example 1, except that the amount of the copolymer of dimethylsiloxane and methylhydrogensiloxane capped at both molecular terminals with trimethylsiloxy groups, which had a kinetic viscosity of 21 mm<sup>2</sup>/s, had an average of 1.9 silicon-bonded hydrogen atoms in a molecule in side chains and had a silicon-bonded hydrogen atom content of approximately 0.098% by mass, which was used in the second liquid composition in Practical Example 1, was changed from 1.05 parts by mass to 4.71 parts by mass and the amount of the dimethylpolysiloxane capped at both molecular terminals with dimethylhydrogensiloxy groups, which had a kinetic viscosity of 10 mm<sup>2</sup>/s and a silicon-bonded hydrogen atom content of approximately 0.16% by mass, which was used in the second liquid composition in Practical Example 1, was changed from 5.10 parts by mass to 2.88 parts by mass.</p>
+      <p id="p-00054-en" num="0060">Silicone rubber compositions were mixed and prepared such that mass ratios of the first liquid composition of Practical Example 1 to the sixth liquid composition were 110:100, 100:100, and 100:110. The physical properties and adhesive strength and adhesion ratio of the silicone rubber obtained by curing this silicone rubber composition were measured and the results thereof were recorded in Table 1.</p>
+      <heading id="h-00014-en" level="1">Practical Example 6</heading>
+      <p id="p-00055-en" num="0061">A seventh liquid composition was prepared in the same way as in Practical Example 1, except that the amount of the copolymer of dimethylsiloxane and methylhydrogensiloxane capped at both molecular terminals with trimethylsiloxy groups, which had a kinetic viscosity of 21 mm<sup>2</sup>/s, had an average of 1.9 silicon-bonded hydrogen atoms in a molecule in side chains and had a silicon-bonded hydrogen atom content of approximately 0.098% by mass, which was used in the second liquid composition in Practical Example 1, was changed from 1.05 parts by mass to 6.59 parts by mass and the amount of the dimethylpolysiloxane capped at both molecular terminals with dimethylhydrogensiloxy groups, which had a kinetic viscosity of 10 mm<sup>2</sup>/s and a silicon-bonded hydrogen atom content of approximately 0.16% by mass, which was used in the second liquid composition in Practical Example 1, was changed from 5.10 parts by mass to 1.73 parts by mass.</p>
+      <p id="p-00056-en" num="0062">Silicone rubber compositions were mixed and prepared such that mass ratios of the first liquid composition of Practical Example 1 to the seventh liquid composition were 110:100, 100:100, and 100:110. The physical properties and adhesive strength and adhesion ratio of the silicone rubber obtained by curing this silicone rubber composition were measured and the results thereof were recorded in Table 1.</p>
+      <heading id="h-00015-en" level="1">Practical Example 7</heading>
+      <p id="p-00057-en" num="0063">An eighth liquid composition was prepared in the same way as in Practical Example 1, except that the amount of the copolymer of dimethylsiloxane and methylhydrogensiloxane capped at both molecular terminals with trimethylsiloxy groups, which had a kinetic viscosity of 21 mm<sup>2</sup>/s, had an average of 1.9 silicon-bonded hydrogen atoms in a molecule in side chains and had a silicon-bonded hydrogen atom content of approximately 0.098% by mass, which was used in the second liquid composition in Practical Example 1, was changed from 1.05 parts by mass to 9.30 parts by mass and the amount of the dimethylpolysiloxane capped at both molecular terminals with dimethylhydrogensiloxy groups, which had a kinetic viscosity of 10 mm<sup>2</sup>/s and a silicon-bonded hydrogen atom content of approximately 0.16% by mass, which was used in the second liquid composition in Practical Example 1, was changed from 5.10 parts by mass to 0 parts by mass.</p>
+      <p id="p-00058-en" num="0064">Silicone rubber compositions were mixed and prepared such that mass ratios of the first liquid composition of Practical Example 1 to the eighth liquid composition were 110:100, 100:100, and 100:110. The physical properties and adhesive strength and adhesion ratio of the silicone rubber obtained by curing this silicone rubber composition were measured and the results thereof were recorded in Table 1.</p>
+      <heading id="h-00016-en" level="1">Comparative Example 1</heading>
+      <p id="p-00059-en" num="0065">A ninth liquid composition was prepared in the same way as in Practical Example 1, except that 0.52 parts by mass of a copolymer of dimethylsiloxane and methylhydrogensiloxane capped at both molecular terminals with trimethylsiloxy groups, which had a kinetic viscosity of 12 mm<sup>2</sup>/s, had an average of 2.9 silicon-bonded hydrogen atoms in a molecule in side chains and had a silicon-bonded hydrogen atom content of approximately 0.21% by mass, was used instead of 1.05 parts by mass of a copolymer of dimethylsiloxane and methylhydrogensiloxane capped at both molecular terminals with trimethylsiloxy groups, which had a kinetic viscosity of 21 mm<sup>2</sup>/s, had an average of 1.9 silicon-bonded hydrogen atoms in a molecule in side chains and had a silicon-bonded hydrogen atom content of approximately 0.098% by mass, which was used in the second liquid composition in Practical Example 1.</p>
+      <p id="p-00060-en" num="0066">Silicone rubber compositions were mixed and prepared such that mass ratios of the first liquid composition of Practical Example 1 to the ninth liquid composition were 110:100, 100:100, and 100:110. The physical properties and adhesive strength and adhesion ratio of the silicone rubber obtained by curing this silicone rubber composition were measured and the results thereof were recorded in Table 1.</p>
+      <heading id="h-00017-en" level="1">Comparative Example 2</heading>
+      <p id="p-00061-en" num="0067">A tenth liquid composition was prepared in the same way as in Practical Example 1, except that 0.26 parts by mass of a copolymer of dimethylsiloxane and methylhydrogensiloxane capped at both molecular terminals with trimethylsiloxy groups, which had a kinetic viscosity of 12 mm<sup>2</sup>/s, had an average of 2.9 silicon-bonded hydrogen atoms in a molecule in side chains and had a silicon-bonded hydrogen atom content of approximately 0.21% by mass, and 0.45 parts by mass of a copolymer of dimethylsiloxane and methyl hydrogen siloxane capped at both molecular terminals with trimethylsiloxy groups, which had a kinetic viscosity of 19 mm<sup>2</sup>/s, had an average of 2.0 silicon-bonded hydrogen atoms in a molecule in side chains and had a silicon-bonded hydrogen atom content of approximately 0.12% by mass, was used instead of 1.05 parts by mass of a copolymer of dimethylsiloxane and methylhydrogensiloxane capped at both molecular terminals with trimethylsiloxy groups, which had a kinetic viscosity of 21 mm<sup>2</sup>/s, had an average of 1.9 silicon-bonded hydrogen atoms in a molecule in side chains and had a silicon-bonded hydrogen atom content of approximately 0.098% by mass, which was used in the second liquid composition in Practical Example 1.</p>
+      <p id="p-00062-en" num="0068">Silicone rubber compositions were mixed and prepared such that mass ratios of the first liquid composition of Practical Example 1 to the tenth liquid composition were 110:100, 100:100, and 100:110. The physical properties and adhesive strength and adhesion ratio of the silicone rubber obtained by curing this silicone rubber composition were measured and the results thereof were recorded in Table 1.</p>
+      <heading id="h-00018-en" level="1">Comparative Example 3</heading>
+      <p id="p-00063-en" num="0069">An eleventh liquid composition was prepared in the same way as in Practical Example 1, except that the amount of the copolymer of dimethylsiloxane and methylhydrogensiloxane capped at both molecular terminals with trimethylsiloxy groups, which had a kinetic viscosity of 21 mm<sup>2</sup>/s, had an average of 1.9 silicon-bonded hydrogen atoms in a molecule in side chains and had a silicon-bonded hydrogen atom content of approximately 0.098% by mass, which was used in the second liquid composition in Practical Example 1, was changed from 1.05 parts by mass to 0 parts by mass and the amount of the dimethylpolysiloxane capped at both molecular terminals with dimethylhydrogensiloxy groups, which had a kinetic viscosity of 10 mm<sup>2</sup>/s and a silicon-bonded hydrogen atom content of approximately 0.16% by mass, which was used in the second liquid composition in Practical Example 1, was changed from 5.10 parts by mass to 5.80 parts by mass.</p>
+      <p id="p-00064-en" num="0070">Silicone rubber compositions were mixed and prepared such that mass ratios of the first liquid composition of Practical Example 1 to the eleventh liquid composition were 110:100, 100:100, and 100:110. The physical properties and adhesive strength and adhesion ratio of the silicone rubber obtained by curing this silicone rubber composition were measured and the results thereof were recorded in Table 1.</p>
+      <p id="p-00065-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="6" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Mixing ratio</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>(First</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>composition/</entry>
+                  <entry>Hardness</entry>
+                  <entry>Tensile</entry>
+                  <entry />
+                  <entry>Adhesive</entry>
+                  <entry>Adhesion</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>second</entry>
+                  <entry>(Asker C</entry>
+                  <entry>strength</entry>
+                  <entry>Elongation</entry>
+                  <entry>strength</entry>
+                  <entry>ratio</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>composition)</entry>
+                  <entry>hardness)</entry>
+                  <entry>(MPa)</entry>
+                  <entry>(%)</entry>
+                  <entry>(N/cm)</entry>
+                  <entry>(%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="6" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="char" char="." />
+              <colspec colname="6" colwidth="35pt" align="char" char="." />
+              <colspec colname="7" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Practical</entry>
+                  <entry>110/100</entry>
+                  <entry>24</entry>
+                  <entry>0.14</entry>
+                  <entry>4600</entry>
+                  <entry>8.2</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>Example 1</entry>
+                  <entry>100/100</entry>
+                  <entry>27</entry>
+                  <entry>0.16</entry>
+                  <entry>4300</entry>
+                  <entry>7.9</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>100/110</entry>
+                  <entry>24</entry>
+                  <entry>0.22</entry>
+                  <entry>3600</entry>
+                  <entry>8.2</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>Practical</entry>
+                  <entry>110/100</entry>
+                  <entry>24</entry>
+                  <entry>0.24</entry>
+                  <entry>4900</entry>
+                  <entry>10.4</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>Example 2</entry>
+                  <entry>100/100</entry>
+                  <entry>25</entry>
+                  <entry>0.19</entry>
+                  <entry>3700</entry>
+                  <entry>9.9</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>100/110</entry>
+                  <entry>28</entry>
+                  <entry>0.19</entry>
+                  <entry>4200</entry>
+                  <entry>11.3</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>Practical</entry>
+                  <entry>110/100</entry>
+                  <entry>24</entry>
+                  <entry>0.08</entry>
+                  <entry>5000</entry>
+                  <entry>4.2</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>Example 3</entry>
+                  <entry>100/100</entry>
+                  <entry>24</entry>
+                  <entry>0.10</entry>
+                  <entry>4200</entry>
+                  <entry>4.8</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>100/110</entry>
+                  <entry>22</entry>
+                  <entry>0.07</entry>
+                  <entry>3700</entry>
+                  <entry>4.6</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>Practical</entry>
+                  <entry>110/100</entry>
+                  <entry>20</entry>
+                  <entry>1.28</entry>
+                  <entry>2350</entry>
+                  <entry>30.0</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>Example 4</entry>
+                  <entry>100/100</entry>
+                  <entry>22</entry>
+                  <entry>1.09</entry>
+                  <entry>2400</entry>
+                  <entry>29.3</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>100/110</entry>
+                  <entry>23</entry>
+                  <entry>1.06</entry>
+                  <entry>2300</entry>
+                  <entry>29.9</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>Practical</entry>
+                  <entry>110/100</entry>
+                  <entry>25</entry>
+                  <entry>2.48</entry>
+                  <entry>1900</entry>
+                  <entry>34.1</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>Example 5</entry>
+                  <entry>100/100</entry>
+                  <entry>26</entry>
+                  <entry>2.02</entry>
+                  <entry>1900</entry>
+                  <entry>32.4</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>100/110</entry>
+                  <entry>28</entry>
+                  <entry>2.22</entry>
+                  <entry>2000</entry>
+                  <entry>31.0</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>Practical</entry>
+                  <entry>110/100</entry>
+                  <entry>26</entry>
+                  <entry>2.06</entry>
+                  <entry>1600</entry>
+                  <entry>30.1</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>Example 6</entry>
+                  <entry>100/100</entry>
+                  <entry>27</entry>
+                  <entry>1.92</entry>
+                  <entry>1700</entry>
+                  <entry>35.3</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>100/110</entry>
+                  <entry>28</entry>
+                  <entry>1.75</entry>
+                  <entry>1600</entry>
+                  <entry>31.6</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>Practical</entry>
+                  <entry>110/100</entry>
+                  <entry>25</entry>
+                  <entry>1.54</entry>
+                  <entry>1300</entry>
+                  <entry>31.6</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>Example 7</entry>
+                  <entry>100/100</entry>
+                  <entry>27</entry>
+                  <entry>1.78</entry>
+                  <entry>1400</entry>
+                  <entry>27.7</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>100/110</entry>
+                  <entry>25</entry>
+                  <entry>1.64</entry>
+                  <entry>1400</entry>
+                  <entry>29.1</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>110/100</entry>
+                  <entry>28</entry>
+                  <entry>0.60</entry>
+                  <entry>3000</entry>
+                  <entry>22.7</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>Example 1</entry>
+                  <entry>100/100</entry>
+                  <entry>27</entry>
+                  <entry>0.48</entry>
+                  <entry>2900</entry>
+                  <entry>20.8</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>100/110</entry>
+                  <entry>24</entry>
+                  <entry>0.36</entry>
+                  <entry>2750</entry>
+                  <entry>15.2</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>110/100</entry>
+                  <entry>28</entry>
+                  <entry>0.57</entry>
+                  <entry>3800</entry>
+                  <entry>18.9</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>Example 2</entry>
+                  <entry>100/100</entry>
+                  <entry>27</entry>
+                  <entry>0.38</entry>
+                  <entry>3500</entry>
+                  <entry>15.1</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>100/110</entry>
+                  <entry>24</entry>
+                  <entry>0.37</entry>
+                  <entry>3000</entry>
+                  <entry>14.6</entry>
+                  <entry>20</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>110/100</entry>
+                  <entry>21</entry>
+                  <entry>Below</entry>
+                  <entry>600</entry>
+                  <entry>0.6</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>Example 3</entry>
+                  <entry>100/100</entry>
+                  <entry>24</entry>
+                  <entry>detection</entry>
+                  <entry>800</entry>
+                  <entry>0.8</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>100/110</entry>
+                  <entry>19</entry>
+                  <entry>limit</entry>
+                  <entry>1700</entry>
+                  <entry>1.2</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00066-en" num="0071">As shown in Table 1, no significant changes in physical properties were seen at mixing ratios of 110:100, 100:100 and 100:110 and the adhesion ratio was maintained at 100% in Practical Examples 1 to 7. However, Comparative Examples 1 to 3 shown in Table 1 exhibited changes in physical properties, such as a deterioration in adhesive strength or adhesion ratio.</p>
+      <heading id="h-00019-en" level="1">INDUSTRIAL APPLICABILITY</heading>
+      <p id="p-00067-en" num="0072">The two-part curable liquid silicone rubber composition of the present Invention is useful as an adhesive or sealer for a silicone rubber coated fabric.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A two-part curable liquid silicone rubber composition composed of a first liquid composition and a second liquid composition, which are stored separately and yield upon mixing a silicone rubber forming composition comprising:
+<claim-text>(A) 100 parts by mass of a diorganopolysiloxane having an average of at least 2 alkenyl groups in a molecule;</claim-text><claim-text>(B) a silicon-bonded hydrogen atom-containing organopolysiloxane composed of (B-1) and (B-2) described below in an amount such that a molar ratio of silicon-bonded hydrogen atoms in component (B) relative to alkenyl groups in component (A) is from 0.01 to 20;
+<claim-text>(B-1) an organopolysiloxane having an average of not more than 2 silicon-bonded hydrogen atoms in a molecule only in side molecular chains in an amount such that a molar ratio of silicon-bonded hydrogen atoms in component (B-1) relative to silicon-bonded hydrogen atoms in component (B) is from 0.05 to 1.00,</claim-text><claim-text>(B-2) an organopolysiloxane having 2 silicon-bonded hydrogen atoms only at both molecular terminals in an amount such that a molar ratio of silicon-bonded hydrogen atoms in component (B-2) relative to silicon-bonded hydrogen atoms in component (B) is from 0.00 to 0.95,</claim-text></claim-text><claim-text>(C) from 1 to 200 parts by mass of a calcium carbonate powder; and</claim-text><claim-text>(D) a platinum-based catalyst in an amount required to cure the present composition, the first liquid composition comprising components (A), (C), and (D), but not (B-1) and (B-2), and the second liquid composition comprising components (A), (B-1), (B-2), and (C), but not (D).</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The two-part curable liquid silicone rubber composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a mixture ratio expressed as a volume ratio of the separately stored first liquid composition and second liquid composition is 1:1.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The two-part curable liquid silicone rubber composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein component (C) is a light or precipitated calcium carbonate powder.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The two-part curable liquid silicone rubber composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first composition and/or the second composition further comprises (E) an amorphous silica powder in an amount of from 0.1 to 100 parts by mass per 100 parts by mass of component (A).</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The two-part curable liquid silicone rubber composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> that is an adhesive for a silicone rubber coated fabric.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The two-part curable liquid silicone rubber composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> that is a sealer for a silicone rubber coated fabric.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The two-part curable liquid silicone rubber composition according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein component (C) is a light or precipitated calcium carbonate powder.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The two-part curable liquid silicone rubber composition according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the first composition and/or the second composition further comprises (E) an amorphous silica powder in an amount of from 0.1 to 100 parts by mass per 100 parts by mass of component (A).</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The two-part curable liquid silicone rubber composition according to <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein component (C) has a BET specific surface area of from 5 to 50 m<sup>2</sup>/g.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The two-part curable liquid silicone rubber composition according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein component (E) has a BET specific surface area of not less than 50 m<sup>2</sup>/g.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. An adhesive comprising a cured product of the two-part curable liquid silicone rubber composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. A sealer comprising a cured product of the two-part curable liquid silicone rubber composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. A silicone rubber coated fabric comprising a cured product of the two-part curable liquid silicone rubber composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The silicone rubber coated fabric according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the cured product is an adhesive, a sealer, or combination thereof. </claim-text>
+    </claim>
+  </claims>
+  <image file="US20150259585A1.PDF" type="pdf" size="458969" pages="9" />
+</lexisnexis-patent-document>

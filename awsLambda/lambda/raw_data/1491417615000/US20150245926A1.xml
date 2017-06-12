@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150245926A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021608" date-changed="20151006" time-changed="063123">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140982">
+        <country>US</country>
+        <doc-number>20150245926</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14715382</doc-number>
+        <date>20150518</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>A61F   2/50        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>50</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>A61F   2/50        20130101 FI20150115BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>50</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150115</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61F   2/5044      20130101 LA20150115BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>5044</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150115</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61F   2/5046      20130101 LI20150115BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>5046</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150115</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61F   5/01        20130101 LI20150115BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>5</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150115</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61F2002/5001      20130101 LA20150115BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2002</main-group>
+        <subgroup>5001</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150115</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>Y10T  29/49826     20130101 LA20150123BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>29</main-group>
+        <subgroup>49826</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>Y10T  29/49865     20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>29</main-group>
+        <subgroup>49865</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>Y10T  29/49885     20130101 LA20150123BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>29</main-group>
+        <subgroup>49885</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>Y10T  29/49888     20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>29</main-group>
+        <subgroup>49888</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>Y10T 156/10        20130101 LA20150123BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>156</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>Y10T 428/31678     20150401 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20150401</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>31678</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">4</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">SYSTEMS AND METHODS FOR PERSONALIZING PROSTHETIC AND ORTHOTIC DEVICES</invention-title>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12898563</doc-number>
+              <date>20101005</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9032606</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007153</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61248856</doc-number>
+          <date>20091005</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Horkey</last-name>
+            <first-name>Dan</first-name>
+            <address>
+              <city>Port Orchard</city>
+              <state>WA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Horkey</last-name>
+            <first-name>Dan</first-name>
+            <address>
+              <city>Port Orchard</city>
+              <state>WA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173464354">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245926</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150518</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173464353">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245926</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150518</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Systems and methods for personalizing prosthetic and orthotic devices are disclosed. In some embodiments, an apparatus includes a device configured to be worn by a wearer as at least one of a prosthetic or an orthosis, and a chrome layer disposed on at least a portion of an outer surface of the device. In other embodiments, and apparatus includes a device configured to be worn by a wearer as at least one of a prosthetic or an orthosis, and a light-emitting device attached to an outer surface of the device. In further embodiments, and apparatus includes a device configured to be worn by a wearer as at least one of a prosthetic or an orthosis, and an electronic tracking device operatively coupled to the device.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This patent application is a continuation of co-pending non-provisional patent application U.S. patent application Ser. No. 12/898,563 filed on Oct. 5, 2010, which application is incorporated herein by reference.</p>
+      <p id="p-00002-en" num="0002">This patent application also claims benefits under 35 USC §119(e) from the following provisional patent application: U.S. Patent Application No. 61/248,856 filed on Oct. 5, 2009, which application is incorporated herein by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">The present disclosure is directed to systems and methods for personalizing prosthetic and orthotic devices.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00004-en" num="0004">A person's loss of a limb can be a potentially devastating event. Recovery can be a long and arduous process involving physical and psychological adjustment. Although conventional approaches to personalizing prosthetic and orthotic devices have achieved desirable results, there is room for improvement.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00005-en" num="0005">The present disclosure teaches systems and methods for personalizing prosthetic and orthotic devices. Embodiments of systems and methods in accordance with the teachings of the present disclosure may advantageously improve a wearer's satisfaction and comfort with a device configured to be worn as a prosthetic or orthotic component.</p>
+      <p id="p-00006-en" num="0006">For example, in some embodiments, an apparatus includes a device configured to be worn by a wearer as at least one of a prosthetic or an orthosis, and a chrome layer disposed on at least a portion of an outer surface of the device. In other embodiments, and apparatus includes a device configured to be worn by a wearer as at least one of a prosthetic or an orthosis, and a light-emitting device attached to an outer surface of the device. In further embodiments, and apparatus includes a device configured to be worn by a wearer as at least one of a prosthetic or an orthosis, and an electronic tracking device operatively coupled to the device.</p>
+      <p id="p-00007-en" num="0007">Other embodiments and advantages that may be provided by systems and methods in accordance with the present disclosure will become apparent during review of the following disclosure.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00008-en" num="0008">Embodiments of the present disclosure are described in detail below with reference to the following drawings.</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 1</figref> is a flowchart showing a method of personalizing prosthetic or orthotic devices in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 2</figref> is a front isometric view of an exemplary above-knee prosthetic device in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 3</figref> is a front isometric view of an exemplary below-knee prosthetic device in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 4</figref> is a front isometric view of an exemplary upper-extremity prosthetic device in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIGS. 5-10</figref> show front isometric views of exemplary orthotic braces in accordance with alternate embodiments of the present disclosure.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIGS. 11-27</figref> show isometric views of exemplary personalizations and designs of prosthetic or orthotic devices in accordance with alternate embodiments of the present disclosure.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00015-en" num="0015">The present disclosure is directed to systems and methods for personalizing prosthetic and orthotic devices. Many specific details of certain embodiments in accordance with the present disclosure are set forth in the following description and in <figref>FIGS. 1-27</figref> to provide a thorough understanding of such embodiments. One skilled in the art, however, will understand that the present invention may have additional embodiments, or that the invention may be practiced without several of the details described in the following description.</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 1</figref> is a flowchart showing a method <b>100</b> of personalizing prosthetic or orthotic devices in accordance with an embodiment of the present disclosure. More specifically, in at least some embodiments, the method <b>100</b> may include painting carbon braid, nylon, co-poly, poly-pro, and/or other common trade specific plastics used as substrates for prosthetic sockets and orthosis (a.k.a. orthotic braces), however, in alternate embodiments, other types and compositions of prosthetic and orthosis may be personalized. As shown in <figref>FIG. 1</figref>, in this embodiment, the method <b>100</b> includes: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>(a) Pre-Clean with PPG Acryi-Clean PPG product or rubbing alcohol (at <b>102</b>);</li><li>(b) Dry sand prosthetic Braided Carbon substrate with 320 grit dry sandpaper, Mirka or 3M (at <b>104</b>);</li><li>(c) 2-3 coats of High 5 filler Primer (waiting 10-20 minutes in between coats) (at <b>106</b>) Note: Braided carbon substrate would also accept a Primer base coat PPG K-36 product;</li><li>(d) Wet sand Primer with 600-800 grit wet or dry sandpaper, Mirka or 3M (at <b>108</b>)</li><li>(e) Base coat (base color) with customer chosen color, PPG Brand paint—apply 2-3 coats with DBC basecoat, waiting 5-10 minutes between coats (at <b>110</b>)</li><li>(f) Apply clear coats—PPG 2042 high solids clear/mixed with DCX61 catalyst and 870 reducer (at <b>112</b>);</li><li>(g) Optional step: then apply an inter-coat with 1 or 2 coats of PPG DBC 500 product with catalyst (at <b>114</b>); in at least some embodiments, DCB is an additional prep hardener with catalyst that may need to be applied over the previous coat of 2042; Basically, a form of prep prior to airbrushing artwork;</li><li>(h) Wet sand after application of inter-coats (at <b>116</b>);</li><li>(i) Apply Art Work using DBC and/or House of Candy Color Dyes (at <b>118</b>); the applying at <b>118</b> may include airbrushing and/or hand-painting; and</li><li>(j) Apply clear coats—PPG 2042 high solids clear/mixed with DCX61 catalyst and 870 reducer (at <b>120</b>).</li></ul></li></ul></p>
+      <p id="p-00017-en" num="0027">As noted above, the applying of personalizing artwork at <b>118</b> may include airbrushing and/or hand-painting. No conventional methods of personalizing prosthetic or orthotic devices are known that include airbrushing and/or hand-painting as disclosed herein. In addition, in some embodiments, methods in accordance with the teachings of the present disclosure may use one or more of automotive dyes, paints, or concentrated colored pigments which may be mixed into an acrylic resin and installed during fabrication, and can be used on orthotic and prosthetic devices (e.g. devices shown in <figref>FIGS. 2-10</figref>).</p>
+      <p id="p-00018-en" num="0028">Embodiments of methods in accordance with the present disclosure may advantageously provide an option to a “wearer” for an opportunity to personalize a prosthetic socket or orthotic “orthosis” brace that is otherwise not available in the market. For example, in some embodiments, a wearer may provide their individual choice of personalization artwork (e.g. clip art, graphics, personal camera photos and portrait photos in JPEG, PNG, GIF, TIF etc.) for application onto a device, thus allowing a wearer to choose their own custom “tattoo” or personalization.</p>
+      <p id="p-00019-en" num="0029">More specifically, in some embodiments, a file containing personalization artwork provided by a wearer may be modified (e.g. using Photoshop or other suitable software) to create a collage or other specified design full prints by means of, for example, “sublimation printing” (or other suitable sub-process) on a material (e.g. polyester or cotton fabric for prosthetics and transfer paper custom paper prints to be applied on various plastic types as shown in <figref>FIG. 2</figref> thru <figref>FIG. 10</figref>). A particular size of the material may vary depending on the particular device (e.g. prosthetic, brace, etc.) being personalized (typically sizes ranging in 12″ sq. up to 36″sq. have been found to be suitable). In some embodiments, the resulting custom “tattoo” fabric and/or paper prints may be shipped to the wearer or prosthetist to apply when a new device is being fabricated.</p>
+      <p id="p-00020-en" num="0030">It will be appreciated that one or more of the above-referenced actions of the method <b>100</b> may be optional (even if not expressly stated above) and may be omitted without departing from the spirit and scope of the invention.</p>
+      <p id="p-00021-en" num="0031">
+        <figref>FIG. 2</figref> is a front isometric view of an exemplary above-knee prosthetic device <b>200</b> in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00022-en" num="0032">
+        <figref>FIG. 3</figref> is a front isometric view of an exemplary below-knee prosthetic device <b>220</b> in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00023-en" num="0033">
+        <figref>FIG. 4</figref> is a front isometric view of an exemplary upper-extremity prosthetic device <b>240</b> in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00024-en" num="0034">
+        <figref>FIG. 5</figref> shows a front isometric view(s) of an exemplary orthotic brace <b>260</b> in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00025-en" num="0035">
+        <figref>FIG. 6</figref> shows a front isometric view of another exemplary orthotic brace <b>280</b> in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00026-en" num="0036">
+        <figref>FIG. 7</figref> shows a front isometric view(s) of yet another exemplary orthotic brace <b>300</b> in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00027-en" num="0037">
+        <figref>FIG. 8</figref> shows a front isometric view(s) of yet another exemplary orthotic brace <b>320</b> in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00028-en" num="0038">
+        <figref>FIG. 9</figref> shows a front isometric view of another exemplary orthotic brace <b>340</b> in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00029-en" num="0039">
+        <figref>FIG. 10</figref> shows a front isometric view of still another exemplary orthotic brace <b>360</b> in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00030-en" num="0040">
+        <figref>FIG. 11</figref> shows isometric views of various exemplary personalizations and/or designs of prosthetic or orthotic devices in accordance with alternate embodiments of the present disclosure. More specifically, <figref>FIG. 11</figref> shows an embodiment of a first (or “waves”) personalization <b>400</b>, an embodiment of a second (or “real flames”) personalization <b>420</b>, an embodiment of a third (or “termi-nator or bio-mechanical design with gears”) personalization <b>440</b>, an embodiment of a fourth (or “sky”) personalization <b>460</b>, and an embodiment of a fifth (or “fiery flames”) custom fabric tattoo personalization <b>480</b>. In the embodiments shown in <figref>FIG. 11</figref>, personalizations <b>420</b> and <b>440</b> are examples of personalizations that have been performed by methods that include one or more of airbrushing and hand-painting.</p>
+      <p id="p-00031-en" num="0041">
+        <figref>FIG. 12</figref> shows an isometric view of another exemplary personalization and/or design of a prosthetic or orthotic device in accordance with an embodiment of the present disclosure. More specifically, <figref>FIG. 12</figref> shows an embodiment of a “purple heart” personalization <b>500</b>.</p>
+      <p id="p-00032-en" num="0042">
+        <figref>FIG. 13</figref> shows an isometric view of another exemplary personalization and/or design of a prosthetic or orthotic device in accordance with another embodiment of the present disclosure. More specifically, <figref>FIG. 13</figref> shows an embodiment of a “liberty” personalization <b>520</b>.</p>
+      <p id="p-00033-en" num="0043">
+        <figref>FIG. 14</figref> shows an isometric view of yet another exemplary personalization and/or design of a prosthetic or orthotic device in accordance with another embodiment of the present disclosure. More specifically, <figref>FIG. 14</figref> shows an embodiment of an “eagle and flag” personalization <b>540</b>.</p>
+      <p id="p-00034-en" num="0044">
+        <figref>FIG. 15</figref> shows an isometric view of another exemplary personalization and/or design of a prosthetic or orthotic device in accordance with another embodiment of the present disclosure. More specifically, <figref>FIG. 15</figref> shows an embodiment of a “rose and heart” personalization <b>560</b>.</p>
+      <p id="p-00035-en" num="0045">
+        <figref>FIG. 16</figref> shows an isometric view of another exemplary personalization and/or design of a prosthetic or orthotic device in accordance with another embodiment of the present disclosure. More specifically, <figref>FIG. 16</figref> shows an embodiment of a leather Arizona Brace Ankle-Foot-Orthosis a.k.a AFO with (or without) poly-propelyne, copoly or polypro plastic interface with “embroidery of GTOPI logo” personalization <b>580</b>.</p>
+      <p id="p-00036-en" num="0046">
+        <figref>FIG. 17</figref> shows an isometric view of another exemplary personalization and/or design of a prosthetic or orthotic device in accordance with another embodiment of the present disclosure. More specifically, <figref>FIG. 17</figref> shows an embodiment of a “mechanical” personalization <b>600</b>.</p>
+      <p id="p-00037-en" num="0047">
+        <figref>FIG. 18</figref> shows an isometric view of another exemplary personalization and/or design of a prosthetic or orthotic device in accordance with a further embodiment of the present disclosure. More specifically, <figref>FIG. 18</figref> shows an embodiment of the first protocol “real flames” personalization <b>640</b>.</p>
+      <p id="p-00038-en" num="0048">
+        <figref>FIG. 19</figref> shows an isometric view of another exemplary personalization and/or design of a prosthetic or orthotic device in accordance with an embodiment of the present disclosure. More specifically, <figref>FIG. 19</figref> shows an embodiment of the second protocol “termi-nator or bio-mechanical design with gears” personalization <b>660</b>.</p>
+      <p id="p-00039-en" num="0049">
+        <figref>FIG. 20</figref> shows an isometric view of another exemplary personalization and/or design of a prosthetic or orthotic device in accordance with another embodiment of the present disclosure. More specifically, <figref>FIG. 20</figref> shows an embodiment of a a first type of “3D fiberglass mold of gecko” personalization <b>680</b>. In at least some embodiments, the “3D fiberglass mold of gecko” personalization <b>680</b> involves applying a molded or shaped three-dimensional (3D) piece of artwork that is secured onto the prosthetic or orthotic device. For example, in some embodiments, the 3D piece of artwork is epoxied and placed onto the substrate (whether it be carbon braid or painted surface). Of course, other suitable methods of securing the 3D piece of artwork may be used.</p>
+      <p id="p-00040-en" num="0050">
+        <figref>FIGS. 21-25</figref> show alternate isometric views of another exemplary personalization and/or design of a prosthetic or orthotic device in accordance with another embodiment of the present disclosure. More specifically, <figref>FIG. 21</figref> shows an embodiment of a “chrome background” personalization <b>700</b>. <figref>FIG. 22</figref> shows an enlarged partial view <b>702</b> of the “chrome background” personalization <b>700</b> of <figref>FIG. 21</figref>. <figref>FIGS. 23-25</figref> show additional isometric views of a “chrome background” personalization <b>704</b>, <b>706</b>, <b>708</b>. In at least some embodiments, performing a “chrome background” personalization may include procedures substantially similar to prep and paint processes described herein, and may use materials to provide an appearance of one or more of chrome, brass, gold, silver and other metals. More specifically, in some embodiments, performing a “chrome background” personalization may include procedures currently available from SpectraChrome™ or Cosmichrome™.</p>
+      <p id="p-00041-en" num="0051">
+        <figref>FIG. 26</figref> shows isometric views of various exemplary personalizations and/or designs for application to prosthetic or orthotic devices in accordance with further embodiments of the present disclosure. More specifically, <figref>FIG. 26</figref> shows portions of material personalized for application on a device by a wearer or third party (e.g. subsequent to or during fabrication). In specific embodiments, the personalized material portions shown in <figref>FIG. 26</figref> may be referred to as custom tattoo fabric and/or transfer paper, and may be applied to orthotic devices according to one or more methods disclosed herein. <figref>FIG. 26</figref> shows an embodiment of a first (or “waves”) personalized material portion <b>710</b>, an embodiment of a second (or “bio-mechanical design”) personalized material portion <b>712</b>, an embodiment of a third personalized material portion <b>714</b>, and an embodiment of a fourth personalized material portion <b>716</b>.</p>
+      <p id="p-00042-en" num="0052">In further embodiments, a method of personalizing an orthotic or a prosthetic device may include sublimation of custom transfer paper tattoo art prints, which also may be termed a custom cosmetic treatment. In some embodiments, such a sublimation process may include applying transfer paper art to an orthotic or a prosthetic device, thereby allowing personalization and printing allowing the wearer to make a personal choice or self expression with tattoo art by furnishing a personal digital camera image, clip art, three-dimensional (3D) high graphic images, or other suitable art. In some embodiments, a user may make a selection from a library of pre-selected designs.</p>
+      <p id="p-00043-en" num="0053">In further embodiments, a print is pre-ordered by a wearer, prior to the fabrication process, and is applied by a third party (e.g. orthotist, prosthetist, technician, etc.). The custom transfer art print can be installed onto PolyPro, CoPoly, or other plastic types. The transfer paper print may be laid on top of the plastic substrate while the plastic is still in the oven, and may become an integral part and fused to the plastic. In at least some embodiments, the installation of the transfer paper is done prior to pulling the plastic over the cast, mold or CNC carved foam and vacuum pulled during the clinical fabrication. Such a method can be used at an assembly line in other non-custom manufactured plastic orthotics devices, including, but not limited to: Cranial Helmets, Lumbar Jackets, Arm Braces, Prosthetic limbs, both upper and lower extremity fabricated limbs, Knee Ankle Foot Orthosis (KAFO), and/or Ankle Foot Orthosis (AFO). Such processes may be available directly to the consumer, or through a prosthetist who can preorder for a patient by special order through several “OandP” (Orthotic and Prosthetic) supply distribution centers.</p>
+      <p id="p-00044-en" num="0054">In still further embodiments, systems and methods for personalizing prosthetic and orthotic d may include choosing a wearer choosing a preselected art design or providing an image of their choice. The image may be custom modified by a graphic designer (e.g. by means of utilizing Photoshop™) to enlarge, and/or collage the image to a specific size. A proof may be provided (e.g. email) to a customer for approval prior to application. After approval, the image is printed on a transfer paper, which may be similar or the same as conventional transfer paper. In at least some embodiments, the prints may be a high quality, sublimation full color image. The print may then be shipped in a mailer tube package to the wearer, and installed by the wearer or a suitable third party (e.g. prosthetist, orthotist, OandP technician, etc.).</p>
+      <p id="p-00045-en" num="0055">In still further embodiments, a method in accordance with the teachings of the present disclosure may include sublimination of custom fabric tattoo art prints on OandP devices and can be applied onto upper and lower extremity prosthetic (prostheses) limbs and/or many suitable orthotic braces. Again, such methods allow personalization and printing, allowing the wearer to make a personal choice or self expression with tattoo art by furnishing a personal digital camera image, clip art, 3D high graphic images or they make a selection from a library pre-selected designs. The custom fabric prints may be installed by third-party technicians and prosthetist and orthotist, and may be laminated with 100% acrylic resin.</p>
+      <p id="p-00046-en" num="0056">In at least some embodiments, such custom fabric prints can be applied over several substrates of common materials used to fabricate prosthetic limbs and orthotic braces, including, for example, compositions of (or including) carbon braid, fiberglass, or nylon substrates. Similarly, in at least some embodiments, such custom fabric prints may be applied to a variety of devices, including but not limited to, orthotic braces clinical custom fabricated and other pre-manufactured braces. Again, in some embodiments, such processes may be available to the consumer, or through a prosthetist who can preorder for a patient by special order through several OandP supply distribution centers (e.g. SPS and Cascade), and may also be available for pre-manufactured plastic orthotic companies. Devices that this method can applied to include, for example, Cranial Helmets, Arm Braces, Prosthetic limbs, both upper and lower extremity fabricated limbs, Knee Ankle Foot Orthosis (KAFO), and Ankle Foot Orthosis (AFO).</p>
+      <p id="p-00047-en" num="0057">Methods that include sublimination of custom fabric tattoo art prints can also be supplied to OandP manufacturers who may fuse such a fabric over a silicone liner during a specialty manufacturing process. The silicone liner may then be used by the wearer or amputee donned and applied over the residual limb. Such a method may also be supplied to OandP manufacturers, who may fuse a fabric over a silicone suspension sleeve during the specialty manufacturing process. The silicone suspension sleeves used by the wearer or amputee support and attach the prosthetic limb to the residual limb.</p>
+      <p id="p-00048-en" num="0058">In a further embodiment, a method may include: (a) choosing an image for application onto a prosthetic or orthotic device (e.g. prosthetist, orthotist or wearer of device chooses a preselected art design or can provide an image of their choice); (b) custom modifying the image (e.g. a graphic designer modifying the image by means of utilizing Photoshop to enlarge, collage the image to a specific size); (c) determining a size of the image to be applied based on dimensions of the device (e.g. height and width of image to be applied based on the height and circumference of the device); (d) providing the final image to the customer for approval (e.g. via email); and (e) after approval, the print is printed on a suitable fabric (e.g. 97% cotton with 3% spandex, cotton/polyester blend with a 3% spandex, etc.). In at least some embodiments, the material may be permeable to allow for the 100% acrylic resin to fuse and saturate through the fabric when laminated over typical substrates. In at least some embodiments, the print may be a high quality, sublimation full color image. One or more additional prints may be supplied on each order that can be used on their next fabricated assistive device. The method may further include (e) providing the final print to the customer (e.g. the print may be shipped in a mailer package to the wearer), and (f) installing the print on an orthotic or prosthetic device (e.g. by third party prosthetist, orthotist, OandP technician, etc. or by the wearer).</p>
+      <p id="p-00049-en" num="0059">In further embodiments in accordance with the teachings of the present disclosure, methods and apparatus for personalizing an orthotic or prosthetic device may include disposing a Global Positioning System (GPS) locator in or on the device. Such a GPS locator may advantageously assist in locating a prosthetic limb device in the event it is stolen or lost. In some embodiments, a GPS transmitter chip may be installed by the prosthetic limb manufacturer during the assembly. Alternately, a GPS transmitter chip may be available as an after-market add on that can be installed to existing prosthetic limbs (e.g. by the wearer or by a prosthetist or OandP technician) at the clinical level.</p>
+      <p id="p-00050-en" num="0060">In some embodiments, a transmitter chip is placed onto the prosthetic device and attached with epoxy or other bonding agent or method to the prosthetic limb substrate. Each transmitter may have a serial number and may be monitorable by a third party. In some embodiments, for example, a subscription with a monitoring company (e.g. LoJack) may be activated by the wearer, or by a health insurance company or the entity or provider who purchases a GPS locator for prosthetic limbs security system.</p>
+      <p id="p-00051-en" num="0061">In further embodiments in accordance with the teachings of the present disclosure, methods and apparatus for personalizing an orthotic or prosthetic device may include providing one or more lights on the device. For example, in some embodiments, a light assembly may have a light emitting portion (e.g. LED or the like), a protective cover (e.g. lens), a power unit (e.g. battery), and may be attached to the orthotic or prosthetic device using a bonding agent (e.g. epoxy, peel and stick contact paper, etc.). In at least some embodiments, the light may be a blinking on and off alternating flashing light which is activated only by motion.</p>
+      <p id="p-00052-en" num="0062">
+        <figref>FIG. 27</figref> shows views of various exemplary lights and/or designs for application to prosthetic or orthotic devices in accordance with further embodiments of the present disclosure. Lighting devices in accordance with the teachings of the present disclosure may vary in size depending on the shape of object (e.g. average size 1 cm, 1.5 cm, or ½″-¾″, etc.). Lights may be applied in various quantities and mixed or single shapes.</p>
+      <p id="p-00053-en" num="0063">It will be appreciated that the detailed descriptions of the above embodiments are not exhaustive descriptions of all embodiments contemplated by the inventor to be within the scope of the invention. Indeed, it will be recognized that certain aspects or elements of the above-described embodiments may variously be combined or eliminated to create further embodiments, and such further embodiments fall within the scope and teachings of the invention. It will also be apparent to those of ordinary skill in the art that the above-described embodiments may be combined in whole or in part to create additional embodiments within the scope and teachings of the present disclosure. Accordingly, the scope of the invention should be determined from the following claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An apparatus, comprising:
+<claim-text>a device configured to be worn by a wearer as at least one of a prosthetic or an orthosis; and</claim-text><claim-text>a chrome layer disposed on at least a portion of an outer surface of the device.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en" independent="true">
+      <claim-text>
+        <b>2</b>. An apparatus, comprising:
+<claim-text>a device configured to be worn by a wearer as at least one of a prosthetic or an orthosis; and</claim-text><claim-text>a light-emitting device attached to an outer surface of the device.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The apparatus of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein a light-emitting device attached to an outer surface of the device comprises:
+<claim-text>a motion-activated light attached to an outer surface of the device.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en" independent="true">
+      <claim-text>
+        <b>4</b>. An apparatus, comprising:
+<claim-text>a device configured to be worn by a wearer as at least one of a prosthetic or an orthosis; and</claim-text><claim-text>an electronic tracking device operatively coupled to the device.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150245926A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150245926A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150245926A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245926A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150245926A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245926A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150245926A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245926A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150245926A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245926A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150245926A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245926A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150245926A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245926A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150245926A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245926A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150245926A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245926A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150245926A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245926A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150245926A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245926A1-20150903-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150245926A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245926A1-20150903-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150245926A1_00013.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150245926A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150245926A1.PDF" type="pdf" size="868285" pages="16" />
+</lexisnexis-patent-document>

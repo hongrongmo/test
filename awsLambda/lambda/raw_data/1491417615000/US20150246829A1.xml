@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246829A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021220" date-changed="20150918" time-changed="025325">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121138789">
+        <country>US</country>
+        <doc-number>20150246829</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14698646</doc-number>
+        <date>20150428</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C02F   1/46        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>46</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C02F   1/32        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C02F   1/4602      20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>4602</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C02F   1/008       20130101 LI20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>008</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C02F   1/32        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C02F   1/325       20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>325</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C02F   1/46104     20130101 LI20150120BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>46104</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C02F   1/4672      20130101 LA20131018BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>4672</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131018</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C02F   1/725       20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>725</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C02F2001/46142     20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2001</main-group>
+        <subgroup>46142</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C02F2201/32        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2201</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C02F2201/3227      20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2201</main-group>
+        <subgroup>3227</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C02F2201/4613      20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2201</main-group>
+        <subgroup>4613</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C02F2201/46135     20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2201</main-group>
+        <subgroup>46135</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C02F2209/006       20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2209</main-group>
+        <subgroup>006</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>C02F2209/02        20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2209</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>C02F2209/42        20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2209</main-group>
+        <subgroup>42</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>C02F2209/44        20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2209</main-group>
+        <subgroup>44</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="17">
+        <text>C02F2303/22        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2303</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="18">
+        <text>C02F2305/10        20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2305</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="19">
+        <text>C25B   1/003       20130101 LI20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>25</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>003</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="20">
+        <text>Y02W  10/37        20150501 LA20150507BHEP        </text>
+        <cpc-version-indicator>
+          <date>20150501</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>W</subclass>
+        <main-group>10</main-group>
+        <subgroup>37</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150507</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">SYSTEM FOR REDUCING CONTAMINANTS FROM A PHOTOELECTROCATALYTIC OXIDIZATION APPARATUS THROUGH POLARITY REVERSAL AND METHOD OF OPERATION</invention-title>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13894621</doc-number>
+              <date>20130515</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9045357</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006986</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13769741</doc-number>
+              <date>20130218</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8568573</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13894621</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13544721</doc-number>
+              <date>20120709</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8398828</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13769741</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61647372</doc-number>
+          <date>20120515</date>
+        </document-id>
+      </provisional-application>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61613357</doc-number>
+          <date>20120320</date>
+        </document-id>
+      </provisional-application>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61583974</doc-number>
+          <date>20120106</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>AquaMost, Inc.</orgname>
+            <address>
+              <city>Madison</city>
+              <state>WI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Barry</last-name>
+            <first-name>Terence P.</first-name>
+            <address>
+              <city>Middleton</city>
+              <state>WI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Doolittle</last-name>
+            <first-name>Craig</first-name>
+            <address>
+              <city>Monona</city>
+              <state>WI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Carlson</last-name>
+            <first-name>Alan</first-name>
+            <address>
+              <city>Columbus</city>
+              <state>WI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Winkie</last-name>
+            <first-name>Douglas S.</first-name>
+            <address>
+              <city>Madison</city>
+              <state>WI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173461512">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246829</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150428</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173461510">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246829</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150428</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A system and method for operating a photoelectrocatalytic oxidation assembly for removing fouling from components is provided. The method includes the steps of resetting a first counter, increasing the first counter by a first channel increment value, and determining if the value in the first counter exceeds a value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly. If the first counter does not exceed a value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly, the following steps are performed: reversing polarity in a channel associated with the value in the first counter, resetting a first timer, determining if an amount of time in the first timer exceeds a first time period, increasing the amount of time remaining in the first timer by a first time increment if the amount of time remaining in the first timer does not exceed the first time period, terminating the polarity reversal in the channel associated with the value in the first counter when the time remaining in the first timer exceeds the first time period, and returning to the step of increasing the first counter by a first channel increment value. If the first counter does exceed a value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly, the step of returning to the step of resetting the first counter is performed.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150429</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246829A1</docdb-publication-number>
+      <docdb-application-id>444209567</docdb-application-id>
+      <new-owner>AQUAMOST, INC., WISCONSIN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:BARRY, TERENCE P.;DOOLITTLE, CRAIG;CARLSON, ALAN;AND OTHERS;SIGNING DATES FROM 20130521 TO 20130528;REEL/FRAME:035521/0602</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims priority as a continuation application to U.S. patent application Ser. No. 13/894,621 filed May 15, 2013, which claims priority to and benefit of U.S. Provisional Patent Application Ser. No. 61/647,372 filed May 15, 2012 and is a continuation-in-part of U.S. Pat. No. 8,568,573 filed Feb. 18, 2013, which is a continuation of U.S. Pat. No. 8,398,828 filed Jul. 9, 2012, which claims priority to U.S. Provisional Patent Application No. 61/613,357 filed Mar. 20, 2012, and U.S. Provisional Patent Application No. 61/583,974 filed Jan. 6, 2012, the contents of each of which is hereby incorporated herein by reference in its entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to the removal of contaminants from aqueous solutions. More specifically, the present invention relates to a system and a method for removing contaminants from a photoelectrocatalytic oxidation apparatus through systematic polarity reversal.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">Photoelectrocatalytic oxidation, or “PECO,” is a process which may be used to treat one or more aqueous solutions to reduce contaminants within the aqueous solutions. Aqueous solutions may include, but are not limited to, hydraulic fracturing fluid, hydraulic fracturing backflow water, high-salinity solutions, groundwater, seawater, wastewater, drinking water, aquaculture (e.g., aquarium water and aquaculture water) and ballast water.</p>
+      <p id="p-00004-en" num="0004">A device implementing PECO may include an electrode assembly having a cathode, an anode, and a light source. In addition, the PECO device may include an electrical bias across the anode and cathode, and/or a pump for providing aqueous solution to the electrode assembly of the PECO device.</p>
+      <p id="p-00005-en" num="0005">During operation of a PECO device to treat one or more aqueous solutions, unwanted material may accumulate on surfaces of PECO device components, including the anode and/or cathode. This undesirable scale or fouling typically impedes or interferes with the function of the component.</p>
+      <p id="p-00006-en" num="0006">Unfortunately, there are a limited number of desirable options available for the removal of scale or fouling from PECO device components. One option is the removal and replacement of the fouled component from the PECO device. However, this option can lead to the addition of unnecessary cost, as the fouled component may be replaced before the completion of its operational life. Further, replacement of fouled components may require the PECO device to be shutdown, leading to undesirable nonoperational time or down time.</p>
+      <p id="p-00007-en" num="0007">Another option is the introduction of a chemical fouling inhibitor. However, the addition of any chemical to the PECO device or associated aqueous solutions is typically undesirable and counterproductive, as the PECO device operates to reduce contaminants from aqueous solutions. The addition of a chemical fouling inhibitor merely adds a potential contaminant to the aqueous solutions the PECO device is treating.</p>
+      <p id="p-00008-en" num="0008">Accordingly, what is needed is a system and method to address PECO device component fouling. More specifically, what is needed is a system and method to address PECO device component fouling during operation of the PECO device, which will maximize the operational life of PECO device components, and which avoids the introduction of chemical fouling inhibitors which may further contaminate aqueous solutions being treated by the PECO device.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE DESCRIPTION</heading>
+      <p id="p-00009-en" num="0009">The present invention provides a system and method for the reduction of contaminants which lead to PECO device component fouling. The system and method provides for the systematic reversal of polarity of anode and cathode pairs of a PECO device, leading to a systematic descaling or cleaning of the anode, cathode, and/or associated electrode(s). The system and method also provides for the systematic reversal of polarity of electrode pairs of a PECO device in a manner in which the overall operational efficiency of the PECO device is maximized.</p>
+      <p id="p-00010-en" num="0010">A method for operating a photoelectrocatalytic oxidation assembly for removing fouling from components is provided. The method includes the steps of resetting a first counter, increasing the first counter by a first channel increment value, and determining if the value in the first counter exceeds a value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly. If the first counter does not exceed a value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly, the following steps are performed: reversing polarity in a channel associated with the value in the first counter, resetting a first timer, determining if an amount of time in the first timer exceeds a first time period, increasing the amount of time remaining in the first timer by a first time increment if the amount of time remaining in the first timer does not exceed the first time period, terminating the polarity reversal in the channel associated with the value in the first counter when the time remaining in the first timer exceeds the first time period, and returning to the step of increasing the first counter by a first channel increment value. If the first counter does exceed a value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly, the following step is performed: returning to the step of resetting the first counter.</p>
+      <p id="p-00011-en" num="0011">In addition, a method for removing scale from a plurality of photoelectrodes associated with a photoelectrocatalytic oxidation assembly thru polarity reversal, the plurality of photoelectrodes being associated with a plurality of channels, such that at least one photoelectrode is associated with each channel is also provided. The method includes the steps of resetting a first counter and a first timer, determining if an amount of time in the first timer exceeds a first time period, increasing the amount of time in the first timer by a first time increment, increasing the first counter by a first channel increment value, and determining if the value in the first counter exceeds a value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly. In addition, if the first counter does not exceed a value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly, the following additional steps are performed: reversing polarity in a channel associated with the value in the first counter, resetting a second timer, determining if an amount of time in the second timer exceeds a second time period, increasing the amount of time remaining in the second timer by a second time increment if the amount of time remaining in the second timer does not exceed the second time period, terminating the polarity reversal in the channel associated with the value in the second counter when the time remaining in the second timer exceeds the second time period and returning to the step of determining if an amount of time in the first timer exceeds the first time period. If the value in the first counter exceeds a value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly and the amount of time in the first timer does not exceed the first time period, the additional step of returning to the step of increasing the amount of time in the first timer by a first time increment is performed. If the amount of time in the first timer does exceed the first time period, the step of returning to the step of resetting the first counter and the first timer is performed.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 1</figref> is a schematic illustration of a first PECO device, which may also be referred to as a photoelectrocatalytic cell, according to one or more examples of embodiments.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 2</figref> is a schematic illustration of a second PECO device, which may also be referred to as a photoelectrocatalytic cell, according to one or more examples of embodiments.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 3</figref> is a flow diagram of a first example of an embodiment of a polarity reversal program adapted for removing fouling from components of a PECO assembly.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 4</figref> is a flow diagram of a second example of an embodiment of a polarity reversal program adapted for removing fouling from components of a PECO assembly.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00016-en" num="0016">While the disclosure is susceptible to various modifications and alternative forms, specific embodiments thereof have been shown by way of example in the drawings and are herein described below in detail. It should be understood, however, that the description of specific embodiments is not intended to limit the disclosure from covering all modifications, equivalents and alternatives falling within the spirit and scope of the disclosure.</p>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00017-en" num="0017">The invention illustrated in the Figures and disclosed herein is generally directed to a PECO system, and a polarity reversal program <b>200</b>, <b>300</b> for a PECO system and associated method of operation. Unless defined otherwise, all technical and scientific terms used herein have the same meaning as commonly understood by one of ordinary skill in the art to which the disclosure belongs. Although any methods and materials similar to or equivalent to those described herein may be used in the practice or testing of the present disclosure, example methods and materials are described below.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 1</figref> illustrates one or more examples of embodiments of a photoelectrocatalytic oxidation (“PECO”) device. The PECO device may include a photoanode or photoelectrode <b>10</b>, a cathode or counterelectrode <b>14</b>, a housing member <b>16</b> having an inlet <b>12</b> and outlet <b>13</b> adapted to house photoelectrode <b>10</b> and counterelectrode <b>14</b>, a light source assembly <b>22</b> adapted to emit ultraviolet light (UV) to photoelectrode <b>10</b>, and an electrical power source (not shown) adapted to apply a voltage across photoelectrode <b>10</b> and counterelectrode <b>14</b>.</p>
+      <p id="p-00019-en" num="0019">In one or more examples of embodiments, photoelectrode <b>10</b> may include a conductive support member and a film member. The conductive support member may be constructed from metal. The film member may be nanoporous and include a thin layer (e.g., 200 to 500 nanometers) of a titanium dioxide (TiO<sub>2</sub>) that is adapted to function as a photocatalyst. The film member may be provided on (e.g., coated on or adhered to) the conductive support member. In various embodiments, the film member may have a median pore diameter in the range of about 0.1 nanometers to 500 nanometers constructed from TiO<sub>2 </sub>nanoparticles.</p>
+      <p id="p-00020-en" num="0020">In one or more examples of embodiments, photoelectrode <b>10</b> may be modified (e.g., to improve performance). Such modifications may include making holes or perforations in the photoelectrode, conductive support member or foil. The holes or perforations may be made at regular intervals, for examples in the range of about 0.5 centimeters to 3.0 centimeters spacing between the holes. Such modifications may also include corrugating or otherwise modifying the photoelectrode, conductive support member or foil to produce a regular wave-like pattern on the foil surface. For example, the height of a corrugation “wave” may be in a range of about 1 millimeter to 5 millimeters. As another example, corrugating the foil twice at right angles to each other may produce a unique cross-hatched pattern on the foil surface.</p>
+      <p id="p-00021-en" num="0021">In one or more examples of embodiments, the TiO<sub>2 </sub>photocatalyst may be illuminated with light having sufficient near UV energy to generate reactive electrons and holes promoting oxidation of compounds on the anode surface.</p>
+      <p id="p-00022-en" num="0022">Light source assembly <b>22</b> may include a lamp or bulb. In addition, light source assembly <b>22</b> may include a transparent quartz or fused silica member adapted to house the lamp. In one or more examples of embodiments, the lamp or bulb may be an ultraviolet light having a wavelength in a range of about 200 nanometers to 380 nanometers. In one or more examples of embodiments, the lamp may be a low pressure mercury vapor lamp adapted to emit UV germicidal irradiation at 254 nanometer wavelength. In one or more additional examples of embodiments, the lamp may be adapted to emit an irradiation intensity in the range of 1 to 500 mW/cm<sup>2</sup>. The irradiation intensity may vary considerably depending on the type of lamp used. Higher intensities may improve the performance of the photoelectrocatalytic oxidation (PECO) device. That optimum irradiation value or intensity may depend, at least in part, upon the distance between the lamp and the photoelectrode.</p>
+      <p id="p-00023-en" num="0023">Various UV light sources, such as germicidal UVC wavelengths (peak at 254 nm) and black-light UVA wavelengths (UVA range of 300-400 nm), may also be utilized in the PECO device. In one or more examples of embodiments, the optimal light wavelength (e.g. for promoting oxidation) is 305 nanometers. However, various near-UV wavelengths are also effective. Both types of lamps may emit radiation at wavelengths that activate photoelectrocatalysis. The germicidal UV and black light lamps are widely available and may be used in commercial applications of the instant PECO device.</p>
+      <p id="p-00024-en" num="0024">In one or more examples of embodiments, the light source assembly may be disposed exterior to the housing member, and the housing member may include a transparent or translucent member adapted to permit ultraviolet light emitted from the light source assembly to irradiate the photoelectrode. In one or more examples of embodiments, the PECO device may also function using sunlight instead of, or in addition to, the light source assembly.</p>
+      <p id="p-00025-en" num="0025">In one or more examples of embodiments, photocatalytic efficiency is improved by applying a potential (i.e., bias) across the photoelectrode and counterelectrode. Applying a potential may decrease the recombination rate of photogenerated electrons and holes. In various embodiments, an effective voltage range applied may be in the range of −1 V to +15 V. In various embodiments, an electrical power source is adapted to apply an electrical potential in the range of 4 V to 12 V across the photoelectrode and counterelectrode. In various embodiments, the electrical power source is adapted to generate an electrical potential in the range of 1.2 V to 3.5 V across the photoelectrode and counterelectrode. In one or more examples of embodiments where the PECO device includes a reference electrode, for example as illustrated in <figref>FIG. 2</figref>, the electrical power source is adapted to generate an electrical potential in the range of 0 to 2.3 V versus the reference electrode.</p>
+      <p id="p-00026-en" num="0026">Referring now to <figref>FIG. 2</figref>, in one or more examples of embodiments, the PECO device may additionally include a potentiostat <b>18</b>, and a reference electrode <b>20</b> in electrical communication with the potentiostat <b>18</b>. In one or more examples of embodiments, the device further includes a reference electrode and a voltage control device, such as a potentiostat, adapted to maintain a constant voltage or constant current between the reference electrode and the photoelectrode. In one or more examples of embodiments, the housing member may be adapted to house the reference electrode.</p>
+      <p id="p-00027-en" num="0027">In one or more examples of embodiments, the PECO device may further include a semi-micro saline bridge member connecting the potentiostat and reference electrode, whereby the housing member may be adapted to house the saline bridge. In one or more examples of embodiments, the reference electrode may be constructed from silver and is in the shape of a wire.</p>
+      <p id="p-00028-en" num="0028">The potential on the photoelectrode <b>10</b> may be held constant relative to a saturated calomel reference electrode by potentiostat <b>18</b>, such as that available from EG&amp;G Model 6310. In one or more examples of embodiments, potentiostat <b>18</b> may be connected to the reference electrode through a semi-micro saline bridge, such as available from EG&amp;G, Model K0065. The saline bridge may be disposed inside the reactor close to photoelectrode <b>10</b>. The current passing through the PECO device may be measured.</p>
+      <p id="p-00029-en" num="0029">Potentiostat <b>18</b> may be a variable current source that can measure a voltage between two electrodes. Potentiostat <b>18</b> may perform a wide variety of electrochemical functions, but two example functional modes include constant current and constant voltage. In constant current mode, potentiostat <b>18</b> may supply a user specified or predetermined current to the electrodes. In constant voltage mode, potentiostat <b>18</b> may supply current to the electrodes while monitoring the voltage. Potentiostat <b>18</b> may then continually adjust the current such that the voltage will remain constant at a user specified value. Potentiostat <b>18</b> may also be configured to supply pulses.</p>
+      <p id="p-00030-en" num="0030">In operation of the PECO device illustrated in <figref>FIGS. 1 and 2</figref>, an aqueous solution having at least one contaminant, including, but not limited to, an organism, an organic chemical, an inorganic chemical, and/or combinations thereof is introduced to the PECO device. The aqueous solution is subsequently exposed to photoelectrocatalytic oxidization.</p>
+      <p id="p-00031-en" num="0031">In one example of an application of the device described herein, the device uses photoelectrocatalysis as a treatment method for hydraulic fracturing fluid. While typically described herein as reducing or removing contaminants from hydraulic fracturing fluid, it should be understood by one skilled in the art that photoelectrocatalysis of other contaminants can be performed similarly using the photoelectrocatalytic oxidation or PECO device.</p>
+      <p id="p-00032-en" num="0032">Generally, the method for reducing amount of contaminants in solution or fluid described includes introducing the solution into a housing or container or cell including: a UV light; a photoelectrode, wherein the photoelectrode comprises an anatase polymorph of titanium, a rutile polymorph of titanium, or a nanoporous film of titanium dioxide; and a cathode. The photoelectrode is irradiated with UV light, and a first potential is applied to the photoelectrode and counterelectrode for a first period of time. A second potential is applied to the photoelectrode and counterelectrode for a second period of time. As a result, the contaminant amount in solution is reduced.</p>
+      <p id="p-00033-en" num="0033">In various embodiments, one or more contaminants are oxidized by a free radical produced by a photoelectrode, and wherein one or more contaminants are altered electrochemically (e.g., by electroprecipitation or electrocoagulation). In various embodiments, one or more contaminants are oxidized by a chlorine atom produced by a photoelectrode. In various embodiments, one or more contaminants are altered electrochemically (e.g. by electroprecipitation or electrocoagulation).</p>
+      <p id="p-00034-en" num="0034">While <figref>FIGS. 1 and 2</figref> illustrate one or more examples of embodiments of a PECO device, it should be appreciated that certain components from the PECO device may be integrated into a PECO system. For example, a PECO system may include a plurality of plate pairs provided within a housing. A plate pair may include at least a photoanode or photoelectrode or photocatalytic anode <b>10</b> and a cathode or counterelectrode <b>14</b> to form an electrolytic cell. The plate pair may also include a light source assembly <b>22</b>. The light source assembly <b>22</b> may illuminate photoelectrode <b>10</b> with UV light to make the surface of the photoelectrode <b>10</b> highly oxidative. Each plate pair may also have a power source or supply coupled thereto for providing a potential or bias across the photoelectrode <b>10</b> and counterelectrode <b>14</b>. Application of a potential or bias to the photoelectrode provides further control over the oxidation process.</p>
+      <p id="p-00035-en" num="0035">The plurality of plate pairs may be provided in the PECO system for the treatment of one or more aqueous solutions to reduce contaminants. An example of a PECO system having a plurality of plate pairs includes, but is not limited to, the system disclosed in U.S. Pat. No. 8,398,828 to Winkie et al., entitled “Apparatus and Method for Treating Aqueous Solutions and Contaminants Therein,” the content of which is incorporated by reference in its entirety. In addition, it should be appreciated in one or more examples of embodiments, the plurality of plate pairs may be provided in parallel, may be provided in series, or may be provided in a combination of series and parallel arrangement within a PECO system.</p>
+      <p id="p-00036-en" num="0036">In addition, the PECO system may distribute electricity to the plate pairs through a plurality of channels. A channel may be an electrical pathway for providing electricity to a single plate pair, or to a group or plurality of plate pairs. Accordingly, at least one plate pair may be associated with a channel; however in one or more examples of embodiments, a plurality of plate pairs may be associated with a channel.</p>
+      <p id="p-00037-en" num="0037">Each channel provided in the PECO system may be electrically isolated from the other channels of the PECO system. This allows for the plate pair or plurality of plate pairs associated with the channel to be electrically isolated from the plate pair(s) associated with the other channels.</p>
+      <p id="p-00038-en" num="0038">The PECO system may also include a circuit, a switch, a controller, a switcher board, a programmable logic controller (PLC), computer based controller, or other suitable controller or device for reversing the potential, bias, polarity and/or current applied to, between, or across the photoelectrode and counterelectrode of each plate pair associated with each channel. For various applications, including, for example hydraulic fracturing fluid or high-salinity applications, it may be desirable to reverse the potential, bias, polarity and/or current applied to or between the photoelectrode and the counterelectrode in order to clean or unfoul or remove fouling from the photoelectrode and/or counterelectrode, or to otherwise improve the performance of the photoelectrode, counterelectrode, or PECO device and/or PECO system. By reversing the potential, bias, polarity and/or current, the photoelectrode is changed from an anode into a cathode, and the counterelectrode is changed from a cathode into an anode. The reversing of potential, bias, polarity and/or current may be performed periodically, intermittently, or based upon a predetermined schedule.</p>
+      <p id="p-00039-en" num="0039">For example, initially positive voltage is electrically connected to a positive charge electrode and negative voltage is electrically connected to a negative charge electrode. After PECO operation for a first period of time, positive voltage is electrically connected to the negative charge electrode, and negative voltage is electrically connected to the positive charge electrode for a second period of time. After the second period of time, the positive voltage is electrically connected back to the positive charge electrode and the negative voltage is electrically connected back to the negative charge electrode. This reversal process may be repeated as necessary or desired.</p>
+      <p id="p-00040-en" num="0040">The length of the first period of time and the second period of time may be the same. In the alternative, in one or more examples of embodiments, the length of the first period of time and the second period of time are different. For example, the first period of time, which is the time associated with normal operation of the PECO system or device, is typically longer than the second period of time, which is the amount of time associated with polarity reversal operation of the PECO system or device.</p>
+      <p id="p-00041-en" num="0041">The length of the first and second periods of time depends on a variety of factors including, but not limited to, the type of aqueous solution being treated, the contaminants within the aqueous solution, the salinity of the aqueous solution, application of the PECO system, and/or the voltage applied to the plate pairs through the channels. For example, hydraulic fracturing fluid or high salinity fluid applications may require relatively more frequent reversal of potential, bias, polarity and/or current compared to fresh water applications. In one or more examples of embodiments, the lengths of the first period of time relative to the second period of time may preferably be in a ratio range of about 1:1 to 25:1, and more preferably may be in a ratio range of about 1:1 to 7:1. For example, in one or more examples of embodiments, the first period of time may be approximately 120 seconds, while the second period of time may be approximately 20 seconds. Fresh water applications may require relatively less frequent reversal of potential, bias, polarity and/or current, and the lengths of the first period of time relative to the second period of time may be in a ratio range of about 100:1 to 10:1. For example, in various embodiments, the first period of time may be approximately 60 minutes, while the second period of time may be in a range of about 1 minute to about 5 minutes.</p>
+      <p id="p-00042-en" num="0042">In one or more examples of embodiments, the voltage applied between the photoelectrode and counterelectrode may not change during the first period of time of normal potential and during the second period of time of reverse potential. For example, where the photoelectrode includes titanium and the apparatus and/or method are adapted for treatment of hydraulic fracturing or other high salinity aqueous solutions, the voltage applied during the first period of time may be less than about 9V, and more specifically may be about 7.5V, and the voltage applied during the second period of time may be less than about 9V, and more specifically may be about 7.5V. In one or more other examples of embodiments, for example where the photoelectrode includes titanium and the apparatus and/or method are adapted for treatment of fresh water, the voltage applied during the first period of time may be greater than about 9V, and more specifically may be about 12V, and the voltage applied during the second period of time may be greater than about 9V, and more specifically may be about 12V.</p>
+      <p id="p-00043-en" num="0043">Maintaining the voltage in the first period of time and the second period of time may help to unfoul or defoul or remove fouling from the photoelectrode to help make the photoelectrode more effective for removing contaminants through photoelectrocatalytic oxidation during the first period of time. However, maintaining the voltage under 9V in each period of time may cause a momentary disturbance in the removal of contaminants during the second period of time. Thus, it may be advantageous in certain applications to apply higher voltages, for example a voltage greater than about 9V, during the first period of time and second period of time. This may assist in minimizing any such disturbance in the removal of contaminants and/or to help cause electroprecipitation and/or electrocoagulation.</p>
+      <p id="p-00044-en" num="0044">The voltage may be adjusted to control the rate of dissolution of the electrode. For example, the voltage applied during the first period of time may be more than about 9V, and more specifically may be about 12V, and the voltage applied during the second period of time may be more than about 9V, and more specifically may be about 12V. Higher voltages may help optimize the effectiveness of the PECO device in certain ways. Higher voltages may also lead to electroprecipitation or electrocoagulation of contaminants within or from the fluid. However, such higher voltages may also lead to anodic dissolution such as pitting and other degradation of the photoelectrode and/or counterelectrode, which may necessitate more frequent servicing of the PECO device, including, but not limited to, replacement of the photoelectrode, the foil, and/or the counterelectrode.</p>
+      <p id="p-00045-en" num="0045">In one or more examples of embodiments, it may be advantageous to apply different voltages during the first time period than the second time period. For example, it may be advantageous to apply relatively lower voltages during the first period of time, and relatively higher voltages during the second period of time. This may assist in limiting any anodic dissolution, or pitting, or other degradation of the photoelectrode. For example, the voltage applied during the first period of time may be less than about 9V, and more specifically may be about 7.5V. The voltage applied during the second period of time may be more than about 9V, and more specifically may be in a range of about 12V to about 14V. For example, for hydraulic fracturing fluid or higher salinity applications, the voltage during the second time period may be about 12V, while for fresh water applications, the voltage during the second time period may be about 14V. In one or more examples of embodiments, during application of relatively lower voltage during the first period of time, contaminants are degraded, or the removal of contaminants is promoted, by photoelectrocatalytic oxidation, and during application of a relatively higher voltage during the second period of time, contaminants are degraded, or the removal of contaminants is promoted, by an electrochemical process such as electroprecipitation and/or electrocoagulation.</p>
+      <p id="p-00046-en" num="0046">In one or more examples of embodiments, during the second period of time, the counterelectrode or sacrificial electrode of titanium may be dissolved at least in part by anodic dissolution. It is believed that a range of coagulant species of hydroxides are formed, for example by electrolytic oxidation of the sacrificial counterelectrode, which hydroxides help destabilize and coagulate the suspended particles or precipitate and/or adsorb dissolved contaminants.</p>
+      <p id="p-00047-en" num="0047">In various embodiments, the main reaction occurring at the counterelectrodes or sacrificial electrodes during the second period of time of polarity reversal is dissolution:</p>
+      <p id="p-00048-en" num="0000">[in-line-formulae]TI<sub>(s)</sub>→Ti<sup>4+</sup>+4<i>e</i><sup>−</sup>[/in-line-formulae]</p>
+      <p id="p-00049-en" num="0000">In addition, water is electrolyzed at the counterelectrode (or sacrificial electrode) and photoelectrode:</p>
+      <p id="p-00050-en" num="0000">[in-line-formulae]2H<sub>2</sub>O+2<i>e</i><sup>−</sup>→H<sub>2(g)</sub>+2OH<sup>−</sup> (cathodic reaction)[/in-line-formulae]</p>
+      <p id="p-00051-en" num="0000">[in-line-formulae]2H<sub>2</sub>O→H<sup>+</sup>+O<sub>2(g)</sub>+4<i>e</i><sup>−</sup> (anodic reaction)[/in-line-formulae]</p>
+      <p id="p-00052-en" num="0000">In various embodiments, electrochemical reduction of metal cations (Me<sup>n+</sup>) occurs at the photoelectrode surface:</p>
+      <p id="p-00053-en" num="0000">[in-line-formulae]Me<sup>n+</sup><i>+ne</i><sup>−</sup><i>→n</i>Me<sup>o </sup>[/in-line-formulae]</p>
+      <p id="p-00054-en" num="0000">Higher oxidized metal compounds (e.g., Cr(VI)) may also be reduced (e.g. to Cr(III)) about the photoelectrode:</p>
+      <p id="p-00055-en" num="0000">[in-line-formulae]Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup>+6<i>e</i><sup>−</sup>+7H<sub>2</sub>O→2Cr<sup>3+</sup>+14OH<sup>−</sup>[/in-line-formulae]</p>
+      <p id="p-00056-en" num="0000">In various embodiments, hydroxide ions formed at the photoelectrode increase the pH of the solution which induces precipitation of metal ions as corresponding hydroxides and co-precipitation with metal (e.g. Ti) hydroxides:</p>
+      <p id="p-00057-en" num="0000">[in-line-formulae]Me<sup>n+</sup><i>+n</i>OH<sup>−</sup>→Me(OH)<sub>n(s) </sub>[/in-line-formulae]</p>
+      <p id="p-00058-en" num="0000">In addition, anodic metal ions and hydroxide ions generated react in the solution to form various hydroxides and built up polymers:</p>
+      <p id="p-00059-en" num="0000">[in-line-formulae]Ti<sup>4+</sup>+4OH→Ti(OH)<sub>4(s) </sub>[/in-line-formulae]</p>
+      <p id="p-00060-en" num="0000">[in-line-formulae]<i>n</i>Ti(OH)<sub>4(s)</sub><sup>−</sup>→Ti<sub>n</sub>(OH)<sub>4n(s) </sub>[/in-line-formulae]</p>
+      <p id="p-00061-en" num="0000">However, depending on the pH of the solution other ionic species may also be present. The suspended titanium hydroxides can help remove pollutants from the solution by sorption, co-precipitation or electrostatic attraction, and coagulation.</p>
+      <p id="p-00062-en" num="0048">For a particular electrical current flow in an electrolytic cell, the mass of metal (e.g. Ti) theoretically dissolved from the counterelectrode or sacrificial electrode is quantified by Faraday's law.</p>
+      <p id="p-00063-en" num="0000">
+        <maths id="maths-00001-en" num="00001">
+          <math overflow="scroll">
+            <mrow>
+              <mi>m</mi>
+              <mo>=</mo>
+              <mfrac>
+                <mi>ItM</mi>
+                <mi>zF</mi>
+              </mfrac>
+            </mrow>
+          </math>
+          <img id="img-00001-en" wi="N/A" he="N/A" file="US20150246829A1_00005.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150246829A1-20150903-M00001.TIF" />
+        </maths>
+      </p>
+      <p id="p-00064-en" num="0000">where m is the amount of counterelectrode or sacrificial electrode material dissolved (g), I the current (A), t the electrolysis time (s), M the specific molecular weight (g mol<sup>−1</sup>), z the number of electrons involved in the reaction and F is the Faraday's constant (96485.34 As mol<sup>−1</sup>). The mass of evolved hydrogen and formed hydroxyl ions may also be calculated.</p>
+      <p id="p-00065-en" num="0049">In one or more examples of embodiments, it may be advantageous to apply relatively higher voltages during the first period of time, and relatively lower voltages during the second period of time. This may assist in limiting any anodic dissolution, or pitting, or other degradation of the photoelectrode. For example, the voltage applied during the first period of time may in a range of about 6V to 12V, and more specifically may be about 7.5V. The voltage applied during the second period of time may be in a range of about 0.6V to 12V. For example, during application of relatively higher voltage during the first period of time, contaminants are degraded, or the removal of contaminants is promoted, by photoelectrocatalytic oxidation, and during application of a relatively lower voltage during the second period of time, contaminants are degraded, or the removal of contaminants is promoted, by and electrochemical process such electroprecipitation or electrocoagulation.</p>
+      <p id="p-00066-en" num="0050">In various embodiments, during the second period of time, an aluminum counterelectrode or sacrificial electrode is dissolved at least in part by anodic dissolution. It is believed that a range of coagulant species of hydroxides are formed (e.g., by electrolytic oxidation of the sacrificial counterelectrode), which hydroxides help destabilize and coagulate the suspended particles or precipitate and/or adsorb dissolved contaminants.</p>
+      <p id="p-00067-en" num="0051">In various embodiments, the main reaction occurring at the counterelectrodes or sacrificial electrodes during the second period of time (e.g., during polarity reversal) is dissolution:</p>
+      <p id="p-00068-en" num="0000">[in-line-formulae]Al<sub>(s)</sub>→Al<sup>3+</sup>+3<i>e</i><sup>−</sup>[/in-line-formulae]</p>
+      <p id="p-00069-en" num="0000">Additionally, water is electrolyzed at the counterelectrode (or sacrificial electrode) and photoelectrode:</p>
+      <p id="p-00070-en" num="0000">[in-line-formulae]2H<sub>2</sub>O+2<i>e</i><sup>−</sup>→H<sub>2(g)</sub>+2OH<sup>−</sup> (cathodic reaction)[/in-line-formulae]</p>
+      <p id="p-00071-en" num="0000">[in-line-formulae]2H<sub>2</sub>O→4H<sup>+</sup>+O<sub>2(g)</sub>+4<i>e</i><sup>−</sup> (anodic reaction)[/in-line-formulae]</p>
+      <p id="p-00072-en" num="0000">In various embodiments, electrochemical reduction of metal cations (Me<sup>n+</sup>) occurs at the photoelectrode surface:</p>
+      <p id="p-00073-en" num="0000">[in-line-formulae]Me<sup>n+</sup><i>+ne</i><sup>−</sup><i>→n</i>Me<sup>o </sup>[/in-line-formulae]</p>
+      <p id="p-00074-en" num="0000">Higher oxidized metal compounds (e.g., Cr(VI)) may also be reduced (e.g. to Cr(III)) about the photoelectrode:</p>
+      <p id="p-00075-en" num="0000">[in-line-formulae]Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup>+6e<sup>−</sup>+7H<sub>2</sub>O→2Cr<sup>3+</sup>+14OH<sup>−</sup>[/in-line-formulae]</p>
+      <p id="p-00076-en" num="0000">In various embodiments, hydroxide ions formed at the photoelectrode increase the pH of the solution which induces precipitation of metal ions as corresponding hydroxides and co-precipitation with metal (e.g., Al) hydroxides:</p>
+      <p id="p-00077-en" num="0000">[in-line-formulae]Me<sup>n+</sup><i>+n</i>OH<sup>−</sup>→Me(OH)<sub>n(s) </sub>[/in-line-formulae]</p>
+      <p id="p-00078-en" num="0000">In addition, anodic metal ions and hydroxide ions generated react in the solution to form various hydroxides and built up polymers:</p>
+      <p id="p-00079-en" num="0000">[in-line-formulae]Al<sup>3+</sup>+3OH<sup>−</sup>→Al(OH)<sub>3(s) </sub>[/in-line-formulae]</p>
+      <p id="p-00080-en" num="0000">[in-line-formulae]<i>n</i>Al(OH)<sub>3(s)</sub><sup>−</sup>→Al<sub>n</sub>(OH)<sub>3n(s) </sub>[/in-line-formulae]</p>
+      <p id="p-00081-en" num="0000">However, depending on the pH of the solution other ionic species, such as dissolved Al(OH)<sup>2+</sup>, Al<sub>2</sub>(OH)<sub>2</sub><sup>4+</sup> and Al(OH)<sub>4</sub><sup>−</sup> hydroxo complexes may also be present. The suspended aluminum hydroxides can help remove pollutants from the solution by sorption, co-precipitation or electrostatic attraction, and coagulation.</p>
+      <p id="p-00082-en" num="0052">For a particular electrical current flow in an electrolytic cell, the mass of metal (e.g. Al) theoretically dissolved from the counterelectrode or sacrificial electrode is quantified by Faraday's law.</p>
+      <p id="p-00083-en" num="0000">
+        <maths id="maths-00002-en" num="00002">
+          <math overflow="scroll">
+            <mrow>
+              <mi>m</mi>
+              <mo>=</mo>
+              <mfrac>
+                <mi>ItM</mi>
+                <mi>zF</mi>
+              </mfrac>
+            </mrow>
+          </math>
+          <img id="img-00002-en" wi="N/A" he="N/A" file="US20150246829A1_00006.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150246829A1-20150903-M00002.TIF" />
+        </maths>
+      </p>
+      <p id="p-00084-en" num="0000">where m is the amount of counterelectrode or sacrificial electrode material dissolved (g), I the current (A), t the electrolysis time (s), M the specific molecular weight (g mol<sup>−1</sup>), z the number of electrons involved in the reaction and F is the Faraday's constant (96485.34 As mol<sup>−1</sup>). The mass of evolved hydrogen and formed hydroxyl ions may also be calculated.</p>
+      <p id="p-00085-en" num="0053">The foregoing presents one or more examples of embodiments of a PECO device and/or system. PECO system may include one or more embodiments of a polarity reversal system or program or application <b>200</b>, <b>300</b>. Polarity reversal program <b>200</b>, <b>300</b> may be provided on a machine-readable or computer-readable medium or electronically readable storage medium which is in operable communication with the PECO system. Polarity reversal program <b>200</b>, <b>300</b> may be prepared or written in any suitable programming language which enables communication with and/or control of certain elements of the PECO system as described herein. The steps recited in association with polarity reversal program <b>200</b>, <b>300</b> may reside or be stored as one or more instructions or program parameters which may be executable by polarity reversal program <b>200</b>, <b>300</b> and/or the PECO system. In one or more examples of embodiments, the electronically readable storage medium may include any data storage device which can store data that can be thereafter read by an electronic or computer system. Examples of electronically readable storage medium may include, but is not limited to, a computer hard drive, non-volatile memory, read-only memory, CD-ROM, CD-R, CD-RW, DVD, DVD-RW, magnetic tapes, Universal Serial Bus (USB) flash drive, or any other suitable data storage device.</p>
+      <p id="p-00086-en" num="0054">Referring to <figref>FIGS. 3 and 4</figref>, the respective polarity reversal program <b>200</b>, <b>300</b> includes a series of steps or processing instructions which are depicted in flow chart or flow diagram form. Polarity reversal program <b>200</b>, <b>300</b> may be implemented on a controller in association with the PECO system, for example, but not limited to, a programmable logic controller.</p>
+      <p id="p-00087-en" num="0055">Referring now to <figref>FIG. 3</figref>, polarity reversal program <b>200</b> is provided. At step <b>202</b>, operation of polarity reversal program <b>200</b> initiates in association with initiation of operation of the PECO system. During initiation of the PECO system, each of the plate pairs will begin operating in their respective normal manner with normal electrical current bias or polarity. For example, the plate pairs will operate in accordance with the present disclosure.</p>
+      <p id="p-00088-en" num="0056">Next at step <b>204</b>, a counter, Counter <b>1</b> or first counter, may be reset to an initial value. Counter <b>1</b> represents a counter for identifying each channel within polarity reversal program <b>200</b>. More specifically, the plate pairs of the PECO system may be divided into a number of channels, N. Each channel may be associated with a single plate pair, or a plurality of plate pairs. Each channel also provides power to the associated plate pair or plurality of plate pairs for the associated polarity or bias. The PECO system may have N number of channels, where N is a preprogrammed integer or constant corresponding to the total number of channels provided in the PECO system. Counter <b>1</b> may be used to systematically progress through each of the channels of the PECO system, as each channel will have a preprogrammed assigned number (i.e. the first channel will be identified as Channel <b>1</b>, the second channel will be identified as Channel <b>2</b>, up to the Nth channel which will be identified as Channel N). As illustrated in <figref>FIG. 3</figref>, Counter <b>1</b> may be a “count-up” counter. Accordingly, Counter <b>1</b> may be reset to zero at step <b>204</b>. In one or more examples of embodiments, Counter <b>1</b> may be a “count-down” counter which is reset to the preprogrammed number of channels N at step <b>204</b>. In one or more examples of embodiments, preprogrammed integer or constant N may be greater than the number of channels actually provided in the PECO system. In such an arrangement, the additional channels provided in the constant N are treated as phantom or virtual channels. This allows program <b>200</b> to operate a cycle while all of the channels with one or more plate pairs associated therewith operate normally, or with polarity in a standard, non-reversed position.</p>
+      <p id="p-00089-en" num="0057">At step <b>206</b>, the channel number stored or held in Counter <b>1</b> may be increased or incremented by a first channel increment or value. A desired or predetermined first channel increment may be the integer “one,” or any other unit which may be used to correspond to the preprogrammed channels. When increased or incremented, the new value is stored in Counter <b>1</b>. In one or more examples of embodiments, Counter <b>1</b> may be decreased or decremented by a desired first channel increment in association with a “count-down” counter.</p>
+      <p id="p-00090-en" num="0058">Next, at step <b>208</b>, program <b>200</b> determines if the current channel number stored in Counter <b>1</b>, and which was previously adjusted at step <b>206</b>, is greater than the preset or preprogrammed number of channels N provided in the PECO System. This determination ascertains whether program <b>200</b> has cycled through all of the channels.</p>
+      <p id="p-00091-en" num="0059">If the determination at step <b>208</b> is “no,” the current channel number stored in Counter <b>1</b> is not greater than N, program <b>200</b> moves to step <b>210</b> to identify the channel which corresponds to the value stored in Counter <b>1</b>.</p>
+      <p id="p-00092-en" num="0060">At step <b>210</b>, program <b>200</b> identifies the channel which corresponds to the value presently stored in Counter <b>1</b>. As indicated, each channel of the PECO system will be pre-assigned an identifier, such as a number. The identifiers are preferably integers and spaced to correspond with the first channel increment. For example, if a PECO system has six channels, each channel may be assigned a respective, individual identifier corresponding to 1 though 6, with the first channel increment being “1.” Program <b>200</b> will be able to determine which channel is associated with each associated identifier. It should be appreciated that the number of identifiers needed for the channels will correspond with N number of channels.</p>
+      <p id="p-00093-en" num="0061">At step <b>212</b>, a first timer, Timer <b>1</b>, may be reset to an initial time period value. Timer <b>1</b> represents the reverse polarity timer for a channel. More specifically, Timer <b>1</b> may represent the measured length of time in which a channel operates with polarity reversed. Timer <b>1</b> may be used to ensure a preset or predetermined amount of time passes in which the channel operates with polarity reversed. As illustrated in <figref>FIG. 3</figref>, Timer <b>1</b> may be a “count-up” timer. Accordingly, Timer <b>1</b> may be reset to zero at step <b>212</b>. In one or more examples of embodiments, Timer <b>1</b> may be a “count-down” timer which is reset to a predetermined amount of time at step <b>212</b>.</p>
+      <p id="p-00094-en" num="0062">At step <b>214</b>, the polarity or current applied to the channel identified in step <b>210</b> and associated with the value stored in Counter <b>1</b> is reversed. As such, the anode/photoanode of the plate pair or plurality of plate pairs of the channel acts a cathode, and the cathode/counterelectrode of the plate pair or plurality of plate pairs of the channel acts as an anode. During this period of reversed polarity, the plate pair or plurality of plate pairs of the channel advantageously has fouling or scale removed or released.</p>
+      <p id="p-00095-en" num="0063">At step <b>216</b>, program <b>200</b> determines if the current time period value stored in Timer <b>1</b> is greater than a first predetermined time period or first time period, Variable <b>1</b> or “R.” The first predetermined time period stored in Variable <b>1</b> or R is a predetermined or preprogrammed amount of time in which the plate pairs should operate with polarity reversed. It should be appreciated that Variable <b>1</b> or R may be a preset amount of time or a predetermined amount of time. In addition, the amount of time preset, entered, and/or stored as Variable <b>1</b> or R may be entered by the manufacturer or by a user. In one or more examples of embodiments, program <b>200</b> determines if Timer <b>1</b> is less than zero in association with a “count-down” timer.</p>
+      <p id="p-00096-en" num="0064">If the determination at step <b>216</b> is “no,” the current time period value stored in Timer <b>1</b> is not greater than Variable <b>1</b>, program <b>200</b> moves to step <b>218</b>.</p>
+      <p id="p-00097-en" num="0065">At step <b>218</b>, the current time period stored or held in Timer <b>1</b> may be increased or incremented by a desired first time increment. A desired first time increment may be one second, thirty seconds, one minute, or any desired amount of second and/or minutes. In one or more examples of embodiments, Timer <b>1</b> may be decreased or decremented by a desired first time increment in association with a “count-down” timer. Program <b>200</b> will then return to and repeat step <b>216</b>. Steps <b>216</b> and <b>218</b> subsequently repeat until the determination at step <b>216</b> is “yes.”</p>
+      <p id="p-00098-en" num="0066">If the determination at step <b>216</b> is “yes,” the current time value stored in Timer <b>1</b> is greater than Variable <b>1</b>, program <b>200</b> moves to step <b>220</b>. In one or more examples of embodiments in association with a “count-down” timer, the “no” determination at Step <b>216</b> occurs when Timer <b>1</b> is greater than zero, while the “yes” determination occurs when Timer <b>1</b> is not greater than zero.</p>
+      <p id="p-00099-en" num="0067">At step <b>220</b>, program <b>200</b> terminates the period of reversed polarity for the channel identified in step <b>210</b>. As such, program <b>200</b> effectively reverses the polarity or bias a second time. The anode/photoanode of the plate pair or plurality of plate pairs of the channel returns to operate as an anode/photoanode, and the cathode/counterelectrode of the plate pair or plurality of plate pairs of the channel returns to operate as a cathode/counterelectrode.</p>
+      <p id="p-00100-en" num="0068">Program <b>200</b> then returns to Step <b>206</b>, and the process repeats, with the value stored in Counter <b>1</b> increasing or incrementing by the first channel increment. Steps <b>206</b> to <b>220</b> shall repeat until the determination at step <b>208</b> is “yes,” the current channel number stored in Counter <b>1</b> is greater than N, the preprogrammed integer corresponding to the total number of channels in the PECO system.</p>
+      <p id="p-00101-en" num="0069">Once Counter <b>1</b> is greater than N, this means the polarity of all channels has been systematically reversed, and the entire process of switching polarity in each channel should be repeated. As such, program <b>200</b> will move back to step <b>204</b>, resetting Counter <b>1</b>, and the steps <b>204</b> to <b>220</b> will repeat in accordance with the disclosure provided herein. Program <b>200</b> will continue to systematically execute steps <b>204</b> to <b>220</b> in accordance with the disclosure herein to systematically reverse the polarity of the channels until the PECO system is deactivated or program <b>200</b> is terminated.</p>
+      <p id="p-00102-en" num="0070">To further illustrate operation and use of program <b>200</b>, the following provides an example of certain operational scenarios using certain system conditions. The scenarios and associated system conditions are provided as an example, and should not be construed as limiting in any way. Any number or combination of system conditions may be realized in association with a PECO system and associated program <b>200</b>.</p>
+      <p id="p-00103-en" num="0071">As an example of operation of program <b>200</b>, the system may have the following hypothetical system conditions: all timers will be “count-up” timers, the counter initial value will be zero (0), the first channel increment will be one (1), the number of channels of PECO system N will be six (6), the initial time period value of Timer <b>1</b> will be zero (0), Variable <b>1</b> will be twenty (20) seconds, and the first time increment will be one (1) second.</p>
+      <p id="p-00104-en" num="0072">At step <b>202</b>, Polarity reversal program <b>200</b> will initiate in association with operation of the PECO system. Next, at step <b>204</b>, Counter <b>1</b> or first counter will be reset to zero, the counter initial value. At step <b>206</b>, Counter <b>1</b> will be increased by the first channel increment. Accordingly, Counter <b>1</b> will be increased to one (1).</p>
+      <p id="p-00105-en" num="0073">Next, at step <b>208</b>, program <b>200</b> will determine if Counter <b>1</b> is greater than six (6), the number of preset channels of PECO system stored in “N.” Since the answer will be no, program <b>200</b> will proceed to step <b>210</b>. At step <b>210</b>, the channel associated with the value stored in Counter <b>1</b> will be identified. Since Counter <b>1</b> has the number one (1) stored in it, program <b>200</b> will identify “Channel <b>1</b>.” Next, at step <b>212</b>, Timer <b>1</b> or the first timer will be reset to the initial time period value of zero. At step <b>214</b>, the polarity will be reversed in the plate pair or plurality of plate pairs associated with “Channel <b>1</b>.”</p>
+      <p id="p-00106-en" num="0074">Next, at step <b>216</b>, program <b>200</b> will determine if the value in Timer <b>1</b> is greater than Variable <b>1</b>, which is twenty (20) seconds. Since Timer <b>1</b> is zero (0), Timer <b>1</b> is not greater than Variable <b>1</b>, and program <b>200</b> moves to step <b>218</b>.</p>
+      <p id="p-00107-en" num="0075">At step <b>218</b>, Timer <b>1</b> is increased by the first time increment, which is one (1) second. Program <b>200</b> will then return to step <b>216</b>. Steps <b>216</b> and <b>218</b> repeat until the value stored in Timer <b>1</b> is greater than Variable <b>1</b>, meaning Timer <b>1</b> is greater than twenty (20) seconds.</p>
+      <p id="p-00108-en" num="0076">Once Timer <b>1</b> is greater than twenty (20) seconds, program <b>200</b> moves to step <b>220</b> where the polarity provided to the plate pair or plurality of plate pairs associated with “Channel <b>1</b>” is reversed back to the original polarity. Program <b>200</b> will then move to step <b>206</b>.</p>
+      <p id="p-00109-en" num="0077">At step <b>206</b>, Counter <b>1</b> will again be increased by increased by the first channel increment. Accordingly, Counter <b>1</b> will now be increased to two (2).</p>
+      <p id="p-00110-en" num="0078">Next, at step <b>208</b>, program <b>200</b> will determine if Counter <b>1</b> is greater than six (6), the number of preset channels of PECO system stored in “N.” Since the answer will be no, program <b>200</b> will proceed to step <b>210</b>. At step <b>210</b>, the channel associated with the value stored in Counter <b>1</b> will be identified. Since Counter <b>1</b> now has the number two (2) stored in it, program <b>200</b> will identify “Channel <b>2</b>.” Next, at step <b>212</b>, Timer <b>1</b> or the first timer will be reset to the initial time period value of zero. At step <b>214</b>, the polarity will be reversed in the plate pair or plurality of plate pairs associated with “Channel <b>2</b>.” Next, steps <b>216</b> and <b>218</b> will repeat until Timer <b>1</b> exceeds Variable <b>1</b>, meaning Timer <b>1</b> is greater than twenty (20) seconds.</p>
+      <p id="p-00111-en" num="0079">Once Timer <b>1</b> is greater than twenty (20) seconds, program <b>200</b> moves to step <b>220</b> where the polarity provided to the plate pair or plurality of plate pairs associated with “Channel <b>2</b>” is reversed back to the original polarity. Program <b>200</b> will then move to step <b>206</b>.</p>
+      <p id="p-00112-en" num="0080">This process will repeat until Counter <b>1</b> is greater than the number of preset channels of PECO system stored in “N.” Accordingly, this process will repeat for all six (6) of the channels associated with the PECO system. Once Counter <b>1</b> reaches seven at step <b>206</b>, program <b>200</b> will determine that Counter <b>1</b> does exceed the number of preset channels of PECO system stored in “N” at step <b>208</b>. Program <b>200</b> will then move back to step <b>204</b>, Counter <b>1</b> will be reset to zero, the counter initial value, and the entire process will repeat. This will systematically provide for the reversal of polarity for each channel associated with the PECO system.</p>
+      <p id="p-00113-en" num="0081">Referring now to <figref>FIG. 4</figref>, polarity reversal program <b>300</b> is provided. At step <b>302</b>, operation of polarity reversal program <b>300</b> initiates in association with initiation of operation of the PECO system. During initiation of the PECO system, each of the plate pairs will begin operating in their respective normal manner with normal electrical current bias or polarity. For example, the plate pairs will operate in accordance with the present disclosure.</p>
+      <p id="p-00114-en" num="0082">Next at step <b>304</b>, a counter, Counter <b>1</b> or first counter, may be reset to an initial value. Counter <b>1</b> represents a counter for identifying each channel within polarity reversal program <b>300</b>. More specifically, the plate pairs of the PECO system may be divided into a number of channels, N. Each channel may be associated with a single plate pair, or a plurality of plate pairs. Each channel also provides power to the associated plate pair or plurality of plate pairs for the associated polarity or bias. The PECO system may have N number of channels, where N is a preprogrammed integer or constant corresponding to the total number of channels provided in the PECO system. Counter <b>1</b> may be used to systematically progress through each of the channels of the PECO system, as each channel will have a preprogrammed assigned number (i.e. the first channel will be identified as Channel <b>1</b>, the second channel will be identified as Channel <b>2</b>, up to the Nth channel which will be identified as Channel N). As illustrated in <figref>FIG. 4</figref>, Counter <b>1</b> may be a “count-up” counter. Accordingly, Counter <b>1</b> may be reset to zero at step <b>304</b>. In one or more examples of embodiments, Counter <b>1</b> may be a “count-down” counter which is reset to the preprogrammed number of channels N at step <b>304</b>.</p>
+      <p id="p-00115-en" num="0083">At step <b>306</b>, a first timer, Timer <b>1</b>, may be reset to an initial time period value. Timer <b>1</b> represents the timer measuring the total operational cycle or cycle timer of program <b>300</b>. More specifically, Timer <b>1</b> represents the total measured length of time in which all of the channels provided in the PECO system have had an opportunity to operate with the polarity reversed. As illustrated in <figref>FIG. 4</figref>, Timer <b>1</b> may be a “count-up” timer. Accordingly, Timer <b>1</b> may be reset to zero at step <b>306</b>. In one or more examples of embodiments, Timer <b>1</b> may be a “count-down” timer which is reset to a predetermined amount of time at step <b>306</b>.</p>
+      <p id="p-00116-en" num="0084">Next, at step <b>310</b>, program <b>300</b> determines if the current time period for the cycle timer stored in Timer <b>1</b> is greater than a first predetermined cycle time period or first time period, Variable <b>1</b>. The first predetermined cycle time period stored in Variable <b>1</b> may be a predetermined or preprogrammed amount of time, or may be a calculated amount of time. In either case, the first predetermined cycle time period stored in Variable <b>1</b> must be equal to, greater than, or not less than the predetermined or preprogrammed amount of time in which each channel should operate with polarity reversed (stored in Variable <b>2</b> or R) multiplied by the number of channels provided in the PECO assembly (stored in Variable N). Stated otherwise, the formula to calculate the minimum amount of time for the value of Variable <b>1</b> would be “R×N” or “Variable <b>2</b>×N.” In one or more examples of embodiments, program <b>300</b> determines if Timer <b>1</b> is less than zero in association with a “count-down” timer.</p>
+      <p id="p-00117-en" num="0085">At step <b>312</b>, the channel number stored or held in Counter <b>1</b> may be increased or incremented by a first channel increment or value. A desired or predetermined first channel increment may be the integer “one,” or any other unit which may be used to correspond to the preprogrammed channels. When increased or incremented, the new value is stored in Counter <b>1</b>. In one or more examples of embodiments, Counter <b>1</b> may be decreased or decremented by a desired first channel increment in association with a “count-down” counter.</p>
+      <p id="p-00118-en" num="0086">Next, at step <b>314</b>, program <b>300</b> determines if the channel number stored in Counter <b>1</b>, and which was previously adjusted at step <b>312</b>, is greater than the preset or preprogrammed number of channels N provided in the PECO System. This determination ascertains whether program <b>300</b> has cycled through all of the channels.</p>
+      <p id="p-00119-en" num="0087">If the determination at step <b>314</b> is “no,” the current channel number stored in Counter <b>1</b> is not greater than N, program <b>300</b> moves to step <b>316</b> to identify the channel which corresponds to the value stored in Counter <b>1</b>.</p>
+      <p id="p-00120-en" num="0088">At step <b>316</b>, program <b>300</b> identifies the channel which corresponds to the value presently stored in Counter <b>1</b>. As indicated, each channel of the PECO system will be pre-assigned an identifier, such as a number. The identifiers are preferably integers and spaced to correspond with the first channel increment. For example, if a PECO system has eight channels, each channel may be assigned a respective, individual identifier corresponding to 1 though 8, with the first channel increment being “1.” Program <b>300</b> will be able to determine which channel is associated with each associated identifier. It should be appreciated that the number of identifiers needed for the channels will correspond with N number of channels. In addition, the individual identifiers may be randomly or strategically assigned to each channel as long as each channel only has one identifier.</p>
+      <p id="p-00121-en" num="0089">At step <b>318</b>, a second timer, Timer <b>2</b>, may be reset to an initial time period value. Timer <b>2</b> represents the reverse polarity timer for a channel. More specifically, Timer <b>2</b> may represent the measured length of time in which a channel operates with polarity reversed. Timer <b>2</b> may be used to ensure a preset or predetermined amount of time passes in which the channel operates with polarity reversed. As illustrated in <figref>FIG. 4</figref>, Timer <b>2</b> may be a “count-up” timer. Accordingly, Timer <b>2</b> may be reset to zero at step <b>318</b>. In one or more examples of embodiments, Timer <b>2</b> may be a “count-down” timer which is reset to a predetermined amount of time at step <b>318</b>.</p>
+      <p id="p-00122-en" num="0090">At step <b>320</b>, the polarity or current applied to the channel identified in step <b>316</b> and associated with the value stored in Counter <b>1</b> is reversed. As such, the anode/photoanode of the plate pair or plurality of plate pairs of the channel acts a cathode, and the cathode/counterelectrode of the plate pair or plurality of plate pairs of the channel acts as an anode. During this period of reversed polarity, the plate pair or plurality of plate pairs of the channel advantageously has fouling or scale removed or released.</p>
+      <p id="p-00123-en" num="0091">At step <b>322</b>, program <b>300</b> determines if the current time period value stored in Timer <b>2</b> is greater than a second predetermined time period, Variable <b>2</b> or “R.” The second predetermined time period stored in Variable <b>2</b> or R is a predetermined or preprogrammed amount of time in which the plate pairs should operate with polarity reversed. It should be appreciated that Variable <b>2</b> or R may be a preset amount of time or a predetermined amount of time. In addition, the amount of time preset, entered, and/or stored as Variable <b>2</b> or R may be entered by the manufacturer or by a user. In one or more examples of embodiments, program <b>300</b> determines if Timer <b>2</b> is less than zero in association with a “count-down” timer.</p>
+      <p id="p-00124-en" num="0092">If the determination at step <b>322</b> is “no,” the current time period value stored in Timer <b>2</b> is not greater than Variable <b>2</b>, program <b>300</b> moves to step <b>324</b>.</p>
+      <p id="p-00125-en" num="0093">At step <b>324</b>, the current time period stored or held in Timer <b>2</b> may be increased or incremented by a desired second time increment. A desired second time increment may be one second, thirty seconds, one minute, or any desired amount of second and/or minutes. In one or more examples of embodiments, Timer <b>2</b> may be decreased or decremented by a desired second time increment in association with a “count-down” timer. Program <b>300</b> will then return to and repeat step <b>322</b>. Steps <b>322</b> and <b>324</b> subsequently repeat until the determination at step <b>322</b> is “yes.”</p>
+      <p id="p-00126-en" num="0094">If the determination at step <b>322</b> is “yes,” the current time value stored in Timer <b>2</b> is greater than Variable <b>2</b>, program <b>300</b> moves to step <b>326</b>. In one or more examples of embodiments in association with a “count-down” timer, the “no” determination at Step <b>322</b> occurs when Timer <b>2</b> is greater than zero, while the “yes” determination occurs when Timer <b>2</b> is not greater than zero.</p>
+      <p id="p-00127-en" num="0095">At step <b>326</b>, program <b>300</b> terminates the period of reversed polarity for the channel identified in step <b>316</b>. As such, program <b>300</b> effectively reverses the polarity or bias a second time. The anode/photoanode of the plate pair or plurality of plate pairs of the channel returns to operate as an anode/photoanode, and the cathode/counterelectrode of the plate pair or plurality of plate pairs of the channel returns to operate as a cathode/counterelectrode.</p>
+      <p id="p-00128-en" num="0096">Next, at step <b>328</b> the value stored in Timer <b>2</b> may be added to the value stored in Timer <b>1</b>. The combined value may be stored in Timer <b>1</b>. It should be appreciated in one or more examples of embodiments, that step <b>328</b> is optional. In the alternative, following step <b>306</b>, the cycle time timer, Timer <b>1</b>, may operate in the background and concurrently as Steps <b>312</b> to <b>326</b> are being implemented. In such an arrangement, Timer <b>1</b> may be a count-up or a count-down timer which tracks the total cycle time of program <b>300</b> independently of Timer <b>2</b>.</p>
+      <p id="p-00129-en" num="0097">Program <b>300</b> then returns to Step <b>310</b>, and steps <b>310</b> to <b>328</b> repeat until the determination at step <b>310</b> is “yes,” value stored in Timer <b>1</b> is greater than the first predetermined cycle time period stored in Variable <b>1</b>. Once Timer <b>1</b> is greater than Variable <b>1</b>, this means the cycle time period has completed, and another cycle time period should be initiated. As such, program <b>300</b> will move back to step <b>304</b>, resetting Counter <b>1</b> and Timer <b>1</b>, and steps <b>310</b> to <b>328</b> will repeat in accordance with the disclosure provided herein. Program <b>300</b> will continue to systematically execute steps <b>304</b> to <b>328</b> in accordance with the disclosure herein to systematically reverse the polarity of the channels until the PECO system is deactivated or program <b>300</b> is terminated.</p>
+      <p id="p-00130-en" num="0098">It should be appreciated in situations where the first predetermined cycle time period stored in Variable <b>1</b> exceeds the minimum amount of time for a cycle time, which is calculated through the formula “Variable <b>2</b>×N.” In this situation, when the Counter <b>1</b> is greater than N, the polarity of all channels of the PECO system has been systematically reversed. Program <b>300</b> will move from step <b>314</b> to step <b>315</b>, where Timer <b>1</b> may be increased or incremented by a desired first time increment. A desired first time increment may be one second, thirty seconds, one minute, or any desired amount of second and/or minutes. In one or more examples of embodiments, Timer <b>1</b> may be decreased or decremented by a desired second time increment in association with a “count-down” timer. Program <b>300</b> will then move to step <b>310</b>, cycling between steps <b>310</b>, <b>312</b>, <b>314</b>, and <b>315</b> until the determination at step <b>310</b> is “yes.”</p>
+      <p id="p-00131-en" num="0099">To further illustrate operation and use of program <b>300</b>, the following provides an example of certain operational scenarios using certain system conditions. The scenarios and associated system conditions are provided as an example, and should not be construed as limiting in any way. Any number or combination of system conditions may be realized in association with a PECO system and associated program <b>300</b>.</p>
+      <p id="p-00132-en" num="0100">As an example of operation of program <b>300</b>, the system may have the following hypothetical system conditions: all timers will be “count-up” timers, the counter initial value will be zero (0), the cycle timer initial value will be zero (0), Variable <b>1</b> will one hundred eighty (180) seconds, the first channel increment will be one (1), the number of channels of PECO system N will be eight (8), the first time increment will be one (1) second, the initial time period value of Timer <b>2</b> will be zero (0), Variable <b>2</b> will be twenty (20) seconds, and the second time increment will be one (1) second.</p>
+      <p id="p-00133-en" num="0101">At step <b>302</b>, Polarity reversal program <b>300</b> will initiate in association with operation of the PECO system. Next, at step <b>304</b>, Counter <b>1</b> or first counter or channel counter will be reset to zero, the counter initial value. At step <b>306</b>, Timer <b>1</b> or the first timer will be reset to the initial time period value of zero. Next, at step <b>310</b> program <b>300</b> will determine if the value in Timer <b>1</b> is greater than Variable <b>1</b>, which is one hundred eighty (180) seconds. Since Timer <b>1</b> is “zero,” Timer <b>1</b> is not greater than Variable <b>1</b>, and program <b>300</b> moves to step <b>312</b>.</p>
+      <p id="p-00134-en" num="0102">At step <b>312</b>, Counter <b>1</b> will be increased by the first channel increment of one. Accordingly, Counter <b>1</b> will be increased to one (1). Next, at step <b>314</b>, program <b>300</b> will determine if Counter <b>1</b> is greater than eight (8), the number of preset channels of PECO system stored in “N.” Since the answer will be no, program <b>300</b> will proceed to step <b>316</b>. At step <b>316</b>, the channel associated with the value stored in Counter <b>1</b> will be identified. Since Counter <b>1</b> has the number one (1) stored in it, program <b>300</b> will identify “Channel <b>1</b>.” Next, at step <b>318</b>, Timer <b>2</b> or the second timer will be reset to the initial time period value of zero. At step <b>320</b>, the polarity will be reversed in the plate pair or plurality of plate pairs associated with “Channel <b>1</b>.”</p>
+      <p id="p-00135-en" num="0103">Next, at step <b>322</b>, program <b>300</b> will determine if the value in Timer <b>2</b> is greater than Variable <b>2</b>, which is twenty (20) seconds. Since Timer <b>2</b> is “zero,” Timer <b>2</b> is not greater than Variable <b>2</b>, and program <b>300</b> moves to step <b>324</b>.</p>
+      <p id="p-00136-en" num="0104">At step <b>324</b>, Timer <b>2</b> is increased by the second time increment, which is one (1) second. Program <b>300</b> will return to step <b>322</b>. Steps <b>322</b> and <b>324</b> repeat until the value stored in Timer <b>2</b> is greater than Variable <b>2</b>, meaning Timer <b>2</b> is greater than twenty (20) seconds.</p>
+      <p id="p-00137-en" num="0105">Once Timer <b>2</b> is greater than twenty (20) seconds, program <b>300</b> moves to step <b>326</b> where the polarity provided to the plate pair or plurality of plate pairs associated with “Channel <b>1</b>” is reversed back to the original polarity. Program <b>300</b> will then move to step <b>328</b>. At step <b>328</b>, the amount of time stored in Timer <b>2</b>, which is twenty (20) seconds, is added to the amount of time stored in Timer <b>1</b>, which is zero (0) seconds. This total is then stored in Timer <b>1</b>. Accordingly, Timer <b>1</b> will now total twenty (20) seconds. Program <b>300</b> then returns to step <b>310</b>.</p>
+      <p id="p-00138-en" num="0106">At step <b>310</b>, program <b>300</b> will determine if the value in Timer <b>1</b> is greater than Variable <b>1</b>, which is one hundred eighty (180) seconds. Since Timer <b>1</b> is twenty (20) seconds, Timer <b>1</b> is not greater than Variable <b>1</b>, and program <b>300</b> moves to step <b>312</b>.</p>
+      <p id="p-00139-en" num="0107">At step <b>312</b>, Counter <b>1</b> will again be increased by increased by the first channel increment. Accordingly, Counter <b>1</b> will now be increased to two (2).</p>
+      <p id="p-00140-en" num="0108">Next, at step <b>314</b>, program <b>300</b> will determine if Counter <b>1</b> is greater than eight (8), the number of preset channels of PECO system stored in “N.” Since the answer will be no (two is not greater than eight), program <b>300</b> will proceed to step <b>316</b>. At step <b>316</b>, the channel associated with the value stored in Counter <b>1</b> will be identified. Since Counter <b>1</b> now has the number two (2) stored in it, program <b>300</b> will identify “Channel <b>2</b>.” Next, at step <b>318</b>, Timer <b>12</b> or the second timer will be reset to the initial time period value of zero (0). At step <b>320</b>, the polarity will be reversed in the plate pair or plurality of plate pairs associated with “Channel <b>2</b>.” Next, steps <b>322</b> and <b>324</b> will repeat until Timer <b>2</b> exceeds Variable <b>2</b>, meaning Timer <b>2</b> is greater than twenty (20) seconds.</p>
+      <p id="p-00141-en" num="0109">Once Timer <b>2</b> is greater than twenty (20) seconds, program <b>300</b> moves to step <b>326</b> where the polarity provided to the plate pair or plurality of plate pairs associated with “Channel <b>2</b>” is reversed back to the original polarity. Program <b>300</b> will then move to step <b>328</b>. At step <b>328</b>, the amount of time stored in Timer <b>2</b>, which is twenty (20) seconds, is added to the amount of time stored in Timer <b>1</b>, which is twenty (20) seconds. This total is then stored in Timer <b>1</b>. Accordingly, Timer <b>1</b> will now total forty (40) seconds. Program <b>300</b> then returns to step <b>310</b>.</p>
+      <p id="p-00142-en" num="0110">This process will repeat until Counter <b>1</b> is greater than the number of preset channels of PECO system stored in “N.” Accordingly, this process will repeat for all eight (8) of the channels associated with the PECO system. Once Counter <b>1</b> reaches nine at step <b>312</b>, program <b>300</b> will determine that Counter <b>1</b> does exceed the number of preset channels of PECO system stored in “N” at step <b>314</b>. Program <b>300</b> will then move to step <b>315</b>, where Timer <b>1</b> will be increased by the first time increment of one (1) second. After completion of cycling though the eight (8) channels associated with the PECO system, the amount of time in Timer <b>1</b> will be one hundred sixty (160) seconds. Accordingly, one second will be added to Timer <b>1</b>, and Steps <b>310</b>, <b>312</b>, <b>314</b>, and <b>315</b> will repeat until Timer <b>1</b> exceeds Variable <b>1</b>. Once Timer <b>1</b> exceeds variable <b>1</b>, program <b>300</b> will move back to step <b>304</b>, Counter <b>1</b> will be reset to zero, Timer <b>1</b> will be reset to zero, and the entire process will repeat. This will systematically provide for the reversal of polarity for each channel associated with the PECO system.</p>
+      <p id="p-00143-en" num="0111">It should be appreciated that by rotating between channels, program <b>200</b>, <b>300</b> advantageously reverses polarity in a portion of the plate pairs or plurality of plate pairs provided in the PECO system. As such, the remaining plate pair or plurality of plate pairs which are operating “normally” and continue to drive the PECO reaction, continuing to treat the aqueous solution. This provides for descaling or the removal of fouling from components of the plate pairs or plurality of plate pairs without substantially interrupting operation of the PECO system.</p>
+      <p id="p-00144-en" num="0112">As utilized herein, the terms “approximately,” “about,” “substantially”, and similar terms are intended to have a broad meaning in harmony with the common and accepted usage by those of ordinary skill in the art to which the subject matter of this disclosure pertains. It should be understood by those of skill in the art who review this disclosure that these terms are intended to allow a description of certain features described and claimed without restricting the scope of these features to the precise numerical ranges provided. Accordingly, these terms should be interpreted as indicating that insubstantial or inconsequential modifications or alterations of the subject matter described and claimed are considered to be within the scope of the invention as recited in the appended claims.</p>
+      <p id="p-00145-en" num="0113">It should be noted that references to relative positions (e.g., “top” and “bottom”) in this description are merely used to identify various elements as are oriented in the Figures. It should be recognized that the orientation of particular components may vary greatly depending on the application in which they are used.</p>
+      <p id="p-00146-en" num="0114">For the purpose of this disclosure, the term “coupled” means the joining of two members directly or indirectly to one another. Such joining may be stationary in nature or moveable in nature. Such joining may be achieved with the two members or the two members and any additional intermediate members being integrally formed as a single unitary body with one another or with the two members or the two members and any additional intermediate members being attached to one another. Such joining may be permanent in nature or may be removable or releasable in nature.</p>
+      <p id="p-00147-en" num="0115">It is also important to note that the construction and arrangement of the system, methods, and devices as shown in the various examples of embodiments is illustrative only. Although only a few embodiments have been described in detail in this disclosure, those skilled in the art who review this disclosure will readily appreciate that many modifications are possible (e.g., variations in sizes, dimensions, structures, shapes and proportions of the various elements, values of parameters, mounting arrangements, use of materials, colors, orientations, etc.) without materially departing from the novel teachings and advantages of the subject matter recited. For example, elements shown as integrally formed may be constructed of multiple parts or elements show as multiple parts may be integrally formed, the operation of the interfaces may be reversed or otherwise varied, the length or width of the structures and/or members or connector or other elements of the system may be varied, the nature or number of adjustment positions provided between the elements may be varied (e.g., by variations in the number of engagement slots or size of the engagement slots or type of engagement). The order or sequence of any process or method steps may be varied or re-sequenced according to alternative embodiments. Other substitutions, modifications, changes and omissions may be made in the design, operating conditions and arrangement of the various examples of embodiments without departing from the spirit or scope of the present inventions.</p>
+      <p id="p-00148-en" num="0116">Although various representative examples of embodiments of this invention have been described above with a certain degree of particularity, those skilled in the art could make numerous alterations to the disclosed embodiments without departing from the spirit or scope of the inventive subject matter set forth in the specification and claims. In some instances, in methodologies directly or indirectly set forth herein, various steps and operations are described in one possible order of operation, but those skilled in the art will recognize that steps and operations may be rearranged, replaced, or eliminated without necessarily departing from the spirit and scope of the present invention. It is intended that all matter contained in the above description or shown in the accompanying drawings shall be interpreted as illustrative only and not limiting. Changes in detail or structure may be made without departing from the spirit of the invention as defined in the appended claims.</p>
+      <p id="p-00149-en" num="0117">Moreover, some portions of the detailed descriptions herein are presented in terms of procedures, steps, logic blocks, processing, and other symbolic representations of operations on data bits that can be performed on computer memory. These descriptions and representations are the means used by those skilled in the data processing arts to most effectively convey the substance of their work to others skilled in the art. A procedure, computer executed step, logic block, process, etc., is here, and generally, conceived to be a self-consistent sequence of steps or instructions leading to a desired result. The steps are those requiring physical manipulations of physical quantities. Usually, though not necessarily, these quantities take the form of electrical or magnetic signals capable of being stored, transferred, combined, compared, and otherwise manipulated in a computer system. It should be borne in mind, however, that all of these and similar terms are to be associated with the appropriate physical quantities and are merely convenient labels applied to these quantities. Unless specifically stated otherwise as apparent from the discussions herein, it is appreciated that throughout the present invention, discussions utilizing terms such as “receiving,” “sending,” “generating,” “reading,” “invoking,” “selecting,” and the like, refer to the action and processes of a computer system, or similar electronic computing device, including an embedded system, that manipulates and transforms data represented as physical (electronic) quantities within the computer system.</p>
+      <p id="p-00150-en" num="0118">Although the present invention has been described with reference to particular embodiments, persons skilled in the art will recognize that changes may be made in form and detail without departing from the spirit and scope of the invention.</p>
+      <p id="p-00151-en" num="0119">While this invention has been described in conjunction with the examples of embodiments outlined above, various alternatives, modifications, variations, improvements and/or substantial equivalents, whether known or that are or may be presently foreseen, may become apparent to those having at least ordinary skill in the art. Accordingly, the examples of embodiments of the invention, as set forth above, are intended to be illustrative, not limiting. Various changes may be made without departing from the spirit or scope of the invention. Therefore, the invention is intended to embrace all known or earlier developed alternatives, modifications, variations, improvements and/or substantial equivalents.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for operating a photoelectrocatalytic oxidation assembly for removing fouling from components comprising:
+<claim-text>resetting a first counter;</claim-text><claim-text>increasing the first counter by a first channel increment value;</claim-text><claim-text>determining if the value in the first counter exceeds a value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly;</claim-text><claim-text>performing the following steps if the first counter does not exceed a value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly:
+<claim-text>reversing polarity in a channel associated with the value in the first counter;</claim-text><claim-text>resetting a first timer;</claim-text><claim-text>determining if an amount of time in the first timer exceeds a first time period;</claim-text><claim-text>increasing the amount of time remaining in the first timer by a first time increment if the amount of time remaining in the first timer does not exceed the first time period;</claim-text><claim-text>terminating the polarity reversal in the channel associated with the value in the first counter when the time remaining in the first timer exceeds the first time period;</claim-text><claim-text>returning to the step of increasing the first counter by the first channel increment value; and</claim-text></claim-text><claim-text>returning, if the value in the first counter exceeds a value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly, to the step of resetting the first counter.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first channel increment value is preset.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first channel increment value is the integer one.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly is preset.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly is greater than one.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein at least one plate pair having an anode and a cathode is associated with each channel provided in the photoelectrocatalytic oxidation assembly.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the value corresponding to the first time period is less than five minutes.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the value corresponding to the first time period is less than one minute.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the value corresponding to the first time period is not greater than twenty seconds.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first time increment equals one second.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. A method for removing scale from a plurality of photoelectrodes associated with a photoelectrocatalytic oxidation assembly thru polarity reversal, the plurality of photoelectrodes being associated with a plurality of channels, such that at least one photoelectrode is associated with each channel, comprising:
+<claim-text>resetting a first counter and a first timer;</claim-text><claim-text>determining if an amount of time in the first timer exceeds a first time period;</claim-text><claim-text>increasing the amount of time in the first timer by a first time increment;</claim-text><claim-text>increasing the first counter by a first channel increment value;</claim-text><claim-text>determining if the value in the first counter exceeds a value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly;</claim-text><claim-text>performing the following steps if the first counter does not exceed a value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly:
+<claim-text>reversing polarity in a channel associated with the value in the first counter;</claim-text><claim-text>resetting a second timer;</claim-text><claim-text>determining if an amount of time in the second timer exceeds a second time period;</claim-text><claim-text>increasing the amount of time remaining in the second timer by a second time increment if the amount of time remaining in the second timer does not exceed the second time period;</claim-text><claim-text>terminating the polarity reversal in the channel associated with the value in the second counter when the time remaining in the second timer exceeds the second time period;</claim-text><claim-text>returning to the step of determining if an amount of time in the first timer exceeds the first time period;</claim-text></claim-text><claim-text>returning, if the value in the first counter exceeds a value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly and the amount of time in the first timer does not exceed the first time period, to the step of increasing the amount of time in the first timer by a first time increment; and</claim-text><claim-text>returning, if the amount of time in the first timer does exceed the first time period, to the step of resetting the first counter and the first timer.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the first time period is a cycle time period.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the first time period is at least the number of channels multiplied by the second time period.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, further comprising after the step of terminating the polarity reversal in the channel associated with the value in the second counter when the time remaining in the second timer exceeds the second time period, performing the step of combining the amount to time in the second timer with the amount of time in the first timer and storing the total in the first timer.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the first channel increment value is the integer one.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly is preset.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the value corresponding to the number of channels provided in the photoelectrocatalytic oxidation assembly is greater than one.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein at least one plate pair having an anode and a cathode is associated with each channel provided in the photoelectrocatalytic oxidation assembly.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the value corresponding to the second time period is less than one minute.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the value corresponding to the second time period is not greater than twenty seconds. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246829A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150246829A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246829A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246829A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246829A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246829A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246829A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246829A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246829A1_00005.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150246829A1-20150903-M00001.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150246829A1_00006.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150246829A1-20150903-M00002.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150246829A1_00007.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150246829A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246829A1.PDF" type="pdf" size="847320" pages="16" />
+</lexisnexis-patent-document>

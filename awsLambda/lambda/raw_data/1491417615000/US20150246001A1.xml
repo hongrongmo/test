@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246001A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021251" date-changed="20151006" time-changed="063129">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139113">
+        <country>US</country>
+        <doc-number>20150246001</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14432899</doc-number>
+        <date>20131023</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="regional">
+        <country>EP</country>
+        <doc-number>12189563</doc-number>
+        <date>20121023</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>A61K   9/70        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>70</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K  38/22        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>38</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B32B  37/24        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>37</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>B32B  38/00        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>38</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>B32B  38/10        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>38</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>A61K   9/7007      20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>7007</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K   9/0024      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>0024</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K   9/0051      20130101 LI20140505BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>0051</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140505</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K   9/1647      20130101 LI20131107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>1647</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61K   9/7069      20130101 LI20130308BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>7069</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130308</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61K  38/22        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>38</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>B32B  37/24        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>37</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>B32B  38/0012      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>38</main-group>
+        <subgroup>0012</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>B32B  38/10        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>38</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>B32B2037/243       20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>2037</main-group>
+        <subgroup>243</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>B32B2367/00        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>2367</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>B32B2377/00        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>2377</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>B32B2535/00        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>2535</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>Y10T 156/1051      20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>156</main-group>
+        <subgroup>1051</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">16</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">PROCESS FOR THE MANUFACTURING OF A MULTILAYER DRUG DELIVERY CONSTRUCT</invention-title>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61717205</doc-number>
+          <date>20121023</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>DSM IP ASSETS B.V.</orgname>
+            <address>
+              <city>Heerlen</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>NL</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Zupancich</last-name>
+            <first-name>John Andrew</first-name>
+            <address>
+              <city>Echt</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Berard</last-name>
+            <first-name>Julien François</first-name>
+            <address>
+              <city>Echt</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13072142</doc-number>
+        <date>20131023</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014064140</doc-number>
+        <date>20140501</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="171663952">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246001</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2888840</doc-number>
+            <kind>A1</kind>
+            <date>20140501</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165465009">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246001</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014064140</doc-number>
+            <kind>A1</kind>
+            <date>20140501</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2888840</doc-number>
+            <kind>A1</kind>
+            <date>20140501</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2911647</doc-number>
+            <kind>A1</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to a process for the manufacturing of a multilayer construct comprising layering at least one drug loaded film from which each film comprises a polymer and at least a drug manufactured by the steps of dissolving the polymer in an organic solvent, mixing the dissolved polymer with the drug, laminating the mixture between at least two polymeric sheets, whereby at least one sheet is permeable to the organic solvent, removing the sheets to provide the drug loaded film, layering the drug loaded film and fusing the drug loaded films into a multilayer construct. The present invention also relates to the multilayer construct obtainable by the process according to the present invention and to the use of the multilayer construct in ophthalmology, cardiovascular, pain management, musculoskeletal, cancer treatment or in vaccine delivery.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150528</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246001A1</docdb-publication-number>
+      <docdb-application-id>444207940</docdb-application-id>
+      <new-owner>DSM IP ASSETS B.V., NETHERLANDS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:ZUPANCICH, JOHN ANDREW;BERARD, JULIEN FRANCOIS;REEL/FRAME:035736/0531</free-text-description>
+      <effective-date>
+        <date>20150413</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <p id="p-00001-en" num="0001">The present invention relates to a process for the manufacturing of a multilayer drug delivery construct based on at least one drug loaded film. The present invention further relates to the multilayer drug delivery construct obtainable by the process of the present invention. The invention also relates to the use of the multilayer construct in ophthalmology, cardiovascular, pain management, musculoskeletal, cancer treatment in central nervous system (CNS) or in vaccines delivery.</p>
+      <p id="p-00002-en" num="0002">The development of drug delivery constructs for controlled and/or sustained release of drugs is an area of interest in the pharmaceutical industry. Known drug delivery constructs are for example particles such as micro-and nanoparticles, fibers, rods, films or coatings. The drug delivery constructs often comprise a drug dispersed in a biocompatible polymer matrix which can be implanted, administered orally or injected. The polymers most often used are for example poly-(lactic acid) or poly-(lactic acid-co-glycolic acid).</p>
+      <p id="p-00003-en" num="0003">Drug delivery constructs capable of providing a sustained, local delivery of therapeutics provide unique opportunities and more efficacious strategies for the treatment of various pathologies. The requisite therapeutic dose together with the desire for prolonged release durations often necessitates high drug loadings in constructs to provide efficacious controlled release solutions. Additionally, the sensitivity of, for example therapeutic biologics, to local environmental stresses often compels the formulation of drugs with a combination of stabilizing excipients. The required mass or volume of this combined payload (drugs+excipients), coupled with conventional (practical) constraints on drug delivery construct size, often results in a drug delivery construct with relatively high weight (and/or volume) fractions of payload relative to the overall drug delivery construct mass (and/or volume).</p>
+      <p id="p-00004-en" num="0004">Drug delivery constructs with a high loading of drugs (i.e., high solid content of payload relative to polymer) typically exhibit uncontrolled and rapid release of the drugs into the surrounding medium. This is due in part to isolated drug-rich domains present at the surface of the construct that have direct access to the surrounding medium.</p>
+      <p id="p-00005-en" num="0005">When the construct is placed in a medium the payload rapidly solubilizes and releases (i.e. diffuses) out of the construct. If moreover the total volumetric loading of drug-rich domains in a construct exceeds a critical value (e.g., the percolation threshold or critical porosity range, Siegel, R. A. et al., <i>J. Controlled Release </i>8 (1989) 223-236), the close proximity of domains within the matrix leads to clustering and interconnectivity. If then any part of this interconnected domains has access to the medium, solubilization and diffusion of drugs can lead to a rapid release of large fractions of the total drug-load. The extent to which the percolation threshold is exceeded influences the extent of domain interconnectivity within a construct and in turn, the overall fraction of drug-load that will rapidly be released from the construct. The actual volume fraction of payload needed to reach the percolation threshold (i.e., critical volumetric loading) within a given construct is dependent on a number of factors such as the construct dimensions, particle (domain) size, particle (domain) size distribution, homogeneity of the particle distribution within the matrix, ratio of particle size to construct thickness, etc.</p>
+      <p id="p-00006-en" num="0006">The object of the present invention is to overcome or mitigate the above mentioned disadvantages.</p>
+      <p id="p-00007-en" num="0007">Surprisingly it has been found that the above disadvantages can be overcome by providing a process for the manufacturing of multilayer drug delivery constructs comprising at least one drug loaded film, manufactured by the following steps: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>(a) dissolving the polymer in a solvent</li><li>(b) mixing the dissolved polymer with a drug</li><li>(c) laminating the mixture between at least two polymeric sheets, whereby at least one polymeric sheet is permeable to the solvent,</li><li>(d) removing the sheets to provide the drug loaded film</li><li>(e) layering the drug loaded film</li><li>(f) fusing the layered film into a multilayer construct</li></ul></li></ul></p>
+      <p id="p-00008-en" num="0014">Surprisingly the above process provides a multilayer drug delivery construct with unique opportunities to control and extend the release of the loaded drugs.</p>
+      <p id="p-00009-en" num="0015">In priority filing EP11194043.3 a process is described for the manufacturing of a drug delivery system based on a polymer comprising dispersed bioactive agent or drug via the following process steps: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>(a) dissolving a polymer in an organic solvent</li><li>(b) mixing the dissolved polymer with the bioactive agent</li><li>(c) laminating the mixture between at least two sheets of polymeric material, whereby at least one sheet is permeable to the organic solvent, to provide a single layer film. A disadvantage of a single drug loaded film approaching the percolation threshold has an interconnected open pore network. The release profile of drugs from such film shows an initial burst release and a rapid release of drugs in the open pore network due to diffusion through the network.</li></ul></li></ul></p>
+      <p id="p-00010-en" num="0019">In the present invention it has been found that the layering of at least one drug loaded film generates a multilayer drug delivery construct with improved release profiles by reducing the likelihood of interconnected pore networks but also by improving the overall homogeneity of drug distribution in the construct. Moreover the process of the present invention provides drug-loaded films with a limited solvent exposure, no elevated temperatures and improved drug dispersion.</p>
+      <p id="p-00011-en" num="0020">The process of the present invention provides opportunities for the incorporation of multiple dispersed drugs within the construct and facilitates the (initial) physical separation of different drugs within the construct. Moreover it provides an opportunity for sequential release of individual drugs by controlling the properties of the layered and fused films.</p>
+      <p id="p-00012-en" num="0021">In one embodiment of the present invention, the multilayer drug delivery construct may further comprise at least a non-drug loaded polymeric film. This non-drug loaded polymeric film may be included at the periphery of the multilayer construct or it may be included within the multilayer construct. The inclusion of non-drug loaded films at the periphery of the multilayer construct will improve the release profiles by limiting the amount of drug at the surface of the construct therefore decreasing burst release. Moreover it will act as a diffusion limiting membrane.</p>
+      <p id="p-00013-en" num="0022">The inclusion of non-drug loaded films within the multi-layer construct will improve the release profiles by reducing the presence of interconnected pore networks that span the entire construct. One can imagine that the inclusion of non-drug loaded films providing many options for triggered or timed release based on the material properties of the non-drug loaded polymeric film.</p>
+      <p id="p-00014-en" num="0023">The non-drug loaded films can be prepared via various methodologies known in the art for example via solvent casting, compression molding, lamination, etc. The non-drug loaded film may comprise the same or a different polymer as the drug loaded films.</p>
+      <p id="p-00015-en" num="0024">The polymer as referred to in step (a) or as used in the non-drug loaded film can be any biostable, bioerodable or biodegradable polymer selected from the group consisting of (a) polyester homopolymers and copolymers such as polyglycolic acid (PGA), polylactic acid (PLA) including poly-L-lactic acid, poly-D-lactic acid and poly-D,L-lactic acid, poly(beta-hydroxybutyrate), polygluconate including poly-D-gluconate, poly-L-gluconate, poly-D,L-gluconate, poly(epsilon-caprolactone), poly(delta-valerolactone), poly(p-dioxanone), poly(lactic acid-co-glycolic acid) (PLGA) which can have a range of ratios of lactic acid to glycolic acid, additionally with either the racemic or meso DL lactide or the pure L-lactide, poly(lactic acid-co-delta-valerolactone), poly(lactic acid-co-epsilon-caprolactone), poly(lactic acid-co-beta-malic acid), poly(beta-hydroxybutyrate-co-beta-hydroxyvalerate), poly(1,3-bis(p-carboxyphenoxy)propane-co-sebacic acid), and poly(sebacic acid-co-fumaric acid), among others, (b) poly(ortho ester) homopolymers and copolymers such as those synthesized by copolymerization of various diketene acetals and diols, among others, (c) polyanhydride homopolymers and copolymers such as poly(adipic anhydride), poly(suberic anhydride), poly(sebacic anhydride), poly(dodecanedioic anhydride), poly(maleic anhydride), poly(1,3-bis(p-carboxyphenoxy)methane anhydride) and poly (alpha,omega-bis(p-carboxyphenoxy)alkane anhydrides) such as poly(1,3-bis(p-carboxyphenoxy)propane anhydride) and poly(1,3-bis(p-carboxyphenoxy)hexane anhydride), (d) polycarbonate homopolymers and copolymers such as poly(trimethylene carbonate), poly(lactic acid-co-trimethylene carbonate) and poly(glycolic acid-co-trimethylene carbonate) and (e) amino-acid-based polymers including tyrosine-based polyarylates (e.g., copolymers of a diphenol and a diacid linked by ester bonds, with diphenols selected, for instance, from ethyl, butyl, hexyl, octyl and benzyl esters of desaminotyrosyl-tyrosine and diacids selected, for instance, from succinic, glutaric, adipic, suberic and sebacic acid), tyrosine-based polycarbonates (f) polyesteramides, polythioesters, polyesterurethanes, polyesterurea's, polyurethanes, polyurethane acrylate, poly(amino acids), polypeptides, polyamides, polysaccharides, polyethers, polysulfones, poly(meth)acrylates, polysiloxanes or polyolefins. Any suitable blends or copolymers of these materials can also be used.</p>
+      <p id="p-00016-en" num="0025">Drug delivery constructs composed of bioerodible or biodegradable polymers typically employ drug loadings sufficiently below the percolation threshold to facilitate sustained release via mechanisms such as polymer erosion or matrix swelling.</p>
+      <p id="p-00017-en" num="0026">The term biostable as used herein means a material not intended to degrade in vivo during the intended lifetime.</p>
+      <p id="p-00018-en" num="0027">The terms biodegradable or bioerodable as used herein refer to material which is capable of being completely or substantially degraded or eroded when exposed to an in vivo environment or a representative in vitro environment. A polymer is capable of being degraded or eroded when it can be gradually broken-down, resorbed, absorbed and/or eliminated by, for example, hydrolysis, hydration, solubilization, enzymolysis, oxidation, metabolic processes, bulk or surface erosion, and the like within a subject. It should be appreciated that traces or residue of polymer may remain following biodegradation and bioerosion.</p>
+      <p id="p-00019-en" num="0028">Preferably the polymer is a biodegradable or bioerodable polymer selected from the group consisting of the above mentioned polyesters (a) or polyesteramides comprising amino-acids. Still more preferably the polyesteramide has a structure according to Formula (I),</p>
+      <p id="p-00020-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="61.89mm" wi="158.75mm" alt="embedded image" img-content="chem" file="US20150246001A1_00009.PNG" img-format="png" original="US20150246001A1-20150903-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00021-en" num="0000">wherein <ul id="ul-00005-en" list-style="none"><li><ul id="ul-00006-en" list-style="none"><li>m varies from 0.01 to 0.99; p varies from 0 to 0.99; and q varies from 0.99 to 0.01; and wherein n varies from 5 to 100; whereby</li><li>R<sub>1 </sub>is independently selected from the group consisting of (C<sub>2</sub>-C<sub>20</sub>) alkylene, (C<sub>2</sub>-C<sub>20</sub>) alkenylene and combinations thereof;</li><li>R<sub>3 </sub>and R<sub>4 </sub>in a single backbone unit m or p, respectively, are independently selected from the group consisting of hydrogen, (C<sub>1</sub>-C<sub>6</sub>)alkyl, (C<sub>2</sub>-C<sub>6</sub>)alkenyl, (C<sub>2</sub>-C<sub>6</sub>)alkynyl, (C<sub>6</sub>-C<sub>10</sub>)aryl, (C<sub>1</sub>-C<sub>6</sub>)alkyl, —(CH<sub>2</sub>)SH, —(CH<sub>2</sub>)<sub>2</sub>S(CH<sub>3</sub>), —CH<sub>2</sub>OH, —CH(OH)CH<sub>3</sub>, —(CH<sub>2</sub>)<sub>4</sub>NH<sub>3</sub>+, —(CH<sub>2</sub>)<sub>3</sub>NHC(═NH<sub>2</sub>+)NH<sub>2</sub>, —CH<sub>2</sub>COOH, —(CH<sub>2</sub>)COOH, —CH<sub>2</sub>—CO—NH<sub>2</sub>, —CH<sub>2</sub>CH<sub>2</sub>—CO—NH<sub>2</sub>, —CH<sub>2</sub>CH<sub>2</sub>COOH, CH<sub>3</sub>—CH<sub>2</sub>—CH(CH<sub>3</sub>)—, (CH<sub>3</sub>)<sub>2</sub>—CH—CH<sub>2</sub>—, H<sub>2</sub>N—(CH<sub>2</sub>)<sub>4</sub>—, Ph-CH<sub>2</sub>—, CH═C—CH<sub>2</sub>—, HO-p-Ph-CH<sub>2</sub>—, (CH<sub>3</sub>)<sub>2</sub>—CH—, Ph-NH—, NH—(CH<sub>2</sub>)<sub>3</sub>—C—, NH—CH═N—CH═C—CH<sub>2</sub>—.</li><li>R<sub>5 </sub>is selected from the group consisting of (C<sub>2</sub>-C<sub>20</sub>)alkylene, (C<sub>2</sub>-C<sub>20</sub>)alkenylene, alkyloxy or oligoethyleneglycol</li><li>R<sub>6 </sub>is selected from bicyclic-fragments of 1,4:3,6-dianhydrohexitols of structural formula (II);</li></ul></li></ul></p>
+      <p id="p-00022-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="22.01mm" wi="56.47mm" alt="embedded image" img-content="chem" file="US20150246001A1_00010.PNG" img-format="png" original="US20150246001A1-20150903-C00002.TIF" />
+        </chemistry>
+        <ul id="ul-00007-en" list-style="none">
+          <li>
+            <ul id="ul-00008-en" list-style="none">
+              <li>R<sub>7 </sub>is hydrogen, (C<sub>6</sub>-C<sub>10</sub>) aryl, (C<sub>1</sub>-C<sub>6</sub>) alkyl or a protecting group such as benzyl- or a bioactive agent;</li>
+              <li>R<sub>8 </sub>is —(CH<sub>2</sub>)<sub>4</sub>—;</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p id="p-00023-en" num="0036">Preferably the m, p and q units in the polyesteramide backbone of formula (I) are in a random distribution.</p>
+      <p id="p-00024-en" num="0037">The biodegradable polyesteramides of Formula (I) are known in the art and for example disclosed in WO2007035938. The PEA's of Formula (I) comprise at least two linear saturated or unsaturated aliphatic diol residues into two bis-(a amino acid)-based diol-diesters. The lysine units present in backbone unit q are either protected, in case R7 is benzyl, or unprotected, in case that R7 is H. A PEA comprising unprotected lysine is further indicated as PEA-III-H, a PEA comprising protected lysine further indicated as PEA-III-Bz.</p>
+      <p id="p-00025-en" num="0038">In Formula (I) m may vary from 0.01 to 0.99; p may vary from 0.2 to 3 and q may vary from 0.10 to 1.00 whereby n varies from 5 to100; R1 is —(CH2)8; R3 and R4 in the backbone units m and p is leucine, —R5 is hexane, and R6 is a bicyclic-fragments of 1,4:3,6-dianhydrohexitols of structural formula (II); R7 may be chosen from H or a benzyl group and R8 is —(CH2)4-.</p>
+      <p id="p-00026-en" num="0039">Another class of preferred polyesteramides has a structure according to Formula (III)</p>
+      <p id="p-00027-en" num="0000">
+        <chemistry id="chem-00003-en" num="00003">
+          <img id="img-00003-en" he="56.47mm" wi="158.75mm" alt="embedded image" img-content="chem" file="US20150246001A1_00011.PNG" img-format="png" original="US20150246001A1-20150903-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00028-en" num="0000">wherein <ul id="ul-00009-en" list-style="none"><li><ul id="ul-00010-en" list-style="none"><li>m+p may vary from 0.9-0.1 and q may vary from 0.1 to 0.9 whereby m+p+q=1</li><li>m or p can be 0; a is at least 0.05, b is at least 0.05 whereby a+b=1</li><li>n may vary from 5 to 300;</li><li>R<sub>1 </sub>is independently selected from the group consisting of (C<sub>2</sub>-C<sub>20</sub>) alkylene, (C<sub>2</sub>-C<sub>20</sub>) alkenylene and combinations thereof;</li><li>R<sub>3 </sub>and R<sub>4 </sub>in a single backbone unit m or p, respectively, are independently selected from the group consisting of hydrogen, (C<sub>1</sub>-C<sub>6</sub>)alkyl, (C<sub>2</sub>-C<sub>6</sub>)alkenyl, (C<sub>2</sub>-C<sub>6</sub>)alkynyl, (C<sub>6</sub>-C<sub>10</sub>)aryl, (C<sub>1</sub>-C<sub>6</sub>)alkyl, —(CH<sub>2</sub>)SH, —(CH<sub>2</sub>)<sub>2</sub>S(CH<sub>3</sub>), —CH<sub>2</sub>OH, —CH(OH)CH<sub>3</sub>, —(CH<sub>2</sub>)<sub>4</sub>NH<sub>3</sub>+, —(CH<sub>2</sub>)<sub>3</sub>NHC(═NH<sub>2</sub>+)NH<sub>2</sub>, —CH<sub>2</sub>COOH, —(CH<sub>2</sub>)COOH, —CH<sub>2</sub>—CO—NH<sub>2</sub>, —CH<sub>2</sub>CH<sub>2</sub>—CO—NH<sub>2</sub>, —CH<sub>2</sub>CH<sub>2</sub>COOH, CH<sub>3</sub>—CH<sub>2</sub>—CH(CH<sub>3</sub>)—, (CH<sub>3</sub>)<sub>2</sub>—CH—CH<sub>2</sub>—, H<sub>2</sub>N—(CH<sub>2</sub>)<sub>4</sub>—, Ph-CH<sub>2</sub>—, CH═C—CH<sub>2</sub>—, HO-p-Ph-CH<sub>2</sub>—, (CH<sub>3</sub>)<sub>2</sub>—CH—, Ph-NH—, NH—(CH<sub>2</sub>)<sub>3</sub>—C—, NH—CH═N—CH═C—CH<sub>2</sub>—.</li><li>R<sub>5 </sub>is selected from the group consisting of (C<sub>2</sub>-C<sub>20</sub>)alkylene, (C<sub>2</sub>-C<sub>20</sub>)alkenylene, alkyloxy or oligoethyleneglycol</li><li>R<sub>6 </sub>is selected from bicyclic-fragments of 1,4:3,6-dianhydrohexitols of structural Formula II.</li><li>R<sub>7 </sub>is selected from the group consisting of (C<sub>6</sub>-C<sub>10</sub>) aryl (C<sub>1</sub>-C<sub>6</sub>) alkyl</li><li>R<sub>8 </sub>is —(CH<sub>2</sub>)<sub>4</sub>—;</li></ul></li></ul></p>
+      <p id="p-00029-en" num="0049">Preferably the m, p and q units in the polyesteramide backbone of formula (III) are in a random distribution.</p>
+      <p id="p-00030-en" num="0050">In one embodiment the biodegradable polyesteramide copolymer according to Formula (III) comprises p=0 and m+q=1 whereby m=0.75, a=0.5 and a+b=1 R<sub>1 </sub>is (CH<sub>2</sub>)<sub>8</sub>, R<sub>3 </sub>is (CH<sub>3</sub>)<sub>2</sub>—CH—CH<sub>2</sub>—, R<sub>5 </sub>is hexyl, R<sub>7 </sub>is benzyl and R<sub>8 </sub>is —(CH2)4-.</p>
+      <p id="p-00031-en" num="0051">In another embodiment of the present invention the biodegradable polyesteramide copolymer according to Formula (III) comprises m+p+q=1, q=0.25, p=0.45 and m=0.3 whereby a is 0.5 and a+b=1 and whereby R<sub>1</sub>—(CH<sub>2</sub>)<sub>4</sub>, R<sub>3 </sub>and R<sub>4 </sub>respectively are (CH<sub>3</sub>)<sub>2</sub>—CH—CH<sub>2</sub>—, R<sub>5 </sub>is selected from the group consisting of (C<sub>2</sub>-C<sub>20</sub>)alkylene, R<sub>6 </sub>is selected from bicyclic-fragments of 1,4:3,6-dianhydrohexitols of structural formula (II), R<sub>7 </sub>is benzyl and R<sub>8 </sub>is —(CH2)4-.</p>
+      <p id="p-00032-en" num="0052">In a still further embodiment of the present invention the biodegradable polyesteramide copolymer according to Formula (III) comprises m=0, p+q=1 and p=0.75 whereby a=0.5 and a+b=1, R<sub>1 </sub>is —(CH<sub>2</sub>)<sub>4</sub>; R<sub>4 </sub>is (CH<sub>3</sub>)<sub>2</sub>—CH—CH<sub>2</sub>—, R<sub>7 </sub>is benzyl, R<sub>8 </sub>is —(CH<sub>2</sub>)<sub>4</sub>— and R<sub>6 </sub>is selected from bicyclic fragments of 1,4:3,6-dianhydrohexitols of structural formula (II).</p>
+      <p id="p-00033-en" num="0053">In another preferred embodiment of the present invention the biodegradable poly(esteramide) copolymer according to Formula (III) comprises m+p+q=1, q=0.1, p=0.30 and m=0.6 whereby a=0.5 and a+b=1. R<sub>1</sub>—(CH<sub>2</sub>)<sub>4</sub>, R<sub>3 </sub>and R<sub>4 </sub>respectively, are (CH<sub>3</sub>)<sub>2</sub>—CH—CH<sub>2</sub>—; R<sub>5 </sub>is selected from the group consisting of (C<sub>2</sub>-C<sub>20</sub>)alkylene, R<sub>7 </sub>is benzyl, R<sub>8 </sub>is —(CH<sub>2</sub>)<sub>4</sub>— and R<sub>6 </sub>is selected from bicyclic-fragments of 1,4:3,6-dianhydrohexitols of structural formula (II).</p>
+      <p id="p-00034-en" num="0054">At least one of the alpha-amino acids used in the polyesteramides of Formula's (I) or (III) is a natural alpha-amino acid. For example, when the R3s or R4s are CH2Ph, the natural alpha-amino acid used in synthesis is L-phenylalanine. In alternatives wherein the R3s or R4s are —CH2-CH(CH3)2, the co-polymer contains the natural amino acid leucine. By independently varying the R3s and R4s within variations of the two co-monomers as described herein, other natural alpha-amino acids can also be used, e.g., glycine (when the R3s or R4s are H), alanine (when the R3s or R4s are CH3), valine (when the R3s or R4s are CH(CH3)2), isoleucine (when the R3s or R4s are CH(CH3)-CH2-CH3), phenylalanine (when the R3s or R4s are CH2-C6H5), lysine (when the R3s or R4s (CH2)4-NH2); or methionine (when the R3s or R4s are —(CH2)2S(CH3), and mixtures thereof.</p>
+      <p id="p-00035-en" num="0055">The polyesteramide's of Formula (I) or (III) preferably have an average number molecular weight (Mn) ranging from 15,000 to 200,000 Daltons. The polyesteramide can be fabricated in a variety of molecular weights and a variety of relative proportions of the m, p, and q units in the backbone. The appropriate molecular weight for a particular use is readily determined by one skilled in the art. A suitable Mn will be in the order of about 15,000 to about 100,000 Daltons, for example from about 30,000 to about 80,000 or from about 35,000 to about 75,000. Mn is measured via GPC in THF with polystyrene as a standard.</p>
+      <p id="p-00036-en" num="0056">The basic polymerization process of polyesteramides is based on the process described by G. Tsitlanadze, et al. J. Biomater. Sci. Polym. Edn. (2004) 15:1-24, however different building blocks and activating groups were used.</p>
+      <p id="p-00037-en" num="0057">The polyesteramides of Formula (III) may for example be synthesized as shown in scheme 1; via solution polycondensation of para-toluene sulfonate di-amines salts (X1, X2, X3, X4) with activated di-acids (Y1). Typically dimethylsulfoxide or dimethylformamide are used as solvent. Generally as a base 1.1 eq triethylamide is added with respect to the amount of para-toluene sulfonate, the reaction is carried out under an inert atmosphere at 60° C. for 24-72 hours under constant stirring. Subsequently the obtained reaction mixture is purified via a water precipitation followed by an organic precipitation and filtration. Drying under reduced pressure yields the polyesteramide.</p>
+      <p id="p-00038-en" num="0000">
+        <chemistry id="chem-00004-en" num="00004">
+          <img id="img-00004-en" he="114.64mm" wi="222.42mm" alt="embedded image" img-content="chem" file="US20150246001A1_00012.PNG" img-format="png" original="US20150246001A1-20150903-C00004.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00039-en" num="0058">The drugs can be any agent which is a therapeutic, prophylactic, or diagnostic agent. Such drugs may include without any limitation small molecule drugs or biologics. Examples of biologics are proteins such as immunoglobulin-like proteins, antibodies, cytokines (e.g., lymphokines, monokines, chemokines), interleukins, interferons, erythropoietin (also referred to herein as “EPO”), nucleases, tumor necrosis factor, colony stimulating factors, insulin, enzymes, tumor suppressors, hormones (e.g., growth hormone and adrenocorticotrophic hormone), antigens (e.g., bacterial and viral antigens), growth factors, polypeptides and polynucleotides, such as antisense molecules. Examples of small molecule drugs can have antiproliferative or anti-inflammatory properties or can have other properties such as antineoplastic, antiplatelet, anti-coagulant, anti-fibrin, antithrombotic, antimitotic, antibiotic, antiallergic, or antioxidant properties. Examples of antiproliferative agents include rapamycin and its functional or structural derivatives, 40-O-(2-hydroxy)ethyl-rapamycin (everolimus), and its functional or structural derivatives, paclitaxel and its functional and structural derivatives. Examples of rapamycin derivatives include ABT-578, 40-O-(3-hydroxy)propyl-rapamycin, 40-O-[2-(2-hydroxy)ethoxy]ethyl-rapamycin, and 40-0-tetrazole-rapamycin. Examples of paclitaxel derivatives include docetaxel. Examples of antineoplastics and/or antimitotics include methotrexate, azathioprine, vincristine, vinblastine, fluorouracil, doxorubicin hydrochloride (e.g. Adriamycin® from Pharmacia AND Upjohn, Peapack N.J.), and mitomycin (e.g. Mutamycin® from Bristol-Myers Squibb Co., Stamford, Conn.). Examples of such antiplatelets, anticoagulants, antifibrin, and antithrombins include sodium heparin, low molecular weight heparins, heparinoids, hirudin, argatroban, forskolin, vapiprost, prostacyclin and prostacyclin analogues, dextran, D-phe-pro-arg-chloromethylketone (synthetic antithrombin), dipyridamole, glycoprotein Hb/nia platelet membrane receptor antagonist antibody, recombinant hirudin, thrombin inhibitors such as Angiomax (Biogen, Inc., Cambridge, Mass.), calcium channel blockers (such as nifedipine), colchicine, fibroblast growth factor (FGF) antagonists, fish oil (omega 3-fatty acid), histamine antagonists, lovastatin (an inhibitor of HMG-CoA reductase, a cholesterol lowering drug, brand name Mevacor® from Merck AND Co., Inc., Whitehouse Station, N.J.), monoclonal antibodies (such as those specific for Platelet-Derived Growth Factor (PDGF) receptors), nitroprusside, phosphodiesterase inhibitors, prostaglandin inhibitors, suramin, serotonin blockers, steroids, thioprotease inhibitors, triazolopyrimidine (a PDGF antagonist), super oxide dismutases, super oxide dismutase mimetic, 4-amino-2,2,6,6-tetramethylpiperidine-1-oxyl (4-amino-TEMPO), estradiol, anticancer agents, dietary supplements such as various vitamins, and a combination thereof. Examples of anti-inflammatory agents including steroidal and nonsteroidal anti-inflammatory agents include biolimus, tacrolimus, dexamethasone, clobetasol, corticosteroids or combinations thereof. Examples of such cytostatic substances include angiopeptin, angiotensin converting enzyme inhibitors such as captopril (e.g. Capoten® and Capozide® from Bristol-Myers Squibb Co., Stamford, Conn.), cilazapril or lisinopril (e.g. Prinivil® and Prinzide® from Merck AND Co., Inc., Whitehouse Station, N.J.). An example of an antiallergic agent is permirolast potassium. Other therapeutic drugs which may be appropriate include alpha-interferon, pimecrolimus, imatinib mesylate, midostaurin, and genetically engineered epithelial cells. The foregoing substances can also be used in the form of prodrugs or co-drugs thereof. The foregoing substances also include metabolites thereof and/or prodrugs of the metabolites. The foregoing substances are listed by way of example and are not meant to be limiting.</p>
+      <p id="p-00040-en" num="0059">The solvent as referred to in step (a) may be selected from an organic solvent for example methylene chloride, acetone, ethyl acetate, methyl acetate, tetrahydrofuran, ethanol, methanol, isopropanol or chloroform. The solvent to be used depends on the polymer to be dissolved and on the nature of the polymer sheet used in process step (c) because the solvent should be permeable to the polymer sheet. The choice can however be readily determined by one of skill in the art. In the present invention methylene chloride, chloroform, ethanol or methanol are preferably used as the solvent.</p>
+      <p id="p-00041-en" num="0060">In step (b) of the process of the present invention the dissolved polymer is mixed with a drug by agitation, for example by shaking, stirring, vortexing, homogenizing or sonicating. The drug can be present, for example, as a powder, which can be crystalline, semi-crystalline or amorphous. The drug can also be present in a dispersed, dissolved or solubilized state. If present as a powder the drug is suspended in the polymer solution, if present in the liquid form the drug is dispersed in the polymer.</p>
+      <p id="p-00042-en" num="0061">The weight of drug relative to the weight of dissolved polymer may range from 0.02-100 wt %. Preferably it may range from 1-75 wt %, more preferably it may range from 1-25 wt %, most preferably it may range from 5-50 wt %.</p>
+      <p id="p-00043-en" num="0062">The polymer/drug mixture of step (b) in the process of the present invention may further comprise one or more excipients, including saccharides and their derivatives (e.g., disaccharides, polysaccharides, sugar alcohols), proteins (e.g., gelatin), synthetic polymers (e.g., polyvinylpyrrolidone, polyethylene glycol), antioxidants (e.g., vitamin A, vitamin E, vitamin C, retinyl palmitate), amino acids (i.e., glycine, cysteine, histidine, methionine), acids (e.g., citric acid), salts (e.g., sodium chloride), including bases, surfactants, stabilizers and/or a release modifying agent. The polymer/drug mixture may also further comprise one or more additional drugs.</p>
+      <p id="p-00044-en" num="0063">In process step (c) the resulting mixture of process step (b) is laminated between at least two sheets of polymeric material, whereby at least one of the sheets is permeable to the solvent.</p>
+      <p id="p-00045-en" num="0064">The sheets of solvent permeable polymeric material for example comprise a polymeric elastomer material selected from the group consisting of silicon rubber, ethylene-propylene elastomers, polyurethanes or crosslinked polymers thereof. Preferably the sheets are made from silicone rubber selected from the group consisting of a medical grade and/or food contact grade silicone rubber.</p>
+      <p id="p-00046-en" num="0065">After the laminating step (c) the sheets are removed to provide a drug loaded film (d). The multilayer construct may be generated via layering (e) of the drug loaded film by for example folding or rolling. It is however also possible that more than one drug loaded film is layered. The drug loaded films may than each comprise the same or a different polymer and/or the same or a different drug. Also possible is to process the drug loaded film (d) into pieces for example by cutting which pieces are fused together to prepare at least two layers.</p>
+      <p id="p-00047-en" num="0066">The multilayer construct preferably comprises at least 3 layers more preferably at least 6 layers, still more preferably at least 8 layers.</p>
+      <p id="p-00048-en" num="0067">The overall thickness of the multilayer construct is controlled during or after the fusing step (f) and may range from 500 nm-2 cm, preferably from 1 micrometer to 1 cm, more preferably from 10 micrometer to 500 micrometer, still more preferably from 50 micrometer to 250 micrometer. It is of course possible to stretch the multilayer contruct into a desired thickness.</p>
+      <p id="p-00049-en" num="0068">After step (f) the process preferably comprises a shaping step in which the multilayer construct is cut and/or molded into the desired drug delivery system form for example a fiber, rod, disc, coating, particle, tube or rolled film.</p>
+      <p id="p-00050-en" num="0069">The process of the present invention provides the advantage that only mild process steps are carried out with respect to temperature, pressure and presence of solvents. The process can be carried out at temperatures between 0-40 degrees Celcius, preferably between 15-30 degrees Celcius. More preferably the process of the present invention is carried out at room temperature. Room temperature means a temperature between 20-25 degrees Celsius, preferably 20 degrees Celsius.</p>
+      <p id="p-00051-en" num="0070">It is known that the manufacturing of a drug delivery construct in which the drug is for example a protein causes difficult issues to deal with. Effective processes for the manufacturing of drug delivery constructs comprising the incorporation of thermally sensitive or solvent sensitive drugs, such as many proteins, peptides and polynucleotides are limited due to the typical processing conditions employed, which are often at elevated temperatures (greater than about 45° C.) and/or generate aqueous/organic interfaces (i.,e.emulsions). These process conditions may result in a significant loss of the activity of the protein.</p>
+      <p id="p-00052-en" num="0071">A great advantage of the process according to the invention is that it produces a substantial homogeneous dispersion of the drug throughout the multilayer construct without using heat extrusion. The process further allows the use of process conditions such as a low temperature, limited durations of solvent exposure and a mild solvent removal. Therefore this process is in particular suitable for thermally or solvent sensitive or “labile” drugs such as many proteins, polypeptides or polynucleotides.</p>
+      <p id="p-00053-en" num="0072">The term “labile” drug as used herein refers to a drug in which chemical or structural changes occur upon exposure to even benign environmental stresses (e.g., when either warmed to elevated temperatures, such as temperatures greater than physiological temperatures (about 37° C.), or dissolved in an organic solvent or in solution at an aqueous/organic interface) which can result in a substantial loss of (bio) activity and/or the development of unintended or undesired physiological responses. The process of the present invention thus allows the formation of drug delivery constructs maintaining a high degree of drug integrity, for example, protein activity present prior to processing.</p>
+      <p id="p-00054-en" num="0073">The present invention further relates to a multilayer construct comprising at least two drug loaded films fused together and optional at least a non-drug loaded film layered onto or into the fused films whereby the films comprise a bioerodable polymer and whereby the drug loaded films comprise at least a dispersed drug.</p>
+      <p id="p-00055-en" num="0074">The present invention further relates to a multilayer construct obtainable by the process of the present invention.</p>
+      <p id="p-00056-en" num="0075">The multilayer construct is preferably further processed into a subsequently implantable or injectable drug delivery system such as a fiber, rod, disc, coating, tube or rolled film. The construct is therefore shaped via cutting and/or molding into the desired form. The construct preferably has a thickness in the range of 1 micrometer to 1 mm.</p>
+      <p id="p-00057-en" num="0076">The present invention also relates to the use of the multilayer construct in ophthalmology, cardiovascular, pain management, musculoskeletal, cancer treatment, in the central nervous system or in vaccine delivery.</p>
+      <p id="p-00058-en" num="0077">The present invention moreover relates to a process wherein the multilayer construct or the implantable or injectable drug delivery system is used for the release of drugs in ophthalmology, cardiovascular, pain management, musculoskeletal, cancer treatment, in central nerve system or in vaccine delivery.</p>
+      <p id="p-00059-en" num="0078">The invention will now be further and specifically described by the following examples.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00001-en" level="1">FIGURES</heading>
+      <p id="p-00060-en" num="0079">
+        <figref>FIG. 1</figref>: Multi-layer construct as described in Examples 1 and 3.</p>
+      <p id="p-00061-en" num="0080">
+        <figref>FIG. 2</figref>: Multi-layer construct as described in Examples 2 and 4.</p>
+      <p id="p-00062-en" num="0081">
+        <figref>FIG. 3</figref>: Example aqueous SEC-HPLC chromatogram</p>
+      <p id="p-00063-en" num="0082">A) Release sample containing rHGH;</p>
+      <p id="p-00064-en" num="0083">B) Release medium, rHGH elutes at approximately 17 min.</p>
+      <p id="p-00065-en" num="0084">
+        <figref>FIG. 4</figref>: Cumulative release of rhGH from multi-layer polymer devices expressed in percentage of theoretical rHGH-load as measured by aqueous SEC-HPLC in release samples of Examples 1 and 2.</p>
+      <p id="p-00066-en" num="0085">
+        <figref>FIG. 5</figref>: Cumulative release of rhGH from multi-layer polymer devices expressed in percentage of theoretical rHGH load as measured by aqueous SEC-HPLC in release samples of Examples 3 and 4.</p>
+      <p id="p-00067-en" num="0086">
+        <figref>FIG. 6</figref>: Bioactivity assay results; concentration of active rHGH in the cell culture medium as determined by the cell assay. “A” denotes release samples that have been autoclaved prior to introduction to the cell culture medium (negative control). Samples denoted with an asterisk (*): calculated concentrations of “active” rHGH exceed 500 pg/mL.</p>
+      <p id="p-00068-en" num="0087">
+        <figref>FIG. 7</figref>: Schematic representation of the lamination-based solvent extraction method used to generate multi-layer PEA construct containing 8 layers. The first step consists in preparing API loaded films by lamination process, the second step consisting in fusing the different layers together.</p>
+      <p id="p-00069-en" num="0088">
+        <figref>FIG. 8</figref>: SEM transection of a multilayer construct (N=6). The separation in between layers is highlighted by dot-lines. The two external layers are non-loaded polymer films while the 4 central layers are API-loaded.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00002-en" level="1">EXAMPLES</heading>
+      <heading id="h-00003-en" level="2">Necessary Materials:</heading>
+      <p id="p-00070-en" num="0000">
+        <ul id="ul-00011-en" list-style="none">
+          <li>
+            <ul id="ul-00012-en" list-style="none">
+              <li>Polymer solution 1: 6 wt % solution of PEA-III-Ac-Bz in dichloromethane</li>
+              <li>Polymer solution 2: 20 wt % solution of PEA-III-Ac-Bz in Methanol</li>
+              <li>Polymer solution 3: 6 wt % solution of PEA-III-50% H in chloroform</li>
+              <li>Polymer solution 4: 20 wt % solution of PEA-III-50% H in Methanol</li>
+              <li>Solid formulation of API: lyophilized powder of recombinant human growth hormone (rhGH; Genotropin Miniquick 2 mg; Pfizer; Kent, N.J. U.S.A)</li>
+              <li>PDMS sheets: food contact grade, smooth, 1 mm thickness, approx. 10×15 cm</li>
+              <li>Teflon sheet: PTFE coating, plain weave, 70 um thickness.</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <heading id="h-00004-en" level="2">Analytical Methods</heading>
+      <p id="p-00071-en" num="0096">The concentration of rHGH present in release samples was determined through use of aqueous size exclusion—high performance liquid chromatography (SEC-HPLC).</p>
+      <p id="p-00072-en" num="0000">The method used is described below. <ul id="ul-00013-en" list-style="none"><li><ul id="ul-00014-en" list-style="none"><li>Analysis of release samples were carried out on an Agilent 1200 Series system equipped with a TSKgel G2000SWXL 7.8*300 mm (TOSOH Bioscience) column, Col No 2SWX02SS4835.</li><li>Mobile phase: 1.059 mM KH<sub>2</sub>PO<sub>4</sub>, 2.966 mM Na<sub>2</sub>HPO4, 300 mM NaCl, pH=7.4, 10% EtOH (287.16 mg KH<sub>2</sub>PO<sub>4</sub>, 841.1 mg Na<sub>2</sub>HPO<sub>4</sub>, 35.64 g NaCl in 2 L Milli-Q water, pH adjusted at 7.4 with NaOH 1N, 222 mL EtOH)</li><li>Conditions: Flow 0.5 mL/min for 35 minutes, detection at 220, 250 and 280 nm.</li><li>Response factor was calculated from a reference rHGH sample (Genotropin Miniquick 2 mg; Pfizer; Kent, N.J. U.S.A). Response factor was used to calculate the concentration of rHGH in release samples.</li><li>Bioactivity of rHGH present in release samples was assessed by measuring its influence on the proliferation of Nb2 (rat lymphoma) cells.<sup>1 </sup></li><li>The method used is described below:</li><li>Nb2 cells (Sigma-Aldrich) derived from rat T lymphoma cells were cultured in suspension in Fischer's medium supplemented with 10% fetal bovine serum, 10% horse serum, 50 μM 2-mercaptoethanol and 2% penicillin/streptomycin (“culture medium”) in a humidified incubator at 37° C. (5% CO<sub>2</sub>). For proliferation assays, cells growing at log-phase were washed two times with the same medium prepared without fetal bovine serum (“incubation medium”) and kept for 24 hours in this medium.</li><li>Cells were then counted with a Guava Easycyte (Millipore) capillary cytometer using Viacount reagent (Millipore) to stain cells, according to the recommendations of the manufacturer. The cells suspension was diluted in incubation medium to reach 200.000 viable cells per mL. Cells were plated in 96-well plates (100 μL cell suspension per well).</li><li>Samples originating from the release experiments were diluted in incubation medium to reach an expected (according to HPLC quantification) concentration of hGH between 80 and 280 pg/mL (concentration range in which growth of Nb2 cells is hGH concentration-dependent).</li><li>These solutions were split in two aliquots and one aliquot was autoclaved. 100 μL of these solutions were added to the Nb2 cells, and cells were incubated for 72 hours at 37° C.</li><li>After incubation, cells were stained with 50uL Viacount reagent and viable cells were counted by capillary cytometry.</li></ul></li></ul></p>
+      <heading id="h-00005-en" level="1">Example 1</heading>
+      <heading id="h-00006-en" level="1">Multi-Layered Construct: Protein-Loaded Films Based on PEA III Bz (n=8)</heading>
+      <p id="p-00073-en" num="0108">rhGH containing powder (3.7 mg solid containing 2 mg or rhGH) was dosed onto a Teflon sheet, followed by the addition of the polymer solution 1 (˜250 mg). The two components were blended by hand with a spatula until a white, opaque paste was obtained. A PDMS sheet was placed on top of the blended material, the Teflon sheet removed, and a second PDMS sheet was placed on the first. This stack was then pressed by multiple passages through a hand operated roll press. The film was allowed to sit at room temperature for five minutes after which the PDMS sheets were easily peeled away leaving a solid protein-loaded polymer film. This film was then folded tree times and pressed between PDMS sheets through uses of a hand operated roll press. The face of each PDMS sheet was briefly exposed to dichloromethane prior to pressing of the stack. After sitting for two hours at room temperature, the PDMS sheets were easily peeled away leaving a solid multi-layered protein-loaded construct. High vacuum was then applied to the construct at room temperature to remove residual solvent.</p>
+      <heading id="h-00007-en" level="1">Example 2</heading>
+      <heading id="h-00008-en" level="1">Multi-Layered Construct: Protein-Loaded and Non-Loaded Films PEA-III-Bz (n=10)</heading>
+      <p id="p-00074-en" num="0109">Non-loaded, pure polymer thin films were obtained by solvent casting onto a polypropylene sheet. Polymer solution 2 (˜1000 mg) was applied to the substrate and a thin film formed by use of a doctor blade (gap setting ˜150 μm). The film as allowed to sit at room temperature for two hours in order to facilitate solvent removal via evaporation. The resulting non-loaded polymer film had a thickness of approximately 15 μm.</p>
+      <p id="p-00075-en" num="0110">rhGH containing powder (3.7 mg solid containing 2 mg of rhGH) was dosed onto a Teflon sheet, followed by the addition of the polymer solution 1 (˜250 mg). The two components were blended by hand with a spatula until a white, opaque paste was obtained. A PDMS sheet was placed on top of the blended material, the Teflon sheet removed, and a second PDMS sheet was placed on the first. This stack was then pressed by multiple passages through a hand operated roll press. The film was allowed to sit at room temperature for five minutes, after which the PDMS sheets were easily peeled away leaving a solid protein-loaded polymer film. The API-loaded film was then folded tree times and sandwiched between non-loaded polymer thin films that had been prepared previously. This stack was then pressed between PDMS sheets through use of a hand operated roll press. The face of each PDMS sheet was briefly exposed to dichloromethane prior to pressing of the stack. After sitting for two hours at room temperature, the PDMS sheets were easily peeled away leaving a solid multi-layered protein-loaded construct. High vacuum was then applied to the construct at room temperature to remove all residual solvent.</p>
+      <heading id="h-00009-en" level="1">Example 3</heading>
+      <heading id="h-00010-en" level="1">Multi-Layered Construct: Protein-Loaded Films Based on PEA-X (n=8)</heading>
+      <p id="p-00076-en" num="0111">rhGH containing powder (3.7 mg solid containing 2 mg of rhGH) was dosed onto a Teflon sheet, followed by the addition of the polymer solution 3 (˜250 mg). The two components were blended by hand with a spatula until a white, opaque paste was obtained. A PDMS sheet was placed on top of the blended material, the Teflon sheet removed, and a second PDMS sheet was placed on the first. This stack was then pressed by multiple passages through a hand operated roll press. The film was allowed to sit at room temperature for five minutes after which the PDMS sheets were easily peeled away leaving a solid protein-loaded polymer film. This film was then folded tree times and pressed between PDMS sheets through uses of a hand operated roll press. The face of each PDMS sheet was briefly exposed to dichloromethane prior to pressing of the stack. After sitting for two hours at room temperature, the PDMS sheets were easily peeled away leaving a solid multi-layered protein-loaded construct. High vacuum was then applied to the construct at room temperature to remove residual solvent.</p>
+      <heading id="h-00011-en" level="1">Example 4</heading>
+      <heading id="h-00012-en" level="1">Multi-Layered Construct: Protein-Loaded and Non-Loaded Films PEA-X (n=10)</heading>
+      <p id="p-00077-en" num="0112">Non-loaded, pure polymer thin films were obtained by solvent casting onto a polypropylene sheet. Polymer solution 4 (˜1000 mg) was applied to the substrate and a thin film formed by use of a doctor blade (gap setting ˜150 μm). The film as allowed to sit at room temperature for two hours in order to facilitate solvent removal via evaporation. The resulting non-loaded polymer film had a thickness of approximately 15 μm.</p>
+      <p id="p-00078-en" num="0113">rhGH containing powder (3.7 mg solid containing 2 mg of rhGH) was dosed onto a Teflon sheet, followed by the addition of the polymer solution 3 (˜250 mg). The two components were blended by hand with a spatula until a white, opaque paste was obtained. A PDMS sheet was placed on top of the blended material, the Teflon sheet removed, and a second PDMS sheet was placed on the first. This stack was then pressed by multiple passages through a hand operated roll press. The film was allowed to sit at room temperature for five minutes, after which the PDMS sheets were easily peeled away leaving a solid protein-loaded polymer film. The API-loaded film was then folded tree times and sandwiched between non-loaded polymer thin films that had been prepared previously. This stack was then pressed between PDMS sheets through use of a hand operated roll press. The face of each PDMS sheet was briefly exposed to dichloromethane prior to pressing of the stack. After sitting for two hours at room temperature, the PDMS sheets were easily peeled away leaving a solid multi-layered protein-loaded construct. High vacuum was then applied to the construct at room temperature to remove residual solvent.</p>
+      <heading id="h-00013-en" level="2">Release Experimental Details</heading>
+      <p id="p-00079-en" num="0114">Polymer devices containing rhGH (Genotropin Miniquick 2 mg; Pfizer; Kent, N.J. U.S.A) were exposed to predetermined volumes of release medium at 37° C. over set periods of time. The release medium was composed of phosphate buffered saline (pH 7.4) with added Tween 20 (0.3 wt %) and sodium azide (0.1 wt %). After a set period time, during which polymer devices were submerged in the release medium and incubated at 37° C., the total volume of release medium was removed with a mechanical pipette and stored at 4° C. for subsequent analysis (i.e., referred to as release samples). A known volume of fresh release medium was then added to the polymer devices with a mechanical pipette and incubation at 37° C. continued. After set periods of time, the release medium was removed and replaced in the same manner as stated above.</p>
+      <heading id="h-00014-en" level="2">Results</heading>
+      <p id="p-00080-en" num="0115">The concentration of rHGH present in release samples at time points from 1 hour to 395 hours was measured using aqueous SEC-HPLC by correlation of peak area (i.e., 17 min elution volume) to rhGH concentration through use of a calibration curve (<figref>FIG. 3</figref>).</p>
+      <p id="p-00081-en" num="0116">The concentration of rHGH present in release samples was expressed in cumulative percentage of protein release compared to the theoretical rhGH-load in the respective polymer devices (<figref>FIG. 4</figref> for examples 1 and 2; <figref>FIG. 5</figref> for examples 3 and 4). The presence of non-loaded polymer layers on top and bottom of devices (examples 2 and 4) show to reduce significantly the release of protein compared to non-covered devices (examples 1 and 3).</p>
+      <p id="p-00082-en" num="0117">Bioactivity of rHGH released from polymer devices was measured through use of the cell-proliferation assay described above. Release samples were all diluted with and same factor and introduced to the cell culture medium. The effect of rHGH on cell proliferation was measured via cell counting with capillary cytometry. A positive cell response was measured from release samples taken at 1 h indicating that rHGH released from the polymer devices was bioactive (<figref>FIG. 6</figref>). As a negative control, release samples taken at 1 h, were exposed to elevated temperature and pressure (i.e., autoclave) in order to denature and/or deactivate the rHGH. A qualitative difference in cell response to release samples before and after autoclaving was recorded, validating our experimental method.</p>
+      <p id="p-00083-en" num="0118">These results confirm that rHGH present in and subsequently released from the polymer devices is bioactive. These results also confirm that multi-layer constructs can be prepared that demonstrate improved release characteristics such as reduced burst release and prolonged release duration of loaded APIs.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. Process for the manufacturing of a multilayer drug delivery construct comprising at least one drug loaded film manufactured by the following steps:
+<claim-text>(a) dissolving the polymer in a solvent</claim-text><claim-text>(b) mixing the dissolved polymer with a drug</claim-text><claim-text>(c) laminating the mixture between at least two polymeric sheets, whereby at least one polymeric sheet is permeable to the solvent,</claim-text><claim-text>(d) removing the sheets to provide the drug loaded film</claim-text><claim-text>(e) layering the drug loaded film</claim-text><claim-text>(f) fusing the layered film into a multilayer construct</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. Process for the manufacturing of a multilayer construct according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> in which the layering (e) occurs via folding or rolling of one drug loaded film.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. Process for the manufacturing of a multilayer construct according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> whereby at least two drug loaded films are layered.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. Process for the manufacturing of a multilayer construct according to <claim-ref idref="clm-00003-en">claim 3</claim-ref> whereby the drug loaded films may comprise the same or a different polymer and/or the same or a different drug.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. Process for the manufacturing of a multilayer construct according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> in which the multilayer construct further comprises at least a non-drug loaded polymeric film.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. Process for the manufacturing of a multilayer construct according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> in which the non-drug loaded film comprises the same or a different polymer as the drug loaded films.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. Process for the manufacturing of a multilayer construct according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the overall thickness of the multilayer construct ranges from 500 nm-2 cm.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. Process for the manufacturing of a multilayer construct according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> whereby the drug is selected from the group of small molecule drugs or a biologic.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. Process for the manufacturing of a multilayer construct according to <claim-ref idref="clm-00008-en">claim 8</claim-ref> whereby the biologic is selected from the group of proteins, peptides or polynucleotides.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. Process according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> whereby at least one of the polymeric sheets comprises an elastomeric material.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. Process according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> whereby the polymer is a bioerodable or biodegradable polymer selected from the group consisting of polyesters or polyesteramides.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. Process according to <claim-ref idref="clm-00011-en">claim 11</claim-ref> whereby the polymer is selected from a polyesteramide comprising amino-acids.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. Process according to <claim-ref idref="clm-00012-en">claim 12</claim-ref> whereby the polyesteramide (PEA) has a chemical formula according to formula (I),</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00005">
+          <img id="imgc-00001-en" he="56.47mm" wi="158.75mm" alt="embedded image" img-content="chem" file="US20150246001A1_00013.PNG" img-format="png" original="US20150246001A1-20150903-C00005.TIF" />
+        </chemistry>
+      </claim-text>
+      <claim-text>wherein
+<claim-text>m varies from 0.01 to 0.99; p varies from 0 to 0.99; and q varies from 0.99 to 0.01; and wherein n varies from 5 to 100; whereby</claim-text><claim-text>R<sub>1 </sub>is independently selected from the group consisting of (C<sub>2</sub>-C<sub>20</sub>) alkylene, (C<sub>2</sub>-C<sub>20</sub>) alkenylene and combinations thereof;</claim-text><claim-text>R<sub>3 </sub>and R<sub>4 </sub>in a single backbone unit m or p, respectively, are independently selected from the group consisting of hydrogen, (C<sub>1</sub>-C<sub>6</sub>)alkyl, (C<sub>2</sub>-C<sub>6</sub>)alkenyl, (C<sub>2</sub>-C<sub>6</sub>)alkynyl, (C<sub>6</sub>-C<sub>10</sub>)aryl, (C<sub>1</sub>-C<sub>6</sub>)alkyl, —(CH<sub>2</sub>)SH, —(CH<sub>2</sub>)<sub>2</sub>S(CH<sub>3</sub>), —CH<sub>2</sub>OH, —CH(OH)CH<sub>3</sub>, —(CH<sub>2</sub>)<sub>4</sub>NH<sub>3</sub>+, —(CH<sub>2</sub>)<sub>3</sub>NHC(═NH<sub>2</sub>+)NH<sub>2</sub>, —CH<sub>2</sub>COOH, —(CH<sub>2</sub>)COOH, —CH<sub>2</sub>—CO—NH<sub>2</sub>, —CH<sub>2</sub>CH<sub>2</sub>—CO—NH<sub>2</sub>, —CH<sub>2</sub>CH<sub>2</sub>COOH, CH<sub>3</sub>—CH<sub>2</sub>—CH(CH<sub>3</sub>)—, (CH<sub>3</sub>)<sub>2</sub>—CH—CH<sub>2</sub>—, H<sub>2</sub>N—(CH<sub>2</sub>)<sub>4</sub>—, Ph-CH<sub>2</sub>—, CH═C—CH<sub>2</sub>—, HO-p-Ph-CH<sub>2</sub>—, (CH<sub>3</sub>)<sub>2</sub>—CH—, Ph-NH—, NH—(CH<sub>2</sub>)<sub>3</sub>—C—, NH—CH═N—CH═C—CH<sub>2</sub>—.</claim-text><claim-text>R<sub>5 </sub>is selected from the group consisting of (C<sub>2</sub>-C<sub>20</sub>)alkylene, (C<sub>2</sub>-C<sub>20</sub>)alkenylene, alkyloxy or oligoethyleneglycol</claim-text><claim-text>R<sub>6 </sub>is selected from bicyclic-fragments of 1,4:3,6-dianhydrohexitols of structural formula (II);</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00002-en" num="00006">
+          <img id="imgc-00002-en" he="21.93mm" wi="55.63mm" alt="embedded image" img-content="chem" file="US20150246001A1_00014.PNG" img-format="png" original="US20150246001A1-20150903-C00006.TIF" />
+        </chemistry><claim-text>R<sub>7 </sub>is hydrogen, (C<sub>6</sub>-C<sub>10</sub>) aryl, (C<sub>1</sub>-C<sub>6</sub>) alkyl or a protecting group such as benzyl- or a bioactive agent;</claim-text><claim-text>R<sub>8 </sub>is —(CH<sub>2</sub>)<sub>4</sub>—,</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. Process according to <claim-ref idref="clm-00012-en">claim 12</claim-ref> whereby the polyesteramide (PEA) has a chemical formula according to formula (I),</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00003-en" num="00007">
+          <img id="imgc-00003-en" he="56.47mm" wi="158.75mm" alt="embedded image" img-content="chem" file="US20150246001A1_00015.PNG" img-format="png" original="US20150246001A1-20150903-C00007.TIF" />
+        </chemistry>
+      </claim-text>
+      <claim-text>wherein
+<claim-text>m+p varies from 0.9-0.1 and q varies from 0.1 to 0.9 whereby m+p+q=1</claim-text><claim-text>m or p can be 0; a is at least 0.05, b is at least 0.05 whereby a+b=1</claim-text><claim-text>n varies from 5 to 300;</claim-text><claim-text>R<sub>1 </sub>is independently selected from the group consisting of (C<sub>2</sub>-C<sub>20</sub>) alkylene, (C<sub>2</sub>-C<sub>20</sub>) alkenylene and combinations thereof;</claim-text><claim-text>R<sub>3 </sub>and R<sub>4 </sub>in a single backbone unit m or p, respectively, are independently selected from the group consisting of hydrogen, (C<sub>1</sub>-C<sub>6</sub>)alkyl, (C<sub>2</sub>-C<sub>6</sub>)alkenyl, (C<sub>2</sub>-C<sub>6</sub>)alkynyl, (C<sub>6</sub>-C<sub>10</sub>)aryl, (C<sub>1</sub>-C<sub>6</sub>)alkyl, —(CH<sub>2</sub>)SH, —(CH<sub>2</sub>)<sub>2</sub>S(CH<sub>3</sub>), —CH<sub>2</sub>OH, —CH(OH)CH<sub>3</sub>, —(CH<sub>2</sub>)<sub>4</sub>NH<sub>3</sub>+, —(CH<sub>2</sub>)<sub>3</sub>NHC(═NH<sub>2</sub>+)NH<sub>2</sub>, —CH<sub>2</sub>COOH, —(CH<sub>2</sub>)COOH, —CH<sub>2</sub>—CO—NH<sub>2</sub>, —CH<sub>2</sub>CH<sub>2</sub>—CO—NH<sub>2</sub>, —CH<sub>2</sub>CH<sub>2</sub>COOH, CH<sub>3</sub>—CH<sub>2</sub>—CH(CH<sub>3</sub>)—, (CH<sub>3</sub>)<sub>2</sub>—CH—CH<sub>2</sub>—, H<sub>2</sub>N—(CH<sub>2</sub>)<sub>4</sub>—, Ph-CH<sub>2</sub>—, CH═C—CH<sub>2</sub>—, HO-p-Ph-CH<sub>2</sub>—, (CH<sub>3</sub>)<sub>2</sub>—CH—, Ph-NH—, NH—(CH<sub>2</sub>)<sub>3</sub>—C—, NH—CH═N—CH═C—CH<sub>2</sub>—.</claim-text><claim-text>R<sub>5 </sub>is selected from the group consisting of (C<sub>2</sub>-C<sub>20</sub>)alkylene, (C<sub>2</sub>-C<sub>20</sub>)alkenylene, alkyloxy or oligoethyleneglycol</claim-text><claim-text>R<sub>6 </sub>is selected from bicyclic-fragments of 1,4:3,6-dianhydrohexitols of structural formula II</claim-text><claim-text>R<sub>7 </sub>is selected from the group consisting of (C<sub>6</sub>-C<sub>10</sub>) aryl (C<sub>1</sub>-C<sub>6</sub>) alkyl</claim-text><claim-text>R<sub>8 </sub>is —(CH<sub>2</sub>)<sub>4</sub>—;</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. Process according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> in which the multilayer construct is further processed into a subsequent implantable or injectable drug delivery system such as a fiber, rod, disc, coating, tube or rolled film.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. Process according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the multilayer construct or the implantable or injectable drug delivery system is used for the release of drugs in ophthalmology, cardiovascular, pain management, musculoskeletal, cancer treatment, in central nerve system or in vaccine delivery. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246001A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246001A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246001A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246001A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246001A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246001A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246001A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246001A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246001A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246001A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150246001A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246001A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150246001A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246001A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150246001A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246001A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150246001A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246001A1-20150903-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150246001A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246001A1-20150903-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150246001A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246001A1-20150903-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150246001A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246001A1-20150903-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150246001A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246001A1-20150903-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150246001A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246001A1-20150903-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150246001A1_00015.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246001A1-20150903-C00007.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150246001A1.PDF" type="pdf" size="810160" pages="20" />
+</lexisnexis-patent-document>

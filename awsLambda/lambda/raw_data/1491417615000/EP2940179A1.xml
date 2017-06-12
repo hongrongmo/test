@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940179A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091247" date-changed="20160119" time-changed="112331">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121940640">
+        <country>EP</country>
+        <doc-number>2940179</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13868160</doc-number>
+        <date>20131219</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>spa</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>ES</country>
+        <doc-number>201232063</doc-number>
+        <date>20121228</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>ES</country>
+        <doc-number>201232063</doc-number>
+        <kind>A</kind>
+        <date>20121228</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>ES</country>
+        <doc-number>2013070901</doc-number>
+        <kind>W</kind>
+        <date>20131219</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>201232063</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013070901</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>ES20120032063</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2013ES70901</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150619</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20160119">
+      <classification-ipcr sequence="1">
+        <text>C23C  14/22        20060101AFI20160105BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>14</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160105</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C23C  14/24        20060101ALI20160105BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>14</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160105</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C23C  14/26        20060101ALI20160105BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>14</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160105</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160119">
+      <classification-cpc sequence="1">
+        <text>C23C  16/4485      20130101 FI20151122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>4485</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C23C  14/22        20130101 LI20151104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>14</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C23C  14/243       20130101 LI20151218BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>14</main-group>
+        <subgroup>243</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151218</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C23C  14/26        20130101 LI20151104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>14</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C23C  16/4481      20130101 LI20151123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>4481</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C23C  16/46        20130101 LI20151122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>46</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">13</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">VERDAMPFUNGSQUELLE ZUM TRANSPORT CHEMISCHER VORLÄUFER SOWIE VERDAMPFUNGSVERFAHREN ZUM TRANSPORT CHEMISCHER VORLÄUFER UNTER VERWENDUNG DIESER QUELLE</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">EVAPORATION SOURCE FOR TRANSPORTING CHEMICAL PRECURSORS, AND EVAPORATION METHOD FOR TRANSPORTING CHEMICAL PRECURSORS USING SAID SOURCE</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">SOURCE D'ÉVAPORATION POUR LE TRANSPORT DE PRÉCURSEURS CHIMIQUES, ET PROCÉDÉ D'ÉVAPORATION POUR LE TRANSPORT DE CES PRÉCURSEURS QUI UTILISENT CETTE SOURCE</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Abengoa Solar New Technologies, S.A.</orgname>
+            <registered-number>101333126</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Campus Palmas Atlas Calle Energía Solar 1</address-1>
+              <city>41014 Sevilla</city>
+              <country>ES</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>SANCHO MARTINEZ, Diego</name>
+            <address>
+              <address-1>Campus Palmas Altas C/Energía Solar 1</address-1>
+              <city>E-41014 Sevilla</city>
+              <country>ES</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>DELGADO SANCHEZ, José María</name>
+            <address>
+              <address-1>Campus Palmas Altas C/Energía Solar 1</address-1>
+              <city>E-41014 Sevilla</city>
+              <country>ES</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>MARQUEZ PRIETO, José Antonio</name>
+            <address>
+              <address-1>Campus Palmas Altas C/Energía Solar 1</address-1>
+              <city>E-41014 Sevilla</city>
+              <country>ES</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>SANCHEZ CORTEZON, Emilio</name>
+            <address>
+              <address-1>Campus Palmas Altas C/Energía Solar 1</address-1>
+              <city>E-41014 Sevilla</city>
+              <country>ES</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Carvajal y Urquijo, Isabel et al</name>
+            <registered-number>101463264</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Clarke, Modet &amp; Co. Suero de Quiñones, 34-36</address-1>
+              <city>28002 Madrid</city>
+              <country>ES</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>ES13070901</doc-number>
+        <date>20131219</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014102423</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151119">
+      <main-family family-id="166463820">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014102423</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131219</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150118089</doc-number>
+            <kind>A</kind>
+            <date>20151021</date>
+          </document-id>
+          <application-date>
+            <date>20131219</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104919079</doc-number>
+            <kind>A</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20131219</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940179</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131219</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2480865</doc-number>
+            <kind>A1</kind>
+            <date>20140728</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2480865</doc-number>
+            <kind>B1</kind>
+            <date>20150520</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150329962</doc-number>
+            <kind>A1</kind>
+            <date>20151119</date>
+          </document-id>
+          <application-date>
+            <date>20131219</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166463819">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014102423</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131219</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150118089</doc-number>
+            <kind>A</kind>
+            <date>20151021</date>
+          </document-id>
+          <application-date>
+            <date>20131219</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104919079</doc-number>
+            <kind>A</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20131219</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940179</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131219</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2480865</doc-number>
+            <kind>A1</kind>
+            <date>20140728</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2480865</doc-number>
+            <kind>B1</kind>
+            <date>20150520</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150329962</doc-number>
+            <kind>A1</kind>
+            <date>20151119</date>
+          </document-id>
+          <application-date>
+            <date>20131219</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0001">The invention presents an evaporation source for transporting chemical precursors to a substrate on which the latter are deposited by means of condensation, formed by a principal tube (1) which houses the precursors in its lower part, and which has heating means (8). An inlet (5) and an outlet (6) for carrier gases is arranged in the upper part of the principal tube (1), said inlet (5) and outlet (6) being located on the lateral surface (7) of the principal tube (1), opposing each other and aligned along a common line which passes transversally through the lateral surface (7) of the principal tube (1).</p>
+    <p id="p-a-00002-en" num="0002">The invention also presents a method of evaporation for transporting chemical precursors in which introducing and extracting the carrier gases from the principal tube (1) is carried out in alignment in a direction transversal to the lateral surface (7) of the latter.<img id="imga-00001-en" wi="78" he="70" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">
+      <b>Field of the invention</b>
+    </heading>
+    <p id="p-00001-en" num="0001">The present invention belongs to the technical field of the deposition of chemical precursors on a substrate, specifically to the techniques of deposition by means of transporting evaporated precursors by means of carrier gases towards the substrate (VTD, Vapor Transport Deposition), applied, for example for creating coatings or in the manufacture of photovoltaic cells. The invention relates in particular to an evaporation source for transporting chemical precursors to a substrate and to the method of evaporation for transporting these chemical precursors which uses the aforementioned source.</p>
+    <heading id="h-00002-en">
+      <b>Background of the invention</b>
+    </heading>
+    <p id="p-00002-en" num="0002">At present, there are different deposition techniques which use the transportation of the evaporated precursors, or elements to be deposited, to a substrate on which they are deposited by condensation, and which are used in numerous applications such as coatings or the manufacture of photovoltaic cells.</p>
+    <p id="p-00003-en" num="0003">CSS (Close Space Sublimation) is an evaporation technique which is based on heating precursors until its evaporation and the condensation of these on a substrate which is placed directly on top of the evaporator. Therefore, this technique does not use any entrainment or carrier gas to transport the evaporated precursors in a gaseous state from one point to another.</p>
+    <p id="p-00004-en" num="0004">However, the technique for transporting the evaporated precursors by means of carrier gases (VTD, Vapor Transport Deposition) is an evaporation technique similar to CSS but with the unique feature that an entrainment or carrier gas is used to transport the evaporated precursors from the evaporation source to the substrate, which is located at a determined distance and in a fixed position. This technique enables the deposition of precursors on substrates arranged at considerable distances from the evaporation source.</p>
+    <p id="p-00005-en" num="0005">In this VTD technique, the usual design for the inlet and outlet of the gases in the evaporation source is carried out through the upper part of the latter and perpendicular to the surface on which the precursors are located. Generally the precursors are located on the lower part of a principal hollow tube and the inlet and outlet tubes for the carrier gases are located in the upper part of the tube, orientated towards the precursors, that is to say, in a direction parallel to the longitudinal direction of the tube. This design has the problem that when the carrier gases directly impinge on the substrate, they actually impact the latter, creating a turbulent flow, and end up entraining solid unevaporated substances from the precursor. Therefore, the deposition on the substrate will not be what was expected in terms of quantity and quality, and in addition, these solid substances, which the carrier gases transport, can end up obstructing the transport tubes for the carrier gas, damaging the equipment and affecting its functioning.</p>
+    <p id="p-00006-en" num="0006">An evaporation system for transporting chemical precursors has therefore become desirable, which provides a smooth controlled entrainment and in a regime which is as laminar as possible, preventing the entrainment of solid unevaporated particles from the precursor, preventing the drawbacks existing in the systems of the prior art and a suitable control of the concentration of the evaporated precursor in the carrier gas, as well as reducing the consumption of said carrier gas.</p>
+    <heading id="h-00003-en">
+      <b>Description of the invention</b>
+    </heading>
+    <p id="p-00007-en" num="0007">The present invention resolves the problems existing in the prior art by means of an evaporation source for transporting chemical precursors to a substrate on which these precursors are deposited by means of condensation. The source is formed by a principal tube with lower and upper removable caps for easy access to all the parts of its interior. The principal tube can be made of stainless steel, copper, titanium etc., coated or not with some type of alloy to offer better tolerance to temperature and corrosion. This coating can be nickel, vanadium, molybdenum, chrome or other mixtures of materials. The tube can have dimensions from 10 up to 100 millimeters in diameter, or as the case may be, even up to 1000 millimeters in diameter, depending on the quantity of precursor and the rate of deposition which is required. The height of the tube can vary depending on the configuration of the inlet for the carrier gases and on the quantity of precursor which is going to be evaporated; it can be from 10 up to 100 millimeters or greater if required.</p>
+    <p id="p-00008-en" num="0008">The tube houses in its interior the precursors which are going to be evaporated and transported by means of carrier or entrainment gases.</p>
+    <p id="p-00009-en" num="0009">The precursors which can be used must have chemical characteristics suitable for them to evaporate given the physical limits which they can reach through the tools used. Examples of precursors may be halides, such as chlorides or fluorides of copper, gallium, selenium, indium, zinc, magnesium sulfate, cadmium sulfate, tellurium sulfate, etc. The choice of the precursor materials to be evaporated will depend on which material is to be formed on the substrate when condensing the transported precursors.</p>
+    <p id="p-00010-en" num="0010">Specifically, these precursors are housed in the lower part of the tube, while in the upper part of the latter an inlet is arranged, through which a carrier gas inlet tube is connected to the interior of the principal tube and an outlet, through which a carrier gas outlet tube is connected to the interior of the principal tube; the carrier gases, already with the precursors evaporated, circulate through this tube to be transported to the substrate.</p>
+    <p id="p-00011-en" num="0011">Both the gas inlet tube to the principal tube and the gas outlet tube, in a conventional manner, can be made of stainless steel, copper, titanium, etc., coated or not with some type of alloy to offer better tolerance to temperature and corrosion. This coating can be nickel, vanadium, molybdenum, chrome or other mixtures of materials. These inlet and outlet tubes can have dimensions from 1 up to 10 millimeters in diameter, or even up to 100 millimeters in diameter as the case or requirements may be, depending on the quantity of precursors and the rate of deposition which is desired to be obtained. The length of this tube depends on the distance the evaporated precursors have to be transported.</p>
+    <p id="p-00012-en" num="0012">The gas inlet and outlet tubes can be connected to the principal tube directly into orifices made in the latter for this purpose, or joined to the principal tube by different means, such as by means of screwing, by means of welding, or using intermediate connectors previously joined to orifices made in the principal tube.</p>
+    <p id="p-00013-en" num="0013">Conventionally, the entrainment system can have a vacuum system which causes the gases to flow better through the tubes. That is to say an entrainment system can be used that is formed exclusively by gases, whereby the gases are injected through one end of the gas inlet tube, while extraction thereof through the rear end of the gas outlet is not facilitated, or a dual system can be used in which, at the same time as gases are injected, extraction thereof is assisted through the outlet tube. Depending on the system selected, it is possible to have one or another process pressure, which facilitates or hinders the aim to be achieved.</p>
+    <p id="p-00014-en" num="0014">In terms of the carrier or entrainment gases, these can conventionally be argon, nitrogen, oxygen, any noble gas, hydrogen, fluorine, chlorine or some mixture of the aforementioned gases. The gas flows used can be from 1 up to 200 sccm (standard cubic centimeters per minute) or even up to 1000 sccm as required.</p>
+    <p id="p-00015-en" num="0015">In order to successfully evaporate the precursors, the evaporation source, which is the object of the present invention, has heating means connected to the lateral surface of the principal tube which can consist of a resistor coiled around the principal tube or inserted therein or one or a number of heating lamps arranged externally to the tube.</p>
+    <p id="p-00016-en" num="0016">These heating means can preferably be coated with a thermally insulating and non-conductive material, such as for example a ceramic material to avoid fluctuations in the selected temperature.</p>
+    <p id="p-00017-en" num="0017">In order to control the temperature in the interior and on the exterior of the principal tube, temperature gauges are provided (thermocouples, PT1000, etc.) inside and/or outside of the latter. These gauges are preferably resistant to corrosion.</p>
+    <p id="p-00018-en" num="0018">Specifically, in the present invention, the inlet and outlet are arranged on the lateral surface of the principal tube, opposing each other and aligned along a common line which passes transversally through the lateral surface of the principal tube. Preferably, the inlet and outlet are aligned along a common line perpendicular to the lateral surface of the principal tube. Given that the inlet and outlet tube are preferably arranged forming a right angle with the principal tube, the circulation of the carrier gases is essentially parallel to the surface on which the precursors are arranged and at a considerable distance from the latter.</p>
+    <p id="p-00019-en" num="0019">Preferably the inlet and outlet are arranged in alignment along a common line perpendicular to the lateral surface of the principal tube and diametrically opposed with respect to the axis of the principal tube, although said inlet and outlet can also have a slight deviation in angle.</p>
+    <p id="p-00020-en" num="0020">In this way, the carrier gases enter the principal tube without impacting the precursors and separated at a certain distance from the latter. Furthermore, the gases enter in a direction parallel to the surface of the precursors which are evaporated. Thus the evaporated material ascends through the principal tube and meets the carrier gas flow and the carrier gases only collect the evaporated precursors, maintaining a laminar regime, or as close as possible to this, and exit through the outlet of the principal tube, being driven to the substrate on which the deposition is carried out by means of condensation.</p>
+    <p id="p-00021-en" num="0021">Therefore, the source object of the invention, has the advantage that, owing to its configuration, the carrier gas does not move or entrain solid unevaporated substances from the precursor. Therefore, it prevents the solid particles from being entrained by the carrier gas toward the substrate, which would alter the deposition of the precursor onto the latter. Furthermore, it also prevents part of the solid entrained particles from obstructing the pipes, leading them to become blocked and damaged, as occurs in the devices existing in the prior art.</p>
+    <p id="p-00022-en" num="0022">There are different alternatives for the passage between the inlet and the outlet for the carrier gases.</p>
+    <p id="p-00023-en" num="0023">According to one of them, the gas inlet tube is connected to the inlet and the gas outlet tube to the outlet of the principal tube, and in the interior of said principal tube there is no physical communication between the inlet and the outlet, the gases passing from the inlet to the outlet through the interior of the tube directly. Thus, the gas inlet and outlet tubes are fixed to the exterior face of the principal tube, the interior of said principal tube being hollow.</p>
+    <p id="p-00024-en" num="0024">Alternatively, the inlet and the outlet of the principal tube can be connected through the interior of the latter by means of a straight through-connection tube, which has at least one opening or various indentations on the area shared with the principal tube. In this way, the flow continues to be as laminar as possible and attempts to entrain the greatest possible quantity of evaporated precursor.</p>
+    <p id="p-00025-en" num="0025">According to a different alternative, the source has one or a plurality of separation elements in the interior of the principal tube, in the form of a plate or sheet, which separates the lower part from the upper part of the latter. This separation element has indentations or holes. Thus, there is an isolated area in the upper part of the principal tube where the gas inlet and outlet tubes are arranged such that they are fixed to the exterior face of this principal tube. The evaporated precursors pass through the indentations or holes of the separation element and reach the entrainment flow.</p>
+    <p id="p-00026-en" num="0026">Additionally, the present invention relates to a method of evaporation for transporting chemical precursors, which uses the source previously described. In this method, the precursors are arranged in the lower part of the principal tube and heating of the precursors is carried out by means of the heating means of the principal tube until they evaporate. Furthermore, carrier gases are introduced by means of an inlet tube connected to the inlet of the principal tube, and the carrier gases are extracted together with the evaporated precursors by means of an outlet tube connected to the outlet of the principal tube. This introduction and extraction of the carrier gases from the principal tube is carried out in alignment and in a direction transversal to the lateral surface of the principal tube, preferably in a direction perpendicular to the lateral surface of the principal tube.</p>
+    <p id="p-00027-en" num="0027">Therefore, by means of the method, which is the object of the present invention, the solid particles of the precursor are prevented from being entrained by the carrier gas to the substrate, altering the deposition of the precursors on the latter and furthermore the solid particles entrained by the carrier gas are prevented from obstructing the pipes, damaging the latter and affecting the deposition, as occurs in the methods existing in the prior art. Furthermore, with this arrangement of the inlet and outlet tubes, the evaporation of the precursors is facilitated due to the pressure difference which is produced by the Venturi effect.</p>
+    <p id="p-00028-en" num="0028">By means of the source and the method of the present invention, it is verified that the transported mass of evaporated precursor is high, approximately 100%, when the transport of the solid-state precursor disappears almost completely, which confirms the efficiency of the present invention.</p>
+    <heading id="h-00004-en">Brief description of the drawings</heading>
+    <p id="p-00029-en" num="0029">In order to make the invention more readily understandable, an embodiment of the invention is described below in an illustrative and non-limiting manner, with reference to a series of figures. <ul id="ul-00001-en" list-style="none" compact="compact"><li><figref>Figure 1a</figref> is a perspective view of an evaporation source for transporting chemical precursors existing in the prior art. <figref>Figure 1b</figref> is a plan view of the source of <figref>Fig. 1a. Figure 1c</figref> is an elevation view of the source of <figref>Figures 1a and 1b</figref>.</li><li><figref>Figure 2a</figref> is a perspective view of an embodiment of an evaporation source for transporting chemical precursors which is the object of the present invention. <figref>Figure 2b</figref> is a plan view of the source of <figref>Figure 2a. Figure 2c</figref> is an elevation view of the source of <figref>Figures 2a and 2b</figref>.</li><li><figref>Figure 3a</figref> is a perspective view of an alternative embodiment of an evaporation source for transporting chemical precursors which is the object of the present invention. <figref>Figure 3b</figref> is a plan view in cross section. <figref>Figure 3c</figref> is a cross-sectional elevation view of the source of <figref>Figures 3a and 3b</figref>.</li><li><figref>Figure 4a</figref> is a perspective view of another, different embodiment of an evaporation source for transporting chemical precursors which is the object of the present invention. <figref>Figure 4b</figref> is a plan view in cross section. <figref>Figure 4c</figref> is a cross-section view of the source of <figref>Figures 4a and 4b</figref>.</li></ul></p>
+    <p id="p-00030-en" num="0030">In these figures, reference is made to a group of elements which are: <ol><li>1. principal tube</li><li>2. caps of the principal tube</li><li>3. lower part of the principal tube</li><li>4. upper part of the principal tube</li><li>5. inlet of the principal tube</li><li>6. outlet of the principal tube</li><li>7. lateral surface of the principal tube</li><li>8. heating means</li><li>9. carrier gas inlet tube</li><li>10. carrier gas outlet tube</li><li>11. connection tube of the inlet and outlet of the principal tube</li><li>12. opening of the connection tube</li><li>13. separation element of the principal tube</li><li>14. indentations or holes of the separation element</li></ol></p>
+    <heading id="h-00005-en">Detailed description of the invention</heading>
+    <p id="p-00031-en" num="0031">An object of the present invention is an evaporation source for transporting chemical precursors to a substrate on which the chemical precursors are deposited by means of condensation.</p>
+    <p id="p-00032-en" num="0032">As can be observed in the figures, the source, which is the object of the present invention, is formed by a hollow principal tube 1 with lower and upper removable caps 2 to provide access to its interior, which houses the precursors.</p>
+    <p id="p-00033-en" num="0033">Particularly, the principal tube 1 is made of a metallic material which can be stainless steel, copper, titanium or a combination of a number of these. Furthermore, a coating made of an alloy of such elements as nickel, vanadium, molybdenum, chrome and a combination of these may be present.</p>
+    <p id="p-00034-en" num="0034">The principal tube is divided into a lower part 3 in which the precursors are housed and an upper part 4.</p>
+    <p id="p-00035-en" num="0035">In the upper part 4, an inlet 5 is arranged, through which a carrier gas inlet tube 9 is connected to the interior of the principal tube 1 and an outlet 6 through which a carrier gas outlet tube 10 is connected to the interior of the principal tube 1. Particularly the gas inlet 9 and outlet 10 tubes can be connected directly to the principal tube 1, to the inlet 5 and outlet 6, respectively, or joined to the principal tube 1 by different means such as by means of screwing, by means of welding or using intermediate connectors previously joined to the inlet 5 and the outlet 6 of the principal tube 1.</p>
+    <p id="p-00036-en" num="0036">The heating means 8 are connected to the lateral surface 7 of the principal tube 1 and cause the precursors to evaporate.</p>
+    <p id="p-00037-en" num="0037">In a particular manner, as has been previously indicated, the heating means 8 can be formed by a resistor arranged around the principal tube 1 already coiled or inserted therein. Alternatively, the heating means 8 can consist of at least one heating lamp arranged externally to the principal tube 1.</p>
+    <p id="p-00038-en" num="0038">In order to control the temperature in the interior and on the exterior of the principal tube 1, gauges (thermocouples for example) can be used, arranged both in the interior and on the exterior of the latter.</p>
+    <p id="p-00039-en" num="0039">In the present invention, the inlet 5 and outlet 6 of the principal tube 1 are arranged on the lateral surface of the latter, opposing each other, and aligned along a common line which passes transversally though the lateral surface 7 of the principal tube 1. Preferably, as shown in the figures, the inlet 5 and outlet 6 are arranged in alignment along a common line arranged perpendicularly to the lateral surface 7 of the principal tube 1.</p>
+    <p id="p-00040-en" num="0040">As has been indicated previously, there are different alternatives for the connection between the inlet 5 and the outlet 6 for the carrier gases.</p>
+    <p id="p-00041-en" num="0041">According to one of these alternatives, the gas inlet tube 9 is connected to the inlet 5 and the gas outlet tube 10 is connected to the outlet 6 of the principal tube 1 and in the interior of said principal tube 1 there is no physical communication between the inlet 5 and outlet 6, the gases passing from the inlet 5 to the outlet 6 directly through the interior of the principal tube 1. Thus the gas inlet 9 and outlet 10 tubes are fixed to the exterior face of the principal tube 1, the interior of said principal tube 1 being hollow. This embodiment is shown in <figref>Figures 2a, 2b and 2c</figref>.</p>
+    <p id="p-00042-en" num="0042">Alternatively, the inlet 5 and outlet 6 of the principal tube 1 can be connected through the interior of the latter by means of a straight through-connection tube 11 which has at least one opening 12 or various indentations in the area shared with the principal tube 1. In this way, the flow continues to be as laminar as possible and entrains the greatest quantity of evaporated precursor. This embodiment is shown in <figref>figures 3a, 3b and 3c</figref>.</p>
+    <p id="p-00043-en" num="0043">According to a different alternative, the source has a separation element 13 in the interior of the principal tube 1 in the form of a plate or sheet which separates the lower part 3 from the upper part 4 of the latter. This separation element 13 has indentations or holes 14. Thus there will be an isolated area in the upper part 4 of the principal tube 1 where the gas inlet 9 and outlet 10 tubes are arranged so as to be fixed to the exterior face of this principal tube 1. The evaporated precursors pass through the indentations or holes 14 of the separation element 13 and reach the carrier or entrainment flow.</p>
+    <p id="p-00044-en" num="0044">The advantage which the use of this separation element 13 has is that although part of the precursor material remains in solid state when it has not been evaporated and although the flow created by the carrier gas may entrain this solid state precursor, the latter is retained by the separation element 13, which acts as a safety element. Furthermore, this separation element 13 ensures that the carrier gas flow is in a laminar regime and is not turbulent, therefore producing lower thermal and transport losses. This makes the heating and entrainment processes more efficient.</p>
+    <p id="p-00045-en" num="0045">
+      <figref>Figures 4a, 4b and 4c</figref> show a particular embodiment of the evaporation source of the present invention which has both the straight through-connection tube 11 with at least one opening 12, as well as the separation element 13 in the interior of the principal tube.</p>
+    <p id="p-00046-en" num="0046">A preferred embodiment of the source, which is the object of the present invention, will be described in detail below.</p>
+    <p id="p-00047-en" num="0047">A hollow stainless steel tube is used as the principal tube 1, being 100 millimeters in height and with caps 2 of DN25 diameter at the ends.</p>
+    <p id="p-00048-en" num="0048">Around the principal tube 1, a coiled resistor is arranged to provide heat. A 1.5 kW/m resistor is used which allows a maximum temperature greater than 700° C to be reached.</p>
+    <p id="p-00049-en" num="0049">Preferably, the principal tube 1 is insulated by means of an insulating material to avoid temperature fluctuations, although it can also be made without an insulator. The insulating material can be composed of a material with a ceramic fiber base surrounded by an aluminum sleeve or composed of a low-emissivity material for the principal tube 1 and surrounded by a sleeve to which a vacuum is applied, preventing losses by conduction, or composed of a refractory ceramic material.</p>
+    <p id="p-00050-en" num="0050">In the upper part 4 of the principal tube 1, the inlet 5 and outlet 6 are arranged, both in line, said line transversal to the principal tube 1 forming a certain angle with the latter, preferably a right angle.</p>
+    <p id="p-00051-en" num="0051">Conventionally, in the inlet 5, the carrier gas inlet tube 9 is connected, and in the outlet 6, the carrier gas outlet tube 10 is connected. Both tubes 9 and 10 are made of polished stainless steel and have a diameter of 3/8 of an inch, although other diameters or configurations could be used. Conventionally, around these tubes 9 and 10, a coiled resistor is arranged for providing heat. A 1.5 kW/m resistor is used, which allows a maximum temperature greater than 700° C to be reached.</p>
+    <p id="p-00052-en" num="0052">By means of placing an insulator around the tubes 9 and 10, temperature fluctuations are prevented. This insulator is made of ceramic fiber surrounded by an aluminum sleeve.</p>
+    <p id="p-00053-en" num="0053">Additionally, gauges (thermocouples for example) are placed in the interior and on the exterior of the vertical tube as well as in the interior and on the exterior of the tubes 9 and 10 to control the temperature at all times.</p>
+    <p id="p-00054-en" num="0054">Another object of the present invention is a method of evaporation for transporting chemical precursors which uses the source previously described.</p>
+    <p id="p-00055-en" num="0055">In order to carry out said method, firstly the precursors to be evaporated are placed in the lower part 3 of the principal tube 1 of the source, and said precursors are heated by means of the heating means 8 of the principal tube 1 until they are successfully evaporated.</p>
+    <p id="p-00056-en" num="0056">The carrier gases are introduced into the interior of the principal tube 1 by means of an inlet tube 9 which is connected to the inlet 5 of the tube 1 and are extracted together with the evaporated precursors from the interior of the principal tube 1 by means of an outlet tube 10 connected to the outlet 6.</p>
+    <p id="p-00057-en" num="0057">In the method, which is the object of the invention, the introduction and extraction of the gases from the principal tube 1 is carried out in alignment in a direction transversal to the lateral surface 7 of the principal tube 1, preferably in a direction perpendicular to the lateral surface of this principal tube 1. In this way, the carrier gases enter the principal tube 1 without impacting against the precursors and are separated at a certain distance from the latter. Furthermore, the gases enter in a direction parallel to the surface of the precursors which are evaporated. Thus the evaporated material ascends through the principal tube 1 and meets the carrier gas flow, which gases only collect the evaporated precursors, maintaining a laminar regime or as close as possible thereto, and exit through the outlet 6 of the principal tube, being driven toward the substrate, on which the deposition is carried out by means of condensation.</p>
+    <p id="p-00058-en" num="0058">A preferred embodiment of the method, which is the object of the invention, is described in detail below.</p>
+    <p id="p-00059-en" num="0059">The coiled 1.5 kW/m resistor 8 is connected to the principal tube 1, providing the latter with a temperature of 450° C.</p>
+    <p id="p-00060-en" num="0060">5 grams of solid CuCl precursor are poured into the interior of the principal tube, which, with a molar mass of 98.999 g/mol, means 0.05 moles of this precursor.</p>
+    <p id="p-00061-en" num="0061">A flow control system together with a valve and the source of the entrainment gases is placed in the entrainment gas inlet tube 9.</p>
+    <p id="p-00062-en" num="0062">After the gas outlet tube 10, the process chamber is placed in series with this element, in which the sample holders are arranged, where the evaporated precursor will be deposited. After the process chamber, a 1000-l/s turbomolecular pump is arranged, with a valve for stopping or activating the latter, as well as a guillotine valve as required. In turn, after this pump a 100-m<sup>3</sup>/h rotor is arranged. By means of this configuration, a base vacuum pressure of less than 1x10<sup>-5</sup> Pa can be reached.</p>
+    <p id="p-00063-en" num="0063">The entrainment or carrier gas is an inert gas, in this case argon. The gas flow will be such that it is required to work at a pressure of 1x10<sup>-1</sup> Pa. A flow of 200 sccm (standard cubic centimeters per minute) is estimated, and the turbomolecular pump will be restricted such that the system is at this pressure.</p>
+    <p id="p-00064-en" num="0064">At the given temperature and knowing the chemical properties of the precursor, a vapor pressure of 120.63 Pa is achieved.</p>
+    <p id="p-00065-en" num="0065">With a flow of 200 sccm, a process pressure of 1x10<sup>-1</sup> Pa, and an internal temperature of the gases and precursors of 450° C, the quantity of precursor at the outlet of the outlet tube 10 is approximately 1.43x10<sup>-2</sup> g/s, also disregarding any possible condensation along the tube 10 and along the principal tube 1.</p>
+    <p id="p-00066-en" num="0066">According to the foregoing, and assuming: <ul id="ul-00002-en" list-style="dash" compact="compact"><li>Atomic mass:    98.999 g/mol</li><li>Density:    15.0 g/cm<sup>3</sup></li><li>Precursor radius:    10 mm</li><li>Evaporator radius:    30 mm</li><li>Guide/source distance:    50 mm</li><li>Guide radius:    8 mm</li><li>Evaporator height:    100 mm</li><li>Solid precursor:    50%</li><li>All of the evaporated precursor will be transported.</li></ul></p>
+    <p id="p-00067-en" num="0067">The copper atoms are deposited on the substrate at a deposition rate of 7.17x 10<sup>-2</sup> g/s. The chlorine atoms have more affinity among themselves and once the bond has been formed, they are in the form of a gas, being extracted from the process chamber by the pumping system.</p>
+    <p id="p-00068-en" num="0068">The theoretic evaporation rate of CuCl in g/s is shown below for the different temperatures, maintaining the previous parameters at a constant, except the vapor pressure which changes with temperature. Note that for those vapor pressures which are less than the process pressure, evaporation does not occur. <tables id="tables-00001-en" num="0001"><table frame="none"><tgroup cols="3" colsep="0" rowsep="0"><colspec colnum="1" colname="col1" colwidth="29mm" /><colspec colnum="2" colname="col2" colwidth="34mm" /><colspec colnum="3" colname="col3" colwidth="35mm" /><thead><row><entry align="center" valign="top">Temperature (°C)</entry><entry align="center" valign="top">Vapor pressure (Pa)</entry><entry align="center" valign="top">Evaporation rate (g/s)</entry></row></thead><tbody><row><entry align="center">100</entry><entry align="center">3.2E-09</entry><entry align="center">-</entry></row><row><entry align="center">125</entry><entry align="center">7.5E-08</entry><entry align="center">-</entry></row><row><entry align="center">150</entry><entry align="center">1.2E-06</entry><entry align="center">-</entry></row><row><entry align="center">175</entry><entry align="center">1.4E-05</entry><entry align="center">-</entry></row><row><entry align="center">200</entry><entry align="center">1.3E-04</entry><entry align="center">-</entry></row><row><entry align="center">225</entry><entry align="center">9.7E-04</entry><entry align="center">-</entry></row><row><entry align="center">250</entry><entry align="center">5.9E-03</entry><entry align="center">-</entry></row><row><entry align="center">275</entry><entry align="center">3.0E-02</entry><entry align="center">-</entry></row><row><entry align="center">300</entry><entry align="center">1.3E-01</entry><entry align="center">4.65E-06</entry></row><row><entry align="center">325</entry><entry align="center">5.3E-01</entry><entry align="center">5.63E-05</entry></row><row><entry align="center">350</entry><entry align="center">1.9E-00</entry><entry align="center">2.27E-04</entry></row><row><entry align="center">375</entry><entry align="center">6.0E-00</entry><entry align="center">7.38E-04</entry></row><row><entry align="center">400</entry><entry align="center">1.8E+01</entry><entry align="center">2.15E-03</entry></row><row><entry align="center">425</entry><entry align="center">4.8E+01</entry><entry align="center">5.75E-03</entry></row><row><entry align="center">450</entry><entry align="center">1.2E+02</entry><entry align="center">1.43E-02</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00069-en" num="0069">Once clearly described the present invention, it must be noted that the details of the particular embodiments described above may be modified, provided that the fundamental principle and the essence of the invention are not altered.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>An evaporation source for transporting chemical precursors to a substrate on which the precursors are deposited by means of condensation, the source comprising
+<claim-text>- a principal hollow tube (1) with lower and upper removable caps (2) which houses the precursors in its interior and which in turn comprises
+<claim-text>- a lower part (3) in which the precursors are housed,</claim-text><claim-text>- and an upper part (4) in which there are arranged:
+<claim-text>- an inlet (5) through which a carrier gas inlet tube (9) is connected to the interior of the principal tube (1),</claim-text><claim-text>- and an outlet (6) through which a carrier gas outlet tube (10) is connected to the interior of the principal tube (1),</claim-text></claim-text></claim-text><claim-text>- and heating means (8) connected to the lateral surface (7) of the principal tube (1) which cause the precursors to evaporate, said evaporation source for transporting chemical precursors being <b>characterized in that</b> the inlet (5) and outlet (6) are arranged on the lateral surface (7) of the principal tube (1) aligned along a common line which passes transversally through the lateral surface (7) of the principal tube (1).</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The evaporation source for transporting chemical precursors according to claim 1, characterized in that the inlet (5) and the outlet (6) are arranged in alignment along a common line perpendicular to the lateral surface (7) of the principal tube (1) and diametrically opposed with respect to the axis of the principal tube (1).</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The evaporation source for transporting chemical precursors according to any of the preceding claims, characterized in that<claim-text>- the inlet (5) and outlet (6) of the principal tube (1) are connected through the interior of the latter by means of a straight connection tube (11),</claim-text><claim-text>- and in that said connection tube (11) comprises at least one opening (12).</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The evaporation source for transporting chemical precursors according to any of the claims 1 to 3, characterized in that<claim-text>- it comprises at least one separation element (13) in the interior of the principal tube (1) which separates the lower part (3) from the upper part (4) of the latter,</claim-text><claim-text>- and in that said separation element (13) comprises at least one hole (14).</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The evaporation source for transporting chemical precursors according to any of the preceding claims, characterized in that the principal tube (1) is made of a metallic material selected from among stainless steel, copper, titanium and a combination of the aforementioned materials.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The evaporation source for transporting chemical precursors according to any of the preceding claims, characterized in that the principal tube (1) comprises a coating made of an alloy of elements selected from among nickel, vanadium, molybdenum, chrome and a combination of the aforementioned elements.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The evaporation source for transporting chemical precursors according to any of the preceding claims, characterized in that the heating means (8) comprise a resistor arranged around the principal tube (1).</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The evaporation source for transporting chemical precursors according to any of the claims 1 to 6, characterized in that the heating means (8) comprise at least one heating lamp arranged externally to the principal tube (1).</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The evaporation source for transporting chemical precursors according to any of the preceding claims, characterized in that it comprises thermocouples arranged in a location selected from among the interior and the exterior of the principal tube (1) and a combination of both for controlling the temperature.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>A method of evaporation for transporting chemical precursors which uses the source of claims 1 to 9 which comprises the steps of
+<claim-text>- arranging precursors in the lower part (3) of the principal tube (1) of the source,</claim-text><claim-text>- heating the precursors by means of heating means (8) of the principal tube (1) to evaporate the former,</claim-text><claim-text>- introducing carrier gases into the interior of the principal tube (1) by means of an inlet tube (9) connected to the inlet (5) of said principal tube (1),</claim-text><claim-text>- and extracting the carrier gases together with the evaporated precursors from the interior of the principal tube (1) by means of an outlet tube (10) connected to the outlet (6) of said principal tube (1), said method of evaporation for transporting chemical precursors being characterized in that introducing and extracting the gases from the principal tube (1) is carried out in alignment in a direction transversal to the lateral surface (7) of the principal tube (1).</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>The method of evaporation for transporting chemical precursors according to claim 10, characterized in that introducing and extracting the gases from the principal tube (1) is carried out in alignment in a direction perpendicular to the lateral surface (7) of the principal tube (1) and diametrically opposed with respect to the axis of the principal tube (1).</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>The method of evaporation for transporting chemical precursors according to any of the claims 10 to 11, characterized in that the carrier gases introduced into the interior of the principal tube (1) are selected from among argon, nitrogen, oxygen, any noble gas, hydrogen, fluorine, chlorine and a combination of the aforementioned gases.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>The method of evaporation for transporting chemical precursors according to any of the claims 10 to 12, characterized in that the precursors arranged in the lower part (3) of the principal tube (1) of the source are halides.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940179A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940179A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940179A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940179A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0003.tif" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2940179A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0004.tif" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2940179A1_00006.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2940179A1.PDF" type="pdf" size="286921" pages="14" />
+</lexisnexis-patent-document>

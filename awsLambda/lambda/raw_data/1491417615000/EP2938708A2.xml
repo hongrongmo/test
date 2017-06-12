@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2938708A2.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091150" date-changed="20151110" time-changed="083713">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published without search report">
+      <document-id id="121940061">
+        <country>EP</country>
+        <doc-number>2938708</doc-number>
+        <kind>A2</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13870409</doc-number>
+        <date>20131227</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>US</country>
+        <doc-number>61746835</doc-number>
+        <date>20121228</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>US</country>
+        <doc-number>201261746835</doc-number>
+        <kind>P</kind>
+        <date>20121228</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>US</country>
+        <doc-number>2013077962</doc-number>
+        <kind>W</kind>
+        <date>20131227</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>201261746835 P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013077962</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US201261746835P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2013US77962</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150417</date>
+      </request-for-examination>
+      <first-examination-report-despatched>
+        <date>20150108</date>
+      </first-examination-report-despatched>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151110">
+      <classification-ipcr sequence="1">
+        <text>C10G  45/58        20060101AFI20150420BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>45</main-group>
+        <subgroup>58</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150420</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C10G   3/00        20060101ALI20150420BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>3</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150420</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C10L   1/02        20060101ALI20150420BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150420</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C10L   1/04        20060101ALI20150420BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150420</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151110">
+      <classification-cpc sequence="1">
+        <text>C10L   1/04        20130101 FI20140703BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140703</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C10G   3/46        20130101 LI20140827BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>3</main-group>
+        <subgroup>46</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140827</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C10G   3/47        20130101 LI20140827BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>3</main-group>
+        <subgroup>47</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140827</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C10G   3/49        20130101 LI20141119BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>3</main-group>
+        <subgroup>49</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141119</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C10G   3/50        20130101 LI20140827BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>3</main-group>
+        <subgroup>50</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140827</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C10G  45/58        20130101 LI20140827BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>45</main-group>
+        <subgroup>58</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140827</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C10G2300/301       20130101 LA20141121BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>2300</main-group>
+        <subgroup>301</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20141121</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C10G2300/304       20130101 LA20141121BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>2300</main-group>
+        <subgroup>304</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20141121</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C10G2400/08        20130101 LA20140827BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>2400</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140827</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>Y02P  30/20        20151101 LA20151103BHEP        </text>
+        <cpc-version-indicator>
+          <date>20151101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>P</subclass>
+        <main-group>30</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151103</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">MISCHEN VON ENTWACHSTEN BIOKRAFTSTOFFEN MIT MINERALBASIERTEN KERO(JET)-DESTILLATSCHNITTEN ZUR BEREITSTELLUNG VON ON-SPEC-DÜSENTREIBSTOFFEN</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">BLENDING OF DEWAXED BIOFUELS WITH MINERAL-BASED KERO(JET) DISTILLATE CUTS TO PROVIDE ON-SPEC JET FUELS</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">MÉLANGE DE BIOCARBURANTS DÉPARAFFINÉS AVEC DES FRACTIONS DE DISTILLATS DE KÉROSÈNE (AVIATION) MINÉRAUX POUR FORMER DES CARBURANTS AVIATION RÉPONDANT AUX SPÉCIFICATIONS</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>ExxonMobil Research and Engineering Company</orgname>
+            <registered-number>100120313</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>1545 Route 22 East P.O. Box 900</address-1>
+              <city>Annandale, NJ 08801-0900</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>ABDALLAH, David, J.</name>
+            <address>
+              <address-1>559 Sentinel Road</address-1>
+              <city>Moorestown, NJ 08057</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>HOSKIN, Dennis, H.</name>
+            <address>
+              <address-1>19 Maple Tree Drive</address-1>
+              <city>Westhampton, NJ 08060</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>GAUGHAN, Roger, G.</name>
+            <address>
+              <address-1>64 Stratton Lane</address-1>
+              <city>Sewell, NJ 08080</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>WELLS, Paul, P.</name>
+            <address>
+              <address-1>18 Hasting Drive</address-1>
+              <city>Mullica Hill, NJ 08062</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5">
+          <addressbook lang="eng">
+            <name>NOORMAN, Mike, T.</name>
+            <address>
+              <address-1>2120 Chestnut Lane</address-1>
+              <city>Cinnaminson, NJ 08077</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6">
+          <addressbook lang="eng">
+            <name>JOHNSTON, Gary, J.</name>
+            <address>
+              <address-1>4709 Lewis Woods Court</address-1>
+              <city>Chantilly, VA 20151</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7">
+          <addressbook lang="eng">
+            <name>POIRIER, Marc-Andre</name>
+            <address>
+              <address-1>101 Paul Slogget Court</address-1>
+              <city>Sarnia, ON N7W 1C1</city>
+              <country>CA</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="8">
+          <addressbook lang="eng">
+            <name>ROCKWELL, Gregory, P.</name>
+            <address>
+              <address-1>1348 Errol Road E.</address-1>
+              <city>Sarnia, ON N7S 5H9</city>
+              <country>CA</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>ExxonMobil Chemical Europe Inc.</name>
+            <registered-number>101482725</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>IP Law Europe Hermeslaan 2</address-1>
+              <city>1831 Machelen</city>
+              <country>BE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US13077962</doc-number>
+        <date>20131227</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014149117</doc-number>
+        <date>20140925</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151104">
+      <main-family family-id="167858240">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2938708</doc-number>
+            <kind>A2</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014149117</doc-number>
+            <kind>A3</kind>
+            <date>20150108</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2889005</doc-number>
+            <kind>A1</kind>
+            <date>20140925</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014149117</doc-number>
+            <kind>A2</kind>
+            <date>20140925</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="167858239">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2938708</doc-number>
+            <kind>A2</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014149117</doc-number>
+            <kind>A3</kind>
+            <date>20150108</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2889005</doc-number>
+            <kind>A1</kind>
+            <date>20140925</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014149117</doc-number>
+            <kind>A2</kind>
+            <date>20140925</date>
+          </document-id>
+          <application-date>
+            <date>20131227</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151105" lang="eng" format="equivalent" country="US" doc-number="2014187827" kind="A1">
+    <p>The present invention describes a method of making a jet fuel composition comprising: providing a mineral-based kero/jet-type distillate component having certain enumerated physico-chemical properties, typically an off-spec jet fuel; providing a deoxygenated and dewaxed renewable component derived from triglycerides and/or fatty acids and having an isoparaffin to normal paraffin ratio from about 2:1 to about 6:1 and an aromatics content less than about 1 vol %; and blending from about 75 vol % to about 97 vol % of the mineral-based distillate components with from about 3 vol % to about 25 vol % of the renewable component to form an on-spec blended jet fuel composition.</p>
+  </abstract>
+</lexisnexis-patent-document>

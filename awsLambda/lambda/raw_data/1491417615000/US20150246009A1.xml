@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246009A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021251" date-changed="20160127" time-changed="023620">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139118">
+        <country>US</country>
+        <doc-number>20150246009</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14430423</doc-number>
+        <date>20130503</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>IN</country>
+        <doc-number>2934MUM2012</doc-number>
+        <date>20121008</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>A61K  31/137       20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>137</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K   9/00        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61K  47/02        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>A61K  31/137       20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>137</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K   9/0019      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>0019</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K  47/02        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">9</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">Stable injectable pharmaceutical composition of epinephrine or salts thereof</invention-title>
+    <references-cited date-changed="20160127">
+      <patent-citations name="patcit" date-changed="20160127" />
+      <non-patent-citations name="nplcit" date-changed="20160127" />
+      <citation>
+        <patcit num="1" dnum="US2008269347A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080269347</doc-number>
+            <kind>A1</kind>
+            <name>BRUSS JON [US], et al</name>
+            <date>20081030</date>
+          </document-id>
+          <application-date>
+            <date>20070928</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="WO2010139751A2" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2010139751</doc-number>
+            <kind>A2</kind>
+            <name>ALK AG [CH], et al</name>
+            <date>20101209</date>
+          </document-id>
+          <application-date>
+            <date>20100603</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>EPIPEN/EPIPEN JR. Physician's Desk Reference (61st Edition). 2007. Page 1061.</text>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>WOCKHARDT LIMITED</orgname>
+            <role>03</role>
+            <address>
+              <city>Aurangabad 0,</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Gupta</last-name>
+            <first-name>Amit</first-name>
+            <address>
+              <city>Faridabad 2,</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Nagori</last-name>
+            <first-name>Rajendra Nandlal</first-name>
+            <address>
+              <city>Aurangabad 0,</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Merwade</last-name>
+            <first-name>Arvind Yekanathsa</first-name>
+            <address>
+              <city>Belgaum 582102,</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Deo</last-name>
+            <first-name>Keshav</first-name>
+            <address>
+              <city>Vadodara 1,</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Jain</last-name>
+            <first-name>Girish Kumar</first-name>
+            <address>
+              <city>Delhi 4,</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>IB13053520</doc-number>
+        <date>20130503</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014057365</doc-number>
+        <date>20140417</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="165159009">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246009</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130503</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014057365</doc-number>
+            <kind>A1</kind>
+            <date>20140417</date>
+          </document-id>
+          <application-date>
+            <date>20130503</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013328393</doc-number>
+            <kind>A1</kind>
+            <date>20150409</date>
+          </document-id>
+          <application-date>
+            <date>20130503</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2886241</doc-number>
+            <kind>A1</kind>
+            <date>20140417</date>
+          </document-id>
+          <application-date>
+            <date>20130503</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104703587</doc-number>
+            <kind>A</kind>
+            <date>20150610</date>
+          </document-id>
+          <application-date>
+            <date>20130503</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>2934MUM2012</doc-number>
+            <kind>A</kind>
+            <date>20140411</date>
+          </document-id>
+          <application-date>
+            <date>20121008</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165159008">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246009</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130503</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014057365</doc-number>
+            <kind>A1</kind>
+            <date>20140417</date>
+          </document-id>
+          <application-date>
+            <date>20130503</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013328393</doc-number>
+            <kind>A1</kind>
+            <date>20150409</date>
+          </document-id>
+          <application-date>
+            <date>20130503</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2886241</doc-number>
+            <kind>A1</kind>
+            <date>20140417</date>
+          </document-id>
+          <application-date>
+            <date>20130503</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104703587</doc-number>
+            <kind>A</kind>
+            <date>20150610</date>
+          </document-id>
+          <application-date>
+            <date>20130503</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>2934MUM2012</doc-number>
+            <kind>A</kind>
+            <date>20140411</date>
+          </document-id>
+          <application-date>
+            <date>20121008</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention refers to a stabilized injectable pharmaceutical composition of epinephrine or salts thereof comprising sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight. It has been observed that stable injectable epinephrine compositions with excellent storage stability and substantially free of overages can be prepared using sodium metabisulfite in said ratios. Particularly, it was found that using sodium metabisulfite in said ratios controls levels of adrenaline sulfonate impurity in said pharmaceutical compositions.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a stabilized injectable pharmaceutical composition of epinephrine or salts thereof comprising sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight. It has been observed that stable injectable epinephrine compositions with excellent storage stability and substantially free of overages can be prepared using sodium metabisulfite in said ratios. Particularly, it was found that using sodium metabisulfite in said ratios controls levels of adrenaline sulfonate impurity in said pharmaceutical compositions.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">Epinephrine, also known as adrenaline, is a sympathomimetic catecholamine. Chemically, epinephrine is B-(3,4dihydroxyphenyl)-a-methyl-amino ethanol.</p>
+      <p id="p-00003-en" num="0003">Epinephrine is the drug of choice for the initial treatment of anaphylaxis. Many epinephrine products are commerically available currently. For instance, epinephrine is marketed in the United States in the form of intramuscular and subcutaneous injection under trade name Twinject®, Auvi-Q®, EpiPen® Auto-Injector, which contains 0.3 mg epinephrine, and EpiPen® Jr Auto-Injector, which contains 0.15 mg epinephrine.</p>
+      <p id="p-00004-en" num="0004">It is well known in the art that there is an issue with potency of epinephrine (both in free base form and ionic form) when used in presence of oxygen and free radicals i.e degradation of epinephrine is accelerated in the presence of oxygen and free radicals.</p>
+      <p id="p-00005-en" num="0005">Numerous studies have been conducted to address the effect of formulation variables on the epinephrine degradation kinetics, and attempts have been made to improve the formulation stability.</p>
+      <p id="p-00006-en" num="0006">U.S. Pat. No. 3,149,035 discloses use of bisulphite and boric acid to enhance stability of the catechol amines.</p>
+      <p id="p-00007-en" num="0007">U.S. Pat. No. 3,966,905 discloses catecholamine solutions at mild pH are suitable for physiological use.</p>
+      <p id="p-00008-en" num="0008">Several literatures suggests that there is an increase in stability of epinephrine when stored in gas-tight containers with an inert gas (e.g. nitrogen) purging, and/or limiting or protecting the epinephrine formulation from direct light exposure or storing in a secondary opaque package. Inspite of using sodium metabisulfite controlling the degradation of epinephrine however continues to be an issue. In addition, interaction of sodium metabisulfite with epinephrine further leads to complications.</p>
+      <p id="p-00009-en" num="0009">Currently marketed products of epinephrine as discussed above includes sodium metabisulfite as an antioxidant as it prevents degradation of the product due to oxidation that may take place during manufacturing, filling, storage, and environmental influence on the formulation.</p>
+      <p id="p-00010-en" num="0010">Currently marketed products of epinephrine i.e EpiPen® Auto-Injector containing 0.3 mg epinephrine and EpiPen® Jr Auto-Injector containing 0.15 mg of epinephrine comprises of same amount of sodium metabisulfite i.e. 0.5 mg. It is also observed that EpiPen® Jr Auto-Injector product generally degrades relatively faster than that in EpiPen® Auto-Injector, presumably due to exposure of the product to substantial vacant space left in the cartridge.</p>
+      <p id="p-00011-en" num="0011">Moreover, Currently marketed products of epinephrine i.e the EpiPen® Auto-Injector products contains more than about 20% of the epinephrine overages. This is in order to compensate the amount of epinephrine degraded during manufacture or over storage. Such overages however, may either lead to undesirable side effects due to dose inaccuracy or generate more degradation products in the product.</p>
+      <p id="p-00012-en" num="0012">Further, currently marketed products contain 0.3 mg or 0.15 mg in 2.0 ml solution, of which only 0.3 ml is injected and rest 1.7 ml is discarded, which leads to lots of wastage.</p>
+      <p id="p-00013-en" num="0013">Since said product is used in severe anaphylactic reactions, so controlling impurities and improvement of stability is critical. Hence, there exists an enduring need for improved and stable pharmaceutical composition of epinephrine, which exhibits excellent storage stability and does not require addition of epinephrine overages.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00014-en" num="0014">In one aspect, the present invention provides a stabilized injectable pharmaceutical composition comprising epinephrine or salt thereof and sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight.</p>
+      <p id="p-00015-en" num="0015">In another aspect, the present invention provides a stabilized injectable pharmaceutical composition comprising epinephrine or salt thereof and sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight characterized in that said composition contains epinephrine having purity equal to or greater than 98%.</p>
+      <p id="p-00016-en" num="0016">In another aspect, the present invention provides a stabilized injectable pharmaceutical composition comprising epinephrine or salt thereof and sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight characterized in that said composition contains total impurity of 4% or less.</p>
+      <p id="p-00017-en" num="0017">In another aspect, the present invention provides a stabilized injectable pharmaceutical composition comprising epinephrine or salt thereof and sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight characterized in that said composition contains no single impurity of greater than 3%.</p>
+      <p id="p-00018-en" num="0018">In another aspect, the present invention provides a stabilized injectable pharmaceutical composition comprising epinephrine or salt thereof and sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight characterized in that said composition contains adrenaline sulfonate impurity of about 3.0% or less at RRT 0.15.</p>
+      <p id="p-00019-en" num="0019">In another aspect, the present invention provides a stabilized injectable pharmaceutical composition comprising epinephrine or salt thereof and sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight characterized in that said composition contains noradrenaline impurity of about 0.1% or less.</p>
+      <p id="p-00020-en" num="0020">In another aspect, the present invention provides a stabilized injectable pharmaceutical composition comprising epinephrine or salt thereof and sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight characterized in that said composition contains adrenalone impurity of about 0.5% or less.</p>
+      <p id="p-00021-en" num="0021">In another aspect, the present invention provides a stabilized injectable pharmaceutical composition comprising epinephrine or salt thereof and sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight characterized in that said composition contains N-benzyl adrenalone impurity of about 0.1% or less.</p>
+      <p id="p-00022-en" num="0022">In another aspect, the present invention provides a stabilized injectable pharmaceutical composition comprising epinephrine or salt thereof and sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight characterized in that said composition contains impurity observed at RRT 0.17, RRT 0.2, or RRT 0.73 of about 0.5% or less.</p>
+      <p id="p-00023-en" num="0023">In another aspect, the present invention provides a stabilized injectable pharmaceutical composition comprising epinephrine or salt thereof and sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight characterized in that said composition contains retains at least 90% w/w of total potency of epinephrine after storage at 25° C. and 60% relative humidity for at least 3 months.</p>
+      <p id="p-00024-en" num="0024">In another aspect, the present invention provides a stabilized injectable pharmaceutical composition comprising epinephrine or salt thereof, sodium metabisulfite, one or more tonicity-adjusting agents, one or more pH adjusting agents, aqueous vehicle, and optionally one or more other pharmaceutically acceptable excipients, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight.</p>
+      <p id="p-00025-en" num="0025">In another aspect, the present invention provides a process for preparation of stable injectable pharmaceutical composition comprising epinephrine or salt thereof, which process comprises of mixing epinephrine or salt thereof, sodium metabisulfite, aqueous vehicle, and optionally one or more other pharmaceutically acceptable excipients, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight.</p>
+      <p id="p-00026-en" num="0026">In another aspect, the present invention provides use of a stable injectable pharmaceutical composition comprising epinephrine or salt thereof and sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight for the preparation of medicaments useful for treating allergic reactions (Type I) including anaphylaxis to stinging insects and biting insects, allergen immunotherapy, foods, drugs, diagnostic testing substances and other allergens, as well as idiopathic anaphylaxis or exercise-induced anaphylaxis, comprising administering to human patient in need thereof.</p>
+      <p id="p-00027-en" num="0027">In another aspect, the present invention provides a stabilized injectable pharmaceutical composition comprising 0.3 mg of epinephrine or salt thereof and 0.3 mg of sodium metabisulfite in 0.3 ml of solution, wherein the said 0.3 ml of solution is delivered completely in single injection.</p>
+      <p id="p-00028-en" num="0028">In another aspect, the present invention provides a stabilized injectable pharmaceutical composition comprising 0.15 mg of epinephrine or salt thereof and 0.3 mg of sodium metabisulfite in 0.3 ml of solution, wherein the said 0.3 ml of solution is delivered completely in single injection.</p>
+      <p id="p-00029-en" num="0029">Embodiments of the pharmaceutical composition may include one or more of the following features. For example, the pharmaceutically acceptable excipients may include solubilizers, anti-oxidants, buffering agents, pH adjusting agents, co-solvents, chelating agents, stabilizers, preservatives, lubricants, tonicity adjusting agents, cryoprotectants and the like known to the art used either alone or in combination thereof.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00030-en" num="0030">The inventors of the present invention have surprisingly found that while making an injectable composition of epinephrine, amount of sodium metabisulfite plays a critical role in order to control degradation due to oxidation as well as in controlling impurities. It was surprisingly found that epinephrine reacts with sodium metabisulfite, thereby leading to formation of adrenaline sulfonate impurity. In particular, the inventors have found that judicial amount of sodium metabisulfite can effectively curb the oxidation of epinephrine and eventually control generation of sulfonate impurity along with a wide range of several other epinephrine impurities. As a result, inventors of the present invention have found a novel way of preparing the injectable pharmaceutical composition of epinephrine which can exhibit excellent storage stability.</p>
+      <p id="p-00031-en" num="0031">The inventors of the present invention further surprisingly found that judicial amount of sodium metabisulfite can retain epinephrine potency in the composition during the manufacture as well as over the storage period, thus may eliminate the need of adding epinephrine overages.</p>
+      <p id="p-00032-en" num="0032">The present invention relates to novel and stabilized injectable pharmaceutical compositions of epinephrine and process of preparing such compositions.</p>
+      <p id="p-00033-en" num="0033">The stabilized injectable pharmaceutical composition of the present invention comprises epinephrine or salt thereof and sodium metabisulfite, characterized in that the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight.</p>
+      <p id="p-00034-en" num="0034">The stabilized injectable pharmaceutical composition of the present invention comprises epinephrine or salt thereof and sodium metabisulfite, characterized in that the composition is substantially free of epinephrine overages.</p>
+      <p id="p-00035-en" num="0035">The term “epinephrine” used throughout the specification refers to not only epinephrine per se, but also its pharmaceutically acceptable salts, pharmaceutically acceptable solvates, pharmaceutically acceptable hydrates, pharmaceutically acceptable enantiomers, pharmaceutically acceptable derivatives, pharmaceutically acceptable polymorphs and pharmaceutically acceptable prodrugs thereof.</p>
+      <p id="p-00036-en" num="0036">The term “substantially free” used throughout the specification refers to pharmaceutical compositions of epinephrine comprising less than about 10% by weight of epinephrine overages.</p>
+      <p id="p-00037-en" num="0037">The “stabilized injectable pharmaceutical composition” of the present invention refers to injectable compositions characterized by epinephrine having purity equal to or greater than 98% by weight or total impurity of 4% or less or no single impurity of greater than 3% or adrenaline sulfonate impurity of about 3.0% or less at RRT 0.15 or noradrenaline impurity of about 0.1% or less or adrenalone impurity of about 0.5% or less or N-benzyl adrenalone impurity of about 0.1% or less.</p>
+      <p id="p-00038-en" num="0038">In an embodiment, the stabilized injectable pharmaceutical composition of the present invention retains at least 90% w/w of total potency of epinephrine after storage at 25° C. and 60% relative humidity for at least 3 months.</p>
+      <p id="p-00039-en" num="0039">Extent of the stability have been observed to be more pronounced on four specific impurities (RRT 0.15, RRT 0.17, RRT 0.20, and RRT 0.73) out of a large number of impurities that affect the stability not only in the presence or absence of sodium metabisulfite but also under normal atmospheric condition, or inert atmosphere, or the exposure to oxygen. Some of the specific impurities formed which had a significant influence on the stability are as given below.</p>
+      <p id="p-00040-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="217.51mm" wi="41.32mm" alt="embedded image" img-content="chem" file="US20150246009A1_00001.PNG" img-format="png" original="US20150246009A1-20150903-C00001.TIF" />
+        </chemistry>
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="120.90mm" wi="41.99mm" alt="embedded image" img-content="chem" file="US20150246009A1_00002.PNG" img-format="png" original="US20150246009A1-20150903-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00041-en" num="0040">In an embodiment, the stabilized injectable pharmaceutical composition comprises total impurity of about 4% or less when stored at 25° C. and 60% relative humidity for at least 3 months.</p>
+      <p id="p-00042-en" num="0041">In another embodiment, the stabilized injectable pharmaceutical composition comprises adrenaline sulfonate impurity of about 3% or less when stored at 25° C. and 60% relative humidity for at least 3 months.</p>
+      <p id="p-00043-en" num="0042">In a further embodiment, the stabilized injectable pharmaceutical composition comprises noradrenaline impurity of about 0.05% or less when stored at 25° C. and 60% relative humidity for at least 3 months.</p>
+      <p id="p-00044-en" num="0043">In a further embodiment, the stabilized injectable pharmaceutical composition comprises adrenalone impurity of about 0.3% or less when stored at 25° C. and 60% relative humidity for at least 3 months.</p>
+      <p id="p-00045-en" num="0044">In a further embodiment, the stabilized injectable pharmaceutical composition comprises N-benzyl adrenalone impurity of about 0.05% or less when stored at 25° C. and 60% relative humidity for at least 3 months.</p>
+      <p id="p-00046-en" num="0045">In a further embodiment, the stabilized injectable pharmaceutical composition comprises impurity observed at RRT 0.17, RRT 0.20, or RRT 0.73 of about 0.5% or less when stored at 25° C. and 60% relative humidity for at least 3 months.</p>
+      <p id="p-00047-en" num="0046">Various methods of analyzing (characterization and quantification) the impurities are well established in the art. Various spectoroscopic techniques, such as NMR, MS, IR etc. and chromatographic techniques, such as HPLC, HPLC-TLC, HPLC-CE and hyphenated methods, such as LC-MS-MS, HPLC-DAD-MS, HPLC-NMR, GC-MS &amp; LC-MS can be used for analyzing impurities.</p>
+      <p id="p-00048-en" num="0047">Related substances of Epinephrine were performed by reverse phase chromatography using Cosmosil AR-II, C-18, (250×4.6) mm, 5 μm columns. All impurities were separated in gradient mode with resolution more than 3.0. The detection was carried out at optimum wavelength 210 nm</p>
+      <p id="p-00049-en" num="0048">The pharmaceutical composition of the present invention may be developed in the form of a dosage form suitable of parenteral administration. The parenteral route of administration of the compositions comprises subcutaneous, intramuscular, intravenous, transdermal, intradermal, intranasal, intraarterial and intraperitoneal injection or infusion. In an embodiment the injection includes aqueous vehicle based injection and oil based injection (e.g. depot injection).</p>
+      <p id="p-00050-en" num="0049">The pharmaceutical composition of the present invention further comprises various pharmaceutically acceptable excipients suitable for parenteral administration. Such excipient includes, but not limited to pH adjusting agents or buffers, co-solvents, chelating agents, isotonicity adjusting agents, preservatives, and aqueous vehicle.</p>
+      <p id="p-00051-en" num="0050">Examples of suitable pH adjusting agents includes, but not limited to hydrochloric acid, citric acid, ascorbic acid, acetic acid, tartaric acid, phosphoric acid, metaphosphoric acid, polymetaphosphoric acid, carbonic acid, sodium hydroxide, potassium hydroxide, sodium citrate, potassium citrate, sodium bicarbonate, potassium bicarbonate, ammonium carbonate, sodium hydrogen phosphate, potassium hydrogen phosphate, ethanolamine, diethanolamine, triethanolamine, hexane-1,2-diamine, sodium carbonate, sodium potassium tartrate, potassium metaphosphate, potassium polymetaphosphate, and sodium metaphosphate. The pH of the pharmaceutical composition preferably ranges from 2.2 to 5.0.</p>
+      <p id="p-00052-en" num="0051">Examples of suitable buffers includes, but not limited to pharmaceutically acceptable salts and acids of acetate, glutamate, citrate, tartrate, benzoate, lactate, histidine or other amino acids, gluconate, phosphate, malate, succinate, formate, propionate, and carbonate.</p>
+      <p id="p-00053-en" num="0052">Examples of suitable co-solvents includes, but not limited to ethanol, glycerol, propylene glycol, polyethylene glycol, and different oils.</p>
+      <p id="p-00054-en" num="0053">Examples of suitable chelating agents includes, but not limited to calcium ethylenediaminetetraacetic acid (EDTA), calcium diethylenetriaminepentaacetic acid (DTPA), calcium hydroxyethylenediaminetriacetic acid (HEDTA), calcium ethylene glycol-bis-(2-aminoethyl)-N,N,N′,N′-tetraacetic acid (EGTA), calcium nitrilotriacetic acid (NTA), calcium citrate, and calcium salt derivatives thereof.</p>
+      <p id="p-00055-en" num="0054">Examples of suitable isotonicity adjusting agents includes, but not limited to anhydrous or hydrous forms of sodium chloride, dextrose, sucrose, xylitol, fructose, glycerol, sorbitol, mannitol, potassium chloride, mannose, calcium chloride, magnesium chloride and other inorganic salts.</p>
+      <p id="p-00056-en" num="0055">The pharmaceutical composition of the present invention may be hypotonic, isotonic or hypertonic. In an embodiment, the pharmaceutical composition have a tonicity from about 250 to about 350 mOsm/kg.</p>
+      <p id="p-00057-en" num="0056">Examples of suitable preservative include, but not limited to benzyl alcohol, propyl and methyl paraben.</p>
+      <p id="p-00058-en" num="0057">The present invention also provides for a process of manufacturing aqueous epinephrine compositions. The process involves mixing epinephrine, sodium metabisulfite, water, and optionally other pharmaceutically acceptable excipients together.</p>
+      <p id="p-00059-en" num="0058">The composition may be rendered non-pyrogenic, if required, by passing through Tangential Flow Filtration System (TFF) before sterilization. The composition may be sterilized by membrane filter of 0.22 μm pore size.</p>
+      <p id="p-00060-en" num="0059">The process of manufacturing the aqueous epinephrine compositions of the present invention further may comprises sterilization of the composition. The compositions may be sterilized by known and acceptable methods. In an embodiment, the composition is sterilized by filtering through a sterilizing grade filter. Preferably, the solution is filtered through 0.2 μm sterilizing grade filters.</p>
+      <p id="p-00061-en" num="0060">After sterilization, it may be desirable to aseptically place the filtered solutions into sterile containers such as vials, ampoules, or cartridges of the pre-filled syringes. In an embodiment, after aseptically placing the filtered solution into the cartridge of prefilled syringes, the air in the cartridge is purged with an inert gas, such as nitrogen, and then the filled cartridge is sealed in the pre-filled syringe.</p>
+      <p id="p-00062-en" num="0061">The present invention further refers to the use of the above defined composition for the preparation of medicaments useful for treating allergic reactions (Type I) including anaphylaxis to stinging insects (e.g., order Hymenoptera, which include bees, wasps, hornets, yellow jackets and fire ants) and biting insects (e.g., triatoma, mosquitos), allergen immunotherapy, foods, drugs, diagnostic testing substances (e.g., radiocontrast media) and other allergens, as well as idiopathic anaphylaxis or exercise-induced anaphylaxis.</p>
+      <p id="p-00063-en" num="0062">The present invention is further illustrated by the following examples which are provided merely to be exemplary of the invention and do not limit the scope of the invention. Certain modifications and equivalents will be apparent to those skilled in the art and are intended to be included within the scope of the present invention.</p>
+      <heading id="h-00005-en" level="1">Example 1</heading>
+      <heading id="h-00006-en" level="1">Epinephrine Injection 0.3 mg/0.3 mL</heading>
+      <p id="p-00064-en" num="0063" />
+      <p id="p-00065-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="center" />
+              <colspec colname="2" colwidth="63pt" align="left" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <colspec colname="4" colwidth="70pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Sr.</entry>
+                  <entry />
+                  <entry>Composition A</entry>
+                  <entry>Composition B</entry>
+                </row>
+                <row>
+                  <entry>No.</entry>
+                  <entry>Ingredient</entry>
+                  <entry>Qty. (% w/v)</entry>
+                  <entry>Qty. (% w/v)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="center" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <colspec colname="4" colwidth="70pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>1.</entry>
+                  <entry>Epinephrine</entry>
+                  <entry>0.3</entry>
+                  <entry>0.3</entry>
+                </row>
+                <row>
+                  <entry>2.</entry>
+                  <entry>Sodium chloride</entry>
+                  <entry>1.8</entry>
+                  <entry>1.8</entry>
+                </row>
+                <row>
+                  <entry>3.</entry>
+                  <entry>Sodium</entry>
+                  <entry>0.3</entry>
+                  <entry>0.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>metabisulfite</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>4.</entry>
+                  <entry>1N HCl Solution</entry>
+                  <entry>q.s. to pH 2.2-5.0</entry>
+                  <entry>q.s. to pH 2.2-5.0</entry>
+                </row>
+                <row>
+                  <entry>5.</entry>
+                  <entry>Water for Injection</entry>
+                  <entry>q.s. to 0.3 mL</entry>
+                  <entry>q.s. to 0.3 mL</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00007-en" level="1">Example 2</heading>
+      <heading id="h-00008-en" level="1">Epinephrine Injection 0.15 mg/0.3 mL</heading>
+      <p id="p-00066-en" num="0064" />
+      <p id="p-00067-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <colspec colname="4" colwidth="56pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Sr.</entry>
+                  <entry />
+                  <entry>Composition C</entry>
+                  <entry>Composition D</entry>
+                </row>
+                <row>
+                  <entry>No.</entry>
+                  <entry>Ingredient</entry>
+                  <entry>Qty. (% w/v)</entry>
+                  <entry>Qty. (% w/v)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>1.</entry>
+                  <entry>Epinephrine</entry>
+                  <entry>0.15</entry>
+                  <entry>0.15</entry>
+                </row>
+                <row>
+                  <entry>2.</entry>
+                  <entry>Sodium chloride</entry>
+                  <entry>1.8</entry>
+                  <entry>1.8</entry>
+                </row>
+                <row>
+                  <entry>3.</entry>
+                  <entry>Sodium</entry>
+                  <entry>0.15</entry>
+                  <entry>0.10</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>metabisulfite</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>4.</entry>
+                  <entry>1N HCl Solution</entry>
+                  <entry>q.s. to pH 2.2-5.0</entry>
+                  <entry>q.s. to pH 2.2-5.0</entry>
+                </row>
+                <row>
+                  <entry>5.</entry>
+                  <entry>Water for Injection</entry>
+                  <entry>q.s. to 0.3 mL</entry>
+                  <entry>q.s. to 0.3 mL</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00068-en" num="0065">Process:</p>
+      <p id="p-00069-en" num="0066">Sodium chloride was dissolved in water for injection under continuous nitrogen sparging. 1N HCl solution was added to adjust the pH. Epinephrine and sodium metabisulfite were sequentially added to the solution under stirring to get clear solution. Final volume of the solution was made with water for injection. pH of the final solution can be adjusted using HCl solution if required. The solution was then subjected to filtration through 0.22μ membrane filter. The solution was then filled in sterile 1 mL pre-filled syringes.</p>
+      <heading id="h-00009-en" level="1">Example 3</heading>
+      <heading id="h-00010-en" level="1">Comparative Stability Study of Effect of Sodium Metabisulfite Concentration on Stability of Epipen/Epipen Jr. v Epinephrine Composition of the Invention</heading>
+      <p id="p-00070-en" num="0067" />
+      <p id="p-00071-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <colspec colname="4" colwidth="56pt" align="center" />
+              <colspec colname="5" colwidth="56pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="5" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Composition 1 </entry>
+                  <entry>Composition 2</entry>
+                  <entry>Composition 3</entry>
+                  <entry>Composition 4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Epipen Jr)</entry>
+                  <entry>(Invention)</entry>
+                  <entry>(Epipen)</entry>
+                  <entry>(Invention)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>0.15 mg</entry>
+                  <entry>0.15 mg</entry>
+                  <entry>0.3 mg</entry>
+                  <entry>0.3 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Epinephrine, </entry>
+                  <entry>Epinephrine,</entry>
+                  <entry>Epinephrine, </entry>
+                  <entry>Epinephrine, </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>0.5 mg </entry>
+                  <entry>0.3 mg </entry>
+                  <entry>0.5 mg </entry>
+                  <entry>0.3 mg </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Sodium</entry>
+                  <entry>Sodium</entry>
+                  <entry>Sodium</entry>
+                  <entry>Sodium</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>metabisulfite</entry>
+                  <entry>metabisulfite</entry>
+                  <entry>metabisulfite</entry>
+                  <entry>metabisulfite</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Description</entry>
+                  <entry>Clear colorless</entry>
+                  <entry>Clear colorless </entry>
+                  <entry>Clear colorless</entry>
+                  <entry>Clear colorless</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Solution</entry>
+                  <entry>Solution</entry>
+                  <entry>Solution</entry>
+                  <entry>Solution</entry>
+                </row>
+                <row>
+                  <entry>Storage</entry>
+                  <entry>25° C., 60% </entry>
+                  <entry>25° C., 60% </entry>
+                  <entry>25° C., 60% </entry>
+                  <entry>25° C., 60% </entry>
+                </row>
+                <row>
+                  <entry>Conditions</entry>
+                  <entry>RH for 3 months</entry>
+                  <entry>RH for 3 months</entry>
+                  <entry>RH for 3 months</entry>
+                  <entry>RH for 3 months</entry>
+                </row>
+                <row>
+                  <entry>Assay</entry>
+                  <entry>107.8</entry>
+                  <entry>112</entry>
+                  <entry>108.8</entry>
+                  <entry>115.5</entry>
+                </row>
+                <row>
+                  <entry>Adrenaline</entry>
+                  <entry>4.983</entry>
+                  <entry>0.415</entry>
+                  <entry>3.893</entry>
+                  <entry>2.721</entry>
+                </row>
+                <row>
+                  <entry>sulfonate</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>impurity (%)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Noradrenaline</entry>
+                  <entry>0.0</entry>
+                  <entry>0.0</entry>
+                  <entry>0.0</entry>
+                  <entry>0.0</entry>
+                </row>
+                <row>
+                  <entry>impurity (%)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Adrenalone</entry>
+                  <entry>0.128</entry>
+                  <entry>0.023</entry>
+                  <entry>0.071</entry>
+                  <entry>0.083</entry>
+                </row>
+                <row>
+                  <entry>impurity (%)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>N-Benzyl</entry>
+                  <entry>0.0</entry>
+                  <entry>0.0</entry>
+                  <entry>0.0</entry>
+                  <entry>0.0</entry>
+                </row>
+                <row>
+                  <entry>adrenalone</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>impurity (%)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Total impurity</entry>
+                  <entry>6.288</entry>
+                  <entry>0.935</entry>
+                  <entry>4.65</entry>
+                  <entry>3.633</entry>
+                </row>
+                <row>
+                  <entry>(%)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00072-en" num="0068">Result of the stability study conducted on the composition of the present invention (Composition 2 &amp; 4) indicates that epinephrine composition containing 0.3 mg sodium metabolite exhibits excellent storage stability relative to epinephrine composition containing 0.5 mg sodium metabolite over the storage period.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A stabilized injectable pharmaceutical composition of epinephrine or salt thereof comprising sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight, characterized in that said composition contains epinephrine having purity equal to or greater than 98% by weight.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en" independent="true">
+      <claim-text>
+        <b>2</b>. A stabilized injectable pharmaceutical composition of epinephrine comprising sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight, characterized in that said composition contains total impurity of less than 4%.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en" independent="true">
+      <claim-text>
+        <b>3</b>. A stabilized injectable pharmaceutical composition of epinephrine comprising sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight, characterized in that said composition contains no single impurity of greater than 3%.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en" independent="true">
+      <claim-text>
+        <b>4</b>. A stabilized injectable pharmaceutical composition of epinephrine or salt thereof comprising sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight, characterized in that said composition is substantially free of epinephrine overages.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The stabilized injectable pharmaceutical composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the composition comprises adrenaline sulfonate less than about 3.0% or less at RRT 0.15.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The stabilized injectable pharmaceutical composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the composition comprises less than about 0.5% impurity observed at RRT 0.17, RRT 0.2, or RRT 0.73.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>
+        <b>7</b>. A stabilized injectable pharmaceutical composition comprising epinephrine, sodium metabisulfite, wherein the ratio of the amount of epinephrine or salt thereof to sodium metabisulfite in the composition ranges from about 1:0.005 to about 1:1.5 by weight, characterized in that said composition retains at least 90% w/w of total potency of epinephrine after storage at 25° C. and 60% relative humidity for at least 3 months.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en" independent="true">
+      <claim-text>
+        <b>8</b>. A stabilized injectable pharmaceutical composition comprising 0.3 mg of epinephrine or salt thereof and 0.3 mg of sodium metabisulfite in 0.3 ml of solution, wherein the said 0.3 ml of solution is delivered completely in single injection.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en" independent="true">
+      <claim-text>
+        <b>9</b>. A stabilized injectable pharmaceutical composition comprising 0.15 mg of epinephrine or salt thereof and 0.3 mg of sodium metabisulfite in 0.3 ml of solution, wherein the said 0.3 ml of solution is delivered completely in single injection. </claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246009A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246009A1-20150903-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246009A1_00002.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246009A1-20150903-C00002.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150246009A1.PDF" type="pdf" size="361578" pages="7" />
+</lexisnexis-patent-document>

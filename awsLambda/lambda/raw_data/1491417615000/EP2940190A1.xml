@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940190A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091039" date-changed="20151110" time-changed="083730">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121939162">
+        <country>EP</country>
+        <doc-number>2940190</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13867303</doc-number>
+        <date>20131121</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>jpn</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012289010</doc-number>
+        <date>20121228</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2012289010</doc-number>
+        <kind>A</kind>
+        <date>20121228</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2013081381</doc-number>
+        <kind>W</kind>
+        <date>20131121</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2012289010</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013081381</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>JP20120289010</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2013JP81381</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150710</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151105">
+      <classification-ipcr sequence="1">
+        <text>C23C  26/00        20060101AFI20140721BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>26</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140721</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B05D   7/14        20060101ALI20140721BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>05</class>
+        <subclass>D</subclass>
+        <main-group>7</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140721</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B32B  15/08        20060101ALI20140721BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140721</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C09D   5/08        20060101ALI20140721BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>5</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140721</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C09K  19/12        20060101ALI20140721BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>19</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140721</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151105">
+      <classification-cpc sequence="1">
+        <text>C09K  19/12        20130101 FI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>19</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C09D   5/08        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>5</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C09K2019/0437      20130101 LA20140818BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>2019</main-group>
+        <subgroup>0437</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140818</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C09K2019/122       20130101 LA20140818BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>2019</main-group>
+        <subgroup>122</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140818</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C09K2219/00        20130101 LA20140818BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140818</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">23</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">OBERFLÄCHENBEHANDLUNGSZUSAMMENSETZUNG, VERFAHREN ZUR HERSTELLUNG DER OBERFLÄCHENBEHANDLUNGSZUSAMMENSETZUNG, METALLARTIKEL UND VERFAHREN ZUR HERSTELLUNG DES METALLARTIKELS</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">SURFACE TREATMENT COMPOSITION, METHOD FOR PRODUCING SURFACE TREATMENT COMPOSITION, METAL ARTICLE, AND METHOD FOR PRODUCING METAL ARTICLE</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">COMPOSITION DE TRAITEMENT DE SURFACE, PROCÉDÉ POUR LA PRODUCTION DE LA COMPOSITION DE TRAITEMENT DE SURFACE, ARTICLE MÉTALLIQUE ET PROCÉDÉ POUR LA PRODUCTION DE L'ARTICLE MÉTALLIQUE</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Hoden Seimitsu Kako Kenkyusyo Co., Ltd</orgname>
+            <registered-number>101545611</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>3110, Iiyama</address-1>
+              <city>Atsugi-shi, Kanagawa 243-0213</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>KOSHINA Takafumi</name>
+            <address>
+              <address-1>c/o HODEN SEIMITSU KAKO KENKYUSYO CO. LTD. 3110 Iiyama</address-1>
+              <city>Atsugi-shi Kanagawa 243-0213</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Schollweck, Susanne</name>
+            <registered-number>101384433</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>ZSP Patentanwälte Partnerschaftsgesellschaft Radlkoferstrasse 2</address-1>
+              <city>81373 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13081381</doc-number>
+        <date>20131121</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014103578</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151104">
+      <main-family family-id="166468228">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103578</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131121</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104884675</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20131121</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940190</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131121</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201428069</doc-number>
+            <kind>A</kind>
+            <date>20140716</date>
+          </document-id>
+          <application-date>
+            <date>20131129</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166468227">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103578</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131121</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104884675</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20131121</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940190</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131121</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201428069</doc-number>
+            <kind>A</kind>
+            <date>20140716</date>
+          </document-id>
+          <application-date>
+            <date>20131129</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Provided is a surface treatment composition which forms a coating film on a surface of a metal member by being coated and dried on the surface, the surface treatment composition including: a liquid crystal compound having a branched chain; and a corrosion inhibitor.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">TECHNICAL FIELD</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to a surface treatment composition, a method of producing a surface treatment composition, a metal article, and a method of producing a metal article.</p>
+    <heading id="h-00002-en">BACKGROUND ART</heading>
+    <p id="p-00002-en" num="0002">As a lubricant containing liquid crystal molecules, for example, the following examples can be adopted.</p>
+    <p id="p-00003-en" num="0003">Patent Document 1 discloses a lubricant composition containing a liquid crystal compound and a fluorine-containing polyether. This lubricant composition is obtained by dispersing the liquid crystal compound in the fluorine-containing polyether. In addition, Patent Document 1 describes that, due to the dispersion of the liquid crystal compound, the lubricity is improved, and the low frictional coefficient of the liquid crystal compound and the chemical stability of the fluorine-containing polyether are simultaneously improved.</p>
+    <p id="p-00004-en" num="0004">Patent Document 2 discloses a lubricating oil composition containing a base oil and liquid crystal, in which a friction modifier is added to the lubricating oil composition. According to the lubricating oil composition, the frictional properties and wear resistance of a mechanical friction portion can be improved.</p>
+    <p id="p-00005-en" num="0005">In addition, as a technique of forming a coating film using a lubricant, the following examples can be adopted.</p>
+    <p id="p-00006-en" num="0006">Patent Document 3 discloses a technique of forming an organic coating film using a lubricant such as polyethylene wax. In addition, Patent Document 3 describes that the coating film can be applied to a fixing frame or a back surface cover of a liquid crystal panel, a drive device case of a storage medium, or a member formed of aluminum or an aluminum alloy which is used for a chassis.</p>
+    <p id="p-00007-en" num="0007">Patent Document 4 discloses a protective coating composition which includes a lubricant without including metal particles, in which the lubricant contains a wax such as polyethylene wax or polyolefin-containing wax. In addition, Patent Document 4 describes that, by coating a metal substrate such as a bolt or a nut with the protective coating composition, the corrosion of the metal substrate can be prevented.</p>
+    <p id="p-00008-en" num="0008">Patent Document 5 discloses a technique of coating a magnetic recording medium surface, such as a disc, including a magnetic layer with a lubricant containing tricyclic liquid crystal molecules.</p>
+    <heading id="h-00003-en">RELATED DOCUMENT</heading>
+    <heading id="h-00004-en">PATENT DOCUMENT</heading>
+    <p id="p-00009-en" num="0009">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>[Patent Document 1] Japanese Patent No. <patcit id="pcit-00001" dnum="JP2500296B"><text>2500296</text></patcit></li>
+        <li>[Patent Document 2] Japanese Unexamined Patent Application Publication No. <patcit id="pcit-00002" dnum="JPH06128582B"><text>H06-128582</text></patcit></li>
+        <li>[Patent Document 3] Japanese Patent No. <patcit id="pcit-00003" dnum="JP4259785B"><text>4259785</text></patcit></li>
+        <li>[Patent Document 4] Japanese Unexamined Patent Application Publication No. <patcit id="pcit-00004" dnum="JP2009108334A"><text>2009-108334</text></patcit></li>
+        <li>[Patent Document 5] Japanese Unexamined Patent Application Publication No. <patcit id="pcit-00005" dnum="JPH1139646B"><text>H11-39646</text></patcit></li>
+      </ul>
+    </p>
+    <heading id="h-00005-en">DISCLOSURE OF THE INVENTION</heading>
+    <p id="p-00010-en" num="0010">However, the techniques of the related art disclosed in Patent Documents 1 to 5 have a problem in the improvement of lubricity.</p>
+    <p id="p-00011-en" num="0011">Recently, as a lubricant used for a surface treatment of a metal member, a lubricant capable of stably exhibiting higher lubricity than that of a lubricant of the related art is required. However, a lubricant satisfying the requirements for high lubricity has yet to be developed.</p>
+    <p id="p-00012-en" num="0012">Further, the techniques of the related art disclosed in Patent Documents 1 to 5 have the following problems.</p>
+    <p id="p-00013-en" num="0013">When liquid crystal molecules of a lubricant are liquid as in the case of the lubricants disclosed in Patent Documents 1 and 2, this lubricant has a problem in that it cannot be used as a surface treatment agent.</p>
+    <p id="p-00014-en" num="0014">The lubricants disclosed in Patent Documents 3 and 4 contain wax particles. Therefore, during use, it is necessary to prevent precipitation or solidification of the wax particles. Specifically, in order to maintain a dispersed state of the wax particles, it is necessary to continuously stir the lubricants. Therefore, the lubricants disclosed in Patent Documents 3 and 4 have problems not only in lubricity but also in handleability during use.</p>
+    <p id="p-00015-en" num="0015">The lubricant disclosed in Patent Document 5 exhibits lubricity only in a liquid state obtained by phase transition using frictional energy, and thus has certain restrictions in usage conditions and usage environment.</p>
+    <p id="p-00016-en" num="0016">The present invention has been made in consideration of the above-described circumstances, and an object thereof is to provide a surface treatment composition capable of exhibiting high lubricity and a corrosion resistance effect when applied to a metal article.</p>
+    <p id="p-00017-en" num="0017">As a result of a thorough investigation for solving the above-described problems, the present inventors have found that a surface treatment composition capable of exhibiting high lubricity and a corrosion resistance effect when applied to a metal article can be provided by adopting a configuration containing not only a corrosion inhibitor but also a liquid crystal compound having a branched chain.</p>
+    <p id="p-00018-en" num="0018">That is, according to the present invention, there is provided a surface treatment composition which forms a coating film on a surface of a metal member by being coated and dried on the surface, the surface treatment composition including: a liquid crystal compound having a branched chain; and a corrosion inhibitor.</p>
+    <p id="p-00019-en" num="0019">Further, according to the present invention, there is provided a method of producing the above-described surface treatment composition, the method comprising: a step of mixing a corrosion inhibitor with a liquid crystal compound having a branched chain.</p>
+    <p id="p-00020-en" num="0020">Further, according to the present invention, there is provided a metal article comprising: a metal member; and a coating film that is formed of the above-described surface treatment composition, in which the coating film is formed on a surface of the metal member by drying the surface treatment composition.</p>
+    <p id="p-00021-en" num="0021">Further, according to the present invention, there is provided a method of producing a metal article including: a step of coating a surface of a metal member with the surface treatment composition; and a step of drying the surface treatment composition to form a coating film.</p>
+    <p id="p-00022-en" num="0022">According to the present invention, a surface treatment composition can be provided which is capable of exhibiting high lubricity and a corrosion resistance effect when applied to a metal article.</p>
+    <heading id="h-00006-en">DESCRIPTION OF EMBODIMENTS</heading>
+    <p id="p-00023-en" num="0023"> Hereinafter, a surface treatment composition and a metal article according to an embodiment of the present invention will be described.</p>
+    <heading id="h-00007-en">(Surface Treatment Composition)</heading>
+    <p id="p-00024-en" num="0024">The surface treatment composition according to the embodiment contains: a liquid crystal compound having a branched chain; and a corrosion inhibitor. This surface treatment composition can form a coating film on a surface of a metal member by being coated and dried on the surface. The fact that the solid coating film can be formed using the surface treatment composition according to the embodiment will be described below.</p>
+    <p id="p-00025-en" num="0025">In addition, the surface treatment composition according to the embodiment can form the solid coating film as mentioned above. Therefore, the metal article having a surface on which the coating film is formed can stably exhibit high lubricity irrespective of usage positions and usage conditions. In addition, since the liquid crystal compound having a branched chain is used, the lubricity can be further improved. In addition, by using the surface treatment composition according to the embodiment, the coating film having a good balance between lubricity and corrosion resistance performance can be formed. In addition, by using the surface treatment composition according to the embodiment, the coating film having not only superior lubricity and corrosion resistance performance but also superior adhesion can be formed.</p>
+    <heading id="h-00008-en">(Liquid Crystal Compound)</heading>
+    <p id="p-00026-en" num="0026">First, the liquid crystal compound contained in the surface treatment composition according to the present invention will be described.</p>
+    <p id="p-00027-en" num="0027">In general, the liquid crystal compound refers to a liquid compound obtained through an intermediate state having properties of both crystal and liquid unlike solid, liquid, and gas compounds. Specifically, a compound in a liquid crystal state is a cloudy liquid having viscosity which is optically anisotropic.</p>
+    <p id="p-00028-en" num="0028">In addition, a molecular structure of the liquid crystal compound contains: a portion having two or more ring structures (hereinafter, referred to as "core portion") ; and a hydrocarbon group or polar group that is bonded to both terminals of the core portion as a side chain. It is considered that, in the molecular structure of the liquid crystal compound, the core portion relates to various properties of the liquid crystal compound such as anisotropy and refractive index. On the other hand, in the molecular structure of the liquid crystal compound, the side chain relates to the crystallinity of the liquid crystal compound. Hereinafter, in the description of the liquid crystal compound contained in the surface treatment composition according to the embodiment, the compound including the core portion and the hydrocarbon group or polar group includes a compound not exhibiting liquid crystal properties, the core portion having two or more ring structures, and the hydrocarbon group or polar group being bonded to both terminals of the core portion.</p>
+    <p id="p-00029-en" num="0029"> This liquid crystal compound has a branched chain and thus is easily dissolved in a solvent described below although the reason thereof is not clear.</p>
+    <p id="p-00030-en" num="0030">In addition, according to the embodiment, by using the liquid crystal compound having a branched chain, the lubricity and corrosion resistance performance of the coating film formed using the surface treatment composition can be improved.</p>
+    <p id="p-00031-en" num="0031">In addition, examples of the liquid crystal compound contained in the surface treatment composition according to the embodiment include a compound represented by the following formula (1).         R<sup>1</sup>-Y<sup>1</sup>-C<sup>1</sup>-A-C<sup>2</sup> -Y<sup>1</sup>-R<sup>1</sup>     (1) wherein <ul id="ul-00002-en" list-style="none" compact="compact"><li>A represents any one of a single bond, -C(=O)-O-, -N=N-, -C(=O)-, -CH=CH-, -C≡C-, -O-, -O-, and -CH<sub>2</sub>-,</li><li>C<sup>1</sup> and C<sup>2</sup> each independently represents <chemistry id="chem-00001-en" num="0001"><img id="img-00001-en" wi="154" he="17" img-content="chem" file="EP2940190A1_00001.PNG" img-format="png" original="imgb0001.tif" /></chemistry> (where one of two direct bonds may be bonded to A),</li><li>R<sup>1</sup> represents a branched alkyl group, and</li><li>Y<sup>1</sup> represents any one of -O-, -C(=O)-O-, -O-C(=O)-, -C(=O)-NH-, and -NH-C(=O)-.</li></ul></p>
+    <p id="p-00032-en" num="0032">In the liquid crystal compound represented by the formula (1), it is preferable that Y<sup>1</sup> represents -O- or -C(=O)-O-.</p>
+    <p id="p-00033-en" num="0033">In the liquid crystal compound represented by the formula (1), R<sup>1</sup> preferably represents a branched alkyl group having equal to or more than 3 and equal to or less than 22 carbon atoms, and more preferably a branched alkyl group having equal to or more than 5 and equal to or less than 18 carbon atoms. As a result, when the solid coating film is formed using the surface treatment composition according to the embodiment, the solid coating film having higher lubricity and a corrosion resistance effect can be obtained. In addition, it is preferable that R<sup>1</sup> has one or more branched chains.</p>
+    <p id="p-00034-en" num="0034">The liquid crystal compound is not particularly limited, but for example, is preferably formed of at least one compound selected from the group consisting of 4,4'-di-2-ethyl hexyloxy-1,1'-biphenyl represented by the following formula (A1), 4,4'-di-3-ethyl hexyloxy-1,1'-biphenyl represented by the following formula (A2), 4,4'-di-2-methyl heptyloxy-1,1'-biphenyl represented by the following formula (A3), 4,4'-di-3-methyl heptyloxy-1,1'-biphenyl represented by the following formula (A4), 4,4'-di-4-methyl heptyloxy-1,1'-biphenyl represented by the following formula (A5), 4,4'-di-5-methyl heptyloxy-1,1'-biphenyl represented by the following formula (A6), 4,4'-di-2-ethyl octyloxy-1,1'-biphenyl represented by the following formula (A7), 4,4'-di-3-ethyloctyloxy-1,1'-biphenyl represented by the following formula (A8), 4,4'-di-3-n-propylheptyloxy-1,1'-biphenyl represented by the following formula (A9), 4,4'-di-3-n-propyl nonyloxy-1,1'-biphenyl represented by the following formula (A10), 4,4'-di-3-ethyl-6-methyl nonyloxy-1,1'-biphenyl represented by the following formula (A11), and 4,4'-di-2-methyl hexadecyloxyl-1,1'-biphenyl represented by the following formula (A12). As a result, when the solid coating film is formed using the surface treatment composition according to the embodiment, the solid coating film having higher lubricity and a corrosion resistance effect can be obtained. <chemistry id="chem-00002-en" num="0002"><img id="img-00002-en" wi="130" he="21" img-content="chem" file="EP2940190A1_00002.PNG" img-format="png" original="imgb0002.tif" /></chemistry><chemistry id="chem-00003-en" num="0003"><img id="img-00003-en" wi="130" he="19" img-content="chem" file="EP2940190A1_00003.PNG" img-format="png" original="imgb0003.tif" /></chemistry><chemistry id="chem-00004-en" num="0004"><img id="img-00004-en" wi="130" he="20" img-content="chem" file="EP2940190A1_00004.PNG" img-format="png" original="imgb0004.tif" /></chemistry><chemistry id="chem-00005-en" num="0005"><img id="img-00005-en" wi="130" he="20" img-content="chem" file="EP2940190A1_00005.PNG" img-format="png" original="imgb0005.tif" /></chemistry><chemistry id="chem-00006-en" num="0006"><img id="img-00006-en" wi="130" he="20" img-content="chem" file="EP2940190A1_00006.PNG" img-format="png" original="imgb0006.tif" /></chemistry><chemistry id="chem-00007-en" num="0007"><img id="img-00007-en" wi="130" he="20" img-content="chem" file="EP2940190A1_00007.PNG" img-format="png" original="imgb0007.tif" /></chemistry><chemistry id="chem-00008-en" num="0008"><img id="img-00008-en" wi="140" he="23" img-content="chem" file="EP2940190A1_00008.PNG" img-format="png" original="imgb0008.tif" /></chemistry><chemistry id="chem-00009-en" num="0009"><img id="img-00009-en" wi="144" he="23" img-content="chem" file="EP2940190A1_00009.PNG" img-format="png" original="imgb0009.tif" /></chemistry><chemistry id="chem-00010-en" num="0010"><img id="img-00010-en" wi="140" he="22" img-content="chem" file="EP2940190A1_00010.PNG" img-format="png" original="imgb0010.tif" /></chemistry><chemistry id="chem-00011-en" num="0011"><img id="img-00011-en" wi="144" he="23" img-content="chem" file="EP2940190A1_00011.PNG" img-format="png" original="imgb0011.tif" /></chemistry><chemistry id="chem-00012-en" num="0012"><img id="img-00012-en" wi="155" he="20" img-content="chem" file="EP2940190A1_00012.PNG" img-format="png" original="imgb0012.tif" /></chemistry><chemistry id="chem-00013-en" num="0013"><img id="img-00013-en" wi="140" he="24" img-content="chem" file="EP2940190A1_00013.PNG" img-format="png" original="imgb0013.tif" /></chemistry></p>
+    <p id="p-00035-en" num="0035">In addition, the liquid crystal compound having a branched chain has a content of, preferably equal to or more than 0.01 wt% and equal to or less than 30.0 wt% and more preferably equal to or more than 0.1 wt% and equal to or less than 15.0 wt% with respect to the total amount of the corrosion inhibitor. As a result, by using the surface treatment composition according to the embodiment, the solid coating film exhibiting higher lubricity and having a corrosion resistance effect can be formed.</p>
+    <heading id="h-00009-en">&lt;Corrosion Inhibitor&gt;</heading>
+    <p id="p-00036-en" num="0036">The corrosion inhibitor used in the surface treatment composition according to the present invention is not particularly limited, and for example, an alkoxysilane oligomer is preferably used. As a result, using an interaction between the corrosion inhibitor and the liquid crystal compound having a branched chain, higher lubricity can be imparted to the formed solid coating film. In addition, the corrosion inhibitor may have a coating film-forming function. That is, the corrosion inhibitor may function as a coating film-forming agent having a corrosion resistance effect. Examples of the coating film-forming agent include an alkoxysilane oligomer.</p>
+    <p id="p-00037-en" num="0037">The alkoxysilane oligomer can be polycondensed to have linear molecules when synthesized using an acid catalyst such as hydrochloric acid and can be formed as a bulk gel when synthesized using a basic catalyst. It is preferable that the weight average molecular weight of the alkoxysilane oligomer is large to some extent from the viewpoints of the corrosion resistance performance and an anti-cracking function of the coating film and the storage properties of the corrosion inhibitor. Specifically, the weight average molecular weight of the alkoxysilane oligomer according to the embodiment is preferably equal to or more than 1000 and equal to or less than 10000 and more preferably equal to or more than 2000 and equal to or less than 5000. As a result, the solid coating film having superior film forming properties and corrosion resistance performance can be formed.</p>
+    <p id="p-00038-en" num="0038"> In addition, when a material containing an alkoxysilane oligomer is used as the corrosion inhibitor, the coating film having higher corrosion resistance performance can be formed. Further, when an alkoxysilane oligomer having a portion of silicon in the oligomer molecules substituted with titanium is used as the alkoxysilane oligomer, the adhesion of the coating film on a surface of a metal member can be improved. As a result, even when the coating film is cracked, the coating film can be prevented from being peeled off from the metal member.</p>
+    <p id="p-00039-en" num="0039">Meanwhile, the alkoxysilane oligomer having a portion of silicon substituted with titanium can be synthesized by adding a small amount of an acid catalyst such as hydrochloric acid and water to an alcohol solution containing alkoxysilane materials and titanium alkoxide, and hydrolyzing the solution to be polycondensed. However, when highly reactive titanium alkoxide is rapidly hydrolyzed, precipitation occurs. Therefore, it is preferable that, before mixing titanium alkoxide with the alkoxysilane materials in the alcohol solution and polycondensing the mixture, 40% to 60% of alkoxy groups in titanium alkoxide are blocked or substituted with a chelating agent to reduce the reaction activity of titanium alkoxide.</p>
+    <p id="p-00040-en" num="0040">In addition, in the surface treatment composition according to the embodiment, in order to form the coating film having a thickness capable of obtaining a practical level of corrosion resistance performance on a surface of a metal member, the total content of silicon and titanium in the alcohol solution of the alkoxysilane oligomer containing a titanium component is preferably 5 wt% to 20 wt% and more preferably 7 wt% to 15 wt% in terms of SiO<sub>2</sub> and TiO<sub>2</sub>, respectively.</p>
+    <p id="p-00041-en" num="0041">In addition, when introduced into the alkoxysilane oligomer, an alkoxysilane monomer having an organic group directly bonded to silicon forms an alkoxysilane oligomer having a state where the organic group is bonded to a portion of silicon. Due to the presence of the organic group bonded to silicon, the coating film formed on the surface of the metal member can be made to be soft, and an effect of preventing the coating film from being cracked can be obtained. The alkoxysilane monomer is not particularly limited, but for example, is at least one compound selected from the group consisting of methyltrimethoxysilane, methyltriethoxysilane, ethyltrimethoxysilane, vinyltrimethoxysilane, vinyltriethoxysilane, and γ-methacryloxypropyltrimethoxysilane which are less likely to decrease corrosion resistance performance. Among these, vinyltrimethoxysilane is preferably used. As a result, the coating film can be prevented from being cracked, and the corrosion resistance performance can be made to be superior during practical use.</p>
+    <p id="p-00042-en" num="0042">It is preferable that the surface treatment composition according to the embodiment contains a solvent. When the surface treatment composition contains a solvent, the liquid crystal compound having a branched chain is dissolved or uniformly dispersed in the solvent. As a result, unlike the lubricant containing wax described above in "DISCLOSURE OF THE INVENTION", it is not necessary to continuously stir the surface treatment composition. In addition, by dissolving or uniformly dispersing the liquid crystal compound in the solvent, the liquid crystal compound having a branched chain and the corrosion inhibitor can be uniformly mixed using a simple method. Therefore, an interaction between the liquid crystal compound having a branched chain and the corrosion inhibitor is likely to occur, and the solid coating film exhibiting higher lubricity and having a corrosion resistance effect can be formed. The liquid crystal compound according to the embodiment has a branched chain and thus is easily dissolved in the solvent. Therefore, unlike the waxes described above in Patent Documents 3 and 4, the liquid crystal compound according to the embodiment is not precipitated and solidified in the solvent even when uniformly dispersed in the solvent.</p>
+    <p id="p-00043-en" num="0043">It is preferable that the solvent contains an alcohol. As a result, the solubility of the liquid crystal compound in the solvent can be improved.</p>
+    <p id="p-00044-en" num="0044">The alcohol is not particularly limited, and examples thereof include isopropyl alcohol, n-propyl alcohol, n-butanol, propylene glycol monomethyl ether, ethylene glycol-t-butoxide, ethyl alcohol, and glycol ether. Among these, isopropyl alcohol, propylene glycol monomethyl ether, ethylene glycol-t-butoxide, n-propyl alcohol, or n-butanol is preferable, and isopropyl alcohol is more preferable. By the solvent containing the alcohol, the solubility of the liquid crystal compound in the solvent is further improved.</p>
+    <p id="p-00045-en" num="0045">In addition, in the surface treatment composition according to the embodiment, the coating film having a non-liquid-crystal structure which is optically isotropic can be formed. The reason will be described below.</p>
+    <heading id="h-00010-en">(Method of Producing Surface Treatment Composition)</heading>
+    <p id="p-00046-en" num="0046">A method of producing the surface treatment composition according to the embodiment includes a step of mixing a corrosion inhibitor with a liquid crystal compound having a branched chain. As described above, the surface treatment composition according to the embodiment exhibits the interaction between the liquid crystal compound having a branched chain and the corrosion inhibitor. In addition, in the method of producing the surface treatment composition according to the embodiment, it is preferable that, during the mixing of the liquid crystal compound having a branched chain with the corrosion inhibitor, the liquid crystal compound is dissolved or dispersed in the solvent while mixing with the solvent.</p>
+    <heading id="h-00011-en">(Metal Article)</heading>
+    <p id="p-00047-en" num="0047">The metal article according to the embodiment includes: a metal member; and a coating film that is formed on a surface of the metal member using the surface treatment composition. This coating film is formed by drying the surface treatment composition. As a result, the metal article having corrosion resistance performance and high lubricity can be obtained.</p>
+    <p id="p-00048-en" num="0048">This surface treatment composition containing the liquid crystal compound having a branched chain and the corrosion inhibitor can form the solid coating film on the surface of the metal member by being coated and dried on the surface. The reason is considered to be that, although the surface treatment composition according to the embodiment contains the liquid crystal compound, the entire amount of the liquid crystal compound is solidified after drying. Specifically, when dried, the surface treatment composition according to the embodiment forms the appropriately soft coating film without losing adhesion with the metal member. In addition, according to the embodiment, the liquid crystal compound has a branched chain and thus can impart high lubricity while maintaining the performance as the corrosion inhibitor.</p>
+    <p id="p-00049-en" num="0049">In addition, the reason why the metal article according to the embodiment has high lubricity is not necessarily clear but is presumed to be as follows: when the coating film is formed using the liquid crystal compound having a branched chain as a side chain in the molecular structure, the frictional coefficient of the metal article including the coating film is reduced by aggregation of branched chains present in the coating film.</p>
+    <p id="p-00050-en" num="0050">In addition, it is preferable that the coating film which is formed using the surface treatment composition according to the embodiment forms a non-liquid-crystal structure which is optically isotropic. According to the technical level of the related art, the formation of a coating film which is optically anisotropic is preferable. However, according to the embodiment, it can be clearly seen that higher lubricity can be exhibited by forming the coating film having the non-liquid-crystal structure which is optically isotropic. Further, according to the embodiment, it is considered that, since the branched chain is present in the molecular structure of the liquid crystal compound, the orientation between liquid crystal molecules is lost, and the coating film cannot be anisotropic. The reason why the coating film forms the non-liquid-crystal structure which is optically isotropic is not necessarily clear but is presumed to be as follows: since the liquid crystal compound having a branched chain is used, the orientation between molecules in the coating film is disturbed, and the coating film cannot be anisotropic.</p>
+    <p id="p-00051-en" num="0051">When the surface treatment composition according to the embodiment is coated and dried on the metal member, the formation of the non-liquid-crystal structure which is optically isotropic can be verified using the following method. The verification can be made by interposing the coating film, which is obtained by drying the surface treatment composition, between polarizing plates and irradiating the coating film with light in a plane direction of the polarizing plates. When the coating film obtained by drying the surface treatment composition has the non-liquid-crystal structure, the light does not pass through the coating film. On the other hand, when the coating film obtained by drying the surface treatment composition has a liquid crystal structure which is optically anisotropic, the light passes through the coating film.</p>
+    <p id="p-00052-en" num="0052">In addition, the thickness of the coating film which is formed using the surface treatment composition according to the embodiment is preferably equal to or more than 0.1 µm and equal to or less than 3.0 µm and more preferably equal to or more than 0.5 µm and equal to or less than 2.0 µm. As a result, lubricity required by a client can be sufficiently imparted to the metal article, the amount of the surface treatment composition coated on the surface of the metal article can be suppressed, and plural functions can be imparted at the same time. Therefore, the above-described thickness range is preferable from the viewpoint of cost. Further, when the thickness of the coating film is in the above-described range, a practical corrosion resistance performance can be exhibited, and the coating film capable of preventing cracking and peeling can be formed.</p>
+    <p id="p-00053-en" num="0053">In addition, the overall frictional coefficient of the metal article according to the embodiment is preferably equal to or more than 0.030 and equal to or less than 0.500 and more preferably equal to or more than 0.050 and equal to or less than 0.300. As a result, the metal article having higher lubricity can be obtained. The overall frictional coefficient according to the embodiment can be measured and calculated according to JIS B 1084 by using the metal article as a specimen.</p>
+    <p id="p-00054-en" num="0054">In addition, it is preferable that the surface of the metal member is formed of one material of zinc, a zinc alloy, iron, stainless steel, aluminum, and brass.</p>
+    <p id="p-00055-en" num="0055">In addition, the metal member according to the embodiment is not particularly limited, and examples thereof include a bolt and a screw. When a small-sized metal member such as a bolt or a screw is used, there is an advantageous effect in that the surface of the metal member is easily coated with the surface treatment composition.</p>
+    <p id="p-00056-en" num="0056">In addition, it is preferable that the metal article according to the embodiment is a metal-plated product obtained by metal plating or a metal-coated product obtained by metal flake coating. In addition, the metal-plated product is preferably a product plated with zinc or a zinc alloy, and the metal-coated product is preferably a product coated with a zinc-aluminum composite coating material. As a result, the peeling and cracking of the formed coating film can be prevented.</p>
+    <heading id="h-00012-en">(Method of Producing Metal Article)</heading>
+    <p id="p-00057-en" num="0057">A method of producing the metal article according to the embodiment includes: a step of coating a surface of a metal member with the surface treatment composition; and a step of drying the surface treatment composition to form a coating film.</p>
+    <p id="p-00058-en" num="0058">In addition, in the step of forming the coating film according to the embodiment, a temperature at which the surface treatment composition is dried is preferably equal to or higher than 25°C and equal to or lower than 200°C and more preferably equal to or higher than 80°C and equal to or lower than 120°C. As a result, the orientation of the liquid crystal compound contained in the surface treatment composition can be controlled.</p>
+    <p id="p-00059-en" num="0059">Hereinafter, a method of forming the coating film on the surface of the metal member will be specifically described. However, the film forming method according to the embodiment is not limited to the following description.</p>
+    <p id="p-00060-en" num="0060">For example, when a small-sized metal member such as a bolt or a screw is used, for example, a dip and spin coating method is preferably used. When this method is used, the coating film having higher lubricity can be formed on a metal member plated with zinc or a metal member coated with a zinc-aluminum composite coating material.</p>
+    <p id="p-00061-en" num="0061">Here, the dip and spin coating method refers to a method including: dipping a metal member in a solution containing the surface treatment composition; pulling the metal member out from the solution; and spinning the obtained metal member using a centrifugal separator to throw off the remaining surface treatment composition attached to the surface of the metal member. In this way, the metal member is coated with the surface treatment composition and then is heated and dried. As a result, the solid coating film can be formed.</p>
+    <p id="p-00062-en" num="0062">As a method of coating the surface treatment composition according to the embodiment, an appropriate method corresponding to the size and shape of the metal member is preferably used. In addition to the dip and spin coating method, for example, a method using a roll coater, a dip drain method, and a method of removing the remaining surface treatment composition using a roll or a brush are used.</p>
+    <p id="p-00063-en" num="0063">Hereinabove, the embodiments of the present invention have been described. However, these embodiments are merely examples of the present invention, and various configurations other than the above-described configurations can be adopted.</p>
+    <heading id="h-00013-en">[Examples]</heading>
+    <p id="p-00064-en" num="0064">Hereinafter, the present invention will be described using Examples and Comparative Examples but is not limited thereto.</p>
+    <heading id="h-00014-en">(Example 1)</heading>
+    <heading id="h-00015-en">(Preparation of Corrosion Inhibitor)</heading>
+    <p id="p-00065-en" num="0065">A corrosion inhibitor was prepared as follows.</p>
+    <p id="p-00066-en" num="0066">Vinyltrimethoxysilane (manufactured by Dow Corning Toray Co., Ltd., SH-6300) was mixed with an isopropyl alcohol (hereinafter, referred to as "IPA") solution of ETHYL SILICATE 40 (manufactured by Tama Chemicals Co., Ltd, pentamer obtained by polycondensation of tetraethoxysilane containing 40wt% of silicon in terms of SiO<sub>2</sub>.) such that the content thereof was 2 mol% with respect to the total amount of the alkoxysilane materials, and the obtained mixture was stirred. This solution was held at 40°C for 12 hours for polycondensation. In this way, an IPA solution of an alkoxysilane oligomer containing 20.2 wt% of silicon in terms of SiO<sub>2</sub> was obtained.</p>
+    <p id="p-00067-en" num="0067">Next, 3 parts by weight of a propylene glycol (hereinafter, referred to as "PGME") solution containing 10 wt% of polyvinyl butyral, 5 parts by weight of an IPA solution containing 1.2 wt% of boric acid, 23. parts by weight of IPA, 5. 4 parts by weight of a titanium octylene glycol chelate compound (manufactured by Nippon Soda Co., Ltd., TOG) containing isopropoxide as an alkyl group, and 10 parts by weight of PGME, and 15 parts by weight of ethylene glycol-t-butoxide were mixed with 52.8 parts by weight of the obtained IPA solution of the alkoxysilane oligomer so as to prepare a corrosion inhibitor.</p>
+    <heading id="h-00016-en">(Preparation of Liquid Crystal Compound)</heading>
+    <heading id="h-00017-en">Preparation of 4,4'-di-2-ethyl hexyloxy-1,1'-biphenyl</heading>
+    <p id="p-00068-en" num="0068">9.3g (0.050 mol) of 4,4'-hiphenol, 23.0 g of potassium carbonate, and 60 ml of DMF were mixed with each other. 30.4 g (0.157 mol) of 1-bromo-2-ethylhexane was added to this mixture, followed by stirring at 70°C for 72 hours. This reaction solution was distilled under reduced pressure to remove DMF and unreacted 1-bromo-2-ethylhexane. Next, water and diethyl ether were added to the obtained solution, followed by solid-liquid separation and washing. Next, the obtained ether layer was dried overnight using anhydrous sodium sulfate. After drying, anhydrous sodium sulfate was removed by suction filtration, and the filtrate was evaporated to obtain oil. This oil was distilled in a vacuum to remove 1-bromo-2-ethylhexane. As a result, a liquid crystal compound having a branched chain was obtained.</p>
+    <heading id="h-00018-en">(Preparation of Surface Treatment Composition)</heading>
+    <p id="p-00069-en" num="0069">Next, the obtained liquid crystal compound and the obtained corrosion inhibitor were mixed with each other. Specifically, 48.5 parts by weight of the corrosion inhibitor was mixed with 1.5 parts by weight of the synthesized liquid crystal compound, followed by stirring with a magnetic stirrer for 15 minutes so as to uniformly disperse and dissolve the liquid crystal compound in the corrosion inhibitor. As a result, a surface treatment composition containing the liquid crystal compound having a branched chain and the corrosion inhibitor was obtained.</p>
+    <heading id="h-00019-en">(Preparation of Metal Article)</heading>
+    <p id="p-00070-en" num="0070">A half-screw flange bolt M8L55 plated with zinc was coated with the obtained surface treatment composition using a dip and spin coating method. Specifically, the dried white half-screw flange bolt M8L55 which was not subjected to an activation treatment was dipped in a solution of the surface treatment composition. The amount of the surface treatment composition coated on the bolt was adjusted such that a coating film having a thickness of equal to or more than 0. 5 µm and equal to or less than 2. 0 µm after drying was formed. Next, the pulled out half-screw flange bolt M8L55 was put into a stainless steel basket attached to a centrifugal separator to perform a centrifugal separation treatment for one second under conditions of a radius of gyration of 15 cm and a rotating speed of about 700 rpm. Next, the half-screw flange bolt M8L55 was put into a drying machine and was held at 100°C for 30 minutes. As a result, a metal article having a surface on which the dry coating film was formed was obtained. The obtained dry coating film was formed on the entire surface of the metal article.</p>
+    <heading id="h-00020-en">(Evaluation Method)</heading>
+    <p id="p-00071-en" num="0071">Overall frictional coefficient: The frictional coefficient values of five metal articles having a surface on which the dry coating film was formed were measured and calculated according to JIS B1084 using a tester equipped with a screw fastening device (manufactured by Iwata MFG Co., Ltd., a desktop tester equipped with a screw fastening device). In this example, the average of the values calculated from the five metal articles was obtained as a value of the overall frictional coefficient.</p>
+    <p id="p-00072-en" num="0072">Determination of a liquid crystal structure of a coating film: a plastic film was coated with the surface treatment composition to prepare a dry coating film. This coating film was isolated, was interposed between two polarizing plates with polarizing directions perpendicular to each other, and was irradiated with light in a plane direction of the polarizing plates. As the light, fluorescent light was used. Whether or not the light passed through the coating film was determined by visual inspection. When the light did not pass through the coating film, it was determined that the coating film had a non-liquid-crystal structure. In addition, when the light passed through the coating film, it was determined that the coating film had a liquid crystal structure.</p>
+    <heading id="h-00021-en">(Example 2)</heading>
+    <p id="p-00073-en" num="0073">The same method as that of Example 1 was used, except that a half-screw flange bolt M8L55 coated with a zinc-aluminum composite coating material was used.</p>
+    <heading id="h-00022-en">(Comparative Example 1)</heading>
+    <p id="p-00074-en" num="0074">The same method as that of Example 1 was used, except that a half-screw flange bolt M8L55 plated with zinc was coated with a surface treatment composition obtained from the corrosion inhibitor of Example 1 without mixing with the liquid crystal compound.</p>
+    <heading id="h-00023-en">(Comparative Example 2)</heading>
+    <p id="p-00075-en" num="0075">The same method as that of Example 1 was used, except that a half-screw flange bolt M8L55 coated with a zinc composite coating material was coated with a surface treatment composition obtained from the corrosion inhibitor of Example 1 without mixing with the liquid crystal compound.</p>
+    <p id="p-00076-en" num="0076">The evaluation results relating to the above-described evaluation items are shown in Table 1 below. <tables id="tables-00001-en" num="0001"><table frame="all"><title>[Table 1]</title><tgroup cols="5"><colspec colnum="1" colname="col1" colwidth="36mm" /><colspec colnum="2" colname="col2" colwidth="36mm" /><colspec colnum="3" colname="col3" colwidth="36mm" /><colspec colnum="4" colname="col4" colwidth="30mm" /><colspec colnum="5" colname="col5" colwidth="30mm" /><thead><row><entry align="center" valign="middle" /><entry align="center" valign="middle">Example 1</entry><entry align="center" valign="middle">Example 2</entry><entry align="center" valign="middle">Comparative Example 1</entry><entry align="center" valign="middle">Comparative Example 2</entry></row></thead><tbody><row><entry align="center" valign="middle">Liquid Crystal Compound</entry><entry align="center" valign="middle">Present</entry><entry align="center" valign="middle">Present</entry><entry align="center" valign="middle">Absent</entry><entry align="center" valign="middle">Absent</entry></row><row><entry align="center" valign="middle">Overall Frictional Coefficient</entry><entry align="center" valign="middle">0.140</entry><entry align="center" valign="middle">0.142</entry><entry align="center" valign="middle">0.278</entry><entry align="center" valign="middle">0.210</entry></row><row><entry align="center" valign="middle">Liquid Crystal Structure of Coating Film</entry><entry align="center" valign="middle">Non-Liquid-Crystal Structure</entry><entry align="center" valign="middle">Non-Liquid-Crystal Structure</entry><entry align="center" valign="middle">Not Determined</entry><entry align="center" valign="middle">Not Determined</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00077-en" num="0077">The metal articles of Examples exhibited high lubricity and had a corrosion resistance effect unlike the metal articles of Comparative Examples.</p>
+    <p id="p-00078-en" num="0078">This application claims priority based on Japanese Patent Application No. <patcit id="pcit-00006" dnum="JP2012289010A"><text>2012-289010, filed on December 28, 2012</text></patcit>, the entire content of which is incorporated by reference.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A surface treatment composition which forms a coating film on a surface of a metal member by being coated and dried on the surface, the surface treatment composition comprising:
+<claim-text>a liquid crystal compound having a branched chain; and</claim-text><claim-text>a corrosion inhibitor.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The surface treatment composition according to claim 1, further comprising:
+<claim-text>a solvent,</claim-text><claim-text>wherein the liquid crystal compound is dissolved in the solvent.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The surface treatment composition according to claim 1, further comprising:
+<claim-text>a solvent,</claim-text><claim-text>wherein the liquid crystal compound is uniformly dispersed in the solvent.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The surface treatment composition according to claim 2 or 3,<br />
+wherein the solvent contains an alcohol.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The surface treatment composition according to claim 4,<br />
+wherein the alcohol contains at least one component selected from the group consisting of isopropyl alcohol, propylene glycol monomethyl ether, ethylene glycol-t-butoxide, n-propyl alcohol, and n-butanol.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The surface treatment composition according to any one of claims 1 to 5,<br />
+wherein the surface treatment composition forms the coating film having a non-liquid-crystal structure which is optically isotropic.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The surface treatment composition according to any one of claims 1 to 6,<br />
+wherein the liquid crystal compound having a branched chain is a compound represented by the following formula (1);
+        R<sup>1</sup>-Y<sup>1</sup>-C<sup>1</sup>-A-C<sup>2</sup>-Y<sup>1</sup>-R<sup>1</sup>     (1)
+wherein
+<claim-text>A represents any one of a single bond, -C(=O)-O-, -N=N-, -C(=O)-, -CH=CH-, -C =C-, -O-, -O-, and -CH<sub>2</sub>-,</claim-text><claim-text>C<sup>1</sup> and C<sup>2</sup> each independently represents
+<chemistry id="chemc-00001-en" num="0014"><img id="imgc-00001-en" wi="154" he="18" img-content="chem" file="EP2940190A1_00014.PNG" img-format="png" original="imgb0014.tif" /></chemistry>
+(where one of two direct bonds may be bonded to A),</claim-text><claim-text>R<sup>1</sup> represents a branched alkyl group, and</claim-text><claim-text>Y<sup>1</sup> represents any one of -O-, -C(=O)-O-, -O-C(=O)-, -C(=O)-NH-, and -NH-C(=O)-.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The surface treatment composition according to claim 7,<br />
+wherein in the liquid crystal compound represented by the formula (1), Y<sup>1</sup> represents -O- or -C(=O)-O-.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The surface treatment composition According to claim 7 nor 8,<br />
+wherein in the liquid crystal compound represented by the formula (1), R<sup>1</sup> represents a branched alkyl group having equal to or more than 3 and equal to or less than 22 carbon atoms.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>The surface treatment composition according to any one of claims 1 to 9,<br />
+wherein the liquid crystal compound is formed of at least one compound selected from the group consisting of 4,4'-di-2-ethyl hexyloxy-1,1'-biphenyl represented by the following formula (A1), 4,4'-di-3-ethyl hexyloxy-1,1'-biphenyl represented by the following formula (A2), 4,4'-di-2-methyl heptyloxy-1,1'-biphenyl represented by the following formula (A3), 4,4'-di-3-methyl heptyloxy-1,1'-biphenyl represented by the following formula (A4), 4,4'-di-4-methyl heptyloxy-1,1'-biphenyl represented by the following formula (A5), 4,4'-di-5-methyl heptyloxy-1,1'-biphenyl represented by the following formula (A6), 4,4'-di-2-ethyl octyloxy-1,1'-biphenyl represented by the following formula (A7), 4,4'-di-3-ethyloctyloxy-1,1'-biphenyl represented by the following formula (A8), 4,4'-di-3-n-propylheptyloxy-1,1'-biphenyl represented by the following formula (A9), 4,4'-di-3-n-propyl nonyloxy-1,1'-biphenyl represented by the following formula (A10), 4,4'-di-3-ethyl-6-methyl nonyloxy-1,1'-biphenyl represented by the following formula (A11), and 4,4'-di-2-methyl hexadecyloxyl-1,1'-biphenyl represented by the following formula (A12).
+<chemistry id="chemc-00002-en" num="0015"><img id="imgc-00002-en" wi="130" he="22" img-content="chem" file="EP2940190A1_00015.PNG" img-format="png" original="imgb0015.tif" /></chemistry><chemistry id="chemc-00003-en" num="0016"><img id="imgc-00003-en" wi="130" he="20" img-content="chem" file="EP2940190A1_00016.PNG" img-format="png" original="imgb0016.tif" /></chemistry><chemistry id="chemc-00004-en" num="0017"><img id="imgc-00004-en" wi="130" he="22" img-content="chem" file="EP2940190A1_00017.PNG" img-format="png" original="imgb0017.tif" /></chemistry><chemistry id="chemc-00005-en" num="0018"><img id="imgc-00005-en" wi="130" he="21" img-content="chem" file="EP2940190A1_00018.PNG" img-format="png" original="imgb0018.tif" /></chemistry><chemistry id="chemc-00006-en" num="0019"><img id="imgc-00006-en" wi="131" he="21" img-content="chem" file="EP2940190A1_00019.PNG" img-format="png" original="imgb0019.tif" /></chemistry><chemistry id="chemc-00007-en" num="0020"><img id="imgc-00007-en" wi="131" he="21" img-content="chem" file="EP2940190A1_00020.PNG" img-format="png" original="imgb0020.tif" /></chemistry><chemistry id="chemc-00008-en" num="0021"><img id="imgc-00008-en" wi="141" he="24" img-content="chem" file="EP2940190A1_00021.PNG" img-format="png" original="imgb0021.tif" /></chemistry><chemistry id="chemc-00009-en" num="0022"><img id="imgc-00009-en" wi="144" he="24" img-content="chem" file="EP2940190A1_00022.PNG" img-format="png" original="imgb0022.tif" /></chemistry><chemistry id="chemc-00010-en" num="0023"><img id="imgc-00010-en" wi="141" he="24" img-content="chem" file="EP2940190A1_00023.PNG" img-format="png" original="imgb0023.tif" /></chemistry><chemistry id="chemc-00011-en" num="0024"><img id="imgc-00011-en" wi="145" he="24" img-content="chem" file="EP2940190A1_00024.PNG" img-format="png" original="imgb0024.tif" /></chemistry><chemistry id="chemc-00012-en" num="0025"><img id="imgc-00012-en" wi="156" he="21" img-content="chem" file="EP2940190A1_00025.PNG" img-format="png" original="imgb0025.tif" /></chemistry><chemistry id="chemc-00013-en" num="0026"><img id="imgc-00013-en" wi="141" he="25" img-content="chem" file="EP2940190A1_00026.PNG" img-format="png" original="imgb0026.tif" /></chemistry></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>The surface treatment composition according to any one of claims 1 to 10,<br />
+wherein the corrosion inhibitor is formed of a material containing an alkoxysilane oligomer.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>The surface treatment composition according to any one of claims 1 to 11,<br />
+wherein the liquid crystal compound has a content of equal to or more than 0.01 wt% and equal to or less than 30.0 wt% with respect to a total amount of the corrosion inhibitor.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>A method of producing the surface treatment composition according to any one of claims 1 to 12, the method comprising:
+<claim-text>a step of mixing a corrosion inhibitor with a liquid crystal compound having a branched chain.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>The method of producing the surface treatment composition according to claim 13,<br />
+wherein in the step of mixing, a solvent is mixed with a mixture of the corrosion inhibitor and the liquid crystal compound, and<br />
+the method further comprises a step of dissolving or dispersing the liquid crystal compound in the solvent.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>A metal article comprising:
+<claim-text>a metal member; and</claim-text><claim-text>a coating film that is formed of the surface treatment composition according to any one of claims 1 to 12,</claim-text><claim-text>wherein the coating film is formed on a surface of the metal member by drying the surface treatment composition.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>The metal article according to claim 15,<br />
+wherein the coating film forms a non-liquid-crystal structure which is optically isotropic.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>The metal article according to claim 15 or 16,<br />
+wherein a thickness of the coating film is equal to or more than 0.1 µm and equal to or less than 3.0 µm.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>The metal article according to any one of claims 15 to 17,<br />
+wherein an overall frictional coefficient which is measured and calculated according to JIS B 1084 by using the metal article as a specimen is equal to or more than 0.030 and equal to or less than 0.500.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>The metal article according to any one of claims 15 to 18,<br />
+wherein the surface of the metal member is formed of one material of zinc, a zinc alloy, iron, stainless steel, aluminum, and brass.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>The metal article according to any one of claims 15 to 19, wherein the metal member is a bolt or a screw.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>A method of producing a metal member comprising:
+<claim-text>a step of coating a surface of a metal member with the surface treatment composition according to any one of claims 1 to 12; and</claim-text><claim-text>a step of drying the surface treatment composition to form a coating film.</claim-text></claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>The method of producing a metal article according to claim 21,<br />
+wherein in the step of forming the coating film, the surface treatment composition is dried at a temperature of equal to or higher than 25°C and equal to or lower than 200°C.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>The method of producing a metal article according to claim 21 or 22,<br />
+wherein in the step of forming the coating film, the coating film having a thickness of equal to or more than 0.1 µm and equal to or less than 3.0 µm is formed.</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00002.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0002.tif" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00003.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0003.tif" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0004.tif" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0005.tif" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0006.tif" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0007.tif" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0008.tif" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0009.tif" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0010.tif" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0011.tif" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0012.tif" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0013.tif" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0014.tif" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00015.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0015.tif" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00016.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0016.tif" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00017.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0017.tif" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00018.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0018.tif" inline="yes" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00019.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0019.tif" inline="yes" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00020.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0020.tif" inline="yes" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00021.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0021.tif" inline="yes" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00022.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0022.tif" inline="yes" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00023.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0023.tif" inline="yes" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00024.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0024.tif" inline="yes" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00025.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0025.tif" inline="yes" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="EP2940190A1_00026.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0026.tif" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="EP2940190A1.PDF" type="pdf" size="367997" pages="17" />
+</lexisnexis-patent-document>

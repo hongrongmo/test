@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150250426A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="022154" date-changed="20150925" time-changed="020445">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121232714">
+        <country>US</country>
+        <doc-number>20150250426</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14426166</doc-number>
+        <date>20130903</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>A61B   5/00        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B   5/0205      20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0205</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61B   5/0402      20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0402</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61B   5/113       20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>113</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>A61B   7/02        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>A61B   5/7221      20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>7221</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   5/0059      20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0059</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B   5/0205      20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0205</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B   5/02055     20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>02055</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B   5/022       20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>022</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B   5/0402      20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0402</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61B   5/0531      20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0531</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61B   5/113       20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>113</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61B   5/1495      20130101 LI20140317BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>1495</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140317</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61B   5/6804      20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>6804</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61B   5/7203      20130101 LA20140123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>7203</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>A61B   7/02        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>A61B2560/0242      20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2560</main-group>
+        <subgroup>0242</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>G06F  19/3406      20130101 LA20140123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>19</main-group>
+        <subgroup>3406</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">DEVICE AND METHOD TO IMPROVE DEPENDABILITY OF PHYSIOLOGICAL PARAMETER MEASUREMENTS</invention-title>
+    <related-documents date-changed="20150910">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61698751</doc-number>
+          <date>20120910</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>KONINKLIJKE PHILIPS N.V.</orgname>
+            <role>03</role>
+            <address>
+              <city>EINDHOVEN</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Muehlsteff</last-name>
+            <first-name>Jens</first-name>
+            <address>
+              <city>Aachen</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>IB13058251</doc-number>
+        <date>20130903</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014037874</doc-number>
+        <date>20140313</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173569902">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250426</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20130903</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173569901">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250426</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20130903</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Self measurements of physiological parameters such as blood pressure are prone to errors and artifacts since they are often not done according to established and standardized protocols i.e., such that predetermined conditions for a reliable measurement are not met. To determine whether the predetermined conditions for a reliable measurement are met one or more physiological and environmental sensors are used to determine a measurement context. The obtained sensor data is compared with predetermined thresholds to determine whether the context allows a reliable self test. In case the predetermined conditions are not met based on the obtained sensor data instructions are given to guide the subject that wants to do a self test.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150305</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015250426A1</docdb-publication-number>
+      <docdb-application-id>444306982</docdb-application-id>
+      <new-owner>KONINKLIJKE PHILIPS N.V., NETHERLANDS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:MUEHLSTEFF, JENS;REEL/FRAME:035089/0914</free-text-description>
+      <effective-date>
+        <date>20130903</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The invention is related to the field of measurement of physiological parameters, in particular to the unassisted measurement of physiological parameters of a subject.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">One of the vital signs of a person often measured is the blood pressure (BP). Though the basic procedure of measuring physiological parameters such as blood pressure may be a simple one, there are certain conditions to be met and protocols to be adhered to, just before and during the measurement to obtain dependable measurement values.</p>
+      <p id="p-00003-en" num="0003">Changes in demography, ageing populations for instance, the increasing healthcare costs, expected shortage of medical staff, growing demand for improved healthcare in emerging and developing countries will drive further changes in the healthcare systems. Patients will not only be monitored sporadically in the hospitals during acute phases but also in low acuity settings and even at home, where they are often unsupervised or unassisted by trained staff. To enable this, the patients may even be asked to make reliable measurements themselves (i.e. monitoring everywhere, ubiquitous monitoring).</p>
+      <p id="p-00004-en" num="0004">The published patent application US20110224500 describes a body-worn vital sign monitor that measures a patient's vital signs (e.g. blood pressure, SpO2, heart rate, respiratory rate, and temperature) while simultaneously characterizing their activity state (e.g. resting, walking, convulsing, falling) and posture (upright, supine). The monitor processes this information to minimize corruption of the vital signs and associated alarms/alerts by motion-related artifacts.</p>
+      <p id="p-00005-en" num="0005">In this case, the measurements are made at whatever conditions prevail at the time of the measurements and using other physiological parameters the vital sign values are processed to reduce the artifacts.</p>
+      <p id="p-00006-en" num="0006">However, there are many patients either at home or in a care facility who need not be monitored on a continuous basis but whose physiological parameters need to be measured accurately, adhering to measurement protocols, to obtain dependable readings of the physiological parameters, a few times a day. This is increasingly being done by the patient himself/herself. (In the text here after, the masculine pronoun will be used for clarity though both masculine and feminine are implicitly intended) In such cases, however, it has to be ensured that the patient measures his own physiological parameters under proper and well-defined conditions that would make the measured physiological parameters values dependable for decisions based on them. Further, when physiological parameters values are stored for recognizing a trend in the physiological parameters, if the measured values are not dependable, as an obvious consequence, the trend also is rendered undependable.</p>
+      <p id="p-00007-en" num="0007">Physiological parameters measurements done by the patient himself are prone to errors and artifacts since they are often not done according to established and standardized protocols. For example, a patient is expected to have rested for at least five minutes immediately before the start of a Blood Pressure (BP) measurement; he should not talk during the measurement; the measurements must be made when the body is in a prescribed position Ankle brachial pressure index and Pulse wave velocity are other examples of such measurements that require predefined conditions for dependable measurements. Since many patients do not comply with such requirements consistently, physiological parameter measurements are often difficult to interpret for the clinicians/physicians and are of limited value in disease management systems for decision support.</p>
+      <p id="p-00008-en" num="0008">However, new monitoring and treatment concepts in unsupervised scenarios e.g. in home monitoring/tele-monitoring need accurate physiological parameter measurements as key input parameters. One example is the management of congestive heart failure patients as described in the paper “Cardiac Status Assessment with a Multi-Signal Device for Improved Home-based Congestive Heart Failure Management”, by Jens Muehlsteff et al, called “Hemodynamic Tailoring” aiming at personalized treatment and therapy using hemodynamic variables to assess the patient's health status. In general any decision support system requires reliable measurements. This concept inherently provides means to check the quality of a physiological parameter measurement. If the quality of a measurement is considered too low, the system may reject a BP measurement supplied to it as input.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00009-en" num="0009">Thus there is a need for a device and a method that promotes dependable physiological parameter measurements. This need is addressed with a device for determining if predetermined conditions for a first physiological parameter measurement of a subject are met as defined in claim <b>1</b>. The device according to claim <b>1</b> enables the measurement of a physiological parameter of a subject when one or more predefined conditions are met. The measurement may be made by the subject or triggered by the subject or measured automatically when the predefined or preferred conditions are met.</p>
+      <p id="p-00010-en" num="0010">The device according to claim <b>1</b> is arranged to measure one or more physiological and one or more environmental parameters. The values of these parameters are used to infer the subject's status. Here, status means whether the physiological and environmental parameters are in steady state or not and whether they meet pre-defined measurement protocols or not. There may be additional requirements too. For instance that the patient has been at rest and in the predefined posture for a predetermined length of time before and during the measurement of the first physiological parameter or that the subject has not spoken for a certain period of time or during the time period used for measurement of the first physiological parameter.</p>
+      <p id="p-00011-en" num="0011">In the further text the term ‘context’ is used. The context encompasses the values of the physiological parameters, the values of the environmental parameters wherein the environmental parameters include, for example, the subject's position, how long the subject has been in the prescribed position, whether the subject has been talking and so on. When all the predetermined conditions are met, the context is said to be suitable or appropriate for the first physiological parameter measurement to be made.</p>
+      <p id="p-00012-en" num="0012">In a preferred embodiment the one or more sensors are disposed in a wearable electronic garment (here after it may be referred to as garment) such that, when worn in a predefined way, the sensors are disposed on the subject's body in positions appropriate for measuring various physiological parameters or vital signs of the subject. In another embodiment, the device is configured to guide the subject by conveying predefined instructions to take specific actions to make the context appropriate for the measurement. In another embodiment, the decision unit automatically triggers the physiological parameter measurement when the context is appropriate.</p>
+      <p id="p-00013-en" num="0013">Further the need is also address with a method of determining if predetermined conditions for a physiological parameter measurement of a subject are met, according to claim <b>10</b>.</p>
+      <p id="p-00014-en" num="0014">According to the disclosed method values of various physiological and environmental parameters are measured. When the values of the parameters meet certain predefined requirements and the context meets predetermined conditions, it indicates that a dependable physiological parameter measurement may be made. This is either indicated so that the first physiological parameter measurements are made or the acquisition of first physiological parameter measurement signals, from a cuff-based sensor for BP measurement, for instance, is enabled. The signals acquired are then processed to get the BP of the subject.</p>
+      <p id="p-00015-en" num="0015">Cuff based measurement may be made with a sphygmomanometer cuff having an electronic pressure sensor to sense cuff pressure oscillations. In an embodiment the sphygmomanometer cuff further comprises signal processing means to interpret the transducer signals and calculate the BP values. The sphygmomanometer cuff may also have means for automatic inflation and deflation of the cuff.</p>
+      <p id="p-00016-en" num="0016">The cuff may be inflated initially to a pressure in excess of the systolic arterial pressure and then reduced to below diastolic pressure over a period of about 30 seconds. When blood flow is present, but restricted, the cuff pressure, which is monitored by the pressure sensor, will vary periodically in synchrony with the cyclic expansion and contraction of the brachial artery. In other words, it oscillates. The values of systolic and diastolic pressures are computed, from the raw data using a suitable algorithm. In an embodiment of the device according to claim <b>7</b> a sphygmomanometer cuff is used as a BP sensor. The determined blood pressure may be displayed on the device for a care giver or conveyed to any other device at a remote location for interpretation.</p>
+      <p id="p-00017-en" num="0017">It is to be understood that if the values of the parameters change during the acquisition of the signals and one or more of them are no longer within the predetermined limits, in other words, the context changes such that predetermined conditions are no longer met, the measurement is discontinued or disabled. The subject speaking during the acquisition is an event, for example, that makes the context inappropriate for the first physiological parameter measurement. Then, that state is indicated so that the first physiological parameter measurement is abandoned or acquisition of first physiological parameter measurement signals is disabled.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00018-en" num="0018">These and other aspects of the disclosed device and method are described in detail with reference to the following figures, wherein:</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 1</figref> is a schematic diagram of the disclosed device;</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 2</figref> is a schematic diagram of an embodiment of the disclosed device;</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 3</figref>, comprising <figref>FIG. 3</figref><i>a </i>and <figref>FIG. 3</figref><i>b</i>, is an exemplary diagram of a preferred embodiment of the disclosed device;</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 4</figref> is a diagrammatic representation of the disclosed method; and</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 5</figref> is a diagrammatic representation of a variant of the disclosed method.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF EMBODIMENTS</heading>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 1</figref> shows the schematic block diagram of an embodiment of the disclosed device. In the description that follows, the term first physiological parameter is used for the physiological parameter that may be measured by the unassisted subject himself or by a caregiver. The other physiological parameters measured to ensure the dependability of the measurement of the first physiological parameter are referred to as the second physiological parameters. The physiological parameter sensors <b>101</b><sub>1</sub>, <b>101</b><sub>2 </sub>. . . <b>101</b> are applied to the subject's body surface appropriately. The environmental parameter sensors <b>103</b><sub>1</sub>, <b>103</b><sub>2 </sub>. . . <b>103</b><sub>m </sub>are disposed in the immediate environment of the subject. The one or more physiological sensors <b>101</b><sub>1</sub>, <b>101</b><sub>2 </sub>. . . <b>101</b> enable measuring one or more second physiological parameters of the subject and one or more environmental sensors <b>103</b><sub>1</sub>, <b>103</b><sub>2 </sub>. . . <b>103</b><sub>m </sub>enable measuring one or more environmental parameters from the environment of the subject. For instance the physiological sensors for measuring the second physiological parameters may include a heart sound sensor for measuring a pulse rate (beats per minute) and accelerometers for deriving a posture of the subject and/or an activity level of the subject. These are but a couple of examples and it is to be understood that signals from all the sensors are received and the values of the corresponding physiological parameters are measured. Similarly the at least one environmental sensor enables the measuring of environmental parameters. For instance, the environmental sensor may be a microphone for determining if the subject has been speaking. This sensor may also be used to monitor how long the subject has been silent. The air temperature surrounding the subject is sensed and the atmospheric temperature is measured with a temperature sensor. The decision unit <b>109</b> decides based on the values of the second physiological parameters such as, for example, pulse rate and posture and the values of environmental parameters such as, for example sound, whether predetermined conditions are met and the first physiological parameter measurement can be made. The output unit <b>111</b> outputs the decision in an appropriate fashion. In the simplest case, the output may be a green lamp, for example, indicating that a first physiological parameter measurement may be made.</p>
+      <p id="p-00025-en" num="0025">Once the output unit <b>111</b> outputs the decision that a physiological parameter measurement can (or could) be made, a caregiver may measure the physiological parameter in a known way. In certain embodiments the subject himself may trigger a physiological parameter measurement by an automated physiological parameter measuring device based on the output. In one embodiment, the output of the output unit <b>111</b> is received by a sphygmomanometer cuff worn by the subject and a cuff based BP measurement is made in response to the received output.</p>
+      <p id="p-00026-en" num="0026">Certain external devices, for instance clinical decision support (CDS) devices use first physiological parameter values as one of the inputs for their operation. In one embodiment, the output unit may convey the measured first physiological parameter values to such a device in a wired or wireless manner. Some such devices also require the context of the measurement of the first physiological parameter. In one embodiment, the output unit may also convey the values of all the physiological and environmental parameters and other data at the time of the first physiological parameter measurement.</p>
+      <p id="p-00027-en" num="0027">However, it is to be noted that the context, once determined as appropriate is dynamic and not static. That means it may change even during the short time required to measure the first physiological parameter manually or acquire the measurement signals of the first physiological parameter. Thus in an embodiment, the device according to the invention continuously measures the physiological parameters and environmental parameters to monitor the context and to determine if predetermined conditions are met. If the context changes during the measurement the decision unit <b>109</b> may determine that the predetermined conditions are no longer met and the first physiological parameter measurement may not be made, which is output by the output unit <b>111</b>. A red lamp, for instance, may be used for indicating that the context is not appropriate for the first physiological parameter measurement. The manual measurement of the first physiological parameter must be abandoned at that time. In the embodiment wherein the measurement of the first physiological parameter is automatic, the acquisition of the signals for a first physiological parameter measurement is stopped and the signals acquired till then are discarded. The device then awaits the context to become suitable again for a first physiological parameter measurement.</p>
+      <p id="p-00028-en" num="0028">The different parameters taken into account and the appropriate sensors are now described. The parameters are neither exhaustive nor any one of them is essential to practice the disclosed device and method. Some of the second physiological parameters measured may be as follows. Heart sound sensors may be applied to the torso of the subject to measure the heart rate or the pulse rate. Electrocardiogram electrodes may be applied to the subject at appropriate places to sense electrical signals of the heart. Apart from the well known data that may be derived from the ECG signals the signals may also be processed to provide the pulse rate Skin temperature measurements may be carried out using the suitable known sensors. Electrical resistance of the skin provides a measure of the relaxed state of the subject and even a sense of the time elapsed since previous exertion. Thoracic impedance sensors provide signals for measuring the breathing rate of the subject. Infrared Photoplethysmograph and near-infrared Photoplethysmograph sensors provide information on SpO2 and also the pulse rate. Combining the ECG information and the plethysmography signals it is possible to estimate the BP also of the subject in an indirect manner. Respiratory Inductance Plethysmography sensors may be used to sense the respiratory rate. Three-axis accelerometers are used to measure the subject's position and posture apart from activity or absence of it.</p>
+      <p id="p-00029-en" num="0029">Similarly, some of the environmental parameters measured may be as follows. Air temperature may be measured with a suitable sensor. Similarly, atmospheric pressure and humidity sensors may be used for measuring atmospheric pressure and relative humidity. Microphones may be used for sensing the environmental noise and also the voice of the subject. A single microphone may be used to sense both or separate microphones may be used for each.</p>
+      <p id="p-00030-en" num="0030">The context derived from the values of the parameters will now be described exemplarily. Predetermined thresholds may be set for one or more second physiological and/or environmental parameter. When the value of the parameter is below or above the thresholds applicable to that parameter, the corresponding parameter may be treated as conducive to the measurement of the first physiological parameter. The physiological and/or environmental parameters for which predetermined thresholds have been set together form the predetermined conditions for the first physiological parameter measurement. Thus when all the second physiological and/or environmental parameters meet predefined criteria (i.e. larger or smaller than predetermined thresholds or between upper and lower thresholds), the context may be declared as appropriate for the measurement of the first physiological parameter.</p>
+      <p id="p-00031-en" num="0031">However, such a decision (that the context is appropriate) may suffer from the fact that factors such as the subject's sex, age, level of fitness and recent medical history may determine the threshold values for each of the parameters. Such being the case, in a further embodiment the rate of change of a second physiological parameter over a predetermined time period is measured and when the rate of change falls below a certain threshold, that parameter may be deemed to meet the predetermined criterion. For example the pulse rate at rest differs from person to person. Thus, instead of measuring the pulse rate of a person the rate of fall of the pulse rate once the person assumes the position for the measurement of the first physiological parameter may be measured and when it falls below a certain rate, the pulse rate parameter may be deemed to be appropriate for the measurement of the first physiological parameter. In a further embodiment a user interface is provided for the device that will allow the values of the different parameters suitable for an individual subject are entered and stored in the device.</p>
+      <p id="p-00032-en" num="0032">In a preferred embodiment the device is arranged for determining if predetermined conditions for a blood pressure measurement of a subject are met, shown <figref>FIG. 2</figref>, the device comprises or is operatively connected to a sphygmomanometer cuff <b>215</b> for obtaining cuff-based BP measurement signals. The output of the decision unit <b>109</b> enables the device to sense the signals from the sphygmomanometer cuff and to calculate the BP, when the context is again appropriate.</p>
+      <p id="p-00033-en" num="0033">In another preferred embodiment the device for determining if predetermined conditions for the first physiological parameter measurement of a subject are met is disposed in a garment <b>300</b>, as shown in <figref>FIG. 3</figref><i>a</i>, suitable for being worn by a subject in a predefined way. Garments which house electronic devices including sensors are known in the art. They are known in the art as wearable electronics, functional electronic garments or clothing. They may be made out of textiles referred to as E-textiles or electronic textiles or smart textiles. It is possible to embed electronic devices in an article of clothing or garment and the functional interconnections are also provided by the textile. No further details of these are described here except what is applicable to this disclosure since a person familiar with the field will readily understand what is meant here.</p>
+      <p id="p-00034-en" num="0034">When the disclosed device is disposed in such a garment, say something similar to a waistcoat, a coat or a coverall, made out of such textiles, the sensors <b>101</b><sub>1</sub>, <b>101</b><sub>2</sub>, . . . <b>104</b>, for sensing the second and/or first physiological parameters are located in the garment so that when the garment is worn as intended, the sensors are in contact with the subject's body surface such that they can perform their intended function i.e., sense the physiological parameter each is intended to measure, as shown in an exemplary way in <figref>FIG. 3</figref><i>b</i>. The interconnections between the sensors and the rest of the device are provided by the textile itself. The sensors may communicate with the rest of the device wirelessly as well. Thus, from the perspective of the subject, he has to wear the garment as predefined, assume the recommended physical position and start the device for the function of the device to be carried out automatically. This embodiment may provide the advantage that the subject does not need any assistance, for example that of a caregiver, to apply the sensors to the right places on his own body. This may also make the measurement of the first physiological parameter (for example the BP) by the subject himself at home without visiting a care facility repeatable and dependable. With the appropriate communication means incorporated into the device, the first physiological parameter measurement and the context data may be sent to a remote location for example a hospital, for the experts or a remote system or application to monitor the subject.</p>
+      <p id="p-00035-en" num="0035">The method of determining if predetermined conditions for a first physiological parameter measurement of a subject are met is shown as a flow diagram in <figref>FIG. 4</figref>. In a first measuring step <b>421</b>, at least one second physiological parameter is measured. In a second measuring step <b>425</b> at least one environmental parameter is measured. In a determining step <b>427</b> it is determined if the predetermined conditions are met, based on the values of the measured second physiological parameters and environmental parameters, to determine whether a first physiological parameter measurement may be made at a present time or not. In an outputting step <b>429</b>, the decision that the predetermined conditions for a first physiological parameter measurement of the subject are met is outputted for further use.</p>
+      <p id="p-00036-en" num="0036">In one embodiment of the method, the output is in a human readable form. In that case a caregiver may read it and measure the first physiological parameter once the decision output is that first physiological parameter may be measured.</p>
+      <p id="p-00037-en" num="0037">In another embodiment of the method <b>500</b>, shown in <figref>FIG. 5</figref>, in a first physiological parameter measurement step <b>533</b>, the first physiological parameter measurement is made. Then the first physiological parameter value and all the values of the second physiological parameters and environmental parameters at the time of measurement are outputted in an outputting step <b>535</b>.</p>
+      <p id="p-00038-en" num="0038">The first physiological parameter measurement is enabled as long as the predetermined conditions for the measurement of the first physiological parameter are met. That means, the context continues to be evaluated during the measurement of the first physiological parameter and if the predetermined conditions are not met, it will be indicated and the measurement of the first physiological parameter is stopped by the caregiver or the first physiological parameter measurement are disabled. There can be more than one possible reason for the context to change. For instance the subject may speak during the measurement. This is known to introduce artifacts in a BP measurement, for instance. The subject may move his arm or change his body position which will also make the measurement of the first physiological parameter undependable. There may be a sudden disturbing external audible noise that disturbs the subject and so on. When such conditions inimical to the measurement are encountered, the measurement is disabled automatically and enabled again when the measurement may be made again based on the context.</p>
+      <p id="p-00039-en" num="0039">The gist of the method of determining if predetermined conditions for a physiological parameter measurement of a subject are met is to measure multiple physiological and environmental parameters that may not only be overlapping but may also appear to be redundant. The apparently redundant measurements are used to determine and cross check if the measurement may be made. The redundancy is used for cross-checking the values of the parameters measured in different ways to increase the dependability of the measurement.</p>
+      <p id="p-00040-en" num="0040">For example, it is possible to practice the invention in an arrangement wherein there are more than one memory unit to store the various signals. While the physiological and environmental sensor signals are being acquired for measuring the physiological and environmental parameters, they may be digitized and stored in a temporary volatile memory and after the processing and comparison the values may be stored in a non-volatile memory. Even though the physiological and environmental parameters are treated as distinct, processing means and memory means to determine the physiological and environmental parameters may carry out the functions for the physiological as well as the environmental parameter measurements. Similarly, the steps of methods disclosed in different embodiments may be combined with advantage. Further variations and combinations will occur to a practitioner and all such variations are deemed to be within the scope of the disclosed devices and methods. Others may add more parameters or use lesser number of parameters than those recited to determine that predetermined conditions are met and all such variations are deemed to be within the scope of the disclosed embodiments and methods.</p>
+      <p id="p-00041-en" num="0041">Self measurements of physiological parameters such as blood pressure are prone to errors and artifacts since they are often not done according to established and standardized protocols i.e., such that predetermined conditions for a reliable measurement are not met. The device and method as defined in the claims are used to determine whether the predetermined conditions for a reliable measurement are met. With one or more physiological and environmental sensors a measurement context is determined. The context for dependable measurements is for example known from protocols. The obtained sensor data is compared with predetermined thresholds to determine whether the context allows a reliable self test. In case the predetermined conditions are not met based on the obtained sensor data instructions are given to guide the subject that wants to do a self test.</p>
+      <p id="p-00042-en" num="0042">Other variations to the disclosed embodiments can be understood and effected by those skilled in the art, in practicing the claimed invention, from a study of the drawings, the disclosure, and the appended claims. In the claims, the word “comprising” does not exclude elements or steps other than those mentioned, and the indefinite article “a” or “an” does not exclude a plurality. A single processor or other unit may fulfill the functions of several items recited in the claims. Various means may be used for the realization of the processing of the signals and the logic units, such as general purpose microprocessors, microcontrollers, programmable logic devices and such or dedicated hardware or combination of hardware and software may also be used. The mere fact that certain measures are recited in mutually different dependent claims does not imply that a combination of these measures cannot be used to advantage.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A device for determining if predetermined conditions for measuring a first physiological parameter of a subject are met, the device comprising:
+<claim-text>one or more physiological sensors for measuring one or more second physiological parameters of the subject;</claim-text><claim-text>one or more environmental sensors for measuring one or more environmental parameters from the environment of the subject;</claim-text><claim-text>a decision unit for determining if the predetermined conditions are met based on the values of the one or more second physiological parameters and the values of the one or more environmental parameters; and</claim-text><claim-text>an output unit for outputting that the predetermined conditions for measuring the first physiological parameter of the subject are met, wherein the output unit is further arranged to give instructions to guide the subject in case the predetermined conditions are not met.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein one or more physiological sensors for measuring the one or more physiological parameters are one or more of, but not limited to, ECG electrodes, skin temperatures sensors, skin electrical resistance sensors, heart sound sensors, thoracic impedance sensors, infrared Photoplethysmography sensors, near-infrared Photoplethysmography sensors, Respiratory Inductance Plethysmography sensors, three-axis accelerometers, microphones and cuff-based sphygmomanometer sensors.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein more than one type of sensor is used for measuring a single physiological parameter.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the environmental sensors are one or more of, but not limited to, air temperature sensors, atmospheric pressure sensors, microphones, humidity sensors and accelerometer sensors.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the decision unit is also configured for determining which one or more of the second physiological parameter and/or environmental parameters need to change for the decision unit to determine that the predetermined conditions are met;
+<claim-text>the output unit being further configured for outputting one or more predetermined instructions in response to the decision unit having determined which one or more of the physiological and/or environmental parameters need to change and dependent on the first physiological parameter and the value of each of the one or more second physiological parameter and/or environmental parameters, the predetermined instructions instructing the subject to take an action for effecting the determined changes.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the first physiological parameter is a blood pressure.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The device of <claim-ref idref="clm-00006-en">claim 6</claim-ref> further comprising a blood pressure sensor (215) for measuring the blood pressure, and the device being arranged to acquire the blood pressure values from the blood pressure sensor during a period in which the output unit outputs that the predetermined conditions for a blood pressure measurement of the subject are met; and
+<claim-text>the output unit being further arranged for outputting the blood pressure values for further use.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A garment for being worn by the subject, the garment comprising the device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, the device being integrated in the garment such that in use the sensors are applied to predetermined locations on the subject's body for sensing the physiological signal corresponding to each of said predetermined locations.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The garment of <claim-ref idref="clm-00007-en">claim 7</claim-ref> wherein the one or more environmental sensors are disposed on the garment for sensing the environmental parameter corresponding to each sensor.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en" independent="true">
+      <claim-text>
+        <b>10</b>. A method of determining if predetermined conditions for measuring a first physiological parameter of a subject are met, the method comprising the steps of
+<claim-text>measuring one or more second physiological parameters with one or more physiological sensors;</claim-text><claim-text>measuring one or more environmental parameters with one or more environmental sensors;</claim-text><claim-text>determining if the predetermined conditions are met based on the values of the one or more second physiological parameters and the values of the one or more environmental parameters; and</claim-text><claim-text>outputting that the predetermined conditions for measuring the first physiological parameter of the subject are met, providing instructions to guide the subject in case the predetermined conditions are not met.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00010-en">claim 10</claim-ref> wherein the first physiological parameter is a blood pressure.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00010-en">claim 10</claim-ref> wherein
+<claim-text>determining further includes determining the second physiological parameter and/or environmental parameter whose values need to change to meet the predetermined conditions; and</claim-text><claim-text>outputting further includes outputting predetermined instructions to the subject, based on the first physiological parameter and the values of one or more of the second physiological and/or environmental parameters, for taking actions for effecting a change in the value of the second physiological parameter and/or environmental parameter whose value need to change, such that the predetermined conditions are met.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150250426A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150250426A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150250426A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250426A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150250426A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250426A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150250426A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250426A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150250426A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250426A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150250426A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250426A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150250426A1_00007.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150250426A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150250426A1.PDF" type="pdf" size="439736" pages="11" />
+</lexisnexis-patent-document>

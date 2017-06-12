@@ -1,0 +1,233 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>aws</groupId>
+  <artifactId>lambda</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+  <name>lambda</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk</artifactId>
+			<version>1.11.23</version>
+		</dependency>
+		
+		<!-- HH: 02/18/2016 for Amazon Lambda -->
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-lambda</artifactId>
+			<version>1.10.21</version>
+		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-lambda-java-core</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-lambda-java-events</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+ 			<artifactId>aws-lambda-java-log4j</artifactId>
+  			<version>1.0.0</version>
+  		 </dependency>
+		
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.5.3</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.5.3</version>
+		</dependency>
+		
+		<!-- HH from nyc-dataloading: for Patent zip file header issue  08/04/2015-->
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.wink</groupId>
+			<artifactId>wink-common</artifactId>
+			<version>1.4</version>
+		</dependency>
+<!-- HH: added 01/31/2017 -->
+	<dependency>
+    	<groupId>javax.jms</groupId>
+    	<artifactId>jms</artifactId>
+    	<version>1.1</version>
+	</dependency>
+
+		
+		
+		<!-- HH 02/29/2016 For Amazon ElastiCSearch Service -->
+		
+		<dependency>
+			<groupId>org.elasticsearch</groupId>
+			<artifactId>elasticsearch</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+		
+		<!-- HH 08/08/2016 for AWS SignInterceptor with Jest ES Library -->
+  
+		 <dependency>
+    		<groupId>vc.inreach.aws</groupId>
+    		<artifactId>aws-signing-request-interceptor</artifactId>
+    		<version>0.0.13</version>
+		</dependency>
+		
+		<!-- HH: copied from nyc-dataloading where i added there to test vtw multi-threads -->
+		
+		<!-- HH: for Amazon SQS for CAFE' Feed 01/15/2016 -->
+		<dependency>
+  			<groupId>com.amazonaws</groupId>
+ 			 <artifactId>amazon-sqs-java-messaging-lib</artifactId>
+ 			 <version>1.0.0</version>
+ 			 <type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
+		
+		<!-- HH: 01/31/2017 added to compile receiveamazonsqs  from nyc-dataloading to test vtw multi-thread-->
+	<dependency>
+   		 <groupId>javax.mail</groupId>
+   		 <artifactId>mail</artifactId>
+   		 <version>1.4.7</version>
+	</dependency>
+		
+		
+		<!-- HH 07/20/2016 for Amazon ES JEST HTTP REST Client -->
+		<dependency>
+  			<groupId>io.searchbox</groupId>
+  			<artifactId>jest</artifactId>
+  			<version>2.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.2</version>
+			<!-- <version>4.4.1</version> -->
+		</dependency>
+		
+		<!-- END HH 07/20/2016 -->
+		
+		<!-- HH 09/16/2016 for JSON Parser -->
+		<dependency>
+    		<groupId>javax.json</groupId>
+   			 <artifactId>javax.json-api</artifactId>
+    		<version>1.0</version>
+		</dependency>
+		<dependency>
+    		<groupId>org.glassfish</groupId>
+    		<artifactId>javax.json</artifactId>
+    		<version>1.0.4</version>
+		</dependency>
+		
+		<dependency>
+    		<groupId>com.googlecode.json-simple</groupId>
+    		<artifactId>json-simple</artifactId>
+    		<version>1.1.1</version>
+		</dependency>
+		
+		<!-- END HH 09/16/2016 -->
+		
+		<!-- HH: 09/26/2016 AMazon sqs -->
+		<dependency>
+   			 <groupId>com.amazonaws</groupId>
+    		<artifactId>aws-java-sdk-sqs</artifactId>
+    		<version>1.11.23</version>
+		</dependency>
+		<!-- HH END -->
+		
+		<!-- HH 10/12/2016 added for VTW to skip Byte Order Marker "BOM" from Patent XML file -->
+		<dependency>
+    		<groupId>commons-io</groupId>
+    		<artifactId>commons-io</artifactId>
+    		<version>2.4</version>
+		</dependency>
+		
+		<!-- HH END -->
+		
+		<!-- HH: 12/30/2016 for apach Perl5Util -->
+		<dependency>
+			<groupId>oro</groupId>
+			<artifactId>oro</artifactId>
+			<version>2.0.8</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.jdom</groupId>
+			<artifactId>jdom2</artifactId>
+			<version>2.0.5</version>
+		</dependency>
+		
+		<dependency>
+    		<groupId>com.oracle</groupId>
+   	 		<artifactId>ojdbc6</artifactId>
+    		<version>11.2.0.3</version>
+		</dependency>
+		
+		<!-- END -->
+		
+  </dependencies>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>2.3</version>
+        <configuration>
+          <createDependencyReducedPom>false</createDependencyReducedPom>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  
+</project>

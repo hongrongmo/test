@@ -1,0 +1,1300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252216A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021808" date-changed="20151016" time-changed="033103">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229210">
+        <country>US</country>
+        <doc-number>20150252216</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14638844</doc-number>
+        <date>20150304</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2014044442</doc-number>
+        <date>20140306</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151013">
+      <classification-ipcr sequence="1">
+        <text>C09D 153/00        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>153</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151013">
+      <classification-cpc sequence="1">
+        <text>C09D 153/00        20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>153</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B82Y  40/00        20130101 LI20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>82</class>
+        <subclass>Y</subclass>
+        <main-group>40</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C08F 297/026       20130101 LI20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>F</subclass>
+        <main-group>297</main-group>
+        <subgroup>026</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>G03F   7/0002      20130101 LI20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>03</class>
+        <subclass>F</subclass>
+        <main-group>7</main-group>
+        <subgroup>0002</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C09D 153/00        20130101 LI20151008BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>09</class>
+            <subclass>D</subclass>
+            <main-group>153</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151008</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08L  33/14        20130101 LI20151008BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>33</main-group>
+            <subgroup>14</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151008</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">11</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">PATTERN-FORMING METHOD AND DIRECTED SELF-ASSEMBLING COMPOSITION</invention-title>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>JSR CORPORATION</orgname>
+            <role>03</role>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MINEGISHI</last-name>
+            <first-name>Shinya</first-name>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>NARUOKA</last-name>
+            <first-name>Takehiko</first-name>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>NAGAI</last-name>
+            <first-name>Tomoki</first-name>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150928">
+      <main-family family-id="173566047">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015170723</doc-number>
+            <kind>A</kind>
+            <date>20150928</date>
+          </document-id>
+          <application-date>
+            <date>20140306</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252216</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150304</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173566046">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015170723</doc-number>
+            <kind>A</kind>
+            <date>20150928</date>
+          </document-id>
+          <application-date>
+            <date>20140306</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252216</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150304</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A pattern-forming method includes providing a coating film using a composition that includes: a first polymer which is a block copolymer; and a second polymer having a surface free energy lower than a surface free energy of the first polymer, such that the second polymer is unevenly distributed to be localized into a superficial layer region of the coating film. Phase separation is caused in the coating film along a direction substantially perpendicular to a thickness direction of the coating film such that at least a part of the coating film is converted into a directed self-assembling film which includes a plurality of phases. A part of the plurality of phases of the directed self-assembling film is removed.</p>
+  </abstract>
+  <legal-data date-changed="20151016">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150928</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252216A1</docdb-publication-number>
+      <docdb-application-id>444310493</docdb-application-id>
+      <new-owner>JSR CORPORATION, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:MINEGISHI, SHINYA;NARUOKA, TAKEHIKO;NAGAI, TOMOKI;SIGNING DATES FROM 20150821 TO 20150831;REEL/FRAME:036669/0415</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">The present application claims priority to Japanese Patent Application No. 2014-44442, filed Mar. 6, 2014. The contents of this application are incorporated herein by reference in their entirety.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">1. Field of the Invention</p>
+      <p id="p-00003-en" num="0003">The present invention relates to a pattern-forming method and a directed self-assembling composition.</p>
+      <p id="p-00004-en" num="0004">2. Discussion of the Background</p>
+      <p id="p-00005-en" num="0005">Miniaturization of various types of electronic device structures such as semiconductor devices and liquid crystal devices has been accompanied by demands for microfabrication of patterns in lithography processes. In these days, although fine patterns having a line width of about 50 nm can be formed using, for example, an ArF excimer laser beam, further finer pattern formation has been required.</p>
+      <p id="p-00006-en" num="0006">To meet the demands described above, a pattern-forming method which utilizes a phase separation structure formed by the directed self-assembly, as generally referred to, that spontaneously forms an ordered pattern have been proposed. For example, an ultrafine pattern-forming method by directed self-assembly has been known in which a block copolymer obtained by copolymerizing a monomer compound having one property with a monomer compound having a property that is distinct from the one property is involved (see Japanese Unexamined Patent Application, Publication No. 2008-149447, Japanese Unexamined Patent Application (Translation of PCT Application), Publication No. 2002-519728 and Japanese Unexamined Patent Application, Publication No. 2003-218383). According to this method, annealing of a film formed from a composition containing the block copolymer results in a tendency of clustering of polymer structures having the same property, and thus a pattern can be formed in a self-aligning manner.</p>
+      <p id="p-00007-en" num="0007">However, patterns obtained by utilizing the phase separation structure formed by such directed self-assembly are not deemed to be yet sufficiently fine, and additionally have drawbacks such as significant variations of a pattern size; therefore an improvement thereof has been demanded. As one of methods for achieving such an improvement, it is known that when a coating film of a directed self-assembling composition is provided on other film (hereinafter, may be also referred to as “underlayer film”), the abovementioned phase separation through the directed self-assembly may effectively occur, and materials and the like for the underlayer film have been investigated (see Japanese Unexamined Patent Application, Publication Nos. 2008-36491 and 2012-174984).</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00008-en" num="0008">According to one aspect of the present invention, a pattern-forming method includes providing a coating film using a composition that includes: a first polymer which is a block copolymer; and a second polymer having a surface free energy lower than a surface free energy of the first polymer, such that the second polymer is unevenly distributed to be localized into a superficial layer region of the coating film. Phase separation is caused in the coating film along a direction substantially perpendicular to a thickness direction of the coating film such that at least a part of the coating film is converted into a directed self-assembling film which includes a plurality of phases. A part of the plurality of phases of the directed self-assembling film is removed.</p>
+      <p id="p-00009-en" num="0009">According to another aspect of the present invention, a directed self-assembling composition includes a block copolymer, and a polymer having a surface free energy lower than a surface free energy of the block copolymer.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00010-en" num="0010">A more complete appreciation of the invention and many of the attendant advantages thereof will be readily obtained as the same becomes better understood by reference to the following detailed description when considered in connection with the accompanying drawings.</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 1</figref> shows a schematic view illustrating one example of a state after providing an underlayer film on a substrate in the pattern-forming method according to an embodiment of the present invention;</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 2</figref> shows a schematic view illustrating one example of a state after forming a prepattern on the underlayer film in the pattern-forming method according to the embodiment of the present invention;</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 3</figref> shows a schematic view illustrating one example of a state after providing, on a region surrounded by the prepattern on the underlayer film, a coating film in which a second polymer is unevenly distributed to be localized into a superficial layer region in the pattern-forming method according to the embodiment of the present invention;</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 4</figref> shows a schematic view illustrating one example of a state after converting at least a part of the coating film into a directed self-assembling film by causing phase separation in the coating film along a substantially perpendicular direction in the pattern-forming method according to the embodiment of the present invention; and</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 5</figref> shows a schematic view illustrating one example of a state after removing a part of a plurality of phases of the directed self-assembling film, the superficial layer region and the prepattern in the pattern-forming method according to the embodiment of the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DESCRIPTION OF THE EMBODIMENTS</heading>
+      <p id="p-00016-en" num="0016">According to an embodiment of the invention made for solving the aforementioned problems, a pattern-forming method includes:</p>
+      <p id="p-00017-en" num="0017">providing a coating film using a composition that contains a first polymer which is a block copolymer (hereinafter, may be also referred to as “(A) block copolymer” or “block copolymer (A)”), and a second polymer having a lower surface free energy than that of the block copolymer (hereinafter, may be also referred to as “(B) polymer” or “polymer (B)”), such that the second polymer is unevenly distributed to be localized into a superficial layer region of the coating film;</p>
+      <p id="p-00018-en" num="0018">converting at least a part of the coating film into a directed self-assembling film by causing phase separation in the coating film along a substantially perpendicular direction; and</p>
+      <p id="p-00019-en" num="0019">removing a part of a plurality of phases of the directed self-assembling film.</p>
+      <p id="p-00020-en" num="0020">According to another embodiment of the invention made for solving the aforementioned problems, a directed self-assembling composition contains: a block copolymer; and a polymer having a lower surface free energy than that of the block copolymer.</p>
+      <p id="p-00021-en" num="0021">According to the pattern-forming method and the directed self-assembling composition of the embodiments of the present invention, a sufficiently fine pattern can be conveniently formed. Therefore, these can be suitably used for lithography processes in manufacture of various types of electronic devices such as semiconductor devices and liquid crystal devices for which further miniaturization is demanded. The embodiments of the present invention will now be described in detail.</p>
+      <heading id="h-00006-en" level="2">Pattern-Forming Method</heading>
+      <p id="p-00022-en" num="0022">A pattern-forming method according to an embodiment of the present invention includes:</p>
+      <p id="p-00023-en" num="0023">providing a coating film using a composition that contains the block copolymer (A), and the polymer (B) (hereinafter, may be also referred to as “directed self-assembling composition (I)”), such that the polymer (B) is unevenly distributed to be localized into a superficial layer region of the coating film (hereinafter, may be also referred to as “coating film-providing step”);</p>
+      <p id="p-00024-en" num="0024">converting at least a part of the coating film into a directed self-assembling film by causing phase separation in the coating film along a substantially perpendicular direction (hereinafter, may be also referred to as “directed self-assembling step”); and</p>
+      <p id="p-00025-en" num="0025">removing a part of a plurality of phases of the directed self-assembling film (hereinafter, may be also referred to as “removing step”).</p>
+      <p id="p-00026-en" num="0026">It is preferred that the pattern-forming method further includes providing an underlayer film on a substrate (hereinafter, may be also referred to as “underlayer film-providing step”) before the coating film-providing step, and that in the coating film-providing step, the coating film is provided on the underlayer film.</p>
+      <p id="p-00027-en" num="0027">It is also preferred that the pattern-forming method further includes forming a prepattern (hereinafter, may be also referred to as “prepattern-forming step”) before the coating film-providing step, and that in the coating film-providing step, the coating film is provided in a region compartmentalized by the prepattern.</p>
+      <p id="p-00028-en" num="0028">The terms “directed self assembly” and “directed self-assembling” as referred to means a phenomenon of spontaneously constructing a tissue or a structure without resulting from only the control from an external factor. In the embodiment of the present invention, a film having a phase separation structure formed by directed self-assembly (directed self-assembling film) is provided from the directed self-assembling composition (I), and a part of a plurality of phases of the directed self-assembling film is removed, whereby a pattern can be formed.</p>
+      <p id="p-00029-en" num="0029">Hereinafter, each step will be explained with reference to <figref>FIGS. 1 to 5</figref>.</p>
+      <heading id="h-00007-en" level="2">Underlayer Film-Providing Step</heading>
+      <p id="p-00030-en" num="0030">In this step, an underlayer film is provided on a substrate. Thus, an underlayer film-bearing substrate in which an underlayer film <b>102</b> is provided on the substrate <b>101</b> can be obtained, as shown in <figref>FIG. 1</figref>, and the coating film <b>104</b> is provided on the underlayer film <b>102</b>. The phase separation structure formed by the phase separation of at least a part of the coating film <b>104</b> (microdomain structure) is altered by not only an interaction between blocks of the block copolymer (A) contained in the directed self-assembling composition (I), but also an interaction with the underlayer film <b>102</b>; therefore, the structure may be more easily controlled by virtue of having the underlayer film <b>102</b>. Furthermore, when the coating film <b>104</b> is thin, a transfer process thereof can be improved owing to having the underlayer film <b>102</b>.</p>
+      <p id="p-00031-en" num="0031">As the substrate <b>101</b>, for example, a conventionally well-known substrate, e.g., a silicon wafer, a wafer coated with aluminum or the like may be used.</p>
+      <p id="p-00032-en" num="0032">Moreover, as a composition for forming an underlayer film for use in providing the underlayer film, a conventionally well-known material for forming an organic underlayer film, and the like may be used, and examples thereof include compositions for forming an underlayer film which contain a crosslinking agent, and the like.</p>
+      <p id="p-00033-en" num="0033">Although the procedure for providing the underlayer film <b>102</b> is not particularly limited, an exemplary procedure may involve, for example, applying the composition for forming an underlayer film to the substrate <b>101</b> through a well-known method such as a spin coating method, followed by an exposure and/or heating to permit curing of the composition for forming an underlayer film, and the like. Examples of the radioactive ray which may be employed for the exposure include visible light rays, ultraviolet rays, far ultraviolet rays, X-rays, electron beams, γ-rays, molecular beams, ion beams, and the like. Moreover, the temperature employed in the heating is not particularly limited, and is preferably 90° C. to 550° C., more preferably 90° C. to 450° C., and still more preferably 90° C. to 300° C. The film thickness of the underlayer film <b>102</b> is not particularly limited, and is preferably 30 nm to 20,000 nm, more preferably 40 nm to 1,000 nm, and still more preferably 50 nm to 500 nm. In addition, the underlayer film <b>102</b> preferably includes an SOC (Spin on Carbon) film.</p>
+      <heading id="h-00008-en" level="2">Prepattern-Forming Step</heading>
+      <p id="p-00034-en" num="0034">In this step, a prepattern is formed. This prepattern may be formed on the substrate, or may be formed on the underlayer film <b>101</b> provided in the underlayer film-providing step as shown in <figref>FIG. 2</figref>. The prepattern <b>103</b> enables a configuration of the phase separation structure formed by the directed self-assembly in the coating film <b>104</b> to be controlled, and thus a finer pattern can be formed. More specifically, among the blocks included in the block copolymer (A) contained in the directed self-assembling composition (I), a block having a higher affinity to a lateral face of the prepattern (hereinafter, may be also referred to as “block (I)”) forms phases <b>105</b><i>b </i>along the prepattern, whereas a block having a lower affinity (hereinafter, may be also referred to as “block (II)”) forms phases <b>105</b><i>a </i>at positions away from the prepattern. Thus, a finer and more favorable pattern can be formed. In addition, according to the material, size, shape, etc. of the prepattern, the structure of the pattern formed through phase separation of the directed self-assembling composition (I) can be more minutely controlled. It is to be noted that the prepattern <b>103</b> may be appropriately selected depending on the pattern intended to be finally formed, and, for example, a line-and-space pattern, a hole pattern or the like may be employed.</p>
+      <p id="p-00035-en" num="0035">As the method for forming the prepattern <b>103</b>, methods similar to well-known resist pattern-forming methods, and the like may be used. In addition, a conventional resist composition such as a composition that contains a polymer including an acid-labile group, a radiation-sensitive acid generating agent and an organic solvent may be used as the composition for use in forming the prepattern <b>103</b>. Specifically, for example, a commercially available chemical amplification resist composition is applied to the substrate <b>101</b> or the underlayer film <b>102</b> to provide a resist film. Next, an exposure is carried out by irradiating a desired region of the resist film with a radioactive ray through a mask having a specific pattern. Examples of the radioactive ray include: electromagnetic waves such as ultraviolet rays, far ultraviolet rays and X-rays; charged particle rays such as electron beams and α-rays; and the like. Of these, far ultraviolet rays are preferred, ArF excimer laser beams and KrF excimer lasers are more preferred, and ArF excimer laser beams are still more preferred. Also, the exposure may employ a liquid immersion medium. Subsequently, post exposure baking (PEB) may be carried out, followed by development using a developer solution such as an alkaline developer solution and an organic solvent, whereby a desired prepattern <b>103</b> can be formed. In the resulting prepattern <b>103</b>, it is preferred that curing thereof is accelerated by irradiation with an ultraviolet ray of, for example, 254 nm, followed by a heating treatment at 100° C. to 200° C. for 1 min to for 30 min.</p>
+      <p id="p-00036-en" num="0036">It is to be noted that the surface of the prepattern <b>103</b> may be subjected to a hydrophobilization treatment or a hydrophilization treatment. As a specific treatment method, a hydrogenation treatment including exposing to hydrogen plasma for a certain time period, and the like may be exemplified. An increase of the hydrophobicity or hydrophilicity of the surface of the prepattern <b>103</b> enables the directed self-assembly in the coating film <b>104</b> to be further accelerated.</p>
+      <heading id="h-00009-en" level="2">Coating Film-Providing Step</heading>
+      <p id="p-00037-en" num="0037">In this step, a coating film in which the polymer (B) is unevenly distributed to be localized into a superficial layer region is provided using the directed self-assembling composition (I). The directed self-assembling composition (I) will be described later. In a case where the coating film is provided in a region compartmentalized by the prepattern <b>103</b> on the underlayer film <b>102</b>, a coating film <b>104</b> is provided, and the polymer (B) is unevenly distributed to be localized into a superficial layer region <b>104</b><i>b </i>of the coating film, as shown in <figref>FIG. 3</figref>. Even in a case where the underlayer film and/or the prepattern are/is not used, the coating film can be provided. Since the polymer (B) contained in the directed self-assembling composition (I) has a lower surface free energy than that of the block copolymer (A), the polymer (B) is unevenly distributed to be localized into the superficial layer region <b>104</b><i>b </i>of the coating film <b>104</b> in the process of the formation of the coating film <b>104</b> using the directed self-assembling composition (I). In other words, the coating film <b>104</b> is constitution with the superficial layer region <b>104</b><i>b </i>containing the polymer (B) as a principal component, and a region <b>104</b><i>a </i>which is other than the superficial layer region <b>104</b><i>b </i>and contains the block copolymer (A) as a principal component.</p>
+      <p id="p-00038-en" num="0038">The coating film <b>104</b> is typically provided by applying the directed self-assembling composition (I). Although the application method is not particularly limited, examples thereof include a spin coating procedure. In a case where the underlayer film <b>102</b> and the prepattern <b>103</b> are used, the region compartmentalized by the prepattern <b>103</b> on the underlayer film <b>102</b> is filled with the directed self-assembling composition (I), whereby the coating film <b>104</b> is provided.</p>
+      <p id="p-00039-en" num="0039">When a compound having a relative permittivity of no less than 20 and no greater than 75, and a boiling point of no less than 180° C. and no greater than 300° C. at 1 atm as described later, is contained in the solvent contained in the directed self-assembling composition (I), the uneven distribution of the polymer (B) described above can be accelerated, whereby the microfabrication of a pattern obtained by the pattern-forming method may be further enhanced, or the amount of the polymer (B) used may be reduced.</p>
+      <heading id="h-00010-en" level="2">Directed Self-Assembling Step</heading>
+      <p id="p-00040-en" num="0040">In this step, at least a part of the coating film provided in the coating film-providing step is converted into a directed self-assembling film by causing phase separation in the coating film along a substantially perpendicular direction. In the directed self-assembling step, for example, phase separation occurs along a substantially perpendicular direction in the region <b>104</b><i>a </i>other than the superficial layer region shown in <figref>FIG. 3</figref>, which is a part of the coating film <b>104</b> to form a directed self-assembling film <b>105</b> having phases <b>105</b><i>a </i>constituted with blocks (II) of the block copolymer (A) and phases <b>105</b><i>b </i>constituted with blocks (I), as shown in <figref>FIG. 4</figref>. In this instance, the directed self-assembling film <b>105</b> formed is constituted with the block copolymer (A). More specifically, blocks having identical properties are assembled with one another to spontaneously form an ordered pattern to cause phase separation along a substantially perpendicular direction, whereby the directed self-assembling film <b>105</b> is formed. In the course of the directed self-assembling step, the region <b>104</b><i>a </i>in which the directed self-assembly takes place, other than the superficial layer region is adjacent to the superficial layer region <b>104</b><i>b</i>, and the phase separation may easily occur in the formation of the directed self-assembling film <b>105</b> due to an interaction of the polymer (B) constituting the superficial layer region <b>104</b><i>b </i>with the block copolymer (A) constituting the region <b>104</b><i>a </i>other than the superficial layer region. Consequently, the directed self-assembling film <b>105</b> accompanied by favorable phase separation is formed. Although not necessarily clarified, the reason for achieving favorable phase separation described above is presumed as in the following, for example. In the case of not applying the polymer (B), phase separation tends to be accelerated in a substantially horizontal direction due to a large difference in terms of surface free energy between ambient air and the block copolymer (A). On the other hand, in the case of applying the polymer (B), the polymer (B) is unevenly distributed to be localized into the superficial layer region of the coating film of the directed self-assembling composition (I), leading to a decrease of the difference in terms of surface free energy between ambient air and the block copolymer (A). Thus, the phase separation in the substantially horizontal direction is inhibited, and consequently a phase separation effectively occurs along a substantially perpendicular direction.</p>
+      <p id="p-00041-en" num="0041">Examples of the procedure for converting the coating film into a directed self-assembling film through phase separation include annealing, and the like.</p>
+      <p id="p-00042-en" num="0042">The annealing process may include, for example, heating at a temperature of typically 80° C. to 400° C., more preferably 100° C. to 350° C., and still more preferably 150° C. to 300° C. in an oven, on a hot plate, etc., and the like. The annealing time period is typically 1 min to 120 min, preferably 2 min to 90 min, and more preferably 3 min to 60 min. The film thickness of the directed self-assembling film <b>105</b> thus obtained is preferably 0.1 nm to 500 nm, more preferably 0.5 nm to 100 nm, and still more preferably 1 nm to 60 nm.</p>
+      <p id="p-00043-en" num="0043">When the prepattern <b>103</b> described above is employed, the phase separation structure is preferably formed along the prepattern, and the phase boundaries formed by the phase separation are more preferably substantially parallel to a lateral face of the prepattern. For example, in a block copolymer (A) constituted with a polystyrene block and a poly(meth)acrylic acid ester block, in a case where the prepattern <b>103</b> has a higher affinity to the polystyrene block of the block copolymer (A), a phase (<b>105</b><i>b</i>) of the polystyrene block is linearly formed along the prepattern <b>103</b>, and adjacent to the phase (<b>105</b><i>b</i>), a phase (<b>105</b><i>a</i>) of the poly(meth)acrylic acid ester block and the phase (<b>105</b><i>b</i>) of the polystyrene block are alternately arranged in this order to form a lamellar phase separation structure, or the like. It is to be noted that the phase separation structure formed in this step is constituted with a plurality of phases, and typically the phase boundaries formed by these phases are substantially perpendicular to the substrate; however, the phase boundaries per se may not necessarily be clear. In addition, the resultant phase separation structure can be strictly controlled by way of a ratio of the length of each block (polystyrene block, poly(meth)acrylic acid ester block, etc.) in molecules of the block copolymer (A), the length of the molecule of the block copolymer (A) (weight average molecular weight, etc.), the underlayer film, the prepattern and the like, and thus, a directed self-assembling film having a phase separation structure such as a sea-island structure, a cylinder structure, a co-interconnected or a lamellar structure can be formed; consequently, a desired fine pattern can be obtained.</p>
+      <p id="p-00044-en" num="0044">In the pattern-forming method, a further finer pattern can also be obtained by not only providing the superficial layer region <b>104</b><i>b </i>described above, contrary to the region <b>104</b><i>a </i>in which the directed self-assembly takes place, other than the superficial layer region so as to exhibit an interaction therebetween, but also forming the underlayer film <b>102</b> and/or the prepattern <b>103</b> described above such that an interaction thereof also has an effect on the directed self-assembly.</p>
+      <heading id="h-00011-en" level="2">Removing Step</heading>
+      <p id="p-00045-en" num="0045">In this step, a part of a plurality of phases of the directed self-assembling film are removed.</p>
+      <p id="p-00046-en" num="0046">According to this step, for example, a part of a plurality of block phases <b>105</b><i>a </i>of the phase separation structure included in the directed self-assembling film <b>105</b> are removed, as shown in <figref>FIGS. 4 and 5</figref>. Thus, a part of the plurality of phases <b>105</b><i>a </i>can be removed through an etching treatment by utilizing, for example, the difference of an etching rate of each phase separated through the directed self-assembly. The superficial layer region <b>104</b><i>b </i>and/or the prepattern <b>103</b> each not included in the directed self-assembling film <b>105</b> can be also removed concurrently with or separately from the part of the plurality of phases. A state after removing a part of the plurality of phases <b>105</b><i>a </i>of the phase separation structure, the superficial layer region <b>104</b><i>b </i>and the prepattern <b>103</b> as described later, is shown in <figref>FIG. 5</figref>. It is to be noted that prior to the etching treatment, irradiation with a radioactive ray may be conducted as needed. As the radioactive ray, in a case where the phases to be removed by etching are phases of the polymethyl methacrylate block, a radioactive ray of 254 nm may be used. The irradiation with the radioactive ray results in decomposition of the phases of the polymethyl methacrylate block, whereby the etching can be facilitated.</p>
+      <p id="p-00047-en" num="0047">As the procedure for removing a part of the plurality of phases of the phase separation structure included in the directed self-assembling film <b>105</b>, well-known procedures e.g., reactive ion etching (RIE) such as chemical dry etching and chemical wet etching; physical etching such as sputter etching and ion beam etching; and the like may be exemplified. Of these, reactive ion etching (RIE) is preferred, and in particular, chemical dry etching carried out by using a CF<sub>4 </sub>gas, an O<sub>2 </sub>gas or the like, and chemical wet etching (wet development) carried out by using an etching liquid, i.e., an organic solvent, or a liquid such as hydrofluoric acid are more preferred. Examples of the organic solvent include: alkanes such as n-pentane, n-hexane and n-heptane; cycloalkanes such as cyclohexane, cycloheptane and cyclooctane; saturated carboxylic acid esters such as ethyl acetate, n-butyl acetate, i-butyl acetate and methyl propionate; ketones such as acetone, methyl ethyl ketone, methyl isobutyl ketone and methyl n-pentyl ketone; alcohols such as methanol, ethanol, 1-propanol, 2-propanol and 4-methyl-2-pentanol; and the like. It is to be noted that these solvents may be used either alone, or two or more types thereof may be used in combination.</p>
+      <heading id="h-00012-en" level="2">Prepattern-Removing Step</heading>
+      <p id="p-00048-en" num="0048">In this step, the prepattern <b>103</b> is removed, as shown in <figref>FIGS. 4 and 5</figref>. Removal of the prepattern <b>103</b> enables a finer and complicated pattern to be formed. It is to be noted that with respect to the procedure for removing the prepattern <b>103</b>, the procedure described in connection with the procedure for removing a part of the plurality of phases of the phase separation structure may be employed. Also, this step may be carried out concomitantly with the removing step, or may be carried out before or after the removing step.</p>
+      <heading id="h-00013-en" level="2">Substrate Pattern-Forming Step</heading>
+      <p id="p-00049-en" num="0049">The pattern-forming method preferably further includes the substrate pattern-forming step after the removing step. In this step, using a pattern constituted with a residual part of the plurality of phases <b>105</b><i>b </i>of the directed self-assembling film as a mask, the silicon atom-containing film and the substrate are etched to permit patterning. After completion of the patterning onto the substrate, the phases used as a mask are removed from the substrate by a dissolving treatment or the like, whereby a patterned substrate (pattern) can be finally obtained. Examples of the resultant pattern include line-and-space patterns, hole patterns, and the like. As the procedure for the etching, a procedure similar to that in the removing step may be employed, and the etching gas and the etching liquid may be appropriately selected in accordance with the materials of the silicon atom-containing film and the substrate. For example, in a case where the substrate is a silicon material, a gas mixture of chlorofluorocarbon-containing gas and SF<sub>4</sub>, or the like may be used. Alternatively, in a case where the substrate is a metal film, a gas mixture of BCl<sub>3 </sub>and Cl<sub>2</sub>, or the like may be used. The pattern obtained according to the pattern-forming method is suitably used for semiconductor elements and the like, and further the semiconductor elements are widely used for LED, solar cells, and the like.</p>
+      <heading id="h-00014-en" level="2">Directed Self-Assembling Composition (I)</heading>
+      <p id="p-00050-en" num="0050">The directed self-assembling composition (I) contains the block copolymer (A) and the polymer (B). The directed self-assembling composition (I) preferably contains (C) a solvent, and may contain other component, within a range not leading to impairment of the effects of the present invention.</p>
+      <p id="p-00051-en" num="0051">Hereinafter, each component will be explained.</p>
+      <heading id="h-00015-en" level="2">(A) Block Copolymer</heading>
+      <p id="p-00052-en" num="0052">The block copolymer (A) has a structure in which a plurality of blocks are linked. Each of the blocks is constituted with a chain structure of structural units derived from a single type of monomer. According to the block copolymer (A) having such a plurality of blocks, the same type of blocks are aggregated by means of heating or the like, and phases each constituted with the same type of blocks are formed. In this process, it is presumed that since it is unlikely for phases each formed from a different type of blocks to mix with each other, a phase separation structure having an ordered pattern can be formed in which different types of phases are periodically and alternately repeated.</p>
+      <p id="p-00053-en" num="0053">The block copolymer (A) is exemplified by a diblock copolymer, a triblock copolymer, a tetrablock copolymer, and the like. Of these, a diblock copolymer and a triblock copolymer are preferred, and a diblock copolymer is more preferred in light of the possibility of further facilitated formation of a pattern having desired fine microdomains.</p>
+      <p id="p-00054-en" num="0054">The block is exemplified by a polystyrene block, a poly(meth)acrylic acid ester block, a polyvinyl acetal block, a polyurethane block, a polyurea block, a polyimide block, a polyamide block, an epoxy block, a novolak-type phenol block, a polyester block, and the like.</p>
+      <p id="p-00055-en" num="0055">The block copolymer (A) is preferably constituted with a polystyrene block and a poly(meth)acrylic acid ester block in light of the possibility of facilitated formation of the phase separation structure and an ease of the removal of the phases.</p>
+      <p id="p-00056-en" num="0056">In a case where the block copolymer (A) is a diblock copolymer, the molar ratio ((I)/(II)) of two structural units (I) and (II) constituting the diblock copolymer may be appropriately selected in accordance with a line/space width ratio of a desired line-spaces pattern, dimensions of a contact hole, and the like. However, in light of the possibility of formation of a finer and more favorable pattern, the molar ratio ((I)/(II)) of two structural units (I) and (II) is preferably no less than 35/65 and no greater than 65/35, and more preferably no less than 40/60 and no greater than 60/40 in the case of the formation of a line-and-space pattern. Alternatively, in the case of the formation of a contact hole pattern, the molar ratio ((I)/(II)) of two structural units (I) and (II) is preferably no less than 65/35 and no greater than 85/15, and more preferably no less than 65/35 and no greater than 75/25.</p>
+      <heading id="h-00016-en" level="2">Synthesis of Block Copolymer (A)</heading>
+      <p id="p-00057-en" num="0057">The block copolymer (A) can be synthesized by forming each block in a desired order through living anionic polymerization, living radical polymerization, or the like. For example, the block copolymer (A) can be synthesized by linking a polystyrene block, a poly(meth)acrylic acid ester block, other block that is distinct from these blocks, and the like through polymerization in a desired order, followed by the addition of methanol or the like to stop the polymerization.</p>
+      <p id="p-00058-en" num="0058">For example, in a case where the block copolymer (A) which is a diblock copolymer constituted with the polystyrene block and the poly(meth)acrylic acid ester block is synthesized, styrene is first polymerized in an appropriate solvent using an anionic polymerization initiator to form the polystyrene block. Next, (meth)acrylic acid ester is similarly polymerized to form the poly(meth)acrylic acid ester block so as to connect to the polystyrene block. Thereafter, methanol or the like is added to stop the polymerization. It is to be noted that each block may be synthesized, for example, by a method involving adding a solution containing a monomer dropwise to a reaction solvent containing an initiator and allowing the polymerization reaction to proceed.</p>
+      <p id="p-00059-en" num="0059">Examples of the solvent which may be used in the polymerization include:</p>
+      <p id="p-00060-en" num="0060">alkanes such as n-pentane, n-hexane, n-heptane, n-octane, n-nonane and n-decane;</p>
+      <p id="p-00061-en" num="0061">cycloalkanes such as cyclohexane, cycloheptane, cyclooctane, decalin and norbornane;</p>
+      <p id="p-00062-en" num="0062">aromatic hydrocarbons such as benzene, toluene, xylene, ethylbenzene and cumene;</p>
+      <p id="p-00063-en" num="0063">halogenated hydrocarbons such as chlorobutanes, bromohexanes, dichloroethanes, hexamethylene dibromide and chlorobenzene;</p>
+      <p id="p-00064-en" num="0064">saturated carboxylic acid esters such as ethyl acetate, n-butyl acetate, i-butyl acetate and methyl propionate;</p>
+      <p id="p-00065-en" num="0065">ketones such as acetone, 2-butanone, 4-methyl-2-pentanone and 2-heptanone;</p>
+      <p id="p-00066-en" num="0066">ethers such as tetrahydrofuran, diethoxyethanes and diethoxyethanes;</p>
+      <p id="p-00067-en" num="0067">alcohols such as methanol, ethanol, 1-propanol, 2-propanol and 4-methyl-2-pentanol; and the like. These solvents may be used either alone, or two or more types thereof may be used in combination.</p>
+      <p id="p-00068-en" num="0068">Although the reaction temperature in the polymerization may be appropriately selected in accordance with the type of the initiator, the reaction temperature is typically −150° C. to 50° C., and preferably −80° C. to 40° C. The reaction time period is typically 5 min to 24 hrs, and preferably 20 min to 12 hrs.</p>
+      <p id="p-00069-en" num="0069">The initiator which may be used in the polymerization is exemplified by an alkyllithium, an alkylmagnesium halide, naphthalene sodium, an alkylated lanthanoid compound, and the like. Of these, in the case where the polymerization is executed using styrene or methyl methacrylate as a monomer, the alkyllithium compound is preferably used.</p>
+      <p id="p-00070-en" num="0070">In the polymerization, after each block is formed in a desired order as described above, the polymerization end may be treated with, for example, a hetero atom-containing end-capping agent to introduce a hetero atom-containing group into an end of the block copolymer (A). In a case where the hetero atom-containing group is introduced into an end of the block copolymer (A), phase separation in the directed self-assembling composition (I) may be more favorably controlled.</p>
+      <p id="p-00071-en" num="0071">Examples of the hetero atom-containing end-capping agent include:</p>
+      <p id="p-00072-en" num="0072">epoxy compounds such as 1,2-butylene oxide, butyl glycidyl ether, 2-ethylhexyl glycidyl ether, propylene oxide, ethylene oxide and epoxyamine;</p>
+      <p id="p-00073-en" num="0073">nitrogen-containing compounds such as isocyanate compounds, thioisocyanate compounds, imidazolidinone, imidazole, aminoketones, pyrrolidone, diethylaminobenzophenone, nitrile compounds, aziridine, formamide, epoxyamine, benzylamine, oxime compounds, azine, hydrazone, imine, azocarboxylic acid esters, aminostyrene, vinylpyridine, aminoacrylate, aminodiphenylethylene and imide compounds;</p>
+      <p id="p-00074-en" num="0074">silane compounds such as alkoxysilanes, aminosilanes, ketoiminosilanes, isocyanatosilanes, siloxanes, glycidylsilanes, mercaptosilanes, vinylsilanes, epoxysilanes, pyridylsilanes, piperazylsilanes, pyrrolidone silanes, cyanosilanes, and isocyanic acid silanes;</p>
+      <p id="p-00075-en" num="0075">tin halides, silicon halides, and carbon dioxide; and the like.</p>
+      <p id="p-00076-en" num="0076">The block copolymer (A) synthesized in the polymerization is preferably recovered through a reprecipitation procedure. More specifically, after completion of the polymerization reaction, the intended copolymer is recovered in the form of a powder through charging the reaction liquid into a reprecipitation solvent. As the reprecipitation solvent, alcohols, alkanes and the like may be used either alone or as a mixture of two or more types thereof. As alternatives to the reprecipitation procedure, a liquid separating operation, a column operation, an ultrafiltration operation or the like also enables the polymer to be recovered through eliminating low molecular components such as monomers and oligomers.</p>
+      <p id="p-00077-en" num="0077">The weight average molecular weight (Mw) of the block copolymer (A) as determined by gel permeation (GPC) is preferably 1,000 to 150,000, more preferably 5,000 to 100,000, still more preferably 10,000 to 70,000, and particularly preferably 20,000 to 50,000. When the Mw of the block copolymer (A) falls within the above range, a pattern having a finer microdomain structure can be formed.</p>
+      <p id="p-00078-en" num="0078">The ratio (Mw/Mn) of the Mw to the number average molecular weight (Mn) of the block copolymer (A) is typically 1 to 5, preferably 1 to 3, more preferably 1 to 2, still more preferably 1 to 1.5, and particularly preferably 1 to 1.2. When the Mw/Mn of the block copolymer (A) falls within the above range, a pattern having a finer microdomain structure can be formed.</p>
+      <p id="p-00079-en" num="0079">The Mw and the Mn are determined by gel permeation chromatography (GPC) using GPC columns (“G2000HXL”×2, “G3000HXL”×1, and “G4000HXL”×1; available from Tosoh Corporation), a differential refractometer as a detector, and mono-dispersed polystyrene as a standard, under the analytical condition involving: an eluent of tetrahydrofuran (available from Wako Pure Chemical Industries, Ltd.); a flow rate of 1.0 mL/min; a sample concentration of 1.0% by mass; an amount of the sample injected of 100 μL; and a column temperature of 40° C.</p>
+      <heading id="h-00017-en" level="2">(B) Polymer</heading>
+      <p id="p-00080-en" num="0080">The polymer (B) has a lower surface free energy than that of the block copolymer (A). When a coating film is provided using the directed self-assembling composition (I), the polymer (B) is unevenly distributed to be localized into a superficial layer region of the coating film due to the polymer (B) having a lower surface free energy than that of the block copolymer (A).</p>
+      <p id="p-00081-en" num="0081">The surface free energy of each polymer can be determined by, for example, providing a thin film of each polymer through spin coating of a solution of each polymer, followed by heating or the like, measuring a contact angle of a liquid such as pure water and methylene iodide on the thin film in accordance with a method of D. K. OWENS et al. described in a document “JOURNAL OF APPLIED POLYMER SCIENCE, VOL., 13, PP. 1741-1747 (1969)”, and calculating the surface free energy from the measured value using relationships shown in the following formulae (A) and (B):</p>
+      <p id="p-00082-en" num="0000">[in-line-formulae](1+cos θ)×γ<sub>L</sub>=2(γ<sub>S</sub><sup>d</sup>×γ<sub>L</sub><sup>d</sup>)<sup>1/2</sup>+2(γ<sub>S</sub><sup>p</sup>×γ<sub>L</sub><sup>p</sup>)<sup>1/2</sup>  (A)[/in-line-formulae]</p>
+      <p id="p-00083-en" num="0000">[in-line-formulae]γ<sub>S</sub>=γ<sub>S</sub><sup>d</sup>+γ<sub>S</sub><sup>p</sup>  (B),[/in-line-formulae]</p>
+      <p id="p-00084-en" num="0000">wherein γ<sub>S </sub>represents the surface free energy of the polymer; γ<sub>S</sub><sup>d </sup>represents a dispersive component of the surface free energy of the polymer; γ<sub>S</sub><sup>p </sup>represents a polar component of the surface free energy of the polymer; γ<sub>L </sub>represents the surface free energy of the liquid; γ<sub>L</sub><sup>d </sup>represents a dispersive component of the surface free energy of the liquid; γ<sub>L</sub><sup>p </sup>represents a polar component of the surface free energy of the liquid; and θ represents the contact angle.</p>
+      <p id="p-00085-en" num="0082">The range of the value obtained by subtracting the surface free energy of the polymer (B) from the surface free energy of the block copolymer (A) is preferably 1 mN/m to 20 mN/m, more preferably 3 mN/m to 18 mN/m, still more preferably 5 mN/m to 15 mN/m, particularly preferably 7 mN/m to 13 mN/m, and more particularly preferably 9 mN/m to 11 mN/m. It is believed that when the difference of the surface free energy falls within the above range, the polymer (B) can be unevenly distributed more effectively in the coating film-providing step, and an interaction of the polymer (B) with the polymer (A) can be enhanced more effectively in the directed self-assembling step, and consequently a finer and more favorable pattern can be obtained.</p>
+      <p id="p-00086-en" num="0083">Although the polymer (B) is not particularly limited as long as the polymer (B) has a lower surface free energy than that of the block copolymer (A), the polymer (B) preferably includes at least one selected from the group consisting of a fluorine atom and a silicon atom.</p>
+      <p id="p-00087-en" num="0084">The polymer (B) preferably has a structural unit that includes at least one selected from the group consisting of a fluorine atom and a silicon atom (hereinafter, may be also referred to as “structural unit (I)”). The structural unit (I) that includes a fluorine atom is exemplified by a structural unit represented by the following formula (1) (hereinafter, may be also referred to as “structural unit (I-1)”), and the like.</p>
+      <p id="p-00088-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="21.93mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150252216A1_00005.PNG" img-format="png" original="US20150252216A1-20150910-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00089-en" num="0085">In the above formula (1), R<sup>1 </sup>represents a hydrogen atom, a fluorine atom, an alkyl group having 1 to 4 carbon atoms, or a fluorinated alkyl group having 1 to 4 carbon atoms; L<sup>1 </sup>represents a single bond, —O—, —COO—, —CONH—, —Ar<sup>1</sup>—, —O—Ar<sup>1</sup>—, —COO—Ar<sup>1</sup>— or —CONH—Ar<sup>1</sup>—; Ar<sup>1 </sup>represents an arenediyl group having 6 to 20 carbon atoms; and R<sup>2 </sup>represents a monovalent fluorinated hydrocarbon group having 1 to 20 carbon atoms.</p>
+      <p id="p-00090-en" num="0086">The structural unit (I) that includes a silicon atom is exemplified by a structural unit represented by the following formula (2) (hereinafter, may be also referred to as “structural unit (I-2)”), and the like.</p>
+      <p id="p-00091-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="22.61mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150252216A1_00006.PNG" img-format="png" original="US20150252216A1-20150910-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00092-en" num="0087">In the above formula (2), R<sup>3 </sup>represents a hydrogen atom, a fluorine atom, an alkyl group having 1 to 4 carbon atoms or a fluorinated alkyl group having 1 to 4 carbon atoms; L<sup>2 </sup>represents a single bond, —O—, —COO—, —CONH—, —Ar<sup>2</sup>—, —O—Ar<sup>2</sup>—, —COO—Ar<sup>2</sup>— or —CONH—Ar<sup>2</sup>—; Ar<sup>2 </sup>represents an arenediyl group having 6 to 20 carbon atoms; and R<sup>4 </sup>represents a hydrogen atom or an alkyl group having 1 to 10 carbon atoms, wherein the three R<sup>4</sup>s are identical or different.</p>
+      <p id="p-00093-en" num="0088">Examples of the alkyl group having 1 to 4 carbon atoms which may be represented by R′ and R<sup>3 </sup>include a methyl group, an ethyl group, a n-propyl group, an i-propyl group, a n-butyl group, an i-butyl group, a sec-butyl group, a t-butyl, and the like.</p>
+      <p id="p-00094-en" num="0089">Examples of the fluorinated alkyl group having 1 to 4 carbon atoms which may be represented by R′ and R<sup>3 </sup>include a fluoromethyl group, a difluoromethyl group, a trifluoromethyl group, a fluoroethyl group, a difluoroethyl group, a trifluoroethyl group, a pentafluoroethyl group, a heptafluoropropyl group, a nonafluorobutyl group, and the like.</p>
+      <p id="p-00095-en" num="0090">Examples of the arenediyl group having 6 to 20 carbon atoms represented by Ar<sup>1 </sup>and Ar<sup>2 </sup>include a benzenediyl group, a toluenediyl group, a xylenediyl group, a naphthalenediyl group, an anthracenediyl group, and the like.</p>
+      <p id="p-00096-en" num="0091">The monovalent fluorinated hydrocarbon group having 1 to 20 carbon atoms represented by R<sup>2 </sup>is exemplified by:</p>
+      <p id="p-00097-en" num="0092">fluorinated chain hydrocarbon groups including for example,</p>
+      <p id="p-00098-en" num="0093">fluorinated alkyl groups such as a fluoromethyl group, a difluoromethyl group, a trifluoromethyl group, a trifluoroethyl group, a pentafluoroethyl group, a pentafluoro-n-propyl group, a hexafluoro-i-propyl group, a heptafluoro-n-butyl group and a nonafluoro-n-butyl group;</p>
+      <p id="p-00099-en" num="0094">fluorinated alkenyl groups such as a fluoroethenyl group, a difluoroethenyl group, a trifluoroethenyl group and a trifluoropropenyl group; and</p>
+      <p id="p-00100-en" num="0095">fluorinated alkynyl groups such as a fluoroethynyl group, a fluoropropenyl group, a trifluoropropenyl group and a trifluorobutynyl group,</p>
+      <p id="p-00101-en" num="0096">fluorinated alicyclic hydrocarbon groups including for example,</p>
+      <p id="p-00102-en" num="0097">fluorinated cycloalkyl groups such as a fluorocyclopropyl group, a fluorocyclopentyl group, an octafluorocyclopentyl group, a decafluorocyclohexyl group and a tetrafluoronorbornyl; and</p>
+      <p id="p-00103-en" num="0098">fluorinated cycloalkenyl groups such as a fluorocyclopentenyl group, a hexafluorocyclopentenyl group, an octafluorocyclohexyl group and a difluoronorbornyl group; and</p>
+      <p id="p-00104-en" num="0099">fluorinated aromatic hydrocarbon groups including for example,</p>
+      <p id="p-00105-en" num="0100">fluorinated aryl groups such as a fluorophenyl group, a trifluorophenyl group, a pentafluorophenyl group, a fluorotolyl group, a hexafluoroxylyl group and a fluoronaphthyl group; and</p>
+      <p id="p-00106-en" num="0101">fluorinated aralkyl groups such as a fluorobenzyl group, a difluorobenzyl group, a pentafluorobenzyl group and a pentafluorophenethyl group; and the like.</p>
+      <p id="p-00107-en" num="0102">Examples of the alkyl group having 1 to 10 carbon atoms which may be represented by R<sup>4 </sup>include a methyl group, an ethyl group, a n-propyl group, an i-propyl group, a n-butyl group, a n-pentyl group, a n-hexyl group, a n-octyl group, a n-decyl group, and the like.</p>
+      <p id="p-00108-en" num="0103">Examples of the structural unit (I-1) include structural units represented by the following formulae, and the like.</p>
+      <p id="p-00109-en" num="0000">
+        <chemistry id="chem-00003-en" num="00003">
+          <img id="img-00003-en" he="151.98mm" wi="69.43mm" alt="embedded image" img-content="chem" file="US20150252216A1_00007.PNG" img-format="png" original="US20150252216A1-20150910-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00110-en" num="0104">Examples of the structural unit (I-2) include structural units represented by the following formulae, and the like.</p>
+      <p id="p-00111-en" num="0000">
+        <chemistry id="chem-00004-en" num="00004">
+          <img id="img-00004-en" he="157.82mm" wi="45.80mm" alt="embedded image" img-content="chem" file="US20150252216A1_00008.PNG" img-format="png" original="US20150252216A1-20150910-C00004.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00112-en" num="0105">The lower limit of the proportion of the structural unit (I) with respect to the total structural units constituting the polymer (B) is preferably 10 mol %, more preferably 14 mol %, still more preferably 18 mol %, and particularly preferably 22 mol %. The upper limit of the proportion of the structural unit (I) is preferably 50 mol %, more preferably 45 mol %, still more preferably 40 mol %, and particularly preferably 36 mol %. When the proportion of the structural unit (I) falls within the above range, the uneven distribution of the polymer (B) described above and the interaction of the polymer (B) with the block copolymer (A) can be enhanced more effectively.</p>
+      <p id="p-00113-en" num="0106">In addition, the polymer (B) may include a structural unit other than the structural unit (I) (hereinafter, may be also referred to as “structural unit (II)”). The structural unit (II) is exemplified by a structural unit derived from a (meth)acrylic acid ester, a structural unit derived from a styrene compound, and the like.</p>
+      <p id="p-00114-en" num="0107">Examples of the (meth)acrylic acid ester include methyl(meth)acrylate, ethyl(meth)acrylate, butyl(meth)acrylate, cyclohexyl(meth)acrylate, norbornyl(meth)acrylate, adamantyl(meth)acrylate, tetrahydrofurfuryl(meth)acrylate, and the like.</p>
+      <p id="p-00115-en" num="0108">Examples of the styrene compound include styrene, 2-methylstyrene, 3-methylstyrene, 4-methylstyrene, α-methylstyrene, 4-hydroxystyrene, 4-(t-butoxy)styrene, and the like.</p>
+      <p id="p-00116-en" num="0109">The polymer (B) preferably includes at least a part of the types of the structural units included in the block copolymer (A) and more preferably includes all types of the structural units included in the block copolymer (A), since such constitutions are believed to enhance the interaction of the polymer (B) with the block copolymer (A) more adequately, and enable the phase separation structure formed by the directed self-assembly to be more favorably formed. For example, in a case where the block copolymer (A) is a diblock copolymer having a polystyrene block and a polytetrahydrofurfuryl(meth)acrylate block, the polymer (B) includes, in addition to the structural unit (I), preferably at least one of a structural unit derived from styrene and a structural unit derived from tetrahydrofurfuryl(meth)acrylate, and more preferably both of the structural unit derived from styrene and the structural unit derived from tetrahydrofurfuryl(meth)acrylate.</p>
+      <p id="p-00117-en" num="0110">The polymer (B) is preferably a random copolymer in light of a more effectively achievable interaction of the polymer (B) with the block copolymer (A), leading to the formation of a more favorable phase separation structure.</p>
+      <heading id="h-00018-en" level="2">Synthesis Method of Polymer (B)</heading>
+      <p id="p-00118-en" num="0111">The polymer (B) can be synthesized, for example, by polymerizing monomers that give the structural units such as the structural unit (I) and the structural unit (II) in an appropriate solvent using a radical polymerization initiator or the like.</p>
+      <p id="p-00119-en" num="0112">The radical polymerization initiator is exemplified by: azo radical initiators such as azobisisobutyronitrile (AIBN), 2,2′-azobis(4-methoxy-2,4-dimethylvaleronitrile), 2,2′-azobis(2-cyclopropylpropionitrile), 2,2′-azobis(2,4-dimethylvaleronitrile) and dimethyl 2,2′-azobisisobutyrate; peroxide radical initiators such as benzoyl peroxide, t-butyl hydroperoxide and cumene hydroperoxide; and the like. Of these, AIBN and dimethyl 2,2′-azobisisobutyrate are preferred, and AIBN is more preferred. These radical polymerization initiators may be used either alone, or as a mixture of two or more types thereof.</p>
+      <p id="p-00120-en" num="0113">Examples of the solvent which may be used in the polymerization include solvents similar to those exemplified as the solvent for polymerization in connection with the synthesis method of the block copolymer (A) described above.</p>
+      <p id="p-00121-en" num="0114">The reaction temperature in the polymerization is typically 40° C. to 150° C., and preferably 50° C. to 120° C. The reaction time period is typically 1 hour to 48 hrs, and preferably 1 hour to 24 hrs.</p>
+      <p id="p-00122-en" num="0115">The Mw of the polymer (B) is preferably 1,000 to 100,000, more preferably 5,000 to 60,000, still more preferably 8,000 to 40,000, and particularly preferably 10,000 to 30,000. When the Mw of the polymer (B) falls within the above range, a pattern having a finer microdomain structure can be formed.</p>
+      <p id="p-00123-en" num="0116">The ratio (Mw/Mn) of the Mw to the number average molecular weight (Mn) of the polymer (B) is typically 1 to 5, preferably 1 to 3, more preferably 1 to 2.5, still more preferably 1.1 to 1.8, and particularly preferably 1.1 to 1.5. When the Mw/Mn of the polymer (B) falls within the above range, a pattern having a finer microdomain structure can be formed.</p>
+      <heading id="h-00019-en" level="2">(C) Solvent</heading>
+      <p id="p-00124-en" num="0117">The directed self-assembling composition (I) typically contains the solvent (C). The solvent (C) is not particularly limited as long as it can at least dissolve or disperse the block copolymer (A) and the polymer (B).</p>
+      <p id="p-00125-en" num="0118">The solvent (C) is exemplified by an alcohol solvent, an ether solvent, a ketone solvent, an amide solvent, an ester solvent, a hydrocarbon solvent, and the like.</p>
+      <p id="p-00126-en" num="0119">Examples of the alcohol solvent include:</p>
+      <p id="p-00127-en" num="0120">monohydric alcohol solvents such as methanol, ethanol, n-propanol, iso-propanol, n-butanol, iso-butanol, sec-butanol, tert-butanol, n-pentanol, iso-pentanol, 2-methylbutanol, sec-pentanol, tert-pentanol, 3-methoxybutanol, n-hexanol, 2-methylpentanol, sec-hexanol, 2-ethylbutanol, sec-heptanol, 3-heptanol, n-octanol, 2-ethylhexanol, sec-octanol, n-nonyl alcohol, 2,6-dimethyl-4-heptanol, n-decanol, sec-undecyl alcohol, trimethylnonyl alcohol, sec-tetradecyl alcohol, sec-heptadecyl alcohol, furfuryl alcohol, phenol, cyclohexanol, methylcyclohexanol, 3,3,5-trimethylcyclohexanol, benzyl alcohol and diacetone alcohol;</p>
+      <p id="p-00128-en" num="0121">polyhydric alcohol solvents such as ethylene glycol, 1,2-propylene glycol, 1,3-butylene glycol, 2,4-pentanediol, 2-methyl-2,4-pentanediol, 2,5-hexanediol, 2,4-heptanediol, 2-ethyl-1,3-hexanediol, diethylene glycol, dipropylene glycol, triethylene glycol and tripropylene glycol;</p>
+      <p id="p-00129-en" num="0122">polyhydric alcohol partial ether solvents such as ethylene glycol monomethyl ether, ethylene glycol monoethyl ether, ethylene glycol monopropyl ether, ethylene glycol monobutyl ether, ethylene glycol monohexyl ether, ethylene glycol monophenyl ether, ethylene glycol mono-2-ethylbutyl ether, diethylene glycol monomethyl ether, diethylene glycol monoethyl ether, diethylene glycol monopropyl ether, diethylene glycol monobutyl ether, diethylene glycol monohexyl ether, propylene glycol monomethyl ether, propylene glycol monoethyl ether, propylene glycol monopropyl ether, propylene glycol monobutyl ether, dipropylene glycol monomethyl ether, dipropylene glycol monoethyl ether and dipropylene glycol monopropyl ether; and the like.</p>
+      <p id="p-00130-en" num="0123">Examples of the ether solvent include:</p>
+      <p id="p-00131-en" num="0124">dialkyl ether solvents such as diethyl ether, dipropyl ether and dibutyl ether;</p>
+      <p id="p-00132-en" num="0125">cyclic ether solvents such as tetrahydrofuran and tetrahydropyran;</p>
+      <p id="p-00133-en" num="0126">aromatic ring-containing ether solvents such as diphenyl ether and anisole(methyl phenyl ether); and the like.</p>
+      <p id="p-00134-en" num="0127">Examples of the ketone solvent include:</p>
+      <p id="p-00135-en" num="0128">chain ketone solvents such as acetone, methyl ethyl ketone, methyl n-propyl ketone, methyl n-butyl ketone, diethyl ketone, methyl iso-butyl ketone, 2-heptanone(methyl n-pentyl ketone), ethyl n-butyl ketone, methyl n-hexyl ketone, di-iso-butyl ketone and trimethylnonanone:</p>
+      <p id="p-00136-en" num="0129">cyclic ketone solvents such as cyclopentanone, cyclohexanone, cycloheptanone, cyclooctanone and methylcyclohexanone:</p>
+      <p id="p-00137-en" num="0130">2,4-pentanedione, acetonylacetone, and acetophenone; and the like.</p>
+      <p id="p-00138-en" num="0131">Examples of the amide solvent include:</p>
+      <p id="p-00139-en" num="0132">cyclic amide solvents such as N,N′-dimethylimidazolidinone and N-methylpyrrolidone;</p>
+      <p id="p-00140-en" num="0133">chain amide solvents such as N-methylformamide, N,N-dimethylformamide, N,N-diethylformamide, acetamide, N-methylacetamide, N,N-dimethylacetamide and N-methylpropionamide; and the like.</p>
+      <p id="p-00141-en" num="0134">Examples of the ester solvent include:</p>
+      <p id="p-00142-en" num="0135">acetic acid ester solvents such as methyl acetate, ethyl acetate, n-propyl acetate, iso-propyl acetate, n-butyl acetate, iso-butyl acetate, sec-butyl acetate, n-pentyl acetate, i-pentyl acetate, sec-pentyl acetate, 3-methoxybutyl acetate, methylpentyl acetate, 2-ethylbutyl acetate, 2-ethylhexyl acetate, benzyl acetate, cyclohexyl acetate, methylcyclohexyl acetate and n-nonyl acetate;</p>
+      <p id="p-00143-en" num="0136">polyhydric alcohol partially etherated acetate solvents such as ethylene glycol monomethyl ether acetate, ethylene glycol monoethyl ether acetate, diethylene glycol monomethyl ether acetate, diethylene glycol monoethyl ether acetate, diethylene glycol mono-n-butyl ether acetate, propylene glycol monomethyl ether acetate, propylene glycol monoethyl ether acetate, propylene glycol monopropyl ether acetate, propylene glycol monobutyl ether acetate, dipropylene glycol monomethyl ether acetate and dipropylene glycol monoethyl ether acetate;</p>
+      <p id="p-00144-en" num="0137">lactone solvents such as γ-butyrolactone and valerolactone;</p>
+      <p id="p-00145-en" num="0138">carbonate solvents such as dimethyl carbonate, diethyl carbonate, ethylene carbonate and propylene carbonate;</p>
+      <p id="p-00146-en" num="0139">glycol diacetate, methoxytriglycol acetate, ethyl propionate, n-butyl propionate, iso-amyl propionate, diethyl oxalate, di-n-butyl oxalate, methyl acetoacetate, ethyl acetoacetate, methyl lactate, ethyl lactate, n-butyl lactate, n-amyl lactate, diethyl malonate, dimethyl phthalate and diethyl phthalate; and the like.</p>
+      <p id="p-00147-en" num="0140">Examples of the hydrocarbon solvent include:</p>
+      <p id="p-00148-en" num="0141">aliphatic hydrocarbon solvents such as n-pentane, iso-pentane, n-hexane, iso-hexane, n-heptane, iso-heptane, 2,2,4-trimethylpentane, n-octane, iso-octane, cyclohexane and methylcyclohexane;</p>
+      <p id="p-00149-en" num="0142">aromatic hydrocarbon solvents such as benzene, toluene, xylene, mesitylene, ethylbenzene, trimethylbenzene, methylethylbenzene, n-propylbenzene, iso-propylbenzene, diethylbenzene, iso-butylbenzene, triethylbenzene, di-iso-propylbenzene and n-amylnaphthalene; and the like.</p>
+      <p id="p-00150-en" num="0143">Of these, an ester solvent and a ketone solvent are preferred, a polyhydric alcohol partially etherated acetate solvent and a cyclic ketone solvent are more preferred, and propylene glycol monomethyl ether acetate and cyclohexanone are still more preferred. The directed self-assembling composition (I) may contain one, or two or more types of the solvent (C).</p>
+      <p id="p-00151-en" num="0144">Of these, a compound having a relative permittivity of no less than 20 and no greater than 75, and a boiling point of no less than 180° C. and no greater than 300° C. at 1 atm (hereinafter, may be also referred to as “compound (I)”) is preferably contained as the solvent (C).</p>
+      <p id="p-00152-en" num="0145">The compound (I) exhibits the effects of more efficiently achieving the uneven distribution of the polymer (B) contained in the directed self-assembling composition (I) to be localized into the superficial layer region of the coating film. When the solvent (C) in the directed self-assembling composition (I) contains the compound (I), the resulting pattern can be finer and more favorable. In addition, the amount of the polymer (B) used can be reduced.</p>
+      <p id="p-00153-en" num="0146">Examples of the compound (I) include:</p>
+      <p id="p-00154-en" num="0147">lactone compounds such as γ-butyrolactone, valerolactone, mevalonic lactone and norbornanelactone;</p>
+      <p id="p-00155-en" num="0148">carbonate compounds such as propylene carbonate, ethylene carbonate, butylene carbonate and vinylene carbonate;</p>
+      <p id="p-00156-en" num="0149">nitrile compounds such as succinonitrile; and</p>
+      <p id="p-00157-en" num="0150">polyhydric alcohols such as glycerin.</p>
+      <p id="p-00158-en" num="0151">The content of the compound (I) with respect to 100 parts by mass of the total amount of the polymer in the directed self-assembling composition (I) is preferably 10 parts by mass to 500 parts by mass, more preferably 15 parts by mass to 300 parts by mass, still more preferably 20 parts by mass to 200 parts by mass, and particularly preferably 25 parts by mass to 100 parts by mass.</p>
+      <heading id="h-00020-en" level="2">Other Component</heading>
+      <p id="p-00159-en" num="0152">The directed self-assembling composition (I) may contain other component, in addition to the components (A) to (C). Examples of the other component include a surfactant and the like. When the directed self-assembling composition (I) contains the surfactant, application properties thereof to a substrate or the like can be improved.</p>
+      <heading id="h-00021-en" level="2">Preparation Method of Directed Self-Assembling Composition</heading>
+      <p id="p-00160-en" num="0153">The directed self-assembling composition (I) may be prepared, for example, by mixing the block copolymer (A) and the polymer (B) and the like with the solvent (C), preferably followed by filtration through a membrane filter having a pore size of about 200 nm. The solid content concentration of the directed self-assembling composition (I) is preferably 0.01% by mass to 50% by mass, more preferably 0.1% by mass to 20% by mass, still more preferably 0.2% by mass to 10% by mass, and particularly preferably 0.3% by mass to 5% by mass.</p>
+      <heading id="h-00022-en" level="2">Directed Self-Assembling Composition</heading>
+      <p id="p-00161-en" num="0154">A directed self-assembling composition according to another embodiment of the present invention contains a block copolymer, and a polymer having a lower surface free energy than that of the block copolymer.</p>
+      <p id="p-00162-en" num="0155">Since the directed self-assembling composition has the constitution described above, a sufficiently fine pattern can be formed. The directed self-assembling composition has been described as the directed self-assembling composition (I) for use in the pattern-forming method according to the embodiment of the present invention.</p>
+      <heading id="h-00023-en" level="1">EXAMPLES</heading>
+      <p id="p-00163-en" num="0156">Hereinafter, the present invention is explained in detail by way of Examples, but the present invention is not in any way limited to these Examples. Measuring methods of physical properties are shown below.</p>
+      <heading id="h-00024-en" level="2">Mw and Mn</heading>
+      <p id="p-00164-en" num="0157">The Mw and the Mn of the polymer were determined by gel permeation chromatography (GPC) using GPC columns (Tosoh Corporation, “G2000HXL”×2, “G3000HXL”×1, “G4000HXL”×1) under the following condition:</p>
+      <p id="p-00165-en" num="0158">eluent: tetrahydrofuran (Wako Pure Chemical Industries, Ltd.);</p>
+      <p id="p-00166-en" num="0159">flow rate: 1.0 mL/min;</p>
+      <p id="p-00167-en" num="0160">sample concentration: 1.0% by mass;</p>
+      <p id="p-00168-en" num="0161">amount of sample injected: 100 μL;</p>
+      <p id="p-00169-en" num="0162">column temperature: 40° C.;</p>
+      <p id="p-00170-en" num="0163">detector: differential refractometer; and</p>
+      <p id="p-00171-en" num="0164">standard substance: mono-dispersed polystyrene.</p>
+      <heading id="h-00025-en" level="2">
+        <sup>13</sup>C-NMR Analysis</heading>
+      <p id="p-00172-en" num="0165">
+        <sup>13</sup>C-NMR analysis was carried out using a nuclear magnetic resonance apparatus (“JNM-EX400” available from JEOL, Ltd.) with DMSO-d<sub>6 </sub>as a solvent for measurement. The proportion of each structural unit in the polymer was calculated from an area ratio of a peak corresponding to each repeating unit on the spectrum obtained by <sup>13</sup>C-NMR.</p>
+      <heading id="h-00026-en" level="2">Surface Free Energy</heading>
+      <p id="p-00173-en" num="0166">A 2% by mass solution of each polymer (solvent: propylene glycol monomethyl ether acetate) was spin-coated on a silicon wafer, followed by heating at 100° C. for 1 min to provide a thin film having a film thickness of 40 nm. Then, a contact angle of a liquid such as pure water and methylene iodide on the thin film was measured in accordance with a method of D. K. OWENS et al. described in a document “JOURNAL OF APPLIED POLYMER SCIENCE, VOL., 13, PP. 1741-1747 (1969)”, and the surface free energy was calculated from the measured value using relationships shown in the following formulae (A) and (B):</p>
+      <p id="p-00174-en" num="0000">[in-line-formulae](1+cos θ)×γ<sub>L</sub>=2(γ<sub>S</sub><sup>d</sup>×γ<sub>L</sub><sup>d</sup>)<sup>1/2</sup>+2(γ<sub>S</sub><sup>p</sup>×γ<sub>L</sub><sup>p</sup>)<sup>1/2</sup>  (A)[/in-line-formulae]</p>
+      <p id="p-00175-en" num="0000">[in-line-formulae]γ<sub>S</sub>=γ<sub>S</sub><sup>d</sup>+γ<sub>S</sub><sup>p</sup>  (B),[/in-line-formulae]</p>
+      <p id="p-00176-en" num="0000">wherein γ<sub>S </sub>represents the surface free energy of the polymer; γ<sub>S</sub><sup>d </sup>represents a dispersive component of the surface free energy of the polymer; γ<sub>S</sub><sup>p </sup>represents a polar component of the surface free energy of the polymer; γ<sub>L </sub>represents the surface free energy of the liquid; γ<sub>L</sub><sup>d </sup>represents a dispersive component of the surface free energy of the liquid; γ<sub>L</sub><sup>p </sup>represents a polar component of the surface free energy of the liquid; and θ represents the contact angle.</p>
+      <heading id="h-00027-en" level="1">Synthesis of Polymer</heading>
+      <p id="p-00177-en" num="0167">Monomers used in the synthesis of the block copolymer (A) and the polymer (B) are shown below.</p>
+      <p id="p-00178-en" num="0000">
+        <chemistry id="chem-00005-en" num="00005">
+          <img id="img-00005-en" he="246.21mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150252216A1_00009.PNG" img-format="png" original="US20150252216A1-20150910-C00005.TIF" />
+        </chemistry>
+      </p>
+      <heading id="h-00028-en" level="1">Synthesis of Block Copolymer (A)</heading>
+      <heading id="h-00029-en" level="1">Synthesis Example 1</heading>
+      <p id="p-00179-en" num="0168">Into a nitrogen-substituted reaction vessel having an inner volume of 0.5 L were charged 200 g of tetrahydrofuran. After 0.047 g of s-butyllithium as an initiator and 10 g of the compound (M-1) (styrene) were added, the polymerization was allowed to proceed at −70° C. to form a polystyrene block. After the completion of the polymerization was confirmed, 0.40 g of diphenylethylene and 0.063 g of lithium chloride were added. Further, 12 g of the compound (M-2) (tetrahydrofurfuryl methacrylate) was added to the reaction vessel, and the polymerization was allowed to proceed to form a poly(tetrahydrofurfuryl methacrylate) block. After the completion of the polymerization was confirmed, a certain amount of methanol was added to stop the polymerization, whereby a block copolymer (A-1) was synthesized. The progress of the polymerization was chased through determination of the residual solid content by the measurement after heating the polymerization reaction solution sampled into an aluminum plate on a hot plate at 150° C. The block copolymer (A-1) had an Mw of 36,800, and an Mw/Mn of 1.10. In addition, the result of the <sup>13</sup>C-NMR analysis indicated that the proportions of the structural unit derived from (M-1) and the structural unit derived from (M-2) were 50 mol % and 50 mol %, respectively. The block copolymer (A-1) had a surface free energy of 41 mN/m.</p>
+      <heading id="h-00030-en" level="1">Synthesis Example 2</heading>
+      <p id="p-00180-en" num="0169">A block copolymer (A-2) was synthesized in a similar manner to Synthesis Example 1 except that the amount of the compound (M-2) was changed from 12 g to 5 g. The block copolymer (A-2) had an Mw of 36,800, and an Mw/Mn of 1.10. In addition, the result of the <sup>13</sup>C-NMR analysis indicated that the proportions of the structural unit derived from (M-1) and the structural unit derived from (M-2) were 70 mol % and 30 mol %, respectively. The block copolymer (A-2) had a surface free energy of 41 mN/m.</p>
+      <heading id="h-00031-en" level="1">Synthesis of Polymer (B)</heading>
+      <heading id="h-00032-en" level="1">Synthesis Example 3</heading>
+      <p id="p-00181-en" num="0170">A monomer solution was prepared by dissolving 24.90 g (35 mol %) of the compound (M-1), 40.66 g (35 mol %) of the compound (M-2) and 34.44 g (30 mol %) of the compound (M-3) in 200 g of 2-butanone, and further charging thereinto 1.12 g of AIBN as a radical polymerization initiator. A 1,000 mL three-neck flask into which 100 g of 2-butanone was charged was purged with nitrogen for 30 min. After the nitrogen-purging, the reaction vessel was heated to 80° C. with stirring, and then the monomer solution prepared above was added dropwise over 3 hrs using a dropping funnel. The time of the start of the dropwise addition was considered to be the time of start of the polymerization, and the polymerization reaction was allowed to proceed for 6 hrs. After completing the polymerization, the polymerization reaction solution was cooled to 30° C. or below by water-cooling. After cooling, the polymerization reaction solution was charged into 2,000 g of methanol, and a deposited white powder was filtered off. An operation of dispersing the filtered white powder in 400 g of methanol to form a slurry, washing, and filtering the white powder off was conducted twice. Thereafter, the white powder was dried in vacuo at 50° C. for 17 hrs to obtain a polymer (B-1) as a white powder. The polymer (B-1) had an Mw of 20,070, and an Mw/Mn of 1.28. In addition, the result of the <sup>13</sup>C-NMR analysis indicated that the proportions of the structural unit derived from (M-1), the structural unit derived from (M-2) and the structural unit derived from (M-3) were 34.7 mol %, 34.4 mol % and 30.9 mol %, respectively. The polymer (B-1) had a surface free energy of 29 mN/m.</p>
+      <heading id="h-00033-en" level="1">Synthesis Examples 4 to 8</heading>
+      <p id="p-00182-en" num="0171">Polymers (B-2) to (B-6) were obtained in a similar manner to Synthesis Example 3 except that the type and the amount of the monomer used were as shown in Table 1 below. The total mass of the monomer used was 100 g. The proportions of the structural units, the Mw, the Mw/Mn and the surface free energy of the obtained polymer are shown together in Table 1.</p>
+      <p id="p-00183-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="70pt" align="left" />
+              <colspec colname="1" colwidth="105pt" align="center" />
+              <colspec colname="2" colwidth="91pt" align="center" />
+              <colspec colname="3" colwidth="91pt" align="center" />
+              <colspec colname="4" colwidth="56pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Structural unit (I)</entry>
+                  <entry>Structural unit (II-1)</entry>
+                  <entry>Structural unit (II-2)</entry>
+                  <entry />
+                  <entry>Surface</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="14" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="28pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="42pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="28pt" align="center" />
+              <colspec colname="10" colwidth="42pt" align="center" />
+              <colspec colname="11" colwidth="28pt" align="center" />
+              <colspec colname="12" colwidth="28pt" align="center" />
+              <colspec colname="13" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>proportion</entry>
+                  <entry />
+                  <entry />
+                  <entry>proportion</entry>
+                  <entry />
+                  <entry />
+                  <entry>proportion</entry>
+                  <entry />
+                  <entry />
+                  <entry>free</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(B)</entry>
+                  <entry />
+                  <entry>amount</entry>
+                  <entry>of structural</entry>
+                  <entry />
+                  <entry>amount</entry>
+                  <entry>of structural</entry>
+                  <entry />
+                  <entry>amount</entry>
+                  <entry>of structural</entry>
+                  <entry />
+                  <entry />
+                  <entry>energy</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Polymer</entry>
+                  <entry>type</entry>
+                  <entry>(mol %)</entry>
+                  <entry>unit (mol %)</entry>
+                  <entry>type</entry>
+                  <entry>(mol %)</entry>
+                  <entry>unit (mol %)</entry>
+                  <entry>type</entry>
+                  <entry>(mol %)</entry>
+                  <entry>unit (mol %)</entry>
+                  <entry>Mw</entry>
+                  <entry>Mw/Mn</entry>
+                  <entry>(mN/m)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="13" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="14" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="42pt" align="center" />
+              <colspec colname="9" colwidth="21pt" align="center" />
+              <colspec colname="10" colwidth="28pt" align="center" />
+              <colspec colname="11" colwidth="42pt" align="center" />
+              <colspec colname="12" colwidth="28pt" align="center" />
+              <colspec colname="13" colwidth="28pt" align="center" />
+              <colspec colname="14" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Synthesis</entry>
+                  <entry>B-1</entry>
+                  <entry>M-3</entry>
+                  <entry>30</entry>
+                  <entry>30.9</entry>
+                  <entry>M-1</entry>
+                  <entry>35</entry>
+                  <entry>34.7</entry>
+                  <entry>M-2</entry>
+                  <entry>35</entry>
+                  <entry>34.4</entry>
+                  <entry>20,070</entry>
+                  <entry>1.28</entry>
+                  <entry>29</entry>
+                </row>
+                <row>
+                  <entry>Example 3</entry>
+                </row>
+                <row>
+                  <entry>Synthesis</entry>
+                  <entry>B-2</entry>
+                  <entry>M-4</entry>
+                  <entry>15</entry>
+                  <entry>15.7</entry>
+                  <entry>M-1</entry>
+                  <entry>45</entry>
+                  <entry>44.6</entry>
+                  <entry>M-2</entry>
+                  <entry>40</entry>
+                  <entry>39.7</entry>
+                  <entry>20,420</entry>
+                  <entry>1.26</entry>
+                  <entry>34</entry>
+                </row>
+                <row>
+                  <entry>Example 4</entry>
+                </row>
+                <row>
+                  <entry>Synthesis</entry>
+                  <entry>B-3</entry>
+                  <entry>M-5</entry>
+                  <entry>30</entry>
+                  <entry>30.8</entry>
+                  <entry>M-1</entry>
+                  <entry>40</entry>
+                  <entry>39.6</entry>
+                  <entry>M-2</entry>
+                  <entry>30</entry>
+                  <entry>29.6</entry>
+                  <entry>20,280</entry>
+                  <entry>1.29</entry>
+                  <entry>25</entry>
+                </row>
+                <row>
+                  <entry>Example 5</entry>
+                </row>
+                <row>
+                  <entry>Synthesis</entry>
+                  <entry>B-4</entry>
+                  <entry>M-6</entry>
+                  <entry>20</entry>
+                  <entry>20.5</entry>
+                  <entry>M-1</entry>
+                  <entry>35</entry>
+                  <entry>34.8</entry>
+                  <entry>M-2</entry>
+                  <entry>45</entry>
+                  <entry>44.7</entry>
+                  <entry>20,490</entry>
+                  <entry>1.27</entry>
+                  <entry>32</entry>
+                </row>
+                <row>
+                  <entry>Example 6</entry>
+                </row>
+                <row>
+                  <entry>Synthesis</entry>
+                  <entry>B-5</entry>
+                  <entry>M-7</entry>
+                  <entry>35</entry>
+                  <entry>35.7</entry>
+                  <entry>M-1</entry>
+                  <entry>35</entry>
+                  <entry>34.7</entry>
+                  <entry>M-2</entry>
+                  <entry>30</entry>
+                  <entry>29.6</entry>
+                  <entry>19,680</entry>
+                  <entry>1.26</entry>
+                  <entry>22</entry>
+                </row>
+                <row>
+                  <entry>Example 7</entry>
+                </row>
+                <row>
+                  <entry>Synthesis</entry>
+                  <entry>B-6</entry>
+                  <entry>M-8</entry>
+                  <entry>15</entry>
+                  <entry>15.2</entry>
+                  <entry>M-1</entry>
+                  <entry>50</entry>
+                  <entry>50.1</entry>
+                  <entry>M-2</entry>
+                  <entry>35</entry>
+                  <entry>34.7</entry>
+                  <entry>20,830</entry>
+                  <entry>1.25</entry>
+                  <entry>31</entry>
+                </row>
+                <row>
+                  <entry>Example 8</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="14" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00034-en" level="2">Preparation of Directed Self-Assembling Composition</heading>
+      <p id="p-00184-en" num="0172">The solvents (C) used in the preparation of directed self-assembling compositions are shown below.</p>
+      <heading id="h-00035-en" level="2">(C) Solvent</heading>
+      <p id="p-00185-en" num="0173">C-1: propylene glycol monomethyl ether acetate</p>
+      <p id="p-00186-en" num="0174">C-2: γ-butyrolactone (compound (I)), having a relative permittivity of 42 at 25° C., and a boiling point of 204° C. at 1 atm</p>
+      <heading id="h-00036-en" level="1">Example 1</heading>
+      <p id="p-00187-en" num="0175">A directed self-assembling composition (J-1) was prepared by mixing 100 parts by mass of (A-1) as the block copolymer (A), 10 parts by mass of (B-1) as the polymer (B), and 15,840 parts by mass of (C-1) and 50 parts by mass of (C-2) as the solvent (C), followed by filtration of the resulting mixture through a membrane filter having a pore size of 200 nm.</p>
+      <heading id="h-00037-en" level="1">Examples 2 to 12 and Comparative Examples 1 and 2</heading>
+      <p id="p-00188-en" num="0176">Directed self-assembling compositions (J-2) to (J-12) as well as (CJ-1) and (CJ-2) were prepared in a similar manner to Example 1 except that the type and the content of each component used were as shown in Tables 2 and 3 below.</p>
+      <heading id="h-00038-en" level="2">Formation of Pattern</heading>
+      <heading id="h-00039-en" level="2">Formation of Line-and-Space Pattern</heading>
+      <p id="p-00189-en" num="0177">On a 12-inch silicon wafer was spin-coated a composition for forming an organic underlayer film containing a crosslinking agent using a spin coater (“CLEAN TRACK ACT12” available from Tokyo Electron Limited), followed by baking at 205° C. for 60 sec to provide an organic underlayer film having a film thickness of 77 nm. Next, after an ArF resist composition containing a polymer that includes an acid-labile group, a radiation-sensitive acid generating agent and an organic solvent was spin-coated on the organic underlayer film, prebaking (PB) was carried out at 120° C. for 60 sec to provide a resist film having a film thickness of 60 nm. Then, the resist film was exposed through a mask pattern using ArF Immersion Scanner (“NSR-S610C” available from NIKON Corporation), under an optical condition involving NA of 1.30, Dipole-x, and σ of 0.977/0.78. Thereafter, PEB was carried out at 115° C. for 60 sec, and then a development with a 2.38% by mass aqueous tetramethylammonium hydroxide solution was carried out at 23° C. for 30 sec, followed by washing with water and drying to give a line-and-space prepattern (line of 72 nm/pitch of 170 nm). Then, the prepattern was irradiated with an ultraviolet ray of 254 nm under the condition of 150 mJ/cm<sup>2</sup>, followed by baking at 170° C. for 5 min to obtain a substrate having the underlayer film and the prepattern formed thereon.</p>
+      <p id="p-00190-en" num="0178">Each directed self-assembling composition prepared in Examples 1 to 6 and Comparative Example 1 was applied to the substrate obtained above such that the formed coating film had a thickness of 30 nm. Thereafter, the directed self-assembling composition was heated at 250° C. for 5 min such that phase separation took place, whereby a microdomain structure was formed. Then, after irradiation with a radioactive ray of 172 nm at an intensity of 300 mJ/cm<sup>2</sup>, immersion in a mixed liquid of methyl isobutyl ketone (MIBK)/2-propanol (IPA)=2/8 (mass ratio) for 5 min allowed the phases constituted with the poly(tetrahydrofurfuryl methacrylate) block to be removed through dissolution, whereby a line-and-space pattern was formed.</p>
+      <heading id="h-00040-en" level="2">Formation of Contact Hole Pattern</heading>
+      <p id="p-00191-en" num="0179">Contact hole patterns were formed in a similar manner to the procedure described in the above section “Formation of Line-and-Space Pattern” except that the resist film was exposed through a mask pattern under an optical condition involving NA of 1.30, CrossPole, and σ of 0.977/0.78, whereby a contact hole prepattern with holes having a diameter of 70 nm/pitch of 170 nm was obtained, and that the directed self-assembling compositions prepared in Examples 7 to 12 and Comparative Example 2 were used.</p>
+      <heading id="h-00041-en" level="2">Evaluation</heading>
+      <p id="p-00192-en" num="0180">Each line-and-space pattern and each contact hole pattern formed above was observed using a line-width measurement SEM (“CG5000” available from Hitachi, Ltd.), and a line width (width of the microdomain structure (nm)) of the microdomain structure formed between facing sides of the trench-type prepattern or contact hole-type prepattern was measured. The results of the evaluation are shown in Tables 2 and 3.</p>
+      <p id="p-00193-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="84pt" align="left" />
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="182pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>(A) Block</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <colspec colname="4" colwidth="70pt" align="center" />
+              <colspec colname="5" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Directed</entry>
+                  <entry>copolymer</entry>
+                  <entry>(B) Polymer</entry>
+                  <entry>(C) Solvent</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="42pt" align="center" />
+              <colspec colname="8" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>self-</entry>
+                  <entry />
+                  <entry>content</entry>
+                  <entry />
+                  <entry>content</entry>
+                  <entry />
+                  <entry>content</entry>
+                  <entry>Line width of</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>assembling</entry>
+                  <entry />
+                  <entry>(parts by</entry>
+                  <entry />
+                  <entry>(parts by</entry>
+                  <entry />
+                  <entry>(parts by</entry>
+                  <entry>microdomain</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>composition</entry>
+                  <entry>type</entry>
+                  <entry>mass)</entry>
+                  <entry>type</entry>
+                  <entry>mass)</entry>
+                  <entry>type</entry>
+                  <entry>mass)</entry>
+                  <entry>structure (nm)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="8" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="char" char="." />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="42pt" align="center" />
+              <colspec colname="9" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Example 1</entry>
+                  <entry>J-1</entry>
+                  <entry>A-1</entry>
+                  <entry>100</entry>
+                  <entry>B-1</entry>
+                  <entry>10</entry>
+                  <entry>C-1/C-2</entry>
+                  <entry>15,840/50 </entry>
+                  <entry>9.8</entry>
+                </row>
+                <row>
+                  <entry>Example 2</entry>
+                  <entry>J-2</entry>
+                  <entry>A-1</entry>
+                  <entry>100</entry>
+                  <entry>B-2</entry>
+                  <entry>5</entry>
+                  <entry>C-1/C-2</entry>
+                  <entry>20,295/100</entry>
+                  <entry>9.7</entry>
+                </row>
+                <row>
+                  <entry>Example 3</entry>
+                  <entry>J-3</entry>
+                  <entry>A-1</entry>
+                  <entry>100</entry>
+                  <entry>B-3</entry>
+                  <entry>3</entry>
+                  <entry>C-1/C-2</entry>
+                  <entry>20,100/100</entry>
+                  <entry>9.9</entry>
+                </row>
+                <row>
+                  <entry>Example 4</entry>
+                  <entry>J-4</entry>
+                  <entry>A-1</entry>
+                  <entry>100</entry>
+                  <entry>B-4</entry>
+                  <entry>5</entry>
+                  <entry>C-1/C-2</entry>
+                  <entry>15,340/50 </entry>
+                  <entry>9.8</entry>
+                </row>
+                <row>
+                  <entry>Example 5</entry>
+                  <entry>J-5</entry>
+                  <entry>A-1</entry>
+                  <entry>100</entry>
+                  <entry>B-5</entry>
+                  <entry>10</entry>
+                  <entry>C-1/C-2</entry>
+                  <entry>15,840/50 </entry>
+                  <entry>9.8</entry>
+                </row>
+                <row>
+                  <entry>Example 6</entry>
+                  <entry>J-6</entry>
+                  <entry>A-1</entry>
+                  <entry>100</entry>
+                  <entry>B-6</entry>
+                  <entry>5</entry>
+                  <entry>C-1/C-2</entry>
+                  <entry>20,295/100</entry>
+                  <entry>9.7</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>CJ-1 <sup> </sup></entry>
+                  <entry>A-1</entry>
+                  <entry>100</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>C-1/C-2</entry>
+                  <entry>19,600/100</entry>
+                  <entry>pattern</entry>
+                </row>
+                <row>
+                  <entry>Example 1</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>formation failed</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00194-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <colspec colname="4" colwidth="70pt" align="center" />
+              <colspec colname="5" colwidth="56pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>(A) Block</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Directed</entry>
+                  <entry>copolymer</entry>
+                  <entry>(B) Polymer</entry>
+                  <entry>(C) Solvent</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="42pt" align="center" />
+              <colspec colname="8" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>self-</entry>
+                  <entry />
+                  <entry>amount</entry>
+                  <entry />
+                  <entry>amount</entry>
+                  <entry />
+                  <entry>amount</entry>
+                  <entry>Line width of</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>assembling</entry>
+                  <entry />
+                  <entry>(parts by</entry>
+                  <entry />
+                  <entry>(parts by</entry>
+                  <entry />
+                  <entry>(parts by</entry>
+                  <entry>microdomain</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>composition</entry>
+                  <entry>type</entry>
+                  <entry>mass)</entry>
+                  <entry>type</entry>
+                  <entry>mass)</entry>
+                  <entry>type</entry>
+                  <entry>mass)</entry>
+                  <entry>structure (nm)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="8" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="char" char="." />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="42pt" align="center" />
+              <colspec colname="9" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Example 7</entry>
+                  <entry>J-7 </entry>
+                  <entry>A-2</entry>
+                  <entry>100</entry>
+                  <entry>B-1</entry>
+                  <entry>10</entry>
+                  <entry>C-1/C-2</entry>
+                  <entry>15,840/50 </entry>
+                  <entry>13.6</entry>
+                </row>
+                <row>
+                  <entry>Example 8</entry>
+                  <entry>J-8 </entry>
+                  <entry>A-2</entry>
+                  <entry>100</entry>
+                  <entry>B-2</entry>
+                  <entry>5</entry>
+                  <entry>C-1/C-2</entry>
+                  <entry>20,295/100</entry>
+                  <entry>13.8</entry>
+                </row>
+                <row>
+                  <entry>Example 9</entry>
+                  <entry>J-9 </entry>
+                  <entry>A-2</entry>
+                  <entry>100</entry>
+                  <entry>B-3</entry>
+                  <entry>3</entry>
+                  <entry>C-1/C-2</entry>
+                  <entry>20,100/100</entry>
+                  <entry>13.5</entry>
+                </row>
+                <row>
+                  <entry>Example 10</entry>
+                  <entry>J-10</entry>
+                  <entry>A-2</entry>
+                  <entry>100</entry>
+                  <entry>B-4</entry>
+                  <entry>5</entry>
+                  <entry>C-1/C-2</entry>
+                  <entry>15,340/50 </entry>
+                  <entry>13.7</entry>
+                </row>
+                <row>
+                  <entry>Example 11</entry>
+                  <entry>J-11</entry>
+                  <entry>A-2</entry>
+                  <entry>100</entry>
+                  <entry>B-5</entry>
+                  <entry>10</entry>
+                  <entry>C-1/C-2</entry>
+                  <entry>15,840/50 </entry>
+                  <entry>13.6</entry>
+                </row>
+                <row>
+                  <entry>Example 12</entry>
+                  <entry>J-12</entry>
+                  <entry>A-2</entry>
+                  <entry>100</entry>
+                  <entry>B-6</entry>
+                  <entry>5</entry>
+                  <entry>C-1/C-2</entry>
+                  <entry>20,295/100</entry>
+                  <entry>13.8</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>CJ-2 <sup> </sup></entry>
+                  <entry>A-2</entry>
+                  <entry>100</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>C-1/C-2</entry>
+                  <entry>19,600/100</entry>
+                  <entry>pattern</entry>
+                </row>
+                <row>
+                  <entry>Example 2</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>formation failed</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00195-en" num="0181">As is seen from the results shown in Tables 2 and 3, the pattern-forming method according to Examples enables a line-and-space pattern and a contact hole pattern each having a sufficiently fine microdomain structure to be obtained conveniently. In contrast, in the pattern-forming method according to Comparative Examples, phase separation hardly occurs in the pattern formation, and therefore a microdomain structure is unlikely to be formed.</p>
+      <p id="p-00196-en" num="0182">The pattern-forming method and the directed self-assembling composition according to the embodiments of the present invention enable a sufficiently fine pattern to be conveniently formed. Therefore, these can be suitably used for lithography processes in manufacture of various types of electronic devices such as semiconductor devices and liquid crystal devices for which further miniaturization is demanded.</p>
+      <p id="p-00197-en" num="0183">Obviously, numerous modifications and variations of the present invention are possible in light of the above teachings. It is therefore to be understood that within the scope of the appended claims, the invention may be practiced otherwise than as specifically described herein.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A pattern-forming method comprising:
+<claim-text>providing a coating film using a composition that comprises: a first polymer which is a block copolymer; and a second polymer having a surface free energy lower than a surface free energy of the first polymer, such that the second polymer is unevenly distributed to be localized into a superficial layer region of the coating film;</claim-text><claim-text>causing phase separation in the coating film along a direction substantially perpendicular to a thickness direction of the coating film such that at least a part of the coating film is converted into a directed self-assembling film which comprises a plurality of phases; and</claim-text><claim-text>removing a part of the plurality of phases of the directed self-assembling film.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The pattern-forming method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the directed self-assembling film comprises the first polymer.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The pattern-forming method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a value obtained by subtracting the surface free energy of the second polymer from the surface free energy of the first polymer is no less than 1 mN/m and no greater than 20 mN/m.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The pattern-forming method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the second polymer comprises a fluorine atom or a silicon atom, or both thereof.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The pattern-forming method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the second polymer comprises a structural unit which comprises a fluorine atom or a silicon atom, or both thereof, and an amount of the structural unit in the second polymer is no less than 10 mol % and no greater than 50 mol % based on 100 mol % of the second polymer.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The pattern-forming method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the second polymer comprises all kinds of structural units comprised in the first polymer.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The pattern-forming method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the composition further comprises a compound having a relative permittivity of no less than 20 and no greater than 75, and a boiling point of no less than 180° C. and no greater than 300° C. at 1 atm.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The pattern-forming method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising:
+<claim-text>providing an underlayer film on a substrate before providing the coating film,</claim-text><claim-text>wherein in providing the coating film, the coating film is provided on the underlayer film.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The pattern-forming method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising:
+<claim-text>forming a prepattern before providing the coating film,</claim-text><claim-text>wherein in providing the coating film, the coating film is provided in a region compartmentalized by the prepattern.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The pattern-forming method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a line-and-space pattern or a hole pattern is formed by removing the part of the plurality of phases of the directed self-assembling film.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. A directed self-assembling composition comprising:
+<claim-text>a block copolymer; and</claim-text><claim-text>a polymer having a surface free energy lower than a surface free energy of the block copolymer. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252216A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150252216A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252216A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252216A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252216A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252216A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150252216A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252216A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150252216A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252216A1-20150910-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150252216A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252216A1-20150910-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150252216A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252216A1-20150910-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150252216A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252216A1-20150910-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150252216A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252216A1-20150910-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150252216A1_00010.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150252216A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150252216A1.PDF" type="pdf" size="859032" pages="18" />
+</lexisnexis-patent-document>

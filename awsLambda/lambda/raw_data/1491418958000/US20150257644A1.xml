@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257644A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030139" date-changed="20151020" time-changed="081926">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314980">
+        <country>US</country>
+        <doc-number>20150257644</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14656282</doc-number>
+        <date>20150312</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151020">
+      <classification-ipcr sequence="1">
+        <text>A61B   5/00        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B   5/02        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61B   5/04        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61B   5/0408      20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0408</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>H04Q   9/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>04</class>
+        <subclass>Q</subclass>
+        <main-group>9</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151020">
+      <classification-cpc sequence="1">
+        <text>A61B   5/0006      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0006</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   5/002       20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>002</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B   5/02055     20130101 LA20151009BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>02055</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151009</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B   5/021       20130101 LA20151009BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>021</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151009</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B   5/04085     20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>04085</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B   5/0478      20130101 LA20151009BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0478</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151009</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61B   5/0492      20130101 LA20151009BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0492</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151009</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61B   5/0531      20130101 LA20151009BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0531</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151009</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61B   5/14532     20130101 LA20151009BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>14532</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151009</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61B   5/6804      20130101 LA20151009BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>6804</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151009</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61B   5/681       20130101 LA20151009BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>681</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151009</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>A61B   5/6831      20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>6831</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>A61B   5/725       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>725</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>A61B2562/0209      20130101 LA20151009BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2562</main-group>
+        <subgroup>0209</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151009</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>A61B2562/04        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2562</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>A61B2562/164       20130101 LA20151009BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2562</main-group>
+        <subgroup>164</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151009</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="17">
+        <text>A61B2562/166       20130101 LA20151009BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2562</main-group>
+        <subgroup>166</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151009</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="18">
+        <text>H04Q   9/00        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>04</class>
+        <subclass>Q</subclass>
+        <main-group>9</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="19">
+        <text>H04Q2209/40        20130101 LA20151016BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>04</class>
+        <subclass>Q</subclass>
+        <main-group>2209</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151016</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="20">
+        <text>H04Q2209/47        20130101 LA20151016BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>04</class>
+        <subclass>Q</subclass>
+        <main-group>2209</main-group>
+        <subgroup>47</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151016</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">14</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">WIRELESS ECG ACQUISITION AND MONITORING DEVICE AND SYSTEM</invention-title>
+    <references-cited date-changed="20151020">
+      <patent-citations name="patcit" date-changed="20151020" />
+      <citation>
+        <patcit num="1" dnum="US2003050548A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030050548</doc-number>
+            <kind>A1</kind>
+            <name>SCHMIDT ROBERT N [US], et al</name>
+            <date>20030313</date>
+          </document-id>
+          <application-date>
+            <date>20010907</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US6622035B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6622035</doc-number>
+            <kind>B1</kind>
+            <name>MERILAINEN PEKKA [FI], et al</name>
+            <date>20030916</date>
+          </document-id>
+          <application-date>
+            <date>20000121</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US2004039254A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040039254</doc-number>
+            <kind>A1</kind>
+            <name>STIVORIC JOHN M [US], et al</name>
+            <date>20040226</date>
+          </document-id>
+          <application-date>
+            <date>20020822</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US2006270942A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060270942</doc-number>
+            <kind>A1</kind>
+            <name>MCADAMS ERIC T [IE]</name>
+            <date>20061130</date>
+          </document-id>
+          <application-date>
+            <date>20050603</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US2008287770A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080287770</doc-number>
+            <kind>A1</kind>
+            <name>KURZWEIL RAYMOND C [US], et al</name>
+            <date>20081120</date>
+          </document-id>
+          <application-date>
+            <date>20070516</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61951790</doc-number>
+          <date>20140312</date>
+        </document-id>
+      </provisional-application>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61619713</doc-number>
+          <date>20140327</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>ZANSORS LLC</orgname>
+            <address>
+              <city>Tysons</city>
+              <state>VA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>CAO</last-name>
+            <first-name>Hung</first-name>
+            <address>
+              <city>Montreal</city>
+              <country>CA</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173668102">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257644</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150312</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173668100">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257644</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150312</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A wearable device that wirelessly automatically acquires and processes signals indicative of a condition of subject's health. The device is adapted to wirelessly transmit the processed signals and other information to a suitable analytic and/or storage device where the subject's condition can be analyzed and/or stored. The signals could be ECG signals and the condition could be the health of the subject's heart.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150312</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257644A1</docdb-publication-number>
+      <docdb-application-id>444510968</docdb-application-id>
+      <new-owner>ZANSORS LLC, VIRGINIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:CAO, PHD, HUNG;REEL/FRAME:035155/0195</free-text-description>
+      <effective-date>
+        <date>20150309</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims priority to U.S. Provisional Application Ser. No. 61/951,790, filed Mar. 12, 2014, and U.S. Provisional Application Ser. No. 61/971,314, filed Mar. 27, 2014, the entireties of which are incorporated herein by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">Embodiments disclosed herein relate to the wireless acquisition and monitoring of one or more health and/or wellness conditions of a subject using, for example, a wearable device. In particular, embodiments disclosed herein relate to a wearable device with onboard electronics for wirelessly acquiring, processing and transmitting electrocardiogram (ECG) signals and data.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">Myocardial infarction results in irreversible loss of heart tissues or cardiomyocytes. Injured human hearts heal by scarring, which leads to remodeling and subsequently, heart failure. Heart failure remains the leading cause of morbidity and mortality in the US and developed world due to failure to adequately replace lost ventricular myocardium from ischemia-induced infarction. Unlike some fish and amphibians whose hearts can regenerate, adult mammalian cardiomyocytes have a limited capacity to regenerate from ventricular injury.</p>
+      <p id="p-00004-en" num="0004">The progress in stem cell technology recently has enabled a solution by offering enormous availability of human cardiomyocytes derived from embryonic stem cells (ESCs) and induced pluripotent stem cells (iPSCs). Advances in ESCs and iPSCs-derived cardiomyocytes (CMs) have rejuvenated the field of cardiac cell transplantation. However, before stem cell-based technology can be brought to clinical use, there is the challenge that the transplanted tissue consisting of derived cardiomyocytes fails to integrate and synchronize with the host. Studies and methods have been proposed to “train” cardiomyocytes towards maturation and integration, which raises a need to monitor the operation of entire hearts.</p>
+      <p id="p-00005-en" num="0005">There are several methods to assess the myocardium, including imaging techniques (optical imaging, ultrasound, MRI, etc.), patch clamping and protein analysis. Although those above-mentioned approaches could deliver thorough information about the myocardium, they are more about the operation at the cell level and fail to give an overall operation of the heart. Accordingly, there is a need and desire for a quick and easy way to acquire information related to the operation of a subject's heart and to monitor the operation of the subject's heart.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00006-en" num="0006">Embodiments disclosed herein provide a wearable device that wirelessly and automatically acquires and processes signals indicative of a condition of subject's health. The device is adapted to wirelessly transmit the processed signals and other information to a suitable analytic and/or storage device where the subject's condition can be analyzed and/or stored. In one embodiment, the signals are ECG signals and the condition is the health of the subject's heart.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWING</heading>
+      <p id="p-00007-en" num="0007">
+        <figref>FIG. 1</figref> illustrate examples of a first wearable device disclosed herein being implemented as part of a chest-band and a second wearable device disclosed herein being implemented as part of an arm-band in accordance with the disclosed principles.</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 2</figref> illustrates in a high-level block diagram form the components of the <figref>FIG. 1</figref> device in accordance with the disclosed principles.</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 3</figref> illustrates the devices of <figref>FIG. 1</figref> wirelessly communicating with personal devices, devices associated with hospitals and a mobile health network in accordance with the disclosed principles.</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIGS. 4A-4F</figref> illustrate an example fabrication process of a portion of the <figref>FIG. 1</figref> devices.</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 5</figref> illustrates a view of an example complete device fabricated in accordance with the disclosed principles.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 6</figref> illustrates the <figref>FIG. 5</figref> device implemented as part of a wearable band in accordance with the disclosed principles.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 7</figref> illustrates in block diagram form the electronic components of the <figref>FIG. 5</figref> device constructed in accordance with the disclosed principles.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00014-en" num="0014">In the following detailed description, a plurality of specific details, such as types of materials and dimensions, are set forth in order to provide a thorough understanding of the preferred embodiments discussed below. The details discussed in connection with the preferred embodiments should not be understood to limit the claimed invention. Furthermore, for ease of understanding, certain method steps are delineated as separate steps; however, these steps should not be construed as necessarily distinct nor order dependent in their performance.</p>
+      <p id="p-00015-en" num="0015">To monitor a vertebrate's heart, one can develop an electrode-based technique to continuously obtain electrical phenotype, namely electrocardiogram (ECG). ECG signals with P waves, QRS complexes and T waves contain detailed information about the entire heart's operation. A continuous acquisition of ECG information would enable the applications of monitoring injured and regenerating hearts for diagnosis and prognosis as well as patients with chronic heart diseases.</p>
+      <p id="p-00016-en" num="0016">In this context, embodiments disclosed herein provide a newly-designed electronic device to be worn by a patient as part of a chest-band or arm-band. Referring to <figref>FIGS. 1 and 2</figref>, the disclosed device <b>10</b> includes a microelectrode array (MEA) membrane <b>11</b> that would be placed into contact with a subject's S skin and is used for sensing ECG signals. Electronic circuitry <b>13</b> is connected to the MEA <b>11</b> to obtain and process the ECG signals. A wireless device <b>15</b> is used to transmit the processed signals to a wireless base station <b>30</b> (e.g., a computer, laptop, other medical monitoring device) or a smartphone <b>20</b> for data analysis and storage. As shown in <figref>FIG. 1</figref>, the entire device <b>10</b> may be embedded in a wearable chest-band <b>12</b> or arm-band <b>14</b> without any hassle to the subject S. As shown in <figref>FIG. 1</figref>, the device <b>10</b> is adapted to communicate with and transmit signals and information to the subject's S smartphone <b>20</b> or a computer <b>30</b>.</p>
+      <p id="p-00017-en" num="0017">The device <b>10</b> disclosed herein offers continuous monitoring of ECG for cardiac patients as well as subjects who want to be examined regularly without the hassles of traditional wired ECG testing. It should be appreciated that other physiological information such as e.g., blood pressure, temperature and blood glucose sensing can be integrated into the device <b>10</b>, by adding only the sensor elements enabling multi-modality 24/7 monitoring while, at the same time, retaining daily activities of users. It should also be appreciated that a similar device can be embedded into a shirt, pants, headband or helmet for EEG monitoring and that the embodiments disclosed herein are not to be limited to ECG or implementations within an arm-band or chest-band.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 3</figref> illustrates the devices <b>10</b> of <figref>FIG. 1</figref> wirelessly communicating with personal devices (e.g., smartphone <b>20</b>), devices (e.g., computers <b>30</b><i>a</i>, <b>30</b><i>b</i>, <b>30</b><i>c</i>) associated with hospitals <b>40</b><i>a</i>, <b>40</b><i>b </i>and a mobile health network <b>50</b> in accordance with the disclosed principles. In accordance with the disclosed principles, when the device <b>10</b> is worn by a patient S<sub>2</sub>, S<sub>3</sub>, S<sub>4 </sub>in a hospital <b>40</b><i>a</i>, <b>40</b><i>b</i>, processed data from the device <b>10</b> will be sent along with patient identification, which was pre-embedded by e.g., an active Radio Frequency Identification (RFID) tag to a base station (shown as computers <b>30</b><i>a</i>, <b>30</b><i>b</i>, <b>30</b><i>c</i>). For a subject S<sub>1 </sub>not admitted to a hospital or other medical facility, the device <b>10</b> will be customized to send the subject's ECG data to the subject's smartphone <b>20</b> or other device (e.g., tablet, laptop, or personal computer). In either scenario, the subjects' S<sub>1</sub>, S<sub>2</sub>, S<sub>3</sub>, S<sub>4 </sub>data may be shared over the network <b>50</b> where it can be stored, further analyzed or shared with other medical or non-medical personnel associated with the network <b>50</b>.</p>
+      <p id="p-00019-en" num="0019">It should be appreciated that the circuitry/components used by the device <b>10</b> to acquire, process and wirelessly transmit the ECG signals/data can be implemented by off-the-shelf components or by a suitably miniaturized ASIC (application-specific integrated circuit). For explanation purposes only, the disclosed embodiments will be described as using off-the-shelf components in accordance with the disclosed principles.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIGS. 4A-4F</figref> illustrate an example fabrication process of a portion of the devices <b>10</b> disclosed herein. Specifically, <figref>FIGS. 4A-4F</figref> illustrate the fabrication of the MEA <b>11</b> (<figref>FIG. 2</figref>). As will be described below, in a desired embodiment, the MEA <b>11</b> will be fabricated based on a polymer platform (e.g., parylene C) so that it can conform to the non-planar anatomical surfaces of the subject. The flexibility, stretchability and biocompatibility will guarantee long-term use of the MEA <b>11</b> (and thus, the device <b>10</b>) without signal degradation. In a desired embodiment, the electrical traces of the MEA <b>11</b> will be sandwiched between two layers of parylene C.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 4A</figref> illustrates a substrate <b>401</b> upon which the various layers of the MEA <b>11</b> will be fabricated. One desirable substrate <b>401</b> includes a silicon wafer, preferably a hexamethyldisilazane-treated (HMDS) silicon wafer. As shown in <figref>FIG. 4B</figref>, a first parylene C layer <b>403</b> is formed over the substrate <b>401</b>. In one embodiment, the first parylene C layer <b>403</b> is deposited onto the substrate <b>401</b> and has an approximate thickness of 5 μm. A double layer <b>405</b> of gold (Au) and titanium (Ti) is then formed over the first parylene C layer <b>403</b>. In one embodiment, the titanium is sputtered-deposited to about 0.01 μm thickness and then gold is sputter-deposited to about 0.2 μm thickness. The double layer <b>405</b> is then patterned using a gold etchant as shown in <figref>FIG. 4C</figref>. A second parylene-C layer <b>407</b> is formed over the patterned double layer <b>405</b> and the first parylene C layer <b>403</b>. In one embodiment, the second parylene C layer <b>407</b> is about 0.5 μm thick. The second parylene C layer <b>407</b> is patterned to expose portions of the patterned double layer <b>405</b>. The exposed portions of the patterned double layer <b>405</b> will be used to form electrodes <b>409</b> (<figref>FIG. 4F</figref>) for the MEA <b>11</b>.</p>
+      <p id="p-00022-en" num="0022">As shown in <figref>FIG. 4E</figref>, prior to the formation of the electrodes <b>409</b>, the first parylene C layer <b>403</b> will be peeled off the substrate <b>401</b>, leaving only the layers <b>403</b>, <b>305</b>, <b>407</b> forming the MEA <b>11</b>. The exposed portions of the double layer <b>405</b> (i.e., electrode areas) will be have additional gold deposited thereon via e.g., electroplating as shown in <figref>FIG. 4F</figref>. This step provides gold “bumps”, which will ensure that there is a good interface between the MEA's electrodes <b>409</b> and the subject's skin. In one embodiment, the electrodes <b>409</b> and connecting points will be defined by oxygen plasma etching. In one embodiment, the electrode size is approximately 5×5 mm<sup>2 </sup>The number of electrodes <b>409</b> can range from three to twelve or more electrodes. It should be noted that twelve electrodes are used in a standard 12-lead ECG often used in medical facilities and clinics. Moreover, it should be appreciated that the disclosed embodiments are not limited to any particular size, length or thickness of the layers/components discussed herein.</p>
+      <p id="p-00023-en" num="0023">The electronic routing for the circuitry <b>13</b> and wireless device <b>15</b> of the device <b>10</b> will be fabricated using parylene C and the gold/titanium layers using the same processes. For example, as shown in <figref>FIG. 5</figref>, a circuit portion <b>450</b> is fabricated using parylene C layer <b>452</b>, gold/titanium layer <b>454</b> and electronic components <b>460</b>. The electronic components <b>460</b> are discussed below in more detail with reference to <figref>FIG. 7</figref>. As is also shown in <figref>FIG. 5</figref>, the first parylene C layer <b>403</b> of the MEA <b>11</b> is applied to the parylene C layer <b>452</b> of the circuit portion <b>450</b> (i.e., the two layers of parylene C are attached back-to-back) forming a device <b>510</b> (which can be used as the device <b>10</b> illustrated in <figref>FIGS. 1-3</figref>). Conductive-polymer vias <b>502</b> are formed through the MEA <b>11</b> and circuit portion <b>450</b> to connect the electrodes <b>409</b> with the electrical components <b>460</b>. The device <b>510</b> will be packaged in flexible and stretchable silicone, which can be embedded safely in a band <b>600</b> as shown in <figref>FIG. 6</figref>.</p>
+      <p id="p-00024-en" num="0024">The electrical components <b>460</b> illustrated in <figref>FIG. 5</figref> will comprise the electrical circuitry <b>13</b> and wireless device <b>15</b> of the device <b>10</b> illustrated in <figref>FIG. 1</figref>. Details of that circuitry is illustrated in <figref>FIG. 7</figref>. As shown in <figref>FIG. 7</figref>, a multiplexer (MUX) <b>722</b> is connected to the electrodes of the MEA <b>11</b> and inputs the received signals from the electrodes so that is can combine signals into one output stream. In one embodiment, the multiplexer <b>722</b> is a Texas Instrument SN74HC4851 multiplexer chip.</p>
+      <p id="p-00025-en" num="0025">The output of the multiplexer <b>722</b> is connected to a differential amplifier <b>724</b> that amplifies the original ECG signals. In one embodiment, the differential amplifier <b>724</b> is an Analog Devices AD620 amplifier. The differential amplifier <b>724</b> is connected to a bandpass filter <b>726</b> to filter unwanted signal components and to obtain the desired ECG signals with the frequency in the range of approximately 5-125 Hz. Additionally, a notch filter <b>728</b> at 60 Hz is connected to the output of the bandpass filter <b>726</b> to remove signal components caused by the power line (i.e., noise). The ECG signals after this circuit should have a distinguishable P waves, QRS complexes and T waves. The output of the filter <b>726</b> is sent to a wireless device <b>730</b> so that the processed ECG signals can be transmitted from the device to a smartphone, computer, tablet or other suitable device as discussed herein. In one embodiment, the wireless device <b>730</b> is a Bluetooth chip (e.g., RN4020 from Microchip Technology).</p>
+      <p id="p-00026-en" num="0026">As noted above, the processing circuitry can be implemented using SMD discrete components, integrated circuits and/or an ASIC. Although not shown, a rechargeable battery will be used to power the circuitry. In one embodiment, the battery will be included as part of the device <b>10</b>. In another embodiment, the battery can be mounted in the band and connected to the device via an appropriate connection.</p>
+      <p id="p-00027-en" num="0027">It should be appreciated that the device and method disclosed herein provides numerous advantages over ECG devices existing today. For example, although numerous wearable healthcare devices have been proposed in the art, they are still not yet widely used due to their lack of reliability and comfort. With the novel design of the disclosed device (e.g., the electrode “bump”, back-to-back assembly, flexible and stretchable materials), flexibility, stretchability and durability are achieved, providing a great advantage over existing devices.</p>
+      <p id="p-00028-en" num="0028">In addition, the wireless operation of the device <b>10</b> and the analyzing equipment (smartphone, computer, tablet, etc.) eliminates the complicated wiring on patients in a hospital (compared the conventional approaches such as the 12-lead ECG). This also enables the mobile health network of the future and thus reduces labor and transportation costs by e.g., allowing the acquisition of the ECG signals to be performed by a device remote from the analyzing equipment.</p>
+      <p id="p-00029-en" num="0029">It should also be appreciated that the versatile design for chest-bands and arm-bands provides specific advantages as well as specific purposes. The chest-based device outputs signals with better signal-to-noise ratios and clearer features, thus being an ideal choice for cardiac patients needing cautious monitoring. On the other hand, the arm-based device brings comfort and is hassle-free, which targets all subjects.</p>
+      <p id="p-00030-en" num="0030">The disclosed device is suitable for cardiac patients under cardiac repair as well as subjects interested in health monitoring during everyday life. Moreover, it should be appreciated that the electrode design of the disclosed device is also capable of detecting other physiological signals such as EEG or EMG, etc. As noted above, there are integration options for other sensors, such as blood pressure, temperature, impedance, glucose, etc. It should also be appreciated that the device disclosed herein can be integrated into clothing so that its use will be totally hassle-free to the subject.</p>
+      <p id="p-00031-en" num="0031">The signals obtained by the disclosed embodiments can be displayed on the subject's smartphone for real-time and continuous monitoring, sent to a distanced/networked doctor for online or offline diagnosis or processed by an algorithm to predict the subject's health issues. All of which enable personalized medicine, tele-medicine and a mobile health network where subjects are monitored 24 hours a day, 7 days a week while retaining their daily activities.</p>
+      <p id="p-00032-en" num="0032">It should also be appreciated that the disclosed principles can be used for other situations and types of subjects. For example, there is a great need to monitor, among other things, the breathing, blood pressure and ECG of first responders, firefighters, police, etc. The disclosed wearable device can be integrated into or attached (via e.g., Velcro) to the subject's uniform, if desired, or worn as part of an arm-band or chest-band as illustrated in <figref>FIG. 1</figref>. In addition, the disclosed wearable device can be applied as a patch, arm-band or chest-band to a patient being treated by e.g., paramedics to obtain measurements such as e.g., patient blood pressure or ECG in a wireless manner.</p>
+      <p id="p-00033-en" num="0033">The foregoing examples are provided merely for the purpose of explanation and are in no way to be construed as limiting. While reference to various embodiments is made, the words used herein are words of description and illustration, rather than words of limitation. Further, although reference to particular means, materials, and embodiments are shown, there is no limitation to the particulars disclosed herein. Rather, the embodiments extend to all functionally equivalent structures, methods, and uses, such as are within the scope of the appended claims.</p>
+      <p id="p-00034-en" num="0034">Additionally, the purpose of the Abstract is to enable the patent office and the public generally, and especially the scientists, engineers and practitioners in the art who are not familiar with patent or legal terms or phraseology, to determine quickly from a cursory inspection the nature of the technical disclosure of the application. The Abstract is not intended to be limiting as to the scope of the present inventions in any way.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A device for wirelessly monitoring a condition of a subject, said device comprising:
+<claim-text>a plurality of sensors, said sensors being adapted to contact the subject and wirelessly sense signals indicative of the condition from the subject;</claim-text><claim-text>processing circuitry coupled to the sensors, said processing circuitry being adapted to receive and process the sensed signals from the sensors; and</claim-text><claim-text>a wireless transmission device coupled to receive the processed signals from the processing circuitry, said wireless transmission device being adapted to wirelessly transmit the processed signals to an external device.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the plurality of sensors comprises a microelectrode array.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the processing circuitry is adapted to amplify the sensed signals.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The device of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the processing circuity is adapted to filter the amplified signals.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the processing circuitry comprises:
+<claim-text>a first circuit adapted to receive the sensed signals and combine them into one output stream;</claim-text><claim-text>an amplifier circuit adapted to amplify the output stream; and</claim-text><claim-text>a filter circuit adapted to filter out unwanted signal components from the amplified output stream.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The device of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the filter circuit comprises:
+<claim-text>a bandpass filter; and</claim-text><claim-text>a notch filter.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the sensed signals are ECG signals and the condition is a health of the subject's heart.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the wireless transmission device is a Bluetooth wireless transmission device.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en" independent="true">
+      <claim-text>
+        <b>9</b>. A wearable system for wirelessly monitoring a condition of a subject, said system being worn by the subject and comprising:
+<claim-text>a band to be worn on a portion of the subject's body; and</claim-text><claim-text>a device coupled to said band, said device comprising:
+<claim-text>a plurality of sensors, said sensors being adapted to contact the subject and wirelessly sense signals indicative of the condition from the subject;</claim-text><claim-text>processing circuitry coupled to the sensors, said processing circuitry being adapted to receive and process the sensed signals from the sensors; and</claim-text><claim-text>a wireless transmission device coupled to receive the processed signals from the processing circuitry, said wireless transmission device being adapted to wirelessly transmit the processed signals to an external device.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The wearable system of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the plurality of sensors comprise a microelectrode array.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The wearable system of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the processing circuitry is adapted to amplify the sensed signals and then filters the amplified signals.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The wearable system of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the processing circuitry comprises:
+<claim-text>a first circuit adapted to receive the sensed signals and combine them into one output stream;</claim-text><claim-text>an amplifier circuit adapted to amplify the output stream; and</claim-text><claim-text>a filter circuit adapted to filter out unwanted signal components from the amplified output stream.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The wearable system of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the sensed signals are ECG signals and the condition is a health of the subject's heart.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The wearable system of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the wireless transmission device is a Bluetooth wireless transmission device.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257644A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257644A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257644A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257644A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257644A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257644A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257644A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257644A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257644A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257644A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257644A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257644A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257644A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257644A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257644A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257644A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257644A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257644A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257644A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257644A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257644A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257644A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150257644A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257644A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150257644A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257644A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150257644A1_00014.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257644A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257644A1.PDF" type="pdf" size="401830" pages="17" />
+</lexisnexis-patent-document>

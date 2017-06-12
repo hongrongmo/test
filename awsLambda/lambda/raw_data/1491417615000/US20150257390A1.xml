@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257390A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030208" date-changed="20151027" time-changed="110521">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315649">
+        <country>US</country>
+        <doc-number>20150257390</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14209271</doc-number>
+        <date>20140313</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151020">
+      <classification-ipcr sequence="1">
+        <text>A01N  63/00        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>63</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C12R   1/10        20060101ALN20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>R</subclass>
+        <main-group>1</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>N</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151020">
+      <classification-cpc sequence="1">
+        <text>A01N  63/00        20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>63</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A23B   4/30        20130101 LA20151016BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>B</subclass>
+        <main-group>4</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151016</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A23L   3/3571      20130101 LA20151013BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>3</main-group>
+        <subgroup>3571</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151013</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A62D   3/00        20130101 LI20151013BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>62</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151013</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C02F   3/34        20130101 LI20151013BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>3</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151013</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C12R   1/10        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>R</subclass>
+        <main-group>1</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">6</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">PROCESS FOR INHIBITING CLOSTRIDIUM MICROORGANISMS</invention-title>
+    <references-cited date-changed="20151027">
+      <patent-citations name="patcit" date-changed="20151027" />
+      <non-patent-citations name="nplcit" date-changed="20151027" />
+      <citation>
+        <patcit num="1" dnum="US6025187A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6025187</doc-number>
+            <kind>A</kind>
+            <name>PENAUD JEAN [FR]</name>
+            <date>20000215</date>
+          </document-id>
+          <application-date>
+            <date>19960111</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="CN103243041A" dnum-type="publication number">
+          <document-id>
+            <country>CN</country>
+            <doc-number>103243041</doc-number>
+            <kind>A</kind>
+            <name>UNIV SICHUAN AGRICULTURE</name>
+            <date>20130814</date>
+          </document-id>
+          <application-date>
+            <date>20120727</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>STN abstract for CN 103243014 (publication date 8/14/2013) dowloaded from CAPLUS database 4/5/2015.</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="2">
+          <text>Wentz, M. Science (1967) 155: 89-90</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="3">
+          <text>Machine translation of CN 103243041 A published 8/14/2013.</text>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Osprey Biotechnics, Inc.</orgname>
+            <role>02</role>
+            <address>
+              <city>Sarasota</city>
+              <state>FL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Reuter</last-name>
+            <first-name>Christopher J.</first-name>
+            <address>
+              <city>Parrish</city>
+              <state>FL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MacKenzie</last-name>
+            <first-name>Steven J.</first-name>
+            <address>
+              <city>Sarasota</city>
+              <state>FL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Danielson</last-name>
+            <first-name>Lauren G.</first-name>
+            <address>
+              <city>Bradenton</city>
+              <state>FL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Scuilla</last-name>
+            <first-name>Vincent</first-name>
+            <address>
+              <city>Sarasota</city>
+              <state>FL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173669131">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257390</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140313</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173669129">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257390</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140313</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A novel strain of <i>Bacillus licheniformis </i>is effective in inhibiting the growth and activity of pathogens of <i>Clostridium</i>. The strain has numerous applications for improving safety and reducing incidents of disease in humans and animals.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140318</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257390A1</docdb-publication-number>
+      <docdb-application-id>444510472</docdb-application-id>
+      <new-owner>OSPREY BIOTECHNICS, INC., FLORIDA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:REUTER, CHRISTOPHER J;MACKENZIE, STEVEN J;DANIELSON, LAUREN G.;AND OTHERS;SIGNING DATES FROM 20140304 TO 20140305;REEL/FRAME:032460/0216</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">Not Applicable.</p>
+      <heading id="h-00002-en" level="1">FIELD OF THE DISCLOSURE</heading>
+      <p id="p-00002-en" num="0002">This disclosure concerns the use of a novel strain of <i>Bacillus licheniformis </i>for improving safety and reducing incidents of disease in humans and animals.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND OF THE DISCLOSURE</heading>
+      <p id="p-00003-en" num="0003">
+        <i>Bacillus licheniformis </i>bacterium is a gram-positive, mesophilic bacterium that is commonly found in the soil and on bird feathers, especially on the chest and back plumage of ground-dwelling and aquatic birds. It is cultured to obtain protease for use in laundry detergent. Other applications that have been explored include use in synthesis of gold nanoparticles and as an agent to fight tooth decay.</p>
+      <p id="p-00004-en" num="0004">
+        <i>Clostridium </i>is a gram positive bacterium capable of forming spores and colonizing the intestines of humans and animals of agricultural importance such as cattle, poultry, and swine. There are a variety of <i>Clostridium </i>species that are troublesome pathogens in both humans and animals. Not only do the bacteria themselves present problems in terms of their pathogenicity, they also produce toxins that can cause extreme health effects in humans and animals. In humans, the <i>Clostridium </i>bacteria from the species <i>botulinum </i>produces the botulism toxin that can cause muscle paralysis; the <i>perfringens </i>species causes food poisoning and gas gangrene in people and enterotoxaemia in sheep and goats; the <i>tetani </i>species causes tetanus, resulting in lockjaw or spastic paralysis in humans, cattle, dogs and other animals; the <i>sordelli </i>species causes pneumonia, endocarditis, arthritis, peritonitis and myonecrosis, as well as toxic shock syndrome.</p>
+      <p id="p-00005-en" num="0005">The <i>difficile </i>species is of concern to human and animals for colitis. It is capable of colonizing the intestines of humans and animals, including horses, cattle, poultry and swine. Much foodborne illness is also linked to <i>C. difficile</i>. In humans, <i>C. difficile </i>is most commonly known for its ability to cause disease in hospitalized patients who are being treated with antibiotics or chemotherapy for an infection from another bacterium. During this time, exposure to <i>C. difficile</i>, which is resistant to many common antibiotics, takes advantage of the reduction of colonic flora, growing rapidly and causing severe diarrhea, bloating, and abdominal pain.</p>
+      <p id="p-00006-en" num="0006">Many cases of <i>C. difficile </i>infection have been reported from non-hospitalized patients where the source is believed to be mainly foodborne illness. <i>C. difficile </i>has been isolated from animal fecal samples of agricultural importance such as cattle, poultry, and swine and also from food products which come from these produce. This link is believed to be the source of many cases of foodborne illness.</p>
+      <p id="p-00007-en" num="0007">Accordingly, new and effective methods to inhibit <i>C. difficile </i>and other <i>Clostridium </i>species, along with new and effective methods to prevent them from producing the harmful toxins are desired.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE DISCLOSURE</heading>
+      <p id="p-00008-en" num="0008">The novel strain of <i>Bacillus licheniformis </i>(strain OBT618) has utility in various processes that improve food safety and decontaminate water, food processing equipment, holding pens, manure, treating ponds, farm runoff, aquaculture facilities, and the like, and thereby reduce incidents of disease in animals and humans.</p>
+      <p id="p-00009-en" num="0009">The processes generally involve contacting liquid, solid or semi-solid materials contaminated with a pathogenic microorganism with an amount of <i>Bacillus licheniformis </i>strain OBT618 that is effective to have an inhibitory effect on the pathogenic microorganism.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWING</heading>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 1</figref> (SEQ ID NO: 1) is the relevant sequence for <i>Bacillus licheniformis </i>strain OBT618.</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 2</figref> is a graph illustrating Toxin CDT-A and CDT-B concentration of two <i>Clostridium </i>cultures that are identical except for the addition of OBT618 to one of the samples.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 3</figref> is a graph illustrating bacteria populations or concentrations for two <i>Clostridium </i>cultures that are identical except for the addition of OBT618 to one of the two samples.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00013-en" num="0013">It has been discovered that the novel <i>Bacillus licheniformis </i>strain OBT618 exhibits an inhibitory effect on pathogens of <i>Clostridium </i>and has many applications that can improve safety and reduce incidents of disease in humans and animals.</p>
+      <p id="p-00014-en" num="0014">The term “inhibit” means to reduce or arrest growth and/or reproduction of <i>Clostridium </i>species, and/or to reduce or arrest production by and/or secretion of toxins from <i>Clostridium</i>. The term “inhibit” also encompasses killing Clostridium species and/or reducing or arresting the pathogenic or toxic effects of <i>Clostridium </i>species.</p>
+      <p id="p-00015-en" num="0015">The term “effective amount” means an amount that will achieve a desired inhibitory effect to reduce incidents of diseases caused by pathogens of <i>Clostridium</i>. Effective amounts for particular applications can be determined by routine experimentation.</p>
+      <p id="p-00016-en" num="0016">Disclosed is a novel strain of bacterium that produces specific types of useful enzymes, metabolites and antibiotics to inhibit both the growth and toxin production from <i>Clostridium </i>species. These enzymes, metabolites and antibiotics reduce the potential for illness and disease by using the OBT618 bacterium.</p>
+      <p id="p-00017-en" num="0017">Wastewater contaminated with <i>C. difficile </i>can be treated with the novel OBT618 by spraying, direct inoculation of a liquid or a powder or a block containing the bacteria to reduce the <i>C. difficile </i>contamination and to reduce the toxin production from the <i>C. difficile </i>or other <i>Clostridium </i>species.</p>
+      <p id="p-00018-en" num="0018">Lagoons, manure piles, or pens containing waste from pig, cattle, sheep, chicken and equine can be treated with the novel OBT618 by spraying or dispersing in a powder form the bacteria to reduce the <i>C. difficile </i>contamination and to reduce the toxin production from the <i>C. difficile </i>or other <i>Clostridium </i>species.</p>
+      <p id="p-00019-en" num="0019">Animal feed can be treated by using the novel OBT618 bacterium as a direct fed microbial to either mix with the feed or as a separate feed supplement to reduce intestinal <i>C. difficile </i>colitis outbreaks and to reduce internal toxin production by <i>Clostridium </i>species.</p>
+      <p id="p-00020-en" num="0020">Animal water can be treated by using the novel OBT618 bacterium to reduce the abundance and spread of <i>C. difficile </i>in drinking water and to inoculate the animal's intestinal tract to reduce intestinal <i>C. difficile </i>colitis outbreaks and to reduce internal toxin production by <i>Clostridium </i>species.</p>
+      <p id="p-00021-en" num="0021">Chicken litter or other animal litter can be treated by using the novel OBT618 bacterium to spray the litter to reduce intestinal <i>C. difficile </i>colitis outbreaks and to reduce internal toxin production by <i>Clostridium </i>species in the animal.</p>
+      <p id="p-00022-en" num="0022">Meat processing or food processing facility waste can be treated with the novel OBT618 bacterium by spraying, direct inoculation of a liquid or a powder or a block containing the bacterium to reduce the <i>C. difficile </i>contamination and to reduce the toxin production from the <i>C. difficile </i>or other <i>Clostridium </i>species.</p>
+      <p id="p-00023-en" num="0023">Farm ponds can be treated with the novel OBT618 by spraying, direct inoculation of a liquid or a powder or a block containing the bacteria to reduce the <i>C. difficile </i>contamination and to reduce the toxin production from the <i>C. difficile </i>or other <i>Clostridium </i>species.</p>
+      <p id="p-00024-en" num="0024">The effect of adding OBT618 to a <i>Clostridium </i>culture producing CDT-A and CDT-B toxins is shown in <figref>FIG. 2</figref>. The addition of the <i>Bacillus licheniformis </i>strain OBT618 reduces CDT-A and CDT-B toxin production to a substantially lower level.</p>
+      <p id="p-00025-en" num="0025">The effect of adding OBT618 to a <i>Clostridium </i>culture population is shown in <figref>FIG. 3</figref>. The addition of <i>Bacillus licheniformis </i>strain OBT618 profoundly reduces the <i>Clostridium </i>bacteria population.</p>
+      <p id="p-00026-en" num="0026">The described embodiments are preferred and/or illustrated, but are not limiting. Various modifications are considered within the purview and scope of the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of inhibiting pathogens of <i>Clostridium</i>, comprising:
+<claim-text>adding to a material contaminated with <i>Clostridium </i>an amount of <i>Bacillus licheniformis </i>strain OBT618 as deposited with the American Type Culture Collection under accession number PTA-122188 that is effective to exhibit an inhibitory effect on the <i>Clostridium. </i></claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the Bacillus licheniformis strain OBT618 is added to water contaminated with Clostridium. </claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the Bacillus licheniformis strain OBT618 is added to manure contaminated with Clostridium. </claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the Bacillus licheniformis strain OBT618 is added to animal feed or drinking water to reduce disease in an animal.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the Bacillus licheniformis strain OBT618 is added to animal litter to reduce disease in an animal.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the Bacillus licheniformis strain OBT618 has the nucleotide sequence of <figref>FIG. 1</figref>.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257390A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257390A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257390A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257390A1-20150917-D00002.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257390A1.PDF" type="pdf" size="306466" pages="5" />
+</lexisnexis-patent-document>

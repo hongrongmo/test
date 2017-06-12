@@ -1,0 +1,1466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170321" file="US5897757A.xml" produced-by="LexisNexis-Univentio" lang="eng" date-changed="20170321" time-changed="132107">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Grant" publ-desc="Patent">
+      <document-id id="39324820">
+        <country>US</country>
+        <doc-number>5897757</doc-number>
+        <kind>A</kind>
+        <date>19990427</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>5897757</doc-number>
+        <kind>A</kind>
+      </document-id>
+      <document-id data-format="docdb" id="296227798">
+        <doc-number>5897757</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US5897757</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id id="40774164">
+        <country>US</country>
+        <doc-number>08906149</doc-number>
+        <date>19970805</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>US</country>
+        <doc-number>08906149</doc-number>
+        <date>19970805</date>
+      </document-id>
+      <document-id data-format="docdb" id="54085455">
+        <doc-number>90614997</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US19970906149</doc-number>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20090328">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>08207146</doc-number>
+        <date>19960806</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>20714696</doc-number>
+        <date>19960806</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>8-207146</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>JP19960207146</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20090328">
+      <unexamined-printed-without-grant>
+        <date>19990427</date>
+      </unexamined-printed-without-grant>
+      <printed-with-grant>
+        <date>19990427</date>
+      </printed-with-grant>
+    </dates-of-public-availability>
+    <classification-ipc date-changed="20151013">
+      <main-classification>
+        <text> 6C 25B  11/00   A</text>
+        <edition>6</edition>
+        <section>C</section>
+        <class>25</class>
+        <subclass>B</subclass>
+        <main-group>11</main-group>
+        <subgroup>00</subgroup>
+        <qualifying-character>A</qualifying-character>
+      </main-classification>
+    </classification-ipc>
+    <classifications-ipcr date-changed="20151013">
+      <classification-ipcr sequence="1">
+        <text>C02F   1/46        20060101AFI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>46</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C02F   1/461       20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>461</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C25B  11/02        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>25</class>
+        <subclass>B</subclass>
+        <main-group>11</main-group>
+        <subgroup>02</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C25B  11/03        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>25</class>
+        <subclass>B</subclass>
+        <main-group>11</main-group>
+        <subgroup>03</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151013">
+      <classification-cpc sequence="1">
+        <text>C25B  11/02        20130101 FI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>25</class>
+        <subclass>B</subclass>
+        <main-group>11</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C02F   1/46109     20130101 LI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>46109</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C02F2001/46133     20130101 LA20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2001</main-group>
+        <subgroup>46133</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C02F2001/46157     20130101 LA20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2001</main-group>
+        <subgroup>46157</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C02F2303/04        20130101 LA20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>2303</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classification-national date-changed="20151013">
+      <country>US</country>
+      <main-classification>
+        <text>204/284</text>
+        <class>204</class>
+        <subclass>284</subclass>
+      </main-classification>
+    </classification-national>
+    <classifications-ecla date-changed="20151013">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>C02F  1/461B2</text>
+        <section>C</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>461</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">B  </additional-subgroup>
+          <additional-subgroup sequence="2">2  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="EC" country="EP">
+        <text>C25B 11/02</text>
+        <section>C</section>
+        <class>25</class>
+        <subclass>B</subclass>
+        <main-group>11</main-group>
+        <subgroup>02</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="1" classification-scheme="ICO" country="EP">
+        <text>M02F  1:461B2J</text>
+        <section>M</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>461</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">B  </additional-subgroup>
+          <additional-subgroup sequence="2">2  </additional-subgroup>
+          <additional-subgroup sequence="3">J  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="ICO" country="EP">
+        <text>M02F  1:461B2L2</text>
+        <section>M</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>461</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">B  </additional-subgroup>
+          <additional-subgroup sequence="2">2  </additional-subgroup>
+          <additional-subgroup sequence="3">L  </additional-subgroup>
+          <additional-subgroup sequence="4">2  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="3" classification-scheme="ICO" country="EP">
+        <text>M02F303:04</text>
+        <section>M</section>
+        <class>02</class>
+        <subclass>F</subclass>
+        <main-group>303</main-group>
+        <subgroup>04</subgroup>
+      </classification-ecla>
+    </classifications-ecla>
+    <field-of-search date-changed="20070521">
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>204/283</text>
+          <class>204</class>
+          <subclass>283</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>204/284</text>
+          <class>204</class>
+          <subclass>284</subclass>
+        </main-classification>
+      </classification-national>
+    </field-of-search>
+    <number-of-claims calculated="yes">4</number-of-claims>
+    <invention-title id="title_eng" date-changed="20070521" lang="eng" format="original">Electrode structure for electrolysis of water and a method for sterilization of water thereby</invention-title>
+    <references-cited date-changed="20161227">
+      <patent-citations name="patcit" date-changed="20151013" />
+      <non-patent-citations name="nplcit" date-changed="20151013" />
+      <forward-citations name="fwdcit" date-changed="20161227" />
+      <citation>
+        <patcit num="1" dnum="US4206030A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4206030</doc-number>
+            <kind>A</kind>
+            <name>SANTORA SCOTT A [US]</name>
+            <date>19800603</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>4206030</doc-number>
+            <kind>A</kind>
+            <date>19800603</date>
+          </document-id>
+          <application-date>
+            <date>19781122</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US5674365A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5674365</doc-number>
+            <kind>A</kind>
+            <name>SANO YOICHI [JP]</name>
+            <date>19971007</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5674365</doc-number>
+            <kind>A</kind>
+            <date>19971007</date>
+          </document-id>
+          <application-date>
+            <date>19960130</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="CA1143334A" dnum-type="publication number">
+          <document-id>
+            <country>CA</country>
+            <doc-number>1143334</doc-number>
+            <kind>A1</kind>
+            <name>CHEMETICS INT</name>
+            <date>19830322</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>CA</country>
+            <doc-number>1143334</doc-number>
+            <kind>A</kind>
+            <date>19830322</date>
+          </document-id>
+          <application-date>
+            <date>19800610</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="EP0723936A2" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>723936</doc-number>
+            <kind>A2</kind>
+            <name>FIRST OCEAN CO LTD [JP]</name>
+            <date>19960731</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>EP</country>
+            <doc-number>0723936</doc-number>
+            <kind>A2</kind>
+            <date>19960731</date>
+          </document-id>
+          <application-date>
+            <date>19960130</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>Abstract of Japanese Laid Open Patent Appln. Publication No. 5 33176 (Feb. 9, 1993), Database WPI, Derwent Publ., Ltd., London, GB.</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="2">
+          <text>Abstract of Japanese Laid Open Patent Appln. Publication No. 2 306242 (Dec. 19, 1990), Patent Abstracts of Japan.</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>US</country>
+            <doc-number>7174678</doc-number>
+            <kind>B2</kind>
+            <date>20070213</date>
+          </document-id>
+          <application-date>
+            <date>20020208</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="2">
+          <document-id>
+            <country>US</country>
+            <doc-number>7537030</doc-number>
+            <kind>B2</kind>
+            <date>20090526</date>
+          </document-id>
+          <application-date>
+            <date>20070207</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="3">
+          <document-id>
+            <country>US</country>
+            <doc-number>7442288</doc-number>
+            <kind>B2</kind>
+            <date>20081028</date>
+          </document-id>
+          <application-date>
+            <date>20060811</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="4">
+          <document-id>
+            <country>US</country>
+            <doc-number>7090753</doc-number>
+            <kind>B2</kind>
+            <date>20060815</date>
+          </document-id>
+          <application-date>
+            <date>20020913</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="5">
+          <document-id>
+            <country>US</country>
+            <doc-number>6802956</doc-number>
+            <kind>B2</kind>
+            <date>20041012</date>
+          </document-id>
+          <application-date>
+            <date>20020605</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="6">
+          <document-id>
+            <country>US</country>
+            <doc-number>7780833</doc-number>
+            <kind>B2</kind>
+            <date>20100824</date>
+          </document-id>
+          <application-date>
+            <date>20050726</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="7">
+          <document-id>
+            <country>US</country>
+            <doc-number>7959780</doc-number>
+            <kind>B2</kind>
+            <date>20110614</date>
+          </document-id>
+          <application-date>
+            <date>20040726</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="8">
+          <document-id>
+            <country>US</country>
+            <doc-number>7967958</doc-number>
+            <kind>B2</kind>
+            <date>20110628</date>
+          </document-id>
+          <application-date>
+            <date>20060522</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="9">
+          <document-id>
+            <country>US</country>
+            <doc-number>8062500</doc-number>
+            <kind>B2</kind>
+            <date>20111122</date>
+          </document-id>
+          <application-date>
+            <date>20021205</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="10">
+          <document-id>
+            <country>US</country>
+            <doc-number>8147444</doc-number>
+            <kind>B2</kind>
+            <date>20120403</date>
+          </document-id>
+          <application-date>
+            <date>20070122</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="11">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110253527</doc-number>
+            <kind>A1</kind>
+            <date>20111020</date>
+          </document-id>
+          <application-date>
+            <date>20090831</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="12">
+          <document-id>
+            <country>US</country>
+            <doc-number>8215065</doc-number>
+            <kind>B2</kind>
+            <date>20120710</date>
+          </document-id>
+          <application-date>
+            <date>20090519</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="13">
+          <document-id>
+            <country>US</country>
+            <doc-number>8252155</doc-number>
+            <kind>B2</kind>
+            <date>20120828</date>
+          </document-id>
+          <application-date>
+            <date>20090831</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="14">
+          <document-id>
+            <country>US</country>
+            <doc-number>8293085</doc-number>
+            <kind>B2</kind>
+            <date>20121023</date>
+          </document-id>
+          <application-date>
+            <date>20100823</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="15">
+          <document-id>
+            <country>US</country>
+            <doc-number>8323252</doc-number>
+            <kind>B2</kind>
+            <date>20121204</date>
+          </document-id>
+          <application-date>
+            <date>20060323</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="16">
+          <document-id>
+            <country>US</country>
+            <doc-number>8458962</doc-number>
+            <kind>B2</kind>
+            <date>20130611</date>
+          </document-id>
+          <application-date>
+            <date>20120705</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="17">
+          <document-id>
+            <country>US</country>
+            <doc-number>8562803</doc-number>
+            <kind>B2</kind>
+            <date>20131022</date>
+          </document-id>
+          <application-date>
+            <date>20061006</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="18">
+          <document-id>
+            <country>US</country>
+            <doc-number>8562810</doc-number>
+            <kind>B2</kind>
+            <date>20131022</date>
+          </document-id>
+          <application-date>
+            <date>20110726</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="19">
+          <document-id>
+            <country>US</country>
+            <doc-number>8834445</doc-number>
+            <kind>B2</kind>
+            <date>20140916</date>
+          </document-id>
+          <application-date>
+            <date>20120330</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="20">
+          <document-id>
+            <country>US</country>
+            <doc-number>8840873</doc-number>
+            <kind>B2</kind>
+            <date>20140923</date>
+          </document-id>
+          <application-date>
+            <date>20060323</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="21">
+          <document-id>
+            <country>US</country>
+            <doc-number>8858765</doc-number>
+            <kind>B2</kind>
+            <date>20141014</date>
+          </document-id>
+          <application-date>
+            <date>20060522</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="22">
+          <document-id>
+            <country>US</country>
+            <doc-number>8882972</doc-number>
+            <kind>B2</kind>
+            <date>20141111</date>
+          </document-id>
+          <application-date>
+            <date>20110719</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="23">
+          <document-id>
+            <country>US</country>
+            <doc-number>9045835</doc-number>
+            <kind>B2</kind>
+            <date>20150602</date>
+          </document-id>
+          <application-date>
+            <date>20130911</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="24">
+          <document-id>
+            <country>US</country>
+            <doc-number>20020104271</doc-number>
+            <kind>A1</kind>
+            <date>20020808</date>
+          </document-id>
+          <application-date>
+            <date>20020208</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="25">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030056805</doc-number>
+            <kind>A1</kind>
+            <date>20030327</date>
+          </document-id>
+          <application-date>
+            <date>20020913</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="26">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030226766</doc-number>
+            <kind>A1</kind>
+            <date>20031211</date>
+          </document-id>
+          <application-date>
+            <date>20020605</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="27">
+          <document-id>
+            <country>US</country>
+            <doc-number>9072726</doc-number>
+            <kind>B2</kind>
+            <date>20150707</date>
+          </document-id>
+          <application-date>
+            <date>20091221</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="28">
+          <document-id>
+            <country>US</country>
+            <doc-number>20140027307</doc-number>
+            <kind>A1</kind>
+            <date>20140130</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="29">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2012081999</doc-number>
+            <kind>A1</kind>
+            <date>20120621</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="30">
+          <document-id>
+            <country>US</country>
+            <doc-number>9090493</doc-number>
+            <kind>B2</kind>
+            <date>20150728</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="31">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050121334</doc-number>
+            <kind>A1</kind>
+            <date>20050609</date>
+          </document-id>
+          <application-date>
+            <date>20021205</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="32">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050139808</doc-number>
+            <kind>A1</kind>
+            <date>20050630</date>
+          </document-id>
+          <application-date>
+            <date>20040604</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="33">
+          <document-id>
+            <country>US</country>
+            <doc-number>9103043</doc-number>
+            <kind>B2</kind>
+            <date>20150811</date>
+          </document-id>
+          <application-date>
+            <date>20140326</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="34">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060241546</doc-number>
+            <kind>A1</kind>
+            <date>20061026</date>
+          </document-id>
+          <application-date>
+            <date>20060323</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="35">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060260954</doc-number>
+            <kind>A1</kind>
+            <date>20061123</date>
+          </document-id>
+          <application-date>
+            <date>20060522</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="36">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060260931</doc-number>
+            <kind>A1</kind>
+            <date>20061123</date>
+          </document-id>
+          <application-date>
+            <date>20060522</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="37">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060272954</doc-number>
+            <kind>A1</kind>
+            <date>20061207</date>
+          </document-id>
+          <application-date>
+            <date>20060811</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="38">
+          <document-id>
+            <country>US</country>
+            <doc-number>9150438</doc-number>
+            <kind>B2</kind>
+            <date>20151006</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="39">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070173755</doc-number>
+            <kind>A1</kind>
+            <date>20070726</date>
+          </document-id>
+          <application-date>
+            <date>20070122</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="40">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070196357</doc-number>
+            <kind>A1</kind>
+            <date>20070823</date>
+          </document-id>
+          <application-date>
+            <date>20070122</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="41">
+          <document-id>
+            <country>US</country>
+            <doc-number>9168318</doc-number>
+            <kind>B2</kind>
+            <date>20151027</date>
+          </document-id>
+          <application-date>
+            <date>20040811</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="42">
+          <document-id>
+            <country>AU</country>
+            <doc-number>2011341807</doc-number>
+            <kind>B2</kind>
+            <date>20151029</date>
+          </document-id>
+          <application-date>
+            <date>20111215</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="43">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100092399</doc-number>
+            <kind>A1</kind>
+            <date>20100415</date>
+          </document-id>
+          <application-date>
+            <date>20091221</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="44">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090281480</doc-number>
+            <kind>A1</kind>
+            <date>20091112</date>
+          </document-id>
+          <application-date>
+            <date>20060705</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="45">
+          <document-id>
+            <country>US</country>
+            <doc-number>20130032491</doc-number>
+            <kind>A1</kind>
+            <date>20130207</date>
+          </document-id>
+          <application-date>
+            <date>20101129</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="46">
+          <document-id>
+            <country>US</country>
+            <doc-number>20130026096</doc-number>
+            <kind>A1</kind>
+            <date>20130131</date>
+          </document-id>
+          <application-date>
+            <date>20101129</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="47">
+          <document-id>
+            <country>US</country>
+            <doc-number>20120168318</doc-number>
+            <kind>A1</kind>
+            <date>20120705</date>
+          </document-id>
+          <application-date>
+            <date>20100908</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="48">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060016685</doc-number>
+            <kind>A1</kind>
+            <date>20060126</date>
+          </document-id>
+          <application-date>
+            <date>20040726</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="49">
+          <document-id>
+            <country>US</country>
+            <doc-number>9498548</doc-number>
+            <kind>B2</kind>
+            <date>20161122</date>
+          </document-id>
+          <application-date>
+            <date>20060502</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="50">
+          <document-id>
+            <country>US</country>
+            <doc-number>9528189</doc-number>
+            <kind>B2</kind>
+            <date>20161227</date>
+          </document-id>
+          <application-date>
+            <date>20100908</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20151013">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>FIRST OCEAN CO LTD</orgname>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="docdb">
+          <addressbook lang="eng">
+            <orgname>FIRST OCEAN CO LTD</orgname>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="docdba">
+          <addressbook lang="eng">
+            <orgname>FIRST OCEAN CO., LTD.</orgname>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>SANO YOICHI</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="docdb">
+          <addressbook lang="eng">
+            <name>SANO YOICHI</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="docdba">
+          <addressbook lang="eng">
+            <name>SANO; YOICHI</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Sherman and Shalloway</name>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <examiners>
+      <primary-examiner>
+        <name>Bell; Bruce F.</name>
+      </primary-examiner>
+    </examiners>
+    <patent-family date-changed="20071120">
+      <main-family family-id="2243277">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>823400</doc-number>
+            <kind>A1</kind>
+            <date>19980211</date>
+          </document-id>
+          <application-date>
+            <date>19970730</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>10043764</doc-number>
+            <kind>A</kind>
+            <date>19980217</date>
+          </document-id>
+          <application-date>
+            <date>19960806</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>5897757</doc-number>
+            <kind>A</kind>
+            <date>19990427</date>
+          </document-id>
+          <application-date>
+            <date>19970805</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="1842242">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>823400</doc-number>
+            <kind>A1</kind>
+            <date>19980211</date>
+          </document-id>
+          <application-date>
+            <date>19970730</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>10043764</doc-number>
+            <kind>A</kind>
+            <date>19980217</date>
+          </document-id>
+          <application-date>
+            <date>19960806</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>5897757</doc-number>
+            <kind>A</kind>
+            <date>19990427</date>
+          </document-id>
+          <application-date>
+            <date>19970805</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151013" lang="eng" format="original">
+    <p>An electrode structure for electrolysis of water comprising a sheet formed from an electrically non-conductive material whose both sides are laminated with a sheet formed from an electrically conductive material, and a plurality of holes having been bored through said laminated sheet. A net shape sheet of an electrically non-conductive material or an electrically conductive material can be used as the electrically non-conductive sheet or as the electrically conductive sheet. After setting one said electrically conductive sheet as an anode and another one as a cathode, the sterilization of water by electrolysis is carried out by immersing at least a portion of the electrode structure into water, and applying an electric voltage across the anode and the cathode.</p>
+  </abstract>
+  <legal-data date-changed="20170304">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>19970805</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5897757A </docdb-publication-number>
+      <docdb-application-id>54085455</docdb-application-id>
+      <new-owner>FIRST OCEAN CO., LTD., JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:SANO, YOICHI;REEL/FRAME:008735/0237</free-text-description>
+      <effective-date>
+        <date>19970716</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20021113</date>
+      </publication-date>
+      <event-code-1>REMI</event-code-1>
+      <legal-description>MAINTENANCE FEE REMINDER MAILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5897757A </docdb-publication-number>
+      <docdb-application-id>54085455</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20021118</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5897757A </docdb-publication-number>
+      <docdb-application-id>54085455</docdb-application-id>
+      <fee-payment-year>4</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20021118</date>
+      </publication-date>
+      <event-code-1>SULP</event-code-1>
+      <effect>+</effect>
+      <legal-description>SURCHARGE FOR LATE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5897757A </docdb-publication-number>
+      <docdb-application-id>54085455</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20061027</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5897757A </docdb-publication-number>
+      <docdb-application-id>54085455</docdb-application-id>
+      <fee-payment-year>8</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20080707</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5897757A </docdb-publication-number>
+      <docdb-application-id>54085455</docdb-application-id>
+      <new-owner>ELECTROLYZER CORP., MASSACHUSETTS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:FIRST OCEAN CO., LTD.;REEL/FRAME:021217/0151</free-text-description>
+      <effective-date>
+        <date>20071120</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20100922</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5897757A </docdb-publication-number>
+      <docdb-application-id>54085455</docdb-application-id>
+      <fee-payment-year>12</fee-payment-year>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20070521">
+    <summary>
+      <p>This invention relates to an electrode structure which is used for the purpose to electrolyze water and aqueous solution including electrolytes, especially relates to an electrode structure for the electrolysis of water which is preferably used for the sterilization of water.</p>
+      <p>A method to produce acid and alkaline ionized water by electrolysis of water is a well-known technique. Recently, by using this technique, various methods or equipments to produce alkaline ionized water as healthy drinking water, or acid ionized water as sterilized water are proposed (Japanese patent publication 4/28439 and 4/57394, Japanese patent laid-open publication 6/47376, 6/55173 and 6/246268). Further, the methods to sterilize water by oxygen gas which generates at the electrolysis of water, or by chlorine gas or hypochlorous ion which generates at the electrolysis of the aqueous solution including chlorine salts are also proposed. And as the conventional water electrolysis, an apparatus installing a cathode and an anode and separating the two electrodes with a disposed diaphragm between the two electrodes.</p>
+      <p>The object of this invention is to provide an electrode for electrolysis of water which is used for the purpose to sterilize the waste water from households, hospitals, factories and animal-breeding farms or to produce the sterilized water to be used at households, hospitals, schools and foods factories. Further the purpose of the sterilization of well water, swimming pool water, bathtub water, pond water and fish-breeding tank water can be mentioned. And also the sterilization mean of a drinking water treatment plant is one of the object of this invention.</p>
+      <p>Further, to perform a high electrolysis efficiency, it is effective to design the distance between the cathode and the anode as small as possible, and the present invention is satisfied with this important point. The object of this invention is to provide an electrode structure for electrolysis of water which can be easily applied as the mean of water sterilization and have a feature of easy processing. And another object of this invention is to provide a method for sterilization of water using said electrode structure for the electrolysis of water.</p>
+      <p>The inventor of this invention has conduced intensive studies about the electrode structure for the electrolysis of water to accomplish the above mentioned object, and found that the water can be easily and effectively sterilized by carrying out an electrolysis reaction between a cathode and an anode which are laminated holding an electrically non-conductive material therebetween, instead of by carrying out an electrolysis between a conventional cathode and anode which are set up separately, then has accomplished the present invention.</p>
+      <p>That is, the present invention is an electrode structure for electrolysis of water (1) comprising:</p>
+      <p>a first sheet (4) formed from an electrically conductive material, a plurality of holes (6) having been formed through said first sheet;</p>
+      <p>a second sheet (2) formed from an electrically non-conductive material, a plurality of holes (3) having been formed through said second sheet; and</p>
+      <p>a third sheet (5) formed from an electrically conductive material, a plurality of holes (7) having been formed through said third sheet;</p>
+      <p>said first sheet (4) and said third sheet (5) are cooperating to hold said second sheet (2) therebetween;</p>
+      <p>said first sheet (4), said second sheet (2) and said third sheet (5) are cooperating to own a plurality of holes which passes through said first sheet (4), said second sheet (2) and said third sheet (5).</p>
+      <p>Further, the present invention is the electrode structure for electrolysis of water (1), wherein the second sheet (2) formed from an electrically non-conductive material, a plurality of holes (3) having been formed through said second sheet is an electrically non-conductive material of net shape.</p>
+      <p>Furthermore, the present invention is the electrode structure for electrolysis of water (1), wherein the first sheet (4) formed from an electrically conductive material, a plurality of holes (6) having been formed through said first sheet and/or the third sheet (5) formed from an electrically conductive material, a plurality of holes (7) having been formed through said third sheet are an electrically non-conductive material of net shape.</p>
+      <p>The present invention is a method for sterilization of water by the electrolysis of water comprising:</p>
+      <p>a part or whole part of said electrode structure for electrolysis of water (1) is immersed into water;</p>
+      <p>an electric voltage is applied across the sheet (4) formed from an electrically conductive material and the sheet (5) formed from an electrically conductive material by setting one said sheet as an anode and another sheet as a cathode, or switching over mutually from an anode to a cathode.</p>
+    </summary>
+    <description-of-drawings>
+      <heading>BRIEF ILLUSTRATION OF DRAWINGS</heading>
+      <p>FIG. 1 is a perspective and partial exploded view showing one example of the electrode structure for the electrolysis of water of this invention.</p>
+      <p>FIG. 2 is a perspective and partial exploded view showing another example of the electrode structure for the electrolysis of water of this invention.</p>
+      <p>FIG. 3 is a perspective and pertial exploded view showing another example of the electrode structure for the electrolysis of water of this invention.</p>
+      <p>FIG. 4 is a perspective view showing the application of the electrode structure for the electrolysis of water of this invention in a water tank.</p>
+      <p>FIG. 5 is a perspective view showing the application of the electrode for electrolysis of water of this invention in a drain.</p>
+      <p>And FIG. 6 is a perspective view showing the another example of the application of the electrode structure for the electrolysis of water of this invention in a drain.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading>DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p>In the electrolysis of water or the aqueous solution including electrolytes, when a voltage is applied across a cathode and an anode which are placed in the water or the aqueous solution including electrolytes, electrons transfer between the surface of the electrodes and electrolytically dissociated water or electrolyte. On the anode side oxygen gas is generated and hydrogen ion and hydronium ion are generated simultaneously in the water, and the water becomes acidic. In the case of aqueous solution where sodium chloride is dissolved, chlorine gas is also generated on the anode side. On the cathode side, hydrogen gas and hydroxide ion are simultaneously generated, consequently the solution becomes alkaline. Electrons which transferred from the cathode to the solution, migrate in the solution and arrive in the anode. Namely, an electric current flows from the anode to the cathode.</p>
+      <p>Above mentioned reaction which generates ions and gases are taking place closely at the surface of the anode and the cathode. Oxygen gas which is generated by the electrolysis of water, chlorine gas and hypochlorous ion which are generated by the electrolysis of the aqueous solution including chlorine salts possess a sterilization power, and can sterilize the microorganisms which are existing in water such as fungi or bacteria. The important point of the present invention is to sterilize the water or the aqueous solution using above mentioned phenomenon.</p>
+      <p>In the case of the electrolysis of the water or the aqueous solution in which small amount of electrolyte is dissolved, an electric resistance against the electric current flow from the anode to the cathode is big. To enhance the electric power effect of the electrolysis and to minimize the electric resistance, it is desirable to make the distance between a cathode and an anode as short as possible. However, in the conventional electrode structure for electrolysis of water in which a cathode and an anode are set up independently and an electrolysis is carried out at the opposite surfaces of both electrodes, it is necessary to set up the cathode and the anode with an adequate distance for the purposes to prevent the contact of the cathode and the anode, to disperse the oxygen gas, the hydrogen gas or other gas which generates at the surfaces of both electrodes and to diffuse the generated ion such as hydrogen ion, hydronium ion and hydroxide ion.</p>
+      <p>In the electrode structure for the electrolysis of water of this invention, the electrode structure has the structural features that laminating a cathode having a plurality of penetrating holes with an anode having a plurality of penetrating holes holding an electrically non-conductive material having a plurality of penetrating holes between, and having the penetrating holes through the laminate (electrode). Therefore the electrons transfer from the anode to the cathode and the ions transfers to an opposite electrode, through the fluid which exists in the penetrating holes. And also in the electrode of this invention, the distance between the cathode and the anode is equal to the sum total of thickness of sheets formed from an electrically conductive material which are used as the anode and the cathode, and a sheet formed from an electrically non-conductive material. Therefore, in comparison with the conventional electrode structure, it is possible to shorten said distance to an extreme level, and even if the electric resistance of water is high, at the electrolysis it is possible to improve the efficiency of electric power for the electrolysis. That is, the electric voltage which is necessary to apply the prescribed electric current constantly can be cut down in comparison with that of the conventional electrode structure.</p>
+      <p>Further, when an electrolysis of water is carried out using the electrode structure for the electrolysis of water of this invention, the electrolysis reaction is not carried out at the side which is faced to the sheet formed from an electrically non-conductive material (namely inner surface), because the gap formed between the anode or the cathode and the sheet formed from an electrically non-conductive material is very narrow or sealed by the adhesive resin and the amount of the aqueous solution exists in said gap is very small. On the contrary, as the large amount of the aqueous solution exists at the opposite side of the anode or the cathode (namely outer surface which is not contacted to the sheet formed from an electrically non-conductive material), the electrolysis occurs vigorously, and gases or ions which are generated at the outer side of the electrode structure are easily dispersed or diffused into the aqueous solution. Further, different from the conventional electrode structure, the anode and the cathode are not existing independently but are the laminated structure, therefore the structural intensity can be maintained by the whole composite body and also has features of easy handling, easy cutting and easy processing.</p>
+      <p>The present invention will be better understood from the following description taken in connection with the accompanying drawings, however not intended to be limited in them.</p>
+      <p>FIG. 1 is the perspective view showing one example of the electrode structure for the electrolysis of water which is used as the mean of the sterilization of water of this invention, and in the drawing the electrode structure is partially exploded. In this example, a plurality of penetrating holes of each sheet are formed by boring. That is, this electrode structure for the electrolysis of water (1) is an electrode structure which comprises; a first sheet (4) formed from an electrically conductive material, a plurality of holes (6) having been formed through said first sheet; a second sheet (2) formed from an electrically non-conductive material, a plurality of holes (3) having been formed through said second sheet; and a third sheet (5) formed from an electrically conductive material, a plurality of holes (7) having been formed through said third sheet; said first sheet (4) and said third sheet (5) are cooperating to hold said second sheet (2) therebetween. These holes (3), (6) and (7) are formed all over the surface of the sheet materials. And when the sheet (4) formed from an electrically conductive material through which a plurality of holes (6) is bored and the sheet (5) formed from an electrically conductive material through which a plurality of holes (7) is bored are arranged and laminated to the both sides of the sheet (5) formed from an electrically non-conductive material through which a plurality of holes (3) is bored, the laminated sheet that is electrode (1)! composing said three sheets is cooperating to own a plurality of holes which passes through said three sheets. The size, the location and the numbers of holes which passes through said three sheets are possible to be perfectly congruous or not to be congruous. When the size and the location of holes are perfectly congruous, all holes are penetrating through the cathode, anode and the electrically non-conductive sheet and does not make a passage narrow. Therefore, it has a feature of good water passing through, and the electric resistance against the electric current flow from an anode to a cathode becomes small. Therefore, it is desirable that the holes which pass through said three sheets are perfectly congruous.</p>
+      <p>The electrically non-conductive material sheet which is used in the electrode structure for the electrolysis of water in this invention is a sheet formed from a plastic which is electrically non-conductive. For instance, a sheet of polyethylene resin, polypropylene resin, polystyrene resin, polyester resin, polyvinyl-chloride resin, ABS resin, acrylic resin, epoxy resin, teflon resin, polyvinyliden-chloride resin, natural rubber, SBR rubber, silicon rubber and chloroprene rubber can be mentioned. Further, a resin board reinforced by a cloth or a net made of glass fiber, cotton or synthetic fiber can be mentioned. The thickness of the electrically non-conductive material sheet is from 0.01 to 5 mm, and the diameter of a plurality of holes bored through the electrically non-conductive material sheet is from 1 to 20 mm.</p>
+      <p>The electrically conductive material sheet which is used in the electrode structure for the electrolysis of water in this invention is a sheet formed from an electrically conductive material such as copper, lead, nickel, chrome, titanium, gold, platinum, iron oxide, stainless steel, carbon fiber or graphite board. The thickness of the electrically conductive material sheet is from 0.01 to 5 mm, and a platinum plated titanium board of 0.01-5 mm can also be used. The suitable diameter of a plurality of holes bored through the electrically non-conductive material sheet is from 1 to 20 mm.</p>
+      <p>For the fabrication of the electrode structure for the electrolysis of water of this invention indicated in FIG. 1, the following procedure is preferably used. Namely, an electrically conductive material sheet (4) through which a plurality of holes (6) is bored, an electrically non-conductive material sheet (2) through which a plurality of holes (3) is bored and an electrically conductive material sheet (5) through which a plurality of holes (7) is bored are previously prepare. These three sheets are arranged together cooperating to own a plurality of holes which passes through said three sheets and laminated by adhering whole part or partial part of contact surface of each material sheet. Further, the procedure comprises, laminating an electrically conductive material sheet without holes to the both sides of an electrically non-conductive material sheet without holes by adhering whole part or partial part of contact surface of each material sheet, and a plurality of holes is bored through the laminated sheet, can be mentioned. Furthermore, the following procedure can be also mentioned. That is, after electrically conductive materials such as platinum is plated over the whole surface of electrically non-conductive material sheet, then a plurality of holes is bored through the plated sheet.</p>
+      <p>FIG. 2 is a perspective and partial exploded view showing one example of the electrode structure for the electrolysis of water of this invention (1), in which an electrically non-conductive material sheet of net shape (8) is used instead of an electrically non-conductive material sheet (2) through which a plurality of holes (3) is bored. Said net shape electrically non-conductive material sheet (8) is a net shape substance formed from or covered by an electrically non-conductive material such as polyethylene resin, polypropylene resin, polystyrene resin, polyethylene-trephthalate resin, polyvinyl-chloride resin, ABS resin, acrylic resin, epoxy resin, teflon resin, polyvinyliden-chloride resin, natural rubber, SBR rubber, silicon rubber, chloroprene rubber, glass fiber and cotton, and both knitted net and woven net can be used. And the preferable pore opening of the net is from 180 to 2 mesh.</p>
+      <p>The electrode for the electrolysis of water of this invention (1) shown in FIG. 2 can be fabricated by following procedure. Namely, an electrically conductive material sheet (4) through which a plurality of holes (6) is bored, an electrically non-conductive material sheet of net shape (8) and an electrically conductive material sheet (5) through which a plurality of holes (7) is bored are arranged together cooperating to own a plurality of holes which passes through said three sheets and laminated by adhering whole part or partial part of contact surface of each material sheet.</p>
+      <p>FIG. 3 is a perspective and partial exploded view showing the electrode structure for the electrolysis of water of this invention, in which the both sides of an electrically non-conductive material sheet of net shape are laminated with an electrically conductive material sheet of net shape. As the electrically conductive material sheet of net shape (8), same sheet to that of FIG. 2 is used. And as the net shape electrically conductive material (9) and the net shape electrically conductive material (10), a knitted or woven net of an electrically conductive fiber such as copper, lead, nickel, chrome, titanium, gold, platinum, iron oxide, stainless steel, carbon fiber board or graphite board can be used. And the preferable pore opening of the net is from 10 to 1 mesh.</p>
+      <p>The electrode structure for the electrolysis of water of this invention (1) shown in FIG. 3 can be fabricated by following procedure. Namely, a net of electrically conductive material (9), a net of electrically non-conductive material (8) and a net of electrically conductive material (10) are arranged together and laminated by adhering whole part or partial part of contact surface of each material sheet. Further, in the electrode for the electrolysis of water of this invention shown in FIG. 3, either the net of electrically conductive material (9) or the net of electrically conductive material (10) can be replaced by an electrically conductive material sheet through which a plurality of holes is bored.</p>
+      <p>Secondly, the method of the sterilization of water using the electrode structure for the electrolysis of water fabricated by above mentioned procedure is illustrated. FIG. 4 is a perspective view which illustrates the method of sterilization by containing water or aqueous solution to be sterilized into a water tank. The electrode structure for the electrolysis of water (1) indicated in FIG. 1 is put into the water tank (11). Then, after one electrically conductive material sheet (4) is set up as an anode and another electrically conductive material sheet (5) is set up as a cathode, electric voltage is applied. Electrons transfer between the electrically conductive material sheet (4) and the electrically conductive material sheet (5) through the hole (3), electric current flows from the anode to the cathode and the electrolysis is carried out. At this time, at the anode side, hydric ion and oxygen gas are generated. If chloride component is contained in solution, chlorine gas is generated at the anode. At the cathode side, hydroxide ion and hydrogen gas are generated. These generated oxygen gas, chlorine gas or hypochlorite ion which is generated by the reaction of chlorine with hydric ion, have a sterilizing function in water. In the water tank, the plural number of the electrode structure for the electrolysis of water (1) can be put into. The electrode structure for the electrolysis of water (1) which is processed to have a corrugate shape or a cylindrical shape can be used. These types have an effect to increase an surface area to contact with water, and accordingly a sterilizing effect can be improved.</p>
+      <p>By this electrolysis, at the anode side hydric ion and hydronium ion generate as well as the generation of oxygen gas, and the solution surrounding the anode indicates acidity. On the contrary, at the cathode side hydroxide ion generates as well as the generation of hydrogen gas, and the solution surrounding the cathode indicates alkaline. In a case of a regular electrolysis, a diaphragm is disposed to protect a mixing of said acidity solution and alkaline solution, however since the object of this invention is to sterilize the solution by the generated oxygen gas, chlorine gas and hypochlorite ion, it is not necessary to arrange a diaphragm. To obtain oxygen gas or hydrogen gas or to obtain a acidity solution or an alkaline solution is not the object of this invention. Further, the above mentioned acidity solution which exists instantaneously has also a sterilizing function. Furthermore, the sterilization by the contact of a microorganism with the electrode is also effective.</p>
+      <p>The electrode structure for the electrolysis of water of this invention can be used for the sterilization of the flowing water. Namely, for instance, the electrode structure for the electrolysis of water of this invention is set up in a tube or in a drain, water or aqueous solution is poured into the tube or the drain, then by applying electric voltage to the electrodes the sterilization is carried out. FIG. 5 and FIG. 6 show the embodiment of the sterilizing method of a drain by using the electrode for the electrolysis of water. FIG. 5 is an embodiment that the electrode structure for the electrolysis of water (1) of this invention is set up parallel with the bed of a drain (12), and in the drawing only one electrode is set up, however plural electrodes can be set up. FIG. 6 shows an embodiment that the electrode structure for the electrolysis of water (1) of this invention is set up parallel with the side wall of a drain (12). In these embodiments, the width of the drain is 50 cm and the height is 40 cm. The width of the electrode structure for the electrolysis of water (1) is 45 cm and the length of it is 120 cm. Electric current of 20 ampere is applied by 30 volt. electric voltage. The electrode structure (1) which is processed to have a corrugate shape or a cylindrical shape can be used. These types have an effect to increase an surface area to contact with water and accordingly a sterilizing effect can be improved.</p>
+      <p>As the electric source to be applied to the electrode structure of this invention, a direct current is generally used, however an alternating current can be also used. The sterilization system of this invention can be used as the sterilization of the drainage from homes, hospitals and factories or as the preparation of the sterilized water used in hospitals or food factories. And also can be used as the sterilization of circulating warm water of the bath.</p>
+      <heading>EXAMPLES</heading>
+      <p>The present invention is further illustrated by following Examples.</p>
+      <p>Example 1</p>
+      <p>An electrically non-conductive polyethylene film of 0.3 mm thickness is hold between two titanium plate of 1 mm thickness on one surface of which platinum is plated, and laminated by heat press. These titanium plates are arranged to expose the platinum plated surface to the outer side. A plurality of holes having 7 mm diameter is bored through the laminated plate by 10 mm pitch, and prepared the electrode structure of this invention. The opening ratio of holes is 43.4%. The electrode is cut off to a rectangular sheet of 100 mm.times.220 mm, and rounded to a cylindrical shape. Said cylindrical electrode structure is set up in a beaker of 1 liter capacity, and 900 milli liter of water to be sterilized is filled up in the beaker. Then, after one titanium plate is set up as an anode and another titanium plate is set up as a cathode, direct electric current is applied at lower electron voltage. The existence of microorganism is investigated before and after the electrolysis.</p>
+      <p>The water including microorganism is prepared, and 10 ppm of NaCl is added to said water. Both said two kinds of water are treated by electrolysis for 30 minutes and 120 minutes, and the existence of microorganism in these kinds of water are investigated before and after the electrolysis. The measuring method of microorganism is carried out as follows. That is, each specimen from these kinds of water is inoculated on a modified BHI medium and modified DHL medium of investigating food plate for general bacillus and escherichia coli, and cultivated for three days at room temperature, then the number of colony is counted. If the numbers of colony are small, the numbers of microorganism in water are small.</p>
+      <p>As an original water including microorganism, water contained in a goldfish-breeding tank is used. After five goldfishes of about 5 cm size are bred in a fish-breeding tank of 10 liter capacity for one week, and the top water is used as the original water.</p>
+      <p>The results are summarized in Table 1. It is obvious from table 1 that the sterilization effect using the electrode structure for the electrolysis of water of this invention is excellent.</p>
+      <p>
+        <tables>
+          <table>
+            <tgroup cols="1">
+              <tbody>
+                <row>
+                  <entry> TABLE 1 ______________________________________ numbers of colony electrolysis modified modified period BHI medium DHL medium ______________________________________ original water 0 150 15 30 minutes 1 0 120 minutes 0 0 100 ppm Nacl added 10 minutes 0 2 to original water 30 minutes 3 0 ______________________________________</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p>Example 2</p>
+      <p>Urine is diluted by the city water to four times. 1000 cc of the diluted urine is treated by the electrolysis using the cylindrical electrode which is set up in a beaker of 1 liter capacity like as Example 1. Electric voltage of 3.7-4.0 volt is applied to the electrode structure and the diluted urine is treated by 830 mA electric current for 7 hours. Consequently, the color of the fluid turned from light yellow to coffee color. The existence of microorganism in the fluid is investigated before and after the electrolysis like as Example 1. The results are summarized in Table 2.</p>
+      <p>
+        <tables>
+          <table>
+            <tgroup cols="1">
+              <tbody>
+                <row>
+                  <entry> TABLE 2 ______________________________________ numbers of colony electrolysis modified modified period BHI medium DHL medium ______________________________________ diluted urine 0 0 all-out black 7 hours 0 0 ______________________________________</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p>Because the oxygen gas, the chlorine gas or the hypochlorous ions which are generated by the electrolysis of water or the aqueous solution including chlorine electrolyte using the electrode for the electrolysis of water of this invention have a sterilization effect, the sterilization treatment for water or the aqueous solution including chlorine electrolyte can be carried out by the electrolysis using the electrode of this invention. And, since the electrode structure for the electrolysis of water of this invention is very simple. The said electrode structure comprises a sheet formed from an electrically non-conductive material whose both sides are laminated with a sheet formed from an electrically conductive material, and a plurality of holes having been bored through said laminated sheet, or comprises a net shape sheet formed from an electrically non-conductive material whose both sides are laminated with an net shape sheet formed from an electrically conductive material. Therefore, it can be prepared without difficulty. Further, the electrode structure of this invention has advantages to be easily cut off and formed.</p>
+      <p>When a voltage is applied across the sheets formed from an electrically conductive material which are laminated to both sides of a sheet formed from an electrically non-conductive material by setting one sheet as an anode and another sheet as an cathode and the electrolysis is carried out, since said two sheets are only holding the sheet formed from an electrically non-conductive material, the distance between the anode and the cathode is very small and the electric efficiency is very high. Therefore, the electrode structure for the electrolysis of water of this invention can be preferably used as a means for sterilization of the drain from homes, hospitals and factories and as an apparatus for the preparation of sterilized water to be used in hospitals or food factories.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20070521">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>1. An electrode structure for electrolysis of water (1) comprising: a first sheet (4) formed from an electrically conductive material, a plurality of holes (6) having been formed through said first sheet; a second sheet (2) formed from an electrically non-conductive material, a plurality of holes (3) having been formed through said second sheet; and a third sheet (5) formed from an electrically conductive material, a plurality of holes (7) having been formed through said third sheet; said first sheet (4) and said third sheet (5) are cooperating to hold said second sheet (2) therebetween; said first sheet (4), said second sheet (2) and said third sheet (5) are cooperating to own a plurality of holes which passes through said first sheet (4), said second sheet (2) and said third sheet (5). </claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>2. The electrode structure for electrolysis of water (1), wherein the second sheet (2) formed from an electrically non-conductive material, a plurality of holes (3) having been formed through said second sheet is an electrically non-conductive material of net shape. </claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>3. The electrode structure for electrolysis of water (1), wherein the first sheet (4) formed from an electrically conductive material, a plurality of holes (6) having been formed through said first sheet and/or the third sheet (5) formed from an electrically conductive material, a plurality of holes (7) having been formed through said third sheet are an electrically non-conductive material of net shape. </claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>4. A method for sterilization of water by the electrolysis of water comprising: a part or whole part of the electrode structure for electrolysis of water (1) of claims 1, 2 or 3 is immersed into water; an electric voltage is applied across the sheet (4) formed from an electrically conductive material and the sheet (5) formed from an electrically conductive material by setting one said sheet as an anode and another sheet as a cathode, or switching over mutually from an anode to a cathode. </claim-text>
+    </claim>
+  </claims>
+  <drawings format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US5897757A_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="5897757A.TC.SD.P0000.D0000.png" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US5897757A_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5897757A.TC.SD.P0000.D0000.png" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US5897757A_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5897757A.TC.SD.P0000.D0000.png" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US5897757A_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5897757A.TC.SD.P0000.D0000.png" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US5897757A_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5897757A.TC.SD.P0000.D0000.png" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US5897757A_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5897757A.TC.SD.P0000.D0000.png" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US5897757A_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5897757A.TC.SD.P0000.D0000.png" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US5897757A_00008.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="5897757A.TC.SD.P0000.D0000.png" />
+    </figure>
+  </drawings>
+  <image file="US5897757A.PDF" type="pdf" size="207161" pages="12" />
+</lexisnexis-patent-document>

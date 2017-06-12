@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150250378A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="022144" date-changed="20151103" time-changed="063342">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121232566">
+        <country>US</country>
+        <doc-number>20150250378</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14628818</doc-number>
+        <date>20150223</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2014042086</doc-number>
+        <date>20140304</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>JP</country>
+        <doc-number>2014246063</doc-number>
+        <date>20141204</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151103">
+      <classification-ipcr sequence="1">
+        <text>A61B   1/00        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B   1/05        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>05</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>H04N   5/225       20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>04</class>
+        <subclass>N</subclass>
+        <main-group>5</main-group>
+        <subgroup>225</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>H04N   7/10        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>04</class>
+        <subclass>N</subclass>
+        <main-group>7</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151103">
+      <classification-cpc sequence="1">
+        <text>A61B   1/00124     20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>00124</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   1/05        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>05</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>H01R  13/6471      20130101 LI20151029BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>R</subclass>
+        <main-group>13</main-group>
+        <subgroup>6471</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151029</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>H04N   5/2251      20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>04</class>
+        <subclass>N</subclass>
+        <main-group>5</main-group>
+        <subgroup>2251</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>H04N   7/102       20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>04</class>
+        <subclass>N</subclass>
+        <main-group>7</main-group>
+        <subgroup>102</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>H04N2005/2255      20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>04</class>
+        <subclass>N</subclass>
+        <main-group>2005</main-group>
+        <subgroup>2255</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">WIRE CONNECTION DEVICE, CAMERA HEAD AND ENDOSCOPIC DEVICE</invention-title>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>SONY OLYMPUS MEDICAL SOLUTIONS INC.</orgname>
+            <role>03</role>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="2" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>SONY CORPORATION</orgname>
+            <role>03</role>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>TOMATSU</last-name>
+            <first-name>Kei</first-name>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>HIRANO</last-name>
+            <first-name>Taichi</first-name>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MATSUDA</last-name>
+            <first-name>Akira</first-name>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20151015">
+      <main-family family-id="173569688">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250378</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150223</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="174146574">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015181096</doc-number>
+            <kind>A</kind>
+            <date>20151015</date>
+          </document-id>
+          <application-date>
+            <date>20141204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250378</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150223</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">There is provided a wire connection device including an outer frame that has a tubular shape, and a plurality of contacts that are provided in the outer frame, and that have a plurality of pairs of differential contacts to which a plurality of pairs of differential signals are respectively allocated, and a plurality of ground contacts each to which ground is allocated. When viewed from a direction along a central axis of the outer frame, the plurality of contacts are arranged side by side in two rows in a manner that the differential contacts of each pair can be adjacent to each other and in a manner that the number of the ground contacts adjacent to one of the differential contacts of each pair is equal to the number of the ground contacts adjacent to the other one of the differential contacts of the pair.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150812</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015250378A1</docdb-publication-number>
+      <docdb-application-id>444306892</docdb-application-id>
+      <new-owner>SONY CORPORATION, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:HIRANO, TAICHI;MATSUDA, AKIRA;SIGNING DATES FROM 20150122 TO 20150123;REEL/FRAME:036336/0273</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150812</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015250378A1</docdb-publication-number>
+      <docdb-application-id>444306892</docdb-application-id>
+      <new-owner>SONY OLYMPUS MEDICAL SOLUTIONS INC., JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:HIRANO, TAICHI;MATSUDA, AKIRA;SIGNING DATES FROM 20150122 TO 20150123;REEL/FRAME:036336/0273</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of Japanese Priority Patent Application JP 2014-042086 filed Mar. 4, 2014, and Japanese Priority Patent Application JP 2014-246063 filed Dec. 4, 2014, the entire contents of each of which are incorporated herein by reference.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">The present disclosure relates to wire connection device, a camera head and an endoscopic device.</p>
+      <p id="p-00003-en" num="0003">In the past, there has been known a connector mechanically and electrically connected to a counterpart connector, such as a plug and a receptacle (see JP2010-287560A, for example).</p>
+      <p id="p-00004-en" num="0004">The connector described in JP2010-287560A includes multiple contacts arranged side by side in a row. The multiple contacts include multiple pairs of differential contacts and multiple ground contacts. To the multiple pairs of differential contacts, multiple pairs of differential signals are respectively allocated. Each of the multiple ground contacts, to which ground is allocated, is placed between a pair of differential contacts and another pair of differential contacts.</p>
+      <p id="p-00005-en" num="0005">Thus, in the connector described in JP2010-287560A, crosstalk is prevented by placing each ground contact at the position.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00006-en" num="0006">However, the connector described in JP2010-287560A has a problem of difficulty in downsizing since the arrangement of multiple contacts arranged side by side in a row increases width dimension in the side-by-side arrangement direction.</p>
+      <p id="p-00007-en" num="0007">The present disclosure is made in view of the above. According to embodiments of the present disclosure, there is provided a wire connection device, a camera head and an endoscopic device which are capable of preventing signal deterioration while achieving downsizing.</p>
+      <p id="p-00008-en" num="0008">According to an embodiment of the present disclosure, there is provided a wire connection device including an outer frame that has a tubular shape, and a plurality of contacts that are provided in the outer frame, and that have a plurality of pairs of differential contacts to which a plurality of pairs of differential signals are respectively allocated, and a plurality of ground contacts each to which ground is allocated. When viewed from a direction along a central axis of the outer frame, the plurality of contacts are arranged side by side in two rows in a manner that the differential contacts of each pair can be adjacent to each other and in a manner that the number of the ground contacts adjacent to one of the differential contacts of each pair is equal to the number of the ground contacts adjacent to the other one of the differential contacts of the pair.</p>
+      <p id="p-00009-en" num="0009">According to an embodiment of the present disclosure, when viewed from the direction along the central axis of the outer frame, the plurality of contacts may be arranged so as to constitute part of an equilateral triangular lattice where intervals of mutually adjacent lattice points are identical.</p>
+      <p id="p-00010-en" num="0010">According to an embodiment of the present disclosure, the plurality of pairs of differential contacts may be arranged in a manner that one of the differential contacts of each pair is arranged in a first row of the two rows while the other one of the differential contacts of the pair is arranged in a second row of the two rows.</p>
+      <p id="p-00011-en" num="0011">According to an embodiment of the present disclosure, the plurality of pairs of differential contacts may be arranged in a manner that both the differential contacts of each pair are arranged in either of a first row and a second row of the two rows.</p>
+      <p id="p-00012-en" num="0012">According to an embodiment of the present disclosure, when viewed from the direction along the central axis of the outer frame, each of the plurality of contacts may be formed of a female contact including a first contact portion that has an L shape and that has a first sidewall portion extending in a side-by-side arrangement direction of either of a first row and a second row of the two rows, and a second sidewall portion crossing the first sidewall portion. The plurality of contacts may be arranged in a manner that separation distances between each two of the second sidewall portions mutually adjacent in the side-by-side arrangement direction are identical.</p>
+      <p id="p-00013-en" num="0013">According to an embodiment of the present disclosure, each of the plurality of contacts may be formed of a female contact including a second contact portion that has a plate shape extending in a side-by-side arrangement direction of either of a first row and a second row of the two rows.</p>
+      <p id="p-00014-en" num="0014">According to an embodiment of the present disclosure, when viewed from the direction along the central axis of the outer frame, each of the plurality of contacts may be formed of a female contact including a third contact portion that has a U shape and that has a base portion extending in a side-by-side arrangement direction of either of a first row and a second row of the two rows, and a pair of third sidewall portions erecting from the base portion and facing to each other in the side-by-side arrangement direction.</p>
+      <p id="p-00015-en" num="0015">According to an embodiment of the present disclosure, the plurality of pairs of differential contacts may be arranged in a manner that one of the differential contacts of each pair is arranged in the first row while the other one of the differential contacts of the pair is arranged in the second row. The one differential contact and the other differential contact may be arranged symmetrically with respect to a point positioned at a center between the one differential contact and the other differential contact.</p>
+      <p id="p-00016-en" num="0016">According to an embodiment of the present disclosure, when viewed from the direction along the central axis of the outer frame, the plurality of contacts may be arranged in a manner that the number of the ground contacts adjacent to one of the differential contacts of each pair and the number of the ground contacts adjacent to the other one of the differential contacts of the pair are set to one.</p>
+      <p id="p-00017-en" num="0017">According to an embodiment of the present disclosure, there is provided a camera head used in an endoscope, the camera head including the wire connection device, and an image sensor electrically connected to the plurality of contacts.</p>
+      <p id="p-00018-en" num="0018">According to an embodiment of the present disclosure, the wire connection device may be formed of two connectors mechanically and electrically connected to each other, the connectors being a first connector and a second connector.</p>
+      <p id="p-00019-en" num="0019">According to an embodiment of the present disclosure, there is provided an endoscopic device including the camera head.</p>
+      <p id="p-00020-en" num="0020">In the wire connection device according to an embodiment of the present disclosure, the multiple contacts are arranged side by side in two rows when viewed from the direction along the central axis of the outer frame. Thus, an increase in width dimension in the side-by-side arrangement direction can be avoided as compared to a wire connection device (the connector described in JP2010-287560A, for example) in which multiple contacts are arranged side by side in a row.</p>
+      <p id="p-00021-en" num="0021">Furthermore, in the wire connection device according to an embodiment of the present disclosure, the multiple contacts are arranged so that the differential contacts of each pair can be adjacent to each other and so that the number of the ground contacts adjacent to one of the differential contacts of each pair can be equal to the number of the ground contacts adjacent to the other one of the differential contacts of the pair. Thus, the number of so-called ground guards for each differential signal can be fixed, and consequently signal deterioration can be prevented.</p>
+      <p id="p-00022-en" num="0022">Therefore, the wire connection device according to an embodiment of the present disclosure has an effect of preventing signal deterioration while achieving downsizing.</p>
+      <p id="p-00023-en" num="0023">The camera head according to an embodiment of the present disclosure includes the wire connection device, thus having a similar effect.</p>
+      <p id="p-00024-en" num="0024">The endoscopic device according to an embodiment of the present disclosure includes the camera head, thus having a similar effect.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 1</figref> shows a schematic configuration of an endoscopic device according to an embodiment of the present disclosure;</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 2</figref> is a perspective view, as viewed from the base-end side (side to which a composite cable is connected), of a camera head shown in <figref>FIG. 1</figref>;</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 3</figref> is a perspective view, as viewed from the base-end side (side to which a photoelectric composite module is connected), of an airtight part shown in <figref>FIG. 2</figref>;</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 4</figref> is a perspective view, as viewed from the inside of the airtight part, of a hermetic connector shown in <figref>FIG. 3</figref>;</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 5</figref> is a view, as viewed from the outside (side to which the composite cable is connected) of the airtight part, of the hermetic connector shown in <figref>FIG. 3</figref>;</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 6</figref> is a perspective view, as viewed from the front-end side (side to which the airtight part is connected), of the photoelectric composite module according to an embodiment of the present disclosure;</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 7</figref> is an exploded perspective view, as viewed from the base-end side (side to which the composite cable is connected), of the internal structure of the photoelectric composite module shown in <figref>FIG. 6</figref>;</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 8</figref> is a perspective view, as viewed from the base-end side (side where first and second printed circuit boards are arranged), of the receptacle shown in <figref>FIGS. 6 and 7</figref>;</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 9</figref> shows an array state of multiple female contacts shown in <figref>FIG. 8</figref>;</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 10</figref> is a diagram for illustrating the arrangement of the multiple first female contacts shown in <figref>FIGS. 8 and 9</figref>, and the allocation of signals and ground to the multiple first female contacts;</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 11</figref> shows a modification of an embodiment of the present disclosure;</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 12</figref> shows a modification of an embodiment of the present disclosure; and</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 13</figref> shows a modification of an embodiment of the present disclosure.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE EMBODIMENT</heading>
+      <p id="p-00038-en" num="0038">Hereinafter, preferred embodiments of the present disclosure will be described in detail with reference to the appended drawings. Note that, in this specification and the appended drawings, structural elements that have substantially the same function and structure are denoted with the same reference numerals, and repeated explanation of these structural elements is omitted.</p>
+      <heading id="h-00006-en" level="2">[Schematic Configuration of Endoscopic Device]</heading>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 1</figref> shows a schematic configuration of an endoscopic device <b>1</b> according to an embodiment of the present disclosure. The endoscopic device <b>1</b> is an apparatus used in medical fields to observe the interior of an observation object (interior of a living body) such as a human being. Note that, though an endoscopic device using a rigid scope (insertion part <b>2</b>) will be described as the endoscopic device <b>1</b> in this embodiment, the endoscopic device <b>1</b> is not limited thereto, but may be an endoscopic device using a flexible scope (not shown). As shown in <figref>FIG. 1</figref>, the endoscopic device <b>1</b> includes the insertion part <b>2</b>, a light source device <b>3</b>, a light guide <b>4</b>, a camera head <b>5</b>, a composite cable <b>6</b>, a display <b>7</b> and a controller <b>8</b>.</p>
+      <p id="p-00040-en" num="0040">The insertion part <b>2</b>, being rigid and having an elongated shape, is inserted into an observation object. An optical system for condensing light to form an object image is provided inside the insertion part <b>2</b>.</p>
+      <p id="p-00041-en" num="0041">The light source device <b>3</b> is connected to one end of the light guide <b>4</b>, and supplies the one end of the light guide <b>4</b> with light to illuminate the interior of the observation object.</p>
+      <p id="p-00042-en" num="0042">While the one end of the light guide <b>4</b> is detachably connected to the light source device <b>3</b>, the other end is detachably connected to the insertion part <b>2</b>. The light guide <b>4</b> transmits light supplied from the light source device <b>3</b> from the one end to the other end, thereby supplying the light to the insertion part <b>2</b>. The light supplied to the insertion part <b>2</b> is emitted from the distal end of the insertion part <b>2</b>, and thereby the interior of the observation object is irradiated with the light. The light (object image) with which the interior of the observation object is irradiated is condensed by the optical system in the insertion part <b>2</b>.</p>
+      <p id="p-00043-en" num="0043">The camera head <b>5</b> is detachably connected to the base end of the insertion part <b>2</b>. Under control of the controller <b>8</b>, the camera head <b>5</b> images the object image formed with light condensed by the insertion part <b>2</b>, then photoelectrically converts imaging signals (electrical signals) obtained by the imaging into optical signals, and outputs the optical signals.</p>
+      <p id="p-00044-en" num="0044">In this embodiment, a differential transmission system is employed. Accordingly, information (imaging signals (electrical signals and optical signals)) obtained by imaging by the camera head <b>5</b> is transmitted to the controller <b>8</b> through the composite cable <b>6</b> as multiple pairs of differential signals (+) and differential signals (−). Here, the differential signal (+) and the differential signal (−) of each pair are signals having mutually opposite phases.</p>
+      <p id="p-00045-en" num="0045">The detailed configuration of the camera head <b>5</b> will be described later.</p>
+      <p id="p-00046-en" num="0046">The composite cable <b>6</b> has multiple optical fibers <b>61</b> (see <figref>FIG. 7</figref>) and multiple electrical signal cables <b>62</b> (see <figref>FIG. 7</figref>) inside a jacket <b>6</b>A (see <figref>FIG. 7</figref>), which is the outermost layer. One end of the composite cable <b>6</b> is detachably connected to the controller <b>8</b> while the other end is detachably connected to the camera head <b>5</b>.</p>
+      <p id="p-00047-en" num="0047">The multiple optical fibers <b>61</b> are arranged at a center position of the composite cable <b>6</b> in a cross sectional view of the composite cable <b>6</b>, and used for transmitting optical signals between the camera head <b>5</b> and the controller <b>8</b>.</p>
+      <p id="p-00048-en" num="0048">The multiple electrical signal cables <b>62</b> are arranged around the multiple optical fibers <b>61</b> in a cross sectional view of the composite cable <b>6</b>, and used for transmitting electrical signals between the camera head <b>5</b> and the controller <b>8</b>.</p>
+      <p id="p-00049-en" num="0049">The display <b>7</b> displays an image under control of the controller <b>8</b>.</p>
+      <p id="p-00050-en" num="0050">The controller <b>8</b> acquires optical signals (differential signals (+) and differential signals (−)) outputted from the camera head <b>5</b> through the multiple optical fibers <b>61</b>, and photoelectrically converts the optical signals to electrical signals. Then, the controller <b>8</b> performs predetermined processing on the photoelectrically converted electrical signals, thereby causing the display <b>7</b> to display an image imaged by the camera head <b>5</b>. Meanwhile, the controller <b>8</b> outputs control signals and the like (electrical signals) to the camera head <b>5</b> through the multiple electrical signal cables <b>62</b>.</p>
+      <heading id="h-00007-en" level="2">[Configuration of Camera Head]</heading>
+      <p id="p-00051-en" num="0051">
+        <figref>FIG. 2</figref> is a perspective view, as viewed from the base-end side (side to which the composite cable <b>6</b> is connected), of the camera head <b>5</b>.</p>
+      <p id="p-00052-en" num="0052">As shown in <figref>FIG. 2</figref>, the camera head <b>5</b> includes a coupler part <b>51</b>, an airtight part <b>52</b> and a photoelectric composite module <b>9</b> (see <figref>FIG. 6</figref>).</p>
+      <p id="p-00053-en" num="0053">Note that <figref>FIG. 2</figref> shows the state where a cover part <b>53</b>, having a tubular shape to cover the photoelectric composite module <b>9</b> and the base-end side of the airtight part <b>52</b>, is attached, thus not showing the photoelectric composite module <b>9</b>.</p>
+      <p id="p-00054-en" num="0054">The coupler part <b>51</b> is used for detachably connecting the camera head <b>5</b> to the base end of the insertion part <b>2</b>, and provided at the front end of the camera head <b>5</b>.</p>
+      <p id="p-00055-en" num="0055">
+        <figref>FIG. 3</figref> is a perspective view, as viewed from the base-end side (side to which the photoelectric composite module <b>9</b> is connected), of the airtight part <b>52</b>.</p>
+      <p id="p-00056-en" num="0056">As shown in <figref>FIGS. 2 and 3</figref>, the airtight part <b>52</b> includes a casing <b>521</b> constituting the exterior of the airtight part <b>52</b>, a hermetic connector <b>522</b> (<figref>FIG. 3</figref>) mounted on the casing <b>521</b>, and parts housed in the casing <b>521</b> such as a lens unit (not shown), a driving motor (not shown) and an image sensor <b>523</b> (see <figref>FIG. 4</figref>).</p>
+      <p id="p-00057-en" num="0057">The lens unit forms an object image with light condensed by the insertion part <b>2</b> onto an imaging surface of the image sensor <b>523</b>. The lens unit is movable in the optical axis direction.</p>
+      <p id="p-00058-en" num="0058">The driving motor moves the lens unit along the optical axis when any of switches <b>521</b>A to <b>521</b>D (<figref>FIGS. 2 and 3</figref>), provided to be exposed on the outer surface of the casing <b>521</b>, is pressed, thereby adjusting a focal distance and a focus of the lens unit.</p>
+      <p id="p-00059-en" num="0059">The image sensor <b>523</b> includes a charge coupled device (CCD) or a complementary metal oxide semiconductor (CMOS), a signal processing unit and the like. The CCD or CMOS receives light condensed by the lens unit and converts the light into the electrical signals. The signal processing unit performs signal processing on the electrical signals outputted by the CCD or CMOS, and outputs multiple pairs of differential signals (+) and differential signals (−).</p>
+      <p id="p-00060-en" num="0060">
+        <figref>FIG. 4</figref> is a perspective view, as viewed from the inside of the airtight part <b>52</b>, of the hermetic connector <b>522</b>. <figref>FIG. 5</figref> is a view, as viewed from the outside (side to which the composite cable <b>6</b> is connected) of the airtight part <b>52</b>, of the hermetic connector <b>522</b>.</p>
+      <p id="p-00061-en" num="0061">The hermetic connector <b>522</b>, being a member equivalent to a wire connection device (first connector) according to an embodiment of the present disclosure, is mounted on the base-end side (side to which the photoelectric composite module <b>9</b> is connected) of the casing <b>521</b> as shown in <figref>FIG. 3</figref>.</p>
+      <p id="p-00062-en" num="0062">This hermetic connector <b>522</b> is a round connector and includes a second outer frame <b>522</b>A, a plate body <b>522</b>B and multiple male contacts <b>522</b>C as shown in <figref>FIGS. 3 to 5</figref>.</p>
+      <p id="p-00063-en" num="0063">The second outer frame <b>522</b>A is made of a metal material and has a circular cylindrical shape. Note that the shape of the second outer frame <b>522</b>A is not limited to a circular cylindrical shape but may be any tubular shape. Specifically, the second outer frame <b>522</b>A may be a tubular body having another cross-sectional shape such as an ellipse, a quadrangle and a polygon.</p>
+      <p id="p-00064-en" num="0064">The plate body <b>522</b>B is made of a metal material and has a disc shape. The plate body <b>522</b>B closes the inside of the second outer frame <b>522</b>A.</p>
+      <p id="p-00065-en" num="0065">As shown in <figref>FIG. 5</figref>, multiple openings <b>522</b>B<b>1</b> through which the multiple male contacts <b>522</b>C are respectively inserted are formed in this plate body <b>522</b>B.</p>
+      <p id="p-00066-en" num="0066">Each of these multiple openings <b>522</b>B<b>1</b> has a round shape in a plan view. As shown in <figref>FIG. 5</figref>, with the multiple male contacts <b>522</b>C inserted through the multiple openings <b>522</b>B<b>1</b>, the multiple openings <b>522</b>B<b>1</b> are sealed by multiple insulating members <b>522</b>B<b>2</b> made of an insulating material (glass material in this embodiment) and each having a round shape, respectively.</p>
+      <p id="p-00067-en" num="0067">Each of the multiple male contacts <b>522</b>C has a columnar shape. The multiple male contacts <b>522</b>C are fitted to the plate body <b>522</b>B in the state where the male contacts <b>522</b>C are respectively inserted through the multiple openings <b>522</b>B<b>1</b> and insulated from one another by the multiple insulating members <b>522</b>B<b>2</b>.</p>
+      <p id="p-00068-en" num="0068">Hereinafter, among the multiple male contacts <b>522</b>C, the male contacts <b>522</b>C provided in a first area Ar<b>1</b> will be described as first male contacts <b>522</b>D while the male contacts <b>522</b>C provided in two second areas Ar<b>2</b> will be described as second male contacts <b>522</b>E. In <figref>FIGS. 4 and 5</figref>, the first area Ar<b>1</b> is indicated by the dashed line and the second areas Ar<b>2</b> are indicated by the two-dot chain line.</p>
+      <p id="p-00069-en" num="0069">Here, the first area Ar<b>1</b> is a band-shaped area in the second outer frame <b>522</b>A when viewed from the direction along a central axis Ax of the second outer frame <b>522</b>A. Specifically, the band-shaped area includes the central axis Ax and extends in a first direction (right-left direction in <figref>FIGS. 4 and 5</figref>) orthogonal to the central axis Ax. Meanwhile, the two second areas Ar<b>2</b> are areas other than the first area Ar<b>1</b> in the second outer frame <b>522</b>A. Each of the second areas Ar<b>2</b> extends in the first direction to be parallel to the first area Ar<b>1</b>.</p>
+      <p id="p-00070-en" num="0070">Each of the multiple first male contacts <b>522</b>D is a member equivalent to a contact according to an embodiment of the present disclosure. In the first area Ar<b>1</b>, the multiple first male contacts <b>522</b>D are arranged in two rows which are side by side in the up-down direction in <figref>FIG. 4</figref> so as to constitute part of an equilateral triangular lattice where the interval of mutually adjacent lattice points is fixed (so that the multiple first male contacts <b>522</b>D are respectively arranged at lattice points constituting part of the equilateral triangular lattice).</p>
+      <p id="p-00071-en" num="0071">More specifically, the multiple (six in this embodiment) first male contacts <b>522</b>D arranged side by side in the first row, which is the upper one, are arranged side by side at a first pitch P<b>1</b> (<figref>FIGS. 4 and 5</figref>). Similarly to the six first male contacts <b>522</b>D arranged side by side in the first row, the multiple (five in this embodiment) first male contacts <b>522</b>D arranged side by side in the second row, which is the lower one, are arranged side by side at the first pitch P<b>1</b>, too. In addition, each first male contact <b>522</b>D in the second row is arranged at a center position between the two first male contacts <b>522</b>D that are arranged side by side in the first row and that are adjacent to this first male contact <b>522</b>D in the second row, when viewed from the upper side of <figref>FIGS. 4 and 5</figref>.</p>
+      <p id="p-00072-en" num="0072">The multiple first male contacts <b>522</b>D as described above are contacts used for differential transmission. Hereinafter, among the multiple first male contacts <b>522</b>D, the first male contacts <b>522</b>D to which differential signals (+) are allocated will be described as male-side first differential contacts <b>522</b>F (<figref>FIG. 5</figref>). Meanwhile, among the multiple first male contacts <b>522</b>D, the first male contacts <b>522</b>D to which differential signals (−) are allocated will be described as male-side second differential contacts <b>522</b>G (<figref>FIG. 5</figref>). Furthermore, among the multiple first male contacts <b>522</b>D, the first male contacts <b>522</b>D to which ground is allocated will be described as male-side ground contacts <b>522</b>H (<figref>FIG. 5</figref>).</p>
+      <p id="p-00073-en" num="0073">Note that the arrangement (array) of the male-side first differential contacts <b>522</b>F, the male-side second differential contacts <b>522</b>G and the male-side ground contacts <b>522</b>H is similar to that of female-side first differential contacts <b>916</b>, female-side second differential contacts <b>917</b> and female-side ground contacts <b>918</b>, which constitute multiple first female contacts <b>914</b>. This arrangement will be described later.</p>
+      <p id="p-00074-en" num="0074">Here, the openings <b>522</b>B<b>1</b> are formed so that an opening area size (diameter) of each of the openings <b>522</b>B<b>1</b> through which the male-side first and second differential contacts <b>522</b>F and <b>522</b>G are inserted can be different from that of each of the openings <b>522</b>B<b>1</b> through which the male-side ground contacts <b>522</b>H are inserted, as shown in <figref>FIG. 5</figref>. In accordance with the corresponding openings <b>522</b>B<b>1</b>, the insulating members <b>522</b>B<b>2</b> are also formed in different sizes.</p>
+      <p id="p-00075-en" num="0075">Specifically, the openings <b>522</b>B<b>1</b> through which the male-side first and second differential contacts <b>522</b>F and <b>522</b>G are inserted are formed in the same opening area size (diameter). Meanwhile, the openings <b>522</b>B<b>1</b> through which the male-side ground contacts <b>522</b>H are inserted are formed in a smaller opening area size (diameter) than the openings <b>522</b>B<b>1</b> through which the male-side first and second differential contacts <b>522</b>F and <b>522</b>G are inserted.</p>
+      <p id="p-00076-en" num="0076">Note that the openings <b>522</b>B<b>1</b> through which the multiple second male contacts <b>522</b>E are inserted are formed in the same opening area size (diameter) as the openings <b>522</b>B<b>1</b> through which the male-side ground contacts <b>522</b>H are inserted, as shown in <figref>FIG. 5</figref>.</p>
+      <p id="p-00077-en" num="0077">In each of the second areas Ar<b>2</b>, the multiple second male contacts <b>522</b>E are arranged in two rows which are side by side in the up-down direction in <figref>FIG. 4</figref>.</p>
+      <p id="p-00078-en" num="0078">More specifically, in the lower one of the second areas Ar<b>2</b> in <figref>FIG. 4</figref>, the multiple second male contacts <b>522</b>E arranged side by side in the first row, which is the upper one, are arranged side by side at a second pitch P<b>2</b> (<figref>FIG. 4</figref>), which is smaller than the first pitch P<b>1</b>. Similarly to the multiple second male contacts <b>522</b>E arranged side by side in the first row, the multiple second male contacts <b>522</b>E arranged side by side in the second row, which is the lower one, are arranged side by side at the second pitch P<b>2</b>, too. In addition, each second male contact <b>522</b>E in the second row is arranged at a center position between the two second male contacts <b>522</b>E that are arranged side by side in the first row and that are adjacent to this second male contact <b>522</b>E in the second row, when viewed from the upper side of <figref>FIG. 4</figref>.</p>
+      <p id="p-00079-en" num="0079">The multiple second male contacts <b>522</b>E arranged in the upper one of the second areas Ar<b>2</b> in <figref>FIG. 4</figref> are arranged symmetrically to the multiple second male contacts <b>522</b>E arranged in the lower one of the second areas Ar<b>2</b> with respect to a plane passing through the central axis Ax and being parallel to the side-by-side arrangement direction of the second male contacts <b>522</b>E.</p>
+      <p id="p-00080-en" num="0080">As shown in <figref>FIG. 4</figref>, an airtight-part side printed circuit board <b>524</b>, which relays communication between (is electrically connected between) the multiple male contacts <b>522</b>C and the image sensor <b>523</b>, is mounted on the hermetic connector <b>522</b> at the side inside the airtight part <b>52</b>.</p>
+      <p id="p-00081-en" num="0081">The airtight-part side printed circuit board <b>524</b> relays, to the multiple first male contacts <b>522</b>D, imaging signals (multiple pairs of differential signals (+) and differential signals (−)) outputted by the image sensor <b>523</b>. In addition, the airtight-part side printed circuit board <b>524</b> relays, to the image sensor <b>523</b>, control signals and the like (electrical signals) outputted by the controller <b>8</b> through the composite cable <b>6</b>, the photoelectric composite module <b>9</b> and the multiple second male contacts <b>522</b>E.</p>
+      <heading id="h-00008-en" level="2">[Configuration of Photoelectric Composite Module]</heading>
+      <p id="p-00082-en" num="0082">
+        <figref>FIG. 6</figref> is a perspective view, as viewed from the front-end side (side to which the airtight part <b>52</b> is connected), of the photoelectric composite module <b>9</b>. <figref>FIG. 7</figref> is an exploded perspective view, as viewed from the base-end side (side to which the composite cable <b>6</b> is connected), of the internal structure of the photoelectric composite module <b>9</b>.</p>
+      <p id="p-00083-en" num="0083">The photoelectric composite module <b>9</b> is mechanically and electrically connected to the hermetic connector <b>522</b>. The photoelectric composite module <b>9</b> converts imaging signals (multiple pairs of differential signals (+) and differential signals (−)) outputted by the image sensor <b>523</b> into optical signals, and then outputs the optical signals to the composite cable <b>6</b> (multiple optical fibers <b>61</b>). In addition, the photoelectric composite module <b>9</b> relays, to the hermetic connector <b>522</b> (image sensor <b>523</b>), control signals and the like (electrical signals) outputted by the controller <b>8</b> through the multiple electrical signal cables <b>62</b>.</p>
+      <p id="p-00084-en" num="0084">As shown in <figref>FIGS. 6 and 7</figref>, the photoelectric composite module <b>9</b> includes a receptacle <b>91</b>, a first printed circuit board <b>92</b> (<figref>FIG. 7</figref>), two second printed circuit boards <b>93</b> (<figref>FIG. 7</figref>) and a covering member <b>94</b> (<figref>FIG. 6</figref>) which has a tubular shape and which covers the base-end side (side opposite to the side to which the hermetic connector <b>522</b> is connected) of the receptacle <b>91</b>.</p>
+      <heading id="h-00009-en" level="2">[Configuration of Receptacle]</heading>
+      <p id="p-00085-en" num="0085">
+        <figref>FIG. 8</figref> is a perspective view, as viewed from the base-end side (side where the first and second printed circuit boards <b>92</b> and <b>93</b> are arranged), of the receptacle <b>91</b>.</p>
+      <p id="p-00086-en" num="0086">The receptacle <b>91</b>, being a member equivalent to the wire connection device (second connector) according to an embodiment of the present disclosure, is a round connector mechanically and electrically connected to the hermetic connector <b>522</b>, and is provided at the front end of the photoelectric composite module <b>9</b>.</p>
+      <p id="p-00087-en" num="0087">As shown in <figref>FIG. 8</figref>, the receptacle <b>91</b> includes a first outer frame <b>911</b>, an insulator <b>912</b> and multiple female contacts <b>913</b>.</p>
+      <p id="p-00088-en" num="0088">The first outer frame <b>911</b> is made of a metal material and has a circular cylindrical shape. Note that the shape of the first outer frame <b>911</b> is not limited to a circular cylindrical shape but may be any tubular shape. Specifically, the first outer frame <b>911</b> may be a tubular body having another cross-sectional shape such as an ellipse, a quadrangle and a polygon.</p>
+      <p id="p-00089-en" num="0089">The insulator <b>912</b> is made of an insulating material and closes the inside of the first outer frame <b>911</b>.</p>
+      <p id="p-00090-en" num="0090">As shown in <figref>FIGS. 6 to 8</figref>, in the insulator <b>912</b>, there are formed multiple insertion holes <b>912</b>A into which the multiple male contacts <b>522</b>C of the hermetic connector <b>522</b> can be inserted when the hermetic connector <b>522</b> and the receptacle <b>91</b> are connected.</p>
+      <p id="p-00091-en" num="0091">Each of the multiple insertion holes <b>912</b>A is formed in a stepped shape as viewed from the direction along a central axis Ax′ of the first outer frame <b>911</b> (<figref>FIG. 8</figref>). Specifically, in a cross sectional view, the insertion hole <b>912</b>A has a round shape corresponding to the shape (columnar shape) of the male contact <b>522</b>C at the front-end side (side to which the hermetic connector <b>522</b> is connected) of the receptacle <b>91</b>, and, at the base-end side of the receptacle <b>91</b>, has a rectangular shape surrounding this front-end side portion.</p>
+      <heading id="h-00010-en" level="2">[Configuration of Female Contact]</heading>
+      <p id="p-00092-en" num="0092">As shown in <figref>FIG. 8</figref>, the multiple female contacts <b>913</b> are respectively provided in the multiple insertion holes <b>912</b>A at the base-end side. The multiple female contacts <b>913</b> are electrically connected to the multiple male contacts <b>522</b>C when the multiple male contacts <b>522</b>C of the hermetic connector <b>522</b> are inserted into the multiple insertion holes <b>912</b>A, respectively.</p>
+      <p id="p-00093-en" num="0093">
+        <figref>FIG. 9</figref> shows an array state of the multiple female contacts <b>913</b>.</p>
+      <p id="p-00094-en" num="0094">Hereinafter, among the multiple female contacts <b>913</b>, the female contacts <b>913</b> provided in a first area Ar<b>1</b>′ will be described as first female contacts <b>914</b> while the female contacts <b>913</b> provided in two second areas Ar<b>2</b>′ will be described as second female contacts <b>915</b>. In <figref>FIG. 9</figref>, the first area Ar<b>1</b>′ is indicated by the dashed line and the second areas Ar<b>2</b>′ are indicated by the two-dot chain line.</p>
+      <p id="p-00095-en" num="0095">Here, the first area Ar<b>1</b> facing the first area Ar<b>1</b> shown in <figref>FIGS. 4 and 5</figref>, is a band-shaped area in the first outer frame <b>911</b> when viewed from the direction along the central axis Ax′ (<figref>FIG. 9</figref>) of the first outer frame <b>911</b>. Specifically, the band-shaped area includes the central axis Ax′ and extends in a first direction (right-left direction in <figref>FIG. 9</figref>) orthogonal to the central axis Ax′. In other words, the first area Ar<b>1</b>′ is a radially extending band-shaped area including the central axis Ax′ when viewed from the direction along the central axis Ax′. Meanwhile, the two second areas Ar<b>2</b>′, facing the second areas Ar<b>2</b> shown in <figref>FIG. 4</figref>, are areas other than the first area Ar<b>1</b> in the first outer frame <b>911</b>. Each of the second areas Ar<b>2</b>′ extends in the first direction to be parallel to the first area Ar<b>1</b>′.</p>
+      <heading id="h-00011-en" level="2">[Configuration of First Female Contact]</heading>
+      <p id="p-00096-en" num="0096">The multiple first female contacts <b>914</b>, each of which is a member equivalent to a contact according to an embodiment of the present disclosure, are arrayed similarly to the multiple first male contacts <b>522</b>D. Specifically, in the first area Ar<b>1</b>′, the multiple first female contacts <b>914</b> are arranged in two rows (six in the first row, five in the second row) side by side in the up-down direction in <figref>FIG. 9</figref> so as to constitute part of an equilateral triangular lattice where the interval of mutually adjacent lattice points is fixed (so that the multiple first female contacts <b>914</b> (centroid positions of first contact portions <b>914</b>A described later) are respectively arranged at lattice points constituting part of the equilateral triangular lattice).</p>
+      <p id="p-00097-en" num="0097">The multiple first female contacts <b>914</b> have the same shape. Hereinafter, the shape of one of the first female contacts <b>914</b> will be described.</p>
+      <p id="p-00098-en" num="0098">As shown in <figref>FIGS. 8 and 9</figref>, the first female contact <b>914</b> includes the first contact portion <b>914</b>A and a first pin-shaped portion <b>914</b>B.</p>
+      <p id="p-00099-en" num="0099">The first contact portion <b>914</b>A, provided to the inside of the insertion hole <b>912</b>A, is formed in a substantially L shape when viewed from the direction along the central axis Ax′ so as to extend along the central axis Ax′.</p>
+      <p id="p-00100-en" num="0100">Specifically, the first contact portion <b>914</b>A includes a first sidewall portion <b>914</b>A<b>1</b> and a second sidewall portion <b>914</b>A<b>2</b>, as shown in <figref>FIG. 9</figref>. The first sidewall portion <b>914</b>A<b>1</b> has a plate shape and extends in the side-by-side arrangement direction of the first female contacts, when viewed from the direction along the central axis Ax′. The second sidewall portion <b>914</b>A<b>2</b> has a plate shape and extends orthogonally to the first sidewall portion <b>914</b>A<b>1</b>.</p>
+      <p id="p-00101-en" num="0101">When the male contacts <b>522</b>C are inserted into the insertion holes <b>912</b>A, the inner sides of each first sidewall portion <b>914</b>A<b>1</b> and each second sidewall portion <b>914</b>A<b>2</b> (inner side of the L shape) abut the outer periphery of the corresponding male contact <b>522</b>C, so that the first contact portion <b>914</b>A is electrically connected to the male contact <b>522</b>C.</p>
+      <p id="p-00102-en" num="0102">As shown in <figref>FIG. 8</figref>, the first pin-shaped portion <b>914</b>B protrudes while curving from the first sidewall portion <b>914</b>A<b>1</b> toward the base-end side (side where the first and second printed circuit boards <b>92</b> and <b>93</b> are arranged) of the receptacle <b>91</b>, and is formed elastically deformable in a leaf spring shape.</p>
+      <p id="p-00103-en" num="0103">
+        <figref>FIG. 10</figref> is a diagram for illustrating the arrangement of the multiple first female contacts <b>914</b>, and the allocation of signals and ground to the multiple first female contacts <b>914</b>. Specifically, <figref>FIG. 10</figref> is an enlarged view of the first area Ar<b>1</b>′ shown in <figref>FIG. 9</figref>. Note that, for convenience of explanation, <figref>FIG. 10</figref> shows only the first contact portions <b>914</b>A of the multiple first female contacts <b>914</b> (the first pin-shaped portions <b>914</b>B are cut away in <figref>FIG. 10</figref>). The letters of “+”, “−” and “G” added inside the L shapes of the first female contacts <b>914</b> respectively indicate allocation of a differential signal (+), a differential signal (−) and ground. In addition, each pair of the first female contacts <b>914</b> to which a pair of a differential signal (+) and a differential signal (−) is allocated is surrounded by the dashed line.</p>
+      <p id="p-00104-en" num="0104">In the first area Ar<b>1</b>′, each of the six first female contacts <b>914</b> arranged side by side in the first row, which is the upper one, is arranged so that the first sidewall portion <b>914</b>A<b>1</b> can be positioned in the upper inside of the insertion hole <b>912</b>A in <figref>FIGS. 9 and 10</figref>. Furthermore, the six first female contacts <b>914</b> arranged side by side in the first row are arranged so that a separation distance D (<figref>FIG. 10</figref>) between each two second sidewall portions <b>914</b>A<b>2</b> mutually adjacent in the side-by-side arrangement direction can be fixed. More specifically, each of the six first female contacts <b>914</b> arranged side by side in the first row is arranged so that the second sidewall portion <b>914</b>A<b>2</b> can be positioned on the right side (the side to the right in <figref>FIGS. 9 and 10</figref>) of the first sidewall portion <b>914</b>A<b>1</b>.</p>
+      <p id="p-00105-en" num="0105">Meanwhile, each of the five first female contacts <b>914</b> arranged side by side in the second row, which is the lower one, is arranged so that the first sidewall portion <b>914</b>A<b>1</b> can be positioned in the lower inside of the insertion hole <b>912</b>A. Furthermore, the five first female contacts <b>914</b> arranged side by side in the second row are arranged similarly to the first row so that the separation distance D between each two second sidewall portions <b>914</b>A<b>2</b> mutually adjacent in the side-by-side arrangement direction can be fixed. More specifically, each of the five first female contacts <b>914</b> arranged side by side in the second row is arranged so that the second sidewall portion <b>914</b>A<b>2</b> can be positioned on the left side (the side to the left in <figref>FIGS. 9 and 10</figref>) of the first sidewall portion <b>914</b>A<b>1</b>.</p>
+      <p id="p-00106-en" num="0106">To each of the multiple first female contacts <b>914</b> arranged as described above, either of a differential signal (+), a differential signal (−) and ground are allocated, as described later.</p>
+      <p id="p-00107-en" num="0107">Hereinafter, among the multiple first female contacts <b>914</b>, the first female contacts <b>914</b> to which differential signals (+) are allocated will be described as female-side first differential contacts <b>916</b> (<figref>FIG. 10</figref>). Among the multiple first female contacts <b>914</b>, the first female contacts <b>914</b> to which differential signals (−) are allocated will be described as female-side second differential contacts <b>917</b> (<figref>FIG. 10</figref>). Among the multiple first female contacts <b>914</b>, the first female contacts <b>914</b> to which ground is allocated will be described as female-side ground contacts <b>918</b> (<figref>FIG. 10</figref>).</p>
+      <p id="p-00108-en" num="0108">To the multiple first female contacts <b>914</b>, differential signals (+), differential signals (−) and ground are allocated so that the female-side first and second differential contacts <b>916</b> and <b>917</b> of each pair, which are surrounded by the dashed line in <figref>FIG. 10</figref>, can be adjacent to each other and so that the number of the female-side ground contacts <b>918</b> adjacent to the female-side first differential contact <b>916</b> of each pair can be equal to the number of the female-side ground contacts <b>918</b> adjacent to the female-side second differential contact <b>917</b> of the pair.</p>
+      <p id="p-00109-en" num="0109">Specifically, in <figref>FIG. 10</figref>, the female-side ground contacts <b>918</b> are the first female contacts <b>914</b> at the second and fifth positions from the left in the first row, which is the upper one, and the first female contact <b>914</b> at the third position from the left in the second row, which is the lower one.</p>
+      <p id="p-00110-en" num="0110">In addition, in <figref>FIG. 10</figref>, as to the pair of female-side first and second differential contacts <b>916</b> and <b>917</b> arranged leftmost, the female-side first differential contact <b>916</b> is at the leftmost position in the first row, which is the upper one, and the female-side second differential contact <b>917</b> is at the leftmost position in the second row, which is the lower one. Thus, each of the female-side first and second differential contacts <b>916</b> and <b>917</b> is adjacent to just one female-side ground contact <b>918</b>, that is, the female-side ground contact <b>918</b> at the second position from the left in the first row, which is the upper one, in <figref>FIG. 10</figref>.</p>
+      <p id="p-00111-en" num="0111">In addition, in <figref>FIG. 10</figref>, as to the pair of female-side first and second differential contacts <b>916</b> and <b>917</b> arranged at the second position from the left, the female-side first differential contact <b>916</b> is at the second position from the left in the second row, which is the lower one, and the female-side second differential contact <b>917</b> is at the third position from the left in the first row, which is the upper one. Thus, each of the female-side first and second differential contacts <b>916</b> and <b>917</b> is adjacent to two female-side ground contacts <b>918</b>, that is, the female-side ground contact <b>918</b> at the second position from the left in the first row, which is the upper one, and the female-side ground contact <b>918</b> at the third position from the left in the second row, which is the lower one, in <figref>FIG. 10</figref>.</p>
+      <p id="p-00112-en" num="0112">In addition, in <figref>FIG. 10</figref>, as to the pair of female-side first and second differential contacts <b>916</b> and <b>917</b> arranged at the third position from the left, the female-side first differential contact <b>916</b> is at the fourth position from the left in the first row, which is the upper one, and the female-side second differential contact <b>917</b> is at the fourth position from the left in the second row, which is the lower one. Thus, each of the female-side first and second differential contacts <b>916</b> and <b>917</b> is adjacent to two female-side ground contacts <b>918</b>, that is, the female-side ground contact <b>918</b> at the third position from the left in the second row, which is the lower one, and the female-side ground contact <b>918</b> at the fifth position from the left in the first row, which is the upper one, in <figref>FIG. 10</figref>.</p>
+      <p id="p-00113-en" num="0113">In addition, in <figref>FIG. 10</figref>, as to the pair of female-side first and second differential contacts <b>916</b> and <b>917</b> arranged rightmost, the female-side first differential contact <b>916</b> is at the rightmost position in the second row, which is the lower one, and the female-side second differential contact <b>917</b> is at the rightmost position in the first row, which is the upper one. Thus, each of the female-side first and second differential contacts <b>916</b> and <b>917</b> is adjacent to just one female-side ground contact <b>918</b>, that is, the female-side ground contact <b>918</b> at the fifth position from the left in the first row, which is the upper one, in <figref>FIG. 10</figref>.</p>
+      <p id="p-00114-en" num="0114">In other words, as to each of the multiple (“four” in this embodiment) pairs of female-side first and second differential contacts <b>916</b> and <b>917</b>, one of the differential contacts is arranged in the first row while the other one of the differential contacts is arranged in the second row.</p>
+      <p id="p-00115-en" num="0115">With the arrangement, the four pairs of female-side first and second differential contacts <b>916</b> and <b>917</b> exhibit a substantially W shape as shown in <figref>FIG. 10</figref>. In addition, the female-side first and second differential contacts <b>916</b> and <b>917</b> of each of the four pairs are arranged symmetrically with respect to the point O (<figref>FIG. 10</figref>) positioned at the center between the female-side first and second differential contacts <b>916</b> and <b>917</b> of the pair.</p>
+      <p id="p-00116-en" num="0116">Note that the arrangement of the multiple first male contacts <b>522</b>D (male-side first and second differential contacts <b>522</b>F and <b>522</b>G and ground contacts <b>522</b>H) is similar to that of the multiple first female contacts <b>914</b>.</p>
+      <heading id="h-00012-en" level="2">[Configuration of Second Female Contact]</heading>
+      <p id="p-00117-en" num="0117">The multiple second female contacts <b>915</b> are arranged similarly to the multiple second male contacts <b>522</b>E. In other words, in each of the second areas Ar<b>2</b>′, the multiple second female contacts <b>915</b> are arranged in two rows which are side by side in the up-down direction in <figref>FIG. 9</figref>. In addition, the multiple second female contacts <b>915</b> are arranged side by side at the second pitch P<b>2</b>.</p>
+      <p id="p-00118-en" num="0118">The multiple second female contacts <b>915</b> have the same shape. Hereinafter, the shape of one of the second female contacts <b>915</b> will be described.</p>
+      <p id="p-00119-en" num="0119">As shown in <figref>FIGS. 8 and 9</figref>, the second female contact <b>915</b> includes a main contact body <b>915</b>A and a second pin-shaped portion <b>915</b>B.</p>
+      <p id="p-00120-en" num="0120">The main contact body <b>915</b>A, provided to the inside of the insertion hole <b>912</b>A, is formed in a substantially U shape when viewed from the direction along the central axis Ax′ so as to extend along the central axis Ax′. When the male contacts <b>522</b>C are inserted into the insertion holes <b>912</b>A (see <figref>FIG. 6</figref>), the inner periphery of each U shape abuts the outer periphery of the corresponding male contact <b>522</b>C, so that the main contact body <b>915</b>A is electrically connected to the male contact <b>522</b>C.</p>
+      <p id="p-00121-en" num="0121">The second pin-shaped portion <b>915</b>B protrudes linearly along the central axis Ax′ from a base-end portion of the U shape of the main contact body <b>915</b>A toward the base-end side of the receptacle <b>91</b>.</p>
+      <p id="p-00122-en" num="0122">In addition, in <figref>FIG. 9</figref>, each of the multiple second female contacts <b>915</b> arranged in the upper one of the second areas Ar<b>2</b>′ is provided to the corresponding insertion hole <b>912</b>A so that the opening of the U shape of the main contact body <b>915</b>A can be directed upward. Meanwhile, each of the multiple second female contacts <b>915</b> arranged in the lower one of the second areas Ar<b>2</b>′ is provided to the corresponding insertion hole <b>912</b>A so that the opening of the U shape of the main contact body <b>915</b>A can be directed downward.</p>
+      <heading id="h-00013-en" level="2">[Configuration of First Printed Circuit Board]</heading>
+      <p id="p-00123-en" num="0123">The first printed circuit board <b>92</b> is formed of a rigid substrate on which a photoelectric conversion element <b>92</b>A for converting electrical signals into optical signals is mounted. The first printed circuit board <b>92</b> is electrically connected to the multiple first female contacts <b>914</b> of the receptacle <b>91</b>, and relays, to the photoelectric conversion element <b>92</b>A, imaging signals (differential signals (+) and differential signals (−)) outputted by the image sensor <b>523</b> through the airtight-part side printed circuit board <b>524</b>, the multiple first male contacts <b>522</b>D and the multiple first female contacts <b>914</b>.</p>
+      <p id="p-00124-en" num="0124">Here, as shown in <figref>FIG. 7</figref>, the multiple optical fibers <b>61</b> are connected to the photoelectric conversion element <b>92</b>A. In other words, the photoelectric conversion element <b>92</b>A converts imaging signals (differential signals (+) and differential signals (−)) into optical signals, and then outputs the optical signals to the multiple optical fibers <b>61</b>.</p>
+      <p id="p-00125-en" num="0125">As shown in <figref>FIG. 7</figref>, the first printed circuit board <b>92</b> is arranged along the central axis Ax′ to the base-end side of the receptacle <b>91</b>.</p>
+      <p id="p-00126-en" num="0126">Specifically, the first printed circuit board <b>92</b> is fitted to the receptacle <b>91</b> as described below.</p>
+      <p id="p-00127-en" num="0127">The first printed circuit board <b>92</b> is inserted between the first row, which is the upper one, of the multiple first female contacts <b>914</b> (first pin-shaped portions <b>914</b>B) and the second row, which is the lower one, of the multiple first female contacts <b>914</b> (first pin-shaped portions <b>914</b>B), in <figref>FIG. 7</figref>. In this state, the multiple first pin-shaped portions <b>914</b>B in the first and second rows hold the first printed circuit board <b>92</b> while elastically deformed by the pressing of the first printed circuit board <b>92</b>. In addition, the multiple first pin-shaped portions <b>914</b>B in the first and second rows are electrically connected to lands (not shown) formed on the front and back surfaces of the first printed circuit board <b>92</b>. The first pin-shaped portions <b>914</b>B are respectively soldered to the lands in the state, and thereby the first printed circuit board <b>92</b> is fitted to the receptacle <b>91</b>.</p>
+      <heading id="h-00014-en" level="2">[Configuration of Second Printed Circuit Board]</heading>
+      <p id="p-00128-en" num="0128">The two second printed circuit boards <b>93</b> are each formed of a flexible substrate, and relay, to the multiple second female contacts <b>915</b>, control signals and the like (electrical signals) outputted by the controller <b>8</b> through the multiple electrical signal cables <b>62</b>. The control signals and the like (electrical signals) relayed to the multiple second female contacts <b>915</b> are outputted to the image sensor <b>523</b> through the multiple second male contacts <b>522</b>E and the airtight-part side printed circuit board <b>524</b>.</p>
+      <p id="p-00129-en" num="0129">These two second printed circuit boards <b>93</b> have the same configuration. Hereinafter, one of the second printed circuit boards <b>93</b> will be described.</p>
+      <p id="p-00130-en" num="0130">As shown in <figref>FIG. 7</figref>, the second printed circuit board <b>93</b> includes a first contact part <b>931</b>, a second contact part <b>932</b> and an installation part <b>933</b>, installed between the first and second contact parts <b>931</b> and <b>932</b>.</p>
+      <p id="p-00131-en" num="0131">The first contact part <b>931</b> has a shape corresponding to one of the second areas Ar<b>2</b>′. Additionally, in the first contact part <b>931</b>, there are formed multiple holes <b>931</b>A (<figref>FIG. 7</figref>) respectively corresponding to the multiple second female contacts <b>915</b> (second pin-shaped portions <b>915</b>B) arranged in the second area Ar<b>2</b>′.</p>
+      <p id="p-00132-en" num="0132">The first contact part <b>931</b> is fitted to the receptacle <b>91</b>, by putting the first contact part <b>931</b> on the base-end side end surface of the insulator <b>912</b> with the second female contacts <b>915</b> inserted through the respective holes <b>931</b>A, and then by soldering the second pin-shaped portions <b>915</b>B to lands <b>931</b>B (<figref>FIG. 7</figref>) provided on the peripheries of the holes <b>931</b>A, respectively.</p>
+      <p id="p-00133-en" num="0133">The second contact part <b>93</b> is arranged at a position overlapping the first printed circuit board <b>92</b>, in <figref>FIG. 7</figref>, by bending the installation part <b>933</b> with respect to the first contact part <b>931</b> fitted to the receptacle <b>91</b>, as shown in <figref>FIG. 7</figref>.</p>
+      <p id="p-00134-en" num="0134">As shown in <figref>FIG. 7</figref>, on a surface of the second contact part <b>932</b>, there is formed multiple lands <b>932</b>A each having a substantially rectangular shape. The second contact part <b>932</b> is electrically connected to the multiple electrical signal cables <b>62</b> by soldering the multiple electrical signal cables <b>62</b> to the multiple land <b>932</b>A.</p>
+      <p id="p-00135-en" num="0135">In the receptacle <b>91</b> according to this embodiment, the multiple first female contacts <b>914</b> are arranged side by side in two rows when viewed from the direction along the central axis Ax′ of the first outer frame <b>911</b>. Consequently, an increase in width dimension in the side-by-side arrangement direction can be avoided as compared to the configuration in which the multiple first female contacts <b>914</b> are arranged side by side in a row.</p>
+      <p id="p-00136-en" num="0136">Furthermore, the multiple first female contacts <b>914</b> are arranged so that the female-side first and second differential contacts <b>916</b> and <b>917</b> of each pair can be adjacent to each other and so that the number of the female-side ground contacts <b>918</b> adjacent to the female-side first differential contact <b>916</b> of each pair can be equal to the number of the female-side ground contacts <b>918</b> adjacent to the female-side second differential contact <b>917</b> of the pair. Thus, the number of so-called ground guards for each differential signal can be fixed, and consequently signal deterioration can be prevented.</p>
+      <p id="p-00137-en" num="0137">Accordingly, the receptacle <b>91</b> according to this embodiment has an effect of preventing signal deterioration while achieving downsizing. Note that the hermetic connector <b>522</b> also has a similar effect.</p>
+      <p id="p-00138-en" num="0138">In addition, in the receptacle <b>91</b> according to this embodiment, the multiple first female contacts <b>914</b> are arranged so as to constitute part of an equilateral triangular lattice when viewed from the direction along the central axis Ax′ of the first outer frame <b>911</b>.</p>
+      <p id="p-00139-en" num="0139">Accordingly, the distances between each female-side ground contact <b>918</b> and its adjacent pair of female-side first and second differential contacts <b>916</b> and <b>917</b> are the same as each other. Thus, the balance between differential signals of each pair with respect to ground can be secured, and consequently signal deterioration can be further prevented. Note that the hermetic connector <b>522</b> also has a similar effect.</p>
+      <p id="p-00140-en" num="0140">In addition, in the receptacle <b>91</b> according to this embodiment, the four pairs of female-side first and second differential contacts <b>916</b> and <b>917</b> are arranged so as to exhibit a substantially W shape as viewed from the direction along the central axis Ax′ of the first outer frame <b>911</b>.</p>
+      <p id="p-00141-en" num="0141">Accordingly, the number of the female-side ground contacts <b>918</b> can be relatively small (three). Thus reducing the number of the female-side ground contacts <b>918</b> enables downsizing of the receptacle <b>91</b>. Note that the hermetic connector <b>522</b> also has a similar effect.</p>
+      <p id="p-00142-en" num="0142">Furthermore, in the receptacle <b>91</b> according to this embodiment, each of the multiple first female contacts <b>914</b> includes the first contact portion <b>914</b>A, which has the first and second sidewall portions <b>914</b>A<b>1</b> and <b>914</b>A<b>2</b> and which thus have an L shape as viewed from the direction along the central axis Ax′ of the first outer frame <b>911</b>. In addition, the multiple first female contacts <b>914</b> are arranged so that the separation distance D between each two second sidewall portions <b>914</b>A<b>2</b> mutually adjacent in the side-by-side arrangement direction can be fixed.</p>
+      <p id="p-00143-en" num="0143">Accordingly, a sufficiently large distance can be secured as the separation distance D between each two second sidewall portions <b>914</b>A<b>2</b> mutually adjacent in the side-by-side arrangement direction. In other words, a sufficiently large distance can be secured as the separation distance D between the second sidewall portions <b>914</b>A<b>2</b> of the female-side first and second differential contacts <b>916</b> and <b>917</b> of different pairs (the female-side second differential contact <b>917</b> at the leftmost position and the female-side first differential contact <b>916</b> at the second position from the left, in the second row, which is the lower one, in <figref>FIG. 10</figref>, for example). This enables reduction of a coupling degree (electric field interference) between a differential signal (+) and a differential signal (−) of different pairs, thus suppressing crosstalk and thereby even further preventing signal deterioration. In addition, forming each first contact portion <b>914</b>A in an L shape enables the first contact portion <b>914</b>A to maintain sufficient strength.</p>
+      <p id="p-00144-en" num="0144">In addition, in the receptacle <b>91</b> according to this embodiment, as to each of the four pairs of female-side first and second differential contacts <b>916</b> and <b>917</b>, one of the differential contacts is arranged in the first row, which is the upper one, while the other one of the differential contacts is arranged in the second row, which is the lower one, in <figref>FIG. 10</figref>. Additionally, the one differential contact and the other differential contact are arranged symmetrically with respect to the point O positioned at the center therebetween.</p>
+      <p id="p-00145-en" num="0145">Thus, the balance between differential signals of each pair with respect to the point O can be secured, and consequently signal deterioration can be further prevented.</p>
+      <p id="p-00146-en" num="0146">In a hermetic connector of related art, multiple openings through which multiple male contacts are inserted are all formed in the same opening area size (diameter) in a plate body. Accordingly, insulating members respectively sealing the multiple openings are also formed in the same size.</p>
+      <p id="p-00147-en" num="0147">Here, in raising the frequencies of differential signals, the opening area size (diameter) of the multiple openings has to be increased in order to secure an insulation distance between the plate body and each male contact.</p>
+      <p id="p-00148-en" num="0148">Thus, in the hermetic connector of related art, the opening area size (diameter) of all the openings has to be increased so as to be compatible with the above case. This consequently increases the area size occupied by all the openings (insulating members) in the plate body, thus increasing the outer diameter size of the hermetic connector.</p>
+      <p id="p-00149-en" num="0149">On the other hand, in this embodiment, the openings <b>522</b>B <b>1</b> through which the male-side first and second differential contacts <b>522</b>F and <b>522</b>G are inserted are formed in the same opening area size (diameter) that is larger than the opening area size (diameter) of the openings <b>522</b>B<b>1</b> through which the male-side ground contacts <b>522</b>H are inserted, in the plate body <b>522</b>B. In addition, each of the insulating members <b>522</b>B<b>2</b> is formed in a size in accordance with the opening area size (diameter) of the corresponding one of the openings <b>522</b>B<b>1</b>.</p>
+      <p id="p-00150-en" num="0150">In other words, in this embodiment, only the minimum insulation distance that may be necessary to be compatible with the case of raising the frequencies of differential signals is secured between the plate body <b>522</b>B and each of the male-side first and second differential contacts <b>522</b>F and <b>522</b>G. Thus, by minimizing the opening area size (diameter) of each of the openings <b>522</b>B <b>1</b> through which the male-side ground contacts <b>522</b>H and the second male contacts <b>522</b>E are inserted as much as possible, the area size occupied by all the openings <b>522</b>B<b>1</b> (insulating members <b>522</b>B<b>2</b>) in the plate body <b>522</b>B is minimized as much as possible. Consequently, diameter reduction (downsizing) of the hermetic connector <b>522</b> can be achieved.</p>
+      <heading id="h-00015-en" level="1">Other Embodiments</heading>
+      <p id="p-00151-en" num="0151">Heretofore, the embodiment for carrying out the present disclosure has been described, but the present disclosure should not be limited only to the embodiment.</p>
+      <p id="p-00152-en" num="0152">In the embodiment, the number of the first female contacts <b>914</b> (first male contacts <b>522</b>D) is not limited to the number (eleven) described in the embodiment.</p>
+      <p id="p-00153-en" num="0153">
+        <figref>FIG. 11</figref> shows a modification of the embodiment according to the present disclosure. Specifically, <figref>FIG. 11</figref> shows the first female contacts <b>914</b> (first male contacts <b>522</b>D) as viewed from the direction along the central axis Ax′ (central axis Ax) of the first outer frame <b>911</b> (second outer frame <b>522</b>A).</p>
+      <p id="p-00154-en" num="0154">Note that, in <figref>FIG. 11</figref>, each of the first female contacts <b>914</b> (first male contacts <b>522</b>D) is indicated virtually by “◯,” for convenience of explanation. The letters of “+”, “−” and “G” added inside the “◯” respectively indicate allocation of a differential signal (+), a differential signal (−) and ground. In addition, each pair of the first female contacts <b>914</b> (first male contacts <b>522</b>D) to which a pair of a differential signal (+) and a differential signal (−) is allocated is surrounded by the dashed line.</p>
+      <p id="p-00155-en" num="0155">The number of the first female contacts <b>914</b> (first male contacts <b>522</b>D) may be fourteen, as shown in <figref>FIG. 11</figref>. Even in such a case, the fourteen first female contacts <b>914</b> (first male contacts <b>522</b>D) are preferably arranged side by side in two rows so as to constitute part of an equilateral triangular lattice, as similar to the embodiment.</p>
+      <p id="p-00156-en" num="0156">Specifically, in <figref>FIG. 11</figref>, the seven first female contacts <b>914</b> (first male contacts <b>522</b>D) in the first row, which is the upper one, are arranged side by side in the following order from left to right in <figref>FIG. 11</figref>: a pair of female-side first and second differential contacts <b>916</b> and <b>917</b> (male-side first and second differential contacts <b>522</b>F and <b>522</b>G), the female-side ground contact <b>918</b> (male-side ground contact <b>522</b>H), a pair of female-side first and second differential contacts <b>916</b> and <b>917</b> (male-side first and second differential contacts <b>522</b>F and <b>522</b>G), the female-side ground contact <b>918</b> (male-side ground contacts <b>522</b>H) and the female-side ground contacts <b>918</b> (male-side ground contact <b>522</b>H). Meanwhile, the seven first female contacts <b>914</b> (first male contacts <b>522</b>D) in the second row, which is the lower one, are arranged side by side in the following order from left to right in <figref>FIG. 11</figref>: the female-side ground contact <b>918</b> (male-side ground contact <b>522</b>H), the female-side ground contact <b>918</b> (male-side ground contact <b>522</b>H), a pair of female-side first and second differential contacts <b>916</b> and <b>917</b> (male-side first and second differential contacts <b>522</b>F and <b>522</b>G), the female-side ground contact <b>918</b> (male-side ground contact <b>522</b>H) and a pair of female-side first and second differential contacts <b>916</b> and <b>917</b> (male-side first and second differential contacts <b>522</b>F and <b>522</b>G).</p>
+      <p id="p-00157-en" num="0157">Thus, each of the four pairs of female-side first and second differential contacts <b>916</b> and <b>917</b> (male-side first and second differential contacts <b>522</b>F and <b>522</b>G) is arranged either in the first row or in the second row.</p>
+      <p id="p-00158-en" num="0158">In the embodiment, there may be employed a contact portion (second contact portion <b>914</b>A′ and third contact portion <b>914</b>A″, described below, for example) having another shape different from that of the first contact portion <b>914</b>A.</p>
+      <p id="p-00159-en" num="0159">
+        <figref>FIGS. 12 and 13</figref> show modifications of the embodiment according to the present disclosure. Specifically, each of <figref>FIGS. 12 and 13</figref> is a diagram corresponding to <figref>FIG. 10</figref>.</p>
+      <p id="p-00160-en" num="0160">For example, as shown in <figref>FIG. 12</figref>, there may be employed second contact portions <b>914</b>A′ each having a plate shape obtained by omitting the second sidewall portion <b>914</b>A<b>2</b> from the first contact portion <b>914</b>A described in the embodiment. Even this configuration still enables reduction of a coupling degree (electric field interference) between a differential signal (+) and a differential signal (−) of different pairs, and thus suppresses crosstalk, thereby preventing signal deterioration.</p>
+      <p id="p-00161-en" num="0161">Furthermore, as shown in <figref>FIG. 13</figref>, there may be employed third contact portions <b>914</b>A″ each having a U shape obtained by adding a third sidewall portion <b>914</b>A<b>3</b>, facing the second sidewall portion <b>914</b>A<b>2</b>, to the first contact portion <b>914</b>A described in the embodiment, for example. This configuration enables the third contact portions <b>914</b>A″ to have an increased strength.</p>
+      <p id="p-00162-en" num="0162">In the embodiment, the female-side ground contact <b>918</b> at the third position from the left in the second row, which is the lower one, <figref>FIG. 10</figref> may be omitted. Note that this is also applicable to the hermetic connector <b>522</b> and the configurations shown in <figref>FIGS. 12 and 13</figref>. When such a configuration is employed, the number of ground guards between the female-side first and second differential contacts <b>916</b> and <b>917</b> is fixed to one. Thus, the number of the female-side ground contacts <b>918</b> can be minimized as much as possible, and thereby the receptacle <b>91</b> can be downsized.</p>
+      <p id="p-00163-en" num="0163">In the embodiment, still another configuration may be employed where the receptacle <b>91</b> is omitted and where, instead, the first and second printed circuit boards <b>92</b> and <b>93</b> are connected directly, from outside of the airtight part <b>52</b>, to the hermetic connector <b>522</b> mounted on the base-end side of the airtight part <b>52</b>. In this case, each of the multiple male contacts <b>522</b>C of the hermetic connector <b>522</b> is preferably formed in a shape similar to the first pin-shaped portions <b>914</b>B of the receptacle <b>91</b> (elastically deformable in a leaf spring shape) in consideration of fitting work of the first printed circuit board <b>92</b>.</p>
+      <p id="p-00164-en" num="0164">In the embodiment, as the wire connection devices according to an embodiment of the present disclosure, round connectors (receptacle <b>91</b> and hermetic connector <b>522</b>) are employed, but connectors each having a non-round shape may be employed. When connectors each having a non-round shape is employed, a first printed circuit board may be arranged at a position other than a center position of each connector (center position when viewed from the direction along the central axis of the connector) as long as a pitch of multiple contacts electrically connected to the first printed circuit board can be secured sufficiently large.</p>
+      <p id="p-00165-en" num="0165">In the embodiment, the pitch (second pitch P<b>2</b>) of the multiple second female contacts <b>915</b> is set smaller than the pitch (first pitch P<b>1</b>) of the multiple first female contacts <b>914</b>, but the pitch length is not limited thereto. The pitch of the multiple second female contacts <b>915</b> may set to larger than that of the multiple first female contacts <b>914</b>.</p>
+      <p id="p-00166-en" num="0166">The endoscopic device <b>1</b> according to the embodiment may be used not only in medical fields but also in industrial fields, specifically, used as an endoscopic device for observing the interior of an observation object such as a machine structure.</p>
+      <p id="p-00167-en" num="0167">It should be understood by those skilled in the art that various modifications, combinations, sub-combinations and alterations may occur depending on design requirements and other factors insofar as they are within the scope of the appended claims or the equivalents thereof.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A wire connection device comprising:
+<claim-text>an outer frame that has a tubular shape; and</claim-text><claim-text>a plurality of contacts that are provided in the outer frame, and that have
+<claim-text>a plurality of pairs of differential contacts to which a plurality of pairs of differential signals are respectively allocated, and</claim-text><claim-text>a plurality of ground contacts each to which ground is allocated,</claim-text></claim-text><claim-text>wherein, when viewed from a direction along a central axis of the outer frame, the plurality of contacts are arranged side by side in two rows in a manner that the differential contacts of each pair can be adjacent to each other and in a manner that the number of the ground contacts adjacent to one of the differential contacts of each pair is equal to the number of the ground contacts adjacent to the other one of the differential contacts of the pair.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The wire connection device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein, when viewed from the direction along the central axis of the outer frame, the plurality of contacts are arranged so as to constitute part of an equilateral triangular lattice where intervals of mutually adjacent lattice points are identical.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The wire connection device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the plurality of pairs of differential contacts are arranged in a manner that one of the differential contacts of each pair is arranged in a first row of the two rows while the other one of the differential contacts of the pair is arranged in a second row of the two rows.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The wire connection device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the plurality of pairs of differential contacts are arranged in a manner that both the differential contacts of each pair are arranged in either of a first row and a second row of the two rows.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The wire connection device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>,
+<claim-text>wherein, when viewed from the direction along the central axis of the outer frame, each of the plurality of contacts is formed of a female contact including
+<claim-text>a first contact portion that has an L shape and that has
+<claim-text>a first sidewall portion extending in a side-by-side arrangement direction of either of a first row and a second row of the two rows, and</claim-text><claim-text>a second sidewall portion crossing the first sidewall portion, and</claim-text></claim-text></claim-text><claim-text>wherein the plurality of contacts are arranged in a manner that separation distances between each two of the second sidewall portions mutually adjacent in the side-by-side arrangement direction are identical.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The wire connection device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein each of the plurality of contacts is formed of a female contact including
+<claim-text>a second contact portion that has a plate shape extending in a side-by-side arrangement direction of either of a first row and a second row of the two rows.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The wire connection device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein, when viewed from the direction along the central axis of the outer frame, each of the plurality of contacts is formed of a female contact including
+<claim-text>a third contact portion that has a U shape and that has
+<claim-text>a base portion extending in a side-by-side arrangement direction of either of a first row and a second row of the two rows, and</claim-text><claim-text>a pair of third sidewall portions erecting from the base portion and facing to each other in the side-by-side arrangement direction.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The wire connection device according to <claim-ref idref="clm-00005-en">claim 5</claim-ref>,
+<claim-text>wherein the plurality of pairs of differential contacts are arranged in a manner that one of the differential contacts of each pair is arranged in the first row while the other one of the differential contacts of the pair is arranged in the second row, and</claim-text><claim-text>wherein the one differential contact and the other differential contact are arranged symmetrically with respect to a point positioned at a center between the one differential contact and the other differential contact.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The wire connection device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein, when viewed from the direction along the central axis of the outer frame, the plurality of contacts are arranged in a manner that the number of the ground contacts adjacent to one of the differential contacts of each pair and the number of the ground contacts adjacent to the other one of the differential contacts of the pair are set to one.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A camera head used in an endoscope, the camera head comprising:
+<claim-text>the wire connection device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, and</claim-text><claim-text>an image sensor electrically connected to the plurality of contacts.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The camera head according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the wire connection device is formed of two connectors mechanically and electrically connected to each other, the connectors being a first connector and a second connector.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. An endoscopic device comprising:
+<claim-text>the camera head according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150250378A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150250378A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150250378A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250378A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150250378A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250378A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150250378A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250378A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150250378A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250378A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150250378A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250378A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150250378A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250378A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150250378A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250378A1-20150910-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150250378A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250378A1-20150910-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150250378A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250378A1-20150910-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150250378A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250378A1-20150910-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150250378A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250378A1-20150910-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150250378A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250378A1-20150910-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150250378A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250378A1-20150910-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150250378A1_00015.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150250378A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150250378A1.PDF" type="pdf" size="889880" pages="24" />
+</lexisnexis-patent-document>

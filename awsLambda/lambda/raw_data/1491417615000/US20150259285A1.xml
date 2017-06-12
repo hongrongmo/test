@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259285A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030127" date-changed="20151002" time-changed="033528">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314659">
+        <country>US</country>
+        <doc-number>20150259285</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14428153</doc-number>
+        <date>20130912</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="regional">
+        <country>EP</country>
+        <doc-number>12184689</doc-number>
+        <date>20120917</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>C07D 207/34        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>207</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>C07D 207/34        20130101 FI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>207</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C07D 319/06        20130101 LI20140324BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>319</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140324</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">PROCESS TO PRODUCE ATORVASTATIN INTERMEDIATES</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>DSM SINOCHEM PHARMACEUTICALS NETHERLANDS B.V.</orgname>
+            <address>
+              <city>Delft</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>NL</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>De Lange</last-name>
+            <first-name>Ben</first-name>
+            <address>
+              <city>Echt</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Heemskerk</last-name>
+            <first-name>Dennis</first-name>
+            <address>
+              <city>Echt</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Elsenberg</last-name>
+            <first-name>Henricus Leonardus Marie</first-name>
+            <address>
+              <city>Echt</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13068886</doc-number>
+        <date>20130912</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014041058</doc-number>
+        <date>20140320</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20160121">
+      <main-family family-id="164800796">
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>1444DELNP2015</doc-number>
+            <kind>A</kind>
+            <date>20150703</date>
+          </document-id>
+          <application-date>
+            <date>20150220</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IL</country>
+            <doc-number>237335</doc-number>
+            <kind>D0</kind>
+            <date>20150430</date>
+          </document-id>
+          <application-date>
+            <date>20150219</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2895459</doc-number>
+            <kind>A1</kind>
+            <date>20150722</date>
+          </document-id>
+          <application-date>
+            <date>20130912</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IL</country>
+            <doc-number>237335</doc-number>
+            <kind>A</kind>
+            <date>20150430</date>
+          </document-id>
+          <application-date>
+            <date>20150219</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2015003311</doc-number>
+            <kind>A</kind>
+            <date>20150714</date>
+          </document-id>
+          <application-date>
+            <date>20130912</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014041058</doc-number>
+            <kind>A1</kind>
+            <date>20140320</date>
+          </document-id>
+          <application-date>
+            <date>20130912</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104619685</doc-number>
+            <kind>A</kind>
+            <date>20150513</date>
+          </document-id>
+          <application-date>
+            <date>20130912</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259285</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130912</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164800795">
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>1444DELNP2015</doc-number>
+            <kind>A</kind>
+            <date>20150703</date>
+          </document-id>
+          <application-date>
+            <date>20150220</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IL</country>
+            <doc-number>237335</doc-number>
+            <kind>D0</kind>
+            <date>20150430</date>
+          </document-id>
+          <application-date>
+            <date>20150219</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2895459</doc-number>
+            <kind>A1</kind>
+            <date>20150722</date>
+          </document-id>
+          <application-date>
+            <date>20130912</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IL</country>
+            <doc-number>237335</doc-number>
+            <kind>A</kind>
+            <date>20150430</date>
+          </document-id>
+          <application-date>
+            <date>20150219</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2015003311</doc-number>
+            <kind>A</kind>
+            <date>20150714</date>
+          </document-id>
+          <application-date>
+            <date>20130912</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014041058</doc-number>
+            <kind>A1</kind>
+            <date>20140320</date>
+          </document-id>
+          <application-date>
+            <date>20130912</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104619685</doc-number>
+            <kind>A</kind>
+            <date>20150513</date>
+          </document-id>
+          <application-date>
+            <date>20130912</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259285</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130912</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The invention provides a process for the production of 1 a compound of formula (I), said process comprising reacting a compound of formula (II), with a compound of formula (III), wherein R1 and R2 may be the same or different and are selected from H; a C1-C6 alkyl which may be straight or branched, substituted or unsubstituted; or R1 and R2 together represent an alkylidene group of the formula CRaRb wherein Ra and Rb may be the same or different and are selected from an alkyl group having between 1 and 6 atoms, and wherein R3 represents a C1-C6 alkyl group, wherein the reaction is carried out in the presence of a base. Using a base may advantageously allow a lower temperature and/or may result in a higher yield. Also, a phase separation step may be omitted.</p>
+    <p id="p-a-00002-en" num="0000">
+      <chemistry id="chema-00001-en" num="00001">
+        <img id="imga-00001-en" he="108.12mm" wi="76.03mm" alt="embedded image" img-content="chem" file="US20150259285A1_00001.PNG" img-format="png" original="US20150259285A1-20150917-C00001.TIF" />
+      </chemistry>
+    </p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150313</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259285A1</docdb-publication-number>
+      <docdb-application-id>444514177</docdb-application-id>
+      <new-owner>DSM SINOCHEM PHARMACEUTICALS NETHERLANDS B.V., NET</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:DE LANGE, BEN;HEEMSKERK, DENNIS;ELSENBERG, HENRICUS LEONARDUS MARIE;SIGNING DATES FROM 20150227 TO 20150305;REEL/FRAME:035163/0082</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">c.</p>
+      <p id="p-00002-en" num="0000">
+        <chemistry id="chem-00001-en" num="00002">
+          <img id="img-00001-en" he="34.63mm" wi="76.03mm" alt="embedded image" img-content="chem" file="US20150259285A1_00002.PNG" img-format="png" original="US20150259285A1-20150917-C00002.TIF" />
+        </chemistry>
+      </p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0002">Atorvastatin ([R-(R*,R*)]-2-(4-fluorophenyl)-β,δ-dihydroxy-5-(1-methylethyl)-3-phenyl-4-[(phenylamino)carbonyl]-1H-pyrrole-1-heptanoic acid hemi calcium salt, (formula IV) is a pharmaceutical ingredient useful as an inhibitor of the enzyme 3-hydroxy-3-methylglutaryl-coenzyme A reductase (HMG-CoA reductase) and thus useful as a hypolipidemic and hypocholesterolemic agent.</p>
+      <p id="p-00004-en" num="0003">Atorvastatin may be produced via the intermediate of formula I, which may be produced in a Paal-Knorr type condensation reaction involving reacting a compound of formula II</p>
+      <p id="p-00005-en" num="0000">
+        <chemistry id="chem-00002-en" num="00003">
+          <img id="img-00002-en" he="31.33mm" wi="66.38mm" alt="embedded image" img-content="chem" file="US20150259285A1_00003.PNG" img-format="png" original="US20150259285A1-20150917-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00006-en" num="0000">and a compound of formula III</p>
+      <p id="p-00007-en" num="0000">
+        <chemistry id="chem-00003-en" num="00004">
+          <img id="img-00003-en" he="13.80mm" wi="63.25mm" alt="embedded image" img-content="chem" file="US20150259285A1_00004.PNG" img-format="png" original="US20150259285A1-20150917-C00004.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00008-en" num="0000">wherein R1 and R2 may be the same or different and are selected from H; a C1-C6 alkyl which may be straight or branched, substituted or unsubstituted; or R1 and R2 together represent an alkylidene group of the formula CRaRb wherein Ra and Rb may be the same or different and are selected from an alkyl group having between 1 and 6 atoms, and wherein R3 represents a C1-C6 alkyl group.</p>
+      <p id="p-00009-en" num="0004">Such reaction is described in WO2006097909. A disadvantage of said reaction is that the yield is insufficient. Another disadvantage is that the reaction temperature is too high.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00003-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00010-en" num="0005">Therefore, the invention provides a process for the production of a compound of formula I,</p>
+      <p id="p-00011-en" num="0000">
+        <chemistry id="chem-00004-en" num="00005">
+          <img id="img-00004-en" he="34.63mm" wi="76.03mm" alt="embedded image" img-content="chem" file="US20150259285A1_00005.PNG" img-format="png" original="US20150259285A1-20150917-C00005.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00012-en" num="0000">said process comprising reacting a compound of formula II</p>
+      <p id="p-00013-en" num="0000">
+        <chemistry id="chem-00005-en" num="00006">
+          <img id="img-00005-en" he="31.33mm" wi="66.38mm" alt="embedded image" img-content="chem" file="US20150259285A1_00006.PNG" img-format="png" original="US20150259285A1-20150917-C00006.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00014-en" num="0000">with a compound of formula III</p>
+      <p id="p-00015-en" num="0000">
+        <chemistry id="chem-00006-en" num="00007">
+          <img id="img-00006-en" he="13.80mm" wi="63.25mm" alt="embedded image" img-content="chem" file="US20150259285A1_00007.PNG" img-format="png" original="US20150259285A1-20150917-C00007.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00016-en" num="0000">wherein R1 and R2 may be the same or different and are selected from H; a C1-C6 alkyl which may be straight or branched, substituted or unsubstituted; or R1 and R2 together represent an alkylidene group of the formula CRaRb wherein Ra and Rb may be the same or different and are selected from an alkyl group having between 1 and 6 atoms, preferably Ra and Rb are methyl or form a cyclohexyl or cyclopentyl, group, most preferably Ra and Rb are methyl, and wherein R3 represents a C1-C6 alkyl group, preferably R3 is isopropyl, 2-butyl, cyclohexyl or tert-butyl, most preferably isopropyl, wherein said reaction is carried out in the presence of a base.</p>
+      <p id="p-00017-en" num="0006">The reaction of the invention is known to the skilled person as a Paal-Knorr condensation type reaction.</p>
+      <p id="p-00018-en" num="0007">The inventors have surprisingly found that using a base may allow for a lower reaction temperature and/or may result in a higher yield. Also, a phase separation step may be omitted.</p>
+      <p id="p-00019-en" num="0008">The base may be added to the process in any order. For example it may be added together with the other reactants.</p>
+      <p id="p-00020-en" num="0009">The base may comprise a secondary amine. The skilled person would not be motivated a secondary amine to include in the process because secondary amines can react with ketone functional groups which are present in the compound of formula II and lead to unwanted side-products. Bases which can be used include cyclic or non-cyclic secondary aliphatic, aromatic or heteroaromatic amines such as diethylamine, piperidine, morpholine and di-isopropyl amine. A preferred base comprises di-isopropyl amine.</p>
+      <p id="p-00021-en" num="0010">The compound of formula II may comprise 2-[2-(4-fluorophenyl)-2-oxo-1-phenylethyl]-4-methyl-3-oxopentanoic acid phenylamide.</p>
+      <p id="p-00022-en" num="0011">The compound of formula III may comprise an amine (i.e. as a free amine) or an organic or inorganic acid thereof, or mixtures thereof. Said compound may comprise an organic acid salt or inorganic acid salt of (4R, 6R)-1,3-dioxane-4-acetic acid, 6-(2-aminomethyl)-2,2-dimethyl-,1-methylethylester. Preferably the compound of formula III comprises an organic acid salt, more preferably pivalic acid salt.</p>
+      <p id="p-00023-en" num="0012">The reaction temperature and reaction time are such that the compound of formula I is produced. Suitable reaction temperatures may be between 50 and 100° C., preferably they range between 55 and 75° C., more preferably between 60 and 70° C. The temperature is preferably 95° C. or less, more preferably 90° C. or less, 85° C. or less, even more preferably 80° C. or less, most preferably it is 75° C. or less. The reaction time is less critical and may range e.g. between 10 and 100 hrs. Generally, at higher temperatures the reaction will proceed faster, whilst lower reaction times require longer reaction times. The skilled person can easily monitor the formation of the compound of formula I during the reaction, for example by HPLC, in order to determine when the reaction is completed.</p>
+      <p id="p-00024-en" num="0013">The reaction may be carried out in the presence of cyclohexane and/or N-methyl-pyrrolidone. Adding cyclohexane and/or N-methyl-pyrrolidone may results in a higher yield and/or may shorten the reaction time and/or facilitate the isolation,</p>
+      <p id="p-00025-en" num="0014">The reaction may be carried out at a reduced pressure, i.e. below atmospheric pressure. Carrying out the reaction at reduced pressure may result in an even further increase of the yield and or reduction in reaction time. Preferably the reaction pressure is between 500-700 Torr, even more preferably between 600-650 Torr, preferably the reaction is carried out under vacuum. Torr is the generally accepted unit of pressure used in industrial processes and is well known to the person skilled in the art. The conversion is such that 100,000 Pa corresponds to 750.06 torr.</p>
+      <p id="p-00026-en" num="0015">The process of the invention is particularly suitable for the production of the atorvastatin intermediate ((4R,6R)-6-(2-(3-(phenylcarbamoyl)-5-(4-fluorophenyl)-2-isopropyl-4-phenyl-1H-pyrrol-1-yl)ethyl)-2,2-dimethyl-1,3-dioxan-4-yl)acetic acid 1-methylethyl ester if the compound of formula II is an ester of 2-[2-(4-fluorophenyl)-2-oxo-1-phenylethyl]-4-methyl-3-oxopentanoic acid phenylamide and if the compound of formula III is an organic acid salt or inorganic acid salt of (4R, 6R)-1,3-dioxane-4-acetic acid, 6-(2-aminomethyl)-2,2-dimethyl-,1-methylethylester. The atorvastatin intermediate can be used to produce atorvastatin hemi calcium salt. The intermediate may be isolated before it is converted to atorvastatin. The skilled person knows how to isolate said intermediate. For example, the isolation may include phase separation, for example using cyclohexane phase, precipitation, washing, e.g. using water/2-propanol, filtration etc.</p>
+      <p id="p-00027-en" num="0016">The invention further provides a process to produce atorvastatin hemi calcium salt of formula IV,</p>
+      <p id="p-00028-en" num="0000">
+        <chemistry id="chem-00007-en" num="00008">
+          <img id="img-00007-en" he="33.19mm" wi="76.12mm" alt="embedded image" img-content="chem" file="US20150259285A1_00008.PNG" img-format="png" original="US20150259285A1-20150917-C00008.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00029-en" num="0000">said process comprising the steps of:</p>
+      <p id="p-00030-en" num="0017">(a) treating a solution of the atorvastatin intermediate produced in the process of the invention in a first solvent with an acid;</p>
+      <p id="p-00031-en" num="0018">(b) treating the mixture obtained in step (a) with an alkali metal hydroxide;</p>
+      <p id="p-00032-en" num="0019">(c) treating the mixture obtained in step (b) with a calcium salt or with calcium hydroxide.</p>
+      <p id="p-00033-en" num="0020">The following examples are for illustrative purposes only and are not to be construed as limiting the invention.</p>
+      <heading id="h-00004-en" level="1">EXAMPLES</heading>
+      <heading id="h-00005-en" level="1">Comparative Example A</heading>
+      <heading id="h-00006-en" level="1">Preparation of 2-((4R, 6R)-6-(2-(3-(phenylcarbamoyl)-5-(4-fluorophenyl)-2-isopropyl-4-phenyl-1H-pyrrol-1-yl)ethyl)-2,2-dimethyl-1,3-dioxan-4-yl)acetic  acid 1-methylethyl  ester from the pivalic acid salt of (4R, 6R)-1,3-dioxane-4-acetic acid, 6-(2-aminomethyl)-2,2-dimethyl-,1-methylethylester  and 2-[2-(4-fluorophenyl)-2-oxo-1-phenylethyl]-4-methyl-3-oxopentanoic  acid phenylamide (DKT)</heading>
+      <p id="p-00034-en" num="0021">A reactor was charged with cyclohexane (800 mL), DKT (121 g, 0.29 mol), the pivalic acid salt of (4R, 6R)-1,3-dioxane-4-acetic acid, 6-(2-aminomethyl)-2,2-dimethyl-1-methylethylester (100 g, 0.28 mol) and N-methyl-pyrrolidone (50 mL). The reaction mixture was heated to reflux under azeotropic water removal for 48 h at 80-82° C. After cooling to 50-55° C., 10% aqueous NaHCO<sub>3 </sub>(400 mL) was added and the reaction mixture stirred for 15 minutes. The phases were separated and the cyclohexane phase washed again with 10% aqueous NaHCO<sub>3 </sub>(2×400 mL). The cyclohexane phase was then washed with water (2×200 mL). After phase separation, the cyclohexane solution was concentrated under vacuum to give an oily residue and stripped with 2×50 mL of 2-propanol. To the residue was added 2-propanol (450 mL) and heated to 75-80° C. to give a clear solution. Upon cooling to 50-55° C., the product precipitated and the slurry was further cooled to 40° C. Water (150 mL) was added and the slurry cooled to 20° C. After stirring for 10 h, the product was isolated by filtration and washed with 2-propanolwater (100 mL, 3/1 v/v). The wet-cake was added to 2-propanol (450 mL), heated to 80° C. until a clear solution was obtained. The solution was cooled to 30° C. Water (150 mL) was added and the slurry cooled to 20° C. After stirring for 16 h, the product was isolated by filtration and washed with 2-propanolwater (100 mL, 3/1 v/v). The wet-cake was added to 2-propanol (400 mL), heated to 80° C. until a clear solution was obtained. The solution was cooled to 20° C. After stirring for 16 h, the product was isolated by filtration and washed with 2-propanol (50 mL). The product was dried under vacuum (105.5 g, 0.165 mol, 58.9% yield based on the pivalic acid amine salt) and analysed by HPLC.</p>
+      <heading id="h-00007-en" level="1">Example 1 </heading>
+      <heading id="h-00008-en" level="1">Preparation of 2-((4R, 6R)-6-(2-(3-(phenylcarbamoyl)-5-(4-fluorophenyl)-2-isopropyl-4-phenyl-1H-pyrrol-1-yl)ethyl)-2,2-dimethyl-1,3-dioxan-4-yl)acetic  acid 1-methylethyl  ester from the pivalic acid salt of (4R, 6R)-1,3-dioxane-4-acetic acid, 6-(2-aminomethyl)-2,2-dimethyl-,1-methylethylester  and 2-[2-(4-fluorophenyl)-2-oxo-1-phenylethyl]-4-methyl-3-oxopentanoic  acid phenylamide (DKT)</heading>
+      <p id="p-00035-en" num="0022">A reactor was charged with cyclohexane (400 mL), DKT (112 g, 0.27 mol), the pivalic acid salt of (4R, 6R)-1,3-dioxane-4-acetic acid, 6-(2-aminomethyl)-2,2-dimethyl-1-methylethylester (100 g, 0.28 mol), N-methyl-pyrrolidone (50 mL) and di-isopropyl amine as a base (38 mL, 27.4 g, 0.27 mol). The reaction mixture was heated to reflux under azeotropic water removal for 48 h at 80-82° C. After cooling, the cyclohexane solution was concentrated under vacuum to give an oily residue and stripped with 2×50 mL of 2-propanol. To the residue was added 2-propanol (450 mL) and heated to 75° C. to give a clear solution. Upon cooling to 45-50° C., the product precipitated. Water (150 mL) was added and the slurry cooled to 20° C. After stirring for 16 h, the product was isolated by filtration and washed with 2-propanolwater (100 mL, 3/1 v/v). The wet-cake was added to 2-propanol (450 mL), heated to 80° C. until a clear solution was obtained. The solution was cooled to 30° C. Water (150 mL) was added in 1 h and the slurry cooled to 20° C. After stirring for 16 h, the product was isolated by filtration and washed with 2-propanolwater (100 mL, 3/1 v/v). The wet-cake was added to 2-propanol (400 mL), heated to 80° C. until a clear solution was obtained. The solution was cooled to 20° C. After stirring for 16 h, the product was isolated by filtration and washed with 2-propanol (2×25 mL). The product was dried under vacuum (111.0 g, 0.173 mol, 61.8% yield based on the pivalic acid amine salt) and analysed by HPLC.</p>
+      <heading id="h-00009-en" level="1">Example 2 </heading>
+      <heading id="h-00010-en" level="1">Preparation of 2-((4R, 6R)-6-(2-(3-(phenylcarbamoyl)-5-(4-fluorophenyl)-2-isopropyl-4-phenyl-1H-pyrrol-1-yl)ethyl)-2,2-dimethyl-1,3-dioxan-4-yl)acetic  acid 1-methylethyl  ester from the pivalic acid salt of (4R, 6R)-1,3-dioxane-4-acetic acid, 6-(2-aminomethyl)-2,2-dimethyl-,1-methylethylester  and 2-[2-(4-fluorophenyl)-2-oxo-1-phenylethyl]-4-methyl-3-oxopentanoic  acid phenylamide (DKT)</heading>
+      <p id="p-00036-en" num="0023">A reactor was charged with cyclohexane (400 mL), DKT (112 g, 0.27 mol), the pivalic acid salt of (4R, 6R)-1,3-dioxane-4-acetic acid, 6-(2-aminomethyl)-2,2-dimethyl-1-methylethylester (100 g, 0.28 mol) and N-methyl-pyrrolidone (40 mL). The reaction mixture was heated to reflux under vacuum (600 mbar) and under azeotropic water removal for 60 h at 68-70° C. After cooling, the cyclohexane solution was concentrated under vacuum to give an oily residue and stripped with 2×50 mL of 2-propanol. To the residue was added 2-propanol (450 mL) and heated to 75° C. to give a clear solution. After cooling to 70° C., water (150 mL) was added, whereupon the product crystallized. The reaction mixture was 20°. After stirring for 16 h, the product was isolated by filtration and washed with 2-propanolwater (100 mL, 3/1 v/v). The wet-cake was added to 2-propanol (450 mL), heated to 80° C. until a clear solution was obtained. The solution was cooled to 40° C. Water (150 mL) was added and the slurry cooled to 20° C. After stirring for 16 h, the product was isolated by filtration and washed with 2-propanolwater (100 mL, 3/1 v/v). The wet-cake was added to 2-propanol (400 mL), heated to 80° C. until a clear solution was obtained. The solution was cooled to 20° C. After stirring for 16 h, the product was isolated by filtration and washed with 2-propanol (2×25 mL). The product was dried under vacuum (110.8 g, 0.173 mol, 61.7% yield based on the pivalic acid amine salt) and analysed by HPLC.</p>
+      <heading id="h-00011-en" level="1">Example 3 </heading>
+      <heading id="h-00012-en" level="1">Preparation of 2-((4R, 6R)-6-(2-(3-(phenylcarbamoyl)-5-(4-fluorophenyl)-2-isopropyl-4-phenyl-1H-pyrrol-1-yl)ethyl)-2,2-dimethyl-1,3-dioxan-4-yl)acetic  acid 1-methylethyl  ester from the pivalic acid salt of (4R, 6R)-1,3-dioxane-4-acetic acid, 6-(2-aminomethyl)-2,2-dimethyl-,1-methylethylester  and 2-[2-(4-fluorophenyl)-2-oxo-1-phenylethyl]-4-methyl-3-oxopentanoic  acid phenylamide (DKT)</heading>
+      <p id="p-00037-en" num="0024">A reactor was charged with cyclohexane (400 mL), DKT (112 g, 0.27 mol), the pivalic acid salt of (4R, 6R)-1,3-dioxane-4-acetic acid, 6-(2-aminomethyl)-2,2-dimethyl-1-methylethylester (100 g, 0.28 mol), N-methyl-pyrrolidone (25 mL) and di-isopropyl amine as a base (38 mL, 27.4 g, 0.27 mol). The reaction mixture was heated to reflux under vacuum (600 mbar) and under azeotropic water removal for 54 h at 68-70° C. After cooling, the cyclohexane solution was concentrated under vacuum and the residue stripped with 2×50 mL of 2-propanol. To the residue was added 2-propanol (450 mL) and heated to 75° C. to give a clear solution. After cooling to 55-60° C., precipitation started and the mixture cooled to 30° C., when water (150 mL) was added in 1 h. After cooling to 20° C., the reaction mixture was stirred for 16 h. The product was isolated by filtration and washed with 2-propanolwater (2×50 mL, 3/1 v/v). The wet-cake was added to 2-propanol (450 mL), heated to 80° C. until a clear solution was obtained. The solution was cooled to 30° C., water (150 mL) was added and the slurry cooled to 20° C. After stirring for 16 h, the product was isolated by filtration and washed with 2-propanol/water (100 mL, 3/1 v/v). The wet-cake was added to 2-propanol (400 mL), heated to 80° C. until a clear solution was obtained. The solution was cooled to 20° C. After stirring for 16 h, the product was isolated by filtration and washed with 2-propanol (2×25 mL). The product was dried under vacuum (116.9 g, 0.183 mol, 65.4% yield based on the pivalic acid salt) and analysed by HPLC.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. Process for the production of a compound of formula I,</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00009">
+          <img id="imgc-00001-en" he="34.63mm" wi="76.03mm" alt="embedded image" img-content="chem" file="US20150259285A1_00009.PNG" img-format="png" original="US20150259285A1-20150917-C00009.TIF" />
+        </chemistry>
+      </claim-text>
+      <claim-text>said process comprising reacting a compound of formula II</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00002-en" num="00010">
+          <img id="imgc-00002-en" he="31.33mm" wi="66.38mm" alt="embedded image" img-content="chem" file="US20150259285A1_00010.PNG" img-format="png" original="US20150259285A1-20150917-C00010.TIF" />
+        </chemistry>
+      </claim-text>
+      <claim-text>with a compound of formula III</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00003-en" num="00011">
+          <img id="imgc-00003-en" he="13.80mm" wi="63.25mm" alt="embedded image" img-content="chem" file="US20150259285A1_00011.PNG" img-format="png" original="US20150259285A1-20150917-C00011.TIF" />
+        </chemistry>
+      </claim-text>
+      <claim-text>wherein R1 and R2 may be the same or different and are selected from H; a C1-C6 alkyl which may be straight or branched, substituted or unsubstituted; or R1 and R2 together represent an alkylidene group of the formula CRaRb wherein Ra and Rb may be the same or different and are selected from an alkyl group having between 1 and 6 atoms, and wherein R3 represents a C1-C6 alkyl group, wherein said reaction is carried out in the presence of a base.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. Process according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the base comprises a secondary amine.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. Process according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the base comprises di-isopropyl amine.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. Process according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein Ra and Rb are methyl or form a cyclohexyl or cyclopentyl group.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. Process according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein R3 is isopropyl, 2-butyl, cyclohexyl or tert-butyl.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. Process according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the compound of formula II comprises 2-[2-(4-fluorophenyl)-2-oxo-1-phenylethyl]-4-methyl-3-oxopentanoic acid phenylamide.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. Process according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the compound of formula III comprises an organic acid salt or inorganic acid salt of (4R, 6R)-1,3-dioxane-4-acetic acid, 6-(2-aminomethyl)-2,2-dimethyl-,1-methylethylester.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. Process according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the compound of formula III comprises an organic acid salt, preferably pivalic acid salt.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. Process according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the reaction is carried out in the presence of cyclohexane and/or N-methyl-pyrrolidone.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. Process according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the reaction is carried out below atmosphere pressure.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. Process according to produce the atorvastatin intermediate ((4R,6R)-6-(2-(3-(phenylcarbamoyl)-5-(4-fluorophenyl)-2-isopropyl-4-phenyl-1H-pyrrol-1-yl)ethyl)-2,2-dimethyl-1,3-dioxan-4-yl)acetic acid 1-methylethyl ester by the process according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the compound of formula II comprises an ester of 2-[2-(4-fluorophenyl)-2-oxo-1-phenylethyl]-4-methyl-3-oxopentanoic acid phenylamide and wherein the compound of formula III comprises an organic acid salt or inorganic acid salt of (4R, 6R)-1,3-dioxane-4-acetic acid, 6-(2-aminomethyl)-2,2-dimethyl-,1-methylethylester.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. Process to produce atorvastatin hemi calcium salt of formula IV,</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00004-en" num="00012">
+          <img id="imgc-00004-en" he="26.92mm" wi="67.56mm" alt="embedded image" img-content="chem" file="US20150259285A1_00012.PNG" img-format="png" original="US20150259285A1-20150917-C00012.TIF" />
+        </chemistry>
+      </claim-text>
+      <claim-text>said process comprising the steps of:
+<claim-text>(a) treating a solution of the atorvastatin intermediate produced in the process of <claim-ref idref="clm-00011-en">claim 11</claim-ref> in a first solvent with an acid;</claim-text><claim-text>(b) treating the mixture obtained in step (a) with an alkali metal hydroxide;</claim-text><claim-text>(c) treating the mixture obtained in step (b) with a calcium salt or with calcium hydroxide.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259285A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259285A1-20150917-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259285A1_00002.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259285A1-20150917-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259285A1_00003.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259285A1-20150917-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259285A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259285A1-20150917-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259285A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259285A1-20150917-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150259285A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259285A1-20150917-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150259285A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259285A1-20150917-C00007.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150259285A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259285A1-20150917-C00008.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150259285A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259285A1-20150917-C00009.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150259285A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259285A1-20150917-C00010.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150259285A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259285A1-20150917-C00011.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150259285A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259285A1-20150917-C00012.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150259285A1.PDF" type="pdf" size="242854" pages="5" />
+</lexisnexis-patent-document>

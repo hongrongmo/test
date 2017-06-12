@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257395A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030214" date-changed="20151002" time-changed="033543">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315793">
+        <country>US</country>
+        <doc-number>20150257395</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14643270</doc-number>
+        <date>20150310</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>NL</country>
+        <doc-number>2012430</doc-number>
+        <date>20140313</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150929">
+      <classification-ipcr sequence="1">
+        <text>A22B   3/08        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>22</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A22B   1/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>22</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A22C  21/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>21</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150929">
+      <classification-cpc sequence="1">
+        <text>A22B   3/08        20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>22</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A22B   1/00        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>22</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A22C  21/00        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>21</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A22C  21/0046      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>21</main-group>
+        <subgroup>0046</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A22C  21/06        20130101 LI20150919BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>21</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150919</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">17</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">POULTRY NECK BREAKER MACHINE AND METHOD FOR BREAKING THE NECK OF POULTRY</invention-title>
+    <references-cited date-changed="20150929">
+      <patent-citations name="patcit" date-changed="20150929" />
+      <citation>
+        <patcit num="1" dnum="US4918787A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4918787</doc-number>
+            <kind>A</kind>
+            <name>HAZENBROEK JACOBUS E [NL]</name>
+            <date>19900424</date>
+          </document-id>
+          <application-date>
+            <date>19890123</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US4910829A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4910829</doc-number>
+            <kind>A</kind>
+            <name>SIMMONS LACY [US]</name>
+            <date>19900327</date>
+          </document-id>
+          <application-date>
+            <date>19881209</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US4574427A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4574427</doc-number>
+            <kind>A</kind>
+            <name>HARBEN JR GROVER S [US], et al</name>
+            <date>19860311</date>
+          </document-id>
+          <application-date>
+            <date>19840103</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US4097960A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4097960</doc-number>
+            <kind>A</kind>
+            <name>GRAHAM KENNETH Z, et al</name>
+            <date>19780704</date>
+          </document-id>
+          <application-date>
+            <date>19761028</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US5569072A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5569072</doc-number>
+            <kind>A</kind>
+            <name>TIELEMAN RULDOLF J [US], et al</name>
+            <date>19961029</date>
+          </document-id>
+          <application-date>
+            <date>19960119</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US4894885A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4894885</doc-number>
+            <kind>A</kind>
+            <name>MARKERT HEINRICH W [NL]</name>
+            <date>19900123</date>
+          </document-id>
+          <application-date>
+            <date>19880428</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="7" dnum="US5766063A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5766063</doc-number>
+            <kind>A</kind>
+            <name>HAZENBROEK JACOBUS E [NL], et al</name>
+            <date>19980616</date>
+          </document-id>
+          <application-date>
+            <date>19970108</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="8" dnum="US4730365A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4730365</doc-number>
+            <kind>A</kind>
+            <name>SIMMONS LACY [US]</name>
+            <date>19880315</date>
+          </document-id>
+          <application-date>
+            <date>19861027</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="9" dnum="US4619017A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4619017</doc-number>
+            <kind>A</kind>
+            <name>SIMMONS LACY W [US]</name>
+            <date>19861028</date>
+          </document-id>
+          <application-date>
+            <date>19850801</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="10" dnum="US4557015A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4557015</doc-number>
+            <kind>A</kind>
+            <name>DODD THURSTON [US]</name>
+            <date>19851210</date>
+          </document-id>
+          <application-date>
+            <date>19831006</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="11" dnum="US4516290A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4516290</doc-number>
+            <kind>A</kind>
+            <name>VAN MIL MARTINUS P G [NL]</name>
+            <date>19850514</date>
+          </document-id>
+          <application-date>
+            <date>19830511</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Meyn Food Processing Technology B.V.</orgname>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Van Hillo</last-name>
+            <first-name>Eric Adriaan</first-name>
+            <address>
+              <city>Oostzaan</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hagendoorn</last-name>
+            <first-name>Jan Willem</first-name>
+            <address>
+              <city>Oostzaan</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20151211">
+      <main-family family-id="173664228">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015173664</doc-number>
+            <kind>A</kind>
+            <date>20151005</date>
+          </document-id>
+          <application-date>
+            <date>20150306</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2918174</doc-number>
+            <kind>A1</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20150217</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>BR</country>
+            <doc-number>PI1505512</doc-number>
+            <kind>A2</kind>
+            <date>20151201</date>
+          </document-id>
+          <application-date>
+            <date>20150312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104904816</doc-number>
+            <kind>A</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20150312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>598DEL2015</doc-number>
+            <kind>A</kind>
+            <date>20151113</date>
+          </document-id>
+          <application-date>
+            <date>20150303</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9138008</doc-number>
+            <kind>B1</kind>
+            <date>20150922</date>
+          </document-id>
+          <application-date>
+            <date>20150310</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150107626</doc-number>
+            <kind>A</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20150310</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257395</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150310</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173664227">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015173664</doc-number>
+            <kind>A</kind>
+            <date>20151005</date>
+          </document-id>
+          <application-date>
+            <date>20150306</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2918174</doc-number>
+            <kind>A1</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20150217</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>BR</country>
+            <doc-number>PI1505512</doc-number>
+            <kind>A2</kind>
+            <date>20151201</date>
+          </document-id>
+          <application-date>
+            <date>20150312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104904816</doc-number>
+            <kind>A</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20150312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>598DEL2015</doc-number>
+            <kind>A</kind>
+            <date>20151113</date>
+          </document-id>
+          <application-date>
+            <date>20150303</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9138008</doc-number>
+            <kind>B1</kind>
+            <date>20150922</date>
+          </document-id>
+          <application-date>
+            <date>20150310</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150107626</doc-number>
+            <kind>A</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20150310</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257395</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150310</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A poultry neck breaker machine is provided for poultry suspended by the legs in a conveyor line and includes a movable breaker device for imparting a breaking force to the poultry's neck. An anvil provides support to the poultry's neck during operation of the movable breaker device, wherein the anvil is arranged for introduction into a poultry cavity through the poultry's vent. A method is provided for breaking a poultry's neck while the poultry is suspended by the legs in a conveyor line, wherein a breaking force is imparted to the poultry's neck while the poultry's neck is supported from within the poultry.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150521</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US     9138008B1</docdb-publication-number>
+      <docdb-application-id>444510482</docdb-application-id>
+      <new-owner>MEYN FOOD PROCESSING TECHNOLOGY B.V., NETHERLANDS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:VAN HILLO, ERIC ADRIAAN;HAGENDOORN, JAN WILLEM;REEL/FRAME:035691/0421</free-text-description>
+      <effective-date>
+        <date>20150407</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <p id="p-00001-en" num="0001">PRIORITY STATEMENT</p>
+      <p id="p-00002-en" num="0002">The present application claims priority under 35 U.S.C. §119 to Dutch Application No. 2012430, filed Mar. 13, 2014.</p>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">The subject matter of the present disclosure relates generally to method for breaking the neck of poultry and to a poultry neck breaker machine wherein the poultry is suspended by the legs in a conveyor line, which machine includes a movable breaker device for imparting a breaking force to the poultry's neck, and includes an anvil to provide support to the poultry's neck during operation of the movable breaker device.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00004-en" num="0004">Poultry neck breaker machines and methods are known from European patent application EP-A-1 728 433 and from U.S. Pat. No. 3,965,534.</p>
+      <p id="p-00005-en" num="0005">According to EP-A-1 728 433, a curved breaker device is applied that is rotatable around a point of fixation which can be leveled to a position corresponding with a desired plane of impact of the breaker device to the neck of the poultry. A backplate external to the poultry is provided as its support during operation of the breaker device.</p>
+      <p id="p-00006-en" num="0006">According to U.S. Pat. No. 3,965,534 a carriage is proposed for three blades that each operate as breaking device for a poultry's neck. Accordingly, three poultry necks can be broken at the same time. Upon activation, the three blades are rammed towards the poultry necks. Underneath the blades, V-shaped neck guide bars are provided that become operational after the poultry necks are positioned with rotatable guide bars extending across a trough along with the poultry necks that are to be broken are conveyed. The carriage includes three backing plates to provide support to the poultry necks during ramming of the three blades.</p>
+      <p id="p-00007-en" num="0007">Although the technology of breaking the neck of poultry is long existing, there is an everlasting need to improve its reliability and accuracy. It is a first object of the invention to answer to this need.</p>
+      <p id="p-00008-en" num="0008">A further object of the invention is to harvest poultry necks as complete as possible and to improve the yield in comparison with existing methods. In this connection it is noteworthy to mention that the monetary value of completely harvested necks of a particular weight is higher than incompletely harvested necks of the same weight.</p>
+      <p id="p-00009-en" num="0009">It is still a further object of the invention to harvest poultry necks while the poultry carcasses incur as little damage as possible, therewith improving the attractiveness of those carcasses.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00010-en" num="0010">These and other objects and advantages of the invention are promoted or attained with a poultry neck breaker machine and a method for breaking poultry necks having the features of one or more of the appended claims. Additional aspects and advantages of the invention will be set forth in part in the following description, or may be obvious from the description, or may be learned through practice of the invention,</p>
+      <p id="p-00011-en" num="0011">In a first aspect of the invention a method is proposed for breaking a poultry's neck, in which the poultry's neck is supported from within the poultry by arranging that the anvil of the poultry neck breaker machine is introduced into the poultry cavity through the poultry's vent. This aspect improves the accuracy and reliability of the method.</p>
+      <p id="p-00012-en" num="0012">It is preferred that during operation of the movable breaker device the anvil lies adjacent to the poultry's spinal cord so as to arrange that the anvil can support the poultry's neck when the breaker device imparts a breaking force to the poultry's neck.</p>
+      <p id="p-00013-en" num="0013">Suitably the movable breaker device is embodied with, or as, a back-and-forth movable chisel. Such a chisel can be easily moved back and forth for instance by appropriate pneumatic equipment, in particular when the chisel is movable back-and-forth in a horizontal direction, It one exemplary embodiment, the back-and-forth movable chisel is forcibly moved to the poultry's neck for imparting a required breaking force to the poultry's neck.</p>
+      <p id="p-00014-en" num="0014">It is found desirable that the chisel has a concave sharp side. This arranges that the chisel has self-orienting capability with reference to the poultry's neck, so that a certain amount of inaccuracy in the location of the neck is acceptable, without adversely affecting the accuracy of the position where the neck of the poultry is broken.</p>
+      <p id="p-00015-en" num="0015">One of the desirable features of the invention is that prior to imparting a breaking force to the poultry's neck, the poultry is supported at or near its shoulder joints for accurately positioning the poultry. This ensures that the plane at which the imparting breaking force is applied to the poultry can be predictably maintained. Needless to say that this is very beneficial for promoting the accuracy and reliability of the method and the device of the invention. Correspondingly the machine according to the invention preferably comprises supporting means for the poultry at or near its shoulder joints. These supporting means can be suitably embodied as a brace.</p>
+      <p id="p-00016-en" num="0016">To further promote the objects of the invention it may be desirable that the poultry's neck is fixed in a predetermined position prior to imparting a breaking force to the poultry's neck. In connection therewith it is preferable that the machine includes holding means for fixing the poultry's neck in a predetermined position. Suitably the holding means are embodied as a gripper for the poultry's neck.</p>
+      <p id="p-00017-en" num="0017">The invention will hereinafter be further elucidated with reference to a drawing of a non-limiting exemplary embodiment of the poultry neck breaker machine of the invention and its method of operation.</p>
+      <p id="p-00018-en" num="0018">These and other features, aspects and advantages of the present invention will become better understood with reference to the following description and appended claims. The accompanying drawings, which are incorporated in and constitute a part of this specification, illustrate embodiments of the invention and, together with the description, serve to explain the principles of the invention.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00019-en" num="0019">A full and enabling disclosure of the present invention, including the best mode thereof, directed to one of ordinary skill in the art, is set forth in the specification, which makes reference to the appended figures, in which:</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIGS. 1</figref>, <b>2</b>, <b>3</b>, <b>4</b>, and <b>5</b> shows a series of operations carried out with the poultry neck breaker machine of the invention on a poultry carcass suspended by its legs.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00021-en" num="0021">Whenever in the figures the same reference numerals are applied, these numerals refer to the same parts.</p>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00022-en" num="0022">For purposes of describing the invention, reference now will be made in detail to embodiments and/or methods of the invention, one or more examples of which are illustrated in or with the drawings, Each example is provided by way of explanation of the invention, not limitation of the invention. In fact, it will be apparent to those skilled in the art that various modifications and variations can be made in the present invention without departing from the scope or spirit of the invention, For instance, features or steps illustrated or described as part of one embodiment, can be used with another embodiment or steps to yield a still further embodiments or methods. Thus, it is intended that the present invention covers such modifications and variations as conic within the scope of the appended claims and their equivalents.</p>
+      <p id="p-00023-en" num="0023">In <figref>FIGS. 1 through 5</figref>, an exemplary embodiment of a poultry neck breaker machine of the invention is depicted with reference <b>1</b>. The exemplary poultry neck breaker machine <b>1</b> operates on poultry <b>2</b> suspended by the legs <b>3</b> in a conveyor line <b>4</b>. Machine <b>1</b> includes a movable breaker device <b>5</b> for imparting a breaking force to the poultry's neck <b>6</b>. The poultry neck breaker machine <b>1</b> further includes an anvil <b>7</b> to provide support to the poultry's neck <b>6</b> during operation of the movable breaker device <b>5</b>. For this exemplary embodiment, the movable breaker device <b>5</b> is preferably provided with a back-and-forth movable chisel <b>8</b>, the function and operation of which will become clear from the following description. It is found preferable that the chisel <b>8</b> is provided with a concave sharp side <b>9</b>.</p>
+      <p id="p-00024-en" num="0024">In <figref>FIG. 1</figref>, the anvil <b>7</b> is still above and outside the poultry <b>2</b>. In <figref>FIGS. 2 through 5</figref>, the anvil <b>7</b> is introduced into the poultry cavity <b>12</b> through the poultry's vent <b>13</b> in a way that during operation of the movable breaker device <b>5</b> the anvil <b>7</b> preferably lies adjacent to the poultry's spinal cord <b>14</b> so as to provide support to the spinal cord <b>14</b>. The location and relative positions of the poultry cavity <b>12</b>, the poultry vent <b>13</b>, and the poultry's spinal cord <b>14</b> are of course known to the skilled person, yet are shown to remove any doubt as to the relative positioning and movement of the anvil <b>7</b>.</p>
+      <p id="p-00025-en" num="0025">For this exemplary embodiment, the poultry neck breaker machine <b>1</b> includes supporting means (not shown) to provide support to the poultry <b>2</b> at or near its shoulder joints to promote accurate positioning of the poultry <b>2</b>. The supporting means are suitably embodied as a brace. More importantly, the machine <b>1</b> also includes holding means <b>10</b> for fixing the poultry's neck <b>6</b> in a predetermined position, which are preferably embodied as a gripper <b>11</b> for the poultry's neck <b>6</b>.</p>
+      <p id="p-00026-en" num="0026">By the introduction of the anvil <b>7</b> in the poultry cavity of the suspended poultry <b>2</b> and by the application of the holding means <b>10</b> for fixing the poultry's neck <b>6</b> in a pre-determined position prior to imparting a breaking force to the poultry's neck, the reliability and effectiveness of the movable breaker device <b>5</b> for breaking the neck <b>6</b> of the poultry <b>2</b> is secured. This also promotes the avoidance of bone splinters which may otherwise occur due to the breaking of the neck <b>6</b>.</p>
+      <p id="p-00027-en" num="0027">The operation of the neck breaker machine <b>1</b> of the invention includes the step that after the introduction of the anvil <b>7</b> in the poultry cavity of the suspended poultry <b>2</b> (as shown in <figref>FIG. 2</figref>) the back-and-forth movable chisel <b>8</b> is forcibly moved to the poultry's neck <b>6</b> for imparting a breaking force to the poultry's neck <b>6</b>, <figref>FIGS. 1 through 5</figref> show the preferential embodiment in which the chisel <b>8</b> is movable horizontally back-and-forth. The movement of the chisel <b>8</b> is shown in the series of sequences imaged by <figref>FIGS. 3</figref>, <b>4</b>, and <b>5</b>. In <figref>FIG. 3</figref>, the chisel <b>8</b> is in front of the neck <b>6</b> of the poultry <b>2</b>, whereas in <figref>FIG. 4</figref> it is shown that the back-and-forth movable chisel <b>8</b> has entered the poultry neck <b>6</b> and has broken the spinal cord of the poultry <b>3</b>. In <figref>FIG. 5</figref> it is shown that after the chisel <b>8</b> has broken the neck <b>6</b> of the poultry <b>2</b>, the holding means <b>10</b> can take away the broken and released poultry neck <b>6</b> from the suspended poultry <b>2</b>.</p>
+      <p id="p-00028-en" num="0028">Although the invention has been discussed in the foregoing with reference to an exemplary embodiment of the poultry neck breaker machine of the invention, the invention is not restricted to this particular embodiment which can be varied in many ways without departing from the gist of the invention. The discussed exemplary embodiment shall therefore not be used to construe the appended claims strictly in accordance therewith. On the contrary, the exemplary embodiment is merely intended to explain the wording of the appended claims without intent to limit the claims to this exemplary embodiment. The scope of protection of the invention shall therefore he construed in accordance with the appended claims only, wherein a possible ambiguity in the wording of the claims shall be resolved using this exemplary embodiment.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>16</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>17</b>. A poultry neck breaker machine for operating on poultry, the poultry having a neck, vent, shoulder joints, and legs, the poultry suspended by the legs in a conveyor line, the poultry neck breaker machine comprising:
+<claim-text>a movable breaker device for imparting a breaking force to the poultry's neck; and</claim-text><claim-text>an anvil to provide support to the poultry's neck during operation of the movable breaker device, wherein the anvil is arranged for introduction into a poultry cavity through the poultry's vent.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>18</b>. The poultry neck breaker machine as in <claim-ref idref="clm-00002-en">claim 17</claim-ref>, wherein during operation of the movable breaker device, the anvil lies adjacent to the poultry's spinal cord.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>19</b>. The poultry neck breaker machine as in <claim-ref idref="clm-00002-en">claim 17</claim-ref>, wherein the movable breaker device <b>17</b> comprises a back-and-forth movable chisel.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>20</b>. The poultry neck breaker machine as in <claim-ref idref="clm-00004-en">claim 19</claim-ref>, wherein the chisel is movable back-and-forth along a horizontal direction.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>21</b>. The poultry neck breaker machine as in <claim-ref idref="clm-00005-en">claim 20</claim-ref>, wherein the chisel comprises a concave sharp side.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>22</b>. The poultry neck breaker machine as in <claim-ref idref="clm-00002-en">claim 17</claim-ref>, further comprising supporting means for the poultry at or near the shoulder joints for accurately positioning of the poultry.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>23</b>. The poultry neck breaker machine as in <claim-ref idref="clm-00007-en">claim 22</claim-ref>, wherein the supporting means comprises a brace.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>24</b>. The poultry neck breaker machine as in <claim-ref idref="clm-00002-en">claim 17</claim-ref>, further comprising holding means for fixing the poultry's neck in a predetermined position.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>25</b>. The poultry neck breaker machine as in <claim-ref idref="clm-00009-en">claim 24</claim-ref>, wherein the holding means comprises a gripper for the poultry's neck.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>26</b>. A method for breaking a poultry's neck while the poultry is suspended by legs in a conveyor line, the method comprising the steps of:
+<claim-text>introducing an anvil into a vent of the poultry;</claim-text><claim-text>supporting the poultry's neck by the anvil; and</claim-text><claim-text>imparting a breaking force to the poultry's neck while the poultry's neck is supported by the anvil.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>27</b>. The method for breaking a poultry's neck as in <claim-ref idref="clm-00011-en">claim 26</claim-ref>, wherein the supporting step further comprises positioning an anvil adjacent to the poultry's spinal cord.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>28</b>. The method for breaking a poultry's neck as in <claim-ref idref="clm-00011-en">claim 26</claim-ref>, wherein the imparting step further comprises moving a back-and-forth movable chisel to the poultry's neck.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>29</b>. The method for breaking a poultry's neck as in <claim-ref idref="clm-00013-en">claim 28</claim-ref>, wherein the chisel comprises a concave sharp side.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>30</b>. The method for breaking a poultry's neck as in <claim-ref idref="clm-00013-en">claim 28</claim-ref>, the poultry having shoulder joints, the method further comprising the step of:
+<claim-text>supporting the poultry at or near the shoulder joints prior to the step of imparting a breaking force.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>31</b>. The method for breaking a poultry's neck as in <claim-ref idref="clm-00015-en">claim 30</claim-ref>, wherein the step of supporting further comprises:
+<claim-text>providing a brace into position to support the poultry at or near the shoulder joints.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>32</b>. The method for breaking a poultry's neck as in <claim-ref idref="clm-00015-en">claim 30</claim-ref>, further comprising the step of
+<claim-text>fixing the poultry's neck in a predetermined position prior to the step of imparting a breaking force to the poultry's neck.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257395A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257395A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257395A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257395A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257395A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257395A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257395A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257395A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257395A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257395A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257395A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257395A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257395A1_00007.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257395A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257395A1.PDF" type="pdf" size="453051" pages="9" />
+</lexisnexis-patent-document>

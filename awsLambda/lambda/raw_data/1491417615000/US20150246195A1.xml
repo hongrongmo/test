@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246195A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021326" date-changed="20150918" time-changed="025330">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139306">
+        <country>US</country>
+        <doc-number>20150246195</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14715387</doc-number>
+        <date>20150518</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>A61M  16/00        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>16</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>A61M  16/0069      20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>16</main-group>
+        <subgroup>0069</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   5/0205      20130101 LI20150113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0205</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B   5/02416     20130101 LA20150113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>02416</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B   5/1455      20130101 LA20150113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>1455</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B   5/4818      20130101 LI20150113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>4818</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B   5/726       20130101 LA20150113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>726</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61M  16/0003      20140307 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20140307</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>16</main-group>
+        <subgroup>0003</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61M  16/0057      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>16</main-group>
+        <subgroup>0057</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61M2205/18        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2205</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61M2205/33        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2205</main-group>
+        <subgroup>33</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61M2205/50        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2205</main-group>
+        <subgroup>50</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>A61M2230/20        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2230</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>A61M2230/205       20130101 LA20150113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2230</main-group>
+        <subgroup>205</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>A61M2230/40        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2230</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">METHOD AND SYSTEM FOR CLASSIFICATION OF PHOTO-PLETHYSMOGRAPHICALLY DETECTED RESPIRATORY EFFORT</invention-title>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13757564</doc-number>
+              <date>20130201</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9044558</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007153</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12409685</doc-number>
+              <date>20090324</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8365730</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13757564</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61070565</doc-number>
+          <date>20080324</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Covidien LP</orgname>
+            <address>
+              <city>Mansfield</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Baker, JR.</last-name>
+            <first-name>Clark R.</first-name>
+            <address>
+              <city>Newman</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>O'Neil</last-name>
+            <first-name>Michael P.</first-name>
+            <address>
+              <city>Pleasanton</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Campbell</last-name>
+            <first-name>Shannon E.</first-name>
+            <address>
+              <city>Boulder</city>
+              <state>CO</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hausmann</last-name>
+            <first-name>Gilbert</first-name>
+            <address>
+              <city>Felton</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173462178">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246195</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150518</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173462177">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246195</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150518</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Embodiments disclosed herein may include systems and methods for determining a patient's respiratory effort and blood oxygen saturation based on data acquired from a pulse oximetry sensor and analyzing the parameters in conjunction with each other. For example, the respiratory effort may be determined based on a photo-plethysmographic waveform generated from light attenuation detected by the sensor, and the blood oxygen saturation may be a pulse-based estimate of arterial blood oxygen saturation determined from the detected attenuation. Analysis of the parameters may enable detection and classification of apnea (e.g., obstructive or central) or another underlying cause for respiratory instability. Furthermore, the measured respiratory effort may be compared to respiratory effort supplied by a ventilator to ensure proper sensor placement before enabling automatic adjustment of ventilator settings.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150518</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246195A1</docdb-publication-number>
+      <docdb-application-id>444208313</docdb-application-id>
+      <new-owner>COVIDIEN LP, MASSACHUSETTS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:NELLCOR PURITAN BENNETT LLC;REEL/FRAME:035663/0176</free-text-description>
+      <effective-date>
+        <date>20140320</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150518</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246195A1</docdb-publication-number>
+      <docdb-application-id>444208313</docdb-application-id>
+      <new-owner>NELLCOR PURITAN BENNETT LLC, COLORADO</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:BAKER, CLARK R., JR.;O'NEIL, MICHAEL;CAMPBELL, SHANNON;AND OTHERS;SIGNING DATES FROM 20090217 TO 20090602;REEL/FRAME:035663/0136</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation of U.S. patent application Ser. No. 13/757,564, filed Feb. 1, 2013, which is a continuation of U.S. patent application Ser. No. 12/409,685, filed Mar. 24, 2009, now U.S. Pat. No. 8,365,730, which claims priority to U.S. Provisional Application No. 61/070,565, filed Mar. 24, 2008, all of which are incorporated herein by reference in their entireties.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">The present disclosure relates to enhanced classification of respiratory efforts based on a photo-plethysmographic signal.</p>
+      <p id="p-00003-en" num="0003">This section is intended to introduce the reader to various aspects of art that may be related to various aspects of the present disclosure, which are described and/or claimed below. This discussion is believed to be helpful in providing the reader with background information to facilitate a better understanding of the various aspects of the present disclosure. Accordingly, it should be understood that these statements are to be read in this light, and not as admissions of prior art.</p>
+      <p id="p-00004-en" num="0004">In the field of healthcare, caregivers (e.g., doctors and other healthcare professionals) often desire to monitor certain physiological characteristics of their patients. Accordingly, a wide variety of monitoring devices have been developed for monitoring many such physiological characteristics. These monitoring devices often provide doctors and other healthcare personnel with information that facilitates provision of the best possible healthcare for their patients. As a result, such monitoring devices have become a perennial feature of modern medicine.</p>
+      <p id="p-00005-en" num="0005">One technique for monitoring physiological characteristics of a patient is commonly referred to as pulse oximetry, and the devices built based upon pulse oximetry techniques are commonly referred to as pulse oximeters. Pulse oximeters may be used to measure and monitor various blood flow characteristics of a patient. For example, a pulse oximeter may be utilized to monitor the blood oxygen saturation of hemoglobin in arterial blood, the volume of individual blood pulsations supplying the tissue, and/or the rate of blood pulsations corresponding to each heartbeat of a patient. In fact, the “pulse” in pulse oximetry refers to the time-varying amount of arterial blood in the tissue during each cardiac cycle.</p>
+      <p id="p-00006-en" num="0006">Pulse oximeters typically utilize a non-invasive sensor that transmits light through a patient's tissue and that photoelectrically detects the absorption and/or scattering of the transmitted light in such tissue. A photo-plethysmographic waveform, which corresponds to the cyclic attenuation of optical energy through the patient's tissue, may be generated from the detected light. Additionally, one or more of the above physiological characteristics may be calculated based upon the amount of light absorbed or scattered. More specifically, the light passed through the tissue may be selected to be of one or more wavelengths that may be absorbed or scattered by the blood in an amount correlative to the amount of the blood constituent present in the blood. The amount of light absorbed and/or scattered may then be used to estimate the amount of blood constituent in the tissue using various algorithms.</p>
+      <p id="p-00007-en" num="0007">The blood oxygen saturation of a patient in care may be monitored using a pulse oximeter to ensure that the patient consistently gets enough oxygen. However, other factors may also be indicative of the patient's overall respiratory stability.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00008-en" num="0008">A more complete understanding of the present disclosure may be acquired by referring to the following description taken in conjunction with the accompanying drawings. These drawings represent only certain embodiments of the present disclosure.</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 1</figref> is an exemplary photo-plethysmographic waveform in accordance with embodiments;</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 2</figref> is a perspective view of a pulse oximeter coupled to a multi-parameter patient monitor and a sensor in accordance with embodiments; and</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 3</figref> is a block diagram of the pulse oximeter and sensor coupled to a patient in accordance with embodiments.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00012-en" num="0012">One or more specific embodiments will be described below. In an effort to provide a concise description of these embodiments, not all features of an actual implementation are described in the specification. It should be appreciated that in the development of any such actual implementation, as in any engineering or design project, numerous implementation-specific decisions must be made to achieve the developers' specific goals, such as compliance with system-related and business-related constraints, which may vary from one implementation to another. Moreover, it should be appreciated that such a development effort might be complex and time consuming, but would nevertheless be a routine undertaking of design, fabrication, and manufacture for those of ordinary skill having the benefit of this disclosure.</p>
+      <p id="p-00013-en" num="0013">Embodiments of the present disclosure may provide a method and system for detecting increased and/or decreased respiratory effort in a patient. Respiratory effort may include a characteristic of a patient's breathing activity relating to the patient's work of breathing, such as respiratory rate, tidal volume, or diaphragmatic pressure. Respiratory effort may synchronously reduce intrathoracic pressure, thereby modulating one or more cardiovascular parameters, including peripheral blood volume, central venous return, cardiac stroke volume, and heart rate.</p>
+      <p id="p-00014-en" num="0014">A pulse oximeter in accordance with present embodiments may be configured to determine the patient's blood oxygen saturation level as well as quantify the patient's respiratory effort. In one embodiment, the respiratory effort may be utilized in conjunction with the blood oxygen saturation to characterize the patient's respiratory stability. For example, obstructive apnea, central apnea, or other underlying respiratory issue causes may be detected based on patterns in the patient's respiratory effort observed in conjunction with the patient's blood oxygen saturation. In another embodiment, an adjusted blood oxygen saturation value may be provided based on the detected respiratory effort. For example, an initial blood oxygen saturation reading may be indexed based on a measured value of respiratory effort.</p>
+      <p id="p-00015-en" num="0015">Additionally, a pulse oximeter in accordance with present embodiments may be used in conjunction with a ventilator to adjust ventilator settings based on the patient's blood oxygen saturation level and/or respiratory effort. For example, the blood oxygen saturation and respiratory efforts of a patient on a respirator may be monitored to ensure that the respirator is operating at optimal conditions. Furthermore, by comparing the patient's measured respiratory effort to the phase or rate of the coupled ventilator, a safety measure may be employed which ensures that no adjustments are made to the ventilator settings if the sensor is applied to a patient who is not using the ventilator. For example, if a caregiver mistakenly places a sensor coupled to a ventilator on a patient other than the patient using the ventilator, present embodiments may identify the caregiver's mistake by comparing respiratory effort to ventilator activity.</p>
+      <p id="p-00016-en" num="0016">In accordance with an exemplary embodiment, arterial blood oxygen saturation, commonly denoted as SaO<sub>2</sub>, may be estimated as a ratio of oxygenated hemoglobin (HbO<sub>2</sub>) to deoxygenated hemoglobin (Hb) present in a patient's tissue. Hemoglobin is the component of blood which transports oxygen throughout the body. The ratio of HbO<sub>2 </sub>to Hb can be determined by shining light at certain wavelengths into a patient's tissue and measuring the absorbance of the light. A first wavelength is typically selected at a point in the electromagnetic spectrum where the absorption of HbO<sub>2 </sub>differs from the absorption of reduced Hb, and a second wavelength is typically selected at a different point in the spectrum where the absorption of Hb and HbO<sub>2 </sub>differs from those at the first wavelength. For example, wavelength selections for measuring normal blood oxygenation levels typically include a red light emitted at approximately 660 nm and a near-infrared light emitted at approximately 900 nm, although other red and near-infrared wavelengths may be used. A yellow or orange wavelength may be utilized instead of, or in addition to, the red wavelength.</p>
+      <p id="p-00017-en" num="0017">One common technique for estimating SaO<sub>2 </sub>is to calculate a characteristic known as the ratio-of-ratios (Ratrat) of the absorption of the red light (RED) to the near-infrared light (IR). While various techniques may be utilized to calculate Ratrat, in one common technique in accordance with an exemplary embodiment, a single sensor is used to emit red and near-infrared light into a patient's tissue and detect the light that is reflected or transmitted. Signals indicative of the detected light are conditioned and processed to generate a photo-plethysmograph of the detected light over time. An exemplary photo-plethysmographic waveform 2 is illustrated in <figref>FIG. 1</figref>. The waveform <b>2</b> is generally periodic, with a high-frequency function <b>4</b> representing the pulse rate. This high-frequency function may have both an AC and a DC component which may be estimated from maximum (MAX) and minimum (MIN) points in a cycle of the waveform, according to the following equations:</p>
+      <p id="p-00018-en" num="0000">[in-line-formulae]<i>AC</i>=MAX−MIN,  (1)[/in-line-formulae]</p>
+      <p id="p-00019-en" num="0000">[in-line-formulae]<i>DC</i>=(MAX+MIN)/2.  (2)[/in-line-formulae]</p>
+      <p id="p-00020-en" num="0018">It should be noted that in other embodiments the maximum and minimum measurements are not necessarily employed to determine the AC and DC components. Indeed, the AC and DC components may be obtained by using essentially any pair of points along both the red and near-infrared light waveforms. The AC and DC components of the RED wavelength and IR wavelength signals may then be used to calculate Ratrat according to the following equation:</p>
+      <p id="p-00021-en" num="0000">
+        <maths id="maths-00001-en" num="00001">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mi>Ratrat</mi>
+                    <mo>=</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <msub>
+                            <mi>AC</mi>
+                            <mi>RED</mi>
+                          </msub>
+                          <mo>/</mo>
+                          <msub>
+                            <mi>DC</mi>
+                            <mi>RED</mi>
+                          </msub>
+                        </mrow>
+                        <mrow>
+                          <msub>
+                            <mi>AC</mi>
+                            <mi>IR</mi>
+                          </msub>
+                          <mo>/</mo>
+                          <msub>
+                            <mi>DC</mi>
+                            <mi>IR</mi>
+                          </msub>
+                        </mrow>
+                      </mfrac>
+                      <mo>.</mo>
+                    </mrow>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>3</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00001-en" wi="N/A" he="N/A" file="US20150246195A1_00005.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150246195A1-20150903-M00001.TIF" />
+        </maths>
+      </p>
+      <p id="p-00022-en" num="0019">Ratrat has been observed to correlate well to SaO<sub>2</sub>. This observed correlation is used to estimate SaO<sub>2 </sub>based on the measured value of the ratio-of-ratios. This pulse-based estimate of SaO<sub>2 </sub>is commonly denoted as SpO<sub>2</sub>. An exemplary device for performing these or similar calculations may be the Model N600x pulse oximeter available from Nellcor Puritan Bennett LLC or Covidien.</p>
+      <p id="p-00023-en" num="0020">In addition to the high-frequency function <b>4</b> indicative of pulse rate, a low-frequency function <b>6</b> corresponding to the patient's respiratory rate may also be present in the waveform <b>2</b>. The low-frequency function <b>6</b> appears on the photo-plethysmographic waveform <b>2</b> as a result of the effect of inhalation on heart rate. That is, as the patient inhales, the diaphragm contracts and reduces pressure on the thoracic cavity. This reduced pressure increases the return flow of blood into the veins in the thoracic cavity from peripheral areas of the body and enables the heart to refill faster than it would refill at a higher thoracic pressure. Accordingly, there may be a slight increase in stroke volume and heart rate. When the patient exhales, the pressure in the thoracic cavity again rises. The pressure deviations in the thoracic cavity may be evident in the low-frequency function <b>6</b> seen in the waveform <b>2</b>. Accordingly, respiratory rate or effort may be determined based on the waveform <b>2</b> produced utilizing the same sensor used to measure SpO<sub>2</sub>.</p>
+      <p id="p-00024-en" num="0021">For example, the PlethResp™ technology available from CardioDigital Inc. may be utilized to determine the patient's respiratory effort by applying wavelet transform-based technologies to the photo-plethysmographic waveform <b>2</b>.</p>
+      <p id="p-00025-en" num="0022">As described below, embodiments may include a combination of the detection of the patient's blood oxygen saturation and respiratory effort. In an embodiment, these characteristics may be determined utilizing a pulse oximetry system <b>10</b>, such as the exemplary system illustrated in <figref>FIG. 2</figref>. The pulse oximetry system <b>10</b> may apply various methods and/or calculations to determine the patient's blood oxygen saturation and/or respiratory effort, and to combine these characteristics for a diagnosis. The system <b>10</b> includes a non-invasive sensor <b>12</b> and a pulse oximetry monitor <b>14</b>. The sensor <b>12</b> includes an emitter <b>16</b> for emitting light at certain wavelengths into a patient's tissue and a detector <b>18</b> for detecting the light after it is reflected and/or absorbed by the patient's tissue. The monitor <b>14</b> may be configured to calculate physiological parameters received from the sensor <b>12</b> relating to light emission and detection. Further, the monitor <b>14</b> includes a display <b>20</b> configured to display information regarding the physiological parameters, information about the system, and/or alarm indications. The monitor <b>14</b> also includes a speaker <b>22</b> to provide an audible alarm in the event that the patient's physiological parameters are not within a normal range, as defined based on patient characteristics. The sensor <b>12</b> is communicatively coupled to the monitor <b>14</b> via a cable <b>24</b>. However, in other embodiments a wireless transmission device (not shown) or the like may be utilized instead of or in addition to the cable <b>24</b>.</p>
+      <p id="p-00026-en" num="0023">As indicated by the illustrated embodiment, the pulse oximetry system <b>10</b> may include a multi-parameter patient monitor <b>26</b>. In addition to the monitor <b>14</b>, or alternatively, the multi-parameter patient monitor <b>26</b> may be configured to calculate physiological parameters and to provide a central display <b>28</b> for information from the monitor <b>14</b> and from other medical monitoring devices or systems (not shown). For example, the multi-parameter patient monitor <b>26</b> may be configured to display a patient's SpO<sub>2</sub>, pulse rate, and respiratory rate information from the monitor <b>14</b> and blood pressure from a blood pressure monitor (not shown) on the display <b>28</b>. Additionally, the multi-parameter patient monitor <b>26</b> may emit a visible or audible alarm via the display <b>28</b> or a speaker <b>30</b>, respectively, if the patient exhibits signs of distress. The monitor <b>14</b> may be communicatively coupled to the multi-parameter patient monitor <b>26</b> via a cable <b>32</b> or <b>34</b> coupled to a sensor input port or a digital communications port, respectively. In addition, the monitor <b>14</b> and/or the multi-parameter patient monitor <b>26</b> may be connected to a network to enable the sharing of information with servers or other workstations (not shown).</p>
+      <p id="p-00027-en" num="0024">
+        <figref>FIG. 3</figref> is a block diagram of the exemplary pulse oximetry system <b>10</b> of <figref>FIG. 2</figref> coupled to a patient <b>40</b> in accordance with present embodiments. Specifically, <figref>FIG. 3</figref> illustrates certain components of the sensor <b>12</b> and the monitor <b>14</b> illustrated in <figref>FIG. 2</figref>. As shown in <figref>FIG. 3</figref>, the sensor <b>12</b> may include the emitter <b>16</b>, the detector <b>18</b>, and an encoder <b>42</b>. In accordance with techniques for producing a photo-plethysmographic waveform, the emitter <b>16</b> may be configured to emit at least two wavelengths of light, e.g., RED and IR, into a patient's tissue <b>40</b>. Hence, the emitter <b>16</b> may include a RED LED <b>44</b> and an IR LED <b>46</b> for emitting light into the patient's tissue <b>40</b> at the wavelengths used to calculate the patient's physiological parameters. In certain embodiments, the RED wavelength may be between about 600 nm and about 700 nm, and the IR wavelength may be between about 800 nm and about 1000 nm. Alternative light sources may be used in other embodiments. For example, a single wide-spectrum light source may be used, and the detector <b>18</b> may be configured to detect light only at certain wavelengths. In another example, the detector <b>18</b> may detect a wide spectrum of wavelengths of light, and the monitor <b>14</b> may process only those wavelengths which are of interest. It should be understood that, as used herein, the term “light” may refer to one or more of ultrasound, radio, microwave, millimeter wave, infrared, visible, ultraviolet, gamma ray or X-ray electromagnetic radiation, and may also include any wavelength within the radio, microwave, infrared, visible, ultraviolet, or X-ray spectra, and that any suitable wavelength of light may be appropriate for use with the present techniques.</p>
+      <p id="p-00028-en" num="0025">In one embodiment, the detector <b>18</b> may be configured to detect the intensity of light at the RED and IR wavelengths. In operation, light enters the detector <b>18</b> after being modulated by the patient's tissue <b>40</b>. The detector <b>18</b> converts the intensity of the received light into an electrical signal. The light intensity is directly related to the absorbance and/or reflectance of light in the tissue <b>40</b>. That is, when more light at a certain wavelength is absorbed or reflected, less light of that wavelength is received from the tissue by the detector <b>18</b>. After converting the received light to an electrical signal, the detector <b>18</b> sends the signal to the monitor <b>14</b>, where the photo-plethysmograph waveform may be generated and physiological parameters may be calculated based on the absorption of the RED and IR wavelengths in the patient's tissue <b>40</b>.</p>
+      <p id="p-00029-en" num="0026">The encoder <b>42</b> may contain information about the sensor <b>12</b>, such as what type of sensor it is (e.g., whether the sensor is intended for placement on a forehead or digit) and the wavelengths of light emitted by the emitter <b>16</b>. This information may allow the monitor <b>14</b> to select appropriate algorithms and/or calibration coefficients for calculating the patient's physiological parameters. The encoder <b>42</b> may, for instance, be a coded resistor which stores values corresponding to the type of the sensor <b>12</b> and/or the wavelengths of light emitted by the emitter <b>16</b>. These coded values may be communicated to the monitor <b>14</b>, which determines how to calculate the patient's physiological parameters. In another embodiment, the encoder <b>42</b> may be a memory on which the type of the sensor <b>12</b>, the wavelengths of light emitted by the emitter <b>16</b>, and/or the proper calibration coefficients and/or algorithms to be used for calculating the patient's physiological parameters may be stored for communication to the monitor <b>14</b>.</p>
+      <p id="p-00030-en" num="0027">Signals from the detector <b>18</b> and the encoder <b>42</b> may be transmitted to the monitor <b>14</b>. The monitor <b>14</b> generally includes a microprocessor <b>48</b> connected to an internal bus <b>50</b>. Also connected to the bus are a read-only memory (ROM) <b>52</b>, a random access memory (RAM) <b>54</b>, user inputs <b>56</b>, the display <b>20</b>, and the speaker <b>22</b>. A time processing unit (TPU) <b>58</b> provides timing control signals to a light drive circuitry <b>60</b> which controls when the emitter <b>16</b> is illuminated and the multiplexed timing for the RED LED <b>44</b> and the IR LED <b>46</b>. The TPU <b>58</b> also controls the gating-in of signals from detector <b>18</b> through an amplifier <b>62</b> and a switching circuit <b>64</b>. These signals are sampled at the proper time, depending upon which light source is illuminated. The received signal from the detector <b>18</b> may then be passed through an amplifier <b>66</b>, a low pass filter <b>68</b>, and an analog-to-digital converter <b>70</b>. The digital data may then be stored in a queued serial module (QSM) <b>72</b> for later downloading to the RAM <b>54</b> as the QSM <b>72</b> fills up. In one embodiment, there may be multiple separate parallel paths having the amplifier <b>66</b>, the filter <b>68</b>, and the A/D converter <b>70</b> for multiple light wavelengths or spectra received.</p>
+      <p id="p-00031-en" num="0028">Signals corresponding to information about the sensor <b>12</b> may be transmitted from the encoder <b>42</b> to a decoder <b>74</b>. These signals may include, for example, encoded information relating to the type of the sensor <b>12</b> and/or the wavelengths of light emitted by the emitter <b>16</b>. The decoder <b>74</b> may translate these signals to enable the microprocessor <b>48</b> to calculate or determine the physiological parameters based on algorithms or look-up tables stored in the ROM <b>52</b>. In addition, or alternatively, the encoder <b>42</b> may contain the algorithms or look-up tables for identifying the physiological parameters. The user inputs <b>56</b> may also be used to enter information about the sensor <b>12</b>.</p>
+      <p id="p-00032-en" num="0029">The microprocessor <b>48</b> may then determine the patient's physiological parameters, such as SpO<sub>2</sub>, pulse rate, respiratory effort, and so forth, based on the values of the received signals corresponding to the light received by the detector <b>18</b> (e.g., the photo-plethysmographic waveform) and the information about the sensor <b>12</b> from the encoder <b>42</b> and/or the user inputs <b>56</b>. For example, the Model N600x pulse oximeter available from Nellcor Puritan Bennett LLC or Covidien may calculate SpO<sub>2 </sub>utilizing attenuation signals from two or more wavelengths of light, as described above. Additionally, the PlethRESP™ technology available from CardioDigital Inc., or another method (e.g. time- or frequency-domain detection of changes in pulse rate or photoplethysmographic DC or AC components that are synchronous with the heart rate), may be implemented to determine the patient's respiratory effort. The PlethRESP™ method utilizes wavelet transform-based technologies applied to the photo-plethysmographic waveform produced from the pulse oximetry attenuation signals to determine respiratory effort.</p>
+      <p id="p-00033-en" num="0030">Upon determining a patient's blood oxygen saturation and respiratory effort, various analyses may be performed to characterize the patient's respiratory stability, as described below. Additionally, the non-invasive single-sensor embodiments described herein may be preferable to other techniques utilizing multiple and/or invasive sensors. In an embodiment, apnea may be identified and characterized (i.e., obstructive or central) based on the SpO<sub>2 </sub>and respiratory effort. Obstructive apnea is generally caused by an obstruction of the airway. For example, in obstructive sleep apnea, the patient's tongue and soft palate may relax too much, thereby closing the throat until the patient is aroused. Because no net airflow occurs with a closed airway, the work performed by the respiratory muscles may result in decreased intrathoracic and lung pressure (and therefore increased intrathoracic and lung pressure variations). As described above, increased pressure variations may amplify the effects that respiration has on the photo-plethysmographic waveform. Such effects may appear similar to large, unobstructed breaths rather than obstructive apnea. Accordingly, it is now recognized that it may be desirable to analyze the patient's respiratory efforts in conjunction with blood oxygen saturation to distinguish obstructive apnea from heavy breathing.</p>
+      <p id="p-00034-en" num="0031">Furthermore, it is now recognized that it may be desirable to distinguish obstructive apnea from central apnea using present embodiments because the treatments associated with each type of apnea may differ. Obstructive apnea may be treated, for example, by positive airway pressure, surgical intervention, or position treatments. In cases of central apnea, the patient's respiratory center in the brain may fail to give the signal to the body to inhale. That is, there is no obstruction preventing the patient from inhaling, but no effort is made to inhale. Central apnea may be treated by positive airway pressure with a spontaneous/time feature which ensures a minimum number of breaths per minute are taken. In addition, central apnea may be treated by administering, adjusting, or withholding some medications.</p>
+      <p id="p-00035-en" num="0032">In some embodiments, apnea may be diagnosed and/or characterized utilizing SpO<sub>2 </sub>pattern recognition in conjunction with respiratory effort. Such pattern recognition technology may be described, for example, by Dr. Lawrence Lynn in U.S. Pat. Nos. 5,605,151, 5,891,023, 6,223,064, 6,342,039, 6,609,016, 6,748,252, 6,760,608, and 7,081,095, which are hereby incorporated by reference in their entirety for all purposes. For example, if a large increase in the rate and/or amplitude of photo-plethysmographically detected respiratory effort is closely followed by a gradual drop in SpO<sub>2</sub>, these factors may indicate obstructive apnea. Accordingly, the entire period of increased respiratory effort may be characterized as obstructive apnea. In this context, “closely followed” may include any circulatory delay between the lungs and the site of the pulse oximetry sensor. Such delay may be fairly stable over a period of several minutes and therefore may be predictable. When the obstruction is removed, such as when the patient is aroused, SpO<sub>2 </sub>may rise quickly, thereby enabling the end of the obstructive period to be accurately identified. In contrast, a period of increased respiratory effort followed by a stable or increasing SpO<sub>2 </sub>may not be indicative of an obstruction and therefore may not be characterized as apnea. If a history of repetitive increased respiratory effort and desaturation is recognized, subsequent increases in photo-plethysmographically detected respiratory effort that are not long enough to produce significant desaturation may nonetheless be classified as likely obstructive apneic events. Accordingly, apnea may be detected and properly characterized by combining the detection of respiratory effort with blood oxygen saturation in accordance with embodiments of the present disclosure.</p>
+      <p id="p-00036-en" num="0033">Additionally, if a decrease in the rate of respiratory effort is closely followed by a drop in SpO<sub>2</sub>, this may be indicative of central apnea. Furthermore, both obstructive and central apnea may cause decreases in SpO<sub>2 </sub>and increases in blood carbon dioxide levels, both of which may accelerate the patient's pulse rate during the apneic event. Accordingly, combined analysis of respiratory effort, SpO<sub>2 </sub>patterns, and heart rate patterns may enable the monitor <b>14</b> to confirm that changes in respiratory effort and SpO<sub>2 </sub>are due to and indicative of apnea rather than due to some measurement artifact (e.g. motion or electromagnetic interference).</p>
+      <p id="p-00037-en" num="0034">In another embodiment, an increase in respiratory effort may be indicative of an underlying cause, such as impaired alveolar diffusion (e.g., pneumonia), increased airway resistance (e.g., chronic obstructive pulmonary disease (COPD) or asthma), or increased metabolism (e.g., fever). For example, if a large and gradual rise in respiratory effort is accompanied by an increase in heart rate and/or a reduction in SpO<sub>2</sub>, this may indicate that the increased respiratory effort is the result of an underlying condition rather than an obstruction. In some instances, it may be desirable to produce an indexed SpO<sub>2 </sub>value which accounts for the patient's increased respiratory effort in producing a blood oxygen saturation value. An example of such an indexed SpO<sub>2 </sub>value may use the Ventilation Oximetry Index (VOI) described by Dr. Lawrence Lynn in U.S. Pat. Nos. 6,223,064, 6,342,039, 6,609,016, 6,748,252, and 6,760,608, which are herein incorporated by reference in their entirety for all purposes. The VOI may generally be determined by comparing a patient's actual respiratory effort to an expected respiratory effort based on the patient's SpO<sub>2</sub>. For example, if the patient is breathing heavily (increased respiratory effort) but the patient's SpO<sub>2 </sub>is not increasing, this may result in a lower indexed SpO<sub>2 </sub>value. That is, if the patient were breathing normally, the SpO<sub>2 </sub>value would be lower than the measured value.</p>
+      <p id="p-00038-en" num="0035">In a further embodiment, combined SpO<sub>2 </sub>and respiratory effort evaluations may be utilized to adjust parameters of a mechanical ventilator (e.g., triggering, fraction of inspired oxygen (FiO<sub>2</sub>), positive end-expiratory pressure (PEEP)). For example, where there is a significant delay between the patient's effort to trigger a ventilator breath and when the ventilator triggers the breath, this may result in a pattern of reduced intrathoracic and lung pressure while the patient tries to trigger each ventilator breath, followed by increased intrathoracic and lung pressure during the ventilator's inspiratory phase, therefore causing a pattern of brief periods of accelerated venous return due to the patient's triggering effort followed by reduced venous return during the ventilator's inspiratory phase. This distinctive pattern may be recognized utilizing the techniques described above, and the ventilator triggering may be adjusted accordingly. Such adjustment may be automatic, or the caregiver may be alerted to manually adjust the ventilator triggering.</p>
+      <p id="p-00039-en" num="0036">Furthermore, with regard to ventilators that use SpO<sub>2 </sub>readings to automatically adjust parameters, it may be desirable to ensure that the pulse oximetry sensor is connected to the appropriate patient (i.e., the patient being ventilated) by comparing the SpO<sub>2 </sub>reading with the patient's respiratory effort. For example, if a caregiver mistakenly places a sensor that is coupled to a ventilator on a patient other than the one using the ventilator, the present embodiment may prevent changes to the ventilator settings. Accordingly, the respiratory-induced effects on the photo-plethysmographic waveform may be correlated to the phase or rate of the ventilator. The ventilator's respiratory effort increases rather than decreases intrathoracic and lung pressure and therefore the detected circulatory variations may be opposite that observed with diaphragmatic respiration. If the respiratory-induced effects indicated on the waveform do not match the ventilator's respiratory effort, ventilator adjustments may be suspended and/or a notification may be provided to the caregiver to ensure that the sensor is applied to the correct patient.</p>
+      <p id="p-00040-en" num="0037">While embodiments of this disclosure have been depicted, described, and are defined by reference to specific example embodiments of the disclosure, such references do not imply a limitation on the disclosure, and no such limitation is to be inferred. The subject matter disclosed is capable of considerable modification, alteration, and equivalents in form and function, as will occur to those ordinarily skilled in the pertinent art and having the benefit of this disclosure. The depicted and described embodiments of this disclosure are examples only, and are not exhaustive of the scope of the disclosure.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A system comprising:
+<claim-text>a ventilator attached to a patient configured to operate based at least in part on a ventilator setting to generate a desired respiratory effort; and</claim-text><claim-text>a monitor configured to:
+<claim-text>analyze a plethysmograph signal to determine information corresponding to an actual respiratory effort,</claim-text><claim-text>automatically adjust the ventilator setting based on blood oxygen saturation of the patient,</claim-text><claim-text>determine whether a desired relationship exists between the information corresponding to the actual respiratory effort and the desired respiratory effort, and</claim-text><claim-text>operate the ventilator such that the ventilator adjustments are suspended when the desired relationship is determined not to exist.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the monitor is further configured to determine whether a relationship exists between the ventilation phase of the ventilator and the actual respiratory effort.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the monitor is further configured to determine whether a relationship exists between the ventilation rate of the ventilator and the actual respiratory effort.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the monitor is further configured to generate a sensor placement alarm signal when the desired relationship is determined not to exist.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the blood oxygen saturation is determined based at least in part on the plethysmograph signal.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en" independent="true">
+      <claim-text>
+        <b>6</b>. A processor-implemented method comprising:
+<claim-text>operating a ventilator attached to a patient based at least in part on a ventilator setting to generate a desired respiratory effort;</claim-text><claim-text>analyzing a plethysmograph signal to determine information corresponding to an actual respiratory effort;</claim-text><claim-text>automatically adjusting the ventilator setting based on blood oxygen saturation of the patient;</claim-text><claim-text>determining whether a desired relationship exists between the information corresponding to the actual respiratory effort and the desired respiratory effort; and</claim-text><claim-text>operating a ventilator such that ventilator adjustments are suspended when the desired relationship is determined not to exist.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref> wherein determining whether a desired relationship exists between the information corresponding to the actual respiratory effort and the desired respiratory effort comprises determining whether a relationship exists between the ventilation phase of the ventilator and the actual respiratory effort.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref> wherein determining whether a desired relationship exists between the information corresponding to the actual respiratory effort and the desired respiratory effort comprises determining whether a relationship exists between the ventilation rate of the ventilator and the actual respiratory effort.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref> further comprising generating a sensor placement alarm signal when the desired relationship is determined not to exist.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref> wherein the blood oxygen saturation is determined based at least in part on the plethysmograph signal.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. A processor-implemented method comprising:
+<claim-text>calculating a patient's blood oxygen saturation value (SpO2) based on a received plethysmograph signal;</claim-text><claim-text>calculating the patient's expected respiratory effort value (E<sub>expected</sub>) based at least in part on the patient's blood oxygen saturation;</claim-text><claim-text>determining the patient's actual respiratory effort value (E<sub>actual</sub>);</claim-text><claim-text>calculating a ventilation oximetry index (VOI) based on the patient's actual respiratory effort value and the expected respiratory effort value;</claim-text><claim-text>providing an output based on the VOI.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref> further comprising:
+<claim-text>calculating a predicted carbon dioxide saturation change value (dCO2) based on the patient's actual respiratory effort value and the expected respiratory effort value, wherein the VOI is based on the predicted carbon dioxide saturation change value.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the dCO2 is calculated according to a formula: dCO2=40-40(E<sub>expected</sub>/E<sub>actual</sub>).</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the VOI is calculated according to a formula: VOI=SpO2-0.5(dCO2).</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the VOI is indicative of the patient's blood oxygen saturation value that would have been calculated if the patient was not breathing abnormally.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en" independent="true">
+      <claim-text>
+        <b>16</b>. A monitor configured to:
+<claim-text>calculate a patient's blood oxygen saturation value (SpO2) based on a received plethysmograph signal;</claim-text><claim-text>calculate the patient's expected respiratory effort value (E<sub>expected</sub>) based at least in part on the patient's blood oxygen saturation;</claim-text><claim-text>determine the patient's actual respiratory effort value (E<sub>actual</sub>);</claim-text><claim-text>calculate a ventilation oximetry index (VOI) based on the patient's actual respiratory effort value and the expected respiratory effort value;</claim-text><claim-text>provide an output based on the VOI.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The monitor of <claim-ref idref="clm-00016-en">claim 16</claim-ref> that is further configured to:
+<claim-text>calculate a predicted carbon dioxide saturation change value (dCO2) based on the patient's actual respiratory effort value and the expected respiratory effort value, wherein the VOI is based on the predicted carbon dioxide saturation change value.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The monitor of <claim-ref idref="clm-00017-en">claim 17</claim-ref> wherein the dCO2 is calculated according to a formula: dCO2=40-40(E<sub>expected</sub>/E<sub>actual</sub>).</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The monitor of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the VOI is calculated according to a formula: VOI=SpO2-0.5(dCO2).</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The monitor of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the VOI is indicative of the patient's blood oxygen saturation value that would have been calculated if the patient was not breathing abnormally.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246195A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150246195A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246195A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246195A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246195A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246195A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246195A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246195A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246195A1_00005.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150246195A1-20150903-M00001.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150246195A1_00006.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150246195A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246195A1.PDF" type="pdf" size="429108" pages="10" />
+</lexisnexis-patent-document>

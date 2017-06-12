@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252155A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021802" date-changed="20160112" time-changed="151857">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229150">
+        <country>US</country>
+        <doc-number>20150252155</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14423083</doc-number>
+        <date>20130807</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012182253</doc-number>
+        <date>20120821</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160112">
+      <classification-ipcr sequence="1">
+        <text>C08J   5/18        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>5</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B01F   7/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>01</class>
+        <subclass>F</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B60C   1/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>60</class>
+        <subclass>C</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C08J   3/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>3</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160112">
+      <classification-cpc sequence="1">
+        <text>C08J   5/18        20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>5</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B01F   7/00975     20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>F</subclass>
+        <main-group>7</main-group>
+        <subgroup>00975</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B01F2215/0049      20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>F</subclass>
+        <main-group>2215</main-group>
+        <subgroup>0049</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>B29B   7/46        20130101 LA20140902BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>46</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140902</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>B29B   7/60        20130101 LI20140902BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>60</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140902</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>B29B   9/06        20130101 LA20140902BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>B</subclass>
+        <main-group>9</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140902</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>B29C  47/6056      20130101 LA20140910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>C</subclass>
+        <main-group>47</main-group>
+        <subgroup>6056</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>B29C  47/6087      20130101 LA20140910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>C</subclass>
+        <main-group>47</main-group>
+        <subgroup>6087</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>B29K2021/003       20130101 LA20140910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>K</subclass>
+        <main-group>2021</main-group>
+        <subgroup>003</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>B60C   1/0008      20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>60</class>
+        <subclass>C</subclass>
+        <main-group>1</main-group>
+        <subgroup>0008</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>B60C2005/145       20130101 LA20140922BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>60</class>
+        <subclass>C</subclass>
+        <main-group>2005</main-group>
+        <subgroup>145</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140922</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C08J   3/005       20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>3</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C08J2323/26        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2323</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>C08J2327/24        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2327</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>C08J2329/06        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2329</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>C08J2377/02        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2377</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="17">
+        <text>C08J2423/26        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2423</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="18">
+        <text>C08J2427/24        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2427</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="19">
+        <text>C08J2429/06        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2429</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="20">
+        <text>C08J2433/10        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2433</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="21">
+        <text>C08J2477/02        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2477</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="22">
+        <text>C08L  23/08        20130101 LA20140320BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>23</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140320</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="23">
+        <text>C08L  23/283       20130101 LI20140407BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>23</main-group>
+        <subgroup>283</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140407</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="24">
+        <text>C08L  77/00        20130101 LA20140320BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>77</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140320</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="25">
+        <text>F16L  11/04        20130101 LI20140320BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>16</class>
+        <subclass>L</subclass>
+        <main-group>11</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140320</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C08L  23/283       20130101 LI20140730BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>23</main-group>
+            <subgroup>283</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140730</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08L  23/16        20130101 LI20140730BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>23</main-group>
+            <subgroup>16</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140730</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>C08L  23/0869      20130101 LI20140730BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>23</main-group>
+            <subgroup>0869</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140730</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>2</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C08L  29/04        20130101 LI20150518BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>29</main-group>
+            <subgroup>04</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150518</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08L  15/02        20130101 LI20150518BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>15</main-group>
+            <subgroup>02</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150518</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>C08L  23/0869      20130101 LI20150518BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>23</main-group>
+            <subgroup>0869</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150518</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">9</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">Method for Producing Thermoplastic Elastomer Composition</invention-title>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>The Yokohama Rubber Co., LTD.</orgname>
+            <address>
+              <city>Minato-ku, Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>JP</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Sato</last-name>
+            <first-name>Shun</first-name>
+            <address>
+              <city>Hiratsuka-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13071396</doc-number>
+        <date>20130807</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014030541</doc-number>
+        <date>20140227</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="164487574">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252155</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20130807</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2889322</doc-number>
+            <kind>A1</kind>
+            <date>20150701</date>
+          </document-id>
+          <application-date>
+            <date>20130807</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104583282</doc-number>
+            <kind>A</kind>
+            <date>20150429</date>
+          </document-id>
+          <application-date>
+            <date>20130807</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014030541</doc-number>
+            <kind>A1</kind>
+            <date>20140227</date>
+          </document-id>
+          <application-date>
+            <date>20130807</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164487573">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252155</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20130807</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2889322</doc-number>
+            <kind>A1</kind>
+            <date>20150701</date>
+          </document-id>
+          <application-date>
+            <date>20130807</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104583282</doc-number>
+            <kind>A</kind>
+            <date>20150429</date>
+          </document-id>
+          <application-date>
+            <date>20130807</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014030541</doc-number>
+            <kind>A1</kind>
+            <date>20140227</date>
+          </document-id>
+          <application-date>
+            <date>20130807</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A method for producing a thermoplastic elastomer composition comprising using a twin screw kneader to melt-knead a thermoplastic resin and an elastomer; the twin screw kneader having at least two raw material inlets including a first raw material inlet and a second raw material inlet provided at a position separated by 15 D to 38 D on a downstream side from the first raw material inlet, where D is a cylinder inside diameter of the twin screw kneader; the elastomer being fed in a divided manner from the first and second raw material inlets; a proportion of the elastomer fed from the second raw material inlet being from 10 to 60 vol % of a total amount of the elastomer; and the elastomer being melt-kneaded in a kneading zone having a length of from 0.5 D to 20 D in a cylinder axis direction of the twin screw kneader.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150220</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252155A1</docdb-publication-number>
+      <docdb-application-id>444310373</docdb-application-id>
+      <new-owner>THE YOKOHAMA RUBBER CO., LTD., JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:SATO, SHUN;REEL/FRAME:034999/0919</free-text-description>
+      <effective-date>
+        <date>20141126</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present technology relates to a method for producing a thermoplastic elastomer composition. More specifically, the present technology relates to a method for producing a thermoplastic elastomer composition having excellent low-temperature durability, a thermoplastic elastomer composition produced by the method, and a product obtained from the thermoplastic elastomer composition.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">There are known thermoplastic elastomer compositions having an excellent balance of air permeation resistance and flexibility, the compositions being obtained by dispersing a specific elastomer component into a specific thermoplastic resin matrix as a discontinuous phase (Japanese Unexamined Patent Application No. H08-259741A).</p>
+      <p id="p-00003-en" num="0003">For example, a thermoplastic resin elastomer composition produced by melt-kneading a modified polyamide resin, an ethylene-vinyl alcohol copolymer, and a maleic anhydride modified ethylene-propylene copolymer with a twin screw kneader and an example in which a pneumatic tire using a film consisting of the composition as an inner liner is produced have been reported (Japanese Unexamined Patent Application Publication No. 2010-132850A).</p>
+      <p id="p-00004-en" num="0004">The elastomer component in a thermoplastic elastomer composition originally has an effect of improving the low-temperature durability of the thermoplastic elastomer composition. However, when producing an thermoplastic elastomer composition by melt-kneading a thermoplastic resin and an elastomer with a twin screw kneader, there has been a problem in that simply increasing the elastomer ratio causes the proportion of coarse elastomer particles to increase without the elastomer being finely dispersed in the thermoplastic resin, which prevents the original low-temperature durability improving effect from being sufficiently expressed.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00005-en" num="0005">The present technology provides a method for producing a thermoplastic elastomer composition having excellent low-temperature durability.</p>
+      <p id="p-00006-en" num="0006">As a result of conducting extensive research, the present inventors discovered that when an elastomer is fed in a divided manner into the twin screw kneader in a method for producing a thermoplastic elastomer composition using a twin screw kneader, the kneaded product is cooled by the elastomer that is injected later, and the viscosities of the thermoplastic resin and the elastomer approach one another, which causes the elastomer to be finely dispersed in the thermoplastic resin and makes it possible to achieve the desired low-temperature durability improving effect.</p>
+      <p id="p-00007-en" num="0007">That is, the present technology includes the following aspects [1] to [9].</p>
+      <p id="p-00008-en" num="0008">[1] A method for producing a thermoplastic elastomer composition comprising using a twin screw kneader to melt-knead a thermoplastic resin and an elastomer; the twin screw kneader having at least two raw material inlets including a first raw material inlet and a second raw material inlet provided at a position separated by from 15 D to 38 D on a downstream side from the first raw material inlet, where D is a cylinder inside diameter of the twin screw kneader; the elastomer being fed in a divided manner from the first and second raw material inlets; a proportion of the elastomer fed from the second inlet being from 10 to 60 vol % of a total amount of the elastomer; and the elastomer being melt-kneaded in a kneading zone having a length of from 0.5 D to 20 D in a cylinder axis direction of the twin screw kneader, at least one kneading zone being respectively provided between the first and second raw material inlets and on a downstream side from the second raw material inlet.</p>
+      <p id="p-00009-en" num="0009">[2] The production method according to [1], wherein a temperature (A) of the elastomer fed from the second raw material inlet is at least 100° C. lower than a resin temperature (T) of a cylinder tip discharge part at the time of kneading.</p>
+      <p id="p-00010-en" num="0010">[3] The production method according to [1] or [2], wherein the total amount of the elastomer is at least 30 parts by volume per 100 parts by volume of a total amount of the thermoplastic resin and the elastomer.</p>
+      <p id="p-00011-en" num="0011">[4] The production method according to any one of [1] to [3], wherein the elastomer is dynamically crosslinked.</p>
+      <p id="p-00012-en" num="0012">[5] The production method according to any one of [1] to [4], wherein the elastomer is at least one type selected from the group consisting of brominated isobutylene-p-methylstyrene copolymers, ethylene-α-olefin copolymers, ethylene-glycidyl methacrylate copolymers, ethylene-ethyl acrylate copolymers, and modified products thereof.</p>
+      <p id="p-00013-en" num="0013">[6] The production method according to any one of [1] to [5], wherein the thermoplastic resin is at least one type selected from the group consisting of ethylene-vinyl alcohol copolymers, polyamide resins, and polyester resins.</p>
+      <p id="p-00014-en" num="0014">[7] A thermoplastic elastomer composition produced by the production method described in any one of [1] to [6].</p>
+      <p id="p-00015-en" num="0015">[8] A pneumatic tire using a film comprising the thermoplastic elastomer composition described in [7].</p>
+      <p id="p-00016-en" num="0016">[9] A hose using a film comprising the thermoplastic elastomer composition described in [7].</p>
+      <p id="p-00017-en" num="0017">With the method of the present technology, it is possible to produce a thermoplastic elastomer composition having excellent low-temperature durability.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 1</figref> is a schematic view of an example of a twin screw kneader that can be used in the present technology.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIGS. 2A-3B</figref> include Tables 1-2 illustrating conventional, comparative and working examples.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00020-en" num="0020">The present technology relates to a method for producing a thermoplastic elastomer composition comprising using a twin screw kneader to melt-knead a thermoplastic resin and an elastomer.</p>
+      <p id="p-00021-en" num="0021">A thermoplastic elastomer composition is a composition in which an elastomer component is dispersed in a thermoplastic resin component, the thermoplastic resin component constituting a matrix phase, and the elastomer component constituting a dispersion phase.</p>
+      <p id="p-00022-en" num="0022">Thermoplastic resins that can be used in the present technology are not particularly limited and can be appropriately selected in accordance with the application of the thermoplastic elastomer composition. Examples of thermoplastic resins include polyamide resins, polyester resins, polynitrile resins, polymethacrylate resins, polyvinyl resins, cellulose resins, fluororesins, imide resins, polystyrene resins, and polyolefin resins. Examples of polyamide resins include nylon 6 (N6), nylon 66 (N66), nylon 46 (N46), nylon 11 (N11), nylon 12 (N12), nylon 610 (N610), nylon 612 (N612), nylon 6/66 (N6/66), nylon 6/66/12 (N6/66/12), nylon 6/66/610 (N6/66/610), nylon MXD6 (MXD6), nylon 6T, nylon 6/6T, nylon 9T, nylon 66/PP copolymers, and nylon 66/PPS copolymers. Examples of polyester resins include aromatic polyesters such as polybutylene terephthalate (PBT), polyethylene terephthalate (PET), polyethylene isophthalate (PEI), PET/PEI copolymers, polyarylate (PAR), polybutylene naphthalate (PBN), liquid crystal polyesters, and polyoxyalkylene diimidic acid/polybutyrate-terephthalate copolymers. Examples of polynitrile resins include polyacrylonitrile (PAN), polymethacrylonitrile, acrylonitrile/styrene copolymers (AS), methacrylonitrile/styrene copolymers, and methacrylonitrile/styrene/butadiene copolymers. Examples of polymethacrylate resins include polymethyl methacrylate (PMMA) and polyethyl methacrylate. Examples of polyvinyl resins include polyvinyl acetate (PVAc), polyvinyl alcohol (PVA), ethylene-vinyl alcohol copolymers (EVOH), ethylene-vinyl acetate copolymers (EVA), polyvinylidene chloride (PVDC), polyvinyl chloride (PVC), vinyl chloride/vinylidene chloride copolymers, and vinylidene chloride/methyl acrylate copolymers. Examples of cellulose resins include cellulose acetate and cellulose acetate butyrate. Examples of fluororesins include polyvinylidene fluoride (PVDF), polyvinyl fluoride (PVF), polychlorofluoroethylene (PCTFE), and tetrafluoroethylene/ethylene copolymers (ETFE). Examples of imide resins include aromatic polyamides (PI). Examples of polystyrene resins include polystyrenes (PS). Examples of polyolefin resins include polyethylenes (PE) and polypropylenes (PP).</p>
+      <p id="p-00023-en" num="0023">Of these, at least one type selected from the group consisting of ethylene-vinyl alcohol copolymers, polyamide resins, and polyester resins is preferable from the perspective of air blocking performance.</p>
+      <p id="p-00024-en" num="0024">In order to improve processability, dispersibility, heat resistance, oxidation resistance, or the like, the thermoplastic resin used in the present technology may contain additive ingredients that are generally blended into thermoplastic resin compositions, such as fillers, reinforcing agents, processing aids, stabilizers, and antioxidants, to an extent that does not inhibit the effects of the present technology. A plasticizer should not be added from the perspectives of gas barrier properties and heat resistance, a plasticizer may be added to an extent that does not inhibit the effects of the present technology.</p>
+      <p id="p-00025-en" num="0025">Elastomers that can be used in the present technology are not particularly limited and can be appropriately selected in accordance with the application of the thermoplastic elastomer composition. Examples of elastomers include diene-based rubbers and hydrogenated products thereof, olefin-based rubbers, halogen-containing rubbers, silicone rubbers, sulfur-containing rubbers, and fluorine rubbers. Examples of diene-based rubbers and hydrogenated products thereof include natural rubber (NR), isoprene rubber (IR), epoxidized natural rubber (ENR), styrene butadiene rubber (SBR), butadiene rubber (BR) (high-cis BR and low-cis BR), acrylonitrile butadiene rubber (NBR), hydrogenated NBR, and hydrogenated SBR. Examples of olefin-based rubbers include ethylene propylene rubber (EPM), ethylene propylene diene rubber (EPDM), maleic acid-modified ethylene propylene rubber (M-EPM), ethylene-α-olefin copolymers and modified products thereof such as maleic anhydride-modified ethylene-α-olefin copolymers, for example, ethylene-glycidyl methacrylate copolymers and modified products thereof, ethylene-ethyl acrylate copolymers and modified products thereof such as maleic anhydride-modified ethylene-ethyl acrylate copolymers, for example, butyl rubber (IIR), copolymers of isobutylene and an aromatic vinyl or a diene monomer, acrylic rubber (ACM), and ionomers. Examples of halogen-containing rubbers include halogenated butyl rubbers such as brominated butyl rubber (Br-IIR) or chlorinated butyl rubber (Cl-IIR), brominated isobutylene-p-methyl styrene copolymers (BIMS) and modified products thereof, halogenated isobutylene-isoprene copolymer rubber, chloroprene rubber (CR), hydrin rubber (CHR), chlorosulfonated polyethylene (CSM), chlorinated polyethylene (CM), and maleic acid-modified chlorinated polyethylene (M-CM). Examples of silicone rubbers include methyl vinyl silicone rubber, dimethyl silicone rubber, and methyl phenyl vinyl silicone rubber. Examples of sulfur-containing rubbers include polysulfide rubber. Examples of the fluororubber include vinylidene fluoride rubber, fluorine-containing vinyl ether rubber, tetrafluoroethylene-propylene rubber, fluorine-containing silicone rubber, fluorine-containing phosphazene rubber, and the like.</p>
+      <p id="p-00026-en" num="0026">Of these, at least one type selected from the group consisting of brominated isobutylene-p-methyl styrene copolymers, ethylene-α-olefin copolymers, ethylene-glycidyl methacrylate copolymers, ethylene-ethyl acrylate copolymers, and modified products thereof is preferable from the perspective of durability or processability.</p>
+      <p id="p-00027-en" num="0027">The elastomer used in the present technology may contain additive ingredients that are generally blended into elastomer compositions, such reinforcing agents (fillers) such as carbon black or silica, softening agents, antioxidants, and processing aids, to an extent that does not inhibit the effects of the present technology.</p>
+      <p id="p-00028-en" num="0028">The method for producing a thermoplastic elastomer composition according to the present technology is implemented using a twin screw kneader. The L/D of the twin screw kneader is not particularly limited as long as the present technology can be implemented but preferably satisfies LD=30 to 60. Here, L is the length of the screw of the twin screw kneader in the axial direction, and D is the cylinder inside diameter.</p>
+      <p id="p-00029-en" num="0029">The twin screw kneader used in the present technology has at least two raw material inlets including a first raw material inlet and a second raw material inlet. The second raw material inlet is provided at a position separated by 15 D to 38 D on the downstream side from the first raw material inlet, where D is the cylinder inside diameter of the twin screw kneader, and preferably separated by 18 D to 32 D on the downstream side from the first raw material inlet.</p>
+      <p id="p-00030-en" num="0030">At least one kneading zone is respectively provided between the first and second raw material inlets and further downstream from the second raw material inlet in the twin screw kneader used in the method of the present technology. In the kneading zone, the thermoplastic resin and the elastomer are melt-kneaded. The length of each zone in the cylinder axis direction of the twin screw kneader is from 0.5 D to 20 D and preferably from 1.0 D to 10 D. When the length is shorter than 0.5 D, kneading is insufficient, and the elastomer is not sufficiently dispersed in the thermoplastic resin, which diminishes the durability and extrusion moldability. In addition, when the length is longer than 20 D, the thermoplastic resin and the elastomer are excessively kneaded, which causes gel particles or decreases in fluidity and diminishes processability.</p>
+      <p id="p-00031-en" num="0031">The melt kneading temperature in each kneading zone is a temperature of at least the melting point of the thermoplastic resin but is preferably a temperature 20° C. higher than the melting point of the thermoplastic resin such as from 120 to 250° C., for example.</p>
+      <p id="p-00032-en" num="0032">The kneading time is not particularly limited but is preferably from 3 to 15 minutes.</p>
+      <p id="p-00033-en" num="0033">In the method of the present technology, the elastomer is fed in a divided manner from the first and second raw material inlets. The proportion of the elastomer fed from the second raw material inlet is from 10 vol % to 60 vol % and preferably from 10 vol % to 30 vol % of the total amount of the elastomer. When the proportion is less than 10 vol %, sufficient durability cannot be achieved. In addition, when the proportion is greater than 60 vol %, kneading is not performed sufficiently, so the proportion of coarse rubber particles increases, and the processability and durability are diminished.</p>
+      <p id="p-00034-en" num="0034">In order to obtain a thermoplastic elastomer composition having the desired low-temperature durability in the method of the present technology, the temperature (A) of the elastomer fed from the second raw material inlet of the twin screw kneader is preferably at least 100° C. lower and more preferably from 130° C. to 230° C. lower than the resin temperature (T) of the cylinder tip discharge part at the time of kneading. When the elastomer is fed at a temperature A at least 100° C. lower than T, the kneaded product is sufficiently cooled, and the viscosities of the thermoplastic resin and the elastomer approach one another, which causes the elastomer to be finely dispersed in the thermoplastic resin and makes it possible to achieve the desired low-temperature durability improving effect.</p>
+      <p id="p-00035-en" num="0035">The total amount of the elastomer used in the method of the present technology is preferably at least 30 parts by volume and more preferably from 50 to 70 parts by volume per 100 parts by volume of the total amount of the thermoplastic resin and the elastomer.</p>
+      <p id="p-00036-en" num="0036">The feeding location of the thermoplastic resin in the present technology is not particularly limited, and the thermoplastic resin may be fed all at once or in a divided manner. Preferably, at least part of the thermoplastic resin is fed from the first raw material inlet or from a third raw material inlet provided upstream from the first raw material inlet. For example, the thermoplastic resin may be fed all at once from the first raw material inlet or fed all at once from the third raw material inlet, or part of the thermoplastic resin may be fed from the third raw material inlet and the remaining thermoplastic resin may then be fed from the first raw material inlet. Alternatively, part of the thermoplastic resin may be fed from the first raw material inlet or the third raw material inlet and the remaining thermoplastic resin may then be fed from a raw material inlet such as the second raw material inlet, for example, provided downstream from the first raw material inlet. For example, when thermoplastic resins A and B of different types are used, both of the resins A and B may be fed all at once from the first raw material inlet or fed all at once from the third raw material inlet, or the resin A (or the resin B) may be fed from the third raw material inlet and the resin B (or the resin A) may then be fed from the first raw material inlet. Alternatively, the resin A (or the resin B) may be fed from the first raw material inlet or the third raw material inlet and the resin B (or the resin A) may then be fed from a raw material inlet such as the second raw material inlet, for example, provided downstream from the raw material inlet.</p>
+      <p id="p-00037-en" num="0037">The elastomer constituting the dispersion phase of the thermoplastic elastomer composition is preferably crosslinked by means of dynamic crosslinking. By dynamically crosslinking the elastomer, it is possible to fix the matrix phase and the dispersion phase of the thermoplastic elastomer composition. Dynamic crosslinking can be performed by melt-kneading a non-crosslinked elastomer together with a crosslinking agent.</p>
+      <p id="p-00038-en" num="0038">Examples of the crosslinking agent used in dynamic crosslinking include zinc oxide, stearic acid, zinc stearate, magnesium oxide, m-phenylene bismaleimide, alkyl phenol resins and halides thereof, secondary amines (for example, N-(1,3-dimethylbutyl)-N′-phenyl-p-phenylene diamine or polymerized 2,2,4-trimethyl-1,2-dihydroquinoline), and tris-(2-hydroxyethyl)isocyanurate. Of these, zinc oxide, stearic acid, zinc stearate, N-(1,3-dimethylbutyl)-N′-phenyl-p-phenylene diamine, and tris-(2-hydroxyethyl)isocyanurate are preferable.</p>
+      <p id="p-00039-en" num="0039">The amount of the crosslinking agent is preferably from 0.5 to 4.0 parts by mass and more preferably from 1.0 to 2.0 parts by mass per 100 parts by mass of the total amount of the elastomer.</p>
+      <p id="p-00040-en" num="0040">The crosslinking agent is fed from a crosslinking agent inlet provided between the first raw material inlet and the second raw material inlet, for example.</p>
+      <p id="p-00041-en" num="0041">The thermoplastic elastomer composition produced by the method of the present technology is then extruded in a shape such as a film shape, a sheet shape, or a tube shape by an ordinary method from a die attached to the discharge port of the twin screw kneader in the molten state, or the composition is extruded in a strand shape and temporarily pelletized with a resin pelletizer, and the obtained pellets are then formed into a desired film shape, sheet shape, or tube shape in accordance with the application using an ordinary resin molding method such as inflation molding, calendar molding, or extrusion molding.</p>
+      <p id="p-00042-en" num="0042">The thermoplastic elastomer composition of the present technology demonstrates excellent low-temperature durability and fatigue resistance in addition to excellent gas blocking properties, so the composition can be suitably used as an air permeation prevention layer such as an inner liner, for example, of a pneumatic tire, for example, or can be suitably used as an air blocking layer of a hose.</p>
+      <p id="p-00043-en" num="0043">The thermoplastic elastomer composition of the present technology can also be laminated with a tacky adhesive composition so as to form a laminate. The tacky adhesive composition preferably has excellent adhesion with the rubber constituting the pneumatic tire. Although the composition is not particularly limited, examples include compositions containing epoxidized styrene-butadiene-styrene block copolymers, zinc oxide, stearic acid, vulcanization accelerators, and tackifiers. A laminate of the thermoplastic elastomer composition and a tacky adhesive composition can be produced, for example, by coextruding the thermoplastic elastomer composition and the tacky adhesive composition. Since a laminate of the thermoplastic elastomer composition and a tacky adhesive composition has excellent adhesion with the rubber constituting the pneumatic tire, the laminate can be suitably used as an air permeation prevention layer such as an inner liner, for example, of the pneumatic tire.</p>
+      <p id="p-00044-en" num="0044">A commonly used method can be used as the method for producing a pneumatic tire using a film consisting of the thermoplastic elastomer composition of the present technology. For example, the thermoplastic elastomer composition of the present technology is molded into a film having a prescribed width and thickness, and this is attached in a cylindrical shape to a drum for tire molding. Tire members such as a carcass layer, a belt layer, and a tread layer are sequentially attached and layered thereon, and the green tire is removed from the drum for tire molding. Next, by vulcanizing this green tire in accordance with a conventional method, it is possible to produce a desired pneumatic tire using a film using the thermoplastic elastomer composition of the present technology.</p>
+      <p id="p-00045-en" num="0045">A commonly used method can be used as the method for producing a hose using a film consisting of the thermoplastic elastomer composition of the present technology. For example, the thermoplastic elastomer composition of the present technology is extruded onto a mandrel coated with a mold release agent in advance using a cross-head extrusion method with an extruder so as to form an inner tube, and reinforcing threads or reinforcing steel wires are braided on the inner tube using a braiding machine to form a reinforcing layer. The thermoplastic resin is further extruded onto the reinforcing layer to form an outer tube. A layer consisting of another thermoplastic resin and/or an adhesive may also be provided as necessary between the inner tube and the reinforcing layer and between the reinforcing layer and the outer tube. Finally, a hose is obtained when the mandrel is pulled out.</p>
+      <heading id="h-00006-en" level="1">EXAMPLES</heading>
+      <p id="p-00046-en" num="0046">The raw materials used in the following working examples and comparative examples are as follows.</p>
+      <p id="p-00047-en" num="0047">Ethylene-vinyl alcohol copolymer (EVOH): Soarnol H4815B manufactured by Nippon Synthetic Chemical Industry Co., Ltd.</p>
+      <p id="p-00048-en" num="0048">Polyamide resin: “UBE Nylon” 1022B manufactured by Ube Industries, Ltd.</p>
+      <p id="p-00049-en" num="0049">Maleic anhydride-modified ethylene butene copolymer (Mah-EB): TAFMER MH7020 manufactured by Mitsui Chemicals, Inc.</p>
+      <p id="p-00050-en" num="0050">Brominated isobutylene-p-methylstyrene copolymer (Br-IPMS): Exxpro (registered trademark) MDX89-4 manufactured by ExxonMobil Chemical Company</p>
+      <p id="p-00051-en" num="0051">Ethylene-glycidyl methacrylate copolymer (E-GMA): Bond Fast E manufactured by Sumitomo Chemicals</p>
+      <p id="p-00052-en" num="0052">Crosslinking agent: tris-(2-hydroxyethyl)isocyanurate (Seiku A manufactured by Shikoku Chemicals)</p>
+      <p id="p-00053-en" num="0053">In the following conventional examples, working examples, and comparative examples, a twin screw kneader such as that illustrated in the schematic diagram of <figref>FIG. 1</figref> (L/D: 49; length in the cylinder axis direction of the twin screw kneader between the third raw material inlet and the first raw material inlet: 6 D; length in the cylinder axis direction of the twin screw kneader between the crosslinking agent inlet and the second raw material inlet: 8 D) (manufactured by Japan Steel Works, Co., Ltd.) was used. The length in the cylinder axis direction of the twin screw kneader between the first raw material inlet and the second raw material inlet, the length in the cylinder axis direction of the twin screw kneader of the kneading zone provided between the first raw material inlet and the second raw material inlet (hereafter called the first kneading zone), and the length in the cylinder axis direction of the twin screw kneader of the kneading zone provided on the downstream side from the second raw material inlet (hereafter called the second kneading zone) are as shown in Tables 1 and 2 in <figref>FIGS. 2A-3B</figref>.</p>
+      <heading id="h-00007-en" level="1">(1) Production of a Thermoplastic Elastomer Composition in Conventional Example 1</heading>
+      <p id="p-00054-en" num="0054">EVOH (40 parts by volume) and Mah-EB (60 parts by volume) were simultaneously fed all at once from the first raw material inlet. Mah-EB was fed at 30° C. The temperature of the first kneading zone was set to 170° C., and the temperature of the second kneading zone was set to 200° C. A crosslinking agent (1.5 parts by mass per 100 parts by mass of the total amount of the elastomer) was fed into the cylinder from a crosslinking agent inlet provided between the first kneading zone and the second raw material inlet, and this was melted and blended for 5 minutes. The melt-kneaded product was extruded in a strand shape from a die attached to the discharge port. The resulting strand-shaped extrusion product was pelletized with a resin pelletizer so as to obtain a pellet-shaped thermoplastic elastomer composition.</p>
+      <heading id="h-00008-en" level="1">(2) Production of thermoplastic elastomer compositions in Working Examples 1 to 4 and 6 and Comparative Examples 1 and 2</heading>
+      <p id="p-00055-en" num="0055">A thermoplastic resin and an elastomer were fed from the first raw material inlet into the cylinder at the volume ratios shown in Tables 1 and 2 in <figref>FIGS. 2A-3B</figref>. The temperature of the first kneading zone was set to 170° C., and the temperature of the second kneading zone was set to 200° C. A crosslinking agent (1.5 parts by mass per 100 parts by mass of the total amount of the elastomer) was fed into the cylinder from a crosslinking agent inlet provided between the first kneading zone and the second raw material inlet, and this was melted and blended for 5 minutes. The melt-kneaded product was extruded in a strand shape from a die attached to the discharge port. The resulting strand-shaped extrusion product was pelletized with a resin pelletizer so as to obtain a pellet-shaped thermoplastic elastomer composition.</p>
+      <heading id="h-00009-en" level="1">(3) Production of Thermoplastic Elastomer Compositions in Comparative Example 3 and Working Examples 5 and 10</heading>
+      <p id="p-00056-en" num="0056">The compositions were prepared in the same manner as in (2) above with the exception that a crosslinking agent was not fed into the cylinder.</p>
+      <heading id="h-00010-en" level="1">(4) Production of a Thermoplastic Elastomer Composition in Working Example 7</heading>
+      <p id="p-00057-en" num="0057">EVOH (30 parts by volume) and Mah-EB (40 parts by volume) were fed into the cylinder from the first raw material inlet. The temperature of the first kneading zone was set to 180° C., and the temperature of the second kneading zone was set to 230° C. A crosslinking agent (1.5 parts by mass per 100 parts by mass of the total amount of the elastomer) was fed into the cylinder from a crosslinking agent inlet provided between the first kneading zone and the second raw material inlet, while a polyamide resin (10 parts by volume) and Mah-EB (20 parts by volume) were fed into the cylinder from the second raw material inlet, and these were melted and blended for 5 minutes. The melt-kneaded product was extruded in a strand shape from a die attached to the discharge port. The resulting strand-shaped extrusion product was pelletized with a resin pelletizer so as to obtain a pellet-shaped thermoplastic elastomer composition.</p>
+      <heading id="h-00011-en" level="1">(5) Production of a Thermoplastic Elastomer Composition in Working Example 5</heading>
+      <p id="p-00058-en" num="0058">A polyamide resin (50 parts by volume) and Br-IPMS (40 parts by volume) were fed into the cylinder from the first raw material inlet. The temperature of the first and second kneading zones was set to 230° C. Br-IPMS (10 parts by volume) was fed into the cylinder from the second raw material inlet, and this was melted and blended for 5 minutes. The melt-kneaded product was extruded in a strand shape from a die attached to the discharge port. The resulting strand-shaped extrusion product was pelletized with a resin pelletizer so as to obtain a pellet-shaped thermoplastic elastomer composition.</p>
+      <heading id="h-00012-en" level="1">(6) Production of a Thermoplastic Elastomer Composition in Working Example 9</heading>
+      <p id="p-00059-en" num="0059">EVOH (30 parts by volume) was fed into the cylinder from the third raw material inlet. EVOH (10 parts by volume) and Mah-EB (25 parts by volume) were then fed into the cylinder from the first raw material inlet. The temperature of the first kneading zone was set to 170° C., and the temperature of the second kneading zone was set to 200° C. A crosslinking agent (1.5 parts by mass per 100 parts by mass of the total amount of the elastomer) was fed into the cylinder from a crosslinking agent inlet provided between the first kneading zone and the second raw material inlet, and this was melted and blended for 5 minutes. The melt-kneaded product was extruded in a strand shape from a die attached to the discharge port. The resulting strand-shaped extrusion product was pelletized with a resin pelletizer so as to obtain a pellet-shaped thermoplastic elastomer composition.</p>
+      <heading id="h-00013-en" level="1">(7) Low-Temperature Durability Evaluation</heading>
+      <p id="p-00060-en" num="0060">The resulting pellet-shaped thermoplastic elastomer composition was molded into a sheet with an average thickness of 1 mm using a 40 mm φ single screw extruder with a 200 mm wide T-type die (Plastic Engineering) under extrusion conditions with extrusion temperatures of C1/C2/C3/C4/die=190/200/210/220/220° C., a cooling roller temperature of 50° C., and a taking-up speed of 1 m/minute. Each sheet was punched out into a dumbbell shape, and a low-temperature constant-strain test with 40% dynamic strain at −35° C. was conducted. Measurements were taken 5 times, and the average number of times that the sheets were fractured was calculated as the average fracture number.</p>
+      <p id="p-00061-en" num="0061">Low-temperature durability index (a): Defining the average fracture number of the thermoplastic elastomer composition produced in Conventional Example 1 as 100, the average fracture number of the thermoplastic elastomer composition produced in each of the working examples and comparative examples was indexed.</p>
+      <p id="p-00062-en" num="0062">Low-temperature durability index (b): Without changing the compounding ratios listed in Tables 1 and 2 in each of the working examples and comparative examples, the average fracture number of a thermoplastic elastomer composition produced by simultaneously feeding a thermoplastic resin and an elastomer at once from the first raw material inlet in the same manner as in Conventional Example 1 was indexed by defining the average fracture number of the thermoplastic elastomer composition produced in Conventional Example 1 as 100.</p>
+      <p id="p-00063-en" num="0063">In this evaluation, it was assessed that the low-temperature durability had improved when the ratio of (a) to (b) exceeded 120%.</p>
+      <p id="p-00064-en" num="0064">The test results are shown in Tables 1 and 2 in <figref>FIGS. 2A-3B</figref>.</p>
+      <p id="p-00065-en" num="0065">Conventional Example 1 is a case in which the thermoplastic resin and the elastomer were fed all at once from the first raw material inlet.</p>
+      <p id="p-00066-en" num="0066">Working Examples 1 to 10 were implemented in accordance with the method of the present technology. A good low-temperature durability improving effect was confirmed in comparison to the case of Conventional Example 1.</p>
+      <p id="p-00067-en" num="0067">Comparative Examples 1 and 2 are examples in which the proportions of the elastomer fed from the second raw material inlet of the twin screw kneader were respectively less than 10 vol % and greater than 60 vol % of the total amount of the elastomer. The desired low-temperature durability improving effect was not achieved in either case in comparison to the case of Conventional Example 1. In addition, it was confirmed from the results of Comparative Example 2 that the desired low-temperature durability improving effect is not achieved when the temperature difference (T−A) between the resin temperature (T) of the cylinder tip discharge part at the time of kneading and the temperature A (° C.) of the elastomer fed from the second raw material inlet is small.</p>
+      <p id="p-00068-en" num="0068">Comparative Example 3 is an example in which the total amount of the elastomer to be fed was reduced (the total amount of the elastomer was 20 parts by volume per 100 parts by volume of the total amount of the thermoplastic resin and the elastomer). When the amount of the elastomer was too small, the desired low-temperature durability improving effect was not achieved.</p>
+      <heading id="h-00014-en" level="1">INDUSTRIAL APPLICABILITY</heading>
+      <p id="p-00069-en" num="0069">The thermoplastic elastomer composition obtained with the method of the present technology can be suitably used in a pneumatic tire, a hose, or the like.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for producing a thermoplastic elastomer composition comprising using a twin screw kneader to melt-knead a thermoplastic resin and an elastomer;
+<claim-text>the twin screw kneader having at least two raw material inlets including a first raw material inlet and a second raw material inlet provided at a position separated by 15 D to 38 D on a downstream side from the first raw material inlet, where D is a cylinder inside diameter of the twin screw kneader;</claim-text><claim-text>the elastomer being fed in a divided manner from the first and second raw material inlets;</claim-text><claim-text>a proportion of the elastomer fed from the second inlet being from 10 to 60 vol % of a total amount of the elastomer; and</claim-text><claim-text>the elastomer being melt-kneaded in a kneading zone having a length of from 0.5 D to 20 D in a cylinder axis direction of the twin screw kneader, at least one kneading zone being respectively provided between the first and second raw material inlets and on a downstream side from the second raw material inlet.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The production method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a temperature (A) of the elastomer fed from the second raw material inlet is at least 100° C. lower than a resin temperature (T) of a cylinder tip discharge part at the time of kneading.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The production method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the total amount of the elastomer is at least 30 parts by volume per 100 parts by volume of a total amount of the thermoplastic resin and the elastomer.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The production method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the elastomer is dynamically crosslinked.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The production method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the elastomer is at least one type selected from the group consisting of brominated isobutylene-p-methylstyrene copolymers, ethylene-α-olefin copolymers, ethylene-glycidyl methacrylate copolymers, ethylene-ethyl acrylate copolymers, and modified products thereof.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The production method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the thermoplastic resin is at least one type selected from the group consisting of ethylene-vinyl alcohol copolymers, polyamide resins, and polyester resins.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. A thermoplastic elastomer composition produced by the production method described in <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A pneumatic tire using a film comprising the thermoplastic elastomer composition described in <claim-ref idref="clm-00007-en">claim 7</claim-ref>.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. A hose using a film comprising the thermoplastic elastomer composition described in <claim-ref idref="clm-00007-en">claim 7</claim-ref>. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252155A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252155A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252155A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252155A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252155A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252155A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150252155A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252155A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150252155A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252155A1-20150910-D00005.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150252155A1.PDF" type="pdf" size="574598" pages="12" />
+</lexisnexis-patent-document>

@@ -1,0 +1,2050 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246117A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021318" date-changed="20150914" time-changed="041814">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139243">
+        <country>US</country>
+        <doc-number>20150246117</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14430263</doc-number>
+        <date>20130924</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>A61K  39/395       20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>395</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K  45/06        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>45</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>A61K  39/3955      20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>3955</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K  45/06        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>45</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K2039/505       20130101 LA20140120BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2039</main-group>
+        <subgroup>505</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C07K  16/22        20130101 LI20140402BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>16</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140402</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C07K2317/76        20130101 LA20140120BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>2317</main-group>
+        <subgroup>76</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A61K  39/3955      20130101 LI20140121BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>61</class>
+            <subclass>K</subclass>
+            <main-group>39</main-group>
+            <subgroup>3955</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140121</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>A61K2300/00        20130101 LA20140121BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>61</class>
+            <subclass>K</subclass>
+            <main-group>2300</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20140121</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">TREATMENT OF TYPE 2 DIABETES AND RELATED CONDITIONS</invention-title>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61705005</doc-number>
+          <date>20120924</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>ERIKSSON</last-name>
+            <first-name>Ulf</first-name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Eriksson</last-name>
+            <first-name>Ulf</first-name>
+            <address>
+              <city>Stockholm</city>
+              <country>SE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>IB13058822</doc-number>
+        <date>20130924</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014045266</doc-number>
+        <date>20140327</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173462098">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246117</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130924</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173462097">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246117</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130924</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present disclosure provides methods of treating diabetic conditions, restoring insulin sensitivity and/or improving regulation of glycemia using an antagonist of VEGF-B, particularly in combination with other anti-diabetic agents such as insulin secretagogues. Compositions are also provided comprising one or more VEGF-B antagonists, particularly in combination with other anti-diabetic agents such as insulin secretagogues. In particular embodiments, the VEGF-B antagonist is an anti-VEGF-B antibody. In further particular embodiments, the other anti-diabetic agent or insulin secretagogue is a DPP-4 inhibitor or a GLP-1R agonist.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND OF THE DISCLOSURE</heading>
+      <p id="p-00001-en" num="0001">Type 2 Diabetes (T2D) affects over 310 million individuals (WHO Media centre. World Health Organization Diabetes Fact sheet No. 312. Available online (2011)) worldwide and its prevalence is expected to increase significantly in the future (The Diabetes Prevention Program (DPP): description of lifestyle intervention. Diabetes Care 25, 2165-2171 (2002), Zimmet, P., et al. <i>Nature </i>414, 782-787 (2001)). The disease is strongly associated with obesity and pathological lipid deposition within extra-adipose tissues (Stumvoll, M., et al. <i>Lancet </i>365, 1333-1346 (2005)), and lipid-induced insulin resistance in muscles has been suggested to contribute to the development of diabetes. Excess lipid deposition in peripheral tissues impairs insulin sensitivity and glucose uptake, and has been proposed to contribute to the pathology of T2D (Perseghin, G., et al. <i>Diabetes </i>48, 1600-1606 (1999), Samuel, V. T., et al. <i>Lancet </i>375, 2267-2277 (2010), <i>Unger</i>, R. H. Annu Rev Med 53, 319-336 (2002)). Several mechanisms for the deleterious effect of ectopic lipids have been suggested, including the accumulation of diacylglycerols or ceramides that disrupt insulin signaling (Perseghin, G., et al. <i>Diabetes </i>48, 1600-1606 (1999), Schmitz-Peiffer, C., et al. <i>Diabetes </i>46, 169-178 (1997), Schmitz-Peiffer, C. Diabetes 59, 2351-2353 (2010)), and intra-cellular redistribution of key components of the molecular machinery required for glucose uptake (Bostrom, P., et al. <i>Nat Cell Biol </i>9, 1286-1293 (2007), Bostrom, P., et al. <i>Diabetes </i>59, 1870-1878 (2010)). Of the therapies currently available for the treatment of diabetes very few specifically target lipid deposition in peripheral tissues (Stumvoll, M., et al. <i>Lancet </i>365, 1333-1346 (2005)).</p>
+      <p id="p-00002-en" num="0002">T2D is the most common form of diabetes and is characterized by disorders of insulin action and insulin secretion, either of which may be the predominant feature. Both are usually present at the time that this form of diabetes is clinically manifested. Patients with T2D are characterized with a relative, rather than absolute, insulin deficiency and are resistant to the action of insulin. At least initially, and often throughout their lifetime, these individuals do not need insulin treatment to survive. T2D accounts for 90-95% of all cases of diabetes. This form of diabetes can go undiagnosed for many years because the hyperglycemia is often not severe enough to provoke noticeable symptoms of diabetes or symptoms are simply not recognized. The majority of patients with T2D are obese, and obesity itself may cause or aggravate insulin resistance. Many of those who are not obese by traditional weight criteria may have an increased percentage of body fat distributed predominantly in the abdominal region (visceral fat). Ketoacidosis is infrequent in this type of diabetes and usually arises in association with the stress of another illness. Whereas patients with this form of diabetes may have insulin levels that appear normal or elevated, the high blood glucose levels in these diabetic patients would be expected to result in even higher insulin values had their beta cell function been normal. Thus, insulin secretion is often defective and insufficient to compensate for the insulin resistance. On the other hand, some hyperglycemic individuals have essentially normal insulin action, but markedly impaired insulin secretion.</p>
+      <heading id="h-00002-en" level="1">BRIEF SUMMARY OF THE DISCLOSURE</heading>
+      <p id="p-00003-en" num="0003">The present invention provides methods of treating dyslipidemia, diabetic conditions, and restoring insulin sensitivity and/or improving regulation of glycemia using an antagonist of VEGF-B. The VEGF-B antagonist can be provided alone or in combination with other anti-diabetic agents such as insulin secretagogues. Compositions are also provided comprising one or more VEGF-B antagonists, alone or in combination with other anti-diabetic agents such as insulin secretagogues.</p>
+      <p id="p-00004-en" num="0004">In particular embodiments, the VEGF-B antagonist is an anti-VEGF-B antibody. In a preferred embodiment, the anti-VEGF-B antibody is selected from the antibodies 1C6, 2F5, 2H10 and 4E12, and humanized, deimmunized or chimeric forms thereof, or anti-VEGF-B antibodies that compete for binding to VEGF-B with 2H10. In a particularly preferred embodiment, the anti-VEGF-B antibody is a humanized 2H10 mAb, or an antibody that has a binding affinity for human VEGF-B that is substantially equivalent to the binding affinity of mAb 2H10 for human VEGF-B. In a further preferred embodiment, the anti-VEGF-B antibody is a humanized 2H10 antibody comprising SEQ ID NO: 1 and/or SEQ ID NO: 2.</p>
+      <p id="p-00005-en" num="0005">In embodiments of the combination treatments and compositions of the invention, the other anti-diabetic agent or insulin secretagogue that is combined with any VEGF-B antagonist as described above is a DPP-4 inhibitor or a GLP-1R agonist. In particular embodiments, the DPP-4 inhibitor is selected from vildagliptin, sitagliptin, saxagliptin, linagliptin, dutogliptin, gemigliptin, alogliptin, and berberine. In further particular embodiments, the GLP-1R agonist is selected from exenatide, liraglutide, CJC-1131, LY-307161, dulaglutide, CJC-1134, albiglutide, and taspoglutide.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE FIGURES</heading>
+      <p id="p-00006-en" num="0006">
+        <figref>FIG. 1</figref>. Pharmacological VEGF-B-neutralisation enhances glucose tolerance in diabetic rodent models. a-f, Analysis of control-treated or 2H10-treated pre-diabetic or diabetic db/db mice, as compared to lean mice. a-b, Blood glucose levels (n=10-16/group). c-d, Quantification of ORO staining in skeletal and cardiac muscles (n=4-6/group). e, IPGTT and AUC analysis (n=5-6/group). f, Plasma levels of TGs, HDL-c, LDL-c, NEFAs and ketones (n=8-12/group). g-h, Analysis of control-treated or 2H10-treated HFD-fed rats during a hyperinsulinaemic/euglycaemic clamp, as compared to control-treated normal diet (ND)-fed rats (n=5-6/group). g, Glucose infusion rate (GIR) and glucose disposal rate (GDR). h, [<sup>14</sup>C]-deoxyglucose uptake into skeletal and cardiac muscles. #/*P&lt;0.05, ##/**P&lt;0.01, ###/***P&lt;0.001 compared to lean/db/db control mice (a-f), or control-treated ND-fed/HFD-fed rats (g-h). Values are means±s.e.m.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF THE DISCLOSURE</heading>
+      <p id="p-00007-en" num="0007">This disclosure provides a novel combination therapy for treatment of diabetes, involving administration of a VEGF-B antagonist alone or in combination with an insulin secretagogue, such as a DPP-4 inhibitor and/or a GLP-1R agonist. This disclosure further provides compositions that include a VEGF-B antagonist, alone or in combination with an insulin secretagogue, such as a DPP-4 inhibitor and/or a GLP-1R agonist.</p>
+      <p id="p-00008-en" num="0008">As used herein, the singular forms “a”, “an” and “the” include plural aspects unless the context clearly dictates otherwise. Thus, for example, reference to “an antibody” includes a single antibody, as well as two or more antibodies; reference to “a VEGF-B” includes a single VEGF-B as well as two or more VEGF-B molecules; reference to “an antagonist” includes a single antagonist as well as two or more antagonists; and so forth.</p>
+      <p id="p-00009-en" num="0009">A “diabetic condition” as used herein includes Type 2 Diabetes, pre-diabetes and gestational diabetes. Diabetes is characterized by a fasting plasma glucose level of greater than or equal to 126 mg/dl. A diabetic subject has a fasting plasma glucose level of greater than or equal to 126 mg/dl. Prediabetes is characterized by an impaired fasting plasma glucose (FPG) level of greater than or equal to 110 mg/dl and less than 126 mg/dl; or impaired glucose tolerance; or insulin resistance. A prediabetic subject is a subject with impaired fasting glucose (a fasting plasma glucose (FPG) level of greater than or equal to 110 mg/dl and less than 126 mg/dl); or impaired glucose tolerance in an oral glucose tolerance test (a 2 hour plasma glucose level of &gt;140 mg/dl and &lt;200 mg/dl); or insulin resistance (inability to respond to insulin activity), resulting in an increased risk of developing diabetes.</p>
+      <p id="p-00010-en" num="0010">An “insulin secretagogue” is a substance that increases insulin secretion.</p>
+      <p id="p-00011-en" num="0011">The present invention is directed to use of antagonists of vascular endothelial growth factor-B (VEGF-B) in treatment of diabetic conditions, alone or in combination with one or more insulin secretagogues.</p>
+      <p id="p-00012-en" num="0012">VEGF-B acts on the vascular endothelium to regulate trans-endothelial transport of circulating fatty acids (FAs) into cardiac and skeletal muscle (Hagberg, C. E., et al. <i>Nature </i>464, 917-921 (2010), Muoio, D. M. <i>N Engl J Med </i>363, 291-293 (2010), Lahteenvuo, J. E., et al. <i>Circulation </i>119, 845-856 (2009)). VEGF-B is expressed by tissue cells with a high metabolic activity, such as cardiac and skeletal myocytes, brown adipocytes and pancreatic β-cells, from where it signals to the endothelium (Hagberg, C. E., et al. <i>Nature </i>464, 917-921 (2010), Olofsson, B., et al. <i>Proc Natl Acad Sci USA </i>93, 2576-2581 (1996), Albrecht, I., et al. <i>PLoS One </i>5, e14109). The interaction of VEGF-B with the endothelial receptor VEGF receptor 1 (VEGFR1) (Olofsson, B., et al. <i>Proc Natl Acad Sci USA </i>95, 11709-11714 (1998)) and the co-receptor Neuropilin 1 (Makinen, T., et al. <i>J Biol Chem </i>274, 21217-21222 (1999)) induces transcriptional upregulation of the vascular-specific Fatty Acid Transport Protein 3 (Fatp3) and the more ubiquitously expressed Fatp4 (Hagberg, C. E., et al. <i>Nature </i>464, 917-921 (2010)). Mice lacking VEGF-B (Vegfb<sup>−/−</sup>) (Aase, K., et al. <i>Circulation </i>104, 358-364 (2001)) are healthy and fertile, but exhibit decreased FA uptake and lipid deposition in muscles.</p>
+      <p id="p-00013-en" num="0013">A “VEGF-B antagonist” is a substance that can reduce or prevent VEGF-B activity. VEGF-B controls endothelial uptake and transport of fatty acids in heart and skeletal muscle. VEGF-B activities include activation of the endothelial receptor VEGF receptor 1 (VEGFR1) and the co-receptor Neuropilin 1, and induction of transcriptional upregulation of the Fatp3 and Fatp4 proteins. A “VEGF-B antagonist” administered according to the invention can restore insulin sensitivity, improve or normalize glucose tolerance, preserve pancreatic islet architecture, improve β-cell function and ameliorate dyslipidaemia. Thus, a VEGF-B antagonist inhibits or reduces diabetic symptoms and the diabetic condition.</p>
+      <p id="p-00014-en" num="0014">A VEGF-B antagonist contemplated by the present invention may be an antibody which inhibits interaction between VEGF-B and VEGFR-1, an antisense compound which reduces VEGF-B expression, or an interfering nucleic acid which reduces VEGF-B expression. The preferred VEGF-B antagonists are antibodies that bind to VEGF-B and interfere with VEGF-B interaction with its receptor to inhibit the activity of VEGF-B (anti-VEGF-B antibodies); see for example U.S. Pat. No. 7,517,524.</p>
+      <p id="p-00015-en" num="0015">Preferably, the anti-VEGF-B antibodies are monoclonal antibodies (“mAbs”) or antigen-binding fragments thereof. Even more preferably, the anti-VEGF-B antibodies are humanized antibodies including deimmunized or chimeric antibodies or human antibodies suitable for administration to humans. Humanized antibodies, prepared, for example, from murine monoclonal antibodies and human monoclonal antibodies which are prepared, for example, using transgenic mice or by phage display are particularly preferred. Antibodies in accordance with the present invention include humanized, deimmunized or chimeric forms of the murine monoclonal antibodies 1C6, 2F5, 2H10 and 4E12, and anti-VEGF-B antibodies that are suitable for administration to humans that compete for binding to VEGF-B with antibody 2H10. Antibody 2H10 is produced by the hybridoma deposited at the American Type Culture Collection (ATCC) as PTA-6889. Exemplary anti-VEGF-B antibodies useful in the practice of the invention are disclosed in U.S. Pat. No. 7,517,524; and in U.S. Patent Publication No. 20080260729, the contents of each of which are hereby incorporated by reference in their entirety.</p>
+      <p id="p-00016-en" num="0016">In a preferred embodiment, the anti-VEGF-B antibody is a humanized 2H10 antibody (mAb 2H10), and in another preferred embodiment the anti-VEGF-B antibody is a humanized 2H10 antibody with an amino acid sequence comprising SEQ ID NO: 1 and/or SEQ ID NO: 2, such amino acid sequences comprising the variable light chain sequences and the variable heavy chain sequences shown in SEQ ID NOs: 29 and 30 as set out in US. Patent Publication No. 20080260729. A further preferred anti-VEGF-B antibody has a binding affinity for human VEGF-B that is substantially equivalent to (i.e., equal to or up to 3 times weaker) or stronger than the binding affinity of mAb 2H10 for human VEGF-B. Methods of determining binding affinities are known in the art. Preferred antibodies are those which bind human VEGF-B with a K<sub>D </sub>value of 1×10<sup>−7 </sup>M or less; preferably 1×10<sup>−8 </sup>M or less; more preferably 1×10<sup>−9</sup>M or less; and most preferably 5×10<sup>−10 </sup>M or less as determined by surface plasmon resonance. One example of a biological activity of a mAb selected from 106, 2H10, 4E12 and 2F5 is its ability to bind to VEGF-B and inhibit signaling by VEGF-B through VEGFR-1.</p>
+      <p id="p-00017-en" num="0017">This disclosure presents treatments and compositions comprising a VEGF-B antagonist. This disclosure further presents combination treatments and compositions comprising a VEGF-B antagonist in combination with an insulin secretagogue. In one embodiment, the insulin secretagogue is selected from a DPP-4 inhibitor and/or a GLP-1R agonist.</p>
+      <p id="p-00018-en" num="0018">In a particular embodiment, this disclosure presents combination treatments and compositions including a VEGF-B antagonist in combination with an inhibitor of the enzyme dipeptidyl peptidase-4 (DPP-4). DPP-4, also known as CD26, is a serine protease that cleaves a dipeptide group from the N-terminal end of a number of proteins having at their N-terminal end a proline or alanine residue. DPP-4 substrates include the insulinotropic hormones Glucagon like peptide-1 (GLP-1) and Gastric inhibitory peptide (GIP). GLP-1 and GIP are active only in their intact forms; removal of their two N-terminal amino acids inactivates them. Inhibitors of DPP-4 prevent N-terminal degradation of GLP-1 and GIP, resulting in higher plasma concentrations of these hormones, increased insulin secretion and, therefore, improved glucose tolerance.</p>
+      <p id="p-00019-en" num="0019">A “DPP-4 inhibitor” is a substance that can reduce or prevent DPP-4 activity, including reduction or prevention of serine protease activity, dipeptide cleavage activity, and inactivation of GLP-1 and/or GIP.</p>
+      <p id="p-00020-en" num="0020">For example, DPP-4 inhibitors and their uses, particularly their uses in metabolic (especially diabetic) diseases, are disclosed in WO 2002/068420, WO 2004/018467, WO 2004/018468, WO 2004/018469, WO 2004/041820, WO 2004/046148, WO 2005/051950, WO 2005/082906, WO 2005/063750, WO 2005/085246, WO 2006/027204, WO 2006/029769 or WO2007/014886; or in WO 2004/050658, WO 2004/111051, WO 2005/058901 or WO 2005/097798; or in WO 2006/068163, WO 2007/071738 or WO 2008/017670; or in WO 2007/128721, WO 2007/128724 or WO 2007/128761, or WO 2009/121945. Several DPP-4 inhibitors that can be taken orally as a tablet have been developed.</p>
+      <p id="p-00021-en" num="0021">Preferred DPP-4 inhibitors include vildagliptin (EU approved 2007, marketed in the EU by Novartis as GALVUS®), sitagliptin (marketed by Merck as JANUVIA®), saxagliptin (marketed as ONGLYZA®), linagliptin (FDA approved in 2011, marketed as TRAJENTA® by Eli Lilly Co and Boehringer Ingelheim), dutogliptin (Phenomix Corporation), gemigliptin (LG Life Sciences, Korea), alogliptin (Takeda Pharmaceutical Co.), and the herbal supplement berberine.</p>
+      <p id="p-00022-en" num="0022">In a further particular embodiment, this disclosure further presents combination treatments and compositions including a VEGF-B antagonist in combination with a glucagon-like peptide-1 receptor (GLP-1R) agonist. GLP-1R belongs to the class B receptor sub-class of the G protein-coupled receptor (GPCR) superfamily that regulates many important physiological and pathophysiological processes. GLP-1R is a seven-transmembrane spanning receptor coupled to G-protein activation, increased cAMP production and activation of PKA. Other responses to the actions of GLP-1 include, for example, pancreatic β-cell proliferation and expansion concomitant with a reduction of β-cell apoptosis. In addition, GLP-1 activity can result in increased expression of the glucose transporter-2 (GLUT2) and glucokinase genes in pancreatic cells.</p>
+      <p id="p-00023-en" num="0023">A “GLP-1 receptor agonist” or a “GLP-1R agonist” is a molecule that increases the amount of activation of GLP-1R, producing effects similar to those produced by the naturally-occurring agonists GLP-1 and exendin-4. GLP-1R agonists increase the activation of GLP-1R, e.g., by binding to and activating GLP-1R, by causing a conformational change in the GLP-1R, by causing activation of a G protein coupled to the GLP-1R, by causing GLP-1R to remain in an activated (e.g., in the active conformation) condition for a longer period of time (including indefinitely), by mimicking the binding of naturally-occurring agonists, by modulating the binding of naturally-occurring agonists, by blocking inhibitors of GLP-1 or otherwise modulating GLP-1R activation or initiating the cascade of intracellular events that is characteristic of GLP-1R activation. Preferred GLP-1R agonists include GLP-1 analogues or mimetics, and GLP-1 receptor agonists, such as exendin-4 (exenatide), liraglutide (N,N-2211), CJC-1131, LY-307161, dulaglutide (LY2189265), CJC-1134 (exendin-4-albumin conjugate), albiglutidc (GSK716155; albugon), taspoglutidc, and those disclosed in WO 00/42026 and WO 00159887.</p>
+      <p id="p-00024-en" num="0024">GLP-1 (7-36) amide is not very useful for treatment of T2D, since it must be administered by continuous subcutaneous infusion. Several long-lasting analogs having insulinotropic activity have been developed, and two, exenatide (BYETTA®) and liraglutide (VICTOZA®), have been approved for use in the U.S.</p>
+      <p id="p-00025-en" num="0025">The combination therapeutic treatments include administration of an effective amount of a VEGF-B antagonist prior to, concurrently with, or subsequent to administration of an effective amount of the insulin secretagogue. The insulin secretagogue can be a DPP-4 inhibitor, a GLP-1R agonist, or a combination of the two. In a preferred embodiment, the VEGF-B antagonist is an anti-VEGF-B antibody. In another preferred embodiment the VEGF-B antagonist is a humanized 2H10 antibody or anti-VEGF-B antibodies that is suitable for administration to humans and that competes with antibody 2H10 for binding to VEGF-B. In another preferred embodiment, the anti-VEGF-B antibody is a humanized 2H10 antibody, and in another preferred embodiment the anti-VEGF-B antibody is a humanized 2H10 antibody comprising SEQ ID NO: 1 and/or SEQ ID NO: 2 as set out in SEQ ID NOs: 29 and 30 of US. Patent Publication No. 20080260729.</p>
+      <p id="p-00026-en" num="0026">Combination compositions include a VEGF-B antagonist and an insulin secretagogue selected from a DPP-4 inhibitor and a GLP-1R agonist in a pharmaceutically acceptable carrier.</p>
+      <p id="p-00027-en" num="0027">Examples of combination compositions include a combination of a VEGF-B antagonist selected from the humanized antibodies 1C6, 2F5, 2H10, 4E12, or an anti-VEGF-B antibody that competes for binding to VEGF-B with antibody 2H10, and an insulin secretagogue selected from a DPP-4 inhibitor and a GLP-1R agonist. In one embodiment, the combination composition includes a humanized VEGF-B antagonist antibody, such as humanized 1C6, 2F5, 2H10, or 4E12, in combination with a DPP-4 inhibitor and/or an GLP-1R agonist.</p>
+      <p id="p-00028-en" num="0028">In a preferred embodiment, the combination composition includes a humanized 2H10 antibody (mAb 2H10), particularly a humanized 2H10 antibody with an amino acid sequence comprising SEQ ID NO: 1 and/or SEQ ID NO: 2 as set out in SEQ ID NOs: 29 and 30 of US. Patent Publication No. 20080260729, in combination with a DPP-4 inhibitor selected from vildagliptin, sitagliptin, saxagliptin, linagliptin, dutogliptin, gemigliptin, berberine, and similar DPP-4 inhibitors or analogs thereof. Thus, exemplary combinations include 2H10 antibody and vildagliptin, 2H10 antibody and sitagliptin, 2H10 antibody and saxagliptin, 2H10 antibody and linagliptin, 2H10 antibody and dutogliptin, 2H10 antibody and gemigliptin, 2H10 antibody and berberine, and similar combinations.</p>
+      <p id="p-00029-en" num="0029">In another embodiment, the combination composition includes a humanized 2H10 antibody and a DPP-4 inhibitor as disclosed in any of WO 2002/068420, WO 2004/018467, WO 2004/018468, WO 2004/018469, WO 2004/041820, WO 2004/046148, WO 2005/051950, WO 2005/082906, WO 2005/063750, WO 2005/085246, WO 2006/027204, WO 2006/029769 or WO2007/014886; or in WO 2004/050658, WO 2004/111051, WO 2005/058901 or WO 2005/097798; or in WO 2006/068163, WO 2007/071738 or WO 2008/017670; or in WO 2007/128721, WO 2007/128724 or WO 2007/128761, or WO 2009/121945.</p>
+      <p id="p-00030-en" num="0030">In another preferred embodiment, the combination composition includes a humanized 2H10 antibody (mAb 2H10), particularly a humanized 2H10 antibody with an amino acid sequence comprising SEQ ID NO: 1 and/or SEQ ID NO: 2, in combination with a GLP-1R agonist selected from a GLP-1 analogue or mimetic thereof, a GLP-1 receptor agonist, such as exendin-4/exenatide, liraglutide, CJC-1131, LY-307161, dulaglutide, CJC-1134, albiglutide/albugon, taspoglutide, or analogs thereof, or a GLP-1 receptor agonist as disclosed in WO 00/42026 or WO 00/59887. Thus, exemplary combinations include 2H10 antibody and exendin-4/exenatide, 2H10 antibody and liraglutide, 2H10 antibody and CJC-1131, 2H10 antibody and LY-307161, 2H10 antibody and dulaglutide, 2H10 antibody and CJC-1134, 2H10 antibody and albiglutide/albugon, 2H10 antibody and taspoglutide, and similar combinations.</p>
+      <p id="p-00031-en" num="0031">The terms “effective amount” and “therapeutically effective amount” of an agent as used herein mean a sufficient amount of the VEGF-B antagonist to provide the desired therapeutic or physiological effect or outcome including reducing diabetic symptoms and improving undesirable effects, e.g. side effects, are sometimes manifested along with the desired therapeutic effect; hence, a practitioner balances the potential benefits against the potential risks in determining what is an appropriate “effective amount”. The exact amount of agent required may vary from subject to subject, depending on the species, age and general condition of the subject, mode of administration and the like. Thus, it may not be possible to specify an exact “effective amount”. However, an appropriate “effective amount” in any individual case may be determined by one of ordinary skill in the art using only routine experimentation. The ability of a VEGF-B antagonist, preferably an anti-VEGF-B antibody, to treat diabetic conditions can be evaluated in an animal model system predictive of efficacy in human diabetic treatment. One of ordinary skill in the art would be able to determine such amounts based on such factors as the subject's size, the severity of the subject's symptoms, and the particular composition or route of administration selected.</p>
+      <p id="p-00032-en" num="0032">By “pharmaceutically acceptable” carrier and/or diluent is meant a pharmaceutical vehicle comprised of a material that is not biologically or otherwise undesirable, i.e. the material may be administered to a subject along with the selected active agent without causing any or a substantial adverse reaction. Carriers may include any and all solvents, dispersion media, coatings, antibacterial and antifungal agents, agents used for adjusting tonicity, buffers, chelating agents, and absorption delaying agents and the like.</p>
+      <p id="p-00033-en" num="0033">Similarly, a “pharmacologically acceptable” salt, ester, amide, prodrug or derivative of a compound as provided herein is a salt, ester, amide, prodrug or derivative that this not biologically or otherwise undesirable.</p>
+      <p id="p-00034-en" num="0034">The terms “treating” and “treatment” as used herein refer to reduction in severity and/or frequency of symptoms of diabetes, elimination of symptoms of diabetes, prevention of the occurrence of symptoms of diabetes and/or their underlying cause and improvement or remediation or amelioration of damage following onset of diabetes.</p>
+      <p id="p-00035-en" num="0035">Treatment of diabetes refers to the administration of a compound or combination described herein to treat a diabetic condition. One outcome of the treatment of diabetes is to reduce an increased plasma glucose concentration. Another outcome of the treatment of diabetes is to reduce an increased insulin concentration. Still another outcome of the treatment of diabetes is to reduce an increased blood triglyceride concentration. Still another outcome of the treatment of diabetes is to increase insulin sensitivity. Still another outcome of the treatment of diabetes may be enhancing glucose tolerance in a subject with glucose intolerance. Still another outcome of the treatment of diabetes is to reduce insulin resistance. Another outcome of the treatment of diabetes is to normalize plasma insulin levels. Still another outcome of treatment of diabetes is an improvement in glycemic control, particularly in type 2 diabetes. Yet another outcome of treatment is to increase hepatic insulin sensitivity.</p>
+      <p id="p-00036-en" num="0036">A “subject” as used herein refers to an animal, preferably a mammal and more preferably a human who can benefit from the pharmaceutical formulations and methods of the present invention. There is no limitation on the type of animal that could benefit from the presently described pharmaceutical formulations and methods. A subject regardless of whether a human or non-human animal may be referred to as an individual, patient, animal, host or recipient as well as subject. The compounds and methods of the present invention have applications in human medicine and veterinary medicine.</p>
+      <p id="p-00037-en" num="0037">The humanised mouse monoclonal antibody targeting VEGF-B (2H10) acts to reduce the accumulation of fatty acids within tissues and, as a consequence, restores insulin sensitivity and the regulation of glycemia. The mAb can be used in patients with T2D whose disease is not well controlled by first line medication, such as metformin. It is likely that these patients will have been transitioned onto treatment with either sulfonylureas, or to classes of compounds known as DPP-4 inhibitors or GLP-1R agonists. These latter compounds act to increase insulin production and while they are well tolerated their effectiveness can be modest at best. The mechanism of action (MOA) of a VEGF-B antagonist and of a DPP-4 inhibitor or GLP-1R agonist is complimentary and a VEGF-B antagonist would enhance and extend the benefits of the DPP-4 inhibitors/GLP-1R agonists.</p>
+      <p id="p-00038-en" num="0038">The disclosure herein shows that decreased VEGF-B signaling in rodent models of T2D restored insulin sensitivity and improved glucose tolerance. Genetic deletion of Vegfb in diabetic db/db mice prevented ectopic lipid deposition, increased muscle glucose uptake and maintained normoglycaemia. Pharmacological inhibition of VEGF-B signaling by antibody administration to db/db mice enhanced glucose tolerance, preserved pancreatic islet architecture, improved β-cell function and ameliorated dyslipidaemia, key elements of T2D and the metabolic syndrome. The potential use of VEGF-B-neutralisation in T2D was further elucidated in rats fed a high fat diet, where it normalised insulin sensitivity and increased glucose uptake to skeletal muscle and heart. These results demonstrate that the vascular endothelium can function as an efficient barrier towards excess muscle lipid uptake even under conditions of severe obesity and T2D, and that this barrier can be maintained by inhibition of VEGF-B signaling.</p>
+      <p id="p-00039-en" num="0039">Mice fed a high fat diet (HFD mice) and diabetic db/db mouse models are characterised by obesity, hyperglycaemia and ectopic lipid deposition. Vegfb-deletion in these mouse models resulted in decoupling of mitochondrial gene expression was from the expression of Vegfb and its downstream target Fatp3 in obese mice. Expression of mitochondrial genes is reduced in HFD and db/db mice, while skeletal and cardiac muscle expression of Vegfb and Fatp3 is increased. Thus, targeting VEGF-B-mediated FA-uptake has beneficial effects on intra-muscular lipid accumulation and diabetic phenotypes.</p>
+      <p id="p-00040-en" num="0040">The inventors have determined that, although Vegfb<sup>−/− </sup>mice fed a HFD (HFD-Vegfb<sup>−/−</sup> mice) gained more weight and had larger fat pads than HFD-wt mice, they showed lower blood glucose levels. These effects were even more prominent in Vegfb<sup>−/−</sup> mice crossed with db/db mice (db/db//Vegfb<sup>−/−</sup> mice). Db/db///Vegfb<sup>−/−</sup> mice had normal blood glucose levels in both the fasted and postprandial state, in contrast to the severely hyperglycaemic db/db control animals. The db/db//Vegfb<sup>−/−</sup> and db/db//Vegfb<sup>−/−</sup> mice had equal or lower plasma insulin levels compared to db/db controls, indicating that their normalised blood glucose was not due to compensatory hyperinsulinaemia. All three genotypes had similar body weight and weight gain until 20 weeks of age, when the db/db control animals became catabolic, i.e. stopped gaining weight and developed glucosuria. In contrast, db/db mice lacking one or both Vegfb-alleles did not become catabolic. Deletion of Vegfb did not affect food intake in mice on either a normal diet or HFD, or in diabetic mice.</p>
+      <p id="p-00041-en" num="0041">Deletion of Vegfb in db/db mice reduced Fatp3 mRNA expression and significantly decreased lipid deposition in skeletal muscle and myocardium. VEGF-B depletion also reduced the accumulation of triglycerides (TGs) in isolated pancreatic islets from db/db//Vegfb<sup>+/− </sup>and db/db//Vegf<sup>−/− </sup>mice, but did not affect lipid accumulation in liver. Uptake and accumulation of the glucose analogue [2-<sup>18</sup>F]-2-Fluoro-2-deoxy-D-glucose ([<sup>18</sup>F]FDG) was assessed in db/db and db/db//Vegfb<sup>−/−</sup> mice using positron emission tomography (PET). Analyses of the db/db//Vegfb<sup>−/−</sup> mice showed a 29% increase in cardiac [<sup>18</sup>F]FDG-uptake as compared to db/db controls. Post-PET measurement of radioactivity in dissected tissues confirmed increased glucose uptake to both skeletal and cardiac muscles in the db/db//Vegfb<sup>−/−</sup> mice. Taken together, the deletion of either one or both copies of Vegfb in diabetic mouse models was sufficient to reduce peripheral lipid deposition in muscular tissues, increase glucose uptake and maintain normoglycaemia.</p>
+      <p id="p-00042-en" num="0042">T2D and the metabolic syndrome are characterised by glucose intolerance, insulin resistance and dyslipidaemia. HFD-Vegfb<sup>−/−</sup> mice demonstrated improved glucose tolerance compared to HFD-wt mice, and were comparable to lean mice in their response to insulin injections. Similarly, db/db//Vegfb<sup>−/−</sup> and db/db//Vegfb<sup>+/− </sup>mice were more glucose tolerant and insulin sensitive than db/db controls. The expression of gluconeogenic and lipogenic genes was increased in the livers of control db/db mice, most likely due to hepatic insulin resistance (Ref 6), but the db/db//Vegfb<sup>−/−</sup> mice exhibited a normal hepatic expression pattern of such genes. Furthermore, dyslipidemia was ameliorated in the db/db//Vegfb<sup>−/− </sup>mice. The db/db//Vegfb<sup>−/−</sup> mice had reduced plasma triglyceride levels and LDL/VLDL-bound cholesterol (LDL-c) levels, and higher levels of HDL-bound cholesterol (HDL-c) than the db/db controls. The db/db//Vegfb<sup>−/−</sup> mice also had a normal HDL-c to LDL-c ratio (lean mice 4.3±0.5 (a.u.); db/db 1.8±0.3; db/db//Vegfb<sup>−/−</sup> 4.0±0.4; db/db//Vegfb<sup>−/−</sup> 4.2±0.6), indicating a lower risk for cardiovascular disease, although total plasma cholesterol was higher in db/db//Vegfb<sup>−/−</sup> mice compared to lean mice. Moreover, the levels of circulating non-esterified FAs (NEFAs) and ketones were reduced in db/db//Vegfb<sup>−/−</sup> mice. Genetic deletion of Vegfb thus targeted several hallmarks of T2D and improved the metabolic balance.</p>
+      <p id="p-00043-en" num="0043">To investigate if pharmacological inhibition of VEGF-B signaling could ameliorate T2D and the metabolic syndrome, db/db mice were injected with a specific neutralizing anti-VEGF-B antibody (2H10, mouse version (Scotney, P. D., et al. <i>Clin Exp Pharmacol Physiol </i>29, 1024-1029 (2002) and U.S. Pat. No. 7,517,524)), or a control antibody for 10 weeks. Two treatment strategies were applied, one preventive using pre-diabetic db/db mice, and one therapeutic using diabetic db/db mice. Both strategies lowered cardiac Fatp3 mRNA levels at the end of the study, whereas no effect on Vegfb-expression was detected. Treatment of pre-diabetic db/db mice with 2H10 prevented the development of hyperglycaemia (<figref>FIG. 1</figref><i>a</i>), and the progression of hyperglycaemia was halted in diabetic db/db receiving 2H10 (<figref>FIG. 1</figref><i>b</i>). At the end of the study, db/db mice receiving 2H10 displayed reduced lipid deposition in skeletal muscle and heart (<figref>FIG. 1</figref><i>c</i>-<i>d</i>), and improved glucose tolerance compared to control-treated db/db mice (<figref>FIG. 1</figref><i>e</i>), while no effect on weight-gain was observed. Administration of 2H10 protected the pre-diabetic db/db mice against elevated levels of circulating TGs, LDL-c, NEFAs and ketones, and increased plasma HDL-c levels (<figref>FIG. 1</figref><i>f</i>). 2H10-treatment of the diabetic db/db mice had no effect on plasma TG levels, and increased the levels of both HDL-c and LDL-c as compared to the controls. However, 2H10-treatment did lower both circulating NEFAs and ketones in the diabetic db/db mice. In summary, anti-VEGF-B treatment over a 10 week period, in either a preventative or a therapeutic context, was able to significantly limit disease progression.</p>
+      <p id="p-00044-en" num="0044">To further determine the therapeutic potential of an anti-VEGF-B antibody in insulin resistance and T2D, rats were fed a HFD (HFD-rats) for 8 weeks, and in parallel given 2H10 (chimeric mouse/rat antibody), or a control antibody. Treatment with 2H10 normalised glucose tolerance and glucose-stimulated insulin secretion in the HFD-rats. A hyperinsulinacmic/euglycaemic clamp study demonstrated that control-treated HFD-rats exhibited reduced glucose infusion rates (GIR) and glucose disposal rates (GDR) compared to lean control-treated animals, indicative of insulin resistance (<figref>FIG. 1</figref><i>g</i>). In contrast, 2H10-treatment of the HFD-rats increased both GIR and GDR, and significantly promoted glucose uptake into skeletal muscle and heart (<figref>FIG. 1</figref><i>g</i>-<i>h</i>). Food consumption and endogenous glucose production remained unchanged in the 2H10-treated HFD-rats compared to HFD controls. Anti-VEGF-B treatment thus restored insulin sensitivity, increased muscle glucose usage, and reversed the T2D pathology in these rodent models.</p>
+      <p id="p-00045-en" num="0045">The improved glucose tolerance after VEGF-B-neutralisation in mice and rats suggested that inhibition of VEGF-B might preserve islet function in addition to ameliorating insulin resistance. Histochemical analysis showed that 2H10-treatment of pre-diabetic and diabetic mice did not prevent pancreatic islet hyperplasia or influence islet density. However, 2H10-treated diabetic mice had large islets with few signs of degeneration, whereas the diabetic control mice had small islets with grossly disrupted architecture. The 2H10-treated db/db mice had normalised expression of insulin and glucagon within their islets as compared to control-treated mice. Furthermore, 2H10-treated animals had a normalised ratio between glucagon and insulin staining, and less centrally located β-cells within the islets, indications of preserved islet integrity. Staining for the apoptosis marker cleaved caspase 3 confirmed that the db/db mice treated with 2H10 displayed significantly reduced β-cell apoptosis. Thus, therapeutic inhibition of VEGF-B signaling preserved insulin production and islet functionality by protecting islet architecture and preventing β-cell apoptosis.</p>
+      <p id="p-00046-en" num="0046">Insulin resistance characterises &gt;90% of T2D patients (Ref 27). However, with exception of the thiazolidinediones, none of the current treatment options primarily targets this aspect of T2D pathology. Although thiazolidinediones have recently been linked to adverse cardiovascular outcomes, the use of these drugs provided a clear proof-of-concept that lowering peripheral lipid deposition can ameliorate T2D (Chaggar, P. S., et al. <i>Diab Vasc Dis Res </i>6, 146-152 (2009)). The inventors have shown, in four different rodent models of insulin resistance and T2D, that glucose intolerance can be efficiently reduced by targeting VEGF-B-regulated FATP expression and endothelial lipid transport.</p>
+      <p id="p-00047-en" num="0047">Anti-VEGF-B treatment also improved pancreatic β-cell function, possibly via reducing TG accumulation within the islets. Direct effects of VEGF-B signaling on β-cells are unlikely as VEGFR1 is only expressed by endothelial cells in the pancreas (Ref 16). The inventors have studied HFD-fed mice over-expressing VEGF-B selectively in the pancreatic β-cells (RIP-VEGF-B mice). HFD-fed RIP-VEGF-B mice were indistinguishable from wt mice in glucose tolerance, insulin sensitivity, islet morphology and circulating levels of insulin. Furthermore, no alterations were detected in lean RIP-VEGF-B mice regarding pancreatic islet physiology, lipid staining or Fatp-expression (Ref 16). Hence, systemic 2H10-treatment protects the islets via a combination of reduced lipotoxicity, and improved peripheral insulin sensitivity leading to a reversal of hyperglycaemia and thereby no requirement for hyperinsulinemia.</p>
+      <p id="p-00048-en" num="0048">In summary, both genetic and pharmacological inhibition of VEGF-B-signaling can limit ectopic lipid accumulation of FAs, restore peripheral insulin sensitivity and muscle glucose uptake, and preserve pancreatic functionality. Inhibition of VEGF-B signaling represents a novel and promising treatment option that targets the underlying pathology of T2D, thereby improving several adverse metabolic consequences of the disease.</p>
+      <p id="p-00049-en" num="0049">In view of the observed effects of a VEGF-B antagonist in models of T2D they may be particularly effective in a method of treating diabetic conditions when used in combination with a DPP-4 inhibitor or a GLP-1R agonist. The combination may allow dosing with lower amounts of the drugs than would be necessary if either drug were used alone, which can reduce side effects or the risk of side effects (see Table 1). Additionally, the combination may allow reduced frequency of dosing, may result in reduced effects on concomitantly administered drugs and may potentially lead to treatment of additional patient populations.</p>
+      <p id="p-00050-en" num="0050">For example, the combination of a VEGF-B antagonist with a DPP-4 inhibitor or a GLP-1R agonist can reduce the amount of DPP-4 inhibitor or GLP-1R agonist that is administered to a patient by 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90% or 100%.</p>
+      <p id="p-00051-en" num="0051">Lowering the dose of DPP-4 inhibitor can reduce the incidence and/or severity of commonly seen side effects in patients treated with DPP4 inhibitors, including upper respiratory tract infection, nasopharyngitis, urinary tract infection and headache. Furthermore, treating patients with lower amounts of DPP-4 inhibitors can reduce the risk of hypoglycaemia, pancreatitis, hepatic dysfunction, impaired renal function, hypersensitivity reactions (e.g. anaphylaxis, angioedema, exfoliative skin conditions) and peripheral edema, which have been reported in patients treated with DPP-4 inhibitors. See, Pattzi et al (2010) <i>Diabetes Obes Metab </i>12:348-355; Lim et al (2008) <i>Clin Ther </i>30: 1817-30; Andukuri et al (2009) <i>Diabetes, Metabolic Syndrome and Obesity: Targets and Therapy </i>2: 117-126; Yin et al (2008) <i>Metabolism </i>57: 712-717; Zhao Y N et al (2004) <i>American journal of Chinese Medicine </i>32: 921-929.</p>
+      <p id="p-00052-en" num="0052">Lowering the dose of DPP-4 inhibitor can also minimise the impact of these drugs on other concomitantly administered drugs, e.g. thiazides, corticosteroids, thyroid products, sympathomimetics, digoxin, CYP3A4/5 inhibitors (e.g., ketoconazole) and P-glycoprotein/CYP3A4 inducer (e.g. rifampin).</p>
+      <p id="p-00053-en" num="0053">Exemplary DPP-4 inhibitors contemplated for combination therapy according to the disclosed methods, side effects associated with such inhibitors, and drug interactions associated with the inhibitors, that can be reduced by combination therapy with a VEGF-B antagonist, are provided in Table 1:</p>
+      <p id="p-00054-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="385pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Exemplary DPP-4 inhibitors and side effects</entry>
+                </row>
+                <row>
+                  <entry>DPP-4 inhibitors</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="left" />
+              <colspec colname="3" colwidth="119pt" align="left" />
+              <colspec colname="4" colwidth="63pt" align="left" />
+              <colspec colname="5" colwidth="84pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Dosing route,</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>amount,</entry>
+                </row>
+                <row>
+                  <entry>Drug name</entry>
+                  <entry>frequency,</entry>
+                  <entry />
+                  <entry />
+                  <entry>Contraindications/</entry>
+                </row>
+                <row>
+                  <entry>Marketed/</entry>
+                  <entry>terminal half-</entry>
+                  <entry>Warnings and precautions/adverse</entry>
+                  <entry />
+                  <entry>specific patient</entry>
+                </row>
+                <row>
+                  <entry>developed by</entry>
+                  <entry>life</entry>
+                  <entry>reactions</entry>
+                  <entry>Drug interactions</entry>
+                  <entry>populations</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>GALVUS ® (EU)</entry>
+                  <entry>Oral</entry>
+                  <entry>Rare cases of hepatic dysfunction</entry>
+                  <entry>Hypoglycaemic</entry>
+                  <entry>Safety and effectiveness</entry>
+                </row>
+                <row>
+                  <entry>(vildagliptin)</entry>
+                  <entry>100 mg (50 mg</entry>
+                  <entry>(including hepatitis), angioedema and</entry>
+                  <entry>effect of</entry>
+                  <entry>in children under 18</entry>
+                </row>
+                <row>
+                  <entry>Novartis</entry>
+                  <entry>twice</entry>
+                  <entry>pancreatitis have been reported.</entry>
+                  <entry>vildagliptin may be</entry>
+                  <entry>years have not been</entry>
+                </row>
+                <row>
+                  <entry>Pharma GmbH</entry>
+                  <entry>daily) as</entry>
+                  <entry>Patients receiving vildagliptin in</entry>
+                  <entry>reduced by certain</entry>
+                  <entry>established.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>monotherapy</entry>
+                  <entry>combination with a sulphonylurea</entry>
+                  <entry>active substances,</entry>
+                  <entry>Pregnancy: studies in</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>50 mg once</entry>
+                  <entry>may be at risk for hypoglycaemia.</entry>
+                  <entry>including thiazides,</entry>
+                  <entry>animals have shown</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>daily in dual</entry>
+                  <entry>GALVUS: EPAR—Product Information</entry>
+                  <entry>corticosteroids,</entry>
+                  <entry>reproductive toxicity at</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>combination</entry>
+                  <entry>(Last updated 19 Aug. 2013),</entry>
+                  <entry>thyroid products</entry>
+                  <entry>high doses. Due to lack</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>with a</entry>
+                  <entry>European Medicines Agency website.</entry>
+                  <entry>and</entry>
+                  <entry>of human data, should</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>sulphonylurea</entry>
+                  <entry />
+                  <entry>sympathomimetics</entry>
+                  <entry>not be used during</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Half-life:</entry>
+                  <entry />
+                  <entry />
+                  <entry>pregnancy.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2 h after i.v.;</entry>
+                  <entry />
+                  <entry />
+                  <entry>Breast-feeding: animal</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3 h after oral</entry>
+                  <entry />
+                  <entry />
+                  <entry>studies have shown</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>excretion of vildagliptin</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>in milk. Should not be</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>used during breast-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>feeding.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Fertility: no studies on</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>the effect on human</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>fertility have been</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>conducted.</entry>
+                </row>
+                <row>
+                  <entry>JANUVIA</entry>
+                  <entry>Oral</entry>
+                  <entry>Adverse reactions reported in ≧5% of</entry>
+                  <entry>Digoxin</entry>
+                  <entry>Safety and effectiveness</entry>
+                </row>
+                <row>
+                  <entry>(sitagliptin)</entry>
+                  <entry>100 mg once</entry>
+                  <entry>patients treated with JANUVIA and</entry>
+                  <entry>There was a slight</entry>
+                  <entry>of JANUVIA in children</entry>
+                </row>
+                <row>
+                  <entry>Merck Sharp</entry>
+                  <entry>daily</entry>
+                  <entry>more commonly than in patients</entry>
+                  <entry>increase in the</entry>
+                  <entry>under 18 years have not</entry>
+                </row>
+                <row>
+                  <entry>Dohme</entry>
+                  <entry>Half-life:</entry>
+                  <entry>treated with placebo are: upper</entry>
+                  <entry>area under the</entry>
+                  <entry>been established</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>12.4 h after</entry>
+                  <entry>respiratory tract infection,</entry>
+                  <entry>curve (AUC, 11%)</entry>
+                  <entry>In animal studies,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>oral</entry>
+                  <entry>nasopharyngitis and headache.</entry>
+                  <entry>and mean peak</entry>
+                  <entry>JANUVIA did not impair</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>There have been postmarketing</entry>
+                  <entry>drug concentration</entry>
+                  <entry>fertility or harm the</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>reports of acute pancreatitis,</entry>
+                  <entry>(Cmax, 18%) of</entry>
+                  <entry>fetus. However, there</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>worsening renal function and serious</entry>
+                  <entry>digoxin with the</entry>
+                  <entry>are no adequate and</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>hypersensitivity reactions in patients</entry>
+                  <entry>co-administration</entry>
+                  <entry>well-controlled studies</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>treated with JANUVIA. The</entry>
+                  <entry>of 100 mg</entry>
+                  <entry>in pregnant women.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>hypersensitivity reactions include</entry>
+                  <entry>sitagliptin for 10</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>anaphylaxis, angioedema, and</entry>
+                  <entry>days. Patients</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>exfoliative skin conditions including</entry>
+                  <entry>receiving digoxin</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Stevens-Johnson syndrome.</entry>
+                  <entry>should be</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>There is an increased risk of</entry>
+                  <entry>monitored</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>hypoglycemia when JANUVIA is added</entry>
+                  <entry>appropriately. No</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>to an insulin secretagogue (e.g.,</entry>
+                  <entry>dosage adjustment</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>sulfonylurea) or insulin therapy.</entry>
+                  <entry>of digoxin or</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Reference: Label dated 19 Aug.</entry>
+                  <entry>JANUVIA is</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>2013, US Food and Drug</entry>
+                  <entry>recommended.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Administration (FDA) website.</entry>
+                </row>
+                <row>
+                  <entry>ONGLYZA</entry>
+                  <entry>Oral</entry>
+                  <entry>There have been postmarketing</entry>
+                  <entry>Strong CYP3A4/5</entry>
+                  <entry>No adequate and well-</entry>
+                </row>
+                <row>
+                  <entry>(saxagliptin)</entry>
+                  <entry>2.5 mg or</entry>
+                  <entry>reports of acute pancreatitis, serious</entry>
+                  <entry>inhibitors (e.g.,</entry>
+                  <entry>controlled studies in</entry>
+                </row>
+                <row>
+                  <entry>Bristol-Myers</entry>
+                  <entry>5 mg once</entry>
+                  <entry>hypersensitivity reactions (including</entry>
+                  <entry>ketoconazole):</entry>
+                  <entry>pregnant women.</entry>
+                </row>
+                <row>
+                  <entry>Squibb</entry>
+                  <entry>daily</entry>
+                  <entry>anaphylaxis, angioedema, and</entry>
+                  <entry>Coadministration</entry>
+                  <entry>Safety and effectiveness</entry>
+                </row>
+                <row>
+                  <entry>and Astra</entry>
+                  <entry>Half-life:</entry>
+                  <entry>exfoliative skin conditions) in patients</entry>
+                  <entry>with ONGLYZA</entry>
+                  <entry>of ONGLYZA in pediatric</entry>
+                </row>
+                <row>
+                  <entry>Zeneca</entry>
+                  <entry>2.5 h after</entry>
+                  <entry>taking ONGLYZA.</entry>
+                  <entry>significantly</entry>
+                  <entry>patients under 18 years</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>oral 5 mg; and</entry>
+                  <entry>Hypoglycemia: In add-on to</entry>
+                  <entry>increases</entry>
+                  <entry>of age have not been</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3.1 h (active</entry>
+                  <entry>sulfonylurea, add-on to insulin, and</entry>
+                  <entry>saxagliptin</entry>
+                  <entry>established.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>metabolite)</entry>
+                  <entry>add-on to metformin plus</entry>
+                  <entry>concentrations.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>sulfonylurea trials, confirmed</entry>
+                  <entry>Recommend</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>hypoglycemia was more common in</entry>
+                  <entry>limiting ONGLYZA</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>patients treated with ONGLYZA</entry>
+                  <entry>dosage to 2.5 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>compared to placebo.</entry>
+                  <entry>once daily.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Adverse reactions reported in ≧5% of</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>patients treated with ONGLYZA and</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>more commonly than in patients</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>treated with placebo are upper</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>respiratory tract infection, urinary</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>tract infection, and headache.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Peripheral edema was reported more</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>commonly in patients treated with</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>the combination of ONGLYZA and a</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>thiazolidinedione (TZD) than in</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>patients treated with the combination</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>of placebo and TZD.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Reference: Label dated 24 May 2013,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>US FDA website.</entry>
+                </row>
+                <row>
+                  <entry>TRADJENTA</entry>
+                  <entry>Oral</entry>
+                  <entry>There have been postmarketing</entry>
+                  <entry>P-</entry>
+                  <entry>Pregnancy: There are no</entry>
+                </row>
+                <row>
+                  <entry>(linagliptin)</entry>
+                  <entry>5 mg once</entry>
+                  <entry>reports of acute pancreatitis,</entry>
+                  <entry>glycoprotein/CYP3</entry>
+                  <entry>adequate and well-</entry>
+                </row>
+                <row>
+                  <entry>Eli Lilly Co and</entry>
+                  <entry>daily</entry>
+                  <entry>including fatal pancreatitis.</entry>
+                  <entry>A4 inducer: The</entry>
+                  <entry>controlled studies in</entry>
+                </row>
+                <row>
+                  <entry>Boehringer</entry>
+                  <entry>Half-life:</entry>
+                  <entry>Adverse reactions reported in ≧5% of</entry>
+                  <entry>efficacy of</entry>
+                  <entry>pregnant women.</entry>
+                </row>
+                <row>
+                  <entry>Ingelheim</entry>
+                  <entry>&gt;100 h after 5 mg</entry>
+                  <entry>patients treated with TRADJENTA and</entry>
+                  <entry>TRADJENTA may</entry>
+                  <entry>Nursing mothers:</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>dose</entry>
+                  <entry>more commonly than in patients</entry>
+                  <entry>be reduced when</entry>
+                  <entry>Caution should be</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>treated with placebo included</entry>
+                  <entry>administered in</entry>
+                  <entry>exercised when</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>nasopharyngitis.</entry>
+                  <entry>combination (e.g.,</entry>
+                  <entry>TRADJENTA is</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Hypoglycemia was more commonly</entry>
+                  <entry>with rifampin). Use</entry>
+                  <entry>administered to a</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>reported in patients treated with the</entry>
+                  <entry>of alternative</entry>
+                  <entry>nursing woman</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>combination of TRADJENTA and</entry>
+                  <entry>treatments is</entry>
+                  <entry>Pediatric patients:</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>sulfonylurea compared with those</entry>
+                  <entry>strongly</entry>
+                  <entry>Safety and effectiveness</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>treated with the combination of</entry>
+                  <entry>recommended.</entry>
+                  <entry>of TRADJENTA in</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>placebo and sulfonylurea</entry>
+                  <entry />
+                  <entry>patients below the age</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Reference: Label dated 18 Jun. 2013,</entry>
+                  <entry />
+                  <entry>of 18 have not been</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>US FDA website.</entry>
+                  <entry />
+                  <entry>established</entry>
+                </row>
+                <row>
+                  <entry>dutogliptin</entry>
+                  <entry>Oral</entry>
+                  <entry>In August 2010, Phenomix terminated</entry>
+                </row>
+                <row>
+                  <entry>(PHX1149T)</entry>
+                  <entry>100-400 mg</entry>
+                  <entry>multiple clinical trials. No reason was</entry>
+                </row>
+                <row>
+                  <entry>Phenomix</entry>
+                  <entry>once daily</entry>
+                  <entry>given.</entry>
+                </row>
+                <row>
+                  <entry>Corporation</entry>
+                  <entry>Half-life:</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>10-13 h</entry>
+                </row>
+                <row>
+                  <entry>Gemigliptin</entry>
+                  <entry>Oral</entry>
+                  <entry>No serious adverse events recorded.</entry>
+                </row>
+                <row>
+                  <entry>(LC15-0444)</entry>
+                  <entry>25-600 mg</entry>
+                </row>
+                <row>
+                  <entry>LG Life</entry>
+                  <entry>Half-life:</entry>
+                </row>
+                <row>
+                  <entry>Sciences,</entry>
+                  <entry>17-21 h</entry>
+                </row>
+                <row>
+                  <entry>Korea</entry>
+                </row>
+                <row>
+                  <entry>Double-Crane</entry>
+                </row>
+                <row>
+                  <entry>Pharmaceutical</entry>
+                </row>
+                <row>
+                  <entry>Co. (DCPC)</entry>
+                </row>
+                <row>
+                  <entry>Alogliptin</entry>
+                  <entry>Half-life:</entry>
+                  <entry>The agent is relatively well tolerated</entry>
+                </row>
+                <row>
+                  <entry>Takeda</entry>
+                  <entry>12.4-21.4 h</entry>
+                  <entry>with few adverse effects, the major</entry>
+                </row>
+                <row>
+                  <entry>Pharmaceutical</entry>
+                  <entry />
+                  <entry>finding being a marginally higher rate</entry>
+                </row>
+                <row>
+                  <entry>Co.</entry>
+                  <entry />
+                  <entry>of skin events, primarily pruritus.</entry>
+                </row>
+                <row>
+                  <entry>berberine</entry>
+                  <entry>500 mg 3x</entry>
+                  <entry>Transient gastrointestinal adverse</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>daily</entry>
+                  <entry>effects</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Half-life:</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3-4 h</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00055-en" num="0054">Lowering the dose of GLP-1R agonist can reduce the incidence and/or severity of commonly seen side effects in patients treated with GLP-1R agonists, including nausea, hypoglycemia, vomiting, diarrhea, feeling jittery, dizziness, headache, dyspepsia, constipation, asthenia, injection site pruritis, injection site nodule, dyspepsia and anti-drug antibodies (e.g. anti-liraglutide antibodies). Furthermore, treating patients with lower amounts of GLP-1R agonists can reduce the risk of hypoglycaemia, pancreatitis, impaired renal function and hypersensitivity reactions (e.g. anaphylaxis, angioedema), which have been reported in patients treated with GLP-1R agonists. See, Kim et al (2003) <i>Diabetes </i>52:751-9; Baggio et al (2008) <i>Gastroenterology </i>134:1137-47; Baggio et al (2004) <i>Diabetes </i>53:2492-500; Rosenstock et al (2013) <i>Diabetes Care </i>36:498-504. A lower dose of GLP-1R agonist can also reduce the potential risk of medullary thyroid carcinoma in patients treated with, for example, exenatide or liraglutide.</p>
+      <p id="p-00056-en" num="0055">Lowering the dose of GLP-1R agonist can also minimise the impact of these drugs on other concomitantly administered drugs, e.g. orally administered medications and warfarin.</p>
+      <p id="p-00057-en" num="0056">Exemplary GLP-1R agonists contemplated for combination therapy according to the disclosed methods, side effects associated with such agonists, and drug interactions associated with the agonists, that can be reduced by combination therapy with a VEGF-B antagonist, are provided in Table 2:</p>
+      <p id="p-00058-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="378pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Exemplary GLP-1R agonists and side effects</entry>
+                </row>
+                <row>
+                  <entry>GLP-1R agonists</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="left" />
+              <colspec colname="3" colwidth="140pt" align="left" />
+              <colspec colname="4" colwidth="70pt" align="left" />
+              <colspec colname="5" colwidth="56pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Dosing route,</entry>
+                  <entry />
+                  <entry />
+                  <entry>Contraindications/</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>amount,</entry>
+                  <entry />
+                  <entry />
+                  <entry>specific</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>frequency,</entry>
+                  <entry>Warnings and precautions/adverse</entry>
+                  <entry />
+                  <entry>patient</entry>
+                </row>
+                <row>
+                  <entry>Drug name</entry>
+                  <entry>drug half-life</entry>
+                  <entry>reactions</entry>
+                  <entry>Drug interactions</entry>
+                  <entry>populations</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>BYETTA (US)</entry>
+                  <entry>Subcutaneous</entry>
+                  <entry>Postmarketing reports of pancreatitis;</entry>
+                  <entry>May impact</entry>
+                  <entry>Pregnancy:</entry>
+                </row>
+                <row>
+                  <entry>Exendin-4</entry>
+                  <entry>5-10</entry>
+                  <entry>hypersensitivity reactions (e.g. anaphylaxis</entry>
+                  <entry>absorption of orally</entry>
+                  <entry>Based on animal</entry>
+                </row>
+                <row>
+                  <entry>(exenatide)</entry>
+                  <entry>micrograms</entry>
+                  <entry>and angioedema), renal impairment.</entry>
+                  <entry>administered</entry>
+                  <entry>data, BYETTA</entry>
+                </row>
+                <row>
+                  <entry>Amylin and Eli</entry>
+                  <entry>twice daily</entry>
+                  <entry>Increased risk of hypoglycemia when used in</entry>
+                  <entry>medications</entry>
+                  <entry>may cause fetal</entry>
+                </row>
+                <row>
+                  <entry>Lilly and Co</entry>
+                  <entry />
+                  <entry>combination insulin or an insulin</entry>
+                  <entry>Warfarin:</entry>
+                  <entry>harm</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>secretagogue.</entry>
+                  <entry>Postmarketing</entry>
+                  <entry>Nursing</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Not recommended in patients with severe</entry>
+                  <entry>reports of increased</entry>
+                  <entry>Mothers:</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>gastrointestinal disease (e.g., gastroparesis).</entry>
+                  <entry>international</entry>
+                  <entry>Caution should</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Most common (≧5%) and occurring more</entry>
+                  <entry>normalized ratio</entry>
+                  <entry>be exercised</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>frequently than placebo in clinical trials:</entry>
+                  <entry>(INR) sometimes</entry>
+                  <entry>when BYETTA is</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>nausea, hypoglycemia, vomiting, diarrhea,</entry>
+                  <entry>associated with</entry>
+                  <entry>administered to</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>feeling jittery, dizziness, headache,</entry>
+                  <entry>bleeding.</entry>
+                  <entry>a nursing woman</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>dyspepsia, constipation, asthenia. Nausea</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>usually decreases over time</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Reference:</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Label dated 19 Oct. 2011, US FDA</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>website.</entry>
+                </row>
+                <row>
+                  <entry>BYDUREON ™</entry>
+                  <entry>Subcutaneous</entry>
+                  <entry>Based on animal data, there may be a risk of</entry>
+                  <entry>May impact</entry>
+                  <entry>Pregnancy: may</entry>
+                </row>
+                <row>
+                  <entry>Exendin-4</entry>
+                  <entry>2 mg once</entry>
+                  <entry>medullary thyroid carcinoma.</entry>
+                  <entry>absorption of orally</entry>
+                  <entry>cause fetal harm</entry>
+                </row>
+                <row>
+                  <entry>(exenatide)</entry>
+                  <entry>weekly</entry>
+                  <entry>Postmarketing reports of pancreatitis;</entry>
+                  <entry>administered</entry>
+                  <entry>Nursing</entry>
+                </row>
+                <row>
+                  <entry>Bydureon is</entry>
+                  <entry />
+                  <entry>hypersensitivity reactions (e.g. anaphylaxis</entry>
+                  <entry>medications</entry>
+                  <entry>Mothers:</entry>
+                </row>
+                <row>
+                  <entry>an extended-</entry>
+                  <entry />
+                  <entry>and angioedema).</entry>
+                  <entry>Warfarin:</entry>
+                  <entry>Caution should</entry>
+                </row>
+                <row>
+                  <entry>release</entry>
+                  <entry />
+                  <entry>Increased risk of hypoglycemia when used in</entry>
+                  <entry>Postmarketing</entry>
+                  <entry>be exercised</entry>
+                </row>
+                <row>
+                  <entry>formulation of</entry>
+                  <entry />
+                  <entry>combination insulin or an insulin</entry>
+                  <entry>reports of increased</entry>
+                  <entry>when</entry>
+                </row>
+                <row>
+                  <entry>exenatide</entry>
+                  <entry />
+                  <entry>secretagogue.</entry>
+                  <entry>international</entry>
+                  <entry>administered to</entry>
+                </row>
+                <row>
+                  <entry>Amylin</entry>
+                  <entry />
+                  <entry>Not recommended in patients with severe</entry>
+                  <entry>normalized ratio</entry>
+                  <entry>a nursing woman</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>gastrointestinal disease (e.g., gastroparesis).</entry>
+                  <entry>(INR) sometimes</entry>
+                  <entry>Do not use if</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Most common (≧5%) and occurring more</entry>
+                  <entry>associated with</entry>
+                  <entry>personal or</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>frequently than comparator in clinical trials:</entry>
+                  <entry>bleeding.</entry>
+                  <entry>family history of</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>nausea, diarrhea, headache, vomiting,</entry>
+                  <entry />
+                  <entry>medullary</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>constipation, injection site pruritus, injection</entry>
+                  <entry />
+                  <entry>thyroid</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>site nodule, and dyspepsia</entry>
+                  <entry />
+                  <entry>carcinoma or in</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Label dated 27 Jan. 2013, US FDA</entry>
+                  <entry />
+                  <entry>patients with</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>website.</entry>
+                  <entry />
+                  <entry>Multiple</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Endocrine</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Neoplasia</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>syndrome type 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Do not use if</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>history of serious</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>hypersensitivity</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>to exenatide or</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>any product</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>components</entry>
+                </row>
+                <row>
+                  <entry>VICTOZA ®</entry>
+                  <entry>Subcutaneous</entry>
+                  <entry>Based on animal data, there may be a risk of</entry>
+                  <entry>Victoza delays gastric</entry>
+                  <entry>Limited data in</entry>
+                </row>
+                <row>
+                  <entry>(US)</entry>
+                  <entry>0.6, 1.2 or 1.8 mg</entry>
+                  <entry>medullary thyroid carcinoma.</entry>
+                  <entry>emptying. May</entry>
+                  <entry>patients with</entry>
+                </row>
+                <row>
+                  <entry>liraglutide</entry>
+                  <entry>once daily</entry>
+                  <entry>Postmarketing reports of pancreatitis, renal</entry>
+                  <entry>impact absorption of</entry>
+                  <entry>renal or hepatic</entry>
+                </row>
+                <row>
+                  <entry>(N,N-2211)</entry>
+                  <entry />
+                  <entry>impairment and serious hypersensitivity</entry>
+                  <entry>concomitantly</entry>
+                  <entry>impairment.</entry>
+                </row>
+                <row>
+                  <entry>Novo Nordisk</entry>
+                  <entry />
+                  <entry>reactions (e.g., anaphylactic reactions and</entry>
+                  <entry>administered oral</entry>
+                  <entry>Do not use in</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>angioedema).</entry>
+                  <entry>medications.</entry>
+                  <entry>patients with a</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Increased risk of hypoglycemia when used in</entry>
+                  <entry />
+                  <entry>personal or</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>combination insulin or an insulin</entry>
+                  <entry />
+                  <entry>family history of</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>secretagogue.</entry>
+                  <entry />
+                  <entry>medullary</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>The most common adverse reactions,</entry>
+                  <entry />
+                  <entry>thyroid</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>reported in ≧5% of patients treated with</entry>
+                  <entry />
+                  <entry>carcinoma or in</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Victoza and more commonly than in patients</entry>
+                  <entry />
+                  <entry>patients with</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>treated with placebo, are: headache,</entry>
+                  <entry />
+                  <entry>Multiple</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>nausea, diarrhea and anti-liraglutide</entry>
+                  <entry />
+                  <entry>Endocrine</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>antibody formation</entry>
+                  <entry />
+                  <entry>Neoplasia</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Immunogenicity-related events, including</entry>
+                  <entry />
+                  <entry>syndrome type</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>urticaria, were more common among</entry>
+                  <entry />
+                  <entry>2.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Victoza-treated patients (0.8%) than among</entry>
+                  <entry />
+                  <entry>Do not use if</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>comparator-treated patients (0.4%) in</entry>
+                  <entry />
+                  <entry>history of serious</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>clinical trials</entry>
+                  <entry />
+                  <entry>hypersensitivity</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Label dated 13 Jun. 2013, US FDA website.</entry>
+                  <entry />
+                  <entry>to Victoza or any</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>product</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>components</entry>
+                </row>
+                <row>
+                  <entry>Dulaglutide</entry>
+                  <entry>Subcutaneous</entry>
+                  <entry>In clinical trials:</entry>
+                </row>
+                <row>
+                  <entry>(LY2189265)</entry>
+                  <entry>1.5 mg once</entry>
+                  <entry>Five Ph III clinical trials (AWARD 1-5) will</entry>
+                </row>
+                <row>
+                  <entry>Eli Lilly and Co</entry>
+                  <entry>weekly</entry>
+                  <entry>support registration filings expected in</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>2013/2014</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>AWARD (Assessment of Weekly</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>AdministRation of LY2189265 in Diabetes)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Gastrointestinal adverse events reported</entry>
+                </row>
+                <row>
+                  <entry>CJC-1131</entry>
+                  <entry>Subcutaneous</entry>
+                  <entry>No longer in clinical development</entry>
+                </row>
+                <row>
+                  <entry>(DAC ™:GLP-1)</entry>
+                  <entry>Phll</entry>
+                  <entry>CJC-1131 is a human GLP-1 analogue with a</entry>
+                </row>
+                <row>
+                  <entry>Conjuchem</entry>
+                  <entry>monotherapy</entry>
+                  <entry>reactive chemical linker at the Cys 34</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>trial:</entry>
+                  <entry>residue which permits covalent coupling to</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>once a day</entry>
+                  <entry>albumin following administration in vivo.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(OD), three</entry>
+                  <entry>Nausea and vomiting was dose-limiting with</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>times a week</entry>
+                  <entry>patients in the once a week cohort only able</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(EOD),</entry>
+                  <entry>to attain, on average, approximately 35% of</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>twice a week</entry>
+                  <entry>the target dosing levels. Nevertheless, all</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(TW), once a</entry>
+                  <entry>patients achieved significant improvements</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>week (OW)</entry>
+                  <entry>in glycemic control, with the best results</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>observed in the once daily dosing cohort.</entry>
+                </row>
+                <row>
+                  <entry>LY-307161</entry>
+                  <entry>Subcutaneous</entry>
+                  <entry>LY307161 is a DPP IV-resistant GLP-1</entry>
+                </row>
+                <row>
+                  <entry>(GLP-1 (7-37))</entry>
+                  <entry>once-daily</entry>
+                  <entry>analogue</entry>
+                </row>
+                <row>
+                  <entry>Eli Lilly and Co</entry>
+                </row>
+                <row>
+                  <entry>CJC-1134</entry>
+                  <entry>Subcutaneous</entry>
+                </row>
+                <row>
+                  <entry>(exendin-4-</entry>
+                  <entry>Up to 5 mg</entry>
+                </row>
+                <row>
+                  <entry>albumin</entry>
+                  <entry>Once weekly</entry>
+                </row>
+                <row>
+                  <entry>conjugate)</entry>
+                  <entry>Half-life:</entry>
+                </row>
+                <row>
+                  <entry>Conjuchem</entry>
+                  <entry>8 days</entry>
+                </row>
+                <row>
+                  <entry>albiglutide</entry>
+                  <entry>Subcutaneous</entry>
+                  <entry>Albiglutide is a recombinant-GLP-1 protein</entry>
+                </row>
+                <row>
+                  <entry>(GSK716155;</entry>
+                  <entry>Once weekly</entry>
+                  <entry>The Phase III clinical development</entry>
+                </row>
+                <row>
+                  <entry>albugon)</entry>
+                  <entry />
+                  <entry>programme for albiglutide comprised eight</entry>
+                </row>
+                <row>
+                  <entry>Glaxo</entry>
+                  <entry />
+                  <entry>individual studies (Harmony 1 to Harmony 8)</entry>
+                </row>
+                <row>
+                  <entry>SmithKline</entry>
+                  <entry />
+                  <entry>involving over 5,000 patients. The</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>programme investigated the efficacy,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>tolerability and safety, including</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>cardiovascular safety, of albiglutide as</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>mono- and add-on therapy, in patients with</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>type 2 diabetes. All eight studies have</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>completed.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Albiglutide has been submitted for U.S. and</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>European regulatory approval (FDA decision</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>expected by 15 Apr. 2014)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>The most commonly reported adverse</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>effects in the studies were gastrointestinal,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>mainly nausea and diarrhea, and injection</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>site reactions</entry>
+                </row>
+                <row>
+                  <entry>GLP-1 (7-36)</entry>
+                  <entry>continuous</entry>
+                  <entry>GLP-1 (7-36) amide is not very useful for</entry>
+                </row>
+                <row>
+                  <entry>amide</entry>
+                  <entry>subcutaneous</entry>
+                  <entry>treatment of T2D, since it must be</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>infusion</entry>
+                  <entry>administered by continuous subcutaneous</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>infusion.</entry>
+                </row>
+                <row>
+                  <entry>GLP1</entry>
+                  <entry>Half-life:</entry>
+                  <entry>The half-life of native GLP-1 is only about 5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5 minutes</entry>
+                  <entry>minutes, as it is simultaneously degraded by</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>serum enzymes and cleared through renal</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>excretion</entry>
+                </row>
+                <row>
+                  <entry>taspoglutide</entry>
+                  <entry>Subcutaneous</entry>
+                  <entry>In Phase III clinical trials, there was a high</entry>
+                </row>
+                <row>
+                  <entry>Hoffman-La</entry>
+                  <entry>10 mg once</entry>
+                  <entry>patient drop-out rate. The main problems</entry>
+                </row>
+                <row>
+                  <entry>Roche</entry>
+                  <entry>weekly</entry>
+                  <entry>were gastrointestinal (nausea/vomiting), but</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>systemic allergic and injection-site reactions</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>were also more common with taspoglutide</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>(compared to exenatide); 49% of patients</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>showed antibodies against the drug.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00059-en" num="0057">The combination of a VEGF-B antagonist with a DPP-4 inhibitor or a GLP-1R agonist can reduce the frequency of dosing of DPP-4 inhibitor or GLP-1R agonist to for example, once daily, six times per week, five times per week, four times per week, three times per week, twice per week, once per week, once per two weeks, once per three weeks, once per month or even less frequently.</p>
+      <p id="p-00060-en" num="0058">The combination of a VEGF-B antagonist with a DPP-4 inhibitor or a GLP-1R agonist can permit treatment of additional patient populations that are currently excluded from treatment with either drug used alone (e.g. Byetta® (exenatide) is not recommended for use in patients with severe gastrointestinal disease (e.g. gastroparesis)). Lowering the dose of DPP-4 inhibitor or GLP-1R agonist can permit their use in children under 18 years of age and/or in pregnant women or nursing mothers.</p>
+      <p id="p-00061-en" num="0059">The combinations, including the preferred combinations, are also considered useful in treating metabolic syndrome or dyslipidemias.</p>
+      <p id="p-00062-en" num="0060">Metabolic syndrome (also referred to as syndrome X) is a cluster of risk factors that is responsible for increased cardiovascular morbidity and mortality. Metabolic syndrome is typically characterized by a group of metabolic risk factors that include 1) central obesity; 2) atherogenic dyslipidemia (blood fat disorders comprising mainly high triglycerides (“TG”) and low HDL-cholesterol (interchangeably referred to herein as “HDL”) that foster plaque buildups in artery walls); 3) raised blood pressure; 4) insulin resistance or glucose intolerance (the body can't properly use insulin or blood sugar); 5) prothrombotic state (e.g., high fibrinogen or plasminogen activator inhibitor in the blood); and 6) a proinflammatory state (e.g., elevated high-sensitivity C-reactive protein in the blood). The National Cholesterol Education Program (NCEP) Adult Treatment Panel (ATP) III guidelines define metabolic syndrome by the following five clinical parameters: a) a waist circumference greater than 102 cm for men, and greater than 88 cm for women; b) a triglyceride level greater than 150 mg/dl; c) an HDL-cholesterol less than 40 mg/dl for men, and less than 50 mg/dl for women; d) a blood pressure greater than or equal to 130/85 mmHG; and e) a fasting glucose greater than 110 mg/dl.</p>
+      <p id="p-00063-en" num="0061">As used herein, dyslipidemia is an abnormal serum, plasma, or blood lipid profile in a subject. An abnormal lipid profile may be characterized by total cholesterol, low density lipoprotein (LDL)-cholesterol, triglyceride, apolipoprotein (apo)-B or Lp(a) levels above the 90.sup.th percentile for the general population or high density lipoprotein (HDL)-cholesterol or apo A-1 levels below the 10<sup>th </sup>percentile for the general population. Dyslipidemia can include hypercholesterolemia and/or hypertriglyceridemia. Hypercholesterolemic human subjects and hypertriglyceridemic human subjects are associated with increased incidence of cardiovascular disorders. A hypercholesterolemic subject has an LDL cholesterol level of &gt;160 mg/dL, or &gt;130 mg/dL and at least two risk factors selected from the group consisting of male gender, family history of premature coronary heart disease, cigarette smoking, hypertension, low HDL (&lt;35 mg/dL), diabetes mellitus, hyperinsulinemia, abdominal obesity, high lipoprotein, and personal history of a cardiovascular event. A hypertriglyceridemic human subject has a triglyceride (TG) level of &gt;200 mg/dL.</p>
+      <p id="p-00064-en" num="0062">The present disclosure is further illustrated by the following non-limiting examples.</p>
+      <heading id="h-00005-en" level="1">Examples</heading>
+      <heading id="h-00006-en" level="1">Methods Summary</heading>
+      <p id="p-00065-en" num="0063">Animals.</p>
+      <p id="p-00066-en" num="0064">The C57BL/6-Vegfb<sup>−/− </sup>mice have previously been described (Ref 19). C57BKS/Lepr<sup>db </sup>(db/db) mice were purchased from Jackson Laboratory and bred with Vegfb<sup>−/−</sup> mice. Db/db//Vegfb<sup>−/−</sup> mice were bred by mating heterozygous db/+//Vegfb<sup>+/− </sup>mice with each other. Wt C57BL/6 mice from the Vegfb<sup>−/− </sup>colony were used as mouse lean controls. Age and sex-matched mice of both sexes were used in all studies unless otherwise stated. Endpoint analyses for lean, db/db, db/db//Vegfb<sup>+/− </sup>and db/db//Vegfb<sup>−/− </sup>was at XX weeks of age unless indicated otherwise. For mouse HFD-studies, male wt and Vegfb<sup>−/−</sup> mice where fed 60% HFD (Research Diets, USA) for 16 weeks from 5 weeks of age. For rat HFD-studies, male Wistar rats were fed a 60% HFD (Speciality Feeds, Western Australia) for 8 weeks from 8 weeks of age. All animals had independent of diet ad libitum access to chow and water, and were housed in standard cages in an environment with 12 hrs light/12 hrs dark cycles. All animal work using mice was conducted in accordance to the Swedish Animal Welfare Board at Karolinska Institutet, Stockholm, Sweden, whereas the animal work using rats was conducted according to relevant national and international guidelines and approved by the Austin Health Animal Ethics Committee, Melbourne, Australia (AEC A2009/03967).</p>
+      <p id="p-00067-en" num="0065">Glucose and Weight Measurements.</p>
+      <p id="p-00068-en" num="0066">Weight and postprandial blood glucose levels of mice were monitored bi-weekly after removal of food for 2 hrs. Glucose measurements were performed on blood drawn from the tail vein using a Bayer Contour Glucose meter. For the measurements of metabolites in fasted plasma, food was removed overnight for a maximum of 16 hrs, glucose was measured under anaesthesia using isofluorane, and the mice were sacrificed afterwards. For analysis of glucosuria, mice were starved for 1 hrs, urine was then collected and the glucose concentration was directly measured using reagent strips according to the manufactures (Uristix, Siemens).</p>
+      <p id="p-00069-en" num="0067">Measurement of Food Intake.</p>
+      <p id="p-00070-en" num="0068">The food intake of lean, HFD-fed and db/db mice as well as HFD-fed rats was measured for 5-7 consecutive weeks. All animals and the amount of food in the cage were weighed once a week. The intake of food presented as g/day/animal was calculated by dividing grams of food eaten per day per amount of animals in the cage. The average of all weeks was presented in the figures.</p>
+      <p id="p-00071-en" num="0069">Metabolic Analyses of Mouse Plasma.</p>
+      <p id="p-00072-en" num="0070">Mice in a postprandial state were anaesthetised with isofluorane, and total blood was withdrawn from the cardiac cavity of mice under deep anaesthesia. The blood was centrifuged for 14000 rpm at 4° C. for 10 minutes, where after plasma was separated and frozen in aliquots in −80° C. Commercially available kits were used for enzymatic determination of NEFAs (Wako Chemicals, Neuss, Germany), beta-hydroxybutyrate (Stanbio Laboratories, Boerne, Tex., USA), triglycerides (Sigma-Aldrich, Germany), and HDL-c and LDL-c (BioVision, Mountain View, Calif., USA).</p>
+      <p id="p-00073-en" num="0071">Phenotyping of Mice.</p>
+      <p id="p-00074-en" num="0072">Analysis of muscular and cardiac mRNA expression, ORO staining and [<sup>18</sup>F]FDG uptake by PET were performed as previously described (Hagberg, C. E., et al. <i>Nature </i>464, 917-921 (2010)).</p>
+      <p id="p-00075-en" num="0073">2H10 Treatment of Db/Db Mice.</p>
+      <p id="p-00076-en" num="0074">7-week or 16-week old db/db mice were injected i.p. twice weekly for 10 weeks with 400 μg of either 2H10 or isotype-matched control antibody. After 9 weeks of treatment, glucose tolerance was evaluated by IPGTT (see below). At the end of the treatment period, the mice were anaesthetised by isofluorane, blood glucose was measured and total blood was removed by cardiac puncture. Organs were harvested and flash frozen for later analyses.</p>
+      <p id="p-00077-en" num="0075">2H10 Treatment of HFD-Fed Wistar Rats.</p>
+      <p id="p-00078-en" num="0076">To minimise the potential immunogenicity of the mouse 2H10 antibody it was reformatted as a chimeric mouse/rat 2H10 IgG antibody. The genes for both the light and heavy chain variable region of the murine anti-VEGFB antibody 2H10<sup>28 </sup>were synthesized (Geneart) and cloned into separate pcDNA3.1(+) expression vectors which had been modified to contain rat IgG2a and rat kappa constant regions respectively. All animals were treated with either anti-VEGF-B chimaeric mouse/rat 2H10 antibody or an isotype control using a 20 mg/kg dose injected i.p. twice weekly for the 8 week period of the study.</p>
+      <p id="p-00079-en" num="0077">IPGTTs and IPITTs.</p>
+      <p id="p-00080-en" num="0078">IPGTT (intraperitoneal glucose tolerance test) or IPITT (intraperitoneal insulin tolerance test) on mice were performed in the morning on non-fasted mice that had the food removed 1 hr prior to the experiment and injected i.p. (IPGTT 1 mg glucose/g body weight (BW) and IPITT 1 mU insulin/g BW). Pooled data from ≧4 individual experiments are shown.</p>
+      <p id="p-00081-en" num="0079">IPGTTs on the treated rats were performed as previously described but modified (Ref 31, 32, 33). Briefly, rats were fasted for 6 hrs and anaesthetised with an i.p. injection of sodium pentabarbitone (60 mg/kg). Surgery to insert a carotid catheter was performed as below. A basal blood sample was taken prior to an i.p. injection of glucose (2 &amp;kg body weight). Subsequent blood samples were taken at 15, 30, 45, 60 and 120 minutes, centrifuged and stored at −20° C. until analyses of plasma glucose and insulin levels. Red blood cells were returned to the rats with equal volumes of heparinised saline between each sample time to prevent anaemic shock.</p>
+      <p id="p-00082-en" num="0080">Histological Analyses of Pancreas.</p>
+      <p id="p-00083-en" num="0081">Pancreas from antibody-treated db/db mice were dissected and post-fixated in 4% PFA for 48 hrs, subsequently processed for paraffin imbedding using standard procedures, and thereafter immunostained for insulin, glucagon and/or cleaved caspase 3. Briefly, antigen retrieval was performed on 12 μm sections using Antigen retrieval solution PH6 (Dako #S2367) and heated 98C.° for 10 minutes. Sections were incubated at +4° C. for 12 hrs with primary antibodies rat anti-insulin (R&amp;D systems #MAB1417), rabbit anti-glucagon (Millipore #AB932) or rabbit anti-Cleaved caspase-3 (Cell Signalling ASP175). Appropriate fluorescently labelled secondary antibodies (Invitrogen, Alexa fluor) were applied and sections were further incubated for 1 hr at RT after which they were prepared for microscopy.</p>
+      <p id="p-00084-en" num="0082">All pancreatic islets stained for insulin and glucagon within each section were photographed with an Axio Vision microscope (Carl Zeiss) at 20× magnification. The islets were quantified using Axio Vision Run wizard program for i) total islet insulin staining (pixels) ii) total islet glucagon staining (pixels) iii) glucagon staining within the inside core of the pancreatic islet (pixels). Finally, the area of each of the pancreatic islets was measured.</p>
+      <p id="p-00085-en" num="0083">Triglyceride Content in Isolated Pancreatic Islets.</p>
+      <p id="p-00086-en" num="0084">Pancreatic islets were analysed as described (Ref 34). TGs were extracted with a previously published but modified protocol (Ref 35). Briefly, TGs were extracted in a high salt buffer (2 M NaCl, 2 mM EDTA 50 mM sodium phosphate) where after a solution of chloroform methanol (2:1) was added and the sample sonicated for 3×30 sec. After centrifugation (4000 rpm for 15 min) the chloroform phase was collected and dried in nitrogen airflow and reconstituted in 30 μl of isopropanol. TG content in the pancreatic islets was measured by a TG kit (Infinity Triglyceride Reagent, Thermo Scientific) using a standard (Sigma) curve with isopropanol as a reference.</p>
+      <p id="p-00087-en" num="0085">Surgery of Rats for Basal Turnover and Hyperinsulinaemic/Euglycaemic Clamps.</p>
+      <p id="p-00088-en" num="0086">Following an overnight fast, rats were anaesthetised with an i.p. injection of sodium pentobarbitone (60 mg/kg), and heparinised saline (25 U/ml) filled polyethylene catheters (Chrichley Electrical, NSW, Australia) were inserted into the right jugular vein and left carotid artery. The venous catheter was used for infusion and the carotid catheter for blood sampling. A tracheostomy was performed to prevent upper airway obstruction. Body temperature was maintained at 37° C. and monitored throughout with a rectal temperature probe. Anaesthesia was adequately maintained throughout the procedures.</p>
+      <p id="p-00089-en" num="0087">Hyperinsulinaemic/Euglycaemic Clamps and Glucose Uptake into Peripheral Tissues.</p>
+      <p id="p-00090-en" num="0088">All rats were infused with an initial 2 minute priming dose of radio-labeled glucose tracer [6-<sup>3</sup>H]-glucose at a rate of 100 μBq.min<sup>−1 </sup>in 0.9% saline followed by a constant infusion of tracer at a rate of 5.5μBq.min<sup>−1 </sup>in 0.9% saline for the duration of the experiment (155 minutes in total) as previously described (Mangiafico, S. P., et al. <i>J Endocrinol </i>210, 335-347 (2011), Lamont, B. J., et al. <i>Diabetologia </i>46, 1338-1347 (2003), Visinoni, S., et al. <i>Am J Physiol Endocrinol Metab </i>295, E1132-1141 (2008)). Insulin (Actrapid®, Novo Nordisk, Bagsvaerd, Denmark) was infused during the clamp at a dose of 4 mU.kg<sup>−1</sup>. Blood glucose was maintained at euglycaemia with a 5% glucose solution for the Control HFD group and a 10% glucose solution for the Control Chow and 2H10 HFD groups. Plasma samples were taken at 90, 100 and 110 minutes. To determine glucose uptake into muscle and heart tissues, the labeled 2-[1-<sup>14</sup>C]-deoxyglucose technique was used as previously described (Mangiafico, S. P., et al. <i>J Endocrinol </i>210, 335-347 (2011), Lamont, B. J., et al. <i>Diabetologia </i>46, 1338-1347 (2003), Kraegen, E. W., et al. <i>Diabetes </i>40, 1397-1403 (1991), Nolan, C. J. &amp; Proietto, J. et al. <i>Diabetologia </i>37, 976-984 (1994)).</p>
+      <p id="p-00091-en" num="0089">Determination of Whole Body Glucose Turnover in Rats.</p>
+      <p id="p-00092-en" num="0090">To determine whole body glucose turnover, rat plasma samples collected at 90, 100 and 110 minutes during the hyperinsulinaemic/euglycaemic clamp were treated, processed and measured for the level of [6-<sup>3</sup>H]-glucose radioactivity as previously described (Mangiafico, S. P., et al. <i>J Endocrinol </i>210, 335-347 (2011), Lamont, B. J., et al. <i>Diabetologia </i>46, 1338-1347 (2003), Nolan, C. J. &amp; Proietto, J. et al. <i>Diabetologia </i>37, 976-984 (1994)). Briefly a 25 μl aliquot of plasma was treated with equal volumes of 0.3 M barium hydroxide and 0.3 M zinc sulphate, centrifuged and 50 t1 of supernatant passed through an anion exchange column (1.5 ml of Dowex 2X8-400 anion exchanger) in order to remove labelled lactate and pyruvate. Glucose was eluted from the column with 4 ml of milliQ water and 10 ml of scintillant (Ultima Gold, PerkinElmer, USA) added and radioactivity determined using a Packard 1900CA TriCarb liquid scintillation analyser (Packard, Meriden, Conn., USA).</p>
+      <p id="p-00093-en" num="0091">Statistics.</p>
+      <p id="p-00094-en" num="0092">In all figures data is presented as mean±SEM from pooled data of 2-3 independent experiments. P-values were calculated with one-way ANOVA and two-tailed independent Student's t-tests, and p&lt;0.05 was considered significant.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for treating dyslipidemia or a diabetic condition comprising administering a VEGF-B antagonist in combination with an insulin secretagogue selected from a DPP-4 inhibitor and a GLP-1R agonist.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the VEGF-B antagonist is selected from the anti-VEGF-B antibodies 1C6, 2F5, 2H10 and 4E12, and humanized, deimmunized or chimeric forms thereof.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the VEGF-B antagonist is a humanized 2H10 antibody comprising SEQ ID NO: 1 and/or SEQ ID NO: 2.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the VEGF-B antagonist is an antibody that has a binding affinity for human VEGF-B that is substantially equivalent to or stronger than the binding affinity of mAb 2H10 for human VEGF-B.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the insulin secretagogue is a DPP-4 inhibitor.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the DPP-4 inhibitor is selected from vildagliptin, sitagliptin, saxagliptin, linagliptin, dutogliptin, gemigliptin, alogliptin, and berberine.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the insulin secretagogue is a GLP-1R agonist.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the GLP-1R agonist is selected from exenatide, liraglutide, CJC-1131, LY-307161, dulaglutide, CJC-1134, albiglutide, and taspoglutide.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en" independent="true">
+      <claim-text>
+        <b>9</b>. A method for treating dyslipidemia or a diabetic condition comprising administering a VEGF-B antagonist to a subject in need thereof.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the VEGF-B antagonist is selected from the anti-VEGF-B antibodies 1C6, 2F5, 2H10 and 4E12, and humanized, deimmunized or chimeric forms thereof.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the VEGF-B antagonist is a humanized 2H10 antibody comprising SEQ ID NO: 1 and/or SEQ ID NO: 2.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the VEGF-B antagonist is an antibody that has a binding affinity for human VEGF-B that is substantially equivalent to or stronger than the binding affinity of mAb 2H10 for human VEGF-B.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en" independent="true">
+      <claim-text>
+        <b>13</b>. A composition for treating diabetic conditions comprising a VEGF-B antagonist in combination with an insulin secretagogue selected from a DPP-4 inhibitor and a GLP-1R agonist.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The composition of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the the VEGF-B antagonist is selected from the anti-VEGF-B antibodies 1C6, 2F5, 2H10 and 4E12, and humanized, deimmunized or chimeric forms thereof.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The composition of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the VEGF-B antagonist is a humanized 2H10 antibody comprising SEQ ID NO: 1 and/or SEQ ID NO: 2.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The composition of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the VEGF-B antagonist is an antibody that has a binding affinity for human VEGF-B that is substantially equivalent to or stronger than the binding affinity of mAb 2H10 for human VEGF-B.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The composition of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the insulin secretagogue is a DPP-4 inhibitor.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The composition of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the DPP-4 inhibitor is selected from vildagliptin, sitagliptin, saxagliptin, linagliptin, dutogliptin, gemigliptin, alogliptin, and berberine.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The composition of <claim-ref idref="clm-00013-en">claim 13</claim-ref> wherein the insulin secretagogue is a GLP-1R agonist.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The composition of <claim-ref idref="clm-00019-en">claim 19</claim-ref>, wherein the GLP-1R agonist is selected from exenatide, liraglutide, CJC-1131, LY-307161, dulaglutide, CJC-1134, albiglutide, and taspoglutide.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246117A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246117A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246117A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246117A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246117A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246117A1-20150903-D00003.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246117A1.PDF" type="pdf" size="1303181" pages="18" />
+</lexisnexis-patent-document>

@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150251974A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021942" date-changed="20160127" time-changed="023628">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121230468">
+        <country>US</country>
+        <doc-number>20150251974</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14200693</doc-number>
+        <date>20140307</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151110">
+      <classification-ipcr sequence="1">
+        <text>C07C   5/27        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>5</main-group>
+        <subgroup>27</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C07C   2/66        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>2</main-group>
+        <subgroup>66</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151110">
+      <classification-cpc sequence="1">
+        <text>C07C   2/66        20130101 FI20151026BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>2</main-group>
+        <subgroup>66</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151026</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C07C   6/126       20130101 LI20151023BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>6</main-group>
+        <subgroup>126</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151023</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>Y02P  20/584       20151101 LA20151103BHEP        </text>
+        <cpc-version-indicator>
+          <date>20151101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>P</subclass>
+        <main-group>20</main-group>
+        <subgroup>584</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151103</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C07C   2/66        20130101 LI20151023BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>2</main-group>
+            <subgroup>66</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151023</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C07C  15/107       20130101 LI20151023BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>15</main-group>
+            <subgroup>107</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151023</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>2</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C07C   6/126       20130101 LI20151023BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>6</main-group>
+            <subgroup>126</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151023</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C07C  15/107       20130101 LI20151023BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>15</main-group>
+            <subgroup>107</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151023</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">METHOD OF PRODUCING ALKYLAROMATIC COMPOUNDS USING AROMATIC COMPOUND FROM CATALYST REGENERATION</invention-title>
+    <references-cited date-changed="20160127">
+      <patent-citations name="patcit" date-changed="20160127" />
+      <citation>
+        <patcit num="1" dnum="US2008194895A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080194895</doc-number>
+            <kind>A1</kind>
+            <name>SOHN STEPHEN W [US], et al</name>
+            <date>20080814</date>
+          </document-id>
+          <application-date>
+            <date>20070212</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US5491271A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5491271</doc-number>
+            <kind>A</kind>
+            <name>MARINANGELI RICHARD E [US], et al</name>
+            <date>19960213</date>
+          </document-id>
+          <application-date>
+            <date>19940826</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>UOP LLC</orgname>
+            <role>02</role>
+            <address>
+              <city>Des Plaines</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Sohn</last-name>
+            <first-name>Stephen W.</first-name>
+            <address>
+              <city>Arlington Heights</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Zhang</last-name>
+            <first-name>Shuguang</first-name>
+            <address>
+              <city>Wilmette</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Jani</last-name>
+            <first-name>Priyesh Jayendarkumar</first-name>
+            <address>
+              <city>Haryana</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Banerjee</last-name>
+            <first-name>Soumendra M.</first-name>
+            <address>
+              <city>New Delhi</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150911">
+      <main-family family-id="173567694">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150251974</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20140307</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015134583</doc-number>
+            <kind>A1</kind>
+            <date>20150911</date>
+          </document-id>
+          <application-date>
+            <date>20150304</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173567693">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150251974</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20140307</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015134583</doc-number>
+            <kind>A1</kind>
+            <date>20150911</date>
+          </document-id>
+          <application-date>
+            <date>20150304</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A process for producing alkylaromatic compounds is described. The process involves utilizing at least a portion of the aromatic compound used to regenerate the alkylation catalyst in a spent alkylation reaction zone as a reactant in the active alkylation reaction zone.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140310</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015251974A1</docdb-publication-number>
+      <docdb-application-id>444310017</docdb-application-id>
+      <new-owner>UOP LLC, ILLINOIS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:SOHN, STEPHEN W.;ZHANG, SHUGUANG;JAYENDRAKUMAR JANI, PRIYESH;AND OTHERS;SIGNING DATES FROM 20140307 TO 20140310;REEL/FRAME:032396/0115</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">Linear alkylbenzenes (LAB) are compounds that have significant commercial importance. Linear alkylbenzene sulfonate (LAS) compounds made by sulfonation of linear alkylbenzene are used in the manufacture of detergents and other products. Because linear alkylbenzenes are more easily biodegradable than branched alkylbenzenes, linear alkylbenzenes have essentially replaced branched alkylbenzenes in detergents and other products. In particular, linear alkylbenzenes with long alkyl chains, such as chains having about 10 to about 14 carbons, are commonly used. However, linear alkylbenzenes with longer chains and with shorter chains also are commercially important.</p>
+      <p id="p-00002-en" num="0002">Linear alkylbenzenes often are made by alkylation of benzene with olefins. Positional isomers, such as 2-phenyl, 3-phenyl, 4-phenyl, 5-phenyl, and the like, result from this alkylation of benzene with long chain olefins. The distribution of the phenyl along the alkyl chain produces different products.</p>
+      <p id="p-00003-en" num="0003">Historically, linear alkylbenzenes have been manufactured commercially using Friedel-Crafts condensation employing catalysts such as aluminum chloride, or by using strong acid catalysts such as hydrogen fluoride, for example, to alkylate benzene with olefins. In 1995, a solid bed alkylation process, the Detal™ process, using a solid non-corrosive acid catalyst was introduced.</p>
+      <p id="p-00004-en" num="0004">In processes using solid alkylation catalysts, the alkylation catalysts need to be regenerated periodically to remove the heavy alkylbenzene deposited on the catalyst during the process cycle. Regeneration is usually accomplished by washing the catalyst with benzene at a specified temperature.</p>
+      <p id="p-00005-en" num="0005">A need exists for improved methods of making alkylaromatic compounds and improved methods for regenerating alkylation catalysts.</p>
+      <heading id="h-00002-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00006-en" num="0006">One aspect of the invention is a process for producing alkylaromatic compounds. In one embodiment, the process includes contacting an aromatic compound and an olefin in an alkylation reaction zone under alkylation conditions in the presence of an alkylation catalyst to produce an alkylation product containing monoalkylaromatic compounds, dialkylaromatic compounds, and unreacted aromatic compound; separating the alkylation product in a separation zone into an unreacted aromatic fraction and a fraction containing the monoalkylaromatic compounds and the dialkylaromatic compounds; regenerating a spent alkylation reaction zone by passing an aromatic compound stream through the spent alkylation zone at a regeneration temperature above an alkylation temperature to provide a regeneration aromatic compound stream; and introducing at least a portion of the regeneration aromatic compound stream into the alkylation zone, a transalkylation zone, or both, the regeneration aromatic compound stream being at the alkylation temperature.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00007-en" num="0007">
+        <figref>FIG. 1</figref> is an illustration of one embodiment of a process for making alkylbenzenes.</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 2</figref> is an illustration of one embodiment of a process for regenerating alkylation catalysts.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00009-en" num="0009">The aromatic compound used in the alkylation process can be any suitable aromatic compound, including, but not limited to, benzene, toluene, ethylbenzene, xylenes, or combinations thereof. Benzene is the most commonly used aromatic compound. Consequently, benzene will be used for ease of discussion.</p>
+      <p id="p-00010-en" num="0010">Alkylbenzenes, also known as phenyl alkanes, are important for many different products. When the alkyl group has 8 to 20 carbon atoms, among the common usages is in the formation of detergents. Alkylbenzenes are an intermediate product used to form alkylbenzene sulfonates, which are surfactants that form the basis of many detergents. The alkylbenzene sulfonates are known to exhibit different physical properties based upon the position of the aromatic group on the alkyl chain. In the production of alkylbenzene sulfonates, the intermediate product alkylbenzenes with 2-phenyl isomer content in the range from about 25 to 40 percent are particularly desired.</p>
+      <p id="p-00011-en" num="0011">Integrated processes for producing LABs using solid alkylation catalysts have been developed. One example of an integrated process is shown in <figref>FIG. 1</figref> which includes a dehydrogenation process, followed by a selective catalytic hydrogenation process, and an alkylation process. A paraffin feed <b>105</b> is mixed with hydrogen <b>110</b> and sent through heat exchanger <b>115</b> and charge heater <b>120</b>. The heated stream <b>125</b> is sent to dehydrogenation zone <b>130</b>. The dehydrogenation effluent <b>135</b> exchanges heat with the feed <b>105</b> and hydrogen <b>110</b> in heat exchanger <b>115</b>. The dehydrogenation effluent <b>135</b> is then sent to a separator <b>140</b> and separated into a hydrogen gas stream <b>145</b> and liquid stream <b>150</b>. The liquid stream <b>150</b> is mixed with hydrogen <b>155</b> sent to a selective hydrogenation zone <b>160</b> where any diolefins are hydrogenated to monoolefins. The effluent <b>165</b> from the selective hydrogenation reactor <b>160</b> is sent to a stripper <b>170</b> where light ends <b>175</b> are removed. The bottoms stream <b>180</b> from the stripper <b>170</b> is sent to an aromatics removal zone <b>182</b> where aromatics <b>183</b> are removed. The treated stream <b>184</b> is sent to the alkylation zone <b>185</b> where it is mixed with a benzene stream <b>190</b>. The effluent <b>195</b> from the alkylation zone <b>185</b> is sent to a benzene distillation column <b>200</b>. The benzene overhead stream <b>205</b> can be mixed with fresh benzene <b>210</b> to form the benzene stream <b>190</b>. The bottoms stream <b>215</b> from the benzene column <b>200</b> is sent to a paraffin distillation column <b>220</b>. The paraffin overhead stream <b>225</b> is mixed with paraffin feed <b>105</b> and sent to the dehydrogenation zone <b>130</b>. The bottoms stream <b>230</b> from the paraffin column <b>220</b> is sent to an alkylbenzene distillation column <b>235</b> where it is separated into an overhead stream <b>240</b> containing the monoalkylbenzene and a bottoms stream <b>245</b> containing heavy alkylbenzene (e.g., dialkylbenzene). The overhead stream <b>240</b> can be further processed, for example, in a finishing column (not shown), if desired. The bottoms stream of heavy alkylbenzene can be further processed, for example, in a transalkylation unit (not shown) with benzene, to further enhance the yield of monoalkylbenzene, if desired.</p>
+      <p id="p-00012-en" num="0012">In existing processes, two alkylation reactors are typically operated simultaneously, one in the alkylation process cycle and one in a regeneration cycle. The cycle time is generally about 24 hrs for both the alkylation process cycle and the regeneration cycle. The spent alkylation reactor is heated from the alkylation temperature (typically 80° C. and about 200° C., most usually at a temperature not exceeding about 175° C., or about 100° C. to 160° C., or about 120° C. to about 150° C., or about 130° C. to about 140° C.,) to the regeneration temperature (typically about 160° C. to about 250° C., or about 180° C. to about 250° C.,), which takes about 8 hr. It is maintained at the regeneration temperature for a period of time, typically about 8 hr. Then the reactor is cooled down to the alkylation temperature, which generally takes about 8 hr.</p>
+      <p id="p-00013-en" num="0013">Regeneration typically takes place at a pressure in the range of about 1.300 MPa(g) to about 7.000 MPa(g), or about 2.758 MPa (400 psig) to about 4.137 MPa (600 psig), or about 3.44 MPa (500 psig). The system is operated so that the benzene is in the liquid phase at the operating temperatures.</p>
+      <p id="p-00014-en" num="0014">After regeneration, the benzene stream can be sent back to the benzene column for purification and re-use. However, this increases the amount of benzene circulated in the system, increasing the cost of production. Alternatively, the stream can be sent to the aromatics removal unit and used as a desorbent. However, this cannot be done if the stream contains impurities which will impede the performance of the aromatics removal unit, such as water.</p>
+      <p id="p-00015-en" num="0015">In the present invention, at least a portion of the benzene regeneration stream is routed to the alkylation reactor and/or the transalkylation reactor. In some embodiments, the entire stream is sent to the alkylation reactor and/or the transalkylation reactor. A portion can also be sent to the benzene column, if desired.</p>
+      <p id="p-00016-en" num="0016">In some current processes, about two thirds of the benzene used for alkylation comes from the aromatics removal unit and one third is from the benzene column. The use of regeneration benzene for alkylation can partially or completely replace the use of fresh benzene in the alkylation reactor and reduce the amount of benzene from the aromatics removal unit. The regeneration benzene can also be used for transalkylation, reducing or eliminating the use of fresh benzene there as well.</p>
+      <p id="p-00017-en" num="0017">The regeneration effluent stream is almost 99% benzene after the initial 6 hours of flushing, and it contains trace amounts of linear alkylbenzene and heavy alkylbenzene (e.g., less than 0.5 wt %) removed during the high temperature regeneration.</p>
+      <p id="p-00018-en" num="0018">In one embodiment shown in <figref>FIG. 2</figref>, a portion <b>310</b> of the regeneration benzene effluent <b>305</b> from the regeneration reaction zone <b>385</b>B is mixed with the olefin feed <b>315</b> to the alkylation reaction zone <b>385</b>A which is running the alkylation cycle.</p>
+      <p id="p-00019-en" num="0019">Olefin feed <b>315</b> can come from the process described above in <figref>FIG. 1</figref>. In this case, olefin feed <b>315</b> would include unreacted paraffins from the dehydrogenation reaction. Other sources of the olefin feed <b>315</b> include, but are not limited to, C<sub>10 </sub>to C<sub>12 </sub>alpha olefins produced from ethylene in a linear alpha olefins process, and the olefin/paraffin product of a gas to liquid process.</p>
+      <p id="p-00020-en" num="0020">Effluent <b>395</b> from the alkylation reaction zone is sent to the benzene column for separation, as described above in <figref>FIG. 1</figref>.</p>
+      <p id="p-00021-en" num="0021">The portion <b>310</b> of regeneration benzene effluent <b>305</b> can be mixed with the feed <b>315</b> before it goes to a charge heater (not shown). By using the portion <b>310</b> of regeneration benzene effluent <b>305</b>, the amount of fresh benzene <b>320</b> from the benzene column can be reduced or eliminated.</p>
+      <p id="p-00022-en" num="0022">In some embodiments, a portion <b>325</b> of the regeneration benzene effluent <b>305</b> can be sent to the transalkylation reaction zone. In some embodiments, a portion <b>330</b> of the regeneration benzene effluent <b>305</b> can be sent to the benzene column for separation.</p>
+      <p id="p-00023-en" num="0023">The largest portion of the regeneration benzene effluent is generally sent to the alkylation reaction zone, although this is not required. The portion of the regeneration benzene effluent sent to the alkylation reaction zone <b>385</b>A is typically about 30 wt % or more, or about 40 wt % or more, or at least about 50 wt % or more, or about 60 wt % or more, or about 70 wt % or more, or about 80 wt % or more, or about 90 wt % or more. In some embodiments, all of the regeneration benzene effluent <b>305</b> is sent to the alkylation reaction zone <b>385</b>A.</p>
+      <p id="p-00024-en" num="0024">Generally, the remainder of the regeneration benzene effluent is sent to the transalkylation reaction zone and/or the benzene column. Typically, at least about 50 wt % or more of the remainder of the regeneration stream is sent to the transalkylation reaction zone. For example, if 60 wt % of the regeneration benzene effluent is sent to the alkylation zone, at least 20 wt % (50 wt % of the 40 wt % remainder) would be sent to the transalkylation reaction zone.</p>
+      <p id="p-00025-en" num="0025">In some embodiments with a 30:1 benzene:olefin molar ratio in the alkylation reaction zone with an aromatics removal zone, the regeneration benzene can supply all of the the benezene to the alkylation reaction zone and all of the benzene to the translakylation zone.</p>
+      <p id="p-00026-en" num="0026">Whatever is left (if anything) after the portions of the regeneration benzene effluent are sent to the alkylation reaction zone and transalkylation reaction zone can be sent to the benzene column. The amount of regeneration benzene effluent sent to the benzene column is desirably less than 50 wt % or less than 40 wt %, or less than 30 wt %, or less than 20 wt %, or less than 10 wt % of the total regeneration benzene effluent. Reducing the amount of regeneration benzene effluent sent to the benzene column reduces the operating cost of process.</p>
+      <p id="p-00027-en" num="0027">Benzene stream <b>335</b> comes from the aromatics removal unit. A portion <b>340</b> of the benzene <b>335</b> can be supplied to the alkylation reaction zone <b>385</b>A. The use of the portion <b>310</b> of regeneration benzene effluent <b>305</b> in the alkylation reaction zone <b>385</b>A can reduce or eliminate the portion <b>340</b> of the benzene <b>335</b> needed for the alkylation process.</p>
+      <p id="p-00028-en" num="0028">A portion <b>345</b> of the benzene <b>335</b> can be mixed with benzene <b>350</b> from the benzene column to form benzene stream <b>355</b> which is fed to the regeneration zone <b>385</b>B during the regeneration cycle. This will reduce the net regeneration benzene needed, and consequently will reduce the energy requirement of the benzene column.</p>
+      <p id="p-00029-en" num="0029">For a single feed configuration, mixing 50 wt % of regeneration benzene effluent <b>305</b> with reactor feed <b>315</b> will reduce the fresh benzene <b>320</b> to olefin molar ratio.</p>
+      <p id="p-00030-en" num="0030">The process will generate some additional heavy alkylbenzene during the alkylation process cycle due to trace amounts of linear alkylbenzene and heavy alkylbenzene which are already present in the regeneration benzene effluent <b>305</b>. However, the overall process specification would remain unchanged as the process will be operated at higher benzene:olefin molar ratio.</p>
+      <p id="p-00031-en" num="0031">Testing in the pilot plant has demonstrated that ZDA-2 catalyst (available from UOP LLC) made almost half of the heavy alkylbenzene compared with DA-114 catalyst (available from UOP LLC) at the same benzene:olefin molar ratio (3% for ZDA-2 compared with 6% for DA-114). Consequently, the overall heavy alkylbenzene specification will remain the same by mixing additional regeneration benzene effluent in the feed.</p>
+      <p id="p-00032-en" num="0032">The additional heavy alkylbenzene generated during the process could be converted back to linear alkylbenzenes in the transalkylation reactor.</p>
+      <p id="p-00033-en" num="0033">The amount of heavy alkylbenzene in the product stream could be controlled by maintaining a regeneration benzene effluent flow into the alkylation process feed.</p>
+      <p id="p-00034-en" num="0034">In some embodiments, the process allows the reduction of the benzene:olefin molar ratio in the feed from the current process by allowing recycling of the regeneration benzene effluent from the regeneration zone to the active alkylation reaction zone.</p>
+      <p id="p-00035-en" num="0035">In some embodiments, the total reactor effluent to the benzene column is reduced, which decreases the energy requirement for the benzene column.</p>
+      <p id="p-00036-en" num="0036">In some embodiments, the regeneration benzene effluent required for the transalkylation reaction zone is small, so the recycling of the regeneration benzene effluent will not affect the flow to the alkylation reaction zone.</p>
+      <p id="p-00037-en" num="0037">In some embodiments, the unconverted olefins that are flushed out in the initial hours (e.g., about 4 to 6 hrs) of the regeneration process can be recycled to a reaction zone where they are converted to products by mixing with the alkylation reaction zone feed. This can avoid olefin breakthrough during the reaction.</p>
+      <p id="p-00038-en" num="0038">The olefin feed to the alkylation zone coming from a dehydrogenation process will typically have a concentration of between about 9 wt % and about 15 wt % olefins and between about 85 wt % to about 91 wt % paraffins.</p>
+      <p id="p-00039-en" num="0039">The aliphatic feedstock used in the alkylation processes of this invention contains aliphatic mono-olefin of 8 to 20, or 8 to 18, or 8 to 17 carbon atoms per molecule. The feed is typically limited to 4 consecutive carbon numbers at any particular time. The aliphatic olefin is usually a mixture of olefins having different molecular weights. The olefin may be an alpha-olefin or comprise a mixture of olefin isomers. In most instances, the positioning of the olefinic bond in the molecule is not critical as most solid alkylation catalysts have been found to promote migration of the olefinic bond.</p>
+      <p id="p-00040-en" num="0040">For commercial processes, other components may be present in the aliphatic feedstock with the olefin-containing aliphatic compound. These other components may comprise paraffins of, for example, 9 to 17 carbon atoms per molecule which can act as heat sinks to maintain the desired temperature in the alkylation reaction zone. However, such amounts of paraffin are not critical to the processes of this invention, and aliphatic feedstocks having an essential absence of paraffins can be used. If paraffins are not present, then another component that can act a heat sink and remains unreacted under the process conditions will need to be present to maintain the LAB linearity and 2-phenyl content, if that is needed for the particular application.</p>
+      <p id="p-00041-en" num="0041">In some embodiments, a multi-bed alkylation reaction zone and a split feedstream for controlling the 2-phenyl content in an alkylbenzene product stream are employed. This arrangement is described in U.S. Pat. No. 8,389,787, which is incorporated herein. The split-bed design of U.S. Pat. No. 8,389,787 is optimized for feedstock utilization and energy consumption.</p>
+      <p id="p-00042-en" num="0042">The aromatic compound and the olefin are reacted under alkylation conditions in the presence of a solid alkylation catalyst. These alkylation conditions generally include a temperature in the range between about 80° C. and about 200° C., as discussed above. Typically, as the catalyst ages, the temperature of the alkylation is increased to maintain desired activity. The alkylation is an exothermic reaction, and thus in a substantially adiabatic reactor, the effluent is at a higher temperature than that of the feed. A substantially adiabatic reactor is one where the increase in temperature of the effluent over that of the feed accounts for at least about 75 percent of heat generated by the reactions in the reaction zone.</p>
+      <p id="p-00043-en" num="0043">Typically, the temperature within a reaction zone is maintained within a suitable range by providing a large excess of aromatic compound to the reaction zone to absorb heat. Where the aliphatic feedstock contains paraffins, the paraffins also serve to absorb heat from the exothermic reactions. High exothermic temperatures during the alkylation can result in negative effects not only in terms of catalyst deactivation and loss in linearity of the LAB due to increased olefin isomerization to non-linear olefins, but also in terms of product quality degradation, especially skeletal isomerization, and, in particular, skeletal isomerization of the olefin.</p>
+      <p id="p-00044-en" num="0044">Since the alkylation is typically conducted in the presence of a liquid phase, and preferably in either an all-liquid phase or at supercritical conditions, pressures must be sufficient to maintain reactants in the liquid phase. The requisite pressure necessarily depends upon the olefin and temperature, but normally is in the range of about 1.300 to 7.000 MPa(g).</p>
+      <p id="p-00045-en" num="0045">In some embodiments, alkylation of benzene by the olefins is conducted in a continuous manner using three or more catalyst beds in flow series. For purposes herein, a catalyst bed is termed a reaction zone whether in the same or a separate vessel from another bed. Each reaction zone has an inlet region and an outlet region. The reactants may be in admixture prior to entering the inlet region of the reaction zone, or they may be individually introduced and mixed in the reaction zone.</p>
+      <p id="p-00046-en" num="0046">The catalyst may be used as a packed bed, a moving bed, or a slurry bed. The feed to the reaction zone may be passed either upflow or downflow, or even horizontally as in a radial bed reactor; however, the flows of the aromatic compound and olefin are co-current. In one desirable variant, olefin may be fed into several discrete points within the reaction zone. The feed mixture, that is, aromatic compound and aliphatic feedstock to a reaction zone, is often provided at an overall liquid hourly space velocity (overall LHSV) between about 0.3 and about 6 or 10 hr<sup>−1</sup>, and most frequently between about 0.4 and 6 hr<sup>−1 </sup>depending upon, e.g., alkylation temperature and the activity of the catalyst. The overall LHSV is determined from the LHSV's of each of the beds. The reciprocal of the overall LHSV is the sum of the reciprocals of the LHSV of each of the beds in series.</p>
+      <p id="p-00047-en" num="0047">It is usually desired that sufficient residence time in the reaction zone be used such that at least about 90, or at least about 95, or at least about 98, and often at least about 99.5, mass percent of the olefin fed to a reaction zone is reacted in that reaction zone.</p>
+      <p id="p-00048-en" num="0048">Any suitable solid alkylation catalyst may be used in the present invention, provided that the requirements for conversion, selectivity, and activity are met. Typically, the catalysts are acidic. Preferred alkylation catalysts comprise zeolites having a zeolite framework type selected from the group consisting of FAU, MOR, MTW, and NES. Suitable zeolites include mordenite, ZSM-4, ZSM-12, ZSM-20, ZSM-38, offretite, gmelinite, beta, NU-87, UZM-8, MCM-22, MCM-36, MCM-49, zeolite Y, zeolite X, and gottardite. The MOR, MWW, FAU, NES, and other zeolite framework types are described in Ch. Baerlocher, W. M. Meier and D. H. Olson, “Atlas of Zeolite Framework Types,” 5th Ed., Elsevier: Amsterdam, 2001, herein incorporated by reference. The FAU and UZM-8 molecular sieves may have any convenient particle size. Often the particle sizes of the molecular sieves range upwards of 5 microns or more in major dimension, for example, about 50 to 5000 nanometers in major dimension. Particle sizes in the lower portion of the range are sometimes preferred as the coproduction of heavies may be reduced. Major particle dimensions of less than about 500, e.g., from about 50 to 300, nanometers are often desirable. Another class of acidic, solid catalysts are acidified refractory oxides such as chlorided, fluorided, or sulfated alumina, gallia, boria, molybdia, ytterbia, titania, chromia, silica, zirconia, and the like and combinations thereof. Clays and amorphous catalysts may also find utility. Further discussion of alkylation catalysts can be found in U.S. Pat. Nos. 5,196,574; 6,315,964B1 and 6,617,481B1.</p>
+      <p id="p-00049-en" num="0049">Newer alkylation catalysts can also be used in this process. For example, one such catalyst comprises a mixture of two types of zeolitic materials, where the zeolites are mixed and produced to have two zeolites within a single catalyst pellet. With the new catalysts, the first zeolite is also characterized by its acidity, wherein the acidity is characterized by having less than 70% of NH<sub>3 </sub>desorption off the zeolite at temperatures greater than 400° C. The NH<sub>3</sub>-TPD experimental procedure comprises: calibration of the NH.sub.3-TPD system with 5 injections of 0.2 cc pulses of NH<sub>3 </sub>at 2 minute intervals into a flow of UHP grade helium at 40 cc/minute. The data collected from the Thermal Conductivity Detector is integrated and used to calibrate the detector response to a known quantity of NH<sub>3</sub>. An equilibrated sample, for moisture content is weighed at approximately 250 mg and placed in the reactor. The sample is pretreated in a flow of 20% O<sub>2</sub>/He UHP grade at a rate of 100 cc/minute and with a temperature ramp of 10° C./minute up to a maximum temperature of 650° C. The sample is held at this temperature for one hour, then purged with UHP grade helium for 15 minutes and cooled to the saturation temperature. The pretreatment is for removal of water and residual contaminants. The sample is saturated with anhydrous NH<sub>3 </sub>at 150° C. using multiple pulses of NH<sub>3 </sub>injected into He flowing at 40 cc/min. The minimum quantity of NH<sub>3 </sub>used to saturate the sample is 50 cc. The excess ammonia is purged from the sample in flowing (40 cc/min) UHP grade helium for about 8 hours. The NH<sub>3 </sub>is desorbed from the sample in a flow (40 cc/min) of UHP grade helium with a temperature ramp of 10° C./minute to a final temperature of about 605° C. All gases have been purified using appropriate gas purifiers. The NH<sub>3 </sub>desorbed is detected with a Thermal Conductivity Detector. The detector response is converted to moles of NH<sub>3 </sub>using the detector response obtained at the beginning of the experiment. The integrated results are reported by integration of the temperature range of interest and reported as mmoles NH<sub>3</sub>/g sample. An example of the first zeolite is UZM-8.</p>
+      <p id="p-00050-en" num="0050">The second zeolite having a silica to alumina molar ratio less than 8, and includes a rare earth element incorporated into the zeolitic framework in an amount greater than 16.5 wt %. The first zeolite component is in an amount between 10 and 90% by weight of the catalyst, and the second zeolite component is in an amount between 10 and 90% by weight. The zeolites are intermingled into single catalyst particles. An example of the second zeolite is a rare earth substituted X zeolite, Y zeolite, or a zeolite having an EMT/FAU intergrowth. The incorporation of rare earth exchanged ions in a low ratio zeolite reduces the acidity due to an increase in the number of framework alumina at low ratios, and also reduces geometric space in the supercage. The reduced acidity and reduced space significantly suppresses the isomerization and cracking pathways, while the leaving the primary alkylation reaction unaffected. This decreases the undesired side reactions that reduce the amount and quality of the LAB product. This is contrary to what one would expect, as it has been found that incorporating or leaving some alkali or alkaline earth cations in the catalyst significantly improves the catalyst performance. This is especially true with respect to the performance around the linearity of the alkylbenzene, and the retention of linearity as the operating temperatures are increased. Normally, the alkali or alkaline earth cations are removed because without the rare earth exchange, the alkali or alkaline earth cations are detrimental to the catalyst life and regenerability.</p>
+      <p id="p-00051-en" num="0051">The alkylation reaction zone may contain at least 2, or at least 3, and most frequently between about 3 and 10, reaction zones in series to which a portion of the aliphatic feedstock is fed. Often a trim alkylation reaction zone follows the series to react residual olefin in the effluent from the last reaction zone in series. The reaction zones may be in a common vessel or in separate vessels. The reaction zones may be the same or different sizes. Additional reaction zones may be used in parallel.</p>
+      <p id="p-00052-en" num="0052">In common commercial configurations for alkylbenzene, the refining assembly comprises a distillation assembly that recovers essentially all the benzene from the alkylation effluent and provides a relatively pure benzene stream as the overhead. The bottoms stream from this distillation assembly would then be passed to a distillation assembly to separate as the overhead, paraffins and unreacted olefins, and the bottoms from this second distillation assembly would be fed to a heavies distillation assembly where the alkylbenzene product is contained in the overhead. If desired, a finishing column may be used to further purify the alkylbenzene, especially after a clay treatment to remove color formers.</p>
+      <p id="p-00053-en" num="0053">In further detail for purposes of illustration, the benzene distillation is generally conducted with a bottoms temperature of less than about 300° C., preferably less than about 275° C., usually between about 230° C. and 270° C., and at a pressure at which the overhead is provided of between about 5 and 300, preferably between about 35 and 70, kPa gauge. The overhead generally contains less than about 2, preferably less than about 1.5, weight percent paraffins. The benzene distillation assembly may comprise one or more distillation columns. More than one overhead may be obtained from the benzene distillation assembly. For instance, a highly pure stream may be obtained for process needs such as regenerating catalysts or sorbents, e.g., having a paraffin concentration less than about 1, preferably less than about 0.1, weight percent. A lesser purity overhead may be obtained from the benzene distillation assembly, e.g., as a side draw, for use as a recycle to the alkylation reaction.</p>
+      <p id="p-00054-en" num="0054">Each column used for benzene distillation may contain any convenient packing or distillation trays, but most often trays such as sieve and bubble trays, are used. Often the assembly provides at least about 5 theoretical plates, for example, 6 to 70, or 20 to 50. The reflux ratio is often in the range of about 2:1 to 1:10, or about 1.5:1 to 1:5. The bottoms stream from the benzene distillation generally contains less than about 1000 ppmw, or less than about 50 ppmw, and sometimes less than about 5 ppmw, benzene. The benzene distillation may occur in a single column or two or more distinct columns may be used. For instance, a stripping column may be used to remove a portion, e.g., 20 to 50 percent, of the benzene and then the bottoms from the stripping column would be subjected to rectification in a subsequent column to obtain the desired separation.</p>
+      <p id="p-00055-en" num="0055">The paraffin distillation is generally conducted with a bottoms temperature of less than about 300° C., or less than about 275° C., usually between about 250° C. and 275° C., and at a pressure at which overhead is provided of between about 5 and 110 kPa absolute, or between about 10 and 50 kPa absolute. The column may contain any convenient packing or distillation trays, but most often sieve trays are used. Often the paraffins distillation assembly provides at least about 5 theoretical plates, or about 7 to about 20. The reflux ratio is often in the range of about 3:1 to 1:10, or about 1:1 to 1:3. The bottoms stream from the paraffins distillation generally contains less than about 5000, or less than about 500, parts by million by weight (ppmw) paraffins and less than about 10, often less than about 1, ppmw benzene. The paraffins distillation may occur in a single column, or two or more distinct columns may be used.</p>
+      <p id="p-00056-en" num="0056">The heavy alkylbenzene distillation is generally conducted with a bottoms temperature of less than about 300° C., or less than about 275° C., usually between about 250° C. and 275° C., and at a pressure of between about 0.5 and 30 kPa absolute, or between about 1 and 5 kPa absolute. The column may contain any convenient packing or distillation trays, but most often structured packing is used. Often the heavy alkylbenzene distillation assembly provides at least about 5 theoretical plates, for example 10 to 30, or 10 to 20. The reflux ratio is often in the range of about 2:1 to 1:5, or about 0.2:1 to 1:1. The overhead from the heavy alkylbenzene distillation generally contains less than about 1000 ppmw, or less than about 100 ppmw, and sometimes less than about 50 ppmw, total heavy alkylbenzene.</p>
+      <p id="p-00057-en" num="0057">The refining system may contain additional distillation zones, e.g., to recover additional alkylbenzene from heavy alkylbenzene.</p>
+      <p id="p-00058-en" num="0058">While at least one exemplary embodiment has been presented in the foregoing detailed description of the invention, it should be appreciated that a vast number of variations exist. It should also be appreciated that the exemplary embodiment or exemplary embodiments are only examples, and are not intended to limit the scope, applicability, or configuration of the invention in any way. Rather, the foregoing detailed description will provide those skilled in the art with a convenient road map for implementing an exemplary embodiment of the invention. It being understood that various changes may be made in the function and arrangement of elements described in an exemplary embodiment without departing from the scope of the invention as set forth in the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A process for producing alkylaromatic compounds comprising:
+<claim-text>contacting an aromatic compound and an olefin in an alkylation reaction zone under alkylation conditions in the presence of an alkylation catalyst to produce an alkylation product containing monoalkylaromatic compounds, dialkylaromatic compounds, and unreacted aromatic compound;</claim-text><claim-text>separating the alkylation product in a separation zone into an unreacted aromatic fraction and a fraction containing the monoalkylaromatic compounds and the dialkylaromatic compounds;</claim-text><claim-text>regenerating a spent alkylation reaction zone by passing an aromatic compound stream through the spent alkylation zone at a regeneration temperature above an alkylation temperature to provide a regeneration aromatic compound stream; and</claim-text><claim-text>introducing at least a portion of the regeneration aromatic compound stream into the alkylation zone, a transalkylation zone, or both, the regeneration aromatic compound stream being at the alkylation temperature.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein regenerating a spent alkylation reaction zone comprises heating the spent alkylation zone from the alkylation temperature to the regeneration temperature, maintaining the spent alkylation zone at the regeneration temperature for a period of time, and cooling the spent alkylation zone from the regeneration temperature to the alkylation temperature.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The process of <claim-ref idref="clm-00002-en">claim 2</claim-ref> wherein heating the spent alkylation zone from the alkylation temperature to the regeneration temperature takes about 8 hr, wherein the spent alkylation zone is maintained at the regeneration temperature for about 8 hr, and wherein cooling the spent alkylation zone from the regeneration temperature to the alkylation temperature takes about 8 hr.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein at least about 50 wt % of the regeneration aromatic compound stream is introduced into the alkylation zone.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising:
+<claim-text>separating the fraction containing the monoalkylaromatic compounds and the dialkylaromatic compounds into a monoalkylaromatic compound stream and a dialkylaromatic compound stream;</claim-text><claim-text>introducing the dialkylaromatic compound stream and a second aromatic compound into a transalkylation reaction zone under transalkylation conditions to produce a transalkylation product containing monoalkylaromatics, unreacted dialkylaromatics, and unreacted second aromatic compound;</claim-text><claim-text>introducing a second portion of the regeneration aromatic compound stream into the transalkylation reaction zone as at least a portion of the second aromatic compound.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The process of <claim-ref idref="clm-00005-en">claim 5</claim-ref> wherein the second portion of the regeneration aromatic compound stream comprises at least about 50 wt % of a remainder of the regeneration aromatic compound stream, the remainder of the regeneration aromatic compound stream being the regeneration aromatic compound stream minus the portion introduced into the alkylation zone.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising introducing a third portion of the regeneration aromatic compound stream into the separation zone.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the alkylation temperature is in a range of about 120° C. to about 150° C., and the regeneration temperature is in a range of about 160° C. to about 250° C.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the alkylation temperature is in a range of about 130° C. to about 140° C., and the regeneration temperature is in a range of about 180° C. to about 250° C.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein regenerating the spent alkylation reaction zone takes place at a pressure in a range of 1.300 MPa(g) to about 7.000 MPa(g).</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the alkylation catalyst is selected from mordenite, ZSM-4, ZSM-12, ZSM-20, ZSM-38, offretite, gmelinite, beta, NU-87, UZM-8, MCM-22, MCM-36, MCM-49, zeolite Y, zeolite X, gottardite, MOR, MWW, FAU, RE-Y, NES, ZDA-2, DA-114, or combinations thereof.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. A process for producing alkylaromatic compounds comprising:
+<claim-text>contacting an aromatic compound and an olefin in an alkylation reaction zone under alkylation conditions in the presence of an alkylation catalyst to produce an alkylation product containing monoalkylaromatic compounds, dialkylaromatic compounds, and unreacted aromatic compound;</claim-text><claim-text>separating the alkylation product in a separation zone into an unreacted aromatic fraction and a fraction containing the monoalkylaromatic compounds and the dialkylaromatic compounds;</claim-text><claim-text>regenerating a spent alkylation reaction zone by passing an aromatic compound stream through the spent alkylation zone while heating the spent alkylation zone from an alkylation temperature to a regeneration temperature, maintaining the spent alkylation zone at the regeneration temperature for a period of time, and cooling the spent alkylation zone from the regeneration temperature to the alkylation temperature to provide a regeneration aromatic compound stream;</claim-text><claim-text>introducing at least a portion of the regeneration aromatic compound stream into the alkylation zone, a transalkylation zone, or both, the regeneration aromatic compound stream being at the alkylation temperature.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The process of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein heating the spent alkylation zone from the alkylation temperature to the regeneration temperature takes about 8 hr, wherein the spent alkylation zone is maintained at the regeneration temperature for about 8 hr, and wherein cooling the spent alkylation zone from the regeneration temperature to the alkylation temperature takes about 8 hr.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The process of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein at least about 50 wt % of the regeneration aromatic compound stream is introduced into the alkylation zone.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The process of <claim-ref idref="clm-00012-en">claim 12</claim-ref> further comprising:
+<claim-text>separating the fraction containing the monoalkylaromatic compounds and the dialkylaromatic compounds into a monoalkylaromatic compound stream and a dialkylaromatic compound stream;</claim-text><claim-text>introducing the dialkylaromatic compound stream and a second aromatic compound into a transalkylation reaction zone under transalkylation conditions to produce a transalkylation product containing monoalkylaromatics, unreacted dialkylaromatics, and unreacted second aromatic compound;</claim-text><claim-text>introducing a second portion of the regeneration aromatic compound stream into the transalkylation reaction zone as at least a portion of the second aromatic compound.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The process of <claim-ref idref="clm-00015-en">claim 15</claim-ref> wherein the second portion of the regeneration aromatic compound stream comprises at least about 50 wt % of a remainder of the regeneration aromatic compound stream, the remainder of the regeneration aromatic compound stream being the regeneration aromatic compound stream minus the portion introduced into the alkylation zone.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The process of <claim-ref idref="clm-00012-en">claim 12</claim-ref> further comprising introducing a third portion of the regeneration aromatic compound stream into the separation zone.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The process of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the alkylation temperature is in a range of about 120° C. to about 150° C., and the regeneration temperature is in a range of about 160° C. to about 250° C.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The process of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein regenerating a spent alkylation reaction zone takes place at a pressure in a range of 2.758 MPa to about 4.137 MPa.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The process of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the alkylation catalyst is selected from mordenite, ZSM-4, ZSM-12, ZSM-20, ZSM-38, offretite, gmelinite, beta, NU-87, UZM-8, MCM-22, MCM-36, MCM-49, zeolite Y, zeolite X, gottardite, MOR, MWW, FAU, RE-Y, NES, ZDA-2, DA-114, or combinations thereof. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150251974A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150251974A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150251974A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251974A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150251974A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251974A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150251974A1_00004.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150251974A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150251974A1.PDF" type="pdf" size="381793" pages="9" />
+</lexisnexis-patent-document>

@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150245865A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021605" date-changed="20150918" time-changed="025331">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140923">
+        <country>US</country>
+        <doc-number>20150245865</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14715718</doc-number>
+        <date>20150519</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>A61B  18/14        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>18</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B  17/29        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>29</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>A61B  18/1445      20130101 FI20130927BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>18</main-group>
+        <subgroup>1445</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130927</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B  17/29        20130101 LI20150228BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>29</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150228</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B  18/1482      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>18</main-group>
+        <subgroup>1482</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B  19/02        20130101 LA20150228BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>19</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150228</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B2017/003       20130101 LA20150228BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>003</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150228</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B2017/0645      20130101 LA20150228BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>0645</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150228</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61B2017/2905      20130101 LA20150228BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>2905</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150228</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61B2017/2908      20130101 LA20150228BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>2908</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150228</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61B2018/1432      20130101 LA20150228BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2018</main-group>
+        <subgroup>1432</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150228</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61B2019/2246      20130101 LA20150228BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2019</main-group>
+        <subgroup>2246</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150228</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">17</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">DE-TENSIONING MECHANISM FOR ARTICULATION DRIVE CABLES</invention-title>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13893621</doc-number>
+              <date>20130514</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9033982</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007157</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12714127</doc-number>
+              <date>20100226</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8439912</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13893621</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>COVIDIEN LP</orgname>
+            <address>
+              <city>MANSFIELD</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>CUNNINGHAM</last-name>
+            <first-name>JAMES S.</first-name>
+            <address>
+              <city>BOULDER</city>
+              <state>CO</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>JONES</last-name>
+            <first-name>ERIC</first-name>
+            <address>
+              <city>LIVERMORE</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173464258">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245865</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150519</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173464257">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245865</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150519</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A surgical instrument includes a housing having an elongated shaft extending distally therefrom. An end effector for treating tissue is supported by the elongated shaft. One or more tensile members extend at least partially through the elongated shaft. A proximal end of a tensile member is operatively coupled to at least one actuator and a distal end is operatively coupled to the end effector such that manipulation of the actuator induces movement of the tensile member to move the end effector. A de-tensioning mechanism is operatively associated with the tensile member to move the tensile member between a first relaxed configuration and a second stressed configuration. The de-tensioning mechanism includes a spacer insertable into a cavity defined in the housing to move the tensile member to the first relaxed configuration and removable from the cavity to move the at least one tensile member to the second stressed configuration.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150519</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015245865A1</docdb-publication-number>
+      <docdb-application-id>444207677</docdb-application-id>
+      <new-owner>COVIDIEN LP, MASSACHUSETTS</new-owner>
+      <free-text-description>CHANGE OF NAME;ASSIGNOR:TYCO HEALTHCARE GROUP LP;REEL/FRAME:035719/0398</free-text-description>
+      <effective-date>
+        <date>20120928</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150519</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015245865A1</docdb-publication-number>
+      <docdb-application-id>444207677</docdb-application-id>
+      <new-owner>TYCO HEALTHCARE GROUP LP, COLORADO</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:CUNNINGHAM, JAMES S.;JONES, ERIC;REEL/FRAME:035666/0448</free-text-description>
+      <effective-date>
+        <date>20100226</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">The present application is a continuation of U.S. patent application Ser. No. 12/714,127, filed Feb. 26, 2010, the content of which is incorporated herein by reference in its entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">1. Technical Field</p>
+      <p id="p-00003-en" num="0003">The present disclosure relates to an apparatus for surgically treating tissue. In particular, the disclosure relates to a mechanism for maintaining a drive cable in a relaxed configuration and imparting a tensile force to the drive cable prior to use of the apparatus.</p>
+      <p id="p-00004-en" num="0004">2. Background of Related Art</p>
+      <p id="p-00005-en" num="0005">Instruments such as electrosurgical forceps are commonly used in open and endoscopic surgical procedures to coagulate, cauterize and seal tissue. Such forceps typically include a pair of jaws that can be controlled by a surgeon to grasp targeted tissue, such as, e.g., a blood vessel. The jaws may be approximated to apply a mechanical clamping force to the tissue, and are associated with at least one electrode to permit the delivery of electrosurgical energy to the tissue. The combination of the mechanical clamping force and the electrosurgical energy has been demonstrated to join adjacent layers of tissue captured between the jaws. When the adjacent layers of tissue include the walls of a blood vessel, sealing the tissue may result in hemostasis, which may facilitate the transection of the sealed tissue. A detailed discussion of the use of an electrosurgical forceps may be found in U.S. Pat. No 7,255,697 to Dycus et al.</p>
+      <p id="p-00006-en" num="0006">Some endoscopic forceps are provided with a distal articulating portion to permit orientation of the jaws relative to a surgical site within the body of a patient. Mechanisms for articulating the distal end of an endoscopic instrument typically include a pair of drive cables or tensile members with distal ends anchored to the articulating portion on opposite sides of an instrument axis. The proximal ends of the drive cables are operatively coupled to an actuator that is responsive to an operator to draw one of the drive cables proximally while simultaneously permitting distal motion in the other drive cable. This motion in the drive cables induces pivotal motion of the distal end of the instrument.</p>
+      <p id="p-00007-en" num="0007">The responsiveness of an articulating mechanism tends to be enhanced when the drive cables are configured to bear a tensile force. An adequate tensile force in the drive cables provides rigidity at the distal end of the instrument that permits a surgeon to perform procedures such as retraction and tissue tensioning. A drive cable under a tensile stress for a prolonged period is subject to creep deformation. Over extended periods of time, five years during storage of the instrument for example, a reduction of the tension in the drive cables may occur due to creep deformation. Accordingly, it may be beneficial to provide an apparatus to permit a surgical instrument to be stored with drive cables in an unstressed state, and to permit an operator to impart a tensile force to the drive cables prior to using the instrument.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00008-en" num="0008">The present disclosure describes a surgical instrument including a housing. The housing supports an actuator that is adapted for manipulation by a user to control the instrument. An elongated shaft extends distally from the housing, and is longitudinally movable with respect to the housing. An end effector adapted for surgically treating tissue is supported by a distal portion of the elongated shaft. A tensile member extends through the elongated shaft, and includes a proximal end operatively coupled to the actuator and a distal end operatively coupled to the end effector such that manipulation of the actuator induces movement of the tensile member to move the end effector. A flange protrudes radially from a proximal portion of the elongated shaft that extends into the housing. A spring is supported within a cavity in the housing such that the spring imparts a distally directed longitudinal force on the flange to bias the elongated shaft in a distal direction. A spacer is insertable into the cavity to maintain the flange and the elongated shaft in a proximal position, and the spacer is removable from the cavity to permit the flange and the elongated shaft to move in a distal direction under the influence of the spring. Movement of the elongated shaft in the distal direction moves the tensile member from a first relaxed configuration to a second stressed configuration.</p>
+      <p id="p-00009-en" num="0009">A distal portion of the elongated shaft may include one or more joints therein to permit the distal portion of the elongated shaft to articulate with respect to the proximal portion of the elongated shaft. The tensile member may be one of pair of articulation cables operatively coupled to the end effector such that relative longitudinal movement between the articulation cables induces articulation of the end effector</p>
+      <p id="p-00010-en" num="0010">According to another aspect of the disclosure, a surgical instrument includes a housing and an elongated shaft extending distally from the housing. An end effector for treating tissue is supported by the elongated shaft, and at least one actuator is provided for manipulation by a user to control the end effector. One or more tensile members extend at least partially through the elongated shaft and include a proximal end operatively coupled to the at least one actuator and a distal end operatively coupled to the end effector in such a manner that manipulation of the at least one actuator induces movement of at least one of the tensile members to move the end effector. A de-tensioning mechanism is operatively associated with the tensile members to move one or more of the tensile members between a first relaxed configuration and a second stressed configuration wherein the proximal and distal ends of the tensile member are spaced at a greater distance from one another relative to the first relaxed configuration. The de-tensioning mechanism includes a spacer insertable into a cavity defined in the housing to move the tensile member to the first relaxed configuration and removable from the cavity to move the at least one tensile member to the second stressed configuration.</p>
+      <p id="p-00011-en" num="0011">The elongated shaft may include a proximal portion extending distally from the housing and a distal articulating portion extending distally from the proximal portion. The distal articulating portion may include a joint therein to permit the distal articulating portion to pivot with respect to the proximal portion of the elongated shaft. The tensile members may include a pair of articulation cables operatively coupled to the end effector such that relative longitudinal movement between the articulation cables induces articulation of the end effector.</p>
+      <p id="p-00012-en" num="0012">The de-tensioning mechanism may include a spring arranged to exert a force on the spacer when the spacer is inserted in the cavity and wherein the spring exerts a force on the elongated shaft to move the tensile member to the second stressed configuration when the spacer is removed from the cavity. The spring may be arranged to move the distal end of the at least one tensile member in a distal direction when the spacer is removed from the cavity. The spring may exert a force on an elongate tine of the spacer when the spacer is inserted into the cavity, and the elongate tine may include a sloped surface thereon to facilitate removal of the spacer from the cavity.</p>
+      <p id="p-00013-en" num="0013">The end effector may include a pair of jaw members, and the tensile member may be adapted to move one or more of the one jaw members between an open position substantially spaced from the other of the pair of jaw members and a closed position wherein the jaw members are closer together. One or both of the jaw members may be coupled to a source of electrical energy.</p>
+      <p id="p-00014-en" num="0014">According to another aspect of the disclosure, a surgical instrument includes a housing and an elongated shaft extending distally from the housing. An end effector for treating tissue is supported by the elongated shaft, and at least one actuator is provided for manipulation by a user to control the end effector. One or more tensile members extend at least partially through the elongated shaft and include a proximal end operatively coupled to the at least one actuator and a distal end operatively coupled to the end effector in such a manner that manipulation of the at least one actuator induces movement of at least one of the tensile members to move the end effector. A de-tensioning mechanism is operatively associated with the tensile members to move one or more of the tensile members between a first relaxed configuration and a second stressed configuration. The de-tensioning mechanism is operable to move the distal end of the tensile member between a position a first distance from the housing and a second position wherein the distal end of the tensile member is a second distance from the housing. The second distance is greater than the first such that the tensile member is in the stressed configuration when the distal end of the tensile member is at the second position.</p>
+      <p id="p-00015-en" num="0015">The de-tensioning mechanism may be operable to move the end effector in a distal direction relative to the housing to move the tensile member to the second stressed configuration. The de-tensioning mechanism may include a spacer insertable into a cavity defined in the housing to move the end effector in a proximal direction and removable from the cavity to move the end effector in the distal direction.</p>
+      <p id="p-00016-en" num="0016">According to another aspect of the disclosure, a surgical instrument includes a surgical instrument includes a housing and an elongated shaft extending distally from the housing. An end effector for treating tissue is supported by the elongated shaft, and at least one actuator is provided for manipulation by a user to control the end effector. One or more tensile members extend at least partially through the elongated shaft and include a proximal end operatively coupled to the at least one actuator and a distal end operatively coupled to the end effector in such a manner that manipulation of the at least one actuator induces movement of at least one of the tensile members to move the end effector. A de-tensioning mechanism is operatively associated with the tensile members to move one or more of the tensile members between a first relaxed configuration and a second stressed configuration. The de-tensioning mechanism is operable to move the end effector between a position a first distance from the housing and a second position wherein the end effector is second distance from the housing. The second distance is greater than the first such that the tensile member is in the stressed configuration when the distal end of the tensile member is at the second position.</p>
+      <p id="p-00017-en" num="0017">The de-tensioning mechanism may include a spacer insertable into a cavity defined in the housing to move the end effector to the first distance from the housing and removable from the cavity to move the end effector to the second distance from the housing.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00018-en" num="0018">The accompanying drawings, which are incorporated in and constitute a part of this specification, illustrate embodiments of the present disclosure and, together with the detailed description of the embodiments given below, serve to explain the principles of the disclosure.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 1</figref> is a perspective view of a surgical instrument in accordance with an embodiment of the present disclosure;</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 2</figref> is an enlarged perspective view of the area of detail identified in <figref>FIG. 1</figref> depicting a distal articulating portion of the instrument;</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 3</figref> is another perspective view of the distal articulating portion of the instrument;</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 4A</figref> is a partial, cross-sectional side view of the instrument in a first configuration wherein a spacer is installed;</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 4B</figref> is a partial, cross sectional side view of the instrument in a second configuration wherein the spacer has been removed;</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 5</figref> is an exploded, perspective view of an articulation mechanism of the instrument;</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 6A</figref> is a top view of the distal articulating portion of the instrument in a neutral position; and</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIGS. 6B</figref> is a top view of the distal articulating section of the instrument in an articulated position.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00027-en" num="0027">Referring initially to <figref>FIG. 1</figref>, an embodiment of an electrosurgical instrument is depicted generally as <b>10</b>. The instrument <b>10</b> includes a housing <b>12</b> for remotely supporting an end effector <b>16</b> through an elongated shaft <b>18</b>. Although this configuration is typically associated with instruments for use in endoscopic surgical procedures, various aspects of the present disclosure may be practiced in connection with traditional open procedures as well.</p>
+      <p id="p-00028-en" num="0028">Elongated shaft <b>18</b> includes a proximal portion <b>20</b> extending from the housing <b>12</b> and an articulating distal portion <b>22</b> supporting the end effector <b>16</b>. The proximal portion <b>20</b> defines a longitudinal axis A-A, and is sufficiently long to position the end effector <b>16</b> through a cannula (not shown). The articulating distal portion <b>22</b> defines at least one joint <b>28</b> between the proximal portion <b>20</b> of the elongated shaft <b>18</b> and the end effector <b>16</b> permitting the end effector <b>16</b> to articulate or pivot relative to the longitudinal axis A-A. The end effector <b>16</b> defines an end effector axis B-B, which may be aligned with the longitudinal axis A-A to facilitate insertion of the end effector <b>16</b> through the cannula, and thereafter moved to orient the end effector <b>16</b> relative to a surgical site within the body of a patient.</p>
+      <p id="p-00029-en" num="0029">The end effector <b>16</b> includes a pair of opposing jaw members <b>30</b> and <b>32</b>. The jaw members <b>30</b>, <b>32</b> are operable from the housing <b>12</b> to move between an open configuration to receive tissue, and a closed configuration to clamp the tissue and impart an appropriate clamping force thereto. When the end effector <b>16</b> is in the open configuration, a distal portion of each of the jaw members <b>30</b>, <b>32</b> is spaced from the distal portion of the other of the jaw members <b>30</b>, <b>32</b>. When the end effector <b>16</b> is in the closed configuration, the distal portions of the jaw members <b>30</b>, <b>32</b> are closer together. The end effector <b>16</b> is configured for bilateral movement wherein both jaw members <b>30</b> and <b>32</b> move relative to the end effector axis B-B as the end effector <b>16</b> is moved between the open and closed configurations. However, unilateral motion is also contemplated wherein one of the jaw members <b>30</b>, <b>32</b>, e.g., <b>32</b> remains stationary relative to the end effector axis B-B and the other of the jaw members <b>30</b>, <b>32</b>, e.g., <b>30</b> is moveable relative to the end effector axis B-B.</p>
+      <p id="p-00030-en" num="0030">The housing <b>12</b> supports various actuators that are responsive to manipulation by an operator to induce these and other movements of the end effector <b>16</b>. These actuators include an articulation wheel <b>40</b>, which is operable to articulate the distal portion <b>22</b> of the elongated shaft <b>18</b> with respect to the longitudinal axis A-A. As described in greater detail below, the articulation wheel <b>40</b> is operatively coupled to the articulating distal portion <b>22</b> of the elongated shaft <b>18</b> by a pair of tensile members, such as drive cables <b>66</b>, <b>68</b> (see <figref>FIGS. 3 and 5</figref>), such that rotation of the articulation wheel <b>40</b> in the direction of arrows “R<b>0</b>” induces pivotal motion of the end effector <b>16</b> in the direction of arrows “R<b>1</b>” about the joints <b>28</b>. The responsiveness of the end effector <b>16</b> to pivot upon rotation of the articulation wheel <b>40</b> is affected, in part, by a tensile force carried in the drive cables <b>66</b>, <b>68</b> as described in greater detail below.</p>
+      <p id="p-00031-en" num="0031">Other actuators supported by the housing <b>12</b> may include a roll knob <b>42</b> and a movable handle <b>46</b>. The roll knob <b>42</b> is operable to rotate the end effector <b>16</b> about the end effector axis B-B. Rotation of the roll knob <b>42</b> in the direction of arrow “S<b>0</b>” induces rotational motion of the end effector <b>16</b> in the direction of arrows “S<b>1</b>.” The articulation wheel <b>40</b> and roll knob <b>42</b> cooperate to permit the end effector <b>16</b> to be appropriately positioned and oriented to effectively engage tissue. Once the end effector <b>16</b> is positioned and oriented, the surgeon may approximate the movable handle <b>46</b> relative to a stationary handle <b>48</b> to move the jaw members <b>30</b>, <b>32</b> to the closed configuration. Separation of the movable handle <b>46</b> from the stationary handle <b>48</b> moves the jaw members <b>30</b>, <b>32</b> to the open configuration. Thus, motion of the movable handle <b>46</b> in the direction of arrows “T<b>0</b>” induces motion in the end effector <b>16</b> in the direction of arrows “T<b>1</b>.”</p>
+      <p id="p-00032-en" num="0032">The stationary handle <b>48</b> is provided with a power port <b>50</b> for receiving an electrosurgical cable <b>52</b>. The cable <b>52</b> is in electrical communication with a source of electrosurgical energy such as electrosurgical generator <b>54</b>. The electrosurgical generator <b>54</b> serves to produce electrosurgical energy and also to control and monitor the delivery of the electrosurgical energy to the instrument <b>10</b>. Various types of electrosurgical generators <b>54</b>, such as those generators provided by Covidien—Energy-based Devices, of Boulder, Colo., may be suitable for this purpose. Electrosurgical generator <b>54</b> may include a foot pedal (not shown), or other actuator to initiate and terminate the delivery of electrosurgical energy to the instrument <b>10</b>. The power port <b>50</b> on the stationary handle <b>48</b> is in electrical communication with at least one of the jaw members <b>30</b>, <b>32</b> such that the electrosurgical energy supplied by the generator <b>54</b> may be delivered to tissue clamped in the end effector <b>16</b>.</p>
+      <p id="p-00033-en" num="0033">Instrument <b>10</b> is provided with a removable spacer <b>56</b>. The spacer <b>56</b> includes a finger loop <b>58</b> at a lower end thereof and an elongate pair of tines <b>60</b> at an upper end. The spacer <b>56</b> may be grasped by the finger loop <b>58</b> and drawn out of the instrument <b>10</b>. As described below with reference to <figref>FIGS. 4A and 4B</figref>, when the spacer <b>56</b> is installed, the instrument <b>10</b> may be stored over a long term with the drive cables <b>66</b>, <b>68</b> in a relaxed configuration. The spacer <b>56</b> may be removed prior to use of the instrument <b>10</b> to impart a tensile force to the drive cables <b>66</b>, <b>68</b> as described below with reference to <figref>FIG. 4B</figref>.</p>
+      <p id="p-00034-en" num="0034">Referring now to <figref>FIG. 2</figref>, the articulating distal portion <b>22</b> of the elongated shaft <b>18</b> includes a plurality of discrete links <b>62</b><i>a, </i><b>62</b><i>b, </i><b>62</b><i>c, </i><b>62</b><i>d </i>and <b>62</b><i>e. </i>A proximal-most link <b>62</b><i>a </i>is fixedly coupled to the proximal portion <b>20</b> of the elongated shaft <b>18</b>, and a distal-most link <b>62</b><i>e </i>supports the end effector <b>16</b>. A plurality of intermediate links <b>62</b><i>b, </i><b>62</b><i>c, </i>and <b>62</b><i>d </i>extend between the proximal-most link <b>62</b><i>a </i>and the distal-most link <b>62</b><i>e. </i>Each of the links <b>62</b><i>a, </i><b>62</b><i>b, </i><b>62</b><i>c, </i><b>62</b><i>d </i>and <b>62</b><i>e </i>is pivotally coupled to at least one neighboring link <b>62</b><i>a, </i><b>62</b><i>b, </i><b>62</b><i>c, </i><b>62</b><i>d </i><b>62</b><i>e </i>by a pivot pin <b>64</b>. The pivot pins <b>64</b> define four pivot axes P<b>1</b>, P<b>2</b>, P<b>3</b> and P<b>4</b> about which the neighboring links <b>62</b><i>a, </i><b>62</b><i>b, </i><b>62</b><i>c, </i><b>62</b><i>d </i>and <b>62</b><i>e </i>may pivot to define the joints <b>28</b>. In the embodiment depicted in <figref>FIG. 2</figref>, each of the pivot pins <b>64</b> are arranged in a substantially parallel manner such that the distal end <b>22</b> of the elongated shaft <b>18</b> is permitted to pivot in a single plane to orient the end effector <b>16</b>. In other embodiments, pivot axes (not shown) may be oriented orthogonally or obliquely with respect to one another to permit the distal end to pivot in multiple planes. In still other embodiments, the joints <b>28</b> may be defined with a flexible or bendable portion (not shown) of the elongated shaft <b>18</b>.</p>
+      <p id="p-00035-en" num="0035">In order pivot the links <b>62</b><i>a, </i><b>62</b><i>b, </i><b>62</b><i>c, </i><b>62</b><i>d, </i><b>62</b><i>e </i>about the respective axes P<b>1</b>, P<b>2</b>, P<b>3</b>, P<b>4</b>, a pair of longitudinally extending and reciprocating drive cables <b>66</b> and <b>68</b> are provided as depicted in <figref>FIG. 3</figref>. A distal end <b>66</b><i>a </i>of the drive cable <b>66</b> is affixed to the distal-most link <b>62</b><i>e </i>on an opposite lateral side of the distal-most link <b>62</b><i>e </i>with respect to a distal end <b>68</b><i>a </i>(<figref>FIG. 6A</figref>) of drive cable <b>68</b>. The drive cables <b>66</b>, <b>68</b> extend from the distal-most link <b>62</b><i>e </i>proximally through the links <b>62</b><i>d, </i><b>62</b><i>c, </i><b>62</b><i>b, </i><b>62</b><i>a </i>and through the proximal portion <b>20</b> of the elongated shaft <b>18</b> into the housing <b>12</b> (<figref>FIG. 1</figref>). In the housing <b>12</b>, the articulation drive cables <b>66</b> and <b>68</b> are operatively associated with articulation wheel <b>40</b> as described below with reference to <figref>FIG. 5</figref>. Distal advancement of one of the drive cables <b>66</b> or <b>68</b> and simultaneous proximal retraction of the other of drive cables <b>66</b> or <b>68</b> function to cause links <b>62</b><i>a, </i><b>62</b><i>b, </i><b>62</b><i>c, </i><b>62</b><i>d </i>and <b>62</b><i>e </i>to pivot relative to each other, thereby causing a bend in articulating distal portion <b>22</b>.</p>
+      <p id="p-00036-en" num="0036">An additional tensile member, such as drive cable <b>70</b>, may extend through the elongated shaft <b>18</b>. A distal end of the drive cable <b>70</b> may be operatively coupled to the end effector <b>16</b> to move the jaw members <b>30</b>, <b>32</b> (<figref>FIG. 1</figref>) between the open and closed configurations. Longitudinal motion of the drive cable <b>70</b> may be translated into pivotal motion of the jaw members <b>30</b>, <b>32</b> as described, for example, in U.S. Pat. No 7,083,618 to Couture et al. A proximal end of the drive cable <b>70</b> may be operatively coupled to movable handle <b>46</b> (<figref>FIG. 1</figref>) such that longitudinal motion of the drive cable <b>70</b> may be induced by manipulation of the movable handle <b>46</b>.</p>
+      <p id="p-00037-en" num="0037">Referring now to <figref>FIG. 4A</figref>, the instrument <b>10</b> is depicted in a first configuration wherein the removable spacer <b>56</b> is installed in the instrument <b>10</b> and an articulation drive cable <b>66</b> is in a relaxed configuration. The tines <b>60</b> of the spacer <b>56</b> are laterally separated to permit the spacer <b>56</b> to straddle an outer tubular member <b>72</b> of the proximal portion <b>20</b> of the elongated shaft <b>18</b>. The tines <b>60</b> are engaged by a flange <b>74</b> that extends radially from the outer tubular member <b>72</b> and is fixedly coupled to the outer tubular member. A spring <b>76</b> exerts a force on the flange <b>74</b> to bias the flange <b>74</b> in a distal direction against the tines <b>60</b> and also biasing the tines <b>60</b> against a proximal-facing wall <b>78</b> of the housing <b>12</b>. A portion <b>60</b><i>a </i>of the tines <b>60</b> that is in contact with the flange <b>74</b> has a thickness of “As,” and an upper portion of the tines <b>60</b><i>b </i>includes a gradual slope to facilitate removal of the tines from the instrument <b>10</b>.</p>
+      <p id="p-00038-en" num="0038">When the spacer <b>56</b> is installed, the spacer <b>56</b> maintains the flange <b>74</b> and the elongated shaft <b>18</b> in a proximal position wherein the elongated shaft <b>18</b> extends from the housing <b>12</b> such that the distal end <b>66</b><i>a </i>of the drive cable <b>66</b> is disposed at a distance “L” from the housing <b>12</b>. The drive cable <b>66</b> exhibits a sufficient length such that the drive cable <b>66</b> is in a relaxed or neutral state when the distal end <b>66</b><i>a </i>is at the distance “L” from the housing <b>12</b>.</p>
+      <p id="p-00039-en" num="0039">Referring now to <figref>FIG. 4B</figref>, the instrument <b>10</b> is depicted in a second configuration wherein the spacer <b>56</b> has been removed. With the spacer <b>56</b> removed, the spring <b>76</b> is permitted to extend distally in a longitudinal direction. The flange <b>74</b> is driven distally by the spring <b>76</b> through a spacer cavity <b>60</b><i>c </i>until the drive flange <b>74</b> abuts the proximal-facing wall <b>78</b> of the housing <b>12</b>. Since the flange <b>74</b> is fixedly coupled to the outer tubular member <b>72</b> of the elongated shaft <b>18</b>, the outer tubular member <b>72</b> is also driven distally by the spring <b>76</b> to a distal position with respect to the housing <b>12</b>. The distal-most link <b>62</b><i>e </i>and thus the distal end <b>66</b><i>a </i>of the drive cable <b>66</b> is also driven distally until the distal end <b>66</b><i>a </i>of the drive cable <b>66</b> a is disposed at a distance “L +As” from the housing <b>12</b>. A proximal end <b>66</b><i>b </i>(<figref>FIG. 5</figref>) of the drive cable <b>66</b> is coupled to the housing <b>12</b> as described below with reference to <figref>FIG. 5</figref>. The drive cable <b>66</b> exhibits length such that the drive cable <b>66</b> is in a stretched or tensile state when the distal end <b>66</b><i>a </i>is at the distance of “L+Δl” from the housing <b>12</b>. Thus, removing the spacer <b>56</b> from the cavity <b>60</b><i>c </i>in the instrument <b>10</b> imparts a tensile force to the drive cable <b>66</b>.</p>
+      <p id="p-00040-en" num="0040">The articulating drive cable <b>68</b> and jaw drive cable <b>70</b> (<figref>FIG. 3</figref>) are similarly arranged such that removing the spacer <b>56</b> from the instrument <b>10</b> also imparts a tensile force to the drive cables <b>68</b>, <b>70</b>. With a tensile force imparted to the drive cables <b>66</b>, <b>68</b>, a surgeon may actuate an articulation mechanism <b>80</b> (<figref>FIG. 5</figref>) to articulate the end distal portion <b>22</b> of the elongated shaft <b>18</b>. The surgeon may also actuate the movable handle <b>46</b> to move the jaw members <b>30</b>, <b>32</b> (<figref>FIG. 1</figref>) between the open and closed configurations.</p>
+      <p id="p-00041-en" num="0041">Referring now to <figref>FIG. 5</figref>, articulation mechanism <b>80</b> is depicted independent of the remaining instrument components. The articulation mechanism <b>80</b> includes a pair of shuttles <b>82</b>, and <b>84</b> to advance and retract the drive cables <b>66</b>, <b>68</b>. Shuttles <b>82</b> and <b>84</b> are provided with distal hooks <b>82</b><i>a </i>and <b>84</b><i>a, </i>which engage and alternatively retract a pair of collars <b>86</b>. Each of the collars <b>86</b> includes a bore <b>86</b><i>a </i>for receipt of a proximal end <b>66</b><i>b, </i><b>68</b><i>b </i>of the drive cables <b>66</b>, <b>68</b>. Set screws <b>88</b> secure the drive cables <b>66</b>, <b>68</b> within bores <b>86</b><i>a. </i></p>
+      <p id="p-00042-en" num="0042">Shuttles <b>82</b> and <b>84</b> have respective proximal ends <b>82</b><i>b </i>and <b>84</b><i>b </i>that are configured to engage articulation wheel <b>40</b> with pins <b>90</b> extending therefrom. The pin <b>90</b> that extends from the proximal end <b>84</b><i>b </i>of shuttle <b>84</b> engages a spiral groove <b>40</b><i>a </i>inscribed into a lateral side of the articulation wheel <b>40</b>. On an opposite lateral side of the articulation wheel <b>40</b>, a second spiral groove (not shown) is inscribed in an opposite orientation and is engaged by the pin <b>90</b> extending from the proximal end <b>82</b><i>b </i>of the shuttle <b>82</b>. The spiral grooves, e.g., groove <b>40</b><i>a, </i>permit rotational movement of the articulation wheel <b>40</b> to be translated into longitudinal and reciprocal motion of shuttles <b>82</b> and <b>84</b>. Rotation of the articulation wheel <b>40</b> in the direction of arrow “W<b>0</b>” induces the shuttle <b>84</b> and the drive cable <b>68</b> to move in the direction of arrow “W<b>1</b>.” Longitudinal motion of the drive cable <b>68</b> in the direction of arrow “W<b>1</b>” induces the distal portion <b>22</b> of the elongated shaft <b>18</b> to move from a straight configuration (<figref>FIG. 6A</figref>) to an articulated configuration in the direction of arrow “W<b>3</b>” (<figref>FIG. 6B</figref>). Rotation of the articulation wheel <b>40</b> in a direction opposite the direction of arrow “W<b>0</b>” induces an opposite motion such that the distal portion <b>22</b> of the elongated shaft <b>18</b> is articulated in an opposite direction as depicted in phantom in <figref>FIG. 6B</figref>.</p>
+      <p id="p-00043-en" num="0043">It should be noted that, since the drive cables <b>66</b> and <b>68</b> are secured to the distal-most link <b>62</b><i>e </i>as described above, as one of the drive cables <b>66</b> or <b>68</b> is pulled proximally by respective hook <b>82</b><i>a </i>or <b>84</b><i>a, </i>the other of drive cables <b>66</b> or <b>68</b> is automatically drawn distally. Thus, there is no need for the shuttles <b>82</b>, <b>84</b> to provide a structure for pushing or driving either of the collars <b>86</b> distally.</p>
+      <p id="p-00044-en" num="0044">Although the foregoing disclosure has been described in some detail by way of illustration and example, for purposes of clarity or understanding, it will be obvious that certain changes and modifications may be practiced within the scope of the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>20</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>21</b>. A surgical instrument, comprising:
+<claim-text>a housing;</claim-text><claim-text>an elongated shaft extending distally from the housing;</claim-text><claim-text>an end effector for treating tissue supported at a distal end of the elongated shaft;</claim-text><claim-text>at least one tensile member extending at least partially through the elongated shaft and operatively coupled to the end effector; and</claim-text><claim-text>a spacer insertable into and removable from the housing to transition the at least one tensile member between a de-tensioned state and a tensioned state, respectively.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>22</b>. The surgical instrument according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein, when inserted into the housing, the spacer is configured to urge the elongated shaft proximally relative to the housing, thereby transitioning the at least one tensile member to the de-tensioned state.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>23</b>. The surgical instrument according to <claim-ref idref="clm-00003-en">claim 22</claim-ref>, further including a flange protruding radially outwardly from a proximal portion of the shaft, wherein, when inserted into the housing, the spacer is configured to urge the flange proximally to thereby urge the elongated shaft proximally relative to the housing.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>24</b>. The surgical instrument according to <claim-ref idref="clm-00004-en">claim 23</claim-ref>, further including a spring disposed within a cavity defined in the housing, the spring configured to bias the flange distally such that, in the absence of the spacer inserted into the housing, the elongated shaft is disposed in the tensioned state.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>25</b>. The surgical instrument according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the at least one tensile member includes a pair of articulation cables operatively coupled to the end effector such that relative longitudinal movement between the articulation cables induces articulation of the end effector.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>26</b>. The surgical instrument according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the end effector includes a pair of jaw members, the at least one tensile member configured to move the jaw members between an open position in spaced relation relative to one another and a closed position wherein the jaw members cooperate to grasp tissue therebetween.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>27</b>. The surgical instrument according to <claim-ref idref="clm-00007-en">claim 26</claim-ref>, wherein at least one of the jaw members is adapted to connect to a source of energy.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>28</b>. A surgical instrument, comprising:
+<claim-text>a housing;</claim-text><claim-text>an elongated shaft extending distally from the housing;</claim-text><claim-text>an end effector for treating tissue supported at a distal end of the elongated shaft;</claim-text><claim-text>at least one actuator adapted for manipulation by a user to control the end effector;</claim-text><claim-text>at least one tensile member extending at least partially through the elongated shaft, the at least one tensile member including a proximal end operatively coupled to the at least one actuator and a distal end operatively coupled to the end effector such that manipulation of the at least one actuator induces movement of the at least one tensile member to move the end effector; and</claim-text><claim-text>a spacer insertable into and removable from the housing to transition the at least one tensile member between a de-tensioned state and a tensioned state, respectively.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>29</b>. The surgical instrument according to <claim-ref idref="clm-00009-en">claim 28</claim-ref>, wherein, in the de-tensioned state, the elongated shaft extends a first distance from the housing and wherein, in the tensioned state, the elongated shaft extends a second, different distance from the housing.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>30</b>. The surgical instrument according to <claim-ref idref="clm-00010-en">claim 29</claim-ref>, wherein the second distance is greater than the first distance.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>31</b>. The surgical instrument according to <claim-ref idref="clm-00009-en">claim 28</claim-ref>, wherein, when inserted into the housing, the spacer is configured to urge the elongated shaft proximally relative to the housing, thereby transitioning the at least one tensile member to the de-tensioned state.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>32</b>. The surgical instrument according to <claim-ref idref="clm-00012-en">claim 31</claim-ref>, further including a flange protruding radially outwardly from a proximal portion of the shaft, wherein, when inserted into the housing, the spacer is configured to urge the flange proximally to thereby urge the elongated shaft proximally relative to the housing.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>33</b>. The surgical instrument according to <claim-ref idref="clm-00013-en">claim 32</claim-ref>, further including a spring disposed within a cavity defined in the housing, the spring configured to bias the flange distally such that, in the absence of the spacer inserted into the housing, the elongated shaft is disposed in the tensioned state.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>34</b>. The surgical instrument according to <claim-ref idref="clm-00009-en">claim 28</claim-ref>, wherein the at least one tensile member includes a pair of articulation cables operatively coupled to the end effector such that relative longitudinal movement between the articulation cables induces articulation of the end effector.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>35</b>. The surgical instrument according to <claim-ref idref="clm-00009-en">claim 28</claim-ref>, wherein the end effector includes a pair of jaw members, the at least one tensile member configured to move the jaw members between an open position in spaced relation relative to one another and a closed position wherein the jaw members cooperate to grasp tissue therebetween.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>36</b>. The surgical instrument according to <claim-ref idref="clm-00016-en">claim 35</claim-ref>, wherein at least one of the jaw members is adapted to connect to a source of energy.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150245865A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150245865A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150245865A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245865A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150245865A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245865A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150245865A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245865A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150245865A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245865A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150245865A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245865A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150245865A1_00007.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150245865A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150245865A1.PDF" type="pdf" size="446839" pages="11" />
+</lexisnexis-patent-document>

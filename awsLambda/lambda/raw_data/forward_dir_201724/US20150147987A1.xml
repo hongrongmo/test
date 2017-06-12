@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170602" file="US20150147987A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150528" time-inserted="025116" date-changed="20170602" time-changed="134539">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent application (publication)">
+      <document-id id="119776179">
+        <country>US</country>
+        <doc-number>20150147987</doc-number>
+        <kind>A1</kind>
+        <date>20150528</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>US</country>
+        <doc-number>20150147987</doc-number>
+        <kind>A1</kind>
+        <date>20150528</date>
+      </document-id>
+      <document-id data-format="docdb" id="440661233">
+        <doc-number>2015147987</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US2015147987</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id id="43522930">
+        <country>US</country>
+        <doc-number>14163783</doc-number>
+        <date>20140124</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>US</country>
+        <doc-number>14163783</doc-number>
+        <date>20140124</date>
+      </document-id>
+      <document-id data-format="docdb" id="440661232">
+        <doc-number>201414163783</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US201414163783</doc-number>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150611">
+      <unexamined-printed-without-grant>
+        <date>20150528</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20161206">
+      <classification-ipcr sequence="1">
+        <text>H04B   1/04        20060101AFI20150528BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150528</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20161206">
+      <classification-cpc sequence="1">
+        <text>H04B   1/0007      20130101 FI20161129BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>0007</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20161129</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classification-national date-changed="20161206">
+      <country>US</country>
+      <main-classification>
+        <text>455/118</text>
+        <class>455</class>
+        <subclass>118</subclass>
+      </main-classification>
+    </classification-national>
+    <number-of-claims calculated="yes">21</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150528" lang="eng" format="original">Transmitter with a Reduced Complexity Digital Up-Converter</invention-title>
+    <references-cited date-changed="20160217">
+      <patent-citations name="patcit" date-changed="20160217" />
+      <citation>
+        <patcit num="1" dnum="US2004192229A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040192229</doc-number>
+            <kind>A1</kind>
+            <name>MORRIS BRADLEY JOHN [CA], et al</name>
+            <date>20040930</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>2004192229</doc-number>
+            <kind>A1</kind>
+            <date>20040930</date>
+          </document-id>
+          <application-date>
+            <date>20030331</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US5684830A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5684830</doc-number>
+            <kind>A</kind>
+            <name>ICHIKAWA YUJI [JP], et al</name>
+            <date>19971104</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5684830</doc-number>
+            <kind>A</kind>
+            <date>19971104</date>
+          </document-id>
+          <application-date>
+            <date>19941020</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US8705675B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>8705675</doc-number>
+            <kind>B2</kind>
+            <name>LOLIS LUIS [FR], et al</name>
+            <date>20140422</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>8705675</doc-number>
+            <kind>B2</kind>
+            <date>20140422</date>
+          </document-id>
+          <application-date>
+            <date>20101216</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US7924937B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>7924937</doc-number>
+            <kind>B2</kind>
+            <name>NORSWORTHY STEVEN R [US], et al</name>
+            <date>20110412</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>7924937</doc-number>
+            <kind>B2</kind>
+            <date>20110412</date>
+          </document-id>
+          <application-date>
+            <date>20030304</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US7602862B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>7602862</doc-number>
+            <kind>B2</kind>
+            <name>MAY MICHAEL R [US], et al</name>
+            <date>20091013</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>7602862</doc-number>
+            <kind>B2</kind>
+            <date>20091013</date>
+          </document-id>
+          <application-date>
+            <date>20050928</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US7061989B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>7061989</doc-number>
+            <kind>B2</kind>
+            <name>BELLAOUAR ABDELLATIF [US], et al</name>
+            <date>20060613</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>7061989</doc-number>
+            <kind>B2</kind>
+            <date>20060613</date>
+          </document-id>
+          <application-date>
+            <date>20040528</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="7" dnum="US7020221B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>7020221</doc-number>
+            <kind>B2</kind>
+            <name>GLAS JACK P [US], et al</name>
+            <date>20060328</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>7020221</doc-number>
+            <kind>B2</kind>
+            <date>20060328</date>
+          </document-id>
+          <application-date>
+            <date>20011120</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="8" dnum="US7224717B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>7224717</doc-number>
+            <kind>B1</kind>
+            <name>LAM LAWRENCE K [US], et al</name>
+            <date>20070529</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>7224717</doc-number>
+            <kind>B1</kind>
+            <date>20070529</date>
+          </document-id>
+          <application-date>
+            <date>20031024</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="9" dnum="US6922436B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6922436</doc-number>
+            <kind>B1</kind>
+            <name>PORAT BOAZ [IL], et al</name>
+            <date>20050726</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>6922436</doc-number>
+            <kind>B1</kind>
+            <date>20050726</date>
+          </document-id>
+          <application-date>
+            <date>20001221</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="10" dnum="US6317468B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6317468</doc-number>
+            <kind>B1</kind>
+            <name>MEYER RONALD R [US]</name>
+            <date>20011113</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>6317468</doc-number>
+            <kind>B1</kind>
+            <date>20011113</date>
+          </document-id>
+          <application-date>
+            <date>19980617</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="11" dnum="US4622481A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4622481</doc-number>
+            <kind>A</kind>
+            <name>NORTRUP KEVIN E [US]</name>
+            <date>19861111</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>4622481</doc-number>
+            <kind>A</kind>
+            <date>19861111</date>
+          </document-id>
+          <application-date>
+            <date>19850821</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="12" dnum="US4597082A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4597082</doc-number>
+            <kind>A</kind>
+            <name>HILL LAWRENCE W [US], et al</name>
+            <date>19860624</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>4597082</doc-number>
+            <kind>A</kind>
+            <date>19860624</date>
+          </document-id>
+          <application-date>
+            <date>19840306</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="13" dnum="US4295105A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4295105</doc-number>
+            <kind>A</kind>
+            <name>BINGHAM JOHN A C</name>
+            <date>19811013</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>4295105</doc-number>
+            <kind>A</kind>
+            <date>19811013</date>
+          </document-id>
+          <application-date>
+            <date>19800207</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150528">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61909055</doc-number>
+          <date>20131126</date>
+        </document-id>
+        <document-id data-format="original">
+          <country>US</country>
+          <doc-number>61909055</doc-number>
+          <date>20131126</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150528">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Broadcom Corporation</orgname>
+            <role>02</role>
+            <address>
+              <city>Irvine</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>HARRIS</last-name>
+            <first-name>David Money</first-name>
+            <address>
+              <city>Upland</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>GARRETT</last-name>
+            <first-name>David</first-name>
+            <address>
+              <city>Tustin</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>LORENZ</last-name>
+            <first-name>Bob</first-name>
+            <address>
+              <city>Menlo Park</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20170425">
+      <main-family family-id="171754541">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9634694</doc-number>
+            <kind>B2</kind>
+            <date>20170425</date>
+          </document-id>
+          <application-date>
+            <date>20140124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150147987</doc-number>
+            <kind>A1</kind>
+            <date>20150528</date>
+          </document-id>
+          <application-date>
+            <date>20140124</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="171754540">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9634694</doc-number>
+            <kind>B2</kind>
+            <date>20170425</date>
+          </document-id>
+          <application-date>
+            <date>20140124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150147987</doc-number>
+            <kind>A1</kind>
+            <date>20150528</date>
+          </document-id>
+          <application-date>
+            <date>20140124</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150528" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present disclosure is directed to a system and method for performing digital up-conversion of a signal to a desired RF carrier frequency. The system and method efficiently perform digital up-conversion of the signal, in one example, by controlling a sample clock that is used by a DAC to sample and convert the up-converted signal from the digital domain to the analog domain to have a frequency that is four or eight times the desired RF carrier frequency. By controlling the sample clock of the DAC to have a frequency that is four or eight times the desired RF carrier frequency, the system and method can be implemented using currently available IC process geometries such that the implementation consumes much less area and/or power than an analog up-converter configured to have equivalent up-conversion functionality.</p>
+  </abstract>
+  <legal-data date-changed="20170405">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140130</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US  2015147987A1</docdb-publication-number>
+      <docdb-application-id>440661232</docdb-application-id>
+      <new-owner>BROADCOM CORPORATION, CALIFORNIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:HARRIS, DAVID MONEY;GARRETT, DAVID;LORENZ, BOB;SIGNING DATES FROM 20140127 TO 20140128;REEL/FRAME:032093/0767</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20160211</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US  2015147987A1</docdb-publication-number>
+      <docdb-application-id>440661232</docdb-application-id>
+      <new-owner>BANK OF AMERICA, N.A., AS COLLATERAL AGENT, NORTH</new-owner>
+      <free-text-description>PATENT SECURITY AGREEMENT;ASSIGNOR:BROADCOM CORPORATION;REEL/FRAME:037806/0001</free-text-description>
+      <effective-date>
+        <date>20160201</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20170201</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015147987A1</docdb-publication-number>
+      <docdb-application-id>440661232</docdb-application-id>
+      <new-owner>AVAGO TECHNOLOGIES GENERAL IP (SINGAPORE) PTE. LTD</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:BROADCOM CORPORATION;REEL/FRAME:041706/0001</free-text-description>
+      <effective-date>
+        <date>20170120</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20170203</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015147987A1</docdb-publication-number>
+      <docdb-application-id>440661232</docdb-application-id>
+      <new-owner>BROADCOM CORPORATION, CALIFORNIA</new-owner>
+      <free-text-description>TERMINATION AND RELEASE OF SECURITY INTEREST IN PATENTS;ASSIGNOR:BANK OF AMERICA, N.A., AS COLLATERAL AGENT;REEL/FRAME:041712/0001</free-text-description>
+      <effective-date>
+        <date>20170119</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150528">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of U.S. Provisional Patent Application No. 61/909,055, filed Nov. 26, 2013, which is incorporated by reference herein.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00002-en" num="0002">This application relates generally to digital up-converters, including radio frequency (RF) digital up-converters.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">In a radio transmitter, the back-end is generally defined as the portion of the transmitter that sits between the digital baseband system and the antenna. The back-end includes an up-converter for up-converting a baseband signal received from the digital baseband system to a carrier frequency, a filter for filtering the up-converted signal, and a power amplifier for boosting the strength of the up-converted signal before it is transmitted by the antenna. In addition to the above mentioned components, the back-end includes a digital-to-analog converter (DAC) at some point before the antenna to convert the signal to be transmitted from a digital signal to an analog signal.</p>
+      <p id="p-00004-en" num="0004">To take full advantage of continuing reductions in the size of integrated circuit (IC) process geometries, the DAC should be placed as close as possible to the antenna such that as many components as possible in the back-end can be implemented using digital circuitry. The reason being is that digital circuitry scales better in terms of cost and power with reductions in IC process geometries than analog circuitry. Although digital circuitry scales better, conventional digital implementations of many of the components in the back-end using currently available IC process geometries can still consume more area and/or power than their equivalent analog implementations, especially when operating at frequencies in the RF range. This can be a significant drawback for small, battery powered communication devices, such as mobile phones, laptops, tablets, smart watches, etc.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS/FIGURES</heading>
+      <p id="p-00005-en" num="0005">The accompanying drawings, which are incorporated herein and form a part of the specification, illustrate the embodiments of the present disclosure and, together with the description, further serve to explain the principles of the embodiments and to enable a person skilled in the pertinent art to make and use the embodiments.</p>
+      <p id="p-00006-en" num="0006">
+        <figref>FIG. 1</figref> illustrates a transmitter back-end with an RF digital up-converter.</p>
+      <p id="p-00007-en" num="0007">
+        <figref>FIG. 2</figref> illustrates a transmitter back-end with an RF digital up-converter and a sample clock generator in accordance with embodiments of the present disclosure.</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 3A</figref> illustrates one period of an example cosine wave sampled using a quarter rate sample clock.</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 3B</figref> illustrates one period of an example sine wave sampled using a quarter rate sample clock.</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 4</figref> illustrates a transmitter back-end with a reduced complexity quarter rate RF digital up-converter in accordance with embodiments of the present disclosure.</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 5</figref> illustrates a transmitter back-end with a reduced complexity eighth rate RF digital up-converter in accordance with embodiments of the present disclosure.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 6</figref> illustrates a transmitter back-end with a quarter and/or eighth rate RF digital up-converter and an IF digital up-converter for performing an offset correction in accordance with embodiments of the present disclosure.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 7</figref> illustrates a flowchart of an example method for performing quarter and/or eighth rate RF digital up-conversion in accordance with embodiments of the present disclosure.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 8</figref> illustrates a transmitter back-end with an RF digital up-converter and an IF digital up-converter for performing an offset correction in accordance with embodiments of the present disclosure.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 9</figref> illustrates a block diagram of an example computer system that can be used to implement aspects of the present disclosure.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00016-en" num="0016">The embodiments of the present disclosure will be described with reference to the accompanying drawings. The drawing in which an element first appears is typically indicated by the leftmost digit(s) in the corresponding reference number.</p>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00017-en" num="0017">In the following description, numerous specific details are set forth in order to provide a thorough understanding of the embodiments of the present disclosure. However, it will be apparent to those skilled in the art that the embodiments, including structures, systems, and methods, may be practiced without these specific details. The description and representation herein are the common means used by those experienced or skilled in the art to most effectively convey the substance of their work to others skilled in the art. In other instances, well-known methods, procedures, components, and circuitry have not been described in detail to avoid unnecessarily obscuring aspects of the disclosure.</p>
+      <p id="p-00018-en" num="0018">References in the specification to “one embodiment,” “an embodiment,” “an example embodiment,” etc., indicate that the embodiment described may include a particular feature, structure, or characteristic, but every embodiment may not necessarily include the particular feature, structure, or characteristic. Moreover, such phrases are not necessarily referring to the same embodiment. Further, when a particular feature, structure, or characteristic is described in connection with an embodiment, it is submitted that it is within the knowledge of one skilled in the art to affect such feature, structure, or characteristic in connection with other embodiments whether or not explicitly described.</p>
+      <p id="p-00019-en" num="0019">For purposes of this discussion, the term “module” shall be understood to include software, firmware, or hardware (such as one or more circuits, microchips, processors, and/or devices), or any combination thereof. In addition, it will be understood that each module can include one, or more than one, component within an actual device, and each component that forms a part of the described module can function either cooperatively or independently of any other component forming a part of the module. Conversely, multiple modules described herein can represent a single component within an actual device. Further, components within a module can be in a single device or distributed among multiple devices in a wired or wireless manner.</p>
+      <heading id="h-00006-en" level="1">I. OVERVIEW</heading>
+      <p id="p-00020-en" num="0020">The present disclosure is directed to a system and method for performing digital up-conversion of a signal to a desired RF carrier frequency. In one embodiment, the system and method efficiently perform digital up-conversion by controlling a sample clock used by a DAC to sample and convert the up-converted signal from the digital domain to the analog domain to have a frequency that is four or eight times the desired RF carrier frequency. By controlling the sample clock of the DAC to have a frequency that is four or eight times the desired RF carrier frequency, the system and method can be implemented using currently available IC process geometries such that the implementation consumes less area and/or power than an analog up-converter configured to have equivalent up-conversion functionality. In the case where the sample clock cannot be generated to have a frequency that is close enough to four or eight times the desired RF carrier frequency, an IF digital up-converter can be used to frequency-shift the lower bandwidth baseband signal to pre-compensate for a offset due to the imperfect sample clock. Embodiments of a split rate RF digital up-converter are also described below.</p>
+      <heading id="h-00007-en" level="1">II. QUARTER AND/OR EIGHTH RATE DIGITAL UP-CONVERSION</heading>
+      <p id="p-00021-en" num="0021">Before describing further aspects of the system and method of the present disclosure, it is instructive to first consider the transmitter back-end <b>100</b> illustrated in <figref>FIG. 1</figref>. Transmitter back-end <b>100</b> includes a sample rate converter <b>102</b>, an RF digital up-converter <b>104</b>, a digital-to-analog converter (DAC) <b>106</b>, and an analog filter/power amplifier <b>108</b>. In operation, transmitter back-end <b>100</b> is configured to receive data (e.g., voice, video, and/or internet traffic) as a complex digital baseband signal and process the complex digital baseband signal so that it can be transmitted over a channel.</p>
+      <p id="p-00022-en" num="0022">Ignoring sample rate converter <b>102</b> for the moment, RF digital up-converter <b>104</b> is configured to up-convert the complex digital baseband signal to a desired RF carrier frequency f<sub>c </sub>using a numerically controlled oscillator (NCO) <b>112</b>, a quadrature mixer formed by two digital multipliers <b>114</b> and <b>116</b>, and a digital adder <b>118</b>. The complex mixer specifically uses digital multiplier <b>114</b> to mix an in-phase component (1) of the complex digital baseband signal with a digital cosine wave that has a frequency equal to the desired RF carrier frequency f<sub>c</sub>. Digital multiplier <b>114</b> provides, as output, the in-phase component at the desired RF carrier frequency f<sub>c</sub>. Similarly, the complex mixer uses digital multiplier <b>116</b> to mix a quadrature component (Q) of the complex digital baseband signal with a digital sine wave that has a frequency equal to the desired RF carrier frequency f<sub>c</sub>. Digital multiplier <b>116</b> provides, as output, the quadrature component at the desired RF carrier frequency f<sub>c</sub>.</p>
+      <p id="p-00023-en" num="0023">NCO <b>112</b> is configured to generate the digital cosine and sine waves (also referred to as carrier waves) at the frequency f<sub>c </sub>using a phase accumulator (PA) <b>120</b> and a phase-to-amplitude converter (PAC) <b>122</b>. PA <b>120</b> includes a counter that is incremented with each cycle of a reference clock (or based on a reference clock) by an amount determined by a tuning word. The value of the counter represents a phase angle and is used to index into a cosine/sine look-up table in PAC <b>122</b>. In response to receiving the counter value, the cosine/sine look-up table in PAC <b>122</b> outputs two digital amplitudes that respectively correspond to the cosine and sine of the phase angle represented by the received counter value. By setting the tuning word equal to f<sub>c</sub>/f<sub>r </sub>(or a multiple thereof depending on the modulus of the counter in PA <b>120</b>), where f<sub>r </sub>is the frequency of the reference clock, it can be shown that the output of PAC <b>122</b> will correspond to samples of the digital cosine and sine wave at the desired frequency f<sub>c</sub>. The samples of the digital cosine and sine wave are typically provided by PAC <b>122</b> at the reference clock frequency f<sub>r</sub>.</p>
+      <p id="p-00024-en" num="0024">Because the digital cosine and sine waves provided by NCO <b>112</b> have the same frequency f<sub>c </sub>but are 90 degrees out of phase with each other, the up-converted components provided at the output of digital multipliers <b>114</b> and <b>116</b> can be combined into a single up-converted signal using digital adder <b>118</b> without the two up-converted components interfering with one another. The resulting up-converted signal can be written as:</p>
+      <p id="p-00025-en" num="0000">[in-line-formulae]<i>I[t</i>]·cos [2<i>πf</i><sub>c</sub><i>t]+Q[t</i>]·sin [2<i>πf</i><sub>c</sub><i>t]</i>[/in-line-formulae]</p>
+      <p id="p-00026-en" num="0025">After the two up-converted components are combined into the single up-converted signal above using digital adder <b>118</b>, DAC <b>106</b> samples the up-converted signal at a sample rate f<sub>s </sub>determined by a received sample clock to convert the up-converted signal from the digital domain to the analog domain. In general, the frequency at which adder <b>118</b> provides samples of the up-converted signal should be equal (or at least is typically made equal) to the sample rate f<sub>s </sub>of DAC <b>106</b>. To do this, the frequency f<sub>r </sub>of the reference clock used by NCO <b>112</b> can be set equal to the sample rate f<sub>s</sub>, and the sample rate of the complex digital baseband signal provided to RF digital up-converter <b>104</b> can be converted from a sample rate f<sub>b </sub>to the sample rate f<sub>s </sub>using sample rate converter <b>102</b>. The sample rate f<sub>b </sub>is generally lower than the sample rate f<sub>s</sub>, so sample rate converter can perform, for example, interpolation to boost the sample rate of the complex digital baseband signal up to the sample rate f<sub>s</sub>. In one embodiment, interpolation is performed by zero-padding and low-pass filtering the complex digital baseband signal.</p>
+      <p id="p-00027-en" num="0026">After DAC <b>106</b> converts the up-converted signal provided by adder <b>118</b> from the digital domain to the analog domain, analog filter/power amplifier <b>108</b> can filter and amplify the analog version of the up-converted signal before providing it to an antenna for transmission over the channel. Filtering can be performed to specifically remove undesired images from the up-converted signal, for example.</p>
+      <p id="p-00028-en" num="0027">Although RF digital up-converter <b>104</b> can be used in the manner described above to up-convert a complex digital baseband signal to a desired RF carrier frequency, its implementation using currently available IC process geometries can consume more area and/or power than an RF analog up-converter implemented to have equivalent up-conversion functionality using the same process geometry. Most of the area and power of RF digital up-converter <b>104</b> is typically consumed by the sine/cosine look-up table in PAC <b>122</b> and digital multipliers <b>114</b> and <b>116</b> that form the complex mixer. Because of this, many transmitter back-ends push DAC <b>106</b> farther away from the antenna and perform the RF up-conversion using analog circuitry, which generally does not scale as well as digital circuitry in terms of cost and power with reductions in IC process geometries.</p>
+      <p id="p-00029-en" num="0028">Referring now to <figref>FIG. 2</figref>, another transmitter back-end <b>200</b> is illustrated in accordance with embodiments of the present disclosure. Transmitter back-end <b>200</b> is similar to transmitter back-end <b>100</b> in <figref>FIG. 1</figref> but includes a new module: sample clock generator <b>202</b>. As will be explained below, the inclusion of sample clock generator <b>202</b> can be used to simplify the implementation of RF digital up-converter <b>104</b> and, thereby, reduce its area and power consumption.</p>
+      <p id="p-00030-en" num="0029">In general, sample clock generator <b>202</b> is configured to generate the sample clock used by DAC <b>106</b> to sample and convert the up-converted signal provided by digital adder <b>118</b> from the digital domain to the analog domain. Sample clock generator <b>202</b> is specifically configured to generate the sample clock such that its frequency f<sub>s </sub>is equal to four times the desired RF carrier frequency f<sub>c </sub>to which the complex digital baseband signal is to be up-converted. In one embodiment, sample clock generator <b>202</b> receives a carrier frequency control signal that indicates the currently desired RF carrier frequency f<sub>c</sub>. In this embodiment, sample clock generator <b>202</b> uses this carrier frequency control signal to adjust the frequency f<sub>s </sub>of the sample clock to be four times the currently desired RF carrier frequency f<sub>c</sub>, which may change over time.</p>
+      <p id="p-00031-en" num="0030">By controlling the sample clock to have a frequency f<sub>s </sub>equal to four times the desired RF carrier frequency f<sub>c</sub>, only (and exactly) four samples of the digital cosine and sine waves produced by NCO <b>112</b> at the RF carrier frequency f<sub>c </sub>need be output for each cycle of the two waves. This is because any other samples produced will be wasted given that DAC <b>106</b> samples at a rate equal to four times the desired RF carrier frequency f<sub>c</sub>. Other samples can be produced if desired.</p>
+      <p id="p-00032-en" num="0031">The four samples of the digital cosine and sine waves produced by NCO <b>112</b> for each cycle of the two waves can be chosen to be any four samples so long as they are spaced apart by successive phase advances of 90 degrees or π/2 radians. However, by selecting the four samples to be those specifically corresponding to the sequence of phase angles 0, 90, 180, and 270 degrees or, equivalently, 0, π/2, π, and 3π/2 radians, the four samples produced by NCO <b>112</b> would be equal to 1, 0, −1, and 0 for the cosine wave and 0, 1, 0, and −1 for the sine wave.</p>
+      <p id="p-00033-en" num="0032">This is graphically depicted in <figref>FIG. 3A</figref> for the cosine wave and in <figref>FIG. 3B</figref> for the sine wave. From <figref>FIG. 3A</figref>, it can be seen that for the sequence of phase angles 0, π/2, π, and 3π/2 radians, the four samples produced by NCO <b>112</b> for the cosine wave would be equal to the sequence 1, 0, −1, and 0. Similarly, from <figref>FIG. 3B</figref>, it can be seen that for the sequence of phase angles 0, π/2, π, and 3π/2 radians, the four samples produced by NCO <b>112</b> for the sine wave would be equal to the sequence 0, 1, 0, and −1.</p>
+      <p id="p-00034-en" num="0033">Because the output of NCO <b>112</b> can be reduced to a repetition of the sequence 1, 0, −1, and 0 for the cosine wave and 0, 1, 0, and −1 for the sine wave by controlling the sample clock of DAC <b>106</b> to have a sample frequency f<sub>s </sub>equal to four times the desired RF carrier frequency f<sub>c</sub>, the implementation of RF digital up-converter <b>104</b> can be simplified and, thereby, its area and power consumption reduced. To better grasp the simplifications possible, it is useful to consider the output produced by RF digital up-converter <b>104</b> for each combination of corresponding values in the two sequences of samples for the sine and cosine waves. The resulting output for each such combination is provided in Table 1 below:</p>
+      <p id="p-00035-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <colspec colname="3" colwidth="112pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Resulting output of RF digital</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Sine wave</entry>
+                  <entry>Cosine wave</entry>
+                  <entry>up-converter for given sine and</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>sample</entry>
+                  <entry>sample</entry>
+                  <entry>cosine wave samples</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="char" char="." />
+              <colspec colname="2" colwidth="56pt" align="char" char="." />
+              <colspec colname="3" colwidth="112pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>1</entry>
+                  <entry>0</entry>
+                  <entry>(1*I) + (0*Q) = I</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>0</entry>
+                  <entry>1</entry>
+                  <entry>(0*I) + (1*Q) = Q</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>−1</entry>
+                  <entry>0</entry>
+                  <entry>(−1*I) + (0*Q) = −I</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>0</entry>
+                  <entry>−1</entry>
+                  <entry>(0*I) + (−1*Q) = −Q</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00036-en" num="0034">As can be seen from Table 1, the output produced by RF digital up-converter <b>104</b> is either a current sample of the in-phase component (I) of the complex digital baseband signal being processed or its negation (i.e., −I), or a current sample of the quadrature component (Q) of the complex digital baseband signal being processed or its negation (i.e., −Q). Thus, RF digital up-converter <b>104</b> can be simplified to a negator or negators to negate incoming samples of the in-phase and quadrature components of the complex digital baseband signal and a selection module to select, as output, either the current sample of the in-phase component, the negation of the current sample of the in-phase component, the current sample of the quadrature component, or the negation of the current sample of the quadrature component.</p>
+      <p id="p-00037-en" num="0035">It should be noted that other simplified implementations of RF digital up-converter <b>104</b> are possible as would be appreciated by one of ordinary skill in the art based on the teachings herein. But, in general, each such simplified implementation will typically include logic to perform a selection and negation similar to those described above to effectively perform the complex mixer multiplication and addition of the resulting values from the complex mixer multiplication. For example, in another embodiment, the selection process can be modified to have two selection phases: a first selection phase to select between the current sample of the in-phase component and the quadrature component, and a second selection phase to select between the sample provided by the first selection phase and that samples negation. In even broader terms, each such simplified implementation will effectively multiply, in a repetitive manner, samples of the in-phase component of the complex digital baseband signal by the sequence 1, 0, −1, 0 and the quadrature phase component of the complex digital base band signal by the sequence 0, 1, 0, and −1 to up-convert the complex digital baseband signal.</p>
+      <p id="p-00038-en" num="0036">
+        <figref>FIG. 4</figref> illustrates a transmitter back-end <b>400</b> with a similar configuration as transmitter back-end <b>200</b> in <figref>FIG. 2</figref> but with RF digital up-converter <b>104</b> replaced by an example reduced complexity RF digital up-converter <b>402</b> as described above. The reduced complexity RF digital up-converter <b>402</b> is specifically labeled as quarter rate RF digital up-converter <b>402</b> because it up-converts a complex digital baseband signal to an RF carrier frequency f<sub>c </sub>that is one quarter of the sample rate f<sub>s </sub>of DAC <b>106</b>.</p>
+      <p id="p-00039-en" num="0037">As shown in <figref>FIG. 4</figref>, quarter rate RF digital up-converter <b>402</b> includes two negators (represented by inverter logic gate symbols) that function to effectively multiply current samples of the in-phase and quadrature components of the complex digital baseband signal by −1 and a sample selector <b>404</b>. Sample selector <b>404</b> can be configured to select, at the sample rate f<sub>s</sub>, one of its four inputs to provide as output to DAC <b>106</b>. Sample selector <b>404</b> is configured to specifically select its inputs in the following order I, Q, −I, −Q and repeat the same selection order thereafter. In one embodiment, sample selector <b>404</b> is implemented as a multiplexer with its selection control signal controlled in the manner described above.</p>
+      <p id="p-00040-en" num="0038">It should be noted that, sample selector <b>404</b> may be able to be foregone entirely (or at least can be implemented with less inputs) where DAC <b>106</b> is composed of multiple sub-DACs that together can receive multiple digital signals in parallel and convert them to a single, analog signal.</p>
+      <p id="p-00041-en" num="0039">One issue that may arise by setting the sample clock frequency f<sub>s </sub>equal to a frequency that is only four times the carrier frequency f<sub>c </sub>is that image noise from an unwanted sideband of the digital complex baseband signal may appear in a bandwidth of interest or may be too close to a bandwidth of interest in the up-converted signal to be practically filtered. It can be shown that quarter rate RF digital up-converter <b>402</b> specifically produces an image at f<sub>s</sub>−f<sub>c </sub>or 3*f<sub>c </sub>given that f<sub>s</sub>=4*f<sub>c</sub>.</p>
+      <p id="p-00042-en" num="0040">Where transmitter back-end <b>400</b> is implemented in a cellular modem, for example, transmitter back-end <b>400</b> may be required to operate over a large number of cellular bands, such as bands between 700-1000 MHz and 1400-2000 MHz. For carrier frequencies in the range of 700-2000 MHz, quarter rate RF digital up-converter <b>402</b> will produce an image between 2.1-6 GHz. Such an image could present two potential problems: first it may be impractical to design an image reject filter that passes 2 GHz but rejects 2.1 GHz, and second the image may fall in another band of interest, such as the 2.4 GHz Bluetooth band and interfere with low-level signals on a system employing both cellular and Bluetooth modems.</p>
+      <p id="p-00043-en" num="0041">To avoid these problems, instead of setting the sample clock frequency f<sub>s </sub>equal to a frequency that is only four times the carrier frequency f<sub>c</sub>, the sample clock frequency f<sub>s </sub>can be set equal, in at least some situations, to a frequency that is eight times the carrier frequency f<sub>c</sub>. With the sample frequency f<sub>s </sub>equal to eight times the carrier frequency f<sub>c</sub>, it can be shown that the up-converter used will produce an image at f<sub>s</sub>−f<sub>c </sub>or 7*f<sub>c </sub>given that f<sub>s</sub>=8*f<sub>c</sub>. Continuing with the cellular modem example mentioned above, images will now be produced in the 5.6-8 GHz rage, which is generally far enough away from the band of interest in the up-converted signal (and other potential bands) to prevent interference and allow for a practical image reject filter to be implemented.</p>
+      <p id="p-00044-en" num="0042">In addition to helping solve image issues, setting the sample clock frequency f<sub>s </sub>equal to a frequency that is eight times the carrier frequency f<sub>c </sub>does not require overly complex implementation changes to quarter rate RF digital up-converter <b>402</b>. The changes can best be understood by again examining the RF digital up-converter <b>104</b> in <figref>FIG. 1</figref>. In that context, by controlling the sample clock to have a frequency f<sub>s </sub>equal to eight times the desired RF carrier frequency f<sub>c</sub>, only (and exactly) eight samples of the digital cosine and sine waves produced by NCO <b>112</b> at the RF carrier frequency f<sub>c </sub>need be output for each cycle of the two waves. This is because any other samples produced will be wasted given that DAC <b>106</b> samples at a rate equal to eight times the desired RF carrier frequency f<sub>c</sub>. Other samples can be produced if desired.</p>
+      <p id="p-00045-en" num="0043">The eight samples of the digital cosine and sine waves produced by NCO <b>112</b> for each cycle of the two waves can be chosen to be any eight samples so long as they are spaced apart by successive phase advances of 45 degrees or π/4 radians. However, by selecting the eight samples to be those specifically corresponding to the sequence of phase angles 0, 45, 90, 135, 180, 225, 270, and 315 degrees or, equivalently, 0, π/4, π/2, 3π/4, π, 5π/4, 3π/2, and 7π/4 radians, the eight samples produced by NCO <b>112</b> would be equal to 1, √{square root over (2)}/2, 0, −√{square root over (2)}/2, −1, −√{square root over (2)}/2, 0, and √{square root over (2)}/2 for the cosine wave and 0, √{square root over (2)}/2, 1, √{square root over (2)}/2, 0, −√{square root over (2)}/2, −1, and −√{square root over (2)}/2 for the sine wave.</p>
+      <p id="p-00046-en" num="0044">Because the output of NCO <b>112</b> can be reduced to a repetition of the sequence 1, √{square root over (2)}/2, 0, −√{square root over (2)}/2, −1, −√{square root over (2)}/2, 0, and √{square root over (2)}/2 for the cosine wave and 0, √{square root over (2)}/2, 1, √{square root over (2)}/2, 0, −√{square root over (2)}/2, −1, and −√{square root over (2)}/2 for the sine wave by controlling the sample clock of DAC <b>106</b> to have a sample frequency f<sub>s </sub>equal to eight times the desired RF carrier frequency f<sub>c</sub>, the implementation of RF digital up-converter <b>104</b> can be simplified and, thereby, its area and power consumption reduced. To better grasp the simplifications possible, it is again useful to consider the output produced by RF digital up-converter <b>104</b> for each combination of corresponding values in the two sequences of samples for the sine and cosine waves. The resulting output for each such combination is provided in Table 2 below:</p>
+      <p id="p-00047-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <colspec colname="3" colwidth="112pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Resulting output of RF digital</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Sine wave</entry>
+                  <entry>Cosine wave</entry>
+                  <entry>up-converter for given sine and</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>sample</entry>
+                  <entry>sample</entry>
+                  <entry>cosine wave samples</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>1</entry>
+                  <entry>0</entry>
+                  <entry>(1*I) + (0*Q) = I</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry> {square root over (2)}/2</entry>
+                  <entry>{square root over (2)}/2</entry>
+                  <entry>({square root over (2)}/2*I) + ({square root over (2)}/2*Q) = {square root over (2)}/2(Q + I)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>0</entry>
+                  <entry>1</entry>
+                  <entry>(0*I) + (1*Q) = Q</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>−{square root over (2)}/2</entry>
+                  <entry>{square root over (2)}/2</entry>
+                  <entry>(−{square root over (2)}/2*I) + ({square root over (2)}/2*Q) = {square root over (2)}/2(Q − I)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>−1 </entry>
+                  <entry>0</entry>
+                  <entry>(−1*I) + (0*Q) = −I</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>−{square root over (2)}/2</entry>
+                  <entry>−{square root over (2)}/2 </entry>
+                  <entry>(−{square root over (2)}/2*I) + (−{square root over (2)}/2*Q) = −{square root over (2)}/2(Q + I)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>0</entry>
+                  <entry>−1 </entry>
+                  <entry>(0*I) + (−1*Q) = −Q</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry> {square root over (2)}/2</entry>
+                  <entry>−{square root over (2)}/2 </entry>
+                  <entry>({square root over (2)}/2*I) + ({square root over (2)}/2*Q) = −{square root over (2)}/2(Q − I)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00048-en" num="0045">As can be seen from Table 2, four of the outputs produced are identical to those produced by quarter rate RF digital up-converter <b>402</b>; i.e., the outputs I, Q, −I, and −Q. Thus, these four outputs can be generated in a similar manner as described above. The other four outputs can be produced, for example, using two adders that respectively form the sums (Q+I) and (Q−I), two multipliers that each respectively multiply one of the two formed sums by √{square root over (2)}/2 to respectively form two of the four outputs √{square root over (2)}/2(Q+I) and √{square root over (2)}/2(Q−I), and two negators that each respectively negate one of the two already formed outputs to produce the remaining two −√{square root over (2)}/2(Q+I) and −√{square root over (2)}/2(Q−I).</p>
+      <p id="p-00049-en" num="0046">
+        <figref>FIG. 5</figref> illustrates a transmitter back-end <b>500</b> with a similar configuration as transmitter back-end <b>200</b> in <figref>FIG. 2</figref> but with RF digital up-converter <b>104</b> replaced by a reduced complexity RF digital up-converter <b>502</b> as described above. The reduced complexity RF digital up-converter <b>502</b> is specifically labeled as eighth rate RF digital up-converter <b>502</b> because it up-converts a complex digital baseband signal to an RF carrier frequency f<sub>c </sub>that is one eighth the sample rate f<sub>s </sub>of DAC <b>106</b>. Eighth rate RF digital up-converter <b>502</b> produces the eight outputs provided in Table 2 in the manner described above, using two adders, two multipliers, and four negators.</p>
+      <p id="p-00050-en" num="0047">Sample selector <b>504</b> is configured to select, at the sample rate f<sub>s</sub>, one of its eight inputs to provide as output to DAC <b>106</b>. Sample selector <b>504</b> can be configured to specifically select, at the sample rate f<sub>s </sub>for example, its inputs in the following order I, √{square root over (2)}/2(Q+I), Q, √{square root over (2)}/2(Q−I), −I, −√{square root over (2)}/2(Q+I), −Q, −√{square root over (2)}/2(Q−I) and repeat the same selection order thereafter. In one embodiment, sample selector <b>504</b> is implemented as a multiplexer with its selection control signal controlled in the manner described above.</p>
+      <p id="p-00051-en" num="0048">Because eighth rate RF digital up-converter <b>502</b> produces the four outputs for quarter rate RF digital up-converter <b>402</b>, in other embodiments eighth rate RF digital up-converter <b>502</b> can be configured to switch from an eighth rate RF digital up-converter to a quarter rate RF digital up-converter. While operating as a quarter rate RF digital up-converter, sample selector <b>504</b> would only select from the inputs I, Q, −I, and −Q. In addition, sample clock generator <b>202</b> would generate the sample clock with a frequency f<sub>s </sub>that is four times the RF carrier frequency f<sub>c</sub>, as opposed to eight times the RF carrier frequency f<sub>c</sub>. An additional control signal (not shown) can be fed to eighth rate RF digital up-converter <b>502</b> and sample clock generator <b>202</b> to switch between the quarter and eighth rate modes of operation. In general, transmitter back-end <b>500</b> can be controlled to operate in the eighth rate mode of operation when necessary to prevent anticipated image issues as discussed above and in the quarter rate mode in other times to conserve power, for example.</p>
+      <p id="p-00052-en" num="0049">It should be noted that other implementations of eighth rate RF digital up-converter <b>502</b> are possible as would be appreciated by one of ordinary skill in the art based on the teachings herein. But, in general, each such simplified implementation will typically include logic to perform selection, negation(s), and multiplication(s) similar to those described above to effectively perform the complex mixer multiplication and addition of the resulting values from the complex mixer multiplication. In even broader terms, each such simplified implementation will effectively multiply, in a repetitive manner, samples of the in-phase component of the complex digital baseband signal by the sequence 1, √{square root over (2)}/2, 0, −√{square root over (2)}/2, −1, −√{square root over (2)}/2, 0, and √{square root over (2)}/2 and the quadrature phase component of the complex digital base band signal by the sequence 0, √{square root over (2)}/2, 1, √{square root over (2)}/2, 0, −√{square root over (2)}/2, −1, and −√{square root over (2)}/2 to up-convert the complex digital baseband signal.</p>
+      <p id="p-00053-en" num="0050">For example, in another implementation, the actual calculation of the eight different possible outputs by eighth rate RF digital up-converter <b>502</b> can be performed at a digital clock rate below the sampling frequency f<sub>s </sub>using an additional sample rate converter that follows after these outputs are calculated but before sample selector <b>504</b> as would be appreciated by one of ordinary skill in the art. An example of such an implementation is explicitly described and shown in FIG. 3 of U.S. Provisional Patent Application No. 61/909,055, filed Nov. 26, 2013, to which this application claims priority to and incorporates by reference. Performing the calculation of the eight different possible outputs at a rate below the sampling frequency f<sub>s </sub>can save power or ease timing requirements because, for example, the multipliers used to multiply incoming samples of the complex digital baseband signal can be run at a slower speed. Also, sample selector <b>504</b> may be able to be foregone entirely (or at least can be implemented with less inputs) where DAC <b>106</b> is composed of multiple sub-DACs that together can receive multiple digital signals in parallel and convert them to a single, analog signal.</p>
+      <p id="p-00054-en" num="0051">Referring now to <figref>FIG. 6</figref>, a transmitter back-end <b>600</b> with the same structure as either transmitter back-end <b>400</b> in <figref>FIG. 4</figref> or <b>500</b> in <figref>FIG. 5</figref> is illustrated in accordance with embodiments of the present disclosure. The difference between transmitter back-end <b>600</b> and those disclosed in <figref>FIGS. 4 and 5</figref> is that transmitter back-end <b>600</b> includes an intermediate frequency (IF) digital frequency shifter <b>602</b>. This additional module can be used to correct a potential issue with transmitter back-ends <b>400</b> and <b>500</b>.</p>
+      <p id="p-00055-en" num="0052">In particular, sample clock generator <b>202</b> may not be able to (or it may not be desired to) generate the sample clock at a frequency f<sub>s </sub>that is close enough to exactly four or eight times the carrier frequency f<sub>c </sub>for proper operation. For example, sample clock generator <b>202</b> can be implemented using a phase-locked loop (PLL) that can only tune the frequency f<sub>s </sub>of the sample clock to be some multiple of a 26 MHz crystal reference clock or a multiple of some other coarse reference clock. In addition, the reference clock may not be accurate due to, for example, drift over time or other sources of error.</p>
+      <p id="p-00056-en" num="0053">As a result, the sample clock generated by sample clock generator <b>202</b> may not have a frequency f<sub>s </sub>that is close enough to exactly four or eight times the carrier frequency f<sub>c </sub>for proper operation. The offset in the frequency f<sub>s </sub>of the sample clock can be denoted by a frequency f<sub>off</sub>, and f<sub>off </sub>effectively translates to a frequency offset in the carrier frequency f<sub>c </sub>equal to f<sub>off</sub>/8, in the eighth rate mode, and f<sub>off</sub>/4 in the quarter rate mode. IF digital frequency-shifter <b>602</b> can be used to pre-compensate for this effective frequency offset in the carrier frequency f<sub>c</sub>. More specifically, as shown in <figref>FIG. 6</figref>, IF digital frequency-shifter <b>602</b> can pre-mix the in-phase (I) and quadrature (Q) components of the complex digital baseband signal with cosine and sine waves that have a frequency equal to −f<sub>off</sub>/8 in the eighth rate mode and −f<sub>off</sub>/4 in the quarter rate mode using a complex image reject mixer <b>604</b> (or some other mixer), for example. The compensated version (or IF version) of the in-phase and quadrature components, labeled as I′ and Q′ in <figref>FIG. 6</figref>, can then be provided to sample rate converter <b>102</b>. The compensated version I′ and Q′ are respectively translated in frequency, relative to I and Q, by −f<sub>off</sub>/8 in the eighth rate mode and −f<sub>off</sub>/4 in the quarter rate mode. Because IF digital up-converter can operate at a much lower speed than the RF digital up-converter <b>402</b> or <b>502</b>, its power consumption can be relatively small.</p>
+      <p id="p-00057-en" num="0054">It should be noted that the cosine and sine waves used by IF digital frequency-shifter <b>602</b> can be generated, for example, using an NCO similar to the one described above in <figref>FIG. 1</figref>, and are shown as having a frequency equal to f<sub>off</sub>/x for exemplary purposes in <figref>FIG. 6</figref>, where x is a variable. Also, it should be noted that a key design consideration to this split rate digital up-conversion approach is that the frequency offset applied by IF digital frequency-shifter <b>602</b> increases the bandwidth of the baseband signal and, as a result, should be small enough to not overly complicate sample rate converter <b>102</b>, which now must convert the sample rate of the higher bandwidth IF signal.</p>
+      <p id="p-00058-en" num="0055">Referring now to <figref>FIG. 7</figref>, a flowchart <b>700</b> of an example method for performing quarter and/or eighth rate RF digital up-conversion in accordance with embodiments of the present disclosure is illustrated. The method of flowchart <b>700</b> can be implemented by transmitter back-end <b>600</b> described above in <figref>FIG. 6</figref>. However, it should be noted that the method can be implemented by other devices as well.</p>
+      <p id="p-00059-en" num="0056">The method of flowchart <b>700</b> begins at step <b>702</b>. At step <b>702</b>, the sample clock is adjusted to be four or eight times the carrier frequency plus some offset frequency due to imperfect generation of the sample clock.</p>
+      <p id="p-00060-en" num="0057">At step <b>704</b>, the complex digital baseband signal is digitally frequency shifted to an IF frequency to pre-compensate for the offset frequency.</p>
+      <p id="p-00061-en" num="0058">At step <b>706</b>, the digitally frequency shifted IF signal (or alternatively the pre-compensated complex digital baseband signal) is digitally up-converted to the desired RF carrier frequency. The implementation of the RF digital up-converter used can be similar to the implementation shown in <figref>FIGS. 4 and 5</figref>.</p>
+      <p id="p-00062-en" num="0059">It should be noted that, in other embodiments of the system and method of the present disclosure, the sample clock used by DAC <b>106</b> in <figref>FIGS. 4 and 5</figref> can be generated by sample clock generator <b>202</b> such that the ratio of the frequency of the sample clock f<sub>s </sub>to the RF carrier frequency f<sub>c </sub>is equal to some value other than 4 or 8 (as used in the examples above), while still allowing for the same or similar reduced complexity RF digital up-converters as described above to be used.</p>
+      <p id="p-00063-en" num="0060">For example, the sample clock used by DAC <b>106</b> in <figref>FIG. 5</figref> can be generated by sample clock generator <b>202</b> such that the ratio of the sample clock frequency f<sub>s </sub>to the RF carrier frequency f<sub>c </sub>is equal to a value of 8/3, as opposed to 8, while still allowing for the same simplifications to the RF digital up-converter as described above in regard to <figref>FIG. 5</figref>. By controlling the sample clock to have a frequency f<sub>s </sub>equal to 8/3 times the desired RF carrier frequency f<sub>c</sub>, only (and exactly) 8 samples of the digital cosine and sine waves at the RF carrier frequency f<sub>c </sub>need be output for every three cycles of the two waves. This is because any other samples produced will be wasted given that DAC <b>106</b> samples at a rate equal to 8/3 times the desired RF carrier frequency f<sub>c</sub>. Other samples can be produced if desired.</p>
+      <p id="p-00064-en" num="0061">The 8 samples of the digital cosine and sine waves produced for every 3 cycles of the two waves can be chosen to be any 8 samples so long as they are spaced apart by successive phase advances of 135 degrees (i.e., 3/8*360 degrees) or 3π/4 radians. However, by selecting the 8 samples to be those specifically corresponding to the sequence of phase angles 0, 135, 270, 45, 180, 315, 90, and 225 degrees or, equivalently, 0, 2π/3, 3π/2, π/4, π, 5π/3, π/2, and 5π/4 radians, the eight samples produced would be equal to 1, −√{square root over (2)}/2, 0, √{square root over (2)}/2, −1, √{square root over (2)}/2, 0, −√{square root over (2)}/2 for the cosine wave and 0, √{square root over (2)}/2, −1, √{square root over (2)}/2, 0, −√{square root over (2)}/2, 1, −√{square root over (2)}/2 for the sine wave. The above sets of samples have the exact same samples as those discussed above for eighth rate RF digital up-converter <b>502</b> shown in <figref>FIG. 5</figref>, but the samples are in a different order. Thus, eighth rate RF digital up-converter <b>502</b> can be used in the example where sample clock generator <b>202</b> generates the sample clock such that the ratio of f<sub>s</sub>/f<sub>c </sub>is equal to 8/3. The only (or at least one) change needed would be to the order in which sample selector <b>504</b> selects its inputs or, alternatively, the order in which the inputs are fed into sample selector <b>504</b>.</p>
+      <p id="p-00065-en" num="0062">In general, in order to take advantage of the reduced complexity configuration of quarter rate RF digital up-converter <b>402</b>, the ratio f<sub>s</sub>/f<sub>c </sub>can be set to a value other than four so long as that value results in a phase step between samples of the digital cosine and sine waves used for mixing that is a sub-multiple of 90 degrees (e.g., 90, 45, 30, 22.5, 15, 11.25, and 7.5 degrees) or a multiple of a sub-multiple of 90 degrees that is less than 180 degrees and not a sub-multiple of 360 degrees (e.g., the third multiple of 45 degrees or 135 degrees, which is less than 180 degrees and not a sub-multiple of 360 degrees). For a given ratio f<sub>s</sub>/f<sub>c</sub>, the corresponding phase step between samples of the digital cosine and sine waves used for mixing can be determined by multiplying the reciprocal of the ratio f<sub>s</sub>/f<sub>c </sub>by 360 degrees.</p>
+      <p id="p-00066-en" num="0063">For example, for a ratio f<sub>s</sub>/f<sub>c</sub>=12/5, the corresponding phase step between samples of the digital cosine and sine waves used for mixing is equal to (5/12)*360 degrees or 150 degrees. This 150 degree phase step meets the above criteria of being a multiple of a sub-multiple of 90 degrees (e.g., the fifth multiple of 30 degrees) that is less than 180 degrees and not a sub-multiple of 360 degrees. The reduced complexity mixer would implement <b>12</b> possible phase steps at 30 degrees, so that the mixer can visit all possible phases of 150 degree steps (i.e. 150 degrees, 300 degrees, 450 degrees (or 90 degrees)), etc. Thus, the ratio f<sub>s</sub>/f<sub>c</sub>=12/5 can be used, while still taking advantage of the same reduced complexity configuration as quarter rate RF digital up-converter <b>402</b> in <figref>FIG. 4</figref>, albeit with some additional hardware/logic as would be appreciated by one of ordinary skill in the art.</p>
+      <p id="p-00067-en" num="0064">Similarly, in order to take advantage of the reduced complexity configuration of eighth rate RF digital up-converter <b>502</b>, the ratio f<sub>s</sub>/f<sub>c </sub>can be set to a value other than four so long as that value results in a phase step between samples of the digital cosine and sine waves used for mixing that is a sub-multiple of 45 degrees (e.g., 45, 30, 22.5, 15, 11.25, and 7.5 degrees) or a multiple of a sub-multiple of 45 degrees that is less than 180 degrees and not a sub-multiple of 360 degrees (e.g., the third multiple of 45 degrees or 135 degrees, which is less than 180 degrees and not a sub-multiple of 360 degrees). Again, for a given ratio f<sub>s</sub>/f<sub>c</sub>, the corresponding phase step between samples of the digital cosine and sine waves used for mixing can be determined by multiplying the reciprocal of the ratio f<sub>s</sub>/f<sub>c </sub>by 360 degrees.</p>
+      <p id="p-00068-en" num="0065">Finally, it should be noted that transmitter back-ends <b>400</b>, <b>500</b>, and <b>600</b> can be used within a wide range of devices, including transmitters for cellular applications, wireless local area network applications, and Bluetooth applications. It should also be noted that transmitter back-ends <b>400</b>, <b>500</b>, and <b>600</b> can be used in transmitters configured to transmit over wireless and/or wired mediums.</p>
+      <heading id="h-00008-en" level="1">III. SPLIT RATE DIGITAL UP-CONVERSION</heading>
+      <p id="p-00069-en" num="0066">Referring back to <figref>FIG. 1</figref>, the issue with RF digital up-converter <b>104</b> mentioned above is that its implementation using currently available IC process geometries can consume more area and/or power than an RF analog up-converter implemented to have equivalent up-conversion functionality using the same process geometry. In particular, a lot of area and power of the RF digital up-converter <b>104</b> can be consumed by the sine/cosine look-up table in phase-to-amplitude converter (PAC) <b>122</b> of numerically controlled oscillator (NCO) <b>112</b>.</p>
+      <p id="p-00070-en" num="0067">As explained above, NCO <b>112</b> is configured to generate digital cosine and sine waves at the desired carrier frequency f<sub>c </sub>for mixing with the complex digital baseband signal. NCO <b>112</b> is configured to generate the digital cosine and sine waves using a phase accumulator (PA) <b>120</b> and PAC <b>122</b>. PA <b>120</b> typically includes a counter that is incremented with each cycle of a reference clock (or based on a reference clock) by an amount determined by a tuning word. The value of the counter represents a phase angle and is used to index into a cosine/sine look-up table in PAC <b>122</b>. In response to receiving the counter value, the cosine/sine look-up table in PAC <b>122</b> outputs two digital amplitudes that respectively correspond to the cosine and sine of the phase angle represented by the received counter value. By setting the tuning word equal to f<sub>c</sub>/f<sub>r </sub>(or a multiple thereof depending on the modulus of the counter in PA <b>120</b>), where f<sub>r </sub>is the frequency of the reference clock, it can be shown that the output of PAC <b>122</b> will correspond to samples of the digital cosine and sine wave at the desired frequency f<sub>c</sub>. The samples of the digital cosine and sine wave are typically provided by PAC <b>122</b> at the reference clock frequency f<sub>r</sub>.</p>
+      <p id="p-00071-en" num="0068">The sine/cosine look-up table in PAC <b>122</b> generally consumes a lot of area and power because the sine/cosine look-up table typically includes a large number of entries, where an entry corresponds to the digital amplitude of a sine or cosine wave at a particular phase angle. Thus, to reduce the area and power consumption of PAC <b>122</b>, the number of entries in the sine/cosine look-up table can be reduced. But such a reduction is not without cost. The number of entries in the sine/cosine look-up table of PAC <b>122</b> generally determines the frequency resolution of NCO <b>112</b> (i.e., the resolution at which it can generate a sine or cosine wave at a particular frequency) for a given reference clock frequency f<sub>r</sub>. The better the resolution of NCO <b>112</b>, the closer NCO <b>112</b> can generate the sine and cosine waves at the desired carrier frequency f<sub>c</sub>.</p>
+      <p id="p-00072-en" num="0069">Referring now to <figref>FIG. 8</figref>, a transmitter back-end <b>800</b> with a similar structure as transmitter back-end <b>100</b> in <figref>FIG. 1</figref> is illustrated in accordance with embodiments of the present disclosure. Differences between transmitter back-end <b>800</b> and transmitter back-end <b>100</b> in <figref>FIG. 1</figref> include the addition of an intermediate frequency (IF) digital frequency shifter <b>602</b>, an NCO <b>802</b> with a reduced number of entries in the sine/cosine look-up table of its phase-to-amplitude converter (PAC) <b>806</b> to limit its area and power consumption, and a controller <b>808</b>. IF digital frequency shifter <b>602</b>, described above in <figref>FIG. 6</figref>, can be used to correct for an offset in the frequency of the sine and cosine waves generated by NCO <b>802</b> from a desired carrier frequency f<sub>c </sub>due to the number of entries in the sine/cosine look-up table of PAC <b>806</b> being reduced.</p>
+      <p id="p-00073-en" num="0070">For example, the sine/cosine look-up table of PAC <b>806</b> can be implemented to include 32 entries, with each entry corresponding to the amplitude of a sine or cosine wave at 1 of 32 different evenly spaced phase angles between 0 and 360 degrees. With 32 such entries, NCO <b>112</b> has a frequency resolution of f<sub>r</sub>/32 Hz and can generate the sine and cosine waves at a frequency that is within +/−[(f<sub>r</sub>/32)/2] Hz of a desired carrier frequency f<sub>c</sub>. Thus, IF digital frequency shifter <b>602</b> can pre-compensate for a resulting offset due to the limited frequency resolution of NCO <b>112</b>.</p>
+      <p id="p-00074-en" num="0071">More specifically, as shown in <figref>FIG. 6</figref>, IF digital frequency-shifter <b>602</b> can pre-mix the in-phase (I) and quadrature (Q) components of the complex digital baseband signal with cosine and sine waves that have a frequency equal to f<sub>off</sub>, where f<sub>off </sub>in the context of <figref>FIG. 8</figref> is equal to the frequency offset of the cosine and sine waves generated by NCO <b>112</b> from the desired carrier frequency f<sub>c </sub>(or is at least determined based on this frequency offset). The compensated version (or IF version) of the in-phase and quadrature components, labeled as I′ and Q′ in <figref>FIG. 6</figref> and <figref>FIG. 8</figref>, can then be provided to sample rate converter <b>102</b>. Because IF digital frequency-shifter <b>602</b> can operate at a much lower speed than the RF digital up-converter <b>104</b> in <figref>FIG. 8</figref>, its power consumption can be relatively small.</p>
+      <p id="p-00075-en" num="0072">It should be noted that the cosine and sine waves used by IF digital frequency-shifter <b>602</b> can be generated, for example, using an NCO similar to the one described above in <figref>FIG. 1</figref>, and are shown as having a frequency equal to f<sub>off</sub>/x for exemplary purposes in <figref>FIG. 6</figref>, where x is a variable. Also, it should be noted that a key design consideration to this split rate digital up-conversion approach is that the frequency offset applied by IF digital frequency-shifter <b>602</b> increases the bandwidth of the baseband signal and, as a result, should be small enough to not overly complicate sample rate converter <b>102</b>, which now must convert the sample rate of the higher bandwidth IF signal.</p>
+      <p id="p-00076-en" num="0073">Controller <b>808</b> can be used to generate the tuning words for NCO <b>802</b> and the NCO used by IF digital frequency shifter <b>602</b> to generate the cosine and sine waves that have a frequency equal to f<sub>off </sub>as explained above. Controller <b>808</b> can specifically generate the two tuning words based on the desired carrier frequency f<sub>c</sub>, received as an input by controller <b>808</b>. For example, assuming that NCO <b>112</b> includes 32 entries as provided in the above example, and that the reference clock has a frequency f<sub>r</sub>=5 GHz and a carrier frequency f<sub>c</sub>=700 MHz is desired, controller <b>808</b> can be configured to determine the tuning word to use for NCO <b>802</b> that will result in NCO <b>802</b> generating its cosine and sine waves with a frequency as close as possible to the desired carrier frequency f<sub>c</sub>=700 MHz. In the given example, controller <b>808</b> would determine the tuning word for NCO <b>802</b> such that the 32 entries in PAC <b>806</b> are stepped through in increments of 4. At such an increment, the output frequency of the sine and cosine wave generate by NCO <b>802</b> will be (4/32)*f<sub>r</sub>, or (4/32)*5 GHz, which equals 625 MHz.</p>
+      <p id="p-00077-en" num="0074">After determining the tuning word for NCO <b>802</b>, controller <b>808</b> can then determine the tuning word for the NCO of IF digital frequency shifter <b>602</b> to generate the cosine and sine waves used by IF digital frequency shifter <b>602</b> to have a frequency equal to f<sub>off </sub>as explained above, which in this case would be equal to 700 MHz-625 MHz or 75 MHz.</p>
+      <p id="p-00078-en" num="0075">It should be noted that transmitter back-end <b>800</b> can be used within a wide range of devices, including transmitters for cellular applications, wireless local area network applications, and Bluetooth applications. It should also be noted that transmitter back-end <b>800</b> can be used in transmitters configured to transmit over wireless and/or wired mediums.</p>
+      <heading id="h-00009-en" level="1">IV. EXAMPLE COMPUTER SYSTEM ENVIRONMENT</heading>
+      <p id="p-00079-en" num="0076">It will be apparent to persons skilled in the relevant art(s) that various elements and features of the present disclosure, as described herein, can be implemented in hardware using analog and/or digital circuits, in software, through the execution of instructions by one or more general purpose or special-purpose processors, or as a combination of hardware and software.</p>
+      <p id="p-00080-en" num="0077">The following description of a general purpose computer system is provided for the sake of completeness. Embodiments of the present disclosure can be implemented in hardware, or as a combination of software and hardware. Consequently, embodiments of the disclosure may be implemented in the environment of a computer system or other processing system. An example of such a computer system <b>900</b> is shown in <figref>FIG. 9</figref>. Modules depicted in <figref>FIGS. 4-6</figref> and <b>8</b> may execute on one or more computer systems <b>900</b>. Furthermore, each of the steps of the method depicted in <figref>FIG. 7</figref> can be implemented on one or more computer systems <b>900</b>.</p>
+      <p id="p-00081-en" num="0078">Computer system <b>900</b> includes one or more processors, such as processor <b>904</b>. Processor <b>904</b> can be a special purpose or a general purpose digital signal processor. Processor <b>904</b> is connected to a communication infrastructure <b>902</b> (for example, a bus or network). Various software implementations are described in terms of this exemplary computer system. After reading this description, it will become apparent to a person skilled in the relevant art(s) how to implement the disclosure using other computer systems and/or computer architectures.</p>
+      <p id="p-00082-en" num="0079">Computer system <b>900</b> also includes a main memory <b>906</b>, preferably random access memory (RAM), and may also include a secondary memory <b>908</b>. Secondary memory <b>908</b> may include, for example, a hard disk drive <b>910</b> and/or a removable storage drive <b>912</b>, representing a floppy disk drive, a magnetic tape drive, an optical disk drive, or the like. Removable storage drive <b>912</b> reads from and/or writes to a removable storage unit <b>916</b> in a well-known manner. Removable storage unit <b>916</b> represents a floppy disk, magnetic tape, optical disk, or the like, which is read by and written to by removable storage drive <b>912</b>. As will be appreciated by persons skilled in the relevant art(s), removable storage unit <b>916</b> includes a computer usable storage medium having stored therein computer software and/or data.</p>
+      <p id="p-00083-en" num="0080">In alternative implementations, secondary memory <b>908</b> may include other similar means for allowing computer programs or other instructions to be loaded into computer system <b>900</b>. Such means may include, for example, a removable storage unit <b>918</b> and an interface <b>914</b>. Examples of such means may include a program cartridge and cartridge interface (such as that found in video game devices), a removable memory chip (such as an EPROM, or PROM) and associated socket, a thumb drive and USB port, and other removable storage units <b>918</b> and interfaces <b>914</b> which allow software and data to be transferred from removable storage unit <b>918</b> to computer system <b>900</b>.</p>
+      <p id="p-00084-en" num="0081">Computer system <b>900</b> may also include a communications interface <b>920</b>. Communications interface <b>920</b> allows software and data to be transferred between computer system <b>900</b> and external devices. Examples of communications interface <b>920</b> may include a modem, a network interface (such as an Ethernet card), a communications port, a PCMCIA slot and card, etc. Software and data transferred via communications interface <b>920</b> are in the form of signals which may be electronic, electromagnetic, optical, or other signals capable of being received by communications interface <b>920</b>. These signals are provided to communications interface <b>920</b> via a communications path <b>922</b>. Communications path <b>922</b> carries signals and may be implemented using wire or cable, fiber optics, a phone line, a cellular phone link, an RF link and other communications channels.</p>
+      <p id="p-00085-en" num="0082">As used herein, the terms “computer program medium” and “computer readable medium” are used to generally refer to tangible storage media such as removable storage units <b>916</b> and <b>918</b> or a hard disk installed in hard disk drive <b>910</b>. These computer program products are means for providing software to computer system <b>900</b>.</p>
+      <p id="p-00086-en" num="0083">Computer programs (also called computer control logic) are stored in main memory <b>906</b> and/or secondary memory <b>908</b>. Computer programs may also be received via communications interface <b>920</b>. Such computer programs, when executed, enable the computer system <b>900</b> to implement the present disclosure as discussed herein. In particular, the computer programs, when executed, enable processor <b>904</b> to implement the processes of the present disclosure, such as any of the methods described herein. Accordingly, such computer programs represent controllers of the computer system <b>900</b>. Where the disclosure is implemented using software, the software may be stored in a computer program product and loaded into computer system <b>900</b> using removable storage drive <b>912</b>, interface <b>914</b>, or communications interface <b>920</b>.</p>
+      <p id="p-00087-en" num="0084">In another embodiment, features of the disclosure are implemented primarily in hardware using, for example, hardware components such as application-specific integrated circuits (ASICs) and gate arrays. Implementation of a hardware state machine so as to perform the functions described herein will also be apparent to persons skilled in the relevant art(s).</p>
+      <heading id="h-00010-en" level="1">V. CONCLUSION</heading>
+      <p id="p-00088-en" num="0085">Embodiments have been described above with the aid of functional building blocks illustrating the implementation of specified functions and relationships thereof. The boundaries of these functional building blocks have been arbitrarily defined herein for the convenience of the description. Alternate boundaries can be defined so long as the specified functions and relationships thereof are appropriately performed.</p>
+      <p id="p-00089-en" num="0086">The foregoing description of the specific embodiments will so fully reveal the general nature of the disclosure that others can, by applying knowledge within the skill of the art, readily modify and/or adapt for various applications such specific embodiments, without undue experimentation, without departing from the general concept of the present disclosure. Therefore, such adaptations and modifications are intended to be within the meaning and range of equivalents of the disclosed embodiments, based on the teaching and guidance presented herein. It is to be understood that the phraseology or terminology herein is for the purpose of description and not of limitation, such that the terminology or phraseology of the present specification is to be interpreted by the skilled artisan in light of the teachings and guidance.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150528">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>. A transmitter comprising:
+<claim-text>a sample clock generator configured to generate a sample clock to have a frequency that is 4, 8, or 8/3 times a carrier frequency;</claim-text><claim-text>a radio frequency (RF) digital up-converter configured to up-convert a baseband or intermediate frequency (IF) signal to provide a digital RF signal at the carrier frequency; and</claim-text><claim-text>a digital-to-analog converter (DAC) configured to sample the digital RF signal using the sample clock and convert the samples of the digital RF signal to an analog RF signal for transmission over a channel.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The transmitter of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the RF digital up-converter is configured to up-convert the baseband or IF signal to provide the digital RF signal at the carrier frequency by effectively multiplying an in-phase component of the baseband or IF signal by the sequence {1, 0, −1, 0} and a quadrature component of the baseband or IF signal by the sequence {0, 1, 0, −1}.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The transmitter of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the RF digital up-converter is configured to up-convert the baseband or IF signal to provide the digital RF signal at the carrier frequency by effectively multiplying an in-phase component of the baseband or IF signal by the sequence {1, √{square root over (2)}/2, 0, −√{square root over (2)}/2, −1, −√{square root over (2)}/2, 0, and √{square root over (2)}/2} and a quadrature component of the baseband or IF signal by the sequence {0, √{square root over (2)}/2, 1, √{square root over (2)}/2, 0, −√{square root over (2)}/2, −1, −√{square root over (2)}/2,}.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The transmitter of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the RF digital up-converter is configured to up-convert the baseband or IF signal to provide the digital RF signal at the carrier frequency by effectively multiplying an in-phase component of the baseband or IF signal by the sequence {1, −√{square root over (2)}/2, 0, √{square root over (2)}/2, −1, √{square root over (2)}/2, 0, −√{square root over (2)}/2} and a quadrature component of the baseband or IF signal by the sequence {0, √{square root over (2)}/2, −1, √{square root over (2)}/2, 0, −√{square root over (2)}/2, 1, −√{square root over (2)}/2}.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The transmitter of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the sample clock generator is configured to generate the sample clock to have a frequency that is either 4 or 8 times the carrier frequency based on anticipated image noise from an unwanted sideband of the baseband signal.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The transmitter of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the RF digital up-converter comprises a multiplexer configured to select between a sample of a first component of the baseband or IF signal, a negated version of the sample of the first component of the baseband or IF signal, a sample of a second component of the baseband or IF signal, or a negated version of the sample of the second component of the baseband or IF signal to provide a sample of the digital RF signal at the carrier frequency.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The transmitter of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a sample rate converter configured to convert the sample rate of the baseband or IF signal to match the frequency of the sample clock.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A transmitter comprising:
+<claim-text>a sample clock generator configured to generate a sample clock to have a frequency that is 4, 8, or 8/3 times a carrier frequency plus an offset frequency;</claim-text><claim-text>an intermediate frequency (IF) digital frequency-shifter configured to frequency-shift a baseband signal by the offset frequency divided by 4, 8, or 8/3 to provide an IF signal;</claim-text><claim-text>a radio frequency (RF) digital up-converter configured to up-convert the IF signal to provide a digital RF signal at the carrier frequency; and</claim-text><claim-text>a digital-to-analog converter (DAC) configured to sample the digital RF signal using the sample clock and convert the samples of the digital RF signal to an analog RF signal for transmission over a channel.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The transmitter of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the RF digital up-converter is configured to up-convert the IF signal to provide the digital RF signal at the carrier frequency by effectively multiplying an in-phase component of the IF signal by the sequence {1, 0, −1, 0} and a quadrature component of the IF signal by the sequence {0, 1, 0, −1}.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The transmitter of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the RF digital up-converter is configured to up-convert the IF signal to provide the digital RF signal at the carrier frequency by effectively multiplying an in-phase component of the IF signal by the sequence {1, √{square root over (2)}/2, 0, −√{square root over (2)}/2, −1, −√{square root over (2)}/2, 0, and √{square root over (2)}/2} and a quadrature component of the IF signal by the sequence {0, √{square root over (2)}/2, 1, √{square root over (2)}/2, 0, −√{square root over (2)}/2, −1, −√{square root over (2)}/2,}.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The transmitter of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the RF digital up-converter is configured to up-convert the IF signal to provide the digital RF signal at the carrier frequency by effectively multiplying an in-phase component of the IF signal by the sequence {1, −√{square root over (2)}/2, 0, √{square root over (2)}/2, −1, √{square root over (2)}/2, 0, −√{square root over (2)}/2} and a quadrature component of the IF signal by the sequence {0, √{square root over (2)}/2, −1, √{square root over (2)}/2, 0, −√{square root over (2)}/2, 1, −√{square root over (2)}/2}.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The transmitter of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the sample clock generator is configured to generate the sample clock to have a frequency that is either 4 or 8 times the carrier frequency based on anticipated image noise from an unwanted sideband of the baseband signal.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The transmitter of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the RF digital up-converter comprises a multiplexer configured to select between a sample of a first component of the IF signal, a negated version of the sample of the first component of the IF signal, a sample of a second component of the IF signal, or a negated version of the sample of the second component of the IF signal to provide a sample of the digital RF signal at the carrier frequency.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The transmitter of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, further comprising a sample rate converter configured to convert the sample rate of the IF signal to match a frequency of the sample clock.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. A transmitter comprising:
+<claim-text>an intermediate frequency (IF) digital frequency-shifter configured to frequency-shift a baseband signal by an offset frequency to provide an IF signal;</claim-text><claim-text>a radio frequency (RF) digital up-converter configured to up-convert the IF signal, using a digital carrier wave, to provide a digital RF signal at a carrier frequency, wherein the RF digital up-converter comprises a numerically controlled oscillator (NCO) configured to generate the digital carrier wave with a frequency of the carrier frequency plus the offset frequency; and</claim-text><claim-text>a digital-to-analog converter (DAC) configured to sample the digital RF signal and convert the samples of the digital RF signal to an analog RF signal for transmission over a channel.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The transmitter of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, further comprising a controller configured to generate a tuning word for the NCO of the RF digital up-converter based on the carrier frequency, wherein the tuning word for the NCO of the RF digital up-converter adjusts the frequency of the digital carrier wave generated by the NCO.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The transmitter of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the controller is further configured to generate a tuning word for an NCO of the IF digital frequency-shifter based on the tuning word generated for the NCO of the RF digital up-converter, wherein the tuning word for the NCO of the IF digital frequency-shifter adjusts a frequency of the IF signal.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The transmitter of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the NCO of the RF digital up-converter comprises a phase accumulator (PA) and a phase-to-amplitude converter (PAC).</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The transmitter of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the PAC has 32 entries that each correspond to amplitudes of a sine or cosine wave at 32 different evenly spaced phase angles between 0 and 360 degrees.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The transmitter of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the PAC has X entries that each correspond to amplitudes of a sine or cosine wave at X different evenly spaced phase angles between 0 and 360 degrees, wherein X is an integer.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The transmitter of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the transmitter is configured to be operate within a cellular device or a local area network device.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150147987A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150147987A1-20150528-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150147987A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150147987A1-20150528-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150147987A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150147987A1-20150528-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150147987A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150147987A1-20150528-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150147987A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150147987A1-20150528-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150147987A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150147987A1-20150528-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150147987A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150147987A1-20150528-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150147987A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150147987A1-20150528-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150147987A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150147987A1-20150528-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150147987A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150147987A1-20150528-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150147987A1_00011.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150147987A1-20150528-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150147987A1.PDF" type="pdf" size="939910" pages="19" />
+</lexisnexis-patent-document>

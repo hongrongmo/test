@@ -1,0 +1,2482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150245992A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021613" date-changed="20150918" time-changed="025316">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121141051">
+        <country>US</country>
+        <doc-number>20150245992</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14436235</doc-number>
+        <date>20131016</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>CN</country>
+        <doc-number>201210393773</doc-number>
+        <date>20121016</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150915">
+      <classification-ipcr sequence="1">
+        <text>A61K   9/00        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K  31/192       20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>192</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61K  31/40        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61K  31/7052      20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>7052</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>A61K  47/32        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>G01N  23/04        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>23</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150915">
+      <classification-cpc sequence="1">
+        <text>A61K   9/0004      20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>0004</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K   9/2853      20130101 LI20140717BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>2853</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140717</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K   9/2866      20130101 LI20150902BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>2866</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150902</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K  31/192       20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>192</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61K  31/205       20130101 LI20141211BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>205</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141211</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61K  31/40        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61K  31/401       20130101 LI20141211BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>401</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141211</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61K  31/407       20130101 LI20141211BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>407</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141211</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61K  31/513       20130101 LI20141211BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>513</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141211</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61K  31/519       20130101 LI20141211BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>519</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141211</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61K  31/522       20130101 LI20141211BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>522</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141211</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>A61K  31/64        20130101 LI20141211BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>64</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141211</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>A61K  31/7052      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>7052</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>A61K  31/7056      20130101 LI20141211BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>7056</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141211</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>A61K  47/32        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>G01N  23/046       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>23</main-group>
+        <subgroup>046</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">16</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">PHARMACEUTIC OSMOTIC PUMP PREPARATION</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>SHANGHAI INSTITUTE OF MATERIA MEDICA, CHINESE ACADEMY OF SCIENCES</orgname>
+            <address>
+              <city>Shanghai</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>CN</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Zhang</last-name>
+            <first-name>Jiwen</first-name>
+            <address>
+              <city>Pudong</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Wu</last-name>
+            <first-name>Li</first-name>
+            <address>
+              <city>Pudong</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Yin</last-name>
+            <first-name>Xianzhen</first-name>
+            <address>
+              <city>Pudong</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Guo</last-name>
+            <first-name>Zhen</first-name>
+            <address>
+              <city>Pudong</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Li</last-name>
+            <first-name>Haiyan</first-name>
+            <address>
+              <city>Pudong</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>CN13001256</doc-number>
+        <date>20131016</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014059748</doc-number>
+        <date>20140424</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151211">
+      <main-family family-id="155417901">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245992</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20131016</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015533178</doc-number>
+            <kind>A</kind>
+            <date>20151119</date>
+          </document-id>
+          <application-date>
+            <date>20131016</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>102871982</doc-number>
+            <kind>A</kind>
+            <date>20130116</date>
+          </document-id>
+          <application-date>
+            <date>20121016</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>102871982</doc-number>
+            <kind>B</kind>
+            <date>20140910</date>
+          </document-id>
+          <application-date>
+            <date>20121016</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2910243</doc-number>
+            <kind>A1</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20131016</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014059748</doc-number>
+            <kind>A1</kind>
+            <date>20140424</date>
+          </document-id>
+          <application-date>
+            <date>20131016</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="155417900">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245992</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20131016</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015533178</doc-number>
+            <kind>A</kind>
+            <date>20151119</date>
+          </document-id>
+          <application-date>
+            <date>20131016</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>102871982</doc-number>
+            <kind>A</kind>
+            <date>20130116</date>
+          </document-id>
+          <application-date>
+            <date>20121016</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>102871982</doc-number>
+            <kind>B</kind>
+            <date>20140910</date>
+          </document-id>
+          <application-date>
+            <date>20121016</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2910243</doc-number>
+            <kind>A1</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20131016</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014059748</doc-number>
+            <kind>A1</kind>
+            <date>20140424</date>
+          </document-id>
+          <application-date>
+            <date>20131016</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Provided in the present invention is a pharmaceutic osmotic pump preparation comprising a tablet core, wherein the tablet core contains drugs (or pharmaceutically active ingredients) and materials forming a chamber structure; and a coating film coating the tablet core where a drug release hole is set; wherein when the pharmaceutic osmotic pump preparation releases drugs in water or an aqueous medium, the materials forming the chamber structure lead to the formation of a superfine chamber structure in the coating film, and the total volume of the superfine chamber structure Vb gradually increases over the releasing time, but the releasing rate R (or release amount A) of the pharmaceutically active ingredients is proportional to Vb. The osmotic pump preparation of the present invention is suitable for water-soluble drugs and water-insoluble drugs, and especially is suitable for the controlled release of low solubility drugs or pH dependent drugs.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150723</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015245992A1</docdb-publication-number>
+      <docdb-application-id>444207922</docdb-application-id>
+      <new-owner>SHANGHAI INSTITUTE OF MATERIA MEDICA, CHINESE ACAD</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:ZHANG, JIWEN;WU, LI;YIN, XIANZHEN;AND OTHERS;REEL/FRAME:036163/0176</free-text-description>
+      <effective-date>
+        <date>20150722</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FILED</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to the pharmaceutic preparation field, particularly to a novel pharmaceutic osmotic pump preparation with special internal micro chamber structures. Said osmotic pump preparation with novel type of structure is suitable for the controlled administration of water soluble drugs and water insoluble drugs, typically of drugs with low solubility.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">Osmotic pump preparation is characterized with its constant speed of drug releasing, thus, it can avoid the blood concentration fluctuation phenomenon after the administration of conventional preparations and reduce the gastrointestinal and systemic side effects. The release characteristics are less affected by the variable factors of gastrointestinal tract. Different macrostructures of osmotic pump and applications thereof are getting rapid developed and valued. Hundreds of domestic and foreign patents emphasized on the macrostructure of osmotic pump and a variety of macroscopic structures were designed. However, neither internal micro structure of the osmotic pump or its dynamic change is used to control the drug release.</p>
+      <p id="p-00003-en" num="0003">The literature about osmotic pump preparation was first reported in 1955. The earliest administration device by using osmotic pressure as releasing power is Rose-Nelson osmotic pump. Said device is composed of six parts: drug chamber, salt chamber, water chamber, rigid semi-permeable film between water chamber and salt chamber, elastic diaphragm between salt chamber and drug chamber, and rigid film for device covering. It does not have any practical value for human body due to its complicated process and huge volume up to 80 cm<sup>3</sup>. Higuchi and Leeper improved it and a Higuchi-Leeper osmotic pump was designed in 1971. Water chamber was removed and water in the body was used directly, thereby greatly simplifying the structure of osmotic pump device. In 1974, a elementary osmotic pump was developed by Theeuwes and Alza Corp. US together, which is composed of a tablet core covered with a semi-permeable film and a pore for drug releasing on its coating film (drug releasing pore), thereby simplifying the osmotic pump preparation into a form of common coating tablets and hence suitable for industrial production.</p>
+      <p id="p-00004-en" num="0004">In the 1980's, a new type of osmotic pump was designed for osmotic pump system, i.e., micro-porous osmotic pump. High portion of water soluble component in the controlled releasing film enhanced the permeability of coating film and changed the semi-permeable film into micro-porous film which was permeable to drug molecules. Water soluble components were dissolved after contacting with water, thereby turning the controlled releasing film into micro-porous film. The punching process of osmotic pump preparation was removed for micro porous osmotic pump. However, the presence of enormous pores on the coating film enhanced the diffusion effect and thus resulting zero-order releasing curve turning to first-order. As to slightly soluble or easily soluble drugs, it is very hard to achieve the desired releasing rate only depending on the permeability of the drugs themselves. Therefore, a power layer is added supplementary to the single-layer osmotic pump and drug releasing rate is hence controlled by modulating the swelling rate of the power layer. A push-pull osmotic pump in 1982, a double-layer tablet coated with semi-permeable film, was suitable for easily soluble or slightly soluble drugs. The upper layer of the push-pull osmotic pump is a drug layer composing drugs and auxiliary materials and the lower layer is a power layer composing polymers and permeable materials. The drug layer connects the environment through the releasing pore. After the preparation has been taken, drugs in the drug chamber are powered by polymers in the power layer and then released through the releasing pore. The nifedipine controlled releasing tablet developed by Bayer DE belongs to this kind of double-layer osmotic pump tablet. Many improvements were made based on this osmotic pump and a variety of formulation characterized with different macrostructure were designed or developed, such as Delayed Release System (U.S. Pat. No. 5,221,278) (for pulsatile-released formulation of delayed-released formulation), Piston System (U.S. Pat. No. 6,132,420) (allows good delayed and pulsed effect) etc. However, the industrial application of push-pull osmotic pump is limited since the drug layer needs further recognition besides punching. In 1991, liquid oral osmotic pump system for oral administration was developed, and liquid drugs can be prepared into osmotic pump, including soft capsule liquid osmotic pump (U.S. Pat. No. 7,338,663), hard capsule liquid osmotic pump and time-delayed liquid osmotic pump (US20036596314). Drug liquid is wrapped in the soft capsule, coated with, in turn, isolated layer, permeation enhancing layer, and controlled releasing film layer with releasing pore through out those three layers. After the system is contacted with outside water environment, water permeates through controlled release film, permeation layer swells by water absorption and drug is released through small pores.</p>
+      <p id="p-00005-en" num="0005">Recently, new designs continually appeared based on the known macrostructures of osmotic pumps. For example, the sandwich-type osmotic pump tablet system by using nifedipine as model drug was developed (L. Liu, et al. J Control. Release, 2000, 68: 145-156). The core consists of power layer in the middle and two adhering drug layers and is coated with a semi-permeable film. Advantage of this system is that drug can release through the pores on the opposite sides, thereby avoiding the drug-induced stimulation to the gastrointestinal mucosa. Sandwich osmotic pump tablet allows the omission of the reorganization process to the drug layer. Two-layered mixed pore osmotic pump preparation (D. Prabakaran, et al. Int. J. Pharm., 2004, 284: 95-108), in which single pore is used for upper layer drug releasing and controlled pore is used for lower layer drug releasing, thereby facilitating a simultaneous releasing of drugs with different solubility. The single-layer osmotic pump tablet is further developed into a system with extrudable core for delivering active ingredients of drugs with low solubility in high doses. An asymmetry film composing an extremely thin and rigid surface and thick spongy porous matrix layer is used in a controlled preparation of asymmetry film osmotic pump (U.S. Pat. No. 4,008,719, U.S. Pat. No. 6,899,887), which well solved the problem of incomplete releasing of insoluble drugs in osmotic pump controlled preparation by its high permeability to water and modulated the film permeability to water by controlling the structure and porosity of the film.</p>
+      <p id="p-00006-en" num="0006">In pharmaceutics, pore-forming agent generally refers to the auxiliary material which is added into coating solution for improving the permeability of coating film, thereby improving the drug through-put rate through the film. It hasn't been reported that bubble-shaped structure can be formed when this kind of pore-forming agent is directly used in the core of the tablets. US patent (U.S. Pat. No. 4,203,439, U.S. Pat. No. 4,331,728) reported that materials capable of forming bubbles can be used as power chamber in the core to allow complete release of the drugs at a constant speed. However, the structure of this osmotic pump enables pressured power by bubble, while no vesicular micro structure formed by liquid vesicle is involved.</p>
+      <p id="p-00007-en" num="0007">In conclusion, it is still unsatisfied despite of the osmotic pumps with different structures. Therefore, developing new osmotic pumps with simple structure and better controlled release effects is still in need in this filed.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00008-en" num="0008">The object of the present invention is to provide an osmotic pump preparation characterized with novel structures, wherein, there are dynamic chamber structures of micro bubbles, pores or vesicles, and a method for modulating releasing characteristics of osmotic pump preparation of this structure and a method for determining micro structures are also provided.</p>
+      <p id="p-00009-en" num="0009">The first aspect of the invention provides a pharmaceutical osmotic pump preparation comprising:</p>
+      <p id="p-00010-en" num="0010">a core, comprising drug(s) (or drug active ingredient(s)) and chamber structure forming material(s); and</p>
+      <p id="p-00011-en" num="0011">a coating film for covering the core with drug releasing pore(s) set on said coating film;</p>
+      <p id="p-00012-en" num="0012">wherein, when the drug osmotic pump preparation is used for drug release in water or aqueous medium, micro chamber structures are thus formed inside the coating film by the chamber structure forming materials and total volume of the micro chamber structures Vb increases with releasing time, and releasing rate R of the drug active ingredients (or releasing amount A) is directly proportional to Vb.</p>
+      <p id="p-00013-en" num="0013">In another preferred embodiment, ratio between maximum value of Vb, namely Vbmax and core volume Va is 90-100:100, preferably 95-100:100.</p>
+      <p id="p-00014-en" num="0014">In another preferred embodiment, ratio between maximum value of Vb, Vbmax and internal volume of coating film Vc (or a profile volume of osmotic pump shaped with coating film Vm) is 90-100:100, preferably 95-100:100.</p>
+      <p id="p-00015-en" num="0015">In another preferred embodiment, the core volume Va equals to the internal volume of coating film Vc or profile volume of osmotic pump shaped with coating film Vm, that is, Va=Vc=Vm.</p>
+      <p id="p-00016-en" num="0016">In another preferred embodiment, a power layer structure is not contained in the osmotic pump shaped with the coating film.</p>
+      <p id="p-00017-en" num="0017">In another preferred embodiment, the term “with drug releasing pore(s) set on said coating film” includes a preformed drug releasing pore located on the coating film, or allowing an agent (such as pore forming agent) capable of forming drug releasing pore to be contained in the coating film, thereby forming a drug releasing pore for drug releasing when the drug osmotic pump preparation contacts with water or aqueous medium.</p>
+      <p id="p-00018-en" num="0018">In another preferred embodiment, said “releasing rate R (or releasing amount A) is directly proportional to Vb” refers to “the correlation coefficient between release rate R (releasing amount A) and Vb is ≧0.9; preferably is ≧0.95”.</p>
+      <p id="p-00019-en" num="0019">In another preferred embodiment, said micro chamber structures are liquid chamber structures.</p>
+      <p id="p-00020-en" num="0020">In another preferred embodiment, said micro chamber structures include micro bubble-shaped structures, micro porous structures, micro vesicular structures, or the combination thereof.</p>
+      <p id="p-00021-en" num="0021">In another preferred embodiment, when drug osmotic pump preparation releases drug in water or aqueous medium, the total amount of micro chamber structure rises from t<sub>0 </sub>to maximum value Nmax, and then declines.</p>
+      <p id="p-00022-en" num="0022">In another preferred embodiment, said Nmax≧5000, preferably ≧10000, ≧50000, ≧100000, ≧500000, ≧1000000.</p>
+      <p id="p-00023-en" num="0023">In another preferred embodiment, when drug osmotic pump preparation releases drug in water or aqueous medium, the total amounts of micro chamber structures remains unchanged or decreases, and the average volume of said micro chamber structures increases with the releasing time gradually.</p>
+      <p id="p-00024-en" num="0024">In another preferred embodiment, most of (&gt;50%, preferably &gt;70%, &gt;80%) micro chamber structures have a size of 1×10<sup>−6</sup>−1 mm<sup>3 </sup></p>
+      <p id="p-00025-en" num="0025">In another preferred embodiment, at least ≧5000, preferably ≧10000 of micro chamber structures have a size of 1×10<sup>−6</sup>−1 mm<sup>3</sup>.</p>
+      <p id="p-00026-en" num="0026">In another preferred embodiment, during releasing process, said micro chamber structures fuse or merge for forming micro chamber structures with lager volumes, thereby forming chamber structures (Generally, although a “micro chamber structure” can be used when the volume is over 10 mm<sup>3</sup>, the fused chamber structures with larger volume are called chamber structures for convenience.).</p>
+      <p id="p-00027-en" num="0027">In another preferred embodiment, the total volume of said micro chamber structures Vb includes the volume of micro chamber structure, and the volume of chamber structure formed by two or more micro chamber structures.</p>
+      <p id="p-00028-en" num="0028">In another preferred embodiment, the weight of said drug osmotic pump preparation is 5-5000 mg, preferably 10-2000 mg.</p>
+      <p id="p-00029-en" num="0029">In another preferred embodiment, the volume of said drug osmotic pump preparation is 0.05-5000 cm<sup>3</sup>, preferably 10-2000 cm<sup>3</sup>.</p>
+      <p id="p-00030-en" num="0030">In another preferred embodiment, said core further comprises one or more components selected from a group consisting of chamber structure shape-modulating agent, lubricating agent, and other pharmaceutical acceptable auxiliary materials or carriers.</p>
+      <p id="p-00031-en" num="0031">In another preferred embodiment, said pharmaceutical acceptable auxiliary materials or carriers include one or more selected from a group consisting of binders, opacifier, filling agent, colorant, antioxidant and osmotic pressure promoting agent.</p>
+      <p id="p-00032-en" num="0032">In another preferred embodiment, the amount(s) of said drug releasing pore is one or more.</p>
+      <p id="p-00033-en" num="0033">In another preferred embodiment, the diameter of said drug releasing pore is 0.01-3 mm, preferably 0.1-2 mm, more preferably 0.5-1.2 mm.</p>
+      <p id="p-00034-en" num="0034">In another preferred embodiment, said coating film contains pore forming agent, and said pore forming agent is used for forming water permeable micro pore on said coating film.</p>
+      <p id="p-00035-en" num="0035">In another preferred embodiment, said coating film contains pore forming agent, and said pore forming agent is used for forming micro pore permeable to water and drugs on said coating film (in this case, micro pore is also named as drug releasing pore).</p>
+      <p id="p-00036-en" num="0036">In another preferred embodiment, said core contains the following components:</p>
+      <p id="p-00037-en" num="0037">0.2-99%, preferably 1-60 wt % of drug(s);</p>
+      <p id="p-00038-en" num="0038">15-99.8 wt %, preferably 20-95 wt %, more preferably 30-90 wt % of chamber structure forming material(s);</p>
+      <p id="p-00039-en" num="0039">0-50 wt %, preferably 1-50 wt % of chamber structure shape-modulating agent(s);</p>
+      <p id="p-00040-en" num="0040">0-10 wt %, preferably 0.5-10 wt % of lubricating agent(s); and</p>
+      <p id="p-00041-en" num="0041">0-60 wt %, 1-60 wt % of pharmaceutical acceptable auxiliary material(s); wherein the content is based on total weight of the core.</p>
+      <p id="p-00042-en" num="0042">In another preferred embodiment, said chamber structure forming material is one or more selected from a group consisting of povidone, polyoxyethylene, copovidone and lactose; preferably povidone and copovidone; more preferably copovidone.</p>
+      <p id="p-00043-en" num="0043">In another preferred embodiment, said chamber structure shape-modulating agent is acid or basic material or salts thereof; preferably, said acid or basic material or salts thereof is one or more selected from a group consisting of sodium phosphate, disodium hydrogen phosphate, sodium dihydrogen phosphate, sodium chloride, potassium chloride, sodium hydroxide, amino acid, citric acid and tartaric acid.</p>
+      <p id="p-00044-en" num="0044">In another preferred embodiment, based on the total weight of the core, said core comprises: 1-60 wt % of drug(s), 5-90 wt % of chamber structure forming material(s), 1-50 wt % of chamber structure shape-modulating agent(s), 0.5-10 wt % of lubricating agent(s), and 1-60 wt % of pharmaceutical acceptable auxiliary material(s).</p>
+      <p id="p-00045-en" num="0045">In another preferred embodiment, said coating film is permeable to water but not to drug active ingredients (except for the drug releasing pore).</p>
+      <p id="p-00046-en" num="0046">In another preferred embodiment, said coating film contains coating material, optional pore forming agent and optional plasticizer.</p>
+      <p id="p-00047-en" num="0047">In another preferred embodiment, based on the total weight of the coating film, said coating film comprises: 40-90 wt % of semi-permeable film coating material(s), 5-40 wt % of pore forming agent(s), and 0-20 wt % of plasticizer(s).</p>
+      <p id="p-00048-en" num="0048">In another preferred embodiment,</p>
+      <p id="p-00049-en" num="0049">based on the total weight of the core, said core comprises: 20-50 wt % of drug(s), 10-60 wt % of chamber structure forming material(s), 5-40 wt % of chamber structure shape-modulating agent(s), 1-5 wt % of lubricating agent(s), and 5-40 wt % of pharmaceutical acceptable auxiliary material(s);</p>
+      <p id="p-00050-en" num="0050">based on the total weight of the coating film, said coating film comprises: 60-80 wt % of semi-permeable coating material(s), 10-30 wt % of pore forming agent(s), and 0-15 wt % of plasticizer(s).</p>
+      <p id="p-00051-en" num="0051">In another preferred embodiment, said chamber structure shape-modulating agent is an acid or basic material or salts thereof.</p>
+      <p id="p-00052-en" num="0052">In another preferred embodiment, said acid or basic material or salts thereof is one or more selected from a group consisting of sodium phosphate, disodium hydrogen phosphate, sodium dihydrogen phosphate, sodium chloride, potassium chloride, sodium hydroxide, amino acid, citric acid and tartaric acid.</p>
+      <p id="p-00053-en" num="0053">In another preferred embodiment, said lubricating agent is one or more selected from a group consisting of stearic acid, magnesium stearate, talc powder, sodium stearyl fumarate and paraffin.</p>
+      <p id="p-00054-en" num="0054">In another preferred embodiment, said pharmaceutical acceptable auxiliary material (or carrier) includes one or more selected from a group consisting of binders, opacifier, filling agent, colorant, antioxidant and osmotic pressure promoting agent.</p>
+      <p id="p-00055-en" num="0055">In another preferred embodiment, said semi-permeable film coating material is one ore more selected from a group consisting of cellulose acetate, cellulose acetate phthalate, ethyl cellulose, and acrylic resin and hydroxypropyl cellulose phthalate.</p>
+      <p id="p-00056-en" num="0056">In another preferred embodiment, said pore forming agent is one or more selected from a group consisting of polyethylene glycol, povidone, urea and hydroxypropyl methylcellulose.</p>
+      <p id="p-00057-en" num="0057">In another preferred embodiment, said drug is water soluble drug or water insoluble drug.</p>
+      <p id="p-00058-en" num="0058">In another preferred embodiment, said water soluble drug includes, but not limited to: captopril, ribavirin, ketorolac tromethamine, levocarnitine, pentoxifylline, salvianolic acid, doxofylline, metformin, alfuzosin hydrochloride, ligustrazine phosphate, diltiazem hydrochloride, lamivudine or salbutamol sulfate; water insoluble drug includes but not limited to, ibuprofen, ketoprofen, azithromycin, roxithromycin, glipizide, felodipine, nimodipine, nisoldipine, nitrendipine, nifedipine, doxazosin mesylate, risperidone, famotidine, huperzine a, gliquidone, simvastatin, ambroxol hydrochloride, barnidipine, etodolac, acipimox, indapamide, azelnidipine, nimesulide, levetiracetam, tamsulosin hydrochloride, pitavastatin calcium, etodolic acid.</p>
+      <p id="p-00059-en" num="0059">Preferably, said water insoluble drug includes glipizide, azithromycin, roxithromycin, ketoprofen, ibuprofen; said water soluble drug includes captopril.</p>
+      <p id="p-00060-en" num="0060">The second aspect of the present invention, a method for designing a target preparation with desired drug releasing rate or releasing curve is provided, comprising the steps of:</p>
+      <p id="p-00061-en" num="0061">(i) providing a drug osmotic pump preparation according to the first aspect of the invention, wherein said preparation comprises said drug as an active ingredient;</p>
+      <p id="p-00062-en" num="0062">(ii) placing said drug osmotic pump preparation into water or aqueous solvent, and detecting the evolution situation of the micro chamber structures in said drug osmotic pump preparation;</p>
+      <p id="p-00063-en" num="0063">(iii) calculating the releasing rate or releasing curve of the drug according to the detected evolution situation of the micro chamber structures;</p>
+      <p id="p-00064-en" num="0064">(iv) selecting a drug osmotic pump preparation as a target preparation from the detected preparations, the releasing rate or releasing curve of which is close to or in accordance with desired releasing rate or releasing curve of the drug.</p>
+      <p id="p-00065-en" num="0065">In another preferred embodiment, step (iv) further comprises: based on the detected releasing rate or releasing curve, selecting a preparation A, the releasing rate or releasing curve of which is close to that of the desired drug, modulating the formulation according to preparation A and repeating step (i), (ii) and (iii) for one or more times, thereby selecting a drug osmotic pump preparation as the target preparation from the detected preparations, the releasing rate or releasing curve of which is closer to or in accordance with desired drug releasing rate or releasing curve. In another preferred embodiment, the modulation of formulation includes modulating the composition ratio between chamber structure forming material and chamber structure shape-modulating agent.</p>
+      <p id="p-00066-en" num="0066">In another preferred embodiment, the modulation of the formulation comprises:</p>
+      <p id="p-00067-en" num="0067">when the detected releasing rate is faster than desired releasing rate, the amount of chamber structure shape-modulating agent is decreased or the ratio between said chamber structure forming material and chamber structure shape-modulating agent is increased;</p>
+      <p id="p-00068-en" num="0068">when the detected releasing rate is slower than desired releasing rate, the amount of chamber structure shape-modulating agent is increased or the ratio between said chamber structure forming material and chamber structure shape-modulating agent is decreased.</p>
+      <p id="p-00069-en" num="0069">In another preferred embodiment, microimaging is used for detection in step (ii), preferably synchrotron radiation light source microimaging.</p>
+      <p id="p-00070-en" num="0070">In the third aspect of the invention, a preparation method for drug osmotic pump preparation according to the first aspect of the invention is provided, comprising the steps of: providing a core, wherein said core comprises drug(s) (or drug active ingredient(s)) and chamber structure forming material(s);</p>
+      <p id="p-00071-en" num="0071">coating said core, to form a coating film covering said core;</p>
+      <p id="p-00072-en" num="0072">punching said coating film, to form drug releasing pore on said coating film.</p>
+      <p id="p-00073-en" num="0073">In another preferred embodiment, said core is prepared as follows:</p>
+      <p id="p-00074-en" num="0074">(a) providing a mixture of chamber structure forming material(s), chamber structure shape-modulating agent(s) and/or pharmaceutical acceptable auxiliary material(s) or lubricating agent(s);</p>
+      <p id="p-00075-en" num="0075">(b) tabletting or granulating the mixture of step (a) to form said core.</p>
+      <p id="p-00076-en" num="0076">In another preferred embodiment, during said preparation of the core, firstly, a first mixture is formed by mixing the chamber structure forming material(s) with the chamber structure shape-modulating agent(s); then, the first mixture is mixed with drug(s), optional lubricating agent(s) and optional pharmaceutical acceptable auxiliary material(s), thereby obtaining the core.</p>
+      <p id="p-00077-en" num="0077">The fourth aspect of the invention is to provide a drug osmotic pump preparation comprising core and coating film, wherein</p>
+      <p id="p-00078-en" num="0078">based on the total weight of the core, said core comprises: 1-60 wt % of drug(s), 5-90 wt % of chamber structure forming material(s), 1-50 wt % of chamber structure shape-modulating agent(s), 0.5-10 wt % of lubricating agent(s), and 1-60 wt % of pharmaceutical acceptable auxiliary material(s);</p>
+      <p id="p-00079-en" num="0079">based on the total weight of the coating film, said coating film comprises: 40-90 wt % of semi-permeable film coating material(s), 5-40 wt % of pore forming agent(s), and 0-20 wt % of plasticizer(s).</p>
+      <p id="p-00080-en" num="0080">In another preferred embodiment, said drug osmotic pump preparation comprises:</p>
+      <p id="p-00081-en" num="0081">a core comprising drug(s) (or drug active ingredient(s)) and chamber structure forming material(s); and</p>
+      <p id="p-00082-en" num="0082">a coating film for covering the core with drug releasing pore(s) set on said coating film;</p>
+      <p id="p-00083-en" num="0083">wherein, when the drug osmotic pump preparation is used for drug release in water or aqueous medium, micro chamber structures are thus formed in the coating film by the chamber structure forming material(s) and total volume of the micro chamber structure Vb increases with releasing time, and releasing rate R of drug active ingredients (or releasing amount A) is directly proportional to Vb.</p>
+      <p id="p-00084-en" num="0084">In another preferred embodiment, based on the total weight of the core, said core comprises: 20-50 wt % of drug(s), 10-60 wt of chamber structure forming material(s), 5-40 wt % of chamber structure shape-modulating agent(s), 1-5 wt % of lubricating agent(s), and 5-40 wt % of pharmaceutical acceptable auxiliary material(s);</p>
+      <p id="p-00085-en" num="0085">based on the total weight of the coating film, said coating film comprises: 60-80 wt % of semi-permeable film coating material(s), 10-30 wt % of pore forming agent(s), and 0-15 wt % of plasticizer(s).</p>
+      <p id="p-00086-en" num="0086">In another preferred embodiment, said chamber structure forming material is one or more selected from a group consisting of povidone, polyoxyethylene, copovidone and lactose; preferably povidone and copovidone; more preferably copovidone.</p>
+      <p id="p-00087-en" num="0087">In another preferred embodiment, said chamber structure shape-modulating agent is acid or basic material or salts thereof.</p>
+      <p id="p-00088-en" num="0088">In another preferred embodiment, said pharmaceutical acceptable auxiliary material or carrier includes one or more selected from a group consisting of binders, opacifier, filling agent, colorant, antioxidant and osmotic pressure promoting agent.</p>
+      <p id="p-00089-en" num="0089">It should be understood that in the present invention, the technical features specifically described above and below (such as the Examples) can be combined with each other, thereby constituting a new or preferred technical solution which needs not be described one by one.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">DESCRIPTIONS OF FIGURES</heading>
+      <p id="p-00090-en" num="0090">
+        <figref>FIG. 1</figref> shows a tomography image of internal micro vesicular structures formed in the osmotic pump tablet after 1.0 hr dissolution in Example 1;</p>
+      <p id="p-00091-en" num="0091">
+        <figref>FIG. 2</figref> shows the 3-D distribution of the internal micro vesicular structures of the osmotic pump tablet after 1.0 hr dissolution in Example 1;</p>
+      <p id="p-00092-en" num="0092">
+        <figref>FIG. 3</figref> shows the 3-D structure of solid residues from the osmotic pump tablet after 1.0 hr dissolution in Example 1;</p>
+      <p id="p-00093-en" num="0093">
+        <figref>FIG. 4</figref> shows a tomography image of the internal micro vesicular structures formed in the osmotic pump tablet after 1.0 hr dissolution in Example 2;</p>
+      <p id="p-00094-en" num="0094">
+        <figref>FIG. 5</figref> shows the 3-D distribution of the internal micro vesicular structures of the osmotic pump tablet after 1.0 hr dissolution in Example 2;</p>
+      <p id="p-00095-en" num="0095">
+        <figref>FIG. 6</figref> shows the 3-D distribution of internal micro vesicular structures-modulating agent of the osmotic pump tablet after 1.0 hr dissolution in Example 2;</p>
+      <p id="p-00096-en" num="0096">
+        <figref>FIG. 7</figref> shows 3-D distribution of the space-associated relation between internal micro vesicular structures and modulating agent in the osmotic pump tablet after 1.0 hr dissolution in Example 2;</p>
+      <p id="p-00097-en" num="0097">
+        <figref>FIG. 8</figref> shows the 3-D structure of solid residues from the osmotic pump tablet after 1.0 hr dissolution in Example 2;</p>
+      <p id="p-00098-en" num="0098">
+        <figref>FIG. 9</figref> shows a tomography image of the internal micro vesicular structures formed in the osmotic pump tablet after 1.0 hr dissolution in Example 3;</p>
+      <p id="p-00099-en" num="0099">
+        <figref>FIG. 10</figref> shows the 3-D distribution of the internal micro vesicular structures of the osmotic pump tablet after 1.0 hr dissolution in Example 3;</p>
+      <p id="p-00100-en" num="0100">
+        <figref>FIG. 11</figref> shows the 3-D structure of solid residues from the osmotic pump tablet after 1.0 hr dissolution in Example 3;</p>
+      <p id="p-00101-en" num="0101">
+        <figref>FIG. 12</figref> shows a tomography image of the internal micro vesicular structures formed in the osmotic pump tablet after 2.0 hr dissolution in Example 3;</p>
+      <p id="p-00102-en" num="0102">
+        <figref>FIG. 13</figref> shows the 3-D distribution of the internal micro vesicular structures of the osmotic pump tablet after 2.0 hr dissolution in Example 3;</p>
+      <p id="p-00103-en" num="0103">
+        <figref>FIG. 14</figref> shows the 3-D structure of solid residues from the osmotic pump tablet after 2.0 hr dissolution in Example 3;</p>
+      <p id="p-00104-en" num="0104">
+        <figref>FIG. 15</figref> shows a tomography image of the internal micro vesicular structures formed in the osmotic pump tablet after 1.0 hr dissolution in Example 4;</p>
+      <p id="p-00105-en" num="0105">
+        <figref>FIG. 16</figref> shows the 3-D distribution of the internal micro vesicular structures of the osmotic pump tablet after 1.0 hr dissolution in Example 4;</p>
+      <p id="p-00106-en" num="0106">
+        <figref>FIG. 17</figref> shows the 3-D distribution of internal micro vesicular structures-modulating agent of the osmotic pump tablet after 1.0 hr dissolution in Example 4;</p>
+      <p id="p-00107-en" num="0107">
+        <figref>FIG. 18</figref> shows the 3-D distribution of the space-associated relation between internal micro vesicular structures and modulating agent in the osmotic pump tablet after 1.0 hr dissolution in Example 4;</p>
+      <p id="p-00108-en" num="0108">
+        <figref>FIG. 19</figref> shows the 3-D structure of solid residues from the osmotic pump tablet after 1.0 hr dissolution in Example 4;</p>
+      <p id="p-00109-en" num="0109">
+        <figref>FIG. 20</figref> shows a tomography image of the internal micro vesicular structures formed in the osmotic pump tablet after 2.0 hr dissolution in Example 4;</p>
+      <p id="p-00110-en" num="0110">
+        <figref>FIG. 21</figref> shows the migration rules of the internal micro vesicular structures in Example 4;</p>
+      <p id="p-00111-en" num="0111">
+        <figref>FIG. 22</figref> shows the time series tomography image of the internal micro vesicular structures in Example 4;</p>
+      <p id="p-00112-en" num="0112">
+        <figref>FIG. 23</figref> shows the 3-D distribution of the internal micro vesicular structures of the osmotic pump tablet in Example 4;</p>
+      <p id="p-00113-en" num="0113">
+        <figref>FIG. 24</figref> shows the 3-D distribution of the internal micro vesicular structure modulating agent in the osmotic pump tablet in Example 4;</p>
+      <p id="p-00114-en" num="0114">
+        <figref>FIG. 25</figref> shows the 3-D distribution of the space-associated relation between internal micro vesicular structures and modulating agent in the osmotic pump tablet in Example 4;</p>
+      <p id="p-00115-en" num="0115">
+        <figref>FIG. 26</figref> shows the 3-D structure of solid residues from the osmotic pump tablet in Example 4;</p>
+      <p id="p-00116-en" num="0116">
+        <figref>FIG. 27</figref> shows the in vitro time-accumulated releasing curve of ketoprofen osmotic pump tablet in Example 4;</p>
+      <p id="p-00117-en" num="0117">
+        <figref>FIG. 28</figref> shows the correlation between the accumulated releasing rate and the total volume of internal micro vesicular structures in Example 4;</p>
+      <p id="p-00118-en" num="0118">
+        <figref>FIG. 29</figref> shows the evolution situation over time of the space coordinates of the internal micro vesicular in Example 4;</p>
+      <p id="p-00119-en" num="0119">
+        <figref>FIG. 30</figref> shows the evolution situation over time of the volume distribution of the internal micro vesicular in Example 4;</p>
+      <p id="p-00120-en" num="0120">
+        <figref>FIG. 31</figref> shows a tomography image of the internal micro vesicular structures formed in the osmotic pump tablet after 1.0 hr dissolution in Example 5;</p>
+      <p id="p-00121-en" num="0121">
+        <figref>FIG. 32</figref> shows the 3-D distribution of the internal micro vesicular structures of the osmotic pump tablet after 1.0 hr dissolution in Example 5;</p>
+      <p id="p-00122-en" num="0122">
+        <figref>FIG. 33</figref> shows the 3-D distribution of internal micro vesicular structures-modulating agent of the osmotic pump tablet after 1.0 hr dissolution in Example 5;</p>
+      <p id="p-00123-en" num="0123">
+        <figref>FIG. 34</figref> shows the 3-D distribution of the space-associated relation between internal micro vesicular structures and modulating agent in the osmotic pump tablet after 1.0 hr dissolution in Example 5;</p>
+      <p id="p-00124-en" num="0124">
+        <figref>FIG. 35</figref> shows the 3-D structure of solid residues from the osmotic pump tablet after 1.0 hr dissolution in Example 5;</p>
+      <p id="p-00125-en" num="0125">
+        <figref>FIG. 36</figref> shows a tomography image of the internal micro vesicular structures formed in the osmotic pump tablet after 1.0 hr dissolution in Example 6;</p>
+      <p id="p-00126-en" num="0126">
+        <figref>FIG. 37</figref> shows the 3-D distribution of the internal micro vesicular structures of the osmotic pump tablet after 1.0 hr dissolution in Example 6;</p>
+      <p id="p-00127-en" num="0127">
+        <figref>FIG. 38</figref> shows the 3-D distribution of the internal micro vesicular structure modulating agent of the osmotic pump tablet after 1.0 hr dissolution in Example 6;</p>
+      <p id="p-00128-en" num="0128">
+        <figref>FIG. 39</figref> shows the 3-D distribution of the space-associated relation between internal micro vesicular structures and modulating agent in the osmotic pump tablet after 1.0 hr dissolution in Example 6;</p>
+      <p id="p-00129-en" num="0129">
+        <figref>FIG. 40</figref> shows the 3-D structure of solid residues from the osmotic pump tablet after 1.0 hr dissolution in Example 6;</p>
+      <p id="p-00130-en" num="0130">
+        <figref>FIG. 41</figref> shows a tomography image of the internal micro vesicular structures formed in the osmotic pump tablet after 1.0 hr dissolution in Example 7;</p>
+      <p id="p-00131-en" num="0131">
+        <figref>FIG. 42</figref> shows the 3-D distribution of the internal micro vesicular structures of the osmotic pump tablet after 1.0 hr dissolution in Example 7;</p>
+      <p id="p-00132-en" num="0132">
+        <figref>FIG. 43</figref> shows the 3-D distribution of the internal micro vesicular structure modulating agent of the osmotic pump tablet after 1.0 hr dissolution in Example 7;</p>
+      <p id="p-00133-en" num="0133">
+        <figref>FIG. 44</figref> shows the 3-D distribution of the space-associated relation between internal micro vesicular structures and modulating agent in the osmotic pump tablet after 1.0 hr dissolution in Example 7;</p>
+      <p id="p-00134-en" num="0134">
+        <figref>FIG. 45</figref> shows the 3-D structure of solid residues from the osmotic pump tablet after 1.0 hr dissolution in Example 7;</p>
+      <p id="p-00135-en" num="0135">
+        <figref>FIG. 46</figref> shows a tomography image of the internal micro vesicular structures formed in the osmotic pump tablet after 2.0 hr dissolution in Example 7;</p>
+      <p id="p-00136-en" num="0136">
+        <figref>FIG. 47</figref> shows the 3-D distribution of the internal micro vesicular structures of the osmotic pump tablet after 2.0 hr dissolution in Example 7;</p>
+      <p id="p-00137-en" num="0137">
+        <figref>FIG. 48</figref> shows the 3-D distribution of the internal micro vesicular structure modulating agent of the osmotic pump tablet after 2.0 hr dissolution in Example 7;</p>
+      <p id="p-00138-en" num="0138">
+        <figref>FIG. 49</figref> shows the 3-D distribution of the space-associated relation between internal micro vesicular structures and modulating agent in the osmotic pump tablet after 2.0 hr dissolution in Example 7;</p>
+      <p id="p-00139-en" num="0139">
+        <figref>FIG. 50</figref> shows the 3-D structure of solid residues from the osmotic pump tablet after 2.0 hr dissolution in Example 7;</p>
+      <p id="p-00140-en" num="0140">
+        <figref>FIG. 51</figref> shows a tomography image of the internal micro vesicular structures formed in the osmotic pump tablet after 1.0 hr dissolution in Example 8;</p>
+      <p id="p-00141-en" num="0141">
+        <figref>FIG. 52</figref> shows the 3-D distribution of the internal micro vesicular structures of the osmotic pump tablet after 1.0 hr dissolution in Example 8;</p>
+      <p id="p-00142-en" num="0142">
+        <figref>FIG. 53</figref> shows the 3-D distribution of the internal micro vesicular structure modulating agent of the osmotic pump tablet after 1.0 hr dissolution in Example 8;</p>
+      <p id="p-00143-en" num="0143">
+        <figref>FIG. 54</figref> shows the 3-D distribution of the space-associated relation between internal micro vesicular structures and modulating agent in the osmotic pump tablet after 1.0 hr dissolution in Example 8;</p>
+      <p id="p-00144-en" num="0144">
+        <figref>FIG. 55</figref> shows the 3-D structure of solid residues from the osmotic pump tablet after 1.0 hr dissolution in Example 8;</p>
+      <p id="p-00145-en" num="0145">
+        <figref>FIG. 56</figref> shows a tomography image of the internal micro vesicular structures formed in the osmotic pump tablet after 2.0 hr dissolution in Example 8;</p>
+      <p id="p-00146-en" num="0146">
+        <figref>FIG. 57</figref> shows the 3-D distribution of the internal micro vesicular structures of the osmotic pump tablet after 2.0 hr dissolution in Example 8;</p>
+      <p id="p-00147-en" num="0147">
+        <figref>FIG. 58</figref> shows the 3-D distribution of the internal micro vesicular structure modulating agent of the osmotic pump tablet after 1.0 hr dissolution in Example 8;</p>
+      <p id="p-00148-en" num="0148">
+        <figref>FIG. 59</figref> shows the 3-D distribution of the space-associated relation between internal micro vesicular structures and modulating agent in the osmotic pump tablet after 2.0 hr dissolution in Example 8;</p>
+      <p id="p-00149-en" num="0149">
+        <figref>FIG. 60</figref> shows the 3-D structure of solid residues from the osmotic pump tablet after 2.0 hr dissolution in Example 8;</p>
+      <p id="p-00150-en" num="0150">
+        <figref>FIG. 61</figref> shows a tomography image of the internal micro vesicular structures formed in the osmotic pump tablet after 1.0 hr dissolution in Example 9;</p>
+      <p id="p-00151-en" num="0151">
+        <figref>FIG. 62</figref> shows the in vitro time-accumulated releasing curve of azithromycin osmotic pump tablet in Example 10;</p>
+      <p id="p-00152-en" num="0152">
+        <figref>FIG. 63</figref> shows a tomography image of the internal micro vesicular structures formed in azithromycin osmotic pump after 1.0 hr dissolution in Example 10;</p>
+      <p id="p-00153-en" num="0153">
+        <figref>FIG. 64</figref> shows the in vitro time-accumulated releasing curve of captopril osmotic pump tablet in Example 11;</p>
+      <p id="p-00154-en" num="0154">
+        <figref>FIG. 65</figref> shows a tomography image of the internal micro vesicular structures formed in captopril osmotic pump after 1.0 hr dissolution in Example 10;</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED EMBODIMENTS</heading>
+      <p id="p-00155-en" num="0155">Upon intensive and extensive studies, the inventors unexpectedly discovered that adding high portion of chamber structure forming material into the drug osmotic pump preparation allows huge amounts of micro chamber structures formed within the coating film with total volumes of micro chamber structures increasing over time, when drug osmotic pump preparation releases drugs in aqueous medium. Different modes of controlled release can be achieved effectively by the osmotic pump of the present invention through the evolution mechanism of the internal structures of the core. Upon modulating the ratio between chamber structures modulating agent and chamber structure forming material, a ratio matching the releasing characteristics of the desired drug can be designed and screened, thereby designing different modes of controlled drug releasing according to different drug characteristics. Based on the above works, the present invention is completed.</p>
+      <heading id="h-00006-en" level="1">TERMS</heading>
+      <p id="p-00156-en" num="0156">As used herein, term “chamber structure forming material” or “micro chamber structure forming material” can be used interchangeably, referring to a material(s) capable of forming micro bubble-shaped, porous and vesicular chamber-shaped structures inside of the coating film when contacting with water.</p>
+      <p id="p-00157-en" num="0157">Generally, the chamber structure forming material is an artificially synthesized high molecular material or a nature high molecular material. One or more selected from these materials can form micro chambers inside of the coating film of osmotic pump preparation, wherein these materials include, but not limited to one or more selected from a group consisting of povidone, polyoxyethylene, copovidone and lactose. Copovidone, polyoxyethylene-copovidone combination, povidone-copovidone combination or lactose-copovidone is preferred.</p>
+      <p id="p-00158-en" num="0158">Based on the total weight of the core, the content of the chamber structure forming material is not specifically limited, and can be any amount that allows the core to form micro chamber structures and release drug active ingredients after the osmotic pump contacts with aqueous medium. Typically, the amount is 15-99.8 wt %, preferably is 20-95 wt %, and more preferably is 30-90 wt %.</p>
+      <p id="p-00159-en" num="0159">As used herein, term “chamber structure shape-modulating agent”, “chamber structure modulating agent” and “micro chamber modulating agent” can be used interchangeably, referring to a agent or material used for modulating or affecting the forming process (such as forming rate, size, profile) of the micro chambers. Since the profile or the shape of micro chamber structures varies with the modulation by using different modulating agents, these materials can be collectively named as “chamber structure shape-modulating agent”. Generally, based on the total weight of the core, the amount of the chamber structure shape-modulating agent is 0-50 wt %, preferably 1-50 wt %, more preferably 5-40 wt %.</p>
+      <p id="p-00160-en" num="0160">As used herein, term “drug” or “drug active ingredient” can be used interchangeably, referring to the drug active ingredient mainly exerting therapeutic effect in human.</p>
+      <p id="p-00161-en" num="0161">As used herein, term “drug release pore”, “micro pore” or “drug-releasing pore” can be use interchangeably, referring to the pore located on the coating film for drug releasing. Generally, the located drug releasing pore includes a drug releasing pore preformed on the film by laser or a punching machine, or a releasing pore formed by an agent, such as pore forming agent, capable of forming drug releasing pore in the coating film. Pore forming agent is preferred</p>
+      <p id="p-00162-en" num="0162">Diameter of drug releasing pore is not specifically limited as long as it allows the drug inside of the core releasing from the coating film. Typically, diameter of drug releasing pore is 0.001-3 mm, preferably is 0.01-2 mm, more preferably is 0.05-1.2 mm, most preferably is 0.2-1 mm.</p>
+      <p id="p-00163-en" num="0163">As used herein, term “drug releasing rate” or “drug releasing amount” refers to drug releasing extent and amount of the osmotic pump preparation according to the present invention. Generally, it is represented by percentage of drug releasing weight to the drug weight in the core.</p>
+      <p id="p-00164-en" num="0164">Structure of Osmotic Pump Preparation</p>
+      <p id="p-00165-en" num="0165">The structure of the osmotic pump preparation according to the present invention from the inside to the outside is a coating film (and the drug releasing pore on the film) and a core. A osmotic pump preparation without power layer structure is preferred.</p>
+      <p id="p-00166-en" num="0166">Wherein, the core of osmotic pump preparation according to the present invention contains drug active ingredient(s), chamber structure forming material(s) and optional chamber structure shape-modulating agent(s), lubricating agent(s), antioxidant(s), osmotic pressure promoting agent(s), binder(s), filling agent(s) or other pharmaceutical acceptable auxiliary material(s). When the core contacts with water or aqueous medium, micro chamber structures in liquid state are formed by chamber structure forming material and active ingredients in the core etc, and the micro chamber structures fuse and release (drug) slowly through filming coat over time.</p>
+      <p id="p-00167-en" num="0167">Drugs which can be used for the osmotic pump preparation according to the present invention include water soluble drugs or water insoluble drugs.</p>
+      <p id="p-00168-en" num="0168">The water soluble drug which can be used in the present invention includes but not limited to captopril, ribavirin, ketorolac tromethamine, levocarnitine, pentoxifylline, salvianolic acid, doxofylline, metformin, alfuzosin hydrochloride, ligustrazine phosphate, diltiazem hydrochloride, lamivudine or salbutamol sulfate.</p>
+      <p id="p-00169-en" num="0169">The water insoluble drug which can be used in the present invention includes but not limited to ibuprofen, ketoprofen, azithromycin, roxithromycin, glipizide, felodipine, nimodipine, nisoldipine, nitrendipine, nifedipine, doxazosin mesylate, risperidone, famotidine, huperzine a, gliquidone, simvastatin, ambroxol hydrochloride, barnidipine, etodolac, acipimox, indapamide, azelnidipine, nimesulide, levetiracetam, tamsulosin hydrochloride, pitavastatin calcium, etodolic acid.</p>
+      <p id="p-00170-en" num="0170">Preferably, said water insoluble drug includes glipizide, azithromycin, roxithromycin, ketoprofen, or ibuprofen.</p>
+      <p id="p-00171-en" num="0171">The chamber structure forming material which can be used in the present invention includes but not limited to one or more selected from a group consisting of povidone, polyoxyethylene, copovidone or lactose. Povidone or copovidone is preferred.</p>
+      <p id="p-00172-en" num="0172">The chamber structure shape-modulating agent which can be used in the present invention is acid or basic material or salts thereof. Preferably, said acid or basic material or salts thereof is one or more selected from a group consisting of sodium phosphate, disodium hydrogen phosphate, sodium dihydrogen phosphate, sodium chloride, potassium chloride, sodium hydroxide, amino acid, citric acid and tartaric acid. Sodium chloride, sodium phosphate, or citric acid is preferred.</p>
+      <p id="p-00173-en" num="0173">The effect on the shape of the chamber structure varies with different chamber structure modulating agents. For example, when sodium phosphate is used, the micro chamber structure formed is basically a regular sphere. When other chamber structure shape-modulating agents, such as sodium chloride are used, the formed micro chamber structures are usually irregular.</p>
+      <p id="p-00174-en" num="0174">The lubricating agent, antioxidant, opacifier, osmotic pressure promoting agent, binder, filling agent or other pharmaceutical acceptable auxiliary materials which can be used in the present invention need not be specifically limited. It can be any agent suitable for osmotic pump preparation and well known to those skilled in the art. Generally, these pharmaceutical acceptable auxiliary materials are not toxic themselves, do not react with the active ingredients in the core or chamber structure forming materials, and can be safely used in the core to facilitate the administration of the osmotic pump preparation according to the present invention.</p>
+      <p id="p-00175-en" num="0175">The binder which can be used in the present invention is not specifically limited. Preferably, it includes one or more selected from a group consisting of starch slurry, povidone, hydroxypropyl cellulose, hydroxypropyl methyl cellulose, methyl cellulose, gelatin and polyethylene glycol; preferably, said opacifier is one or more of titanium oxide, talc powder and silicon dioxide; preferably, said filling agent is one or more of lactose, mannitol, microcrystalline cellulose, starch, dextrin, and calcium carbonate; said colorant is one or more selected from red iron oxide and yellow iron oxide; preferably, said osmotic pressure promoting agent is one or more of sodium chloride, potassium chloride and soluble saccharides. The lubricating agent which can be used in the core of the present invention is preferably one or more from stearic acid, magnesium stearate, talcum powder, sodium stearyl fumarate and paraffin.</p>
+      <p id="p-00176-en" num="0176">Generally, there is drug releasing pore formed by laser or punching machine located on the coating film of the osmotic pump preparation according to the present invention. Wherein, there can be one or more drug releasing pore(s) located on one or more sides of the preparation with a size between 0.01-3 mm, preferably 0.1-2 mm, more preferably 0.5-1.2 mm. Furthermore, a coating film without punched pore is also acceptable since the drug releasing pore can be formed by pore forming agent or plasticizer added into the coating film. The coating film of the osmotic pump preparation according to the present invention is semi-permeable coating material, which is permeable to water molecules or aqueous solvent while impermeable to the ingredients in the core.</p>
+      <p id="p-00177-en" num="0177">The semi-permeable material which can be used in the present invention is one or more selected from a group consisting of cellulose acetate, cellulose acetate phthalate, ethyl cellulose, acrylic resin and hydroxypropyl cellulose phthalate.</p>
+      <p id="p-00178-en" num="0178">The pore forming agent which can be used in the coating film of the osmotic pump preparation according to the present invention is one or more selected from a group consisting of polyethylene glycol, povidone, urea, and hydroxypropyl methylcellulose. The main effect of said pore forming agent is to modulate the permeability of the semi-permeable film, which is one or more selected from a group consisting of polyethylene glycol (polyethylene glycol <b>200</b>, polyethylene glycol <b>1450</b>, polyethylene glycol <b>1500</b>, polyethylene glycol <b>4000</b>, polyethylene glycol <b>6000</b>), povidone, urea, and hydroxypropyl methylcellulose; preferably, polyethylene glycol <b>4000</b>. Certainly, said coating film also includes solvent for coating solution, and said solvent for coating solution is one or more selected from a group consisting of ethanol absolute, methanol, acetone, and water; preferably, acetone.</p>
+      <p id="p-00179-en" num="0179">The coating film of the osmotic pump preparation according to the present invention can further comprise plasticizer, and said plasticizer includes triethyl citrate, polyethylene glycol, diethyl phthalate, dibutyl sebacate, glycerol triacetate, castor oil, phthalic acid ester; preferably, phthalic acid ester.</p>
+      <p id="p-00180-en" num="0180">The coating film of the osmotic pump preparation according to the present invention further comprises colorant or other pharmaceutical acceptable auxiliary materials.</p>
+      <p id="p-00181-en" num="0181">The content of each component in the coating film according to present invention is not specifically limited. Any content suitable for osmotic pump preparation is acceptable. Generally, based on the total weight of the coating film, said coating film contains: 40-90 wt %, preferably 60-80 wt % of semi permeable coating material(s); optional 5-40 wt %, preferably 10-30 wt % of pore forming agent(s); or optional 0-20 wt %, preferably 0-15 wt % of plasticizer(s).</p>
+      <p id="p-00182-en" num="0182">The macrostructure of the osmotic pump preparation according to the present invention can be generally prepared into single layer tablet or multiple layers tablet, including single layer osmotic pump and multiple layers osmotic pump with a volume of 0.05-5000 cm<sup>3</sup>, preferably 10-2000 cm<sup>3 </sup>and a weight of 5-5000 mg, preferably 10-2000 mg.</p>
+      <p id="p-00183-en" num="0183">Core and Preparation Thereof</p>
+      <p id="p-00184-en" num="0184">The present invention provides a novel drug osmotic pump preparation comprising a core and a coating film, and based on the total weight of the core, said core comprises:</p>
+      <p id="p-00185-en" num="0185">0.2-99%, preferably 1-60 wt %, preferably 20-50 wt % of drug(s);</p>
+      <p id="p-00186-en" num="0186">15-99.8 wt %, preferably 20-95 wt %, more preferably 30-90 wt % of chamber structure forming material(s);</p>
+      <p id="p-00187-en" num="0187">or optional 0-50 wt %, preferably 1-50 wt %, more preferably 5-40 wt % of chamber structure shape-modulating agent(s);</p>
+      <p id="p-00188-en" num="0188">or optional 0-10 wt %, preferably 0.5-10 wt %; more preferably 1-5 wt % of lubricating agent(s);</p>
+      <p id="p-00189-en" num="0189">or optional 0-60 wt %, preferably 1-60 wt %, more preferably 5-40 wt % of pharmaceutical acceptable auxiliary material(s).</p>
+      <p id="p-00190-en" num="0190">The preparation method for the core of the osmotic pump according to the present invention is not specifically limited. Any conventional method (such as a direct mixing) can be used for the preparation. Preferably, drug(s) and chamber structure forming material(s) can be mixed homogeneously at a desired ratio to form the first mixture, and optional chamber structure shape-modulating agent(s), lubricating agent(s), or other pharmaceutical acceptable auxiliary material(s) can be added in random order into the first mixture to form the second mixture. Then the second mixture is granulated or tableted without granulation to form the core of the present invention.</p>
+      <p id="p-00191-en" num="0191">Micro Chamber Structure</p>
+      <p id="p-00192-en" num="0192">As used herein, term “micro chamber structure” or “chamber structure” refers to the spherical, bubble-shaped, porous or vesicular micro structure inside the coating film formed after osmotic pump preparation according to the present invention contacts with water. Preferably, said micro chamber structure and chamber structure are liquid structure.</p>
+      <p id="p-00193-en" num="0193">Wherein, “micro chamber structure” can be determined by microimaging, preferably by synchrotron radiation light source microimaging, and chamber structure with a minimum diameter as low as about 5-10 μm can be observed. Micro chamber structures will fuse and merge with the release of the drugs over time to form micro chamber structures or further chamber structures with lager volume. Generally, although a “micro chamber structure” can be used when the volume is over 10 mm<sup>3</sup>, the fused chamber structures with larger volume are named as chamber structures for convenience.</p>
+      <p id="p-00194-en" num="0194">The micro chamber structures according to the present invention is characterized in the dynamic change of internal structures of micro chamber during the releasing process and the correlation between three-dimensional characteristic parameters such as total volume of vesicular structure involving structural changes and the releasing rate of drugs. Drug release is controlled by modulating the profile and three-dimensional characteristics of the micro chamber structures. The formed micro chamber structures include regular sphere, irregular sphere, the transition and mixture of regular and irregular shape, and the size evolution of the micro chambers.</p>
+      <p id="p-00195-en" num="0195">Generally, the total volume of the micro chamber structures is represented by Vb, and typically, Vb refers to the volume of micro chamber structure and the volume of chamber structure formed by two or more micro chamber structures. Wherein, the ratio between the maximum value of Vb, Vbmax and the core volume Va is 90-100:100, preferably is 95-100:100. Furthermore, the internal volume of the coating film Vc can be generally deemed as identical with Va, which is identical with a profile volume of osmotic pump shaped with coating film, Vm. Therefore, Vb=Va=Vc=Vm, when Vb reaches to Vbmax. When the total amount of micro chamber structures keeps unchanged or declines, the average volume of said micro chamber structures gradually increases over time.</p>
+      <p id="p-00196-en" num="0196">The Principle of the Positive Correlation between Micro Chamber Structure and Drug Releasing</p>
+      <p id="p-00197-en" num="0197">Micro bubble-shaped structures are formed inside the osmotic pump preparation according to the present invention when it contacts with water. The total volume of bubble-shaped, Vb gradually increases from 0; while the profile volume (Vm) of the osmotic pump formed by the outer film of the tablet may slightly increase when contacts with water, but essentially keeps unchanged during the releasing process. Thus,</p>
+      <p id="p-00198-en" num="0000">
+        <maths id="maths-00001-en" num="00001">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <munder>
+                        <mi>lim</mi>
+                        <mrow>
+                          <mi>t</mi>
+                          <mo>=</mo>
+                          <msub>
+                            <mi>t</mi>
+                            <mi>max</mi>
+                          </msub>
+                        </mrow>
+                      </munder>
+                      <mo></mo>
+                      <msub>
+                        <mi>V</mi>
+                        <mi>b</mi>
+                      </msub>
+                    </mrow>
+                    <mo>=</mo>
+                    <msub>
+                      <mi>V</mi>
+                      <mi>m</mi>
+                    </msub>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>1</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00001-en" wi="N/A" he="N/A" file="US20150245992A1_00014.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150245992A1-20150903-M00001.TIF" />
+        </maths>
+      </p>
+      <p id="p-00199-en" num="0198">If the volume of solid inside the core equals to Vd, when the solid inside the core contacts with water under an atmospheric pressure (that is, it is not in the osmotic pump with thorough hydration) at the “concentration” of semi-solid which is excreted through the pore of osmotic numn. Then set:</p>
+      <p id="p-00200-en" num="0000">
+        <maths id="maths-00002-en" num="00002">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mi>a</mi>
+                    <mo>=</mo>
+                    <mfrac>
+                      <msub>
+                        <mi>V</mi>
+                        <mi>d</mi>
+                      </msub>
+                      <msub>
+                        <mi>V</mi>
+                        <mi>m</mi>
+                      </msub>
+                    </mfrac>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>2</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00002-en" wi="N/A" he="N/A" file="US20150245992A1_00015.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150245992A1-20150903-M00002.TIF" />
+        </maths>
+      </p>
+      <p id="p-00201-en" num="0199">Obviously, at t moment, the percentage of the solid excreted from the tablet to the total amount of the tablet essentially corresponds to the releasing rate R, which is:</p>
+      <p id="p-00202-en" num="0000">
+        <maths id="maths-00003-en" num="00003">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mi>R</mi>
+                    <mo>≈</mo>
+                    <mrow>
+                      <mfrac>
+                        <mi>a</mi>
+                        <msub>
+                          <mi>V</mi>
+                          <mi>d</mi>
+                        </msub>
+                      </mfrac>
+                      <mo></mo>
+                      <msub>
+                        <mi>V</mi>
+                        <mi>b</mi>
+                      </msub>
+                    </mrow>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>3</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00003-en" wi="N/A" he="N/A" file="US20150245992A1_00016.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150245992A1-20150903-M00003.TIF" />
+        </maths>
+      </p>
+      <p id="p-00203-en" num="0200">Since both of a and Vd refer to a constant k, the releasing rate of this type of osmotic pump is directly proportional to the volume of the bubble-shaped structures, which can be simplified that drug releasing rate is directly proportional to the volume of the internal-formed vesicular structures:</p>
+      <p id="p-00204-en" num="0000">[in-line-formulae]<i>R=kV</i><sub>b</sub>  (4)[/in-line-formulae]</p>
+      <p id="p-00205-en" num="0201">Designing Method for a Target Preparation and Modulation Method for Micro Chamber Structures</p>
+      <p id="p-00206-en" num="0202">According to the present invention, the formulation of a desired drug preparation can be determined by comparing different drug release with the drug release obtained from the osmotic pump preparation of the present invention. Specifically, a method for designing a target preparation with desired drug releasing rate or releasing curve comprises:</p>
+      <p id="p-00207-en" num="0203">(i) providing a drug osmotic pump preparation according to the present invention, wherein said preparation comprises said drug as active ingredient;</p>
+      <p id="p-00208-en" num="0204">(ii) placing said drug osmotic pump preparation into water or aqueous solvent, and detecting the evolution situation of the micro chamber structures in said drug osmotic pump preparation;</p>
+      <p id="p-00209-en" num="0205">(iii) calculating the releasing rate or releasing curve of the drug according to the detected evolution situation of the micro chamber structures;</p>
+      <p id="p-00210-en" num="0206">(iv) selecting a drug osmotic pump preparation as a target preparation from the detected preparations, the releasing rate or releasing curve of which is close to or in accordance with desired drug releasing rate or releasing curve.</p>
+      <p id="p-00211-en" num="0207">Preferably, step (iv) further comprises: based on the detected releasing rate or releasing curve, selecting a preparation A, the releasing rate or releasing curve of which is close to that of the desired drug, modulating the formulation according to preparation A and repeating step (i), (ii) and (iii) for one or more times, thereby selecting a drug osmotic pump preparation as the target preparation from the detected preparations, the releasing rate or releasing curve of which is closer to or in accordance with desired drug releasing rate or releasing curve. Preferably, the modulation of formulation includes modulating the composition ratio between chamber structure forming material and chamber structure shape-modulating agent so as to modulate the profile and the size of the micro chamber as well as the evolution rate between the profile and the size of the micro chamber.</p>
+      <p id="p-00212-en" num="0208">Said chamber structure shape-modulating agent is used to modulate the size and profile evolution of the bubble-shaped micro structure, and can be acid/basic material or salts thereof with different solubility, including inorganic acid or salts thereof and inorganic base, including one or more selected from a group consisting of sodium phosphate, disodium hydrogen phosphate, sodium dihydrogen phosphate, sodium chloride, potassium chloride, sodium hydroxide and sodium phosphate or disodium hydrogen is preferred; and organic acid or salts thereof, comprising one or more selected from a group consisting of amino acid, citric acid and tartaric acid and citric acid is preferred.</p>
+      <p id="p-00213-en" num="0209">The method for modulating the size of micro chamber includes modulating the amount of chamber structure shape-modulating agent (1-50 wt %) as well as the particle size (10-1000 μm) and the particle size of the core powder (10-100 μm).</p>
+      <p id="p-00214-en" num="0210">The method for modulating the evolution rate between the profile and the size of micro chambers includes modulating the combination of micro chamber forming material and micro chamber modulating agent, involved viscosity and hydration rate. The detailed evolution rules include that the number of chamber can be increased or decreased by adding chamber structure shape-modulating agent; the faster the hydration rate of chamber forming material is, the faster the chamber evolves; the higher the micro environment viscosity of the entire core is, the slower the chamber evolves.</p>
+      <p id="p-00215-en" num="0211">The particle fluidity and homogeneity of drug preparation content can be improved by adding lubricating agent; and said lubricating agent includes, but not limited to one or more selected from a group consisting of stearic acid, magnesium stearate, talc powder, sodium stearyl fumarate and paraffin, and the mixture thereof.</p>
+      <p id="p-00216-en" num="0212">A preferred method for adjusting the formulation comprises:</p>
+      <p id="p-00217-en" num="0213">when the detected releasing rate is faster than desired releasing rate, decreasing the amount of chamber structure shape-modulating agent or increasing the ratio between said chamber structure forming material and chamber structure shape-modulating agent;</p>
+      <p id="p-00218-en" num="0214">when the detected releasing rate is slower than desired releasing rate, increasing the amount of chamber structure shape-modulating agent or decreasing the ratio between said chamber structure forming material and chamber structure shape-modulating agent.</p>
+      <p id="p-00219-en" num="0215">Sample Treatment and Determination of Internal Structure of the Preparation</p>
+      <p id="p-00220-en" num="0216">The determination method of the bubble-shaped, porous or vesicular micro chamber structure according to the present invention includes solidifying the tablet sample used in releasing determination, then conducting microimaging, typically synchrotron radiation light source X-ray micro CT for 3D reconstruction, or conducting microsection, superimposing images of multiple slices and then conducting 3D reconstruction, but not limited to the above methods. Preferably, the sample treatment and determination of internal structure of the preparation according to the present invention includes the following steps:</p>
+      <p id="p-00221-en" num="0217">(1) Sample treatment. The osmotic pump tablet is removed at a desired testing time point during the dissolving test process, and dried under the condition that the internal structure of the sample keeps unchanged, which includes placing it in the sealed drier filled with drying agent under constant temperature and humidity or lyophilization.</p>
+      <p id="p-00222-en" num="0218">(2) Synchrotron radiation light source X-ray micro CT scanning. According to the sample formulation and the components thereof, testing parameters such as X-ray energy, X-ray flux, exposure time and field parameters (energy 13 key, exposure time, 2 s, CDD 3.7 μm) are optimized, a proper CCD camera is selected, and two-dimensional perspective projection images of the samples, background and black field are collected. A proper rotational angular velocities Ve<b>1</b> and an exposure time are set, and photos are automatically taken by the system at every rotation to a certain angle (0.25° angle interval, 720 projections were collected totally). 2-D images from 180° view are collected for synchrotron radiation light source X-ray micro CT 3-D scanning.</p>
+      <p id="p-00223-en" num="0219">(3) 3-D reconstruction. Firstly, the collected projection images with different angle are subjected to noise reduction and background correction for improving definition and resolution of the images; CT images are subjected to position correction and 3-D reconstruction based on back projection algorithms; upon reconstruction, slicing parameters are set to section the reconstructed result for obtaining the slice tomography images of the sample in its horizontal direction, the tomography images are exported and screened.</p>
+      <p id="p-00224-en" num="0220">The Beneficials Effect of the Present Invention:</p>
+      <p id="p-00225-en" num="0221">1. The drug osmotic pump preparation according to the present invention allows the control of drug releasing rate by modulating the dynamic profile, size and evolution speed of micro chamber structures.</p>
+      <p id="p-00226-en" num="0222">2. The drug osmotic pump preparation according to the present invention is suitable for the controlled releasing of water soluble drugs and water insoluble drugs, typically of drugs with low solubility or pH-dependent drugs. Said osmotic pump preparation can release drugs thoroughly at a controllable releasing rate.</p>
+      <p id="p-00227-en" num="0223">3. Compare with the conventional osmotic pump preparations which control drug releasing through macrostructures, the osmotic pump preparation structure provided by the present invention has good controllability and feasibility.</p>
+      <p id="p-00228-en" num="0224">The present invention will be illustrated in the following referring to the specific examples. These examples are only intended to illustrate the invention, but not to limit the scope of the invention. For the experimental methods in the following examples the specific conditions of which are not specifically indicated, they are performed under routine conditions or manufacturer's instruction. All the percentages or fractions refer to weight percentage and weight fraction, unless stated otherwise.</p>
+      <heading id="h-00007-en" level="1">Example 1</heading>
+      <p id="p-00229-en" num="0225">Copovidone sifted through a 100-mesh sifter was tableted directly. The tablet core was coated by cellulose acetate-PEG 4000 (7:1) acetone solution until the weight increasing of the core reached 4%; a pore with a diameter of 0.8 mm on one side of the coating tablet was punched by laser. Oar method was used and 900 mL of degassing distilled water was used as releasing medium at a rotate speed of 75 RPM. Releasing rates at different times were determined. Tablets at different times were removed, sealed in a dryer filled with drying agent under ambient temperature and left for 48 hours. 2-D images from 180° view were collected for SR-μCT 3-D scanning. The CT images were subjected to position correction and then 3-D reconstruction based on back projection algorithms. Upon reconstruction, the slicing parameters were set to section the reconstructed result for obtaining the slice tomography images of the sample in its horizontal direction, and the slice tomography images were exported and screened.</p>
+      <p id="p-00230-en" num="0226">Result: 3-D tomography scanning images show that the obtained osmotic pump possesses micro bubble-shaped structures, wherein, the micro chamber structures formed after placed in a releasing medium for 1.0 hr (<figref>FIGS. 1</figref>, <b>2</b> and <b>3</b>) show that the internal micro chamber structures have higher sphericity and copovidone is a preferable micro bubble-shaped structure forming material. Materials such as artificially synthesized high molecular materials or nature high molecular materials are used to form micro bubble-shaped, vesicular chamber structure with different 3-D profile, size, evolution mode and speed depending on their solubility, hydration rate, and system viscosity after hydration.</p>
+      <heading id="h-00008-en" level="1">Example 2</heading>
+      <p id="p-00231-en" num="0227" />
+      <p id="p-00232-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>(1) Core formulation:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>mg/tablet</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>copovidone</entry>
+                  <entry>57.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>sodium phosphate</entry>
+                  <entry>11</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>magnesium stearate</entry>
+                  <entry>1.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>(2) Formulation for coating solution of the semi-permeable film:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="105pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>amount</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="right" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>cellulose acetate</entry>
+                  <entry>28</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PEG 4000</entry>
+                  <entry>4</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>acetone</entry>
+                  <entry>2000</entry>
+                  <entry>mL</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00233-en" num="0228">(3) Preparation process: Sodium phosphate and copovidone sifted through a 100-mesh sifter were weighed and then mixed to homogeneous. Then magnesium stearate was added, mixed to homogeneous, and tableted. The core was coated by cellulose acetate-PEG 4000 acetone solution until the weight increasing of the core reached 4%; a pore with a diameter of 0.8 mm on one side of the coating film was punched by laser.</p>
+      <p id="p-00234-en" num="0229">(4) Determination method: Oar method was used and 900 mL of degassing distilled water was used as releasing medium at a rotate speed of 75 RPM. Releasing rates at different times were determined. Osmotic pump tablets at different times were removed, sealed in a dryer filled with drying agent under ambient temperature and left for 48 hours. 2-D images from 180° view were collected for SR-μCT 3-D scanning. The CT images were subjected to position correction and then to 3-D reconstruction based on back projection algorithms. Upon reconstruction, the slicing parameters were set to section the reconstructed result for obtaining the slice tomography images of the sample in its horizontal direction, and the tomography images were exported and screened.</p>
+      <p id="p-00235-en" num="0230">(5) Result: 3-D tomography scanning images show that the obtained osmotic pump possesses micro bubble-shaped structure, wherein, the micro chamber structures formed after placed in a releasing medium for 1.0 hr (<figref>FIGS. 4</figref>, <b>5</b>, <b>6</b>, <b>7</b> and <b>8</b>) show that the internal micro chamber structures distribute radially towards the core center, and the volume increases with the chambers closer to the core center.</p>
+      <p id="p-00236-en" num="0231">(6) Conclusion: Sodium phosphate can be used as micro bubble-shaped structure modulating agent to modulate the profile and evolution mode and speed of the micro bubble-shaped, vesicular chamber structures.</p>
+      <heading id="h-00009-en" level="1">Example 3</heading>
+      <p id="p-00237-en" num="0232" />
+      <p id="p-00238-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>(1) Core formulation:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>mg/tablet</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>copovidone</entry>
+                  <entry>57.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ketoprofen</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>magnesium stearate</entry>
+                  <entry>1.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>(2) Formulation for coating solution of the semi-permeable film:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="105pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>amount</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="right" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>cellulose acetate</entry>
+                  <entry>28</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PEG 4000</entry>
+                  <entry>4</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>acetone</entry>
+                  <entry>2000</entry>
+                  <entry>mL</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00239-en" num="0233">(3) Preparation process: Ditto to Example 2 except that ketoprofen and copovidone were mixed to homogenous and then the amount as listed in the formulation of magnesium stearate was added.</p>
+      <p id="p-00240-en" num="0234">(4) Determination method: Ditto to Example 2</p>
+      <p id="p-00241-en" num="0235">(5) Result: The internal chamber structures of the osmotic pump tablet obtained according to this formulation are regularly spherical. The micro chamber structures formed in osmotic pump tablet after 1.0-hour dissolution (<figref>FIGS. 9</figref>, <b>10</b> and <b>11</b>) and the micro chamber structures formed in osmotic pump tablet after 2.0-hour dissolution (<figref>FIGS. 12</figref>, <b>13</b> and <b>14</b>) show that the obtained micro spherical chamber structures are regular, uniformed and homogenously distributed. The amount of the chambers decreased and the diameter slightly increased due to the chamber fusion with the increasing time of hydration.</p>
+      <p id="p-00242-en" num="0236">(6) Conclusion: As a insoluble drug with high doses, ketoprofen can remarkably promote the formation and stabilization of micro bubble-shaped structures with high sphericity and slow down the chamber evolution rate to some extent by increasing the system viscosity and decreasing hydration rate.</p>
+      <heading id="h-00010-en" level="1">Example 4</heading>
+      <p id="p-00243-en" num="0237" />
+      <p id="p-00244-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>(1) Core formulation:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>mg/tablet</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>copovidone</entry>
+                  <entry>58</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ketoprofen</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>sodium phosphate</entry>
+                  <entry>10.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>magnesium stearate</entry>
+                  <entry>1.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>(2) Formulation for coating solution of the semi-permeable film:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="105pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>amount</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="right" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>cellulose acetate</entry>
+                  <entry>28</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PEG4000</entry>
+                  <entry>4</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>acetone</entry>
+                  <entry>2000</entry>
+                  <entry>mL</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00245-en" num="0238">(3) Preparation process: Ditto to Example 2 except that ketoprofen and copovidone were mixed to homogenous, then sodium phosphate was added and mixed to homogenous, and finally, magnesium stearate was added.</p>
+      <p id="p-00246-en" num="0239">(4) Determination method: Ditto to Example 2.</p>
+      <p id="p-00247-en" num="0240">(5) Result: The structure formed according to this formulation is spherical with certain evolution rate. The chamber structures have lager volumes, evolve faster and are easily to fuse into lager chambers. <figref>FIG. 15</figref> and <figref>FIG. 20</figref> show the micro chamber structures formed in the osmotic pump tablet after 1.0 hour and 2.0 hours dissolution.</p>
+      <p id="p-00248-en" num="0241">(6) Conclusion: At the earlier stage of drug releasing, micro bubble-shaped chamber structures were formed inside the osmotic pump from the film to the center, and some of micro bubble-shaped chamber structures with small size moved along the coating film towards the drug releasing pore (<figref>FIG. 21</figref>). Evolution rules during the releasing process of the chamber can be seen from time series tomography 2-D images (<figref>FIG. 22</figref>) and 3-D structure images (<figref>FIGS. 23</figref>, <b>24</b>, <b>25</b> and <b>26</b>): at 0.5 hr, the core was preliminarily hydrated, and the chamber has higher homogeneity and lower standard deviation of diameter. Most chambers distributed in the hydrated part firstly contacting with dissolution medium around the core. Upon water absorption, the system swelled, pressure was released through drug releasing micro pore, and the formed micro vesicles containing drugs were excreted for drug releasing. At 1.0 hr, the numbers of chambers changed little while the diameter and the homogeneity increased. Most chambers with larger diameter distributed in the highly hydrated part thoroughly contacting with the medium around the core, and a large number of chambers with lower diameters emerged in the core center. At 1.5 hr, the number of chambers started to decline. The existing chambers augmented continuously and then fused into larger chambers. The chamber diameters increased remarkably and the chamber homogeneity decreased significantly compared with that at the time of 1.0 hr. The chamber still had higher sphericity and the chambers with larger diameter still distributed in the highly hydrated part thoroughly contacting with medium around the core. At 2.0 hr, the number of chamber continuously declined, and the existing big chambers continuously swelled and merged the surrounded small chambers and expanded to the core center. The chambers moved towards to the core center gradually with its homogeneity decreased. At 3.0 hr, the core was essentially hydrated, small chambers in edge region drastically reduced, and the chambers essentially expanded to the core center and connecting with releasing medium through drug releasing micro pore, when the releasing entered a dominant stage of corrosion and diffusion. At 4.0 hr, the number of chamber remarkably reduced, and most parts of the core region were occupied. At 6.0 hr, only one chamber was remained occupying most parts of the core region, which had higher sphericity. At 8.0 hr, the remaining chamber further expanded to be more spherical.</p>
+      <p id="p-00249-en" num="0242">For insoluble drug ketoprofen, copovidone as micro bubble-shaped structure forming material in combination with sodium phosphate as bubble-shaped structure modulating agent were used to modulate the micro structures and the evolution rate thereof for achieving the controlled release of ketoprofen. <figref>FIG. 27</figref> shows the accumulated releasing rate profile in vitro within 0-12 hours for ketoprofen. It can be seen that drug releases at a steady rate, and the average accumulated releasing rate at 12<sup>th </sup>hour is over 95%. Furthermore, changes of internal structures of micro chamber over time (<figref>FIGS. 28</figref>, <b>29</b> and <b>30</b>) and the total volume of vesicular structures are highly proportional to the drug releasing rate.</p>
+      <heading id="h-00011-en" level="1">Example 5</heading>
+      <p id="p-00250-en" num="0243" />
+      <p id="p-00251-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>(1) Core formulation:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="119pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>mg/tablet</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>sodium chloride</entry>
+                  <entry>20</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>copovidone</entry>
+                  <entry>60</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>(2) Formulation for coating solution of the semi-permeable film:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="105pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>amount</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="right" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>cellulose acetate</entry>
+                  <entry>28</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PEG4000</entry>
+                  <entry>4</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>acetone</entry>
+                  <entry>2000</entry>
+                  <entry>mL</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00252-en" num="0244">(3) Preparation process: Ditto to Example 2 except that sodium chloride was mixed with copovidone to homogenous and then tableted directly.</p>
+      <p id="p-00253-en" num="0245">(4) Determination method: Ditto to Example 2</p>
+      <p id="p-00254-en" num="0246">(5) Result: Irregular micro chamber structures were formed inside the osmotic pump preparation according to this formulation, which allowed the internal chamber space to connect with the releasing medium outside rapidly, thereby achieving the fast release of the drug in the core. Internal chamber structures of osmotic pump tablet after 1.0-hour dissolution (<figref>FIGS. 31</figref>, <b>32</b>, <b>33</b>, <b>34</b> and <b>35</b>) show that the chambers were formed very fast while merging, and the surface area of which is large. According to the tomography image, it can be obviously seen that only one irregular chamber was located at one side of the core.</p>
+      <p id="p-00255-en" num="0247">(6) Conclusion: The shape and the evolution rate of the chambers can be modulated to achieve different drug releasing performance by adding different bubble-shaped structure modulating agents.</p>
+      <heading id="h-00012-en" level="1">Example 6</heading>
+      <p id="p-00256-en" num="0248" />
+      <p id="p-00257-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>(1) Core formulation:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Components</entry>
+                  <entry>mg/tablet</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Copovidone</entry>
+                  <entry>57.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ketoprofen</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>sodium phosphate</entry>
+                  <entry>15.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>magnesium stearate</entry>
+                  <entry>1.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>(2) Formulation for coating solution of the semi-permeable film:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="105pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Components</entry>
+                  <entry>dosage</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="right" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>cellulose acetate</entry>
+                  <entry>28</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PEG4000</entry>
+                  <entry>4</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Acetone</entry>
+                  <entry>2000</entry>
+                  <entry>mL</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00258-en" num="0249">(3) Preparation process: Ditto to Example 4</p>
+      <p id="p-00259-en" num="0250">(4) Determination method: Ditto to Example 2</p>
+      <p id="p-00260-en" num="0251">(5) Result: The increase in the content of sodium phosphate content accelerated the hydration and dissolving process of copovidone. Chambers with larger volume were easy to form due to the increase in surface tension of the system and the releasing rate of the drug was relatively increased at the same time. <figref>FIGS. 36</figref>, <b>37</b>, <b>38</b>, <b>39</b>, <b>40</b> illustrate the internal micro chamber structures of the osmotic pump tablet after 1.0-hour dissolution. It can be obviously seen that two relatively regular chambers with lager size were located on the edge of the core, and some regular micro chambers distributed homogeneously in the other region of the core as well.</p>
+      <p id="p-00261-en" num="0252">(6) Conclusion: The size of the vesicular structures can be increased and the evolution rate can be accelerated by adding the amount of bubble-shaped structure modulating agent in the formulation to rapidly form larger central chamber for connecting releasing medium through drug releasing micro pore and enhancing the drug releasing rate.</p>
+      <heading id="h-00013-en" level="1">Example 7</heading>
+      <p id="p-00262-en" num="0253" />
+      <p id="p-00263-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>(1) Core formulation:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="105pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Components</entry>
+                  <entry>mg/tablet</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>polyoxyethylene N10</entry>
+                  <entry>58</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ketoprofen</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>sodium phosphate</entry>
+                  <entry>10.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>magnesium stearate</entry>
+                  <entry>1.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>(2) Formulation for coating solution of the semi-permeable film:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="105pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>amount</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="right" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>cellulose acetate</entry>
+                  <entry>28</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PEG4000</entry>
+                  <entry>4</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>acetone</entry>
+                  <entry>2000</entry>
+                  <entry>mL</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00264-en" num="0254">(3) Preparation process: Ditto to Example 4 except that copovidone was replaced by polyoxyethylene.</p>
+      <p id="p-00265-en" num="0255">(4) Determination method: Ditto to Example 2</p>
+      <p id="p-00266-en" num="0256">(5) Result: <figref>FIGS. 41</figref>, <b>42</b>, <b>43</b>, <b>44</b>, <b>45</b> and <figref>FIGS. 46</figref>, <b>47</b>, <b>48</b>, <b>49</b> and <b>50</b> show the chamber structures of the osmotic pump tablet after 1.0-hour and 2.0-hours dissolution respectively. These micro chambers with irregular shapes distributed in the whole internal core. Chamber fusing can be seen over time.</p>
+      <p id="p-00267-en" num="0257">(6) Conclusion: The shapes and evolution modes can be modulated by selecting bubble-shaped forming materials with different solubility, hydration speed and system viscosity to control the portions excreted, dissolved and corroded from the swelled vesicular during the releasing process for achieving different drug releasing characteristics.</p>
+      <heading id="h-00014-en" level="1">Example 8</heading>
+      <p id="p-00268-en" num="0258" />
+      <p id="p-00269-en" num="0000">
+        <tables id="tables-00007-en" num="00007">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>(1) Core formulation:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>mg/tablet</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>lactose</entry>
+                  <entry>58</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ketoprofen</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>sodium phosphate</entry>
+                  <entry>10.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>magnesium stearate</entry>
+                  <entry>1.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>(2) Formulation for coating solution of the semi-permeable film:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="105pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>dosage</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="right" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>cellulose acetate</entry>
+                  <entry>28</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PEG4000</entry>
+                  <entry>4</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>acetone</entry>
+                  <entry>2000</entry>
+                  <entry>mL</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00270-en" num="0259">(3) Preparation process: Ditto to Example 4 except that copovidone is replaced by lactose.</p>
+      <p id="p-00271-en" num="0260">(4) Determination method: Ditto to Example 2.</p>
+      <p id="p-00272-en" num="0261">(5) Result: <figref>FIGS. 51</figref>, <b>52</b>, <b>53</b>, <b>54</b>, <b>55</b> and <figref>FIGS. 56</figref>, <b>57</b>, <b>58</b>, <b>59</b>, <b>60</b> respectively show the chamber structures of osmotic pump tablet after 1.0-hour and 2.0-hour dissolution. Micro chamber structures with irregular shapes inside the core were firstly formed around the semi-permeable coating film. As time went by, the number of chamber increased rapidly at the early stage, and volume of single irregular chamber changed little so that numerous micro chambers distributed in the whole internal core with a relatively homogenous manner.</p>
+      <p id="p-00273-en" num="0262">(6) Conclusion: Water soluble non-high molecular materials as bubble-shaped structure forming materials in combination with chamber structure modulating agents will remarkably increase the forming rate of bubble-shaped structures at early releasing stage and increase drug releasing rate.</p>
+      <heading id="h-00015-en" level="1">Example 9</heading>
+      <p id="p-00274-en" num="0263" />
+      <p id="p-00275-en" num="0000">
+        <tables id="tables-00008-en" num="00008">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>(1) Core formulation:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>mg/tablet</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>copovidone</entry>
+                  <entry>58</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ketoprofen</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>sodium chloride</entry>
+                  <entry>10.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>magnesium stearate</entry>
+                  <entry>1.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>(2) Formulation for coating solution of the semi-permeable film:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="105pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>dosage</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="right" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>cellulose acetate</entry>
+                  <entry>28</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PEG4000</entry>
+                  <entry>4</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>acetone</entry>
+                  <entry>2000</entry>
+                  <entry>mL</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00276-en" num="0264">(3) Preparation process: Ditto to Example 4 except that sodium phosphate is replaced by sodium chloride.</p>
+      <p id="p-00277-en" num="0265">(4) Determination method: Ditto to Example 2</p>
+      <p id="p-00278-en" num="0266">(5) Result: <figref>FIG. 61</figref> shows the chamber structure of osmotic pump tablet after 1.0-hour dissolution. Fine chambers can be observed in the figure, which distributed around the film edge with poor sphericity and uniformity. Some of small chambers had assembled and merged.</p>
+      <p id="p-00279-en" num="0267">(6) Conclusion: Water soluble non-high molecular materials as bubble-shaped structure forming materials in combination with chamber structure modulating agents will remarkably increase the forming rate of bubble-shaped structures at early releasing stage and increase drug releasing rate.</p>
+      <heading id="h-00016-en" level="1">Example 10</heading>
+      <p id="p-00280-en" num="0268" />
+      <p id="p-00281-en" num="0000">
+        <tables id="tables-00009-en" num="00009">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>(1) Core formulation:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>mg/tablet</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>azithromycin</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Citric acid</entry>
+                  <entry>14</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>copovidone-S630</entry>
+                  <entry>48.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>talcum powder</entry>
+                  <entry>6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>magnesium stearate</entry>
+                  <entry>1.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>(2) Formulation for coating solution of the semi-permeable film:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="105pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>dosage</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="right" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>cellulose acetate</entry>
+                  <entry>28</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PEG4000</entry>
+                  <entry>4</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>acetone</entry>
+                  <entry>2000</entry>
+                  <entry>mL</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00282-en" num="0269">(3) Preparation process: Sifted azithromycin and copovidone-S630 were weighed according to the formulation and then. Then, citric acid as listed in the formulation was added and mixed to homogeneous, and finally, a suitable amount of talcum power and magnesium stearate were added. The product was mixed to homogeneous and tableted. The core was coated by cellulose acetate-PEG4000 solution in acetone till the weigh increasing of the core reached 8%. A pore with a diameter of 0.8 mm on one side of the coating film was punched by laser or mechanic means.</p>
+      <p id="p-00283-en" num="0270">(4) Determination method: According to Method 1 of Releasing Assay in Chinese Pharmacopoeia 2010, releasing rates at different times were determined by using 900 mL water as solvent at 100 RPM.</p>
+      <p id="p-00284-en" num="0271">(5) Result: The in vitro time-accumulated releasing curve of azithromycin (<figref>FIG. 62</figref>) shows that azithromycin released thoroughly with zero-order releasing characteristics in 12 hours, and the average accumulated releasing rate at 12<sup>th </sup>hour is over 95%. <figref>FIG. 63</figref> demonstrates the chamber structures of the osmotic pump tablet after 1.0-hour dissolution. Numerous chambers distributed in the whole internal core homogeneously with good uniformity and sphericity.</p>
+      <p id="p-00285-en" num="0272">(6) Conclusion: For different drugs, different bubble-shaped structure forming materials and different chamber structure modulating agents can be selected to modulate the 3-D shapes, evolution modes and evolution speed of chamber so as to achieve the object of controlled drug releasing.</p>
+      <heading id="h-00017-en" level="1">Example 11</heading>
+      <p id="p-00286-en" num="0273" />
+      <p id="p-00287-en" num="0000">
+        <tables id="tables-00010-en" num="00010">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>(1) Core formulation:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>mg/tablet</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>captopril</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>sodium chloride</entry>
+                  <entry>6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>copovidone-S630</entry>
+                  <entry>61.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Vitamin C</entry>
+                  <entry>1.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>magnesium stearate</entry>
+                  <entry>1.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>(2) Formulation for coating solution of the semi-permeable film:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="105pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>components</entry>
+                  <entry>amount</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="right" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>cellulose acetate</entry>
+                  <entry>28</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PEG4000</entry>
+                  <entry>7</entry>
+                  <entry>g</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>acetone</entry>
+                  <entry>2000</entry>
+                  <entry>mL</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00288-en" num="0274">(3) Preparation process: Captopril and copovidone-S630 sifted by a 100-mesh sifter were weighed according to the formulation and mixed to homogeneous. Then, sodium chloride and Vitamin C as listed in the formulation were added and mixed to homogeneous. Finally, a suitable amount of magnesium stearate was added and then the product was mixed to homogeneous and tableted. The rest steps are ditto to Example 10.</p>
+      <p id="p-00289-en" num="0275">(4) Determination method: Ditto to Example 10.</p>
+      <p id="p-00290-en" num="0276">(5) Result: The in vitro time-accumulated releasing curve of captopril (<figref>FIG. 64</figref>) shows that captopril released thoroughly with zero-order releasing characteristics in 12 hours, and the average accumulated releasing rate at 12<sup>th </sup>hour is approaching 100%.</p>
+      <p id="p-00291-en" num="0277">
+        <figref>FIG. 65</figref> demonstrates the chamber structures of the osmotic pump tablet after 1.0-hour dissolution. Fine chambers distributed along the core edge homogeneously with good uniformity and sphericity.</p>
+      <p id="p-00292-en" num="0278">(6) Conclusion: For different drugs, different bubble-shaped structure forming materials and different chamber structure modulating agents can be selected to modulate the 3-D shapes, evolution modes and evolution speed of chamber so as to achieve the object of controlled drug releasing.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>15</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>16</b>. A drug osmotic pump preparation comprising:
+<claim-text>a core, comprising drug(s) (or drug active ingredient(s)) and chamber structure forming material(s); and</claim-text><claim-text>a coating film for covering the core with drug releasing pore(s) set on said coating film;</claim-text><claim-text>wherein, when the drug osmotic pump preparation is used for drug release in water or aqueous medium, micro chamber structures are thus formed in the coating film by the chamber structure forming materials and total volume of the micro chamber structures Vb increases with releasing time, and releasing rate R of drug active ingredients (or releasing amount A) is directly proportional to Vb;</claim-text><claim-text>wherein, said chamber structure forming material is one or more selected from a group consisting of povidone, polyoxyethylene, and copovidone.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>17</b>. The osmotic pump preparation according to <claim-ref idref="clm-00002-en">claim 16</claim-ref>, wherein ratio between maximum value of Vb, namely Vbmax and core volume Va is 90-100:100, preferably 95-100:100.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>18</b>. The osmotic pump preparation according to <claim-ref idref="clm-00002-en">claim 16</claim-ref>, wherein said releasing rate R (or releasing amount A) is directly proportional to Vb refers to “the correlation coefficient between release rate R (releasing amount A) and Vb is ≧0.9, preferably ≧0.95”.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>19</b>. The osmotic pump preparation according to <claim-ref idref="clm-00002-en">claim 16</claim-ref>, wherein said micro chamber structures are liquid chamber structures.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>20</b>. The osmotic pump preparation according to <claim-ref idref="clm-00002-en">claim 16</claim-ref>, wherein said core contains the following components:
+<claim-text>0.2-99%, preferably 1-60 wt % of drug(s);</claim-text><claim-text>15-99.8 wt %, preferably 20-95 wt % more preferably 30-90 wt % of chamber structure forming material(s);</claim-text><claim-text>0-50 wt %, preferably 1-50 wt % of chamber structure shape-modulating agent(s);</claim-text><claim-text>0-10 wt %, preferably 0.5-10 wt % of lubricating agent(s); and</claim-text><claim-text>0-60 wt %, 1-60 wt % of pharmaceutical acceptable auxiliary material(s); wherein the content is based on total weight of the core.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>21</b>. The osmotic pump preparation according to <claim-ref idref="clm-00002-en">claim 16</claim-ref>, wherein, at least ≧5000, preferably ≧10000 of micro chamber structures have a size of 1×10<sup>−6</sup>−1 mm<sup>3</sup>.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>22</b>. The osmotic pump preparation according to <claim-ref idref="clm-00002-en">claim 16</claim-ref>, wherein said chamber structure shape-modulating agent is acid or basic material or salts thereof.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>23</b>. The drug osmotic pump preparation according to <claim-ref idref="clm-00008-en">claim 22</claim-ref>, wherein said acid or basic material or salts thereof is one or more selected from a group consisting of sodium phosphate, disodium hydrogen phosphate, sodium dihydrogen phosphate, sodium chloride, potassium chloride, sodium hydroxide, amino acid, citric acid and tartaric acid.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>24</b>. The drug osmotic pump preparation according to <claim-ref idref="clm-00002-en">claim 16</claim-ref>, wherein said drug is water soluble drug or water insoluble drug.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>25</b>. The drug osmotic pump preparation according to <claim-ref idref="clm-00010-en">claim 24</claim-ref>, wherein said water soluble drug is captopril, ribavirin, ketorolac tromethamine, levocarnitine, pentoxifylline, salvianolic acid, doxofylline, metformin, alfuzosin hydrochloride, ligustrazine phosphate, diltiazem hydrochloride, lamivudine or salbutamol sulfate; and/or
+<claim-text>said water insoluble drug is ibuprofen, ketoprofen, azithromycin, roxithromycin, glipizide, felodipine, nimodipine, nisoldipine, nitrendipine, nifedipine, doxazosin mesylate, risperidone, famotidine, huperzine a, gliquidone, simvastatin, ambroxol hydrochloride, barnidipine, etodolac, acipimox, indapamide, azelnidipine, nimesulide, levetiracetam, tamsulosin hydrochloride, pitavastatin calcium, or etodolic acid.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>26</b>. A method for designing a target preparation with desired drug releasing rate or releasing curve, comprising the steps of:
+<claim-text>(i) providing a drug osmotic pump preparation according to <claim-ref idref="clm-00002-en">claim 16</claim-ref>, wherein said preparation comprises said drug as an active ingredient;</claim-text><claim-text>(ii) placing said drug osmotic pump preparation into water or aqueous solvent, and detecting the evolution situation of the micro chamber structures in said drug osmotic pump preparation;</claim-text><claim-text>(iii) calculating releasing rate or releasing curve of the drug according to the detected evolution situation of the micro chamber structures;</claim-text><claim-text>(iv) selecting a drug osmotic pump preparation as a target preparation from the detected preparations, the releasing rate or releasing curve of which is close to or in accordance with the desired releasing rate or releasing curve of the drug.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>27</b>. The method according to <claim-ref idref="clm-00012-en">claim 26</claim-ref>, wherein step (iv) further comprises:
+<claim-text>based on the detected releasing rate or releasing curve, selecting a preparation A, the releasing rate or releasing curve of which is close to that of the desired drug, modulating the formulation according to preparation A and repeating step (i), (ii) and (iii) for one or more times, thereby selecting a drug osmotic pump preparation as the target preparation from the detected preparations, the releasing rate or releasing curve of which is closer to or in accordance with desired releasing rate or releasing curve of the drug.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>28</b>. A preparation method for drug osmotic pump preparation according to <claim-ref idref="clm-00002-en">claim 16</claim-ref>, comprising the steps of:
+<claim-text>providing a core, wherein said core comprises drug(s) (or drug active ingredient(s)) and chamber structure forming material(s);</claim-text><claim-text>coating said core, to form a coating film covering said core;</claim-text><claim-text>punching said coating film, to form drug releasing pore on said coating film.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>29</b>. A drug osmotic pump preparation comprising core and coating film,
+<claim-text>based on the total weight of the core, said core comprises: 1-60 wt % of drug(s), 5-90 wt % of chamber structure forming material(s), 1-50 wt % of chamber structure shape-modulating agent(s), 0.5-10 wt % of lubricating agent(s), and 1-60 wt % of pharmaceutical acceptable auxiliary material(s);</claim-text><claim-text>based on the total weight of the coating film, said coating film comprises: 40-90 wt % of semi-permeable film coating material(s), 5-40 wt % of pore forming agent(s), and 0-20 wt % of plasticizer(s);</claim-text><claim-text>wherein, said chamber structure forming material is one or more selected from a group consisting of povidone, polyoxyethylene, and copovidone.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>30</b>. The drug osmotic pump preparation according to <claim-ref idref="clm-00015-en">claim 29</claim-ref>, wherein, it comprises
+<claim-text>a core comprising drug(s) (or drug active ingredient(s)) and chamber structure forming material(s); and</claim-text><claim-text>a coating film for covering the core with drug releasing pore(s) on said coating film;</claim-text><claim-text>wherein, when the drug osmotic pump preparation releases drug in water or aqueous medium, micro chamber structures are thus formed in the coating film by the chamber structure forming material(s) and total volume of the micro chamber structure Vb increases with releasing time, and release rate R of the drug active ingredient(s) (or releasing amount A) is directly proportional to Vb.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150245992A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245992A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150245992A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245992A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150245992A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245992A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150245992A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245992A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150245992A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245992A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150245992A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245992A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150245992A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245992A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150245992A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245992A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150245992A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245992A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150245992A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245992A1-20150903-D00010.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150245992A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245992A1-20150903-D00011.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150245992A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245992A1-20150903-D00012.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150245992A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245992A1-20150903-D00013.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150245992A1_00014.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150245992A1-20150903-M00001.TIF" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150245992A1_00015.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150245992A1-20150903-M00002.TIF" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150245992A1_00016.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150245992A1-20150903-M00003.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150245992A1.PDF" type="pdf" size="2858634" pages="29" />
+</lexisnexis-patent-document>

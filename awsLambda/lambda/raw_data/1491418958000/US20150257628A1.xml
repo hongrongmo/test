@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257628A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030126" date-changed="20151002" time-changed="033553">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314599">
+        <country>US</country>
+        <doc-number>20150257628</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14727213</doc-number>
+        <date>20150601</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012281030</doc-number>
+        <date>20121225</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A61B   1/00        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>G01B  11/14        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>11</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>G02B  23/24        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>23</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A61B   1/00004     20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>00004</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   1/00009     20130101 LI20140801BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>00009</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140801</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B   1/00059     20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>00059</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B   1/04        20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>G01B  11/14        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>11</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>G01B  11/24        20130101 LI20140806BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>11</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140806</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>G01C   3/06        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>G02B  23/24        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>23</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>G02B  23/2415      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>23</main-group>
+        <subgroup>2415</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">13</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">IMAGE PROCESSING DEVICE, INFORMATION STORAGE DEVICE, AND IMAGE PROCESSING METHOD</invention-title>
+    <related-documents date-changed="20150917">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>WO</country>
+              <doc-number>/JP2013/072789</doc-number>
+              <date>20130827</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+            <parent-pct-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>PCT/JP2013/072789</doc-number>
+                <date>20130827</date>
+              </document-id>
+            </parent-pct-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007272</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>OLYMPUS CORPORATION</orgname>
+            <role>03</role>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MORITA</last-name>
+            <first-name>Yasunori</first-name>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13072789</doc-number>
+        <date>20130827</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014103425</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151104">
+      <main-family family-id="166470647">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2939586</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20130827</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104883948</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20130827</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014124221</doc-number>
+            <kind>A</kind>
+            <date>20140707</date>
+          </document-id>
+          <application-date>
+            <date>20121225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257628</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150601</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103425</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20130827</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166470646">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2939586</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20130827</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104883948</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20130827</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014124221</doc-number>
+            <kind>A</kind>
+            <date>20140707</date>
+          </document-id>
+          <application-date>
+            <date>20121225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257628</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150601</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103425</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20130827</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">An image processing device includes an image acquisition section that acquires a captured image that includes an image of an object, the captured image being an image captured by an imaging section, a distance information acquisition section that acquires distance information based on the distance from the imaging section to the object when the imaging section captured the captured image, an irregularity information acquisition section that acquires extracted irregularity information from the acquired distance information, the extracted irregularity information being information that represents irregular parts extracted from the object, and an enhancement section that performs an enhancement process on an enhancement target, the enhancement target being an irregular part that is represented by the extracted irregularity information and agrees with characteristics specified by known characteristic information, the known characteristic information being information that represents known characteristics relating to the structure of the object.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150601</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257628A1</docdb-publication-number>
+      <docdb-application-id>444510938</docdb-application-id>
+      <new-owner>OLYMPUS CORPORATION, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:MORITA, YASUNORI;REEL/FRAME:035756/0796</free-text-description>
+      <effective-date>
+        <date>20150511</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation of International Patent Application No. PCT/JP 2013/072789, having an international filing date of Aug. 27, 2013, which designated the United States, the entirety of which is incorporated herein by reference. Japanese Patent Application No. 2012-281030 filed on Dec. 25, 2012 is also incorporated herein by reference in its entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to an image processing device, an information storage device, an image processing method, and the like.</p>
+      <p id="p-00003-en" num="0003">When observing tissue using an endoscope apparatus, and making a diagnosis, a method has been widely used that determines whether or not an early lesion has occurred by observing the surface of tissue as to the presence or absence of minute irregularities (irregular parts). When using an industrial endoscope apparatus instead of a medical endoscope apparatus, it is useful to observe the object (i.e., the surface of the object in a narrow sense) as to the presence or absence of an irregular structure in order to detect whether or not a crack has occurred in the inner side of a pipe that is difficult to directly observe with the naked eye, for example. It is normally useful to detect the presence or absence of an irregular structure from the processing target image (object) when using an image processing device other than an endoscope apparatus.</p>
+      <p id="p-00004-en" num="0004">A process that enhances a specific spatial frequency has been widely used as a process for enhancing a structure (e.g., an irregular structure such as a groove) within the captured image. However, this method is not suitable for detecting the presence or absence of minute irregularities (see above). A method has also been known that effects some change in the object, and captures the object, instead of detecting the presence or absence of irregularities by image processing. For example, when using a medical endoscope apparatus, the contrast of the mucous membrane in the surface area may be increased by spraying a dye (e.g., indigocarmine) to stain the tissue. However, it takes time and cost to spray a dye, and the original color of the object, or the visibility of a structure other than irregularities, may be impaired due to the sprayed dye. Moreover, the method that sprays a dye to tissue may be highly invasive for the patient.</p>
+      <p id="p-00005-en" num="0005">JP-A-2003-88498 discloses a method that enhances an irregular structure by comparing the luminance level of an attention pixel in a locally extracted area with the luminance level of its peripheral pixel, and coloring the attention area when the attention area is darker than the peripheral area.</p>
+      <p id="p-00006-en" num="0006">The process disclosed in JP-A-2003-88498 is designed based on the assumption that the object (i.e., the surface of tissue) is captured darkly when the distance from the imaging section to the object is long, since the intensity of reflected light from the surface of the tissue decreases.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00007-en" num="0007">According to one aspect of the invention, there is provided an image processing device comprising:</p>
+      <p id="p-00008-en" num="0008">an image acquisition section that acquires a captured image that includes an image of an object, the captured image being an image captured by an imaging section;</p>
+      <p id="p-00009-en" num="0009">a distance information acquisition section that acquires distance information based on a distance from the imaging section to the object when the imaging section captured the captured image;</p>
+      <p id="p-00010-en" num="0010">an irregularity information acquisition section that acquires extracted irregularity information from the acquired distance information, the extracted irregularity information being information that represents irregular parts extracted from the object; and</p>
+      <p id="p-00011-en" num="0011">an enhancement section that performs an enhancement process on an enhancement target, the enhancement target being an irregular part among the irregular parts represented by the extracted irregularity information that agrees with characteristics specified by known characteristic information, the known characteristic information being information that represents known characteristics relating to a structure of the object.</p>
+      <p id="p-00012-en" num="0012">According to another aspect of the invention, there is provided an information storage device storing a program that causes a computer to perform steps of:</p>
+      <p id="p-00013-en" num="0013">acquiring a captured image that includes an image of an object, the captured image being an image captured by an imaging section;</p>
+      <p id="p-00014-en" num="0014">acquiring distance information based on a distance from the imaging section to the object when the imaging section captured the captured image;</p>
+      <p id="p-00015-en" num="0015">acquiring extracted irregularity information from the acquired distance information, the extracted irregularity information being information that represents irregular parts extracted from the object; and</p>
+      <p id="p-00016-en" num="0016">performing an enhancement process on an enhancement target, the enhancement target being an irregular part among the irregular parts represented by the extracted irregularity information that agrees with characteristics specified by known characteristic information, the known characteristic information being information that represents known characteristics relating to a structure of the object.</p>
+      <p id="p-00017-en" num="0017">According to another aspect of the invention, there is provided an image processing method comprising:</p>
+      <p id="p-00018-en" num="0018">acquiring a captured image that includes an image of an object, the captured image being an image captured by an imaging section;</p>
+      <p id="p-00019-en" num="0019">acquiring distance information based on a distance from the imaging section to the object when the imaging section captured the captured image;</p>
+      <p id="p-00020-en" num="0020">acquiring extracted irregularity information from the acquired distance information, the extracted irregularity information being information that represents irregular parts extracted from the object; and</p>
+      <p id="p-00021-en" num="0021">performing an enhancement process on an enhancement target, the enhancement target being an irregular part among the irregular parts represented by the extracted irregularity information that agrees with characteristics specified by known characteristic information, the known characteristic information being information that represents known characteristics relating to a structure of the object.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 1</figref> illustrates a system configuration example of an image processing device.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 2</figref> illustrates a configuration example of an endoscope apparatus that includes an image processing device according to one embodiment of the invention.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 3</figref> illustrates a configuration example of a rotary color filter.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 4</figref> illustrates an example of the spectral transmittance characteristics of a color filter.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 5</figref> illustrates a configuration example of an irregularity information acquisition section.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIGS. 6A to 6F</figref> are views illustrating an extracted irregularity information extraction process using a morphological process.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIGS. 7A to 7D</figref> are views illustrating an extracted irregularity information extraction process using a filtering process.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 8</figref> illustrates a configuration example of an image processing section.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 9</figref> illustrates a configuration example of an enhancement section.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 10</figref> illustrates an example of extracted irregularity information.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 11</figref> is a view illustrating a recess width calculation process.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 12</figref> is a view illustrating a recess depth calculation process.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIGS. 13A and 13B</figref> are views illustrating an enhancement level (gain coefficient) setting example when performing an enhancement process on a recess.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIGS. 14A and 14B</figref> are views illustrating an example of a recess enhancement process.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 15</figref> illustrates a configuration example of a distance information acquisition section.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 16</figref> illustrates another configuration example of a distance information acquisition section.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 17</figref> illustrates a configuration example of a computer system.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 18</figref> illustrates a configuration example of a computer system.</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 19</figref> is a flowchart illustrating a process according to one embodiment of the invention.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 20</figref> is a flowchart illustrating an extracted irregularity information extraction process.</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIG. 21</figref> is a flowchart illustrating an enhancement process.</p>
+      <p id="p-00043-en" num="0043">
+        <figref>FIG. 22</figref> is a view illustrating a protrusion width calculation process.</p>
+      <p id="p-00044-en" num="0044">
+        <figref>FIGS. 23A and 23B</figref> are views illustrating an enhancement level (gain coefficient) setting example when performing an enhancement process on a protrusion.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DESCRIPTION OF EXEMPLARY EMBODIMENTS</heading>
+      <p id="p-00045-en" num="0045">According to one embodiment of the invention, an image processing device includes:</p>
+      <p id="p-00046-en" num="0046">an image acquisition section that acquires a captured image that includes an image of an object, the captured image being an image captured by an imaging section;</p>
+      <p id="p-00047-en" num="0047">a distance information acquisition section that acquires distance information based on a distance from the imaging section to the object when the imaging section captured the captured image;</p>
+      <p id="p-00048-en" num="0048">an irregularity information acquisition section that acquires extracted irregularity information from the acquired distance information, the extracted irregularity information being information that represents irregular parts extracted from the object; and</p>
+      <p id="p-00049-en" num="0049">an enhancement section that performs an enhancement process on an enhancement target, the enhancement target being an irregular part among the irregular parts represented by the extracted irregularity information that agrees with characteristics specified by known characteristic information, the known characteristic information being information that represents known characteristics relating to a structure of the object.</p>
+      <p id="p-00050-en" num="0050">According to another embodiment of the invention, an information storage device storing a program causes a computer to perform steps of:</p>
+      <p id="p-00051-en" num="0051">acquiring a captured image that includes an image of an object, the captured image being an image captured by an imaging section;</p>
+      <p id="p-00052-en" num="0052">acquiring distance information based on a distance from the imaging section to the object when the imaging section captured the captured image;</p>
+      <p id="p-00053-en" num="0053">acquiring extracted irregularity information from the acquired distance information, the extracted irregularity information being information that represents irregular parts extracted from the object; and</p>
+      <p id="p-00054-en" num="0054">performing an enhancement process on an enhancement target, the enhancement target being an irregular part among the irregular parts represented by the extracted irregularity information that agrees with characteristics specified by known characteristic information, the known characteristic information being information that represents known characteristics relating to a structure of the object.</p>
+      <p id="p-00055-en" num="0055">According to another embodiment of the invention, an image processing method includes:</p>
+      <p id="p-00056-en" num="0056">acquiring a captured image that includes an image of an object, the captured image being an image captured by an imaging section;</p>
+      <p id="p-00057-en" num="0057">acquiring distance information based on a distance from the imaging section to the object when the imaging section captured the captured image;</p>
+      <p id="p-00058-en" num="0058">acquiring extracted irregularity information from the acquired distance information, the extracted irregularity information being information that represents irregular parts extracted from the object; and</p>
+      <p id="p-00059-en" num="0059">performing an enhancement process on an enhancement target, the enhancement target being an irregular part among the irregular parts represented by the extracted irregularity information that agrees with characteristics specified by known characteristic information, the known characteristic information being information that represents known characteristics relating to a structure of the object.</p>
+      <p id="p-00060-en" num="0060">Exemplary embodiments of the invention are described below. Note that the following exemplary embodiments do not in any way limit the scope of the invention laid out in the claims. Note also that all of the elements described in connection with the following exemplary embodiments should not necessarily be taken as essential elements of the invention.</p>
+      <heading id="h-00006-en" level="1">1. Method</heading>
+      <p id="p-00061-en" num="0061">As illustrated in <figref>FIG. 1</figref>, an image processing device according to several embodiments of the invention includes an image acquisition section <b>310</b> that acquires a captured image that includes an image of an object, the captured image being an image captured by an imaging section (e.g., imaging section <b>200</b> illustrated in <figref>FIG. 2</figref> (described later)), a distance information acquisition section <b>350</b> that acquires distance information based on the distance from the imaging section to the object when the imaging section captured the captured image, an irregularity information acquisition section <b>320</b> that acquires extracted irregularity information from the acquired distance information, the extracted irregularity information being information that represents irregular parts extracted from the object, and an enhancement section <b>333</b> that performs an enhancement process on an enhancement target, the enhancement target being an irregular part among the irregular parts represented by the extracted irregularity information that agrees with characteristics specified by known characteristic information, the known characteristic information being information that represents known characteristics relating to the structure of the object.</p>
+      <p id="p-00062-en" num="0062">Since the distance information is information that corresponds to the distance from the imaging section <b>200</b> to the object, the distance information represents the structure of the object (i.e., tissue (particularly the surface of tissue) when using a medical endoscope apparatus) (see <figref>FIG. 6A</figref>). Specifically, the distance information includes information about a minute irregular structure present on the surface of the object.</p>
+      <p id="p-00063-en" num="0063">However, the distance information also includes information about a structure other than the minute irregular structure that is present on the surface of the object. For example, a lumen structure (hollow tubular structure) (e.g., gullet or large intestine) is normally observed using an endoscope apparatus. In this case, since the wall surface of the structure (tissue) forms a curved surface having a given curvature, the distance represented by the distance information varies corresponding to the curved surface. In the example illustrated in <figref>FIG. 6A</figref>, the distance information includes information about various structures, but represents a structure as a whole in which the distance from the imaging section to the object increases in the rightward direction.</p>
+      <p id="p-00064-en" num="0064">The surface of the object may also include an irregular structure that differs from the irregular structure that corresponds to the extracted irregularity information that is output using the method according to several embodiments of the invention. For example, a fold structure (see <b>2</b>, <b>3</b>, and <b>4</b> in <figref>FIG. 2</figref>) may be observed on the surface of the stomach, the large intestine, or the like. The distance information also includes information about such a fold structure. Note that several embodiments of the invention are intended to observe (using an endoscope apparatus) a minute irregular structure that differs in dimensions from such a structure that is normally observed on the surface of tissue.</p>
+      <p id="p-00065-en" num="0065">Therefore, it is necessary to appropriately specify the information about the desired irregular structure from the distance information that includes a change in distance due to various structures in order to appropriately perform the enhancement process on the attention target. This also applies to the case of using an industrial endoscope apparatus. When using an industrial endoscope apparatus, the distance information may include a change in distance that corresponds to the curved surface of a circular pipe, information about a groove that is formed in advance in order to provide a pipe with a given function, information about a scratch or the like that may be missed due to low severity, and the like. In this case, such information is excluded from the distance information.</p>
+      <p id="p-00066-en" num="0066">Several embodiments of the invention propose a method that acquires the known characteristic information (prior information) that is information that represents the known characteristics relating to the structure of the object, and enhances the irregular part of the object that agrees with the characteristics specified by the known characteristic information. The term “known characteristic information” used herein refers to information that makes it possible to classify the structures of the surface of the object into a useful structure and a structure that is not useful. Specifically, the known characteristic information may be information about an irregular part for which the enhancement process is useful (e.g., an irregular part that is useful for finding an early lesion). In this case, an object that agrees with the known characteristic information is determined to be the enhancement target. Alternatively, the known characteristic information may be information about a structure for which the enhancement process is not useful. In this case, an object that does not agree with the known characteristic information is determined to be the enhancement target. Alternatively, information about a useful irregular part and information about a structure that is not useful may be stored, and the range of the useful irregular part may be set with high accuracy.</p>
+      <p id="p-00067-en" num="0067">In several embodiments of the invention, dimensional information about the irregular part of the object is acquired using the method described later with reference to <figref>FIG. 11</figref> and the like, and compared with the known characteristic information. In this case, it is necessary to set the reference plane (e.g., a plane that corresponds to x<b>1</b> in <figref>FIG. 11</figref>) of the object in order to accurately calculate the dimensional information, and it is desirable to exclude a global change in distance (i.e., a change in distance due to a lumen structure in a narrow sense) from the distance information.</p>
+      <p id="p-00068-en" num="0068">Therefore, several embodiments of the invention utilize a method that acquires the extracted irregularity information by extracting information about a specific structure from the distance information, and determines the enhancement target or the like from the extracted irregularity information and the known characteristic information. The extracted irregularity information in a narrow sense refers to information that excludes information about a lumen structure. In this case, information about a lumen structure may be acquired as the known characteristic information. Note that information about another structure (e.g., fold structure) that is not subjected to the enhancement process may also be excluded. It is possible to reduce the processing load when setting the enhancement target by excluding information about the structure of the object that is not subjected to the enhancement process as much as possible, for example. This process can be implemented by utilizing the known characteristic information that makes it possible to specify the enhancement target.</p>
+      <p id="p-00069-en" num="0069">Note that the structure represented by (included in) the extracted irregularity information need not necessarily be strictly limited to the enhancement target structure.</p>
+      <p id="p-00070-en" num="0070">This is because the enhancement process used in connection with several embodiments of the invention is designed to use the known characteristic information that makes it possible to specify the enhancement target for the following three reasons. First, it is possible to improve the enhancement target selection accuracy by utilizing the known characteristic information during the enhancement process, even if the known characteristic information is used to acquire the extracted irregularity information. Second, the width of the irregular part is taken into account (as described later with reference to <figref>FIGS. 6A to 6F</figref> and the like) when acquiring the extracted irregularity information, and the depth and the height of the irregular part are not taken into account. Specifically, it is necessary to perform a process that utilizes the known characteristic information in addition to the process that acquires the extracted irregularity information when using the depth or the height of the irregular part. Third, the enhancement process may be implemented using a method that changes the enhancement level corresponding to the dimensional information or the like. Specifically, even if information that represents only the enhancement target can be acquired as the extracted irregularity information by performing an extraction process that utilizes the known characteristic information, the known characteristic information is required when setting the enhancement level.</p>
+      <p id="p-00071-en" num="0071">Therefore, it suffices to perform only a process that makes it possible to appropriately perform the enhancement process (i.e., a process that excludes a global structure so that the reference plane can be set in a narrow sense) when extracting the extracted irregularity information, and an additional process is not indispensable. The known characteristic information may not be used when excluding information about a global structure as long as it is possible to appropriately set the reference plane.</p>
+      <p id="p-00072-en" num="0072">It is considered that the known characteristic information (e.g., a typical fold size, or the dimensions of a useful irregular structure) that is used for the enhancement process (and optionally the extracted irregularity information extraction process) differs corresponding to the observation target part (e.g., stomach (upper digestive system) or large intestine (lower digestive system)). Therefore, it is desirable to provide the known characteristic information so that the known characteristic information can be selected or changed corresponding to the observation target, for example.</p>
+      <p id="p-00073-en" num="0073">A first embodiment, a second embodiment, and a third embodiment of the invention are described below. Although the first embodiment, the second embodiment, and the third embodiment are described taking an endoscope apparatus (see <figref>FIG. 2</figref>) as an example, the first embodiment, the second embodiment, and the third embodiment can be applied to an image processing device (see <figref>FIG. 1</figref>) that is not limited to an endoscope apparatus.</p>
+      <p id="p-00074-en" num="0074">The first embodiment illustrates a method that enhances a recess (groove) of the object. The second embodiment illustrates a method that enhances a protrusion (e.g., a polyp when using a medical endoscope apparatus) of the object. In the first embodiment and the second embodiment, a color conversion process is used as a specific example of the enhancement process. The third embodiment illustrates an enhancement method that increases contrast.</p>
+      <heading id="h-00007-en" level="1">2. First Embodiment</heading>
+      <p id="p-00075-en" num="0075">The first embodiment is described below. A system configuration example of the endoscope apparatus that includes the image processing device according to the first embodiment will be described first, and the extracted irregularity information acquisition process, the enhancement process, and the distance information acquisition process will then be described. An example that implements the method according to the first embodiment by means of software will then be described, and the flow of the process according to the first embodiment will be described thereafter using a flowchart.</p>
+      <heading id="h-00008-en" level="2">2.1 System Configuration Example</heading>
+      <p id="p-00076-en" num="0076">
+        <figref>FIG. 2</figref> illustrates a configuration example of the endoscope apparatus according to the first embodiment. The endoscope apparatus includes a light source section <b>100</b>, an imaging section <b>200</b>, a control device <b>300</b> (processor section), a display section <b>400</b>, and an external I/F section <b>500</b>.</p>
+      <p id="p-00077-en" num="0077">The light source section <b>100</b> includes a white light source <b>110</b>, a light source aperture <b>120</b>, a light source aperture driver section <b>130</b> that drives the light source aperture <b>120</b>, and a rotary color filter <b>140</b> that includes a plurality of filters that differ in spectral transmittance. The light source section <b>100</b> also includes a rotation driver section <b>150</b> that drives the rotary color filter <b>140</b>, and a condenser lens <b>160</b> that focuses light that has passed through the rotary color filter <b>140</b> on the incident end face of a light guide fiber <b>210</b>. The light source aperture driver section <b>130</b> adjusts the intensity of light by opening and closing the light source aperture <b>120</b> based on a control signal output from a control section <b>340</b> included in the control device <b>300</b>.</p>
+      <p id="p-00078-en" num="0078">
+        <figref>FIG. 3</figref> illustrates a detailed configuration example of the rotary color filter <b>140</b>. The rotary color filter <b>140</b> includes a red (R) color filter <b>701</b>, a green (G) color filter <b>702</b>, a blue (B) color filter <b>703</b>, and a rotary motor <b>704</b>.</p>
+      <p id="p-00079-en" num="0079">
+        <figref>FIG. 4</figref> illustrates an example of the spectral characteristics of the color filters <b>701</b> to <b>703</b>. The rotation driver section <b>150</b> rotates the rotary color filter <b>140</b> at a given rotational speed in synchronization with the imaging period of image sensors <b>260</b>-<b>1</b> and <b>260</b>-<b>2</b> based on the control signal output from the control section <b>340</b>. For example, when the rotary color filter <b>140</b> is rotated at 20 revolutions per second, each color filter crosses the incident white light every 1/60th of a second. In this case, the image sensors <b>260</b>-<b>1</b> and <b>260</b>-<b>2</b> capture and transfer image signals every 1/60th of a second. The image sensors <b>260</b>-<b>1</b> and <b>260</b>-<b>2</b> are monochrome single-chip image sensors, for example. The image sensors <b>260</b>-<b>1</b> and <b>260</b>-<b>2</b> are implemented by a CCD image sensor or a CMOS image sensor, for example. Specifically, the endoscope apparatus according to the first embodiment frame-sequentially captures an R image, a G image, and a B image every 1/60th of a second.</p>
+      <p id="p-00080-en" num="0080">The imaging section <b>200</b> is formed to be elongated and flexible so that the imaging section <b>200</b> can be inserted into a body cavity, for example. The imaging section <b>200</b> includes the light guide fiber <b>210</b> that guides the light focused by the light source section <b>100</b> to an illumination lens <b>220</b>, and the illumination lens <b>220</b> that diffuses the light guided by the light guide fiber <b>210</b>, and illuminates the observation object. The imaging section <b>200</b> further includes objective lenses <b>230</b>-<b>1</b> and <b>230</b>-<b>2</b> that focus the reflected light from the observation target, focus lenses <b>240</b>-<b>1</b> and <b>240</b>-<b>2</b> that adjust the focal distance, a lens driver section <b>250</b> that moves the positions of the focus lenses <b>240</b>-<b>1</b> and <b>240</b>-<b>2</b>, and the image sensors <b>260</b>-<b>1</b> and <b>260</b>-<b>2</b> that detect the focused reflected light.</p>
+      <p id="p-00081-en" num="0081">The objective lenses <b>230</b>-<b>1</b> and <b>230</b>-<b>2</b> are situated at a given interval so that a given parallax image (hereinafter may be referred to as “stereo image”) can be captured. The objective lenses <b>230</b>-<b>1</b> and <b>230</b>-<b>2</b> respectively form a left image and a right image on the image sensors <b>260</b>-<b>1</b> and <b>260</b>-<b>2</b>. The left image and the right image respectively output from the image sensors <b>260</b>-<b>1</b> and <b>260</b>-<b>2</b> are output to an image acquisition section (A/D conversion section) <b>310</b>. Note that the distance information need not necessarily be acquired through a stereo matching process (described later with reference to <figref>FIG. 16</figref>). When acquiring the distance information using a method that does not utilize the parallax image, one objective lens, one focus lens, and one image sensor may be used (differing from the example illustrated in <figref>FIG. 2</figref>) instead of using a plurality of objective lenses, a plurality of focus lenses, and a plurality of image sensors.</p>
+      <p id="p-00082-en" num="0082">The lens driver section <b>250</b> is a voice coil motor (VCM), for example, and is connected to the focus lenses <b>240</b>-<b>1</b> and <b>240</b>-<b>2</b>. The lens driver section <b>250</b> adjusts the in-focus object plane position by switching the positions of the focus lenses <b>240</b>-<b>1</b> and <b>240</b>-<b>2</b> between consecutive positions. The imaging section <b>200</b> is provided with a switch <b>270</b> that allows the user to issue an enhancement process ON/OFF instruction. When the user has operated the switch <b>270</b>, an enhancement process ON/OFF instruction signal is output from the switch <b>270</b> to the control section <b>340</b>.</p>
+      <p id="p-00083-en" num="0083">The control device <b>300</b> controls each section of the endoscope apparatus, and performs image processing. The control device <b>300</b> includes the image acquisition section (A/D conversion section) <b>310</b>, an irregularity information acquisition section <b>320</b>, an image processing section <b>330</b>, the control section <b>340</b>, a distance information acquisition section <b>350</b>, and a storage section <b>360</b>. The details of the irregularity information acquisition section <b>320</b> and the image processing section <b>330</b> are described later.</p>
+      <p id="p-00084-en" num="0084">The image acquisition section (A/D conversion section) <b>310</b> converts the image signals into digital signals, and transmits the converted image signals to the image processing section <b>330</b>. The image processing section <b>330</b> processes the image signals (digital signals), and transmits the image signals to the display section <b>400</b>. The control section <b>340</b> controls each section of the endoscope apparatus. More specifically, the control section <b>340</b> synchronizes the light source aperture driver section <b>130</b>, a lens position control section <b>359</b> (when the distance information acquisition section <b>350</b> has the configuration illustrated in <figref>FIG. 16</figref>), and the image processing section <b>330</b>. The control section <b>340</b> is connected to the switch <b>270</b> and the external I/F section <b>500</b>, and transmits the enhancement process ON/OFF instruction signal to the image processing section <b>330</b>.</p>
+      <p id="p-00085-en" num="0085">The distance information acquisition section <b>350</b> calculates the object distance using the image signals transmitted from the image processing section <b>330</b> under control of the control section <b>340</b>. In the first embodiment, the information about the object distance is calculated by the stereo matching process. The information about the object distance is transmitted to the image processing section <b>330</b>. The details of the distance information acquisition section <b>350</b> are described later.</p>
+      <p id="p-00086-en" num="0086">The storage section <b>360</b> stores various type of information used for the process performed by the control device <b>300</b>. The function of the storage section <b>360</b> may be implemented by a memory (e.g., RAM), a hard disk drive (HDD), or the like. The storage section <b>360</b> stores the known characteristic information used for the enhancement process and the like, for example.</p>
+      <p id="p-00087-en" num="0087">The display section <b>400</b> is a display device that can display a movie (moving image), and is implemented by a CRT, a liquid crystal monitor, or the like.</p>
+      <p id="p-00088-en" num="0088">The external I/F section <b>500</b> is an interface that allows the user to input information to the endoscope apparatus, for example. The external I/F section <b>500</b> includes an enhancement process button (not illustrated in the drawings) that allows the user to issue the enhancement process ON/OFF instruction, and the user can issue the enhancement process ON/OFF instruction using the external I/F section <b>500</b>. Note that the function of the enhancement process button is the same as that of the switch <b>270</b> provided to the imaging section <b>200</b>. The external I/F section <b>500</b> outputs the enhancement process ON/OFF instruction signal to the control section <b>340</b>. The external I/F section <b>500</b> includes a power switch (power ON/OFF switch), a mode (e.g., imaging mode) switch button, and the like.</p>
+      <heading id="h-00009-en" level="2">2.2 Extracted Irregularity Information Acquisition Process</heading>
+      <p id="p-00089-en" num="0089">The irregularity information acquisition section <b>320</b> extracts the extracted irregularity information that represents an irregular part on the surface of tissue from the distance information (object distance) input from the distance information acquisition section <b>350</b>. A method that sets an extraction process parameter based on the known characteristic information, and extracts the extracted irregularity information from the distance information using an extraction process that utilizes the extraction process parameter, is described below. Specifically, an irregular part having the desired dimensional characteristics (i.e., an irregular part having a width within the desired range in a narrow sense) is extracted as the extracted irregularity information using the known characteristic information. Since the three-dimensional structure of the object is reflected in the distance information, the distance information includes information about the desired irregular part, and information about a global structure that is larger than the desired irregular part, and corresponds to a fold structure, and the wall surface structure of a lumen. Specifically, the extracted irregularity information acquisition process may be referred to as a process that excludes information about a fold structure and a lumen structure from the distance information.</p>
+      <p id="p-00090-en" num="0090">Note that the extracted irregularity information acquisition process is not limited thereto. For example, the extracted irregularity information acquisition process may not utilize the known characteristic information. When the extracted irregularity information acquisition process utilizes the known characteristic information, various types of information may be used as the known characteristic information. For example, the extraction process may exclude information about a lumen structure from the distance information, but allow information about a fold structure to remain. In such a case, it is also possible to perform the enhancement process on the desired object since the known characteristic information is used during the enhancement process described later.</p>
+      <p id="p-00091-en" num="0091">
+        <figref>FIG. 5</figref> illustrates a configuration example of the irregularity information acquisition section <b>320</b>. The irregularity information acquisition section <b>320</b> includes a known characteristic information acquisition section <b>321</b>, an extraction section <b>323</b>, and an extracted irregularity information output section <b>325</b>. Note that the configuration of the irregularity information acquisition section <b>320</b> is not limited to the configuration illustrated in <figref>FIG. 5</figref>. Various modifications may be made, such as omitting some of the elements illustrated in <figref>FIG. 5</figref>, or adding other elements.</p>
+      <p id="p-00092-en" num="0092">The known characteristic information acquisition section <b>321</b> acquires the known characteristic information from the storage section <b>360</b>. Specifically, the known characteristic information acquisition section <b>321</b> acquires the size (i.e., dimensional information (e.g., width, height, or depth)) of the extraction target irregular part of tissue due to a lesion, the size (i.e., dimensional information (e.g., width, height, or depth)) of the lumen and the folds of the observation target part based on observation target part information, and the like as the known characteristic information. Note that the observation target part information is information that represents the observation target part that is determined based on scope ID information, for example. The observation target part information may also be included in the known characteristic information. For example, when the scope is an upper gastrointestinal scope, the observation target part is the gullet, the stomach, or the duodenum. When the scope is a lower gastrointestinal scope, the observation target part is the large intestine. Since the dimensional information about the extraction target irregular part and the dimensional information about the lumen and the folds of the observation target part differ corresponding to each part, the known characteristic information acquisition section <b>321</b> outputs information about a typical size of a lumen and folds acquired based on the observation target part information to the extraction section <b>323</b>, for example. Note that the observation target part information need not necessarily be determined based on the scope ID information. For example, the user may select the observation target part information using a switch provided to the external I/F section <b>500</b>.</p>
+      <p id="p-00093-en" num="0093">The extraction section <b>323</b> determines the extraction process parameter based on the known characteristic information, and performs the extracted irregularity information extraction process based on the determined extraction process parameter.</p>
+      <p id="p-00094-en" num="0094">The extraction section <b>323</b> performs a low-pass filtering process using a given size (N×N pixels) on the input distance information to extract rough distance information. The extraction section <b>323</b> adaptively determines the extraction process parameter based on the extracted rough distance information. The details of the extraction process parameter are described later. The extraction process parameter may be the morphological kernel size (i.e., the size of a structural element) that is adapted to the distance information at the plane position orthogonal to the distance information of the distance map, a low-pass filter that is adapted to the distance information at the plane position, or a high-pass filter that is adapted to the plane position, for example. Specifically, the extraction process parameter is change information that changes an adaptive nonlinear or linear low-pass filter or high-pass filter corresponding to the distance information. Note that the low-pass filtering process is performed to suppress a decrease in the accuracy of the extraction process that may occur when the extraction process parameter changes frequently or significantly corresponding to the position within the image. The low-pass filtering process may not be performed when a decrease in the accuracy of the extraction process does not occur.</p>
+      <p id="p-00095-en" num="0095">The extraction section <b>323</b> performs the extraction process based on the determined extraction process parameter to extract only the irregular parts of the object having the desired size. The extracted irregular parts are output to the image processing section <b>330</b> as the extracted irregularity information (irregularity image) having the same size as that of the captured image (i.e., the image subjected to the enhancement process).</p>
+      <p id="p-00096-en" num="0096">The details of the extraction process parameter determination process performed by the extraction section <b>323</b> are described below with reference to <figref>FIGS. 6A to 6F</figref>. In <figref>FIGS. 6A to 6F</figref>, the extraction process parameter is the diameter of a structural element (sphere) used for an opening process and a closing process (morphological process). <figref>FIG. 6A</figref> is a view schematically illustrating the surface of the object (tissue) and the vertical cross section of the imaging section <b>200</b>. The folds (<b>2</b>, <b>3</b>, and <b>4</b> in <figref>FIG. 2</figref>) on the surface of the tissue are gastric folds, for example. As illustrated in <figref>FIG. 2</figref>, early lesions <b>10</b>, <b>20</b>, and <b>30</b> are formed on the surface of the tissue.</p>
+      <p id="p-00097-en" num="0097">The extraction process parameter determination process performed by the extraction section <b>323</b> is intended to determine the extraction process parameter for extracting only an irregular part useful for specifying the early lesions <b>10</b>, <b>20</b>, and <b>30</b> from the surface of the tissue without extracting the folds <b>2</b>, <b>3</b>, and <b>4</b> from the surface of the tissue.</p>
+      <p id="p-00098-en" num="0098">In order to determine such an extraction process parameter, it is necessary to use the size (i.e., dimensional information (e.g., width, height, or depth)) of the extraction target irregular part of tissue due to a lesion, and the size (i.e., dimensional information (e.g., width, height, or depth)) of the lumen and the folds of the observation target part based on the observation target part information (that are stored in the storage section <b>360</b>).</p>
+      <p id="p-00099-en" num="0099">It is possible to extract only the desired irregular part by determining the diameter of the sphere (with which the surface of the tissue is traced during the opening process and the closing process) using the above information. The diameter of the sphere is set to be smaller than the size of the lumen and the folds of the observation target part based on the observation target part information, and larger than the size of the extraction target irregular part of tissue due to a lesion. It is desirable to set the diameter of the sphere to be equal to or smaller than half of the size of the folds, and equal to or larger than the size of the extraction target irregular part of tissue due to a lesion. <figref>FIGS. 6A to 6F</figref> illustrate an example in which a sphere that satisfies the above conditions is used for the opening process and the closing process.</p>
+      <p id="p-00100-en" num="0100">
+        <figref>FIG. 6B</figref> illustrates the surface of the tissue after the closing process has been performed. As illustrated in <figref>FIG. 6B</figref>, information in which the recesses among the irregular parts having the extraction target dimensions are filled while maintaining the change in distance due to the wall surface of the tissue, and the structures such as the folds, is obtained by determining an appropriate extraction process parameter (i.e., the size of the structural element). Only the recesses on the surface of the tissue can be extracted (see <figref>FIG. 6C</figref>) by calculating the difference between information obtained by the closing process and the original surface of the tissue (see <figref>FIG. 6A</figref>).</p>
+      <p id="p-00101-en" num="0101">
+        <figref>FIG. 6D</figref> illustrates the surface of the tissue after the opening process has been performed. As illustrated in <figref>FIG. 6D</figref>, information in which the protrusions among the irregular parts having the extraction target dimensions are removed, is obtained by the opening process. Only the protrusions on the surface of the tissue can be extracted (see <figref>FIG. 6E</figref>) by calculating the difference between information obtained by the opening process and the original surface of the tissue.</p>
+      <p id="p-00102-en" num="0102">The opening process and the closing process may be performed on the surface of the tissue using a sphere having an identical size. However, since the stereo image is characterized in that the area of the image formed on the image sensor decreases as the distance represented by the distance information increases, the diameter of the sphere may be increased when the distance represented by the distance information is short, and may be decreased when the distance represented by the distance information is long in order to extract an irregular part having the desired size.</p>
+      <p id="p-00103-en" num="0103">
+        <figref>FIG. 6F</figref> illustrates an example in which the diameter of the sphere is changed with respect to the average distance information when performing the opening process and the closing process on the distance map. Specifically, it is necessary to correct the actual size of the surface of the tissue using the optical magnification to agree with the pixel pitch of the image formed on the image sensor in order to extract the desired irregular part with respect to the distance map. Therefore, it is desirable that the extraction section <b>323</b> acquire the optical magnification or the like of the imaging section <b>200</b> that is determined based on the scope ID information.</p>
+      <p id="p-00104-en" num="0104">Specifically, the process that determines the size of the structural element (extraction process parameter) is performed so that the exclusion target shape (e.g., folds) is not deformed (i.e., the sphere moves to follow the exclusion target shape) when the process using the structural element is performed on the exclusion target shape (when the sphere is moved on the surface in <figref>FIG. 6A</figref>). The process that determines the size of the structural element (extraction process parameter) is performed so that the extraction target irregular part (extracted irregularity information) is removed (i.e., the sphere does not enter the recess or the protrusion) when the process using the structural element is performed on the extraction target irregular part. Since the morphological process is a well-known process, detailed description thereof is omitted.</p>
+      <p id="p-00105-en" num="0105">The extraction process is not limited to the morphological process. The extraction process may be implemented using a filtering process. For example, when using a low-pass filtering process, the characteristics of the low-pass filter are determined so that the extraction target irregular part of tissue due to a lesion can be smoothed, and the structure of the lumen and the folds of the observation target part can be maintained. Since the characteristics of the extraction target (i.e., irregular part) and the exclusion target (i.e., folds and lumen) can be determined from the known characteristic information, the spatial frequency characteristics are known, and the characteristics of the low-pass filter can be determined.</p>
+      <p id="p-00106-en" num="0106">The low-pass filter may be a known Gaussian filter or bilateral filter. The characteristics of the low-pass filter may be controlled using a parameter σ, and a σ map corresponding to each pixel of the distance map may be generated. When using a bilateral filter, the σ map may be generated using either or both of a luminance difference parameter σ and a distance parameter σ. A Gaussian filter is represented by the following expression (1), and a bilateral filter is represented by the following expression (2).</p>
+      <p id="p-00107-en" num="0000">
+        <maths id="maths-00001-en" num="00001">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <mi>f</mi>
+                      <mo></mo>
+                      <mrow>
+                        <mo>(</mo>
+                        <mi>x</mi>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                    <mo>=</mo>
+                    <mrow>
+                      <mfrac>
+                        <mn>1</mn>
+                        <mi>N</mi>
+                      </mfrac>
+                      <mo></mo>
+                      <mrow>
+                        <mi>exp</mi>
+                        <mo>(</mo>
+                        <mrow>
+                          <mo>-</mo>
+                          <mfrac>
+                            <msup>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mi>x</mi>
+                                  <mo>-</mo>
+                                  <mrow>
+                                    <mi>x</mi>
+                                    <mo></mo>
+                                    <mstyle>
+                                      <mspace width="0.3em" height="0.3ex" />
+                                    </mstyle>
+                                    <mo></mo>
+                                    <mn>0</mn>
+                                  </mrow>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mn>2</mn>
+                            </msup>
+                            <mrow>
+                              <mn>2</mn>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.3em" height="0.3ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <msup>
+                                <mi>σ</mi>
+                                <mn>2</mn>
+                              </msup>
+                            </mrow>
+                          </mfrac>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>1</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <mi>f</mi>
+                      <mo></mo>
+                      <mrow>
+                        <mo>(</mo>
+                        <mi>x</mi>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                    <mo>=</mo>
+                    <mrow>
+                      <mfrac>
+                        <mn>1</mn>
+                        <mi>N</mi>
+                      </mfrac>
+                      <mo></mo>
+                      <mrow>
+                        <mi>exp</mi>
+                        <mo>(</mo>
+                        <mrow>
+                          <mo>-</mo>
+                          <mfrac>
+                            <msup>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mi>x</mi>
+                                  <mo>-</mo>
+                                  <mrow>
+                                    <mi>x</mi>
+                                    <mo></mo>
+                                    <mstyle>
+                                      <mspace width="0.3em" height="0.3ex" />
+                                    </mstyle>
+                                    <mo></mo>
+                                    <mn>0</mn>
+                                  </mrow>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mn>2</mn>
+                            </msup>
+                            <mrow>
+                              <mn>2</mn>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.3em" height="0.3ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <msubsup>
+                                <mi>σ</mi>
+                                <mi>c</mi>
+                                <mn>2</mn>
+                              </msubsup>
+                            </mrow>
+                          </mfrac>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                      <mo>×</mo>
+                      <mrow>
+                        <mi>exp</mi>
+                        <mo>(</mo>
+                        <mrow>
+                          <mo>-</mo>
+                          <mfrac>
+                            <msup>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mrow>
+                                    <mi>p</mi>
+                                    <mo></mo>
+                                    <mrow>
+                                      <mo>(</mo>
+                                      <mi>x</mi>
+                                      <mo>)</mo>
+                                    </mrow>
+                                  </mrow>
+                                  <mo>-</mo>
+                                  <mrow>
+                                    <mi>p</mi>
+                                    <mo></mo>
+                                    <mrow>
+                                      <mo>(</mo>
+                                      <mrow>
+                                        <mi>x</mi>
+                                        <mo></mo>
+                                        <mstyle>
+                                          <mspace width="0.3em" height="0.3ex" />
+                                        </mstyle>
+                                        <mo></mo>
+                                        <mn>0</mn>
+                                      </mrow>
+                                      <mo>)</mo>
+                                    </mrow>
+                                  </mrow>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mn>2</mn>
+                            </msup>
+                            <mrow>
+                              <mn>2</mn>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.3em" height="0.3ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <msubsup>
+                                <mi>σ</mi>
+                                <mi>v</mi>
+                                <mn>2</mn>
+                              </msubsup>
+                            </mrow>
+                          </mfrac>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>2</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00001-en" wi="N/A" he="N/A" file="US20150257628A1_00023.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150257628A1-20150917-M00001.TIF" />
+        </maths>
+      </p>
+      <p id="p-00108-en" num="0107">For example, a σ map subjected to a thinning process may be generated, and the desired low-pass filter may be applied to the distance map using the σ map.</p>
+      <p id="p-00109-en" num="0108">The parameter σ that determines the characteristics of the low-pass filter is set to be larger than a value obtained by multiplying the pixel-to-pixel distance D<b>1</b> of the distance map corresponding to the size of the extraction target irregular part by α (&gt;1), and smaller than a value obtained by multiplying the pixel-to-pixel distance D<b>2</b> of the distance map corresponding to the size of the lumen and the folds specific to the observation target part by β (&lt;1). For example, σ may calculated by σ=(α*D<b>1</b>+β*D<b>2</b>)/2*Rσ.</p>
+      <p id="p-00110-en" num="0109">Steeper sharp-cut characteristics may be set as the characteristics of the low-pass filter. In this case, the filter characteristics are controlled using a cut-off frequency fc instead of the parameter σ. The cut-off frequency fc may be set so that a frequency F<b>1</b> in the cycle D<b>1</b> does not pass through, and a frequency F<b>2</b> in the cycle D<b>2</b> does pass through. For example, the cut-off frequency fc may be set to fc=(F<b>1</b>+F<b>2</b>)/2*Rf.</p>
+      <p id="p-00111-en" num="0110">Note that Rσ is a function of the local average distance. The output value increases as the local average distance decreases, and decreases as the local average distance increases. Rf is a function that is designed so that the output value decreases as the local average distance decreases, and increases as the local average distance increases.</p>
+      <p id="p-00112-en" num="0111">A recess image can be output by extracting only a negative area obtained by subtracting the low-pass filtering results from the distance map that is not subjected to the low-pass filtering process. A protrusion image can be output by extracting only a positive area obtained by subtracting the low-pass filtering results from the distance map that is not subjected to the low-pass filtering process.</p>
+      <p id="p-00113-en" num="0112">
+        <figref>FIGS. 7A to 7D</figref> illustrate extraction of the desired irregular part due to a lesion using the low-pass filter. As illustrated in <figref>FIG. 7B</figref>, information in which the irregular parts having the extraction target dimensions are removed while maintaining the change in distance due to the wall surface of the tissue, and the structures such as the folds, is obtained by performing the filtering process using the low-pass filter on the distance map illustrated in <figref>FIG. 7A</figref>. Since the low-pass filtering results serve as a reference plane for extracting the desired irregular parts (see <figref>FIG. 7B</figref>) even if the opening process and the closing process (see <figref>FIGS. 6A to 6F</figref>) are not performed, the irregular parts can be extracted (see <figref>FIG. 7C</figref>) by performing a subtraction process on the original distance map (see <figref>FIG. 7A</figref>). When using the morphological process, the size of the structural element is adaptively changed corresponding to the rough distance information. When using the filtering process, it is desirable to change the characteristics of the low-pass filter corresponding to the rough distance information. <figref>FIG. 7D</figref> illustrates an example in which the characteristics of the low-pass filter are changed corresponding to the rough distance information.</p>
+      <p id="p-00114-en" num="0113">A high-pass filtering process may be performed instead of the low-pass filtering process. In this case, the characteristics of the high-pass filter are determined so that the extraction target irregular part of tissue due to a lesion is maintained while removing the structure of the lumen and the folds specific to the observation target part.</p>
+      <p id="p-00115-en" num="0114">The filter characteristics of the high-pass filter are controlled using a cut-off frequency fhc, for example. The cut-off frequency fhc may be set so that the frequency F<b>1</b> in the cycle D<b>1</b> passes through, and the frequency F<b>2</b> in the cycle D<b>2</b> does not pass through. For example, the cut-off frequency fhc may be set to fhc=(F<b>1</b>+F<b>2</b>)/2*Rf. Note that Rf is a function that is designed so that the output value decreases as the local average distance decreases, and increases as the local average distance increases.</p>
+      <p id="p-00116-en" num="0115">The extraction target irregular part due to a lesion can be extracted directly by performing the high-pass filtering process. Specifically, the extracted irregularity information is acquired directly (see <figref>FIG. 7C</figref>) without performing a subtraction process (difference calculation process).</p>
+      <heading id="h-00010-en" level="2">2.3 Enhancement Process</heading>
+      <p id="p-00117-en" num="0116">
+        <figref>FIG. 8</figref> illustrates a detailed configuration example of the image processing section <b>330</b> according to the first embodiment. The image processing section <b>330</b> includes a preprocessing section <b>331</b>, a demosaicing section <b>332</b>, an enhancement section <b>333</b>, and a post-processing section <b>334</b>. The image acquisition section (A/D conversion section) <b>310</b> is connected to the preprocessing section <b>331</b>. The preprocessing section <b>331</b> is connected to the demosaicing section <b>332</b>. The demosaicing section <b>332</b> is connected to the distance information acquisition section <b>350</b> and the enhancement section <b>333</b>. The irregularity information acquisition section <b>320</b> is connected to the enhancement section <b>333</b>. The enhancement section <b>333</b> is connected to the post-processing section <b>334</b>. The post-processing section <b>334</b> is connected to the display section <b>400</b>. The control section <b>340</b> is bidirectionally connected to each section, and controls each section.</p>
+      <p id="p-00118-en" num="0117">The preprocessing section <b>331</b> performs an OB clamp process, a gain control process, and a WB correction process on the image signals input from the image acquisition section (A/D conversion section) <b>310</b> using an OB clamp value, a gain correction value, and a WB coefficient stored in the control section <b>340</b>. The preprocessing section <b>331</b> transmits the resulting image signals to the demosaicing section <b>332</b>.</p>
+      <p id="p-00119-en" num="0118">The demosaicing section <b>332</b> performs a demosaicing process on the frame-sequential image signals processed by the preprocessing section <b>331</b> based on the control signal output from the control section <b>340</b>. Specifically, the demosaicing section <b>332</b> stores the image signals that have been input frame sequentially and correspond to each color (light) (R, G, or B) on a frame basis, and simultaneously reads the stored image signals that correspond to each color (light). The demosaicing section <b>332</b> transmits the demosaiced image signals to the distance information acquisition section <b>350</b> and the enhancement section <b>333</b>.</p>
+      <p id="p-00120-en" num="0119">The enhancement section <b>333</b> performs an attention pixel enhancement process on the image signals transmitted from the demosaicing section <b>332</b>. Specifically, the enhancement section <b>333</b> generates an image that simulates an image in which indigocarmine (that improves the contrast of minute irregular parts on the surface of tissue) is sprayed. More specifically, when the attention pixel represented by the image signal is a recess (hereinafter may be referred to as “groove”) formed in the surface of tissue, the enhancement section <b>333</b> multiplies the image signal by a gain that increases the degree of blueness. Note that the extracted irregularity information transmitted from the irregularity information acquisition section <b>320</b> corresponds to the image signal input from the demosaicing section <b>332</b> on a one-to-one basis (on a pixel basis).</p>
+      <p id="p-00121-en" num="0120">As illustrated in <figref>FIG. 9</figref>, the enhancement section <b>333</b> includes a dimensional information acquisition section <b>3331</b>, a recess extraction section <b>3332</b>, a protrusion extraction section <b>3333</b>, a correction section <b>3334</b>, and an enhancement level setting section <b>3335</b>. Note that the configuration of the enhancement section <b>333</b> is not limited to the configuration illustrated in <figref>FIG. 9</figref>. Various modifications may be made, such as omitting some of the elements illustrated in <figref>FIG. 9</figref>, or adding other elements.</p>
+      <p id="p-00122-en" num="0121">The dimensional information acquisition section <b>3331</b> acquires the known characteristic information (particularly the dimensional information) from the storage section <b>360</b> or the like. The recess extraction section <b>3332</b> extracts the enhancement target recess from the irregular parts included in (represented by) the extracted irregularity information based on the known characteristic information. The protrusion extraction section <b>3333</b> extracts the enhancement target protrusion from the irregular parts included in (represented by) the extracted irregularity information based on the known characteristic information.</p>
+      <p id="p-00123-en" num="0122">The correction section <b>3334</b> performs a correction process that improves the visibility of the enhancement target. The details thereof are described later. The correction section <b>3334</b> may perform the correction process using the enhancement level that has been set by the enhancement level setting section <b>3335</b>.</p>
+      <p id="p-00124-en" num="0123">The enhancement process ON/OFF instruction signal is input from the switch <b>270</b> or the external I/F section <b>500</b> through the control section <b>340</b>. When the instruction signal instructs not to perform the enhancement process, the enhancement section <b>333</b> transmits the image signals input from the demosaicing section <b>332</b> to the post-processing section <b>334</b> without performing the enhancement process. When the instruction signal instructs to perform the enhancement process, the enhancement section <b>333</b> performs the enhancement process.</p>
+      <p id="p-00125-en" num="0124">When the enhancement section <b>333</b> performs the enhancement process, the enhancement section <b>333</b> detects a groove formed in the surface of tissue from the extracted irregularity information based on the known characteristic information. The known characteristic information represents the width and the depth of a groove formed in the surface of tissue. A minute groove formed in the surface of tissue normally has a width equal to or smaller than several thousand micrometers and a depth equal to or smaller than several hundred micrometers. The width and the depth of the groove formed in the surface of tissue are calculated from the extracted irregularity information.</p>
+      <p id="p-00126-en" num="0125">
+        <figref>FIG. 10</figref> illustrates one-dimensional extracted irregularity information. The distance from the image sensor to the surface of tissue increases in the depth direction provided that the position (imaging plane) of the image sensor <b>260</b> is 0. <figref>FIG. 11</figref> illustrates a groove width calculation method. Specifically, the ends of sequential points that are situated deeper than the reference plane and apart from the imaging plane at a distance equal to or larger than a given threshold value x<b>1</b> (i.e., the points A and B illustrated in <figref>FIG. 11</figref>) are detected from the extracted irregularity information. In the example illustrated in <figref>FIG. 11</figref>, the reference plane is situated at the distance x<b>1</b> from the imaging plane. The number N of pixels corresponding to the points A and B and the points situated between the points A and B is calculated. The average value xave of the distances x<b>1</b> to xN from the image sensor (at which the points A and B and the points situated between the points A and B are respectively situated) is calculated. The width w of the groove is calculated by the following expression (3). Note that p is the width per pixel of the image sensor <b>260</b>, and K is the optical magnification that corresponds to the distance xave from the image sensor on a one-to-one basis.</p>
+      <p id="p-00127-en" num="0000">[in-line-formulae]<i>w=N×p×K</i>  (3)[/in-line-formulae]</p>
+      <p id="p-00128-en" num="0126">
+        <figref>FIG. 12</figref> illustrates a groove depth calculation method. The depth d of the groove is calculated by the following expression (4). Note that xM is the maximum value among the distances x<b>1</b> to xN, and xmin is the distance x<b>1</b> or xN, whichever is smaller.</p>
+      <p id="p-00129-en" num="0000">[in-line-formulae]<i>d=xM−x</i>min1  (4)[/in-line-formulae]</p>
+      <p id="p-00130-en" num="0127">The user may arbitrarily set the reference plane (i.e., the plane situated at the distance x<b>1</b> from the image sensor) through the external I/F section <b>500</b>. When the width and the depth of the groove thus calculated agree with the known characteristic information, the pixel position of the corresponding image signal is set to be the attention pixel. For example, when the width of the groove is equal to or smaller than 3000 μm, and the depth of the groove is equal to or smaller than 500 μm, the corresponding pixel is set to be the attention pixel. The user may set the threshold values (width and depth) through the external I/F section <b>500</b>.</p>
+      <p id="p-00131-en" num="0128">The enhancement section <b>333</b> thus determines the enhancement target object (i.e., the enhancement target attention pixel in a narrow sense). The enhancement section <b>333</b> then multiplies the pixel value of the pixel set to be the attention pixel by a gain coefficient. Specifically, the enhancement section <b>333</b> increases the signal value of the B signal of the attention pixel by multiplying the pixel value by the gain coefficient that is equal to or larger than 1, and decreases the signal values of the R signal and the G signal of the attention pixel by multiplying the pixel values by the gain coefficient that is equal to or smaller than 1 This makes it possible to obtain an image in which the degree of blueness of the groove (recess) formed in the surface of tissue is increased (i.e., an image that simulates an image in which indigocarmine is sprayed).</p>
+      <p id="p-00132-en" num="0129">In this case, the enhancement section <b>333</b> may uniformly perform the enhancement process on the attention pixels. For example, the enhancement section <b>333</b> may perform the enhancement process on the attention pixels using an identical gain coefficient. Note that the enhancement section <b>333</b> may perform the enhancement process on the attention pixels in a different way. For example, the enhancement section <b>333</b> may perform the enhancement process on the attention pixels while changing the gain coefficient corresponding to the width and the depth of the groove. Specifically, the enhancement section <b>333</b> may multiply the pixel value by the gain coefficient so that the degree of blueness decreases as the depth of the groove decreases. This makes it possible to obtain an image that is closer to an image obtained by spraying a dye. <figref>FIG. 13B</figref> illustrates a gain coefficient setting example when multiplying the pixel value by the gain coefficient so that the degree of blueness decreases as the depth of the groove decreases. Alternatively, when it has been found that a fine structure is useful for finding a lesion, for example, the enhancement level may be increased as the width of the groove decreases (i.e., as the degree of fineness of the structure increases). <figref>FIG. 13A</figref> illustrates a gain coefficient setting example when increasing the enhancement level as the width of the groove decreases.</p>
+      <p id="p-00133-en" num="0130">Although an example in which the enhancement process increases the degree of blueness has been described above, the configuration is not limited thereto. For example, the color may be changed corresponding to the depth of the groove (see <figref>FIG. 14B</figref>). <figref>FIG. 14B</figref> illustrates an example in which the color is changed along the dotted line. This makes it possible to visually observe the continuity of the groove as compared with the case where the same color is applied to each groove independently of the depth of the groove, and implement a highly accurate diagnosis.</p>
+      <p id="p-00134-en" num="0131">Although an example has been described above in which the enhancement process increases the signal value of the B signal, and decreases the signal values of the R signal and the G signal by multiplying the pixel value by an appropriate gain coefficient, the configuration is not limited thereto. For example, the enhancement process may increase the signal value of the B signal and decrease the signal value of the R signal by multiplying the pixel value by an appropriate gain coefficient, while allowing the signal value of the G signal to remain unchanged. In this case, since the signal values of the B signal and the G signal remain although the degree of blueness of the recess is increased, the structure within the recess is displayed in cyan.</p>
+      <p id="p-00135-en" num="0132">The enhancement section <b>333</b> may perform the enhancement process on the entire image instead of performing the enhancement process only on the attention pixels. In this case, the enhancement section <b>333</b> performs a process that improves visibility (i.e., a process that increases the gain coefficient) on the area that corresponds to the attention pixel, and performs a process that decreases the gain coefficient, sets the gain coefficient to 1 (original color), or changes the color to a specific color (e.g., a process that improves the visibility of the enhancement target by changing the color to the complementary color of the target color of the enhancement target) on the remaining area, for example. Specifically, the enhancement process according to the first embodiment is not limited to a process that generates an image that simulates an image obtained by spraying indigocarmine, but can be implemented by various processes that improve the visibility of the attention target.</p>
+      <p id="p-00136-en" num="0133">The enhancement section <b>333</b> transmits the image signals (that enhance the recesses formed in the surface of tissue) to the post-processing section <b>334</b>. The post-processing section <b>334</b> performs a grayscale transformation process, a color process, and a contour enhancement process on the image signals transmitted from the enhancement section <b>333</b> using a grayscale transformation coefficient, a color conversion coefficient, and a contour enhancement coefficient stored in the control section <b>340</b>. The post-processing section <b>334</b> transmits the resulting image signals to the display section <b>400</b>.</p>
+      <heading id="h-00011-en" level="2">2.4 Distance Information Acquisition Process</heading>
+      <p id="p-00137-en" num="0134">The distance information acquisition process is described below. As illustrated in <figref>FIG. 15</figref>, the distance information acquisition section <b>350</b> includes a stereo matching section <b>351</b> and a parallax-distance conversion section <b>352</b>. The stereo image preprocessed by the image processing section <b>330</b> is input to the stereo matching section <b>351</b>, and the stereo matching section <b>351</b> performs a block matching process on the left image (reference image) and the right image with respect to the processing target pixel and its peripheral area (i.e., a block having a given size) using an epipolar line to calculate parallax information. The parallax-distance conversion section <b>352</b> converts the calculated parallax information into the distance information. This conversion process includes a process that corrects the optical magnification of the imaging section <b>200</b>. The parallax-distance conversion section <b>352</b> outputs the distance information to the irregularity information acquisition section <b>320</b> as the distance map (having the same pixel size as that of the stereo image in a narrow sense).</p>
+      <p id="p-00138-en" num="0135">The above distance information acquisition process is widely known as a stereo matching process, and detailed description thereof is omitted.</p>
+      <p id="p-00139-en" num="0136">Note that the distance information acquisition process is not limited to the stereo matching process. A modification is described in detail below with reference to <figref>FIG. 16</figref>. <figref>FIG. 16</figref> illustrates another configuration example of the distance information acquisition section <b>350</b>. As illustrated in <figref>FIG. 16</figref>, the distance information acquisition section <b>350</b> includes a luminance signal calculation section <b>353</b>, a difference calculation section <b>354</b>, a second derivative calculation section <b>355</b>, a blur parameter calculation section <b>356</b>, a storage section <b>357</b>, an LUT storage section <b>358</b>, and a lens position control section <b>359</b>. The following description illustrates an example in which one objective lens, one focus lens, and one image sensor are provided, since it is not indispensable to acquire a stereo image.</p>
+      <p id="p-00140-en" num="0137">The luminance signal calculation section <b>353</b> calculates a luminance signal Y from the image signals output from the image processing section <b>330</b> using the following expression (5) under control of the control section <b>340</b>.</p>
+      <p id="p-00141-en" num="0000">[in-line-formulae]<i>Y=</i>0.299<i>×R+</i>0.587<i>×G+</i>0.114<i>×B</i>  (5)[/in-line-formulae]</p>
+      <p id="p-00142-en" num="0138">The image signals calculated by the luminance signal calculation section <b>353</b> are transmitted to the difference calculation section <b>354</b>, the second derivative calculation section <b>355</b>, and the storage section <b>357</b>. The difference calculation section <b>354</b> calculates the difference between the luminance signals Y from a plurality of images necessary for calculating a blur parameter. The second derivative calculation section <b>355</b> calculates the second derivative of the luminance signals Y (image signals), and calculates the average value of the second derivatives obtained from a plurality of luminance signals Y that differ in blur. The blur parameter calculation section <b>356</b> calculates the blur parameter by dividing the difference between the luminance signals Y calculated by the difference calculation section <b>354</b> by the average value of the second derivatives calculated by the second derivative calculation section <b>355</b>.</p>
+      <p id="p-00143-en" num="0139">The storage section <b>357</b> stores the luminance signals Y of the first captured image, and the second derivative results thereof. Therefore, the distance information acquisition section <b>350</b> can place the focus lens at different positions, and acquire a plurality of luminance signals Y at different times. The LUT storage section <b>358</b> stores the relationship between the blur parameter and the object distance in the form of a look-up table (LUT).</p>
+      <p id="p-00144-en" num="0140">The control section <b>340</b> is bidirectionally connected to the luminance signal calculation section <b>353</b>, the difference calculation section <b>354</b>, the second derivative calculation section <b>355</b>, the blur parameter calculation section <b>356</b>, and the lens position control section <b>359</b>, and controls the luminance signal calculation section <b>353</b>, the difference calculation section <b>354</b>, the second derivative calculation section <b>355</b>, the blur parameter calculation section <b>356</b>, and the lens position control section <b>359</b>.</p>
+      <p id="p-00145-en" num="0141">An object distance calculation method is described below. The lens position control section <b>359</b> calculates the optimum focus lens position using a known contrast detection method, a known phase detection method, or the like based on the imaging mode that is set in advance using the external I/F section <b>500</b> under control of the control section <b>340</b>. The lens driver section <b>250</b> drives the focus lens <b>240</b> to the calculated focus lens position based on the signal output from the lens position control section <b>359</b>. The image sensor <b>260</b> acquires image signals of the object (first image) at the focus lens position to which the focus lens <b>240</b> has been driven. The acquired image signals (first image) are stored in the storage section <b>357</b> through the image processing section <b>330</b> and the luminance signal calculation section <b>353</b>.</p>
+      <p id="p-00146-en" num="0142">The lens driver section <b>250</b> then drives the focus lens <b>240</b> to a second focus lens position that differs from the focus lens position at which the image signals have been acquired, and the image sensor <b>260</b> acquires image signals of the object (second image) at the focus lens position to which the focus lens <b>240</b> has been driven. The acquired image signals (second image) are output to the distance information acquisition section <b>350</b> through the image processing section <b>330</b>.</p>
+      <p id="p-00147-en" num="0143">When the image signals (second image) have been acquired, the blur parameter is calculated. The difference calculation section <b>354</b> included in the distance information acquisition section <b>350</b> reads the luminance signals Y (image signals) of the first image from the storage section <b>357</b>, and calculates the difference between the luminance signal Y (image signal) of the first image and the luminance signal Y (image signal) of the second image output from the luminance signal calculation section <b>353</b>.</p>
+      <p id="p-00148-en" num="0144">The second derivative calculation section <b>355</b> calculates the second derivative of the luminance signals Y (image signals) of the second image output from the luminance signal calculation section <b>353</b>. The second derivative calculation section <b>355</b> then reads the luminance signals Y (image signals) of the first image from the storage section <b>357</b>, and calculates the second derivative of the luminance signals Y. The second derivative calculation section <b>355</b> then calculates the average value of the second derivative of the first image and the second derivative of the second image.</p>
+      <p id="p-00149-en" num="0145">The blur parameter calculation section <b>356</b> calculates the blur parameter by dividing the difference calculated by the difference calculation section <b>354</b> by the average value of the second derivatives calculated by the second derivative calculation section <b>355</b>.</p>
+      <p id="p-00150-en" num="0146">The blur parameter has a linear relationship with the reciprocal of the object distance. Moreover, the object distance and the focus lens position have a one-to-one relationship. Therefore, the blur parameter and the focus lens position have a one-to-one relationship. The relationship between the blur parameter and the focus lens position is stored in the LUT storage section <b>358</b> in the form of a table. The distance information that corresponds to the object distance is represented by the focus lens position. Therefore, the blur parameter calculation section <b>356</b> calculates the object distance to the optical system from the blur parameter by linear interpolation using the blur parameter and the information about the table stored in the LUT storage section <b>358</b>. The blur parameter calculation section <b>356</b> thus calculates the object distance that corresponds to the blur parameter. The calculated object distance is output to the irregularity information acquisition section <b>320</b> as the distance information.</p>
+      <p id="p-00151-en" num="0147">Note that the distance information acquisition process may be implemented in various other ways. For example, the distance information may be acquired (calculated) by a Time-of-Flight method that utilizes infrared light or the like. When using the Time-of-Flight method, blue light may be used instead of infrared light, for example.</p>
+      <heading id="h-00012-en" level="2">2.5 Configuration Example Using Software</heading>
+      <p id="p-00152-en" num="0148">Although the first embodiment has been described taking an example in which each section of the image processing section <b>300</b> is implemented by hardware, the configuration is not limited thereto. For example, a CPU may perform the process of each section on the image signals acquired in advance using an imaging device and the distance information. Specifically, the process of each section may be implemented by means of software by causing the CPU to execute a program. Alternatively, part of the process performed by each section may be implemented by means of software.</p>
+      <p id="p-00153-en" num="0149">When separately providing the imaging section and the AD conversion section, and implementing the process of each section of the image processing section <b>300</b> excluding the AD conversion section by means of software, a known computer system (e.g., work station or personal computer) may be used as the image processing device. A program (image processing program) that implements the process of each section of the image processing section <b>300</b> may be provided in advance, and executed by the CPU of the computer system.</p>
+      <p id="p-00154-en" num="0150">
+        <figref>FIG. 17</figref> is a system configuration diagram illustrating the configuration of a computer system <b>600</b> according to a modification, and <figref>FIG. 18</figref> is a block diagram illustrating the configuration of a main body <b>610</b> of the computer system <b>600</b>. As illustrated in <figref>FIG. 17</figref>, the computer system <b>600</b> includes the main body <b>610</b>, a display <b>620</b> that displays information (e.g., image) on a display screen <b>621</b> based on instructions from the main body <b>610</b>, a keyboard <b>630</b> that allows the user to input information to the computer system <b>600</b>, and a mouse <b>640</b> that allows the user to designate an arbitrary position on the display screen <b>621</b> of the display <b>620</b>.</p>
+      <p id="p-00155-en" num="0151">As illustrated in <figref>FIG. 18</figref>, the main body <b>610</b> of the computer system <b>600</b> includes a CPU <b>611</b>, a RAM <b>612</b>, a ROM <b>613</b>, a hard disk drive (HDD) <b>614</b>, a CD-ROM drive <b>615</b> that receives a CD-ROM <b>660</b>, a USB port <b>616</b> to which a USB memory <b>670</b> is removably connected, an I/O interface <b>617</b> that connects the display <b>620</b>, the keyboard <b>630</b>, and the mouse <b>640</b>, and a LAN interface <b>618</b> that is used to connect to a local area network or a wide area network (LAN/WAN) N<b>1</b>.</p>
+      <p id="p-00156-en" num="0152">The computer system <b>600</b> is connected to a modem <b>650</b> that is used to connect to a public line N<b>3</b> (e.g., Internet). The computer system <b>600</b> is also connected to a personal computer (PC) <b>681</b> (i.e., another computer system), a server <b>682</b>, a printer <b>683</b>, and the like via the LAN interface <b>618</b> and the local area network or the large area network N<b>1</b>.</p>
+      <p id="p-00157-en" num="0153">The computer system <b>600</b> implements the image processing device by reading an image processing program (e.g., an image processing program that implements a process described below with reference to <figref>FIGS. 19 to 21</figref>) recorded on a given recording device, and executing the image processing program. The given recording device may be an arbitrary recording device that records the control program that can be read by the computer system <b>600</b>, such as the CD-ROM <b>660</b>, the USB memory <b>670</b>, a portable physical device (e.g., MO disk, DVD disk, flexible disk (FD), magnetooptical disk, or IC card), a stationary physical device (e.g., HDD <b>614</b>, RAM <b>612</b>, or ROM <b>613</b>) that is provided inside or outside the computer system <b>600</b>, or a communication device that temporarily stores a program during transmission (e.g., the public line N<b>3</b> connected via the modem <b>650</b>, or the local area network or the wide area network N<b>1</b> to which the computer system (PC) <b>681</b> or the server <b>682</b> is connected). Specifically, the image processing program is recorded on a recording device (e.g., portable physical device, stationary physical device, or communication device) in a computer-readable way. The computer system <b>600</b> implements the image processing device by reading the image processing program from such a recording device, and executing the image processing program. Note that the image processing program need not necessarily be executed by the computer system <b>600</b>. The invention may be similarly applied to the case where the computer system (PC) <b>681</b> or the server <b>682</b> executes the image processing program, or the computer system (PC) <b>681</b> and the server <b>682</b> execute the image processing program in cooperation.</p>
+      <p id="p-00158-en" num="0154">
+        <figref>FIG. 19</figref> is a flowchart illustrating the entire process according to the first embodiment. In the step S<b>11</b>, header information (e.g., the optical magnification (with respect to the distance information) of the imaging device, and the imaging conditions) is input. The distance information that represents the distance from the imaging plane of the imaging device to the object is input (S<b>12</b>). The extracted irregularity information about the surface of tissue is extracted from the distance information (described in detail below with reference to <figref>FIG. 20</figref>) (S<b>13</b>). The image signals are input (S<b>14</b>). The preprocess is performed (S<b>15</b>), and the demosaicing process is performed (S<b>16</b>). A process that improves the contrast of the minute irregular parts on the surface of tissue is performed (described in detail below with reference to <figref>FIG. 21</figref>) (S<b>17</b>). The post-process is performed (S<b>18</b>), and the image that has been subjected to the enhancement process is output (S<b>19</b>). Whether or not the process has been performed on the final image is determined (S<b>20</b>). When it has been determined that the process has not been performed on the final image, the above process is performed on the next image signals from the step S<b>12</b>. When it has been determined that the process has been performed on the final image, the process is terminated.</p>
+      <p id="p-00159-en" num="0155">
+        <figref>FIG. 20</figref> is a flowchart illustrating the extraction process. The known characteristic information is acquired from the storage section <b>360</b> or the like (S<b>21</b>). The known characteristic information in a narrow sense refers to information for specifying the dimensional characteristics of the extraction target irregular part. The extraction process parameter used for the extraction process is set based on the acquired known characteristic information (S<b>22</b>). Examples of the extraction process parameter include the size of the structural element used for the morphological process, and the characteristics of the filter used for the filtering process (see above). The extraction process (e.g., morphological process) that utilizes the extraction process parameter is performed (S<b>23</b>), and the extracted irregularity information is output (S<b>24</b>).</p>
+      <p id="p-00160-en" num="0156">
+        <figref>FIG. 21</figref> is a flowchart illustrating the enhancement process. The extracted irregularity information and the pixels (image signals) are linked on a one-to-one basis (S<b>31</b>). The width w of the groove is detected (calculated) using the expression (3) (S<b>32</b>). The depth d of the groove is detected (calculated) using the expression (4) (S<b>33</b>). Whether or not the groove detected based on the known characteristic information is the enhancement target (minute groove) is determined (S<b>34</b>). When it has been determined that the groove detected based on the known characteristic information is the enhancement target, the step S<b>35</b> is performed. When it has been determined that the groove detected based on the known characteristic information is not the enhancement target, the step S<b>36</b> is performed. When it has been determined that the groove detected based on the known characteristic information is the enhancement target (Yes in S<b>34</b>), the pixel value is multiplied by the gain so as to increase the degree of blueness of the enhancement target pixel (S<b>35</b>). When it has been determined that the groove detected based on the known characteristic information is not the enhancement target (No in S<b>34</b>), or after the step S<b>35</b> has been performed, whether or not the process has been performed on the final pixel is deteimined (S<b>36</b>). When it has been determined that the process has not been performed on the final pixel, the above process is repeated from the step S<b>32</b>.</p>
+      <p id="p-00161-en" num="0157">According to the first embodiment, the contrast of minute irregular parts (irregularities) present on the surface of tissue is increased (i e, minute irregular parts are enhanced) based on the extracted irregularity information about the surface of tissue, and the known characteristic information about a lesion. This makes it possible to accurately increase the contrast of minute irregular parts (i.e., enhance minute irregular parts), and obtain an image with high visibility, without performing a complex dye-spraying operation.</p>
+      <p id="p-00162-en" num="0158">Although an example in which the degree of blueness of a groove is enhanced has been described above, it is also possible to allow the user to designate the enhancement process according to his/her preference. For example, the enhancement process based on the difference in luminance, the enhancement process that enhances the G signal component, the enhancement process that changes the color to the complementary color of the background color, or the like may be performed. Although an example that utilizes a frame sequential imaging method has been described above, a primary-color Bayer imaging method, a complementary-color single-chip imaging method, a primary-color double-chip imaging method, a primary-color triple-chip imaging method, or the like may also be used. Although an example in which the light source emits normal light has been described above, the light source may emit special light (e.g., narrow band imaging (NBI)), for example.</p>
+      <p id="p-00163-en" num="0159">According to the first embodiment, the image processing device includes the image acquisition section <b>310</b> that acquires a captured image that includes an image of an object, the captured image being an image captured by the imaging section <b>200</b>, the distance information acquisition section <b>350</b> that acquires the distance information based on the distance from the imaging section <b>200</b> to the object when the imaging section <b>200</b> captured the captured image, the irregularity information acquisition section <b>320</b> that acquires the extracted irregularity information from the acquired distance information, the extracted irregularity information being information that represents irregular parts extracted from the object, and the enhancement section <b>333</b> that performs the enhancement process on the enhancement target, the enhancement target being an irregular part among the irregular parts represented by the extracted irregularity information that agrees with the characteristics specified by the known characteristic information, the known characteristic information being information that represents known characteristics relating to the structure of the object (see <figref>FIGS. 2 and 8</figref>).</p>
+      <p id="p-00164-en" num="0160">The term “distance information” used herein refers to information that is acquired based on the distance from the imaging section <b>200</b> to the object. For example, when implementing triangulation using a stereo optical system (see above), the distance with respect to an arbitrary point in a plane that connects two lenses (i.e., the objective lenses <b>230</b>-<b>1</b> and <b>230</b>-<b>2</b> illustrated in <figref>FIG. 2</figref>) that produce a parallax may be used as the distance information. When using the Time-of-Flight method described later in connection with the second embodiment and the like, the distance with respect to each pixel position in the plane of the image sensor is acquired as the distance information, for example. In such a case, the distance measurement reference point is set to the imaging section <b>200</b>. Note that the distance measurement reference point may be set to an arbitrary position other than the imaging section <b>200</b>, such as an arbitrary position within the three-dimensional space that includes the imaging section and the object. The distance information acquired using such a reference point is also intended to be included within the term “distance information”.</p>
+      <p id="p-00165-en" num="0161">The distance from the imaging section <b>200</b> to the object may be the distance from the imaging section <b>200</b> to the object in the depth direction, for example. For example, the distance from the imaging section <b>200</b> to the object may be the distance from the imaging section <b>200</b> to the object in the direction of the optical axis of the imaging section <b>200</b>. When the viewpoint is set in the direction perpendicular to the optical axis (see <figref>FIG. 6A</figref>), the distance from the imaging section <b>200</b> to the object may be the distance from the imaging section <b>200</b> to the object observed from the viewpoint (e.g., the distance from the imaging section <b>200</b> to the object in the vertical direction (see the arrow) in the example illustrated in <figref>FIG. 6A</figref>).</p>
+      <p id="p-00166-en" num="0162">For example, the distance information acquisition section <b>350</b> may transform the coordinates of each corresponding point in a first coordinate system in which a first reference point of the imaging section <b>200</b> is the origin, into the coordinates of each corresponding point in a second coordinate system in which a second reference point within the three-dimensional space is the origin, using a known coordinate transformation process, and measure the distance based on the coordinates obtained by transformation. In this case, the distance from the second reference point to each corresponding point in the second coordinate system is identical with the distance from the first reference point to each corresponding point in the first coordinate system (i.e., the distance from the imaging section to each corresponding point).</p>
+      <p id="p-00167-en" num="0163">The distance information acquisition section <b>350</b> may set a virtual reference point at a position that can maintain a relationship similar to the relationship between the distance values of the pixels on the distance map acquired when setting the reference point to the imaging section <b>200</b>, to acquire the distance information based on the distance from the imaging section <b>200</b> to each corresponding point. For example, when the actual distances from the imaging section <b>200</b> to three corresponding points are respectively “3”, “4”, and “5”, the distance information acquisition section <b>350</b> may acquire distance information “1.5”, “2”, and “2.5” respectively obtained by halving the actual distances “3”, “4”, and “5” while maintaining the relationship between the distance values of the pixels. In this case, the irregularity information acquisition section <b>320</b> uses a different extraction process parameter as compared with the case of setting the reference point to the imaging section <b>200</b>. Specifically, since it is necessary to use the distance information when determining the extraction process parameter, the extraction process parameter is determined in a different way when the distance measurement reference point has changed (i.e., when the distance information is represented in a different way). For example, when extracting the extracted irregularity information using the morphological process (see above), the size of the structural element (e.g., the diameter of a sphere) used for the extraction process is adjusted, and the irregular part extraction process is performed using the structural element that has been adjusted in size.</p>
+      <p id="p-00168-en" num="0164">The term “enhancement target” used herein refers to an object within the captured image that corresponds to an irregular part among the irregular parts represented by the extracted irregularity information that agrees with the characteristics specified by the known characteristic information. Specifically, the enhancement process according to first embodiment is performed on the captured image in a narrow sense, and is not performed on the extracted irregularity information.</p>
+      <p id="p-00169-en" num="0165">The above configuration makes it possible to perform the enhancement process that utilizes the known characteristic information. As described above, a minute irregular part or the like included in an in vivo image that is useful for finding an early lesion cannot be effectively enhanced using a known enhancement process (e.g., a process that enhances a high-frequency component). It is also difficult to enhance a minute irregular part when performing the enhancement process on an image other than an in vivo image. Since the method according to first embodiment can appropriately set the enhancement target pixel (attention pixel) within the captured image, and the enhancement level, it is possible to enhance the desired irregular part. Since it is unnecessary to effect a change in the object (e.g., by spraying a dye) by generating an image that simulates an in vivo image obtained by spraying a dye, it is unnecessary to take account of a decrease in visibility of an object other than the enhancement target, and invasiveness when performing the process on tissue, for example. Note that the extracted irregularity information in a narrow sense may represent an irregular image in which the number of pixels corresponds to the distance map or the captured image (e.g., the same number of pixels as that of the distance map or the captured image), and each pixel value is a value that corresponds to a protrusion or a recess. For example, a value that corresponds to a protrusion may be a positive value, a value that corresponds to a recess may be a negative value, and the absolute value of each value may increase as the height of the protrusion increases, or the depth of the recess increases. Note that the extracted irregularity information is not limited to the irregular image, but may be another type of information.</p>
+      <p id="p-00170-en" num="0166">The enhancement section <b>333</b> may include the dimensional information acquisition section <b>3331</b> that acquires the dimensional information as the known characteristic information, the dimensional information representing at least one of the width and the depth of a recess of an object that is determined to be the enhancement target, the recess extraction section <b>3332</b> that extracts extracted recess information about a recess among the irregular parts included in the extracted irregularity information that agrees with the characteristics specified by the dimensional information, and the correction section <b>3334</b> that performs a process that corrects at least one of a color, luminance, and contrast on the recess that is represented by the extracted recess information (see <figref>FIG. 9</figref>).</p>
+      <p id="p-00171-en" num="0167">The distance information may be the distance map, for example. The term “distance map” used herein refers to a map in which the distance (depth) to the object in the Z-axis direction (i.e., the direction of the optical axis of the imaging section <b>200</b>) is specified for each point (e.g., each pixel) in the XY plane, for example. In this case, the width of the recess corresponds to the distance between the two endpoints of the recess in the XY plane. The depth of the recess (and the height of the protrusion described later) corresponds to the distance between the reference plane of the recess and the point of the recess that is situated furthest from (or the point of the protrusion that is situated closest to) the imaging section <b>200</b> in the Z-axis direction. Note that the width w is calculated while making corrections using the pixel pitch, the imaging magnification, and the like (as described above with reference to the expression (3)), for example.</p>
+      <p id="p-00172-en" num="0168">This makes it possible to perform the enhancement process on a recess (groove) that has a specific width or a specific depth, or both. It is considered that a groove structure having a specific width and a specific depth is useful for finding an early lesion when observing tissue, and is useful for determining the degree of wear of an industrial part when observing an industrial part, for example. Therefore, it is highly useful to perform the enhancement process on such a groove structure. Note that the contrast correction process is described later in connection with the third embodiment.</p>
+      <p id="p-00173-en" num="0169">The enhancement section <b>333</b> may include the dimensional information acquisition section <b>3331</b> that acquires the dimensional information as the known characteristic information, the dimensional information representing at least one of the width and the depth of a recess of an object that is determined to be the enhancement target, the enhancement level setting section <b>3335</b> that sets the enhancement level of the enhancement process based on the dimensional information, and the correction section <b>3334</b> that performs a process that corrects at least one of a color, luminance, and contrast on the captured image based on the extracted irregularity information and the enhancement level (see <figref>FIG. 9</figref>).</p>
+      <p id="p-00174-en" num="0170">The enhancement level of the enhancement process in a narrow sense may be the gain coefficient (see above). Note that the enhancement level is not limited thereto. For example, when performing a color conversion process that converts the color of the visibility-improving target into a specific color, and converts the color of the remaining area into the complementary color of the specific color, the enhancement level setting process also includes the specific color setting process and the like.</p>
+      <p id="p-00175-en" num="0171">This makes it possible to perform the enhancement process on the captured image (e.g., the entire captured image) without limiting the enhancement target to a specific recess. Since the enhancement process according to the first embodiment is intended to increase the visibility of a specific recess, it may be useful to decrease the visibility of another area (or the remaining area). Such a method can be implemented by changing the enhancement level corresponding to the degree of agreement with the characteristics specified by the dimensional information, for example.</p>
+      <p id="p-00176-en" num="0172">The enhancement level setting section <b>3335</b> may increase the enhancement level set to a recess included in the extracted irregularity information as the degree of agreement of the width and the depth of the recess with the dimensional information increases.</p>
+      <p id="p-00177-en" num="0173">This makes it possible to increase the enhancement level as the degree of agreement with the enhancement target characteristics increases, and efficiently improve visibility. This process may be implemented by setting the gain coefficient (see <figref>FIG. 13A</figref>) as the enhancement level.</p>
+      <p id="p-00178-en" num="0174">The enhancement level setting section <b>3335</b> may decrease the enhancement level set to a recess included in the extracted irregularity information as the depth of the recess decreases.</p>
+      <p id="p-00179-en" num="0175">This makes it possible to change the enhancement level corresponding to the depth of the recess. This method is particularly useful when generating an image that simulates an image obtained by spraying indigocarmine. It is known that indigocarmine accumulates in a groove having specific dimensions. Specifically, the degree of blueness decreases as the depth of the groove decreases. Therefore, it is possible to generate an image that simulates an image obtained by spraying a chemical with higher reproducibility by decreasing the enhancement level (e.g., the gain coefficient for the B signal component) as the depth of the groove decreases (see <figref>FIG. 13B</figref>).</p>
+      <p id="p-00180-en" num="0176">The image processing device may include an input section (e.g., the external I/F section <b>500</b> illustrated in <figref>FIG. 2</figref>) for inputting the known characteristic information that is information that represents the known characteristics relating to the structure of the object.</p>
+      <p id="p-00181-en" num="0177">This makes it possible to use information input by the user in addition to the information that is stored in advance as the known characteristic information, and effectively enhance the enhancement target intended by the user, for example.</p>
+      <p id="p-00182-en" num="0178">The imaging section <b>200</b> may include a plurality of viewpoints, the image acquisition section <b>310</b> may acquire a plurality of captured images that respectively correspond to the plurality of viewpoints, and the distance information acquisition section <b>350</b> may acquire the distance information based on parallax information obtained from the plurality of captured images acquired by the image acquisition section <b>310</b>.</p>
+      <p id="p-00183-en" num="0179">This makes it possible for the image processing device to acquire the distance information based on the parallax image. Note that the distance information need not necessarily be acquired using the stereo matching process. Various modifications may be made.</p>
+      <p id="p-00184-en" num="0180">Note that part or most of the process performed by the image processing device and the like according to the first embodiment may be implemented by a program. In this case, the image processing device and the like according to the first embodiment are implemented by causing a processor (e.g., CPU) to execute a program. Specifically, a program stored in a non-transitory information storage device is read, and executed by a processor (e.g., CPU). The information storage device (computer-readable device) stores a program, data, and the like. The function of the information storage device may be implemented by an optical disk (e.g., DVD or CD), a hard disk drive (HDD), a memory (e.g., memory card or ROM), or the like. The processor (e.g., CPU) performs various processes according to the first embodiment based on the program (data) stored in the information storage device. Specifically, a program that causes a computer (i.e., a device that includes an operation section, a processing section, a storage section, and an output section) to function as each section according to the first embodiment (i.e., a program that causes a computer to execute the process implemented by each section) is stored in the information storage device.</p>
+      <p id="p-00185-en" num="0181">The image processing device and the like according to the embodiments of the invention may include a processor and a memory. The processor may be a central processing unit (CPU), for example. Note that the processor is not limited to a CPU. Various types of processors such as a graphics processing unit (GPU) and a digital signal processor (DSP) may also be used. The processor may be a hardware circuit such as an application specific integrated circuit (ASIC). The memory stores a computer-readable instruction. Each section of the image processing device and the like according to the embodiments of the invention is implemented by causing the processor to execute the instruction. The memory may be a semiconductor memory (e.g., SRAM or DRAM), a register, a hard disk, or the like. The instruction may be an instruction included in an instruction set of a program, or may be an instruction that causes a hardware circuit of the processor to operate.</p>
+      <heading id="h-00013-en" level="1">3. Second Embodiment</heading>
+      <p id="p-00186-en" num="0182">The second embodiment is described below. The processes performed by the elements other than the enhancement section <b>333</b> are the same as those described above in connection with the first embodiment, and detailed description thereof is omitted.</p>
+      <p id="p-00187-en" num="0183">The enhancement section <b>333</b> performs the enhancement process that increases the degree of redness of the detected protrusion (i.e., an early lesion in the form of a protrusion). A part that protrudes as compared with the reference plane is detected to be a protrusion in the same manner as in the first embodiment. Whether or not the detected protrusion is the enhancement target is determined based on the known characteristic information. The known characteristic information may be information that represents that the size of a protrusion is equal to or less than 10 mm. Specifically, since a lesion having a size equal to or less than 10 mm is missed with high probability, a protrusion having a size equal to or less than 10 mm is determined to be the enhancement target.</p>
+      <p id="p-00188-en" num="0184">The size of the protrusion is calculated as described below. Specifically, the width of the protrusion in one-dimensional direction is calculated in the same manner as in the case of detecting the width w of a groove (see the first embodiment). As illustrated in <figref>FIG. 22</figref>, the width w<b>1</b> in the long side direction (when observed in two dimensions) is determined to be the size of the protrusion. The enhancement section <b>333</b> performs the enhancement process on the protrusion that has been determined to be the enhancement target so that that the degree of redness increases (by multiplying the gain so that the R signal increases, and the G signal and the B signal decrease). The gain coefficient may be set so that the enhancement level increases as the size of the protrusion decreases. <figref>FIG. 23A</figref> illustrates the relationship between the size of the protrusion and each signal. In this case, since a small lesion that is likely to be missed is enhanced to a large extent, it is possible to prevent a situation in which the lesion is missed.</p>
+      <p id="p-00189-en" num="0185">Note that the enhancement process is not limited thereto. For example, the gain coefficients illustrated in <figref>FIG. 23B</figref> may be used. Specifically, the enhancement level (gain coefficient) is decreased when the size of the protrusion is too small. It is likely that a small protrusion is missed. However, a protrusion that is too small may be noise. Even when a protrusion that is too small is an early lesion, it is likely that it is unnecessary to enhance the protrusion since the degree of severity is low. Therefore, such a small lesion is not enhanced by utilizing the gain coefficients illustrated in <figref>FIG. 23B</figref>. Note that the user may set the size of a protrusion that is determined to be the enhancement target, the enhancement level, and the like.</p>
+      <p id="p-00190-en" num="0186">The enhancement process according to the second embodiment need not necessarily increase the degree of redness of the protrusion. For example, the enhancement process based on the difference in luminance, the enhancement process that enhances the G signal component, the enhancement process that changes the color to the complementary color of the background color, or the like may also be used in the same manner as in the first embodiment.</p>
+      <p id="p-00191-en" num="0187">According to the second embodiment, the enhancement section <b>333</b> included in the image processing device includes the dimensional information acquisition section <b>3331</b> that acquires the dimensional information as the known characteristic information, the dimensional information representing at least one of the width and the height of a protrusion of an object that is determined to be the enhancement target, the protrusion extraction section <b>3333</b> that extracts extracted protrusion information about a protrusion among the irregular parts included in the extracted irregularity information that agrees with the characteristics specified by the dimensional information, and the correction section <b>3334</b> that performs a process that corrects at least one of a color, luminance, and contrast on the protrusion that is represented by the extracted protrusion information (see <figref>FIG. 9</figref>).</p>
+      <p id="p-00192-en" num="0188">This makes it possible to perform the enhancement process on a protrusion that has a specific width or a specific height, or both. Specific examples of the protrusion vary corresponding to the object. When capturing an in vivo image, the protrusion may be a polyp or the like.</p>
+      <p id="p-00193-en" num="0189">The enhancement section <b>333</b> may include the dimensional information acquisition section <b>3331</b> that acquires the dimensional information as the known characteristic information, the dimensional information representing at least one of the width and the height of a protrusion of an object that is determined to be the enhancement target, the enhancement level setting section <b>3335</b> that sets the enhancement level of the enhancement process based on the dimensional information, and the correction section <b>3334</b> that performs a process that corrects at least one of a color, luminance, and contrast on the captured image based on the extracted irregularity information and the enhancement level (see <figref>FIG. 9</figref>).</p>
+      <p id="p-00194-en" num="0190">This makes it possible to perform the enhancement process on the captured image (e.g., the entire captured image) without limiting the enhancement target to a specific protrusion. Specific examples of the enhancement level, and the advantageous effects achieved by this configuration are the same as described above in connection with the first embodiment. Therefore, detailed description thereof is omitted.</p>
+      <p id="p-00195-en" num="0191">The enhancement level setting section <b>3335</b> may increase the enhancement level set to a protrusion included in the extracted irregularity information as the degree of agreement of the width and the height of the protrusion with the dimensional information increases.</p>
+      <p id="p-00196-en" num="0192">This makes it possible to appropriately enhance the enhancement target, and efficiently improve visibility, for example.</p>
+      <p id="p-00197-en" num="0193">The enhancement level setting section <b>3335</b> may increase the enhancement level set to a protrusion included in the extracted irregularity information as the width of the protrusion decreases.</p>
+      <p id="p-00198-en" num="0194">This makes it possible to perform the enhancement process so that a protrusion having a small width is enhanced to a large extent. In particular, when observing a polyp or the like (i.e., protrusion) within an in vivo image, since the color of a polyp does not differ to a large extent from the color of other areas, it is likely that a small polyp is missed. It is possible to prevent a situation in which a polyp or the like is missed by increasing the enhancement level when the size of a polyp or the like is small. Note that whether or not to increase the enhancement level is determined based on the width of the protrusion that corresponds to the size of a polyp in the direction orthogonal to the optical axis of the imaging section on the assumption that the imaging section <b>200</b> (almost) perpendicularly faces the wall surface of tissue. A situation in which the wall surface of a lumen structure is almost parallel to the optical axis direction of the imaging section <b>200</b> may occur during screening. In such a case, since it is possible to easily observe a situation in which a polyp protrudes from the wall surface of tissue to some extent, it may be unnecessary to change the enhancement level based on the height of a protrusion. Note that the enhancement level may be changed using information about the height of a protrusion. It is likely that a small polyp is missed. However, a polyp that is too small may be noise. Even when a protrusion that is too small is a polyp or the like, it is considered that the degree of severity is low. Therefore, the enhancement level may be decreased when the width of the protrusion is small (see <figref>FIG. 23B</figref>).</p>
+      <heading id="h-00014-en" level="1">4. Third Embodiment</heading>
+      <p id="p-00199-en" num="0195">The third embodiment is described below. In the third embodiment, the enhancement section <b>333</b> improve the visibility of an early lesion by increasing the contrast of an irregular area. Therefore, both information about a recess and information about protrusion are used as the extracted irregularity information. For example, the information illustrated in <figref>FIG. 7C</figref> is used as the extracted irregularity information. A recess and a protrusion are set to be the attention area based on the extracted irregularity information. The enhancement process is implemented by adding an irregularity information signal to the Y signal (image signal). This makes it possible to increase the contrast of a recess and a protrusion.</p>
+      <p id="p-00200-en" num="0196">Note that the irregularity information need not necessarily be added to the image signal. The irregularity information may be subjected to a high-pass filtering process to extract a high-frequency component, and the extracted high-frequency component may be added to the image signal. This makes it possible to increase the contrast at the boundary between irregular parts.</p>
+      <p id="p-00201-en" num="0197">The first to third embodiments to which the invention is applied, and the modifications thereof have been described above. Note that the invention is not limited to the first to third embodiments and the modifications thereof. Various modifications and variations may be made without departing from the scope of the invention. A plurality of elements described above in connection with the first to third embodiments and the modifications thereof may be appropriately combined to achieve various configurations. For example, an arbitrary element may be omitted from the elements described above in connection with the first to third embodiments and the modifications thereof. Some of the elements described above in connection with different embodiments or modifications thereof may be appropriately combined. Any term cited with a different term having a broader meaning or the same meaning at least once in the specification and the drawings can be replaced with the different term in any place in the specification and the drawings. Various modifications and applications are possible without materially departing from the novel teachings and advantages of the invention.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An image processing device comprising:
+<claim-text>an image acquisition section that acquires a captured image that includes an image of an object, the captured image being an image captured by an imaging section;</claim-text><claim-text>a distance information acquisition section that acquires distance information based on a distance from the imaging section to the object when the imaging section captured the captured image;</claim-text><claim-text>an irregularity information acquisition section that acquires extracted irregularity information from the acquired distance information, the extracted irregularity information being information that represents irregular parts extracted from the object; and</claim-text><claim-text>an enhancement section that performs an enhancement process on an enhancement target, the enhancement target being an irregular part among the irregular parts represented by the extracted irregularity information that agrees with characteristics specified by known characteristic information, the known characteristic information being information that represents known characteristics relating to a structure of the object.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The image processing device as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>,
+<claim-text>the enhancement section including:</claim-text><claim-text>a dimensional information acquisition section that acquires dimensional information as the known characteristic information, the dimensional information representing at least one of a width and a depth of a recess of the object that is determined to be the enhancement target;</claim-text><claim-text>a recess extraction section that extracts extracted recess information about the recess among the irregular parts included in the extracted irregularity information that agrees with characteristics specified by the dimensional information; and</claim-text><claim-text>a correction section that performs a process that corrects at least one of a color, luminance, and contrast on the recess that is represented by the extracted recess information.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The image processing device as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>,
+<claim-text>the enhancement section including:</claim-text><claim-text>a dimensional information acquisition section that acquires dimensional information as the known characteristic information, the dimensional information representing at least one of a width and a height of a protrusion of the object that is determined to be the enhancement target;</claim-text><claim-text>a protrusion extraction section that extracts extracted protrusion information about the protrusion among the irregular parts included in the extracted irregularity information that agrees with characteristics specified by the dimensional information; and</claim-text><claim-text>a correction section that performs a process that corrects at least one of a color, luminance, and contrast on the protrusion that is represented by the extracted protrusion information.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The image processing device as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>,
+<claim-text>the enhancement section including:</claim-text><claim-text>a dimensional information acquisition section that acquires dimensional information as the known characteristic information, the dimensional information representing at least one of a width and a depth of a recess of the object that is determined to be the enhancement target;</claim-text><claim-text>an enhancement level setting section that sets an enhancement level of the enhancement process based on the dimensional information; and</claim-text><claim-text>a correction section that performs a process that corrects at least one of a color, luminance, and contrast on the captured image based on the extracted irregularity information and the enhancement level.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The image processing device as defined in <claim-ref idref="clm-00004-en">claim 4</claim-ref>,
+<claim-text>the enhancement level setting section increasing the enhancement level set to the recess included in the extracted irregularity information as a degree of agreement of the width and the depth of the recess with the dimensional information increases.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The image processing device as defined in <claim-ref idref="clm-00004-en">claim 4</claim-ref>,
+<claim-text>the enhancement level setting section decreasing the enhancement level set to the recess included in the extracted irregularity information as the depth of the recess decreases.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The image processing device as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>,
+<claim-text>the enhancement section including:</claim-text><claim-text>a dimensional information acquisition section that acquires dimensional information as the known characteristic information, the dimensional information representing at least one of a width and a height of a protrusion of the object that is determined to be the enhancement target;</claim-text><claim-text>an enhancement level setting section that sets an enhancement level of the enhancement process based on the dimensional information; and</claim-text><claim-text>a correction section that performs a process that corrects at least one of a color, luminance, and contrast on the captured image based on the extracted irregularity information and the enhancement level.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The image processing device as defined in <claim-ref idref="clm-00007-en">claim 7</claim-ref>,
+<claim-text>the enhancement level setting section increasing the enhancement level set to the protrusion included in the extracted irregularity information as a degree of agreement of the width and the height of the protrusion with the dimensional information increases.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The image processing device as defined in <claim-ref idref="clm-00007-en">claim 7</claim-ref>,
+<claim-text>the enhancement level setting section increasing the enhancement level set to the protrusion included in the extracted irregularity information as the width of the protrusion decreases.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The image processing device as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising:
+<claim-text>an input section for inputting the known characteristic information.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The image processing device as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>,
+<claim-text>the imaging section including a plurality of viewpoints,</claim-text><claim-text>the image acquisition section acquiring a plurality of the captured images that respectively correspond to the plurality of viewpoints, and</claim-text><claim-text>the distance information acquisition section acquiring the distance information based on parallax information obtained from the plurality of captured images acquired by the image acquisition section.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. An information storage device storing a program that causes a computer to perform steps of:
+<claim-text>acquiring a captured image that includes an image of an object, the captured image being an image captured by an imaging section;</claim-text><claim-text>acquiring distance information based on a distance from the imaging section to the object when the imaging section captured the captured image;</claim-text><claim-text>acquiring extracted irregularity information from the acquired distance information, the extracted irregularity information being information that represents irregular parts extracted from the object; and</claim-text><claim-text>performing an enhancement process on an enhancement target, the enhancement target being an irregular part among the irregular parts represented by the extracted irregularity information that agrees with characteristics specified by known characteristic information, the known characteristic information being information that represents known characteristics relating to a structure of the object.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en" independent="true">
+      <claim-text>
+        <b>13</b>. An image processing method comprising:
+<claim-text>acquiring a captured image that includes an image of an object, the captured image being an image captured by an imaging section;</claim-text><claim-text>acquiring distance information based on a distance from the imaging section to the object when the imaging section captured the captured image;</claim-text><claim-text>acquiring extracted irregularity information from the acquired distance information, the extracted irregularity information being information that represents irregular parts extracted from the object; and</claim-text><claim-text>performing an enhancement process on an enhancement target, the enhancement target being an irregular part among the irregular parts represented by the extracted irregularity information that agrees with characteristics specified by known characteristic information, the known characteristic information being information that represents known characteristics relating to a structure of the object. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00015.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00016.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00017.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00018.TIF" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00020.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00019.TIF" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00021.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00020.TIF" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00022.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00021.TIF" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00023.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150257628A1-20150917-M00001.TIF" inline="yes" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150257628A1_00024.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257628A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257628A1.PDF" type="pdf" size="1347489" pages="39" />
+</lexisnexis-patent-document>

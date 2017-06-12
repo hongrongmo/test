@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246006A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021251" date-changed="20150918" time-changed="025331">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139116">
+        <country>US</country>
+        <doc-number>20150246006</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14700316</doc-number>
+        <date>20150430</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>A61K   9/70        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>70</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61F  13/02        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61K  31/137       20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>137</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61K  31/565       20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>565</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>A61K   9/7061      20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>7061</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61F  13/0276      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>0276</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61F  13/0283      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>0283</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61F  13/0289      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>0289</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61F2013/0296      20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2013</main-group>
+        <subgroup>0296</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61K   9/7053      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>7053</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61K   9/7092      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>7092</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61K  31/00        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61K  31/137       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>137</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61K  31/565       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>565</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61K  47/10        20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>A61K  47/12        20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">37</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">TRANSDERMAL SYSTEMS HAVING CONTROL DELIVERY SYSTEM</invention-title>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12454782</doc-number>
+              <date>20090522</date>
+            </document-id>
+            <parent-status>ABANDONED</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007003</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>11062084</doc-number>
+              <date>20050218</date>
+            </document-id>
+            <parent-status>ABANDONED</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12454782</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Mylan Technologies, Inc.</orgname>
+            <role>02</role>
+            <address>
+              <city>Morgantown</city>
+              <state>WV</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Jackson</last-name>
+            <first-name>Kristin</first-name>
+            <address>
+              <city>Enosburg Falls</city>
+              <state>VT</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Miller, II</last-name>
+            <first-name>Kenneth J.</first-name>
+            <address>
+              <city>St. Albans</city>
+              <state>VT</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bhat</last-name>
+            <first-name>Pavan</first-name>
+            <address>
+              <city>Morgantown</city>
+              <state>WV</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173461924">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246006</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150430</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173461921">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246006</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150430</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Transdermal delivery systems are disclosed including a backing layer, a polymer membrane within the backing layer, an adhesive layer for attaching the delivery system to the patient's skin or mucosa, and a releasable layer covering the adhesive layer prior to use, the polymer membrane impregnated with sufficient fluid medium to alter the rate of transmission of an active agent through the polymer membrane, with the amount of fluid medium being greater than the amount retained by the fluid membrane upon drying.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150722</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246006A1</docdb-publication-number>
+      <docdb-application-id>444207950</docdb-application-id>
+      <new-owner>MYLAN TECHNOLOGIES, INC., WEST VIRGINIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:JACKSON, KRISTIN;MILLER, II, KENNETH J.;BHAT, PAVAN;SIGNING DATES FROM 20050329 TO 20050408;REEL/FRAME:036151/0894</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <p id="p-00001-en" num="0001">This application is a continuation of U.S. application Ser. No. 12/454,782, filed on May 22, 2009, which is a continuation of U.S. application Ser. No. 11/062,084, filed on Feb. 18, 2005, the disclosures of which are incorporated herein by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to transdermal delivery systems. More particularly, the present invention relates to transdermal delivery systems for delivering active agents to the skin or mucosa of a patient. Still more particularly, the present invention relates to such transdermal delivery systems in which a polymer membrane is utilized for controlling the rate of transmission of the active agent therethrough.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">A considerable number of drug delivery devices are known in the art. These devices generally provide for a drug or other active agent to be released by diffusion from a reservoir or the like through the surface of the device to the skin or mucosa of a patient for the drug or other active agent. Most of the current transdermal systems can be divided into two major classes; that is, either reservoir systems or matrix-type systems. The reservoir systems generally comprise an enclosure of some kind filled with a fluid preparation of the active ingredient. In these systems, one side of the enclosure consists of a membrane which is permeable at least with respect to the active ingredient, and which is normally provided with a suitable adhesive. In the latter or matrix-type systems, the active ingredient is generally incorporated into a gel-type formulation or adhesive matrix, which is preferably also self-adhesive.</p>
+      <p id="p-00004-en" num="0004">In connection with various membrane-containing devices, one objective has been to control the rate of administration, such as to delay the onset of therapeutic effect for significant time periods after application of the device. One such device, for example, is disclosed in Lee et al., U.S. Pat. No. 5,284,660. Like the others, this device employs one or more membranes between the agent reservoir and the surface where the agent is to be released. The membrane in this case is substantially free of undissolved agent, and is preferably formed from a material having low permeability in a first state and high permeability in a second state. The membranes are described as comprising various polymers which are hydrophilic or semi-hydrophilic, including polyvinyl alcohol, polyvinyl pyrrolidone, hydroxypropylcellulose, hydroxyethylcellulose, and hydroxypropylmethylcellulose.</p>
+      <p id="p-00005-en" num="0005">In another prior art reference, Becher, U.S. Pat. No. 5,066,494, a multi-chamber system is used in order to attempt to obtain better control over transdermal drug application. Such a system is also said to help in preventing the flowing or dropping out of the complete active substance formulation therefrom.</p>
+      <p id="p-00006-en" num="0006">In many devices, there is also a desire for an initial rapid drug administration or spike, and in the past this has been obtained, for example, by employing a contact adhesive layer in which the drug is contained. In references such as Reed, U.S. Pat. No. 4,877,618, a relatively constant but declining rate of administration is said to be obtained over extended time periods by employing a number of particulate-containing interlaminar layers which absorb the drug.</p>
+      <p id="p-00007-en" num="0007">Another device is shown in Becher et al., U.S. Pat. No. 5,902,433, which in this case includes a number of chambers containing active substance, the chambers being in communication with each other, which are formed from top and bottom layers with an active-agent-containing substance therebetween, in which the top and bottom layers are brought together at predetermined sites to form channels or chambers thereof.</p>
+      <p id="p-00008-en" num="0008">Another multi-compartment device is shown in Andriola et al., U.S. Pat. No. 4,666,441. In this case, the reservoir area is formed from a permeable porous membrane which is meant to control the rate of drug movement, and the membranes include polycarbonates, polyvinyl chlorides, polyamides, polysulfones, and the like.</p>
+      <p id="p-00009-en" num="0009">Yet another patent disclosing a patch employing a membrane is Cavazza, U.S. Pat. No. 5,683,712. In this case, a microporous membrane is used to control the drug release through a subsequent adhesive layer and gel layers containing the drugs in question. No specific membrane materials are disclosed for this purpose in this patent.</p>
+      <p id="p-00010-en" num="0010">Yet another transdermal product for application of active agents is disclosed in Kwiatek et al., U.S. Pat. No. 5,503,844. This patent discloses the use of cellular foam layers for use as carrier layers for active agents, with or without additional membrane layers. The foam layers disclosed in this patent are polyurethane foams, and conventional rate-controlling polymers are used therein.</p>
+      <p id="p-00011-en" num="0011">A transdermal system which has already been marketed is the ESTRADERM® system marketed by Novartis, as shown schematically in <figref>FIG. 1</figref> hereof. This system includes a patch product which includes an outer transparent polyester film <b>3</b>, a drug reservoir <b>4</b> of estradiol and alcohol gelled with hydroxypropylcellulose, an ethylene vinyl acetate copolymer membrane <b>6</b>, and an adhesive formulation <b>8</b> of light mineral oil and polyisobutylene. This is covered by a protective liner <b>10</b> of siliconized polyethylene terephthalate film for removal prior to use. The alcohol acts as a solvent or enhancing agent for movement of the drug through the skin. However, when the alcohol has been depleted, no driving force for the drug remains. As in the cases discussed above, the membrane utilized in this product is not only non-microporous, but does not have a capacity to retain a fluid composition, or an enhancing agent, therein.</p>
+      <p id="p-00012-en" num="0012">There has thus developed a strong need for an improved patch system, and in particular one in which a membrane is employed which has a capacity to retain solvent and/or enhancing agents, such as volatile organic solvents, therein for the purpose of improving and controlling the delivery of the drug itself and improving the solubility of the drug in the patch systems utilized.</p>
+      <p id="p-00013-en" num="0013">It is also true that in many of the present transdermal systems, since the systems including adhesive compositions must be subjected to rigorous drying conditions prior to use, that the drug itself also needs to be subjected to these conditions. Thus, systems have also been designed in which it does not prove necessary to subject the drug to such conditions and thereby improve its stability.</p>
+      <p id="p-00014-en" num="0014">In many of the present systems, it is necessary that if a solvent is employed, it must at least be partially miscible with the adhesive systems utilized. Therefore, systems have also been sought in which one can employ solvents that are not fully compatible with the adhesive blend therein.</p>
+      <p id="p-00015-en" num="0015">It is also apparent that in most of the prior transdermal systems the amount of solvent which can be retained in the patch itself is limited to the saturation concentration of the solvent in the adhesive itself. Therefore, systems have been sought which are not limited by this factor.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00016-en" num="0016">In accordance with the present invention, these and other objects have now been realized by the discovery of a transdermal delivery system for delivering an active agent to the skin or mucosa of a patient comprising a backing layer, a polymer membrane disposed within the backing layer, an adhesive layer for attaching the transdermal delivery system to the skin or mucosa of the patient, and a releasable layer for covering the adhesive layer prior to attachment of the transdermal delivery system to the skin or mucosa of the patient, the polymer membrane impregnated with a predetermined amount of a fluid medium for altering the rate of transmission of the active agent through the skin or mucosa of the patient, the predetermined amount of the fluid medium being substantially greater than the amount of that fluid medium retained by the polymer membrane upon drying of the polymer membrane. Preferably, the fluid medium comprises a liquid solvent for the active agent, or an enhancer for the active agent, or an excipient (or solution of an excipient) for the active agent, or the active agent itself.</p>
+      <p id="p-00017-en" num="0017">In accordance with another embodiment of the transdermal delivery system of the present invention, the adhesive layer comprises a first adhesive layer, and the device includes a second adhesive layer disposed between the backing layer and the polymer membrane.</p>
+      <p id="p-00018-en" num="0018">In accordance with another embodiment of the transdermal delivery system of the present invention, the first and second adhesive layers comprise an adhesive matrix including one or more adhesives such as an acrylic, silicone, polyisoalkaline, rubber, vinyl acetate, polyisobutylene rubber, polybutadiene, styrene-butadiene, cellulose derivatives, polysaccharides, polyurethane elastomers, and polyester elastomers.</p>
+      <p id="p-00019-en" num="0019">In accordance with another embodiment of the transdermal delivery system of the present invention, the fluid medium comprises a solvent for the active agent. In a preferred embodiment, the solvent comprises a C<sub>2</sub>-C<sub>8 </sub>alcohol.</p>
+      <p id="p-00020-en" num="0020">In accordance with another embodiment of the transdermal delivery system of the present invention, the first adhesive layer includes the active agent. In another embodiment, the second adhesive layer includes the active agent. Preferably, both the first and second adhesive layers include the active agent.</p>
+      <p id="p-00021-en" num="0021">In accordance with another embodiment of the transdermal delivery system of the present invention, the polymer membrane comprises a hydrophilic or hydrophobic polymer(s) or copolymer. In a preferred embodiment, the hydrophilic or hydrophobic polymer(s) or copolymer are selected from the following: polyolefin (e.g., polyethylene, polypropylene), ethylene vinyl acetate, polyvinyl acetate, polyether block amides, polyurethane, polyamides (e.g., nylon), cellulose and cellulose derivatives, polyvinyl chloride, polyvinyl alcohol, polystyrene, polymethyl methacrylate, polysilane, and polysiloxane.</p>
+      <p id="p-00022-en" num="0022">In accordance with yet another embodiment of the transdermal delivery system of the present invention, the predetermined amount of the fluid medium comprises from about 0.5 to 10 mg/cm<sup>2</sup>. In the preferred embodiment, the predetermined amount of the fluid medium comprises from about 1 to 7 mg/cm<sup>2</sup>. Most preferably, the predetermined amount of the fluid medium comprises about 3.0 mg/cm<sup>2</sup>.</p>
+      <p id="p-00023-en" num="0023">In accordance with another embodiment of the transdermal delivery system of the present invention, the first and second adhesive layers comprise adhesives which are at least partially resistant to plasticization by a solvent for the active agent.</p>
+      <p id="p-00024-en" num="0024">In accordance with one embodiment of the transdermal delivery system of the present invention, the system comprises a backing layer, a polymer membrane disposed within the backing layer, an adhesive layer for attaching the transdermal delivery system to the skin or mucosa of the patient, a releasable layer for covering the adhesive layer prior to attachment of the transdermal delivery system to the skin or mucosa of the patient, and a fluid medium distributed between the adhesive layer and the polymer membrane in a manner such that between about 2.5% and 100% of the fluid medium is disposed in the polymer membrane. Preferably, between about 50% and 100% of the fluid medium is disposed in the polymer membrane. In one embodiment, a greater proportion of the fluid medium is disposed in the polymer membrane than is disposed in the adhesive layer.</p>
+      <p id="p-00025-en" num="0025">In accordance with the present invention, a method has also been discovered for manufacturing a transdermal delivery system for delivering an active agent to a patient in which the method comprises preparing an adhesive layer for attaching the transdermal delivery system to the skin or mucosa of the patient, providing a polymer membrane, impregnating the polymer membrane with a predetermined amount of a fluid medium for altering the rate of transmission of the active agent through the skin or mucosa of the patient, drying the adhesive layer without drying the polymer membrane, applying the adhesive layer to the impregnated polymer membrane, providing a backing layer and incorporating the adhesive layer and the polymer membrane into the backing layer, and providing a releasable liner adjacent to and protecting the adhesive layer prior to application of the transdermal delivery system to the skin or mucosa of the patient. In a preferred embodiment, the fluid medium comprises a solvent for the active agent, or an enhancer for the active agent, or an excipient (or solution of excipient) for the active agent, or the active agent itself.</p>
+      <p id="p-00026-en" num="0026">In accordance with one embodiment of the method of the present invention, the adhesive layer comprises a first adhesive layer, and the method includes applying a second adhesive layer between the backing layer and the polymer membrane. In a preferred embodiment, the first and second adhesive layers comprise an adhesive matrix including an adhesive such as one of the following: acrylic, silicone, polyisoalkaline, rubber, vinyl acetate, polyisobutylene rubber, polybutadiene, styrene-butadiene, cellulose derivatives, polysaccharides, polyurethane elastomers and polyester elastomers.</p>
+      <p id="p-00027-en" num="0027">In accordance with one embodiment of the method of the present invention, the fluid membrane comprises a solvent for the active agent. In a preferred embodiment, the solvent for the active agent comprises a C<sub>2</sub>-C<sub>18 </sub>alcohol.</p>
+      <p id="p-00028-en" num="0028">In accordance with another embodiment of the method of the present invention, the method includes adding the active agent to the first adhesive layer. In another embodiment, the method includes adding the active agent to the second adhesive layer. In a preferred embodiment, the method includes adding the active agent to both the first and second adhesive layers.</p>
+      <p id="p-00029-en" num="0029">In accordance with another embodiment of the method of the present invention, the polymer membrane comprises a polymer such as either a hydrophilic or hydrophobic polymer. Preferably, the hydrophilic polymer is a polyolefin (e.g., polyethylene) or polyethylene/ethylene vinyl acetate copolymer.</p>
+      <p id="p-00030-en" num="0030">In accordance with another embodiment of the method of the present invention, the predetermined amount of the fluid medium comprises from 0.5 to 10 mg/cm<sup>2</sup>, preferably from about 1 to 7 mg/cm<sup>2</sup>, and most preferably 3.0 mg/cm<sup>2</sup>.</p>
+      <p id="p-00031-en" num="0031">In accordance with another embodiment of the method of the present invention, the first and second adhesive layers comprise adhesives which are at least partially resistant to plasticization by the solvent for the active agent.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00032-en" num="0032">The present invention may be more fully understood with reference to the following detailed description which, in turn, refers to the figures, in which:</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 1</figref> is a side, elevational, enlarged, cross-sectional view of a liquid reservoir transdermal device in accordance with the prior art; and</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 2</figref> is a side, elevational, enlarged, cross-sectional view of a transdermal device in accordance with the present invention;</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00035-en" num="0035">Referring first to <figref>FIG. 1</figref>, a transdermal patch product of the prior art is shown therein. The prior art product is intended to represent known products, such as the ESTRADERM® transdermal patch product sold by Novartis. This patch product includes a backing layer <b>2</b> which is impermeable to fluids contained within the patch, and a reservoir <b>4</b> comprising a drug or active agent along with an alcohol-containing fluid gel reservoir composition. A conventional microporous membrane <b>6</b> is then included along with an adhesive layer also containing active agent or drug therein. The patch is covered by a releasable liner <b>10</b> which is removed prior to application of the adhesive layer <b>8</b> to the skin or mucosa of the patient. Use of alcohol-like substances acts as an enhancer since these small molecule compositions can travel through the skin far faster than the drug components used in these products. The alcohol material thus initially carries additional amount of the drug (estradiol in this case) through the skin, and the patient receives an initial “spike” of drug composition. However, as soon as the alcohol is depleted, little driving force remains for the estradiol to pass through the skin of the patient. Attempts have thus been made to obtain equivalent “spikes” of the drug composition without using materials such as alcohol. These attempts have not proven to be successful, however.</p>
+      <p id="p-00036-en" num="0036">Referring to <figref>FIG. 2</figref>, a comparable transdermal patch product of the present invention is shown, including backing layer <b>12</b>; first adhesive layer <b>14</b>, preferably containing active agent therein; membrane <b>16</b>; a second adhesive layer <b>18</b>, again preferably containing active agent therein; and releasable liner <b>20</b> thereon.</p>
+      <p id="p-00037-en" num="0037">In a preferred composition as shown in <figref>FIG. 2</figref>, in addition to the polymer membrane <b>16</b>, either one of adhesive layers <b>14</b> or <b>18</b>, or both, are preferably employed. Furthermore, even when two adhesive layers <b>14</b> and <b>18</b> are used, they can constitute different adhesive formulations, and one or the other or both of these adhesive layers <b>14</b> and <b>18</b> can include the active agent itself dispersed therein. As a separate matter, the polymer membrane <b>16</b> can include active agent dissolved in the solvent contained within the pores of the membrane. This, of course, can also be the only source of active agent, or active agent can in addition be included in one or both of adhesive layers <b>14</b> and <b>18</b>. These various combinations permit one to custom make the specific transdermal patch system so that an appropriate drug and drug application regimen can be provided. This can include an initial “spike” in the drug delivery, it can include a shortening of the lag time between application of the patch and drug delivery, and it can alter the solubility of the drug in the system or constituent layers for such purposes.</p>
+      <p id="p-00038-en" num="0038">The polymer membrane <b>16</b> is an essential element of the present invention, since it must have sufficient capacity (via pores or as a result of swelling) so as to retain solvent or other fluid media within the membrane. Thus, the presence of such volatile organic solvents in the membrane of the present invention helps improve the delivery of the drug by acting as an enhancer and/or by improving the solubility of the drug in the patch itself. Thus, while volatile solvents were used in the past, much of the solvents were driven off during drying of the patches prior to use. In accordance with this invention, however, it is possible to thoroughly dry the adhesive matrix without driving off the solvent which is desired, by incorporating the solvent into the membrane in accordance with this invention, preferably subsequent to the drying process.</p>
+      <p id="p-00039-en" num="0039">There are thus at least two elements which combine to provide the present invention. First, there is the incorporation of a fluid medium into the membrane itself. Second, there is the drying of the adhesive layer or layers, or indeed all of the patch except for the membrane, prior to completion of the patch; i.e., separately from the membrane. Thus, the membrane itself is not subjected to the drying conditions; i.e., elevated temperatures, which are applied to the adhesive layer(s)themselves. It is in this manner that it now becomes possible to incorporate into these transdermal systems far greater amounts of these fluid media than has previously been the case.</p>
+      <p id="p-00040-en" num="0040">The advantages now achievable by means of this invention include the ability to more accurately control the overall drug application process, such as by applying or extending the period of a drug “spike” and/or the entire period of drug application. It is also now possible to utilize larger amounts of fluid media which would normally result in reduction, or even elimination, of the adhesive character of the adhesive layer(s) if applied thereto. In addition, it is also possible to utilize a fluid medium which is entirely incompatible with the adhesive layer(s), since the fluid does not need to be carried by that adhesive layer(s), but can be retained by the polymer membrane. All of this permits a radical alteration in the overall design of these transdermal drug delivery systems.</p>
+      <p id="p-00041-en" num="0041">There are many transdermal systems which are known to employ membranes, primarily for rate-controlling purposes, or as a component in a gel reservoir system such as that set forth above. However, the membranes of the present invention, employed in the specific systems hereof, perform an entirely different function; namely, of retaining solvent, enhancer, excipient and/or drug compositions for the purpose of controlling the application of the drug, modifying the rate of drug delivery, or selectively modifying the solubility of the drug in the system.</p>
+      <p id="p-00042-en" num="0042">The membranes usable in accordance with the present invention possess sufficient capacity to retain within the membrane greater than 5 mg/10 cm<sup>2 </sup>of solvents such as short chain alcohols (2 to 18 carbon atoms, preferably ethyl alcohol) preferably from 5 to 100 mg/10 cm<sup>2</sup>, and preferably at least about 30 mg/10 cm<sup>2</sup>.</p>
+      <p id="p-00043-en" num="0043">The polymer membranes useful in accordance with the present invention can include a variety of both hydrophilic and hydrophobic polymers or copolymers. These polymers and copolymers can include polyolefins, such as polyethylene and polypropylene, ethylene-vinyl acetate, polyvinyl acetate, polyether block amides, polyurethane, polyamides, such as nylon, cellulose and cellulose derivatives, polyvinyl chloride, polyvinyl alcohol, polystyrene, polymethyl methacrylate, polysilane, and polysiloxane. Among the preferred membranes for use in the present invention are included ethylene-vinyl acetate, polyethylene, such as CoTran®9711 of 3M Corporation, and SULOPOR® of DSM Corporation, or ultra-high molecular weight polyethylene membrane.</p>
+      <p id="p-00044-en" num="0044">Other examples of the polymer membranes which can be used in accordance with this invention include copolyester membranes, preferably between 0.5 and 3.0 mils in thickness, with MVTRs between about 1,000 and 15,000 g/m<sup>2</sup>/24 hrs.; polyurethane membranes which are from about 0.5 to 3.0 mils in thickness with MVTR values between about 1,000 and 10,000 g/m<sup>2</sup>/24 hrs.; polyether block amides with MVTRs between about 2,000 and 10,000 g/m<sup>2</sup>/24 hrs.; 9% ethylene vinyl acetate polymer membranes which are between about 1 and 5 mils in thickness; and hydrophilic polyethylene membranes which are between about 1.0 and 10.0 mils in thickness.</p>
+      <p id="p-00045-en" num="0045">The various pharmaceutically active agents which can be used in accordance with the present invention are legion. Indeed, essentially any active agent which has been or could be applied transdermally is a candidate for the present invention. With any such active agent, or drug, or class thereof, the present invention can be utilized to manipulate the natural rate of transdermal or transmucosal delivery, and/or to insert a greater amount of the active agent into a dosage form thereof. Manipulation of the natural rate of delivery could, for example, be in connection with certain steroids. That is, endogenous steroid levels, such as with estrogens, progestens and androgens, follow circadian patterns. The present invention could then be employed to obtain a “spike” shortly after application. Other active agents, such as analgesics can sometimes work fast by delivering a bolus in order to terminate pain, followed by a steady but slower rate of delivery to prevent return of the pain.</p>
+      <p id="p-00046-en" num="0046">On the other hand, insertion of greater amounts of active agent into a dosage form could be applied, for example, in connection with active agents such as testosterone. This drug can be suspended in an acrylic adhesive in order to delivery a therapeutic dose, but the testosterone can crystallize within the matrix in an unpredictable manner. By application of the present invention, delivery of the drug can be accomplished with sufficient drug loaded into the system, and there would be no driving force for crystallization of the testosterone, unless the solvent being utilized were lost from the membrane during storage. In another example, attempts to load a sufficient amount of fentanyl into a polyisobutylene adhesive matrix in a patch in order to deliver a therapeutic dose thereof over three days will result in the adhesive matrix having lost its adhesive properties. By utilizing the present invention, however, the fentanyl will remain dissolved throughout the adhesive matrix and that matrix can still remain tacky</p>
+      <p id="p-00047-en" num="0047">As for the active agents themselves, again as noted above, there is essentially no limit on the potential use of any such active agents which can be delivered transdermally or transmucosally.</p>
+      <p id="p-00048-en" num="0048">Suitable systemic drugs include, without limitation, anti-microbial agents such as penicillin, tetracycline, oxytetracycline, chlortetracycline, chloramphenicol, and sulfonamides; sedatives and hypnotics such as pentabarbital sodium, phenobarbital, secobarbital sodium, codeine, (α-bromoisovaleryl)urea, carbromal, and sodium phenobarbital; psychis energizers such as a 30(2-aminopropyl) indole acetate and 3-(2-aminobutyl) indole acetate; tranquilizers such as reserpine, chlorpromazine hydrochloride, and thiopropazate hydrochloride; hormones such as adrenocorticosteroids, for example, 6α-methylprednisolone; androgenic steroids, for example, methyltestosterone, and fluoxymesterone; estrogenic steroids, for example estrone, 17β-estradiol and ethinyl estradiol; progesterone, and norethindrone; and thyroxide; antipyretics such as aspirin, salicylamide, and sodium salicylate; morphine and other narcotic analgesics; anti-diabetics, e.g., insulin; cardiovascular agents, e.g. nitroglycerin, and cardiac glycosides such as digitoxin, digoxin, ouabain; anti-spasmodics such as atropine, methscopolamine bromide, methscopolamine bromide with phenobarbital; anti-malarials such as the 4-aminoquinolines, 9-amino-quinolines, and pyrimethamine; and nutritional agents such as vitamins, essential amino acids, and essential fats.</p>
+      <p id="p-00049-en" num="0049">The backing layer which is impermeable to the drug, and the adhesive primarily has as its objectives to prevent seepage of the active agent or adhesive through the backing layer. If, for example, the backing layer is coated on the surface in contact with the remainder of the device with an adhesive layer that is active agent impermeable, this impermeable adhesive layer will essentially perform this purpose even if the backing layer is not totally impermeable to the active agent. Thus, it is not necessary in all instances that the backing layer be impermeable to the active agent, although in most instances it normally is, and when it is not a layer providing this barrier function, such as an active-ingredient-impermeable adhesive layer, it will be situated between the backing layer and the remainder of the device such as the membrane.</p>
+      <p id="p-00050-en" num="0050">The backing layer may also be impermeable to the solvent or other fluid medium contained within the transdermal system. However, in some embodiments it is possible that the backing layer might be permeable to the solvent or other fluid component therein. For example, a portion of this liquid medium might be permitted to evaporate through the backing layer. This could thus provide a cooling effect, or it could act as a secondary method for attenuating the “spike” of active agent through the skin or mucosa of the patient by allowing a portion of the solvent or the enhancer to escape from the system other than by passing through the skin or mucosa of the patient.</p>
+      <p id="p-00051-en" num="0051">The actual material used for the outer surface of the backing layer will depend on the properties of the materials in contact therewith. Some suitable materials include, for example, cellophane, cellulose acetate, ethyl cellulose, plasticized vinyl acetate-vinyl chloride copolymers, ethylene-vinyl acetate copolymer, polyethylene terephthalate, nylon, polyethylene, polypropylene, polyvinylidine chloride (e.g., SARAN), paper, cloth and aluminum foil. The material used is preferably impermeable to the active gent. The material which forms this backing layer may be flexible or non-flexible. Preferably, a flexible backing layer is employed to conform to the shape of the body to which the device is attached.</p>
+      <p id="p-00052-en" num="0052">Preferably, the material which forms the backing layer, such as layer <b>12</b>, is a film or a composite film. The composite can be a metalized (e.g., aluminized) film or a laminate of two or more films or a combination thereof. For example, a laminate of polyethylene terephthalate and polyethylene or a polyethylene/metalized polyethylene terephthalate/polyethylene laminate can be employed. The preferred polymers include polyethylene, polypropylene, polyvinyl chloride, polyesters such a polyethylene terephthalate (MYLAR), and polyvinylidine chloride (SARAN). More particularly, a highly preferred composition of the present invention employs highly occlusive layers of polyethylene terephthalates or polyvinylidine chloride as a backing layer.</p>
+      <p id="p-00053-en" num="0053">The transdermal patch systems of the present invention also include a release or releasable layer for temporarily covering the adhesive surface prior to application. The release layer can be made of the same material suitable for use in the backing layer as discussed above. Such materials are preferably made releasable from the adhesive layer by, for example, conventional treatment with silicone, TEFLON, or other suitable coating on the surface thereof. The removal of the device from the release layer may also be provided by mechanical treatment of the release layer, such as by embossing same.</p>
+      <p id="p-00054-en" num="0054">The release layer can also comprise various layers including paper or paper-containing layers or laminates; various thermoplastics, such as extruded polyolefins, such as polyethylene; various polyester films, foil liners, other such layers, including fabric layers, coated or laminated to various polymers, as well as extruded polyethylene, polyethylene terephthalate, various polyamides, and the like, with the polyester films being preferred. The release layer can also comprise vacuum metalized films such as metalized polyester or polypropylene formed by vacuum deposition of aluminum for UV and oxygen resistance.</p>
+      <p id="p-00055-en" num="0055">Another possible release layer of the present invention includes a laminate of an outer foil layer and an inner layer of plastic, such as polyethylene or the like, which is rendered releasable not only by means of a siliconized coating, but which also includes an embossed or roughened surface. Embossment of the surface can be accomplished by a number of conventional methods. In general, preparation of embossed surfacing can be accomplished by the use of male-female tooling, preferably enhanced by the application of heat. The principal intention of this embossment process is to roughen the surface or render it uneven so that less than the entire surface will be in physical contact with the corresponding adhesive layer.</p>
+      <p id="p-00056-en" num="0056">The preferred release layers of the present invention include polyester films, preferably including a siliconized or fluorocarbon coating thereon, such as SCOTCH PAK 1022 from 3M Corporation.</p>
+      <p id="p-00057-en" num="0057">As is also discussed above, the fluid medium which is incorporated into the membranes of the present invention can include water, C<sub>1</sub>-C<sub>3 </sub>alcohols, dimethyl sulfoxide, N,N-dimethylacetamide, polyethylene glycol, polysorbitols, polyethylene oxide, polyoxyethylene, dimethicone, mineral oil/paraffin, vegetable oils, and the like.</p>
+      <p id="p-00058-en" num="0058">In accordance with the present invention, the solvent to be incorporated into the membrane is preferably an alcohol. Alcohols in accordance with the present invention can include monoalcohols, such as methanol, ethanol, propanol, isopropanol, butanol, and tertbutyl alcohol. The alcohol may also be a generally low molecular weight diol, triol, or polyol, i.e., glycols such as propylene glycol, triols such as glycerol, and polyalkylene glycol having an average molecular weight of less than about 400. For example, the solvent may be polyethylene glycol having an average molecular weight of between about 200 and about 400. The solvent in accordance with the present invention can thus comprise a normal short chain polyol of between about 2 and about 4 carbons in length. Such polyols may include 1,4 butanediol, glycerol, ethylene glycol, propylene glycol, and the like. Also useful in accordance with the present invention are acetates such as, for example, ethyl acetate, cellulose acetate, vinyl acetate and the like.</p>
+      <p id="p-00059-en" num="0059">It is also possible to use additional components in the transdermal systems of the present invention, such as dyes, permeation enhancers, cross-linkers, adhesion promoters, gelling agents, crystallization inhibitors, anti-inflammatory agents, and the like.</p>
+      <p id="p-00060-en" num="0060">Penetration enhancers can also be included as the fluid media of the present invention. These penetration enhancers are intended to promote penetration of the active agent through the skin, and suitable enhancers include those described in U.S. Pat. No. 5,503,844, including monovalent, saturated and unsaturated aliphatic and cycloaliphatic alcohols having 6 to 12 carbon atoms such as cyclohexanol, lauryl alcohol, and the like; aliphatic and cycloaliphatic hydrocarbons such as mineral oil; cycloaliphatic and aromatic aldehydes and ketones such as cyclohexanone; N,N-di(lower alkyl)acetamides such as N,N-diethyl acetamide and N,N-dimethyl acetamide, N,N-dimethyl acetamide, N-(2-hydroxyethyl)acetamide and the like; aliphatic and cycloaliphatic esters such as isopropyl myristate and lauricidin; N,N-di(lower alkyl) sulfoxides such as decylmethyl sulfoxide; essential oils, nitrated aliphatics, aliphatic and cycloaliphatic hydrocarbons such as N-methyl-2-pyrrolidone and azone; salicylates, polyalkylene glycol silicates; aliphatic acids such as oleic acid and lauric acid, terpines such as cineole, surfactants such as sodium lauryl sulfate, siloxanes such as hexamethyl siloxane; mixtures of the above materials; and the like.</p>
+      <p id="p-00061-en" num="0061">Examples of fluid carriers that may be combined with the active agent in the membrane layer include simple alcohols, polyethylene glycols, polypropylene glycols, polyester and polyether polyols, epoxidized linseed oils and simple liquid esters such as triethyl citrate, dicyclohexyl phthalate, diisoacyl adipate, fatty acids (oleic, lauric and the like), salts of fatty acids, fatty alcohols, fatty esters (CERAPHYLS and the like), terpenes and like. The preferred fluid carriers include short-chain alcohols, fatty acids, fatty esters, fatty alcohols, polyethylene glycols and polypropylene glycols.</p>
+      <p id="p-00062-en" num="0062">Examples of binders that can be combined with the active agent in the adhesive and/or membrane layers of the present invention include conventional hydrogels formed using water-soluble or water-insoluble gums or resins, with or without known cross-linking agents. The gums or resins include agarose, alginates, alkyl and hydroxyalkyl celluloses, such as hydroxyethyl cellulose and hydroxypropyl cellulose, amylopectin, arabinogalactin, carboxymethyl cellulose, carrageenan, eucheuma, ucoidan, furcellaran, gelatin, guar gum, gum agar, gum arabic, gum ghatti, gum karaya, gum tragacanth, pypenia, keratin laminaran, locust bean gum, pectin, polyacrylamide, poly(acrylic)acid and homologs, polyethylene glycol, poly(ethylene oxide), poly(hydroxyalkyl) methacrylate, polyvinyl alcohol, polyvinylpyrrolidone, propylene glycol alginate, starch and modified analogs, tamarind gum, N-vinyl lactam polysaccharides and xanthan gum. In addition, such hydrogels can be formed by the copolymerization and cross-linking of both hydrophilic and hydrophobic monomers, such as hydroxy-alkyl esters of acrylic acid and methacrylamide, n-vinyl-1-pyrrolidone, alkyl acrylates and methacrylates, vinyl acetate, acrylonitrile and styrene. Other binders suitable for use with the present invention include veegum, higher molecular weight polyglycols, and the like.</p>
+      <p id="p-00063-en" num="0063">The binders that are preferred for use with the present invention include cellulose esters, polyvinyl pyrrolidones and polyacrylates. Binders in accordance with the present invention can be prepared as a liquid, paste, semi-solid or solid that is combined with the active agent and incorporated into the membrane layer.</p>
+      <p id="p-00064-en" num="0064">A therapeutic adhesive formulation for use in accordance with the present invention includes various adhesive formulations which can be used as part of the transdermal drug delivery systems hereof. Preferably, these adhesive formulations are monolithic structures and preferably include both an adhesive formulation and a pharmaceutically active agent therein. The adhesive formulations which can be used in accordance with the present invention include many such formulations known in the art. Broadly these include acrylics, silicones, polyisoalkalines, rubbers, vinyl acetates, polyisobutylene rubber, polybutyldiene, styrene-butadiene(or isoprene)-styrene block copolymer rubber, acrylic rubber, and natural rubber; vinyl-based high molecular weight materials such as polyvinyl alkyl ether, polyvinyl acetate, a partially saponified product of polyvinyl acetate, polyvinyl alcohol and polyvinyl pyrrolidone; cellulose derivatives such as methyl cellulose, carboxylmethyl cellulose and hydroxypropyl cellulose; polysaccharides such as pullulan, dextrin and agar; polyurethane elastomers; and polyester elastomers. Of course, the adhesives must be biocompatible and nonirritating. They must also allow for a patch to adhere firmly to the skin or mucosa of a patient in need of treatment by a patch, but not be so adhesive so as to injure the patient as the patch is removed. It is also important that the adhesive be selected such that it is compatible with the other components of the therapeutic adhesive formulation of the present invention. It has been found that, as a group, the acrylic adhesives are particularly useful and compatible in this regard and therefore, it is preferred that the adhesive used be acrylic based. More specifically, acrylic adhesives in accordance with the present invention may preferably be (meth)acrylic acid such as butyl (meth)acrylate, pentyl (meth)acrylate, hexyl (meth)acrylate, heptyl (meth)acrylate, octyl (meth)acrylate, nonyl (meth)acrylate, decyl (meth)acrylate, undecyl (meth)acrylate, dodecyl (meth)acrylate, and tridecyl (meth)acrylate, and copolymers of at least one of the above esters and other monomers copolymerizable therewith.</p>
+      <p id="p-00065-en" num="0065">Examples of the preferred polyacrylate adhesives for use in the transdermal system of the present invention are those sold under the trademark DuroTak®87-2194, 87-2620, 87-2052, 87-2852, 87-2054, 87-2979 and 87-6173 by National Starch and Chemical Corporation. Other suitable adhesives are sold under the trademark GELVA-Multipolymer Solution, GELVA 2873 and 2883 by Surface Specialties, Inc.; and silicone adhesives sold under the trademark BIO-PSA 7-4300 and 7-4500 by Dow Corning Corporation. Other preferred adhesives include polyisobutylene and styrene-butadiene rubber adhesives.</p>
+      <p id="p-00066-en" num="0066">Examples of the copolymerizable monomer include carboxyl group-containing monomers such as (meth)acrylic acid, itaconic acid, crotonic acid, maleic acid, maleic anhydride and fumaric acid; sulfoxyl group-containing monomers such as styrenesulfonic acid, arylsulfonic acid, sulfopropyl acrylate, (meth) acryloyloxynaphthalenesulfonic acid, acrylamidomethylpropanesulfonic acid and acryloyloxybenzenesulfonic acid; hydroxyl group-containing monomers such as hydroxyethyl (meth)acrylate and hydroxypropyl (meth)acrylate; amide group-containing acrylic monomers such as (meth)acrylamide, dimethyl(meth)acrylamide, N-butylacrylamide, tetramethylbutylacrylamide and N-methylol(meth)acrylamide; alkylaminoalkyl group-containing acrylic monomers such as aminoethyl (meth)acrylate, dimethylaminoethyl (meth) acrylate, diethylaminoethyl (meth)acrylate and tertbutyl (meth)acrylate; alkyl esters of acrylic acid containing an ether bond in the molecule thereof such as methoxyethyl (meth)acrylate, ethoxyethyl (meth) acrylate, butoxyethyl (meth) acrylate, tetrahydrofurfuryl (meth) acrylate, methoxyethylene glycol (meth) acrylate, methoxydiethylene glycol (meth) acrylate, methoxypolyethylene glycol (meth)acrylate and methoxypolypropylene glycol (meth)acrylate; vinyl monomers such as N-(meth)acryloylamino acid; functional monomers such as urethane, urea or isocyanate ester of acrylic acid; and vinyl monomers such as (meth)acrylonitrile, vinyl acetate, vinyl propionate, vinyl pyrrolidone, vinyl pyridine, vinyl pyrazine, vinyl piperadine, vinyl piperidone, vinyl pyrimidine, vinyl pyrrole, vinyl imidazole, vinyl caprolactam, vinyl oxazole, vinyl thiazole, vinyl morpholine, styrene, a-methylstyrene and bis(N,N′-dimethylaminoethyl) maleate.</p>
+      <p id="p-00067-en" num="0067">The above alkyl esters of (meth)acrylic acid and copolymerizable monomers include isomers in which the alkyl portion is straight or branched, and isomers and derivatives in which the position of substituents is different.</p>
+      <p id="p-00068-en" num="0068">It is desirable from a standpoint of the balance between adhesive properties to the skin and cohesion that the ratio of the alkyl ester of (meth)acrylic acid to the copolymerizable monomer in the acrylic pressure-sensitive adhesive material is 50:50 to 99:1 by weight. When alkyl esters of (meth)acrylic acid containing an ether bond in the molecule thereof are used from the standpoint of the low skin irritating properties, it is desirable that the ratio of the alkyl ester of (meth)acrylic acid/the alkyl ester of (meth)acrylic and containing an ether bond in the molecule/the other copolymerizable monomer is 40 to 80/59 to 10/1 to 40.</p>
+      <p id="p-00069-en" num="0069">It is preferred that the adhesive formulations be subjected to suitable chemical cross-linking treatment (e.g., copolymerization of cross-linkable monomers and addition of a cross-linking agent) or physical cross-linking treatment (e.g., irradiation with ultraviolet rays and ionizing radiations such as electron beam).</p>
+      <p id="p-00070-en" num="0070">In accordance with the present invention, the amount of adhesive generally utilized ranges from between about 30 to about 99 percent by weight based on the weight of the resulting formulation (excluding backing and release films). Preferably, the amount of adhesive used ranges from between about 65 to about 95 percent by weight based on the total weight of the formulation (excluding backing and release films).</p>
+      <p id="p-00071-en" num="0071">Acrylic polymeric adhesives in accordance with this aspect of the present invention include between about 40% and about 90% of a C<sub>4</sub>-C<sub>12 </sub>alkyl acrylate as the principal monomeric component. Any alkyl acrylate having between 4 and 12 carbons which has been used for the formulation of transdermal adhesives can be used, although, of course, other acrylates are also contemplated. Traditional C<sub>4</sub>-C<sub>12 </sub>alkyl acrylates useful in accordance with the present invention include, for example, 2-ethylhexyl acrylate, butyl acrylate, n-decyl, n-nonyl, 2 ethyoctyl, isooctyl and dodecyl-acrylate Generally, the C<sub>4</sub>-C<sub>12 </sub>alkyl acrylate in accordance with the present invention will be used in a matter of between about 40 and about 90% based on the weight of the finished adhesive material. More preferably, however, the amount of the C<sub>4</sub>-C<sub>12 </sub>alkyl acrylate will range from between about 60% to about 80% by weight, based on the weight of the adhesive.</p>
+      <p id="p-00072-en" num="0072">The properties of the acrylic polymeric adhesive can be dramatically altered depending upon whether or not a hardening monomer is used and the type of hardening monomer used. It has been found that the use of between about 10% and about 40% by weight of a C<sub>1</sub>-C<sub>4 </sub>alkyl acrylate hardening monomer, in combination with the C<sub>4</sub>-C<sub>12 </sub>alkyl acrylate, can provide an acrylic polymeric adhesive system capable of providing desirable therapeutic delivery, as well as structural integrity. Examples of C<sub>1</sub>-C<sub>4 </sub>alkyl acrylate hardening monomers useful in accordance with the present invention include methyl acrylate, methyl methacrylate, ethylacrylate, ethyl methacrylate, hydroxyethyl acrylate and hydroxy propyl methacrylate. More preferably, the amount of C<sub>1</sub>-C<sub>4 </sub>alkyl acrylate hardening monomer useful in accordance with the present invention ranges from between about 15% to about 30% based on the weight of the adhesive.</p>
+      <p id="p-00073-en" num="0073">In accordance with the present invention, it is also desirable to use a functionalizing monomer which facilitates cross-linking. Functionalizing monomers provide functional groups for cross-linking. Such functionalizing monomers are well known in the art and include, for example, acrylic acid, hydroxy ethylacrylate, methacrylic acid, and acrylamide. It should be noted, however, that when using an acrylate hardening monomer in an acid form, it is preferred to use a functionalizing monomer, such as acrylic acid, whereas, where the hardening monomer is an alcohol, compounds such as hydroxy methylacrylate should be chosen. Functionalizing monomers are generally provided in the range of about 1% to about 20%.</p>
+      <p id="p-00074-en" num="0074">It is also desirable to include a cross-linking agent. Cross-linking agents can include butyl titanate, polybutyl titanate, aluminum zinc acetate and other multivalent metals, methylol ureas and melamines Generally the cross-linking agent is provided in an amount of between about 0.005 and about 2% the adhesive.</p>
+      <p id="p-00075-en" num="0075">Cross-linking can be effected in many ways depending upon a number of factors. Most importantly, cross-linking depends upon the mode of action of the cross-linking agent. Most of the acrylic polymeric adhesive formulations commercially available use cross-linking agents which will be activated upon the drying of the formulation. It is not the heat which activates these agents but rather the removal of the solvent by, for example, evaporation or drying. Drying to remove these solvents can by done under completely conventional conditions such as 100 to 140° F. It should be noted that certain formulations are commercially available without cross-linkers. For example, GELVA 1430 is identical to GELVA 1753 except that it does not include a cross-linker. This allows one to accommodate situations where no cross-linking is needed (such as when very low concentrations of drug are used) or to custom select a cross-linker that has a different mode of action.</p>
+      <p id="p-00076-en" num="0076">The present invention can also be appreciated with reference to the following examples.</p>
+      <heading id="h-00006-en" level="1">EXAMPLE 1</heading>
+      <p id="p-00077-en" num="0077">An active estradiol blend was made by sonicating estradiol hemihydrate and 200 proof ethyl alcohol in a 4-ounce glass jar. Polyvinyl pyrrolidone, fumed silica, propylene glycol and DuroTak®87-2194 adhesive were added and the blend was mixed using an air driven mixing blade. The active blend was coated knife over a roll as the skin contact layer at 18 mil wet on Medirelease®2226, then dried at 54° C. for 5 minutes and 85° C. for 8 minutes. The anchor layer was placebo polyisobutylene coated at 8 mil wet on Medirelease®2226, dried at 54° C. for 5 minutes and 85° C. for 8 minutes, then laminated to 0.5 mil PET. The release liner was peeled off the polyisobutylene anchor layer. A piece of CoTran®9711, the same size as the anchor adhesive, was placed on the exposed anchor adhesive. The anchor layer with the CoTran®9711 was soaked in a bath of 200 proof ethyl alcohol for 2 minutes. The anchor layer was removed from the bath. The active skin contact layer was then laminated on top of the exposed membrane impregnated with ethyl alcohol. Patches were die cut and pouched in Barex pouching. The patch exhibited a delivery “spike” in vitro.</p>
+      <heading id="h-00007-en" level="1">EXAMPLE 2</heading>
+      <p id="p-00078-en" num="0078">An active adhesive blend was made by sonicating estradiol hemihydrate and ethanol until the estradiol hemihydrate was dispersed (approx. 3 min.). Polyvinyl pyrrolidone was added to the premix and dissolved. Next, propylene glycol was added and swirled. Finally, DuroTak®87-2194 adhesive and fumed silica were added. The blend was mixed in a glass jar with an air driven mixing blade, after which the blend was rolled on a jar roller overnight to degas. An active adhesive blend was coated knife over roll twice on Medirelease®2226. An anchor layer was coated at 8 mil wet, and the skin contact layer was coated at 19 mil wet. Both layers were dried at 41° C. for 4 minutes and 77° C. for 4 minutes. To make the finished patch, the anchor layer was laminated to Mediflex®1000. The release liner was peeled off the anchor layer. A 9% ethylene vinyl acetate membrane (2.0 mil) was saturated with 200 proof ethyl alcohol by submerging the membrane in an ethyl alcohol bath. The saturated membrane was removed from the bath and placed on the adhesive side of the anchor layer. The skin contact layer (adhesive side) was laminated on top of the exposed membrane with ethanol. This formulation exhibits a delivery “spike” in vitro.</p>
+      <heading id="h-00008-en" level="1">EXAMPLE 3</heading>
+      <p id="p-00079-en" num="0079">An active blend was made by sonicating the estradiol hemihydrate (0.41 g) in 200 proof ethyl alcohol (3.09 g) for 3 minutes. The polyvinyl pyrrolidone (1.04 g) was dissolved in the premix and sonicated for 3 minutes. Propylene glycol (4.80 g), DuroTak®87-2194 (60.79 G) and fumed silica (0.17 g) were added to the premix. The entire blend was mixed with an air driven mixing blade for 3 minutes, after which a glass jar was rolled on the jar roller overnight to degas. The laminates were coated knife over roll at 14 mil wet on Medirelease®2249 to obtain a coat weight of 55.0 g/m<sup>2</sup>. the laminate was dried at 41° C. for 4 minutes and 77° C. for 4 minutes. The first laminate was laminated to Mediflex®1500 backing as the anchor layer. The release liner was peeled off the anchor layer. A piece of DSM Solupor 10P05A membrane was submerged in a bath of 200 proof ethyl alcohol for at least 1 minute. The membrane was removed form the bath and wiped with a lint-free wipe to remove excess ethyl alcohol. After 1 minute in ambient air, the wet membrane was placed on the exposed adhesive of the anchor layer. The second laminate (skin contact layer) was immediately laminated on top of the exposed membrane loaded with ethyl alcohol. Appropriate size patches were immediately die cut from the laminate and sealed in polyethylene pouching material. This formulation exhibits a delivery “spike” in vitro.</p>
+      <heading id="h-00009-en" level="1">EXAMPLE 4  </heading>
+      <p id="p-00080-en" num="0080">An active blend was made by sonicating albuterol sulfate in ethyl acetate for 5 minutes in a 4-ounce glass jar. Mineral oil, lauryl alcohol, and lauric acid were added to the premix. Polyisobutylene adhesive was added to the jar and the blend was mixed with an air driven mixing blade for 3 minutes, after which the blend was rolled on the jar roller to degas. The blend was coated twice on Medirelease®2226 at 10 mil wet, and dried at 55° C. for 5 minutes and 85° C. for 8 minutes. One laminate was laminated to the Mediflex®1000 backing, the release liner was peeled off and 7 cm<sup>2 </sup>pieces of CoTran®9711 were placed on the exposed adhesive. Fifty μL of 1-Octanol was pipeted onto each piece of CoTran®9711. The other laminate was laminated on top of the CoTran®9711 impregnated with 1-Octanol and 10 cm<sup>2 </sup>patches were die cut. The patches were pouched immediately. The in vitro flux lag time was shortened compared to control without a membrane impregnated with 1-Octonal.</p>
+      <heading id="h-00010-en" level="1">EXAMPLE 5</heading>
+      <p id="p-00081-en" num="0081">An active blend was made by sonicating albuterol sulfate in ethyl acetate for 3 minutes in a 4-ounce glass jar. Mineral oil and lauric acid were added to the premix. Polyisobutylene adhesive was added to the jar and the blend was mixed with an air-driven mixing blade for 3 minutes, after which the blend was rolled on the jar roller to degas. The blend was coated twice on Medirelease®2226 at 50 g/m<sup>2</sup>, and dried at 55° C. for 5 minutes and 85° C. for 8 minutes. One laminate was laminated to the Mediflex®1000 backing, the release liner was peeled off and 10 cm<sup>2 </sup>pieces of CoTran®9711 impregnated with lauryl alcohol were placed on the exposed adhesive. The second laminate was laminated on top of the CoTran®9711 impregnated with lauryl alcohol and 10 cm<sup>2 </sup>patches were die cut.</p>
+      <p id="p-00082-en" num="0082">Although the invention herein has been described with reference to particular embodiments, it is to be understood that these embodiments are merely illustrative of the principles and applications of the present invention. It is therefore to be understood that numerous modifications may be made to the illustrative embodiments and that other arrangements may be devised without departing from the spirit and scope of the present invention as defined by the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A transdermal delivery system for delivering an active agent to the skin or mucosa of a patient comprising a backing layer including an inner surface and an outer surface, a polymer membrane disposed proximate to said inner surface of said backing layer, an adhesive layer for attaching said transdermal delivery system to said skin or mucosa of said patient, said adhesive layer comprising an adhesive matrix retaining said active agent, and a releasable layer for covering said adhesive layer prior to attachment of said transdermal delivery system to said skin or mucosa of said patient, said polymer membrane impregnated with a predetermined amount comprising from about 0.5 to 10 mg/cm<sup>2 </sup>of a fluid medium comprising ethanol for altering the rate of transmission of said active agent through said polymer membrane to said skin or mucosa of said patient, said impregnated polymer membrane not being dried prior to use, said predetermined amount of said fluid medium retained in said polymer membrane.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The transdermal delivery system of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said adhesive layer comprises a first adhesive layer, and including a second adhesive layer disposed between said backing layer and said polymer membrane.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The transdermal delivery system of <claim-ref idref="clm-00002-en">claim 2</claim-ref> wherein each of said first and second adhesive layers comprise an adhesive matrix including an adhesive selected from the group consisting of acrylic, silicone, polyisoalkalines, rubber, vinyl acetate, polyisobutylene rubber, polybutadiene, styrene-butadiene, cellulose derivatives, polysaccharides, polyurethane elastomers and polyester elastomers.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The transdermal delivery system of <claim-ref idref="clm-00003-en">claim 3</claim-ref> wherein said adhesive is selected from the group consisting of acrylics, silicone, rubber, styrene-butadiene rubber, and polyisobutylene.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The transdermal delivery system of <claim-ref idref="clm-00004-en">claim 4</claim-ref> wherein said adhesive comprises an acrylic adhesive.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The transdermal delivery system of <claim-ref idref="clm-00003-en">claim 3</claim-ref> wherein said second adhesive layer includes said active agent.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The transdermal delivery system of <claim-ref idref="clm-00003-en">claim 3</claim-ref> wherein both said first and second adhesive layers include said active agent.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The transdermal delivery system of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said polymer membrane comprises a polymer selected from the group consisting of hydrophilic and hydrophobic polymers and copolymers.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The transdermal delivery system of <claim-ref idref="clm-00008-en">claim 8</claim-ref> wherein said polymer membrane is selected from the group consisting of polyolefins, ethylene-vinyl acetate, polyvinyl acetate, polyether block amides, polyurethane, polyamides, cellulose, cellulose derivatives, polyvinyl chloride, polyvinyl alcohol, polystyrene, polymethyl methacrylate, polysilane and polysiloxane.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The transdermal delivery system of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said predetermined amount of said fluid medium comprises from about 1 to 7 mg/cm<sup>2</sup>.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The transdermal delivery system of <claim-ref idref="clm-00010-en">claim 10</claim-ref> wherein said predetermined amount of said fluid medium comprises about 3.0 mg/cm<sup>2</sup>.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The transdermal delivery system of <claim-ref idref="clm-00002-en">claim 2</claim-ref> wherein said first and second adhesive layers comprise adhesives which are at least partially resistant to plasticization by a solvent for said active agent.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en" independent="true">
+      <claim-text>
+        <b>13</b>. A transdermal delivery system for delivering an active agent to the skin or mucosa of a patient comprising a backing layer including an inner surface and an outer surface, a polymer membrane disposed proximate to said inner surface of said backing layer, an adhesive layer for attaching said transdermal delivery system to said skin or mucosa of said patient, said adhesive layer comprising an adhesive matrix containing said active agent, a releasable layer for covering said adhesive layer prior to attachment of said transdermal delivery system to said skin or mucosa of said patient, and a fluid medium comprising ethanol wherein between about 25% and 100% of said fluid medium is disposed in said polymer membrane, said impregnated polymer membrane not being dried prior to use.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The transdermal delivery system of <claim-ref idref="clm-00013-en">claim 13</claim-ref> wherein between about 50% and 100% of said fluid medium is disposed in said polymer membrane.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The transdermal delivery system of <claim-ref idref="clm-00013-en">claim 13</claim-ref> wherein a greater proportion of said fluid medium is disposed in said polymer membrane than is disposed in said adhesive layer.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The transdermal delivery system of <claim-ref idref="clm-00013-en">claim 13</claim-ref> wherein said adhesive layer comprises a first adhesive layer, and including a second adhesive layer disposed between said backing layer and said polymer membrane.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The transdermal delivery system of <claim-ref idref="clm-00013-en">claim 13</claim-ref> wherein said polymer membrane includes greater than 5 mg/10 cm<sup>2 </sup>of said fluid medium.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The transdermal delivery system of <claim-ref idref="clm-00013-en">claim 13</claim-ref> wherein said adhesive layer comprises a pressure-sensitive adhesive selected from the group consisting of acrylics, silicone, rubber, styrene-butadiene rubber, and polyisobutylene.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The transdermal delivery system of <claim-ref idref="clm-00018-en">claim 18</claim-ref> wherein said pressure-sensitive adhesive comprises an acrylic-vinyl acetate resin.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The transdermal delivery system of <claim-ref idref="clm-00013-en">claim 13</claim-ref> wherein said polymer membrane comprises a hydrophilic or hydrophobic polymer or copolymer.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en" independent="true">
+      <claim-text>
+        <b>21</b>. A method for manufacturing a transdermal delivery system for delivering an active agent to a patient comprising
+<claim-text>preparing an adhesive layer for attaching said transdermal delivery system to the skin or mucosa of said patient,</claim-text><claim-text>providing a polymer membrane,</claim-text><claim-text>impregnating said polymer membrane with a predetermined amount of a fluid medium for altering the rate of transmission of said active agent through said polymer membrane to said skin or mucosa of said patient,</claim-text><claim-text>drying said adhesive layer without drying said polymer membrane,</claim-text><claim-text>applying said adhesive layer to said impregnated polymer membrane,</claim-text><claim-text>providing a backing layer and incorporating said adhesive layer and said polymer membrane into said backing layer, and</claim-text><claim-text>providing a releasable liner adjacent to and protecting said adhesive layer prior to application of said transdermal delivery system to said skin or mucosa of said patient.</claim-text></claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The method of <claim-ref idref="clm-00021-en">claim 21</claim-ref> wherein said fluid medium comprises a liquid selected from the group consisting of a solvent for said active agent, an enhancer for said active agent, an excipient for said active agent, and said active agent.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The method of <claim-ref idref="clm-00021-en">claim 21</claim-ref> wherein said adhesive layer comprises a first adhesive layer, and including applying a second adhesive layer between said backing layer and said polymer membrane.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The method of <claim-ref idref="clm-00023-en">claim 23</claim-ref> wherein said first and second adhesive layers comprise an adhesive matrix including an adhesive selected from the group consisting of acrylic, silicone, polyisoalkalines, rubber, vinyl acetate, polyisobutylene rubber, polybutadiene, styrene-butadiene, cellulose derivatives, polysaccharides, polyurethane elastomers and polyester elastomers.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. The method of <claim-ref idref="clm-00022-en">claim 22</claim-ref> wherein said fluid medium comprises a solvent for said active agent.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. The method of <claim-ref idref="clm-00025-en">claim 25</claim-ref> wherein said solvent for said active agent comprises a C<sub>2</sub>-C<sub>18 </sub>alcohol.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>27</b>. The method of <claim-ref idref="clm-00024-en">claim 24</claim-ref> including adding said active agent to said first adhesive layer.</claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en">
+      <claim-text>
+        <b>28</b>. The method of <claim-ref idref="clm-00024-en">claim 24</claim-ref> including adding said active agent to said second adhesive layer.</claim-text>
+    </claim>
+    <claim num="29" id="clm-00029-en">
+      <claim-text>
+        <b>29</b>. The method of <claim-ref idref="clm-00024-en">claim 24</claim-ref> including adding said active agent to said first and second adhesive layers.</claim-text>
+    </claim>
+    <claim num="30" id="clm-00030-en">
+      <claim-text>
+        <b>30</b>. The method of <claim-ref idref="clm-00021-en">claim 21</claim-ref> wherein said polymer membrane comprises a polymer selected from the group consisting of hydrophilic and hydrophobic polymers and copolymers.</claim-text>
+    </claim>
+    <claim num="31" id="clm-00031-en">
+      <claim-text>
+        <b>31</b>. The method of <claim-ref idref="clm-00030-en">claim 30</claim-ref> wherein said polymer is selected from the group consisting of polyolefins, ethylene-vinyl acetate, polyvinyl acetate, polyether block amides, polyurethane, polyamides, cellulose, cellulose derivatives, polyvinyl chloride, polyvinyl alcohol, polystyrene, polymethyl methacrylate, polysilane and polysiloxane.</claim-text>
+    </claim>
+    <claim num="32" id="clm-00032-en">
+      <claim-text>
+        <b>32</b>. The method of <claim-ref idref="clm-00021-en">claim 21</claim-ref> wherein said predetermined amount of said liquid composition comprises from 0.5 to 10 mg/cm<sup>2</sup>.</claim-text>
+    </claim>
+    <claim num="33" id="clm-00033-en">
+      <claim-text>
+        <b>33</b>. The method of <claim-ref idref="clm-00032-en">claim 32</claim-ref> wherein said predetermined amount of said liquid composition comprises from 1 to 7 mg/cm<sup>2</sup>.</claim-text>
+    </claim>
+    <claim num="34" id="clm-00034-en">
+      <claim-text>
+        <b>34</b>. The method of <claim-ref idref="clm-00033-en">claim 33</claim-ref> wherein said predetermined amount of said liquid composition comprises about 3.0 mg/cm<sup>2</sup>.</claim-text>
+    </claim>
+    <claim num="35" id="clm-00035-en">
+      <claim-text>
+        <b>35</b>. The method of <claim-ref idref="clm-00023-en">claim 23</claim-ref> wherein said first and second adhesive layers comprises adhesives which are at least partially resistant to plasticization by a solvent for said active agent.</claim-text>
+    </claim>
+    <claim num="36" id="clm-00036-en">
+      <claim-text>
+        <b>36</b>. The transdermal delivery system of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said polymer membrane is saturated with said fluid media.</claim-text>
+    </claim>
+    <claim num="37" id="clm-00037-en">
+      <claim-text>
+        <b>37</b>. The transdermal delivery system of <claim-ref idref="clm-00013-en">claim 13</claim-ref> wherein said polymer membrane is saturated with said fluid media.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246006A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150246006A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246006A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246006A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246006A1_00003.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150246006A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246006A1.PDF" type="pdf" size="483811" pages="11" />
+</lexisnexis-patent-document>

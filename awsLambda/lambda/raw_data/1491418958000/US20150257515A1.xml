@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257515A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030230" date-changed="20151117" time-changed="080555">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121316451">
+        <country>US</country>
+        <doc-number>20150257515</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14645151</doc-number>
+        <date>20150311</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151117">
+      <classification-ipcr sequence="1">
+        <text>A45D  44/02        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>44</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A41G   5/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>41</class>
+        <subclass>G</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>F16M  11/28        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>16</class>
+        <subclass>M</subclass>
+        <main-group>11</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>F16M  11/42        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>16</class>
+        <subclass>M</subclass>
+        <main-group>11</main-group>
+        <subgroup>42</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151117">
+      <classification-cpc sequence="1">
+        <text>A45D  44/02        20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>44</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A41G   5/004       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>41</class>
+        <subclass>G</subclass>
+        <main-group>5</main-group>
+        <subgroup>004</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A41G   5/0086      20130101 LA20151104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>41</class>
+        <subclass>G</subclass>
+        <main-group>5</main-group>
+        <subgroup>0086</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A45D  44/04        20130101 LI20151112BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>44</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151112</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>F16M  11/28        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>16</class>
+        <subclass>M</subclass>
+        <main-group>11</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>F16M  11/42        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>16</class>
+        <subclass>M</subclass>
+        <main-group>11</main-group>
+        <subgroup>42</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">6</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">Hair Extension Holder</invention-title>
+    <references-cited date-changed="20151103">
+      <patent-citations name="patcit" date-changed="20151103" />
+      <citation>
+        <patcit num="1" dnum="US896990A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>896990</doc-number>
+            <kind>A</kind>
+            <name>HILL MARK E [US]</name>
+            <date>19080825</date>
+          </document-id>
+          <application-date>
+            <date>19070516</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US1380747A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>1380747</doc-number>
+            <kind>A</kind>
+            <name>STANFORD MAURICE L, et al</name>
+            <date>19210607</date>
+          </document-id>
+          <application-date>
+            <date>19201122</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US1501258A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>1501258</doc-number>
+            <kind>A</kind>
+            <name>WOLFE ARTHUR J</name>
+            <date>19240715</date>
+          </document-id>
+          <application-date>
+            <date>19221109</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US1941100A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>1941100</doc-number>
+            <kind>A</kind>
+            <name>MELAAS GEORGE D</name>
+            <date>19331226</date>
+          </document-id>
+          <application-date>
+            <date>19300426</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US2152692A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>2152692</doc-number>
+            <kind>A</kind>
+            <name>PAGE HEREFORD GERALD</name>
+            <date>19390404</date>
+          </document-id>
+          <application-date>
+            <date>19380406</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US2270331A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>2270331</doc-number>
+            <kind>A</kind>
+            <name>ROSS NOBLE</name>
+            <date>19420120</date>
+          </document-id>
+          <application-date>
+            <date>19410414</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="7" dnum="US2604214A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>2604214</doc-number>
+            <kind>A</kind>
+            <name>FUSSELL HENRY A</name>
+            <date>19520722</date>
+          </document-id>
+          <application-date>
+            <date>19491203</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="8" dnum="USD168997S" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0168997</doc-number>
+            <kind>S</kind>
+            <date>19530310</date>
+          </document-id>
+          <application-date>
+            <date>19521107</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="9" dnum="US3195736A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>3195736</doc-number>
+            <kind>A</kind>
+            <name>BOMAR JR WELDON B</name>
+            <date>19650720</date>
+          </document-id>
+          <application-date>
+            <date>19631218</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="10" dnum="US3726415A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>3726415</doc-number>
+            <kind>A</kind>
+            <name>MALIK J</name>
+            <date>19730410</date>
+          </document-id>
+          <application-date>
+            <date>19711103</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="11" dnum="US4122954A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4122954</doc-number>
+            <kind>A</kind>
+            <name>SLATER JOHN R</name>
+            <date>19781031</date>
+          </document-id>
+          <application-date>
+            <date>19770701</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="12" dnum="US4380296A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4380296</doc-number>
+            <kind>A</kind>
+            <name>MURRAY JAMES F [US], et al</name>
+            <date>19830419</date>
+          </document-id>
+          <application-date>
+            <date>19810116</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="13" dnum="US4848585A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4848585</doc-number>
+            <kind>A</kind>
+            <name>SNYDER JEFFREY [US]</name>
+            <date>19890718</date>
+          </document-id>
+          <application-date>
+            <date>19880920</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="14" dnum="USD330982S" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0330982</doc-number>
+            <kind>S</kind>
+            <date>19921117</date>
+          </document-id>
+          <application-date>
+            <date>19890908</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="15" dnum="US5411139A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5411139</doc-number>
+            <kind>A</kind>
+            <name>VICTORY JAMES [US]</name>
+            <date>19950502</date>
+          </document-id>
+          <application-date>
+            <date>19940214</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="16" dnum="US2002050546A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20020050546</doc-number>
+            <kind>A1</kind>
+            <name>JOHNSON REGINA P [US], et al</name>
+            <date>20020502</date>
+          </document-id>
+          <application-date>
+            <date>20010215</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="17" dnum="US6913230B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6913230</doc-number>
+            <kind>B2</kind>
+            <name>WELLS BRENDA LEE [US]</name>
+            <date>20050705</date>
+          </document-id>
+          <application-date>
+            <date>20030211</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="18" dnum="US6938766B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6938766</doc-number>
+            <kind>B1</kind>
+            <name>LEE THOMAS M [US]</name>
+            <date>20050906</date>
+          </document-id>
+          <application-date>
+            <date>20030227</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="19" dnum="US2006289368A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060289368</doc-number>
+            <kind>A1</kind>
+            <name>ABNEY MICHAEL A [US]</name>
+            <date>20061228</date>
+          </document-id>
+          <application-date>
+            <date>20060623</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="20" dnum="US7159728B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>7159728</doc-number>
+            <kind>B2</kind>
+            <name>SMITH BRENDA A [US]</name>
+            <date>20070109</date>
+          </document-id>
+          <application-date>
+            <date>20041008</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="21" dnum="US2009008347A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090008347</doc-number>
+            <kind>A1</kind>
+            <name>BELL BARBARA [US]</name>
+            <date>20090108</date>
+          </document-id>
+          <application-date>
+            <date>20070702</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="22" dnum="US7828254B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>7828254</doc-number>
+            <kind>B2</kind>
+            <name>STEPHENS-DE ALANIS STEPHANIE K [US]</name>
+            <date>20101109</date>
+          </document-id>
+          <application-date>
+            <date>20090327</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="23" dnum="US8047851B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>8047851</doc-number>
+            <kind>B1</kind>
+            <name>BAXTER TRACY [US]</name>
+            <date>20111101</date>
+          </document-id>
+          <application-date>
+            <date>20081204</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="24" dnum="USD701829S1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0701829</doc-number>
+            <kind>S</kind>
+            <name>GARRETT-SCHESCH AARON SEAN [US]</name>
+            <date>20140401</date>
+          </document-id>
+          <application-date>
+            <date>20130703</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="25" dnum="US8998002B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>8998002</doc-number>
+            <kind>B1</kind>
+            <name>MILNER MANDI B [US]</name>
+            <date>20150407</date>
+          </document-id>
+          <application-date>
+            <date>20120510</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="26" dnum="USD734541S1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0734541</doc-number>
+            <kind>S</kind>
+            <name>PETRUCCELLI GIULIO [US]</name>
+            <date>20150714</date>
+          </document-id>
+          <application-date>
+            <date>20130515</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61951752</doc-number>
+          <date>20140312</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bernard</last-name>
+            <first-name>Gwendolyn</first-name>
+            <address>
+              <city>Waterbury</city>
+              <state>CT</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bernard</last-name>
+            <first-name>Gwendolyn</first-name>
+            <address>
+              <city>Waterbury</city>
+              <state>CT</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173670459">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257515</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173670454">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257515</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A hair extension holder is provided. The hair extension holder includes a wheeled base having a base portion and legs extending therefrom. The distal end of each leg has a wheel mounted thereon configured to allow the wheeled base to roll on a floor. The base portion further includes a centrally located flange configured to telescopically receive an upstanding telescopic pole. The telescopic pole is pivotally connected to a holder attachment configured to hold strands of hair extensions. The holder attachment includes opposing face panels and at least one sidewall that connects the opposing face panels along their edges. The opposing face panels include a plurality of fasteners that are aligned in rows, wherein each fastener is configured to hold a separate strand of hair extension.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of U.S. Provisional Application No. 61/951,752 filed on Mar. 12, 2014. The above identified patent application is herein incorporated by reference in its entirety to provide continuity of disclosure.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">1. Field of the Invention</p>
+      <p id="p-00003-en" num="0003">The present invention relates to beauty accessories. More specifically, the present invention pertains to an improved hair extension holder that can be used at home or in a beauty salon. The hair extension holder includes a wheeled base attached to a telescopic pole. The telescopic pole is secured to a holder attachment having a plurality of fasteners that are configured to hold strands of hair extensions.</p>
+      <p id="p-00004-en" num="0004">Hair extensions are lengths of real or artificial hair that can be attached to a person's own natural hair in order to add length and thickness to a person's natural hair. Hair extensions are designed to blend and move naturally with a person's own hair, making it difficult to tell when a person is wearing them. Hair extensions also come in a variety of colors, textures, styles and lengths, which allow a person to change the appearance of his or her hair. For example, a person's naturally curly hair can be made to look straight by adding and integrating straight hair extensions.</p>
+      <p id="p-00005-en" num="0005">Generally, hair extensions are supplied in a form where the hair extensions are attached to a long and thin strip of material. The hair extensions are attached on one end and extend away from the strip of material in a substantially perpendicular manner. The stylist has to select and separate the hair extensions to be braided onto a person's existing hair. In addition, the stylist has to carefully remove the selected hairs and prevent them from entangling or becoming disarranged. This process can be cumbersome and time consuming, especially if the hair extensions become entangled. Therefore, there exists a need for a hair extension holder that prevents separated hair extensions from becoming entangled.</p>
+      <p id="p-00006-en" num="0006">The present invention provides a hair extension holder comprising a wheeled base having a centrally located flange thereon. The base includes legs, wherein a distal end of each leg has a wheel mounted thereon for maneuverability. The centrally located flange is configured to receive an upstanding telescopic pole that has the ability to extend and retract. The telescopic pole is pivotally attached to a holder attachment having opposing side panels. The opposing side panels include a plurality of fasteners aligned in rows configured to hold strands of hair extensions and prevent them from becoming entangled. A user, like a stylist, preemptively selects and separates the strands of hair extensions to be removably positioned on the fasteners. The user then can remove a strand of hair extensions when needed while weaving hair extensions into a person's natural hair.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00007-en" num="0007">In view of the disadvantages inherent in the known types of hair extension holders now present in the prior art, the present invention provides a new and improved hair extension holder wherein the same can be utilized for holding strands of hair extensions and preventing entangling of said strands.</p>
+      <p id="p-00008-en" num="0008">It is therefore an object of the invention to provide a new and improved hair extension holder that has all of the advantages of the prior art and none of the disadvantages.</p>
+      <p id="p-00009-en" num="0009">Another object of the present invention is to provide a new and improved hair extension holder comprising a wheel base having a centrally located flange configured to receive an upstanding telescopic pole.</p>
+      <p id="p-00010-en" num="0010">Yet another object of the present invention is to provide a new and improved hair extension holder, wherein the telescopic pole is pivotally attached to a holder attachment configured to hold strands of hair extensions.</p>
+      <p id="p-00011-en" num="0011">Still yet another object of the present invention is to provide a new and improved hair extension holder, wherein the holder attachment includes opposing face panels having a plurality of fasteners thereon that are aligned in rows.</p>
+      <p id="p-00012-en" num="0012">Another object of the present invention is to provide a new and improved hair extension holder, wherein the plurality of fasteners are configured to hold separate strands of hair extensions and prevent the entangling of the strands.</p>
+      <p id="p-00013-en" num="0013">A further object of the present invention is to provide a new and improved hair extension holder, wherein the telescopic pole is configured to extend and retract to allow for easy storage.</p>
+      <p id="p-00014-en" num="0014">Still yet another object of the present invention is to provide a new and improved hair extension holder wherein the device may be readily fabricated from materials that permit relative economy and are commensurate with durability.</p>
+      <p id="p-00015-en" num="0015">Other objects, features, and advantages of the present invention will become apparent from the following detailed description taken in conjunction with the accompanying drawings.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTIONS OF THE DRAWINGS</heading>
+      <p id="p-00016-en" num="0016">Although the characteristic features of this invention will be particularly pointed out in the claims, the invention itself and manner in which it may be made and used may be better understood after a review of the following description, taken in connection with the accompanying drawings wherein the numeral annotations are provided throughout.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 1</figref> shows a side perspective of the present invention in an extended position.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 2</figref> shows a side perspective of a side panel of a holder attachment of the present invention.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 3</figref> shows an overhead perspective of the present invention in a fully retracted position.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00020-en" num="0020">References are made herein to the attached drawings. Like reference numerals are used throughout the drawings to depict like or similar elements of the hair extension holder. For the purposes of presenting a brief and clear description of the present invention, the preferred embodiment will be discussed as used to hold strands of hair extensions. The figures are intended for representative purposes only and should not be considered to be limiting in any respect.</p>
+      <p id="p-00021-en" num="0021">Referring now to <figref>FIGS. 1 and 3</figref>, there are shown a side perspective and an overhead perspective of a hair extension holder <b>20</b> configured to hold strands of hair extensions. The hair extension holder <b>20</b> comprises a wheeled base <b>21</b> having a base portion <b>22</b> with an outer perimeter <b>23</b> and a centrally located flange <b>25</b>. The base portion <b>22</b> is preferably circular, however, the base may include other shapes in alternate embodiments of the present invention. The outer perimeter <b>23</b> includes a plurality of legs <b>24</b> projecting radially outwardly in a singular plane in relation to the base portion <b>22</b>. In the illustrated embodiment, the wheeled base includes five legs <b>24</b>, however, it is recognized that the wheeled base <b>21</b> may include any number of legs <b>24</b>.</p>
+      <p id="p-00022-en" num="0022">Each leg <b>24</b> includes a proximal end <b>24</b>A and a distal end <b>24</b>B. The proximal end <b>24</b>A is affixed to the base portion <b>22</b> where each leg <b>24</b> is positioned equidistantly from one another. The distal end <b>24</b>B includes a wheel <b>30</b> mounted thereon configured to allow the wheel base <b>21</b> to roll on a surface. In this manner, the hair extension holder <b>20</b> is particularly advantageous to a user, such as a hair stylist, as he or she can roll the hair extension holder <b>20</b> to a convenient location to increase efficiency.</p>
+      <p id="p-00023-en" num="0023">The flange <b>25</b> is centrally positioned on the wheeled base <b>21</b>, wherein the flange <b>25</b> includes an opening configured to receive an upstanding telescopic pole <b>26</b> having a first end <b>26</b>A and a second end <b>26</b>B. The first end <b>26</b>A of the telescopic pole <b>26</b> is telescopically received within opening of the flange <b>25</b>, wherein the first end <b>26</b>A extends perpendicularly from the wheeled base <b>21</b>. The telescopic pole <b>26</b> includes a series of tubes having progressively smaller diameters nested within each other. The largest diameter tube is on the first end <b>26</b>A, while the tubes extending therefrom have progressively smaller diameters towards the second end <b>26</b>B. Preferably, the telescopic pole <b>26</b> can be extended and retracted using hydraulic or pneumatic pressure in both directions, however, in alternative embodiments, the telescopic pole <b>26</b> can be extended using hydraulic or pneumatic pressure but retracts using external forces.</p>
+      <p id="p-00024-en" num="0024">The second end <b>26</b>B of the telescopic pole <b>26</b> is pivotally secured to a holder attachment <b>27</b> configured to hold strands of hair extensions and to prevent entangling of the same. The holder attachment <b>27</b> includes one or more face panels thereon. In the illustrated embodiment, the device is shown as having a rectangular construction with a pair of opposing face panels <b>28</b>, wherein each face panel <b>28</b> has an outer edge <b>29</b> therealong. The holder attachment <b>27</b> further includes at least one sidewall <b>38</b> that connects the outer edges of the opposing face panels <b>28</b> to one another. Preferably, the opposing face panels <b>28</b> are rectangular or square shaped, therefore, needing four sidewalls <b>38</b> to connect the face panels <b>28</b> to one another. However, it is recognized that the opposing face panels <b>28</b> can comprise any suitable shape, including a circle, which would require only one curved sidewall <b>38</b>.</p>
+      <p id="p-00025-en" num="0025">As shown in <figref>FIG. 3</figref>, the telescopic pole <b>26</b> can be retracted towards the centrally located flange <b>25</b> of the base portion <b>22</b>. The holder attachment <b>27</b> is pivotally secured to the telescopic pole <b>26</b> by means of a hinge. In this way, when the telescopic pole <b>26</b> is fully retracted, the holder attachment <b>27</b> can be positioned in substantially a coplanar manner in relation to the base portion <b>22</b>. In this way, the hair extension holder <b>20</b> is particularly advantageous as it provides for easy storage.</p>
+      <p id="p-00026-en" num="0026">The face panels <b>28</b> include a plurality of fasteners <b>31</b> that are configured to hold strands of hair extensions and prevent entangling of the same. A user is tasked to select and separate a plurality of strands of hair extensions from the original bundle, however, the fasteners <b>31</b> are particularly advantageous in that they prevent entangling of already separated strands of hair extensions, thus creating higher efficiency while weaving strands of hair extensions to a person's natural hair. The plurality of fasteners <b>31</b> are aligned in a plurality of rows configured to hold a multitude of strands of hair extensions.</p>
+      <p id="p-00027-en" num="0027">Referring now to <figref>FIG. 2</figref>, there is shown a side perspective of the holder attachment <b>27</b>. The fasteners <b>31</b> are preferably U-shaped hooks having a first end disposed on an interior surface of the face panel <b>28</b> and a second end <b>31</b>A that extends therefrom forming an interior volume configured to hold a strand <b>35</b> of hair extensions. The strand <b>35</b> of hair extensions are to be organized so that the interior volume of the fastener <b>31</b> can substantially hold the middle of the length of the strand <b>35</b> of hair extension. In this way, the fastener <b>31</b> can receive and balance the strand <b>35</b> of hair extensions thereon and prevent entangling of the same.</p>
+      <p id="p-00028-en" num="0028">It is therefore submitted that the instant invention has been shown and described in what is considered to be the most practical and preferred embodiments. It is recognized, however, that departures may be made within the scope of the invention and that obvious modifications will occur to a person skilled in the art. With respect to the above descriptions then, it is to be realized that the optimum dimensional relationships for the parts of the invention, to include variations in size, materials, shape, form, function, and manner of operation, assembly and use, are deemed readily apparent and obvious to one skilled in the art, and all equivalent relationships to those illustrated in the drawings and described in the specifications are intended to be encompassed by the present invention.</p>
+      <p id="p-00029-en" num="0029">Therefore, the foregoing is considered as illustrative only of the principles of the invention. Further, since numerous modifications and changes will readily occur to those skilled in the art, it is not desired to limit the invention to the exact construction and operation shown and described, and accordingly, all suitable modifications and equivalents may be resorted to, falling within the scope of the invention.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>I claim:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A hair extension holder, comprising:
+<claim-text>a wheeled base having a base portion with an outer perimeter and a centrally located flange;</claim-text><claim-text>said outer perimeter having at least one leg projecting outwardly in a singular plane in relation to said base portion;</claim-text><claim-text>said leg having a proximal end and a distal end;</claim-text><claim-text>wherein said proximal end of each leg is attached to said outer perimeter and said distal end having a wheel mounted thereon configured to allow said wheeled base to roll around on a surface;</claim-text><claim-text>said centrally located flange configured to receive an upstanding telescopic pole having a first end and a second end;</claim-text><claim-text>wherein said first end of said telescopic pole is inserted through said centrally located flange.</claim-text><claim-text>said second end of said telescopic pole pivotably attached to a holder attachment configured to hold strands of hair extensions;</claim-text><claim-text>said holder attachment comprising a plurality of fasteners configured to separate strands of hair extensions and prevent entangling.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The hair extension holder of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said holder attachment includes at least one face panel and at least one sidewall connecting said face panel along their edges.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The hair extension holder of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein fasteners are attached on said face panel to hold strands of hair extensions and prevent entangling</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The hair extension holder of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein:
+<claim-text>said fasteners include hooks that project outwardly and perpendicularly from said face panel;</claim-text><claim-text>wherein said fasteners configured to hold said strands of hair extensions.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The hair extension holder of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein said plurality of fasteners are aligned in a plurality of rows.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The hair extension holder of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein:
+<claim-text>said telescopic pole comprises a series of tubes, whereby said tubes are nested one within another to allow for extension and retraction.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257515A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257515A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257515A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257515A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257515A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257515A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257515A1_00004.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257515A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257515A1.PDF" type="pdf" size="275697" pages="6" />
+</lexisnexis-patent-document>

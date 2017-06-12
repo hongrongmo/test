@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252197A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021806" date-changed="20151013" time-changed="074833">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229189">
+        <country>US</country>
+        <doc-number>20150252197</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14611911</doc-number>
+        <date>20150202</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151013">
+      <classification-ipcr sequence="1">
+        <text>C09D   1/00        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C08K   3/32        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C08K   5/06        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C14C  11/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>14</class>
+        <subclass>C</subclass>
+        <main-group>11</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C14C  99/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>14</class>
+        <subclass>C</subclass>
+        <main-group>99</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151013">
+      <classification-cpc sequence="1">
+        <text>C09D   1/00        20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C08K   3/32        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C08K   5/06        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C08K2003/325       20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>2003</main-group>
+        <subgroup>325</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C09G   1/16        20130101 LI20151005BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>G</subclass>
+        <main-group>1</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151005</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C14C   9/00        20130101 LI20151005BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>14</class>
+        <subclass>C</subclass>
+        <main-group>9</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151005</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C14C  11/003       20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>14</class>
+        <subclass>C</subclass>
+        <main-group>11</main-group>
+        <subgroup>003</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C14C  99/00        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>14</class>
+        <subclass>C</subclass>
+        <main-group>99</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">22</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">NANO-COMPOSITE POLYMERIC COATING FOR THE CONSERVATION OF LEATHERS AND METHOD FOR SYNTHESIZING THE SAME</invention-title>
+    <related-documents date-changed="20150910">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61936871</doc-number>
+          <date>20140206</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Iran Polymer and Petrochemical Institute (IPPI)</orgname>
+            <role>03</role>
+            <address>
+              <city>Tehran</city>
+              <country>IR</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ershad Langroudi</last-name>
+            <first-name>Amir</first-name>
+            <address>
+              <city>Tehran</city>
+              <country>IR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Mirmontahaiy</last-name>
+            <first-name>Akram</first-name>
+            <address>
+              <city>Tehran</city>
+              <country>IR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173566021">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252197</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150202</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173566020">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252197</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150202</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The synthesis of a nano-composite, composed of hydroxyapatite (HA) nanoparticles dispersed in polyethylene glycol (PEG) applicable for long-term preservation of historical leather and parchment samples. The nano-composite is synthesized through a simple method by a two phase mixing process at ambient temperature. The mechanical behavior analysis of goat historical leather treated with the prepared nano-composite revealed more softness, better mechanical properties and less structural changes in comparison with the untreated sample. Furthermore, thermal analysis results have confirmed that nano-composite treatment causes a softer amorphous structure with higher water content, more structural homogeneity, and the temperature that maximum weight losing occurred is higher than those for the untreated sample.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">The present invention claims priority from pending U.S. Provisional Patent Application Ser. No. 61/936,871, filed Feb. 6, 2014, entitled “Conservation of Ancient Leather by Nano-composite Polymeric Coating Based on PEG and Suspended Hydroxyapatite Nanoparticles”, the subject matter of which is incorporated by reference herein in its entirety.</p>
+      <heading id="h-00002-en" level="1">SPONSORSHIP STATEMENT</heading>
+      <p id="p-00002-en" num="0002">This application has been sponsored by the Iranian Nanotechnology Initiative Council, which does not have any rights in this application.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00003-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00003-en" num="0003">The present invention relates to a nano-composite polymeric compound based on polyethylene glycol (PEG) and suspended hydroxyapatite (HA), a method for preparing the same, and the use thereof for long-term conservation of fiber structural materials, such as ancient leather objects.</p>
+      <heading id="h-00004-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00004-en" num="0004">As is well understood in the art, ancient leather objects are very sensitive to changes in environmental conditions, such as relative humidity (RH) fluctuations, because of their fragile structure. It should be understood that these objects are exposed to tensile stresses when the relative humidity alters, especially in parts undergoing high pressure or tension. This stress can cause breakage of the collagen fibers and crushing of the historical leather structure, ultimately wrinkling the leather. In other words, flexibility is a significant and desirable quality for leather objects, such as book covers. It should be understood that it is necessary for leather fibers to have enough flexibility for slipping over each other, which leads to better mechanical properties against the aforesaid tensile tensions, providing prolonged stability for the leather objects.</p>
+      <p id="p-00005-en" num="0005">Since the 19th century, various lubricants have been proposed for usage on leather objects to increase their flexibility, improve their appearance and conserve their strength for long periods of time. It is known from the prior art that during the leather softening process, a lubricant is applied to the surface of the leather. This treatment can cause softening of the collagen structural fibers for slipping over each other, and, as a result, make the leather more flexible and softer. Nevertheless, as is well understood to those of skill in the art, this treatment has little or no preservative effect, and sometimes can even cause minor damage to the leather objects, such as by accelerating erosion reactions. Accordingly, although these lubricants are useful to forestall some physical damages, they are not effective against further chemical deterioration problems. Furthermore, as is well understood from the prior art, objects treated with the lubricants lose the aforesaid protective properties after almost three to five years.</p>
+      <p id="p-00006-en" num="0006">As is understood in the art, various industrial lubricants are used in archives and libraries to protect leather objects, albeit without considering their effects on long-term protection ability. It should be understood that many of these industrial lubricants contain unknown ingredients. Therefore, these lubricants cannot be considered as reliable materials for the lubrication and conservation of ancient leather objects.</p>
+      <p id="p-00007-en" num="0007">For example, it has been shown in the prior art that chestnut-tanned leather, treated by sulphonated cod-liver oil, wears faster than untreated leather. It is thus revealed in the prior art that using various lubricant materials on leather objects cannot protect them from further structural deterioration processes. However, a number of archivists agree that this treatment helps preserve the treated objects from dryness by making them a little softer in the hinges and spine. Nonetheless, Applicant has found that although the lubricant materials can induce better softening properties in the treated leather objects, the effect of these materials on the mechanical properties related to morphological fibrous structure is not significant.</p>
+      <p id="p-00008-en" num="0008">There is, therefore, a present need for new and improved materials, compositions and manufactures to protect ancient leather objects for long periods under unfavorable conditions, without further damaging or degrading the delicate objects.</p>
+      <p id="p-00009-en" num="0009">Nowadays, the use of nanoparticles in restoration science is proposed as a superseding method to conventional methods that merely focus on the treatment and not the preventive conservation. As is known from the prior art, nanoparticles would be effective in cleaning, de-acidification, consolidation and restoration of old objects, without also making the aforesaid limitations related with current lubricating materials as mentioned hereinabove. For example, the application of calcium and magnesium hydroxide nanoparticles for the de-acidification of paper artifacts is disclosed in the prior art.</p>
+      <p id="p-00010-en" num="0010">Accordingly, in this invention, to overcome the above-mentioned limitations associated with the traditional lubricants and common treatment methods, a hydroxyapatite (hereinafter termed “HA”) and polyethylene glycol (hereinafter termed “PEG”) nano-composite is prepared through a simple method, and this treatment is consequently used for the conservation and protection of historical leather objects for prolonged periods against both physical and chemical degradations.</p>
+      <p id="p-00011-en" num="0011">As is understood in the art, PEG is usually used on leather objects to conserve leather moisture, as well as being a softening agent. In addition, there is no report in the prior art about the negative effects of PEG when used simultaneously with other traditional lubricants. On the other hand, hydroxyapatite (HA) nanoparticles act as scaffoldings in tissues and interact with collagen filaments. These mineral particles consolidate the biological cells by connecting to the collagen. As a result, the advanced new nano-composite compound has both surface and structural conservative effects, simultaneously.</p>
+      <p id="p-00012-en" num="0012">It is, therefore, an object of the present invention to present a novel nano-composite having preservative properties for fiber structural materials, especially to so preserve leather objects for prolonged periods.</p>
+      <p id="p-00013-en" num="0013">It is also an object of the present invention to provide the aforesaid nano-composite through a simple two-phase mixing method.</p>
+      <p id="p-00014-en" num="0014">Furthermore, it is an object of the present invention to apply the inventive nano-composite as an improved alternative for common lubricants. The aforementioned inventive nano-composite has deeper and more effective protective properties without further erosion effects such that mentioned herein above.</p>
+      <p id="p-00015-en" num="0015">These and other objects are met in various embodiments of the present invention, offering significant advantages over the known prior art and consequent benefits in leather objects preservative techniques, treatments and compositions.</p>
+      <heading id="h-00005-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00016-en" num="0016">The present invention relates to a nano-composite polymeric compound made of a polymeric base and a plurality of HA nanoparticles homogenously suspended in the polymeric base.</p>
+      <p id="p-00017-en" num="0017">In a preferred embodiment of the present invention, a plurality of HA nanoparticles are homogeneously suspended in a PEG matrix to form a nano-composite polymeric compound which can be used as an improved alternative for common leather preservatives.</p>
+      <p id="p-00018-en" num="0018">In one preferred embodiment of the present invention, the nano-composite is synthesized using a simple two-phase mixing method at ambient temperature providing the aforesaid nano-composite in an aqueous solution.</p>
+      <p id="p-00019-en" num="0019">An embodiment of this present invention relates to the application of the aforementioned synthesized nano-composite for the conservation of fibril-structured materials, such as ancient leather objects. Hydroxyapatite (HA) acts as a scaffolding in tissues and interacts with collagen filaments. These mineral particles consolidate the bio cells by connecting to their collagen. The obtained nano-composite exhibits better properties and qualities in terms of structural strength, mechanical strain and flexibility. The method disclosed in the present invention enables a simultaneous increase in both the strength and the flexibility of the target leather objects. Furthermore, the disclosed nano-composite provides a higher protective effect for such leather objects against both physical and chemical degradations, while the commonly-known lubricants in the prior art are devoid of such advantageous features.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00006-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00020-en" num="0020">While the specification concludes with claims particularly pointing out and distinctly claiming the subject matter that is regarded as forming the present invention, it is believed that the invention will be better understood from the following description taken in conjunction with the accompanying DRAWINGS, where like reference numerals designate like structural and other elements, in which:</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 1</figref> is a transmission electron microscope (TEM) image of nano HA particles pursuant to an embodiment of the present invention;</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 2</figref> are scanning electron microscope (SEM) images at 15.00kx magnification presenting the collagen fiber of: (a) a “control” (or untreated) sample; and (b) an “optimum” (or treated by the produced HA/PEG nano-composite) sample pursuant to the teachings of the present invention;</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 3</figref> are elemental spectra and distribution (SEM-EDX) images representing the distribution of Calcium (Ca) in the: (a) “control” (or untreated) sample; and (b) “optimum” (or treated by the produced HA/PEG nano-composite) sample pursuant to the teachings of the present invention;</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 4</figref> are elemental spectra and distribution (SEM-EDX) images representing the distribution of Phosphorus (P) in the: (a) “control” (or untreated) sample; and (b) “optimum” (or treated by the produced HA/PEG nano-composite) sample pursuant to the principles of the present invention;</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 5</figref> is a diagram of the percent of the displacement versus temperature, for: (a) untreated; and (b) historical goat leather samples treated with the prepared nano-composite (HA/PEG) pursuant to the teachings of the present invention;</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 6</figref> illustrates the storage modulus curves of historical goat bookbinding leathers at 1 Hz versus temperature, for four samples: (1) an untreated sample, named as “control,” (2) a treated sample, named as “optimum,” (3) an untreated sample after artificial weathering aging, named as “aged control,” coded as “AC”; and (4) a treated sample after artificial weathering aging, named as “aged optimum,” coded as “AS”;</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 7</figref> shows tan(δ) curves of historical goat bookbinding leathers at 1 Hz versus temperature, for four samples: (1) an untreated sample, named as “control,” (2) a treated sample, named as “optimum,” (3) untreated after artificial weathering aging, named as “aged control AC,”; and (4) a treated after artificial weathering aging, named as “aged optimum AS”;</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 8</figref> illustrates differential scanning calorimetric (DSC) analysis curves for a “control” (or untreated) sample, and an “optimum” (or treated by the produced HA/PEG nano-composite) sample pursuant to the teachings of the present invention;</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 9</figref> is a chart representing the thermal decomposition of a “control” sample and an “optimum” sample pursuant to the principles of the present invention, illustrating a thermo-gravimetric analysis (TGA) curve for each sample, by weight and temperature;</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 10</figref> is a chart representing the thermal decomposition of a “control” sample and an “optimum” sample pursuant to the teachings of the present invention, illustrating a differential thermal gravimeter (DTG) curve for each sample, by weight and temperature;</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 11</figref> shows the differential scanning calorimetric (DSC) analysis curves for a “control” sample, designated by “HeatFlow AC,” and an “optimum” sample pursuant to the teachings of the present invention and designated by “HeatFlow AS,” after artificial weathering aging;</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 12</figref> is a chart representing the thermal decomposition of a “control” sample, designated by “AC,” and an “optimum” sample pursuant to the teachings of the present invention and designated by “AS,” illustrating a thermo-gravimetric analysis (TGA) curve for each sample, by weight and temperature; and</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 13</figref> is a chart representing the thermal decomposition of a “control” sample, designated by “AC,” and an “optimum” sample pursuant to the teachings of the present invention and designated by “AS,” illustrating a differential thermal gravimeter (DTG) curve for each sample, by weight and temperature.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00007-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00034-en" num="0034">The following detailed description is presented to enable any person skilled in the art to make and use the invention. For purposes of explanation, specific nomenclature is set forth to provide a thorough understanding of the present invention. However, it will be apparent to one skilled in the art that these specific details are not required to practice the invention. Descriptions of specific applications are provided only as representative examples. Various modifications to the preferred embodiments will be readily apparent to one skilled in the art, and the general principles defined herein may be applied to other embodiments and applications without departing from the scope of the invention. The present invention is not intended to be limited to the embodiments shown, but is to be accorded the widest possible scope consistent with the principles and features disclosed herein.</p>
+      <p id="p-00035-en" num="0035">It should be understood by a person skilled in the art that the innovation described herein is directed to the synthesis of a nano-composite polymeric compound and its application for long-term conservation of fiber structural materials, such as ancient leather objects, which are exposed to physical and chemical degradation.</p>
+      <p id="p-00036-en" num="0036">In a preferred embodiment of the present invention, the nano-composite polymeric compound is composed of hydroxyapatite (HA) nanoparticles and polyethylene glycol (PEG), which Applicant has found has a synergic effect for leather conservation. Preferably, the polyethylene glycol (PEG) has a molecular weight in a range of about 200 to 800, and most preferably a molecular weight of about 400 (PEG400) is used for the nano-composite synthesis.</p>
+      <p id="p-00037-en" num="0037">In a further preferred embodiment of the present invention, the nano-composite polymeric compound is synthesized through a simple, low temperature method, which has three steps: first, preparing a solution of PEG in deionized water; then, adding HA to the solution; and finally, vigorously stirring the resultant solution to obtain a semi-transparent and homogenous solution.</p>
+      <p id="p-00038-en" num="0038">In one embodiment of the present invention, the concentration of PEG in the aforesaid PEG solution is preferably between about 15% to about 60% by weight.</p>
+      <p id="p-00039-en" num="0039">In another preferred embodiment of the present invention, the HA nanoparticles are used as an aqueous solution with the concentration of HA nanoparticles being about 10% by weight in said solution. The aforementioned aqueous solution of HA nanoparticles constitutes about 0.1% by volume of the obtained nano-composite solution.</p>
+      <p id="p-00040-en" num="0040">The morphology and dimensions of nanoparticles were observed by transition electron microscopy (TEM) after curing and dispersion through a nano-composite matrix. The TEM results demonstrated an average size of about 50 nm to 120 nm for the HA nanoparticles.</p>
+      <p id="p-00041-en" num="0041">In some embodiments of the present invention, the preferred size of the HA nanoparticles is about 50 nm.</p>
+      <p id="p-00042-en" num="0042">In another aspect of the present invention, the innovative nano-composite, synthesized as disclosed in the present invention, is used as an improved preservative for leather objects. A treatment method is used for ancient leather objects which has the following steps: first, the leather sample is immersed in the nano-composite solution disclosed herein, then, the samples are removed and dried and stored in a sealed condition.</p>
+      <p id="p-00043-en" num="0043">The prepared nano-composite can be used for different leather types, such as goat leather, sheep leather, vegetable tanning leather, etc. Also, it can be used in parchment lubrication and conservation treatments.</p>
+      <p id="p-00044-en" num="0044">The effect of the aforementioned nano-composite disclosed in the present invention on historical leather consolidation, both in static and dynamic modes, as well as at low and high domains of strain, can be appraised by tensile test and dynamic mechanical thermal analysis (DMTA), respectively. A number of correlations between tensile test and DMTA results are devised. In addition, the structural and morphological changes of the treated samples are studied by the SEM method. Furthermore, the thermal analysis of the treated leather is carried out through the aforementioned thermo-gravimetric (TGA) and differential thermal gravimeter (DTG) analyses. Also, with the purpose of studying the phase modifications of collagen, the aforementioned differential scanning calorimetric (DSC) analysis is applied as a preferred method to study the response of the leather to denaturing or to preservation treatments.</p>
+      <p id="p-00045-en" num="0045">The above characterization and analysis methods applied in the present invention and generally obtained results are described in more detail hereinbelow.</p>
+      <heading id="h-00008-en" level="2">Tensile Test</heading>
+      <p id="p-00046-en" num="0046">It should be considered that adequate pliability is a very important quality requirement for certain leather products, which provides both comfort and a good “handle” for use. The quantitative assessment of pliability, or its reverse term “stiffness,” can be based on measurements of the resistance to a small deformation by tensile stress. The resistance may be quantitatively represented best by the initial slope of load-displacement curves or stress-strain curves in an elastic deformation region. The main objective of using lubricants (such as fat liquors) in the leather-making process is to provide flexibility and compliance for the collagen fibers in the leather.</p>
+      <p id="p-00047-en" num="0047">Herein, tensile tests confirmed that treatment with the aforementioned HA/PEG nano-composite according to the present invention promoted the movement of collagen fibers and decreased the frictional resistance of the fibers. This reduction in friction led to more softness and an increase in tensile strength.</p>
+      <heading id="h-00009-en" level="2">Dynamic Mechanical Thermal Analysis (DMTA)</heading>
+      <p id="p-00048-en" num="0048">Viscoelastic properties of historical leather can be studied by dynamic mechanical thermal analysis (DMTA) at a fixed frequency over a specific temperature range under sinusoidal mechanical deformations (or forces). The measured DMTA parameters are the storage modulus E″, the loss modulus E″, and the loss factor tan (8), which represents the mechanical damping. The changes in displacement under a static load can also be measured by DMTA, which is a sensitive technique in detecting thermal transitions corresponding to molecular movements in polymeric chain.</p>
+      <p id="p-00049-en" num="0049">In addition, hydrothermal structural stability of leather can be characterized by its shrinkage when it is heated in water. The temperature at which fully hydrated material shrinks under definite conditions is called the shrinkage temperature (T<sub>s</sub>). The T<sub>s </sub>value depends on the raw material, the methods of tanning, and the deterioration degree which the leather has undergone during its lifetime. Recently, DMTA techniques have been used for the determination of T<sub>s </sub>from historic or cultural artifacts. Smaller samples are required for this test in comparison with other analysis methods, which is an advantage of this technique. Studies have shown the shrinkage behavior in tensile mode of leather and parchment by measuring the changes in sample displacement as a function of time and temperature. These results showed that the un-aged leather sample had a longer shrinkage and drying time than the aged sample and a smaller initial displacement.</p>
+      <p id="p-00050-en" num="0050">The results obtained by DMTA show that the treated samples were softer than untreated samples even at elevated temperatures.</p>
+      <heading id="h-00010-en" level="2">Scanning Electron Microscopy (SEM-EDX)</heading>
+      <p id="p-00051-en" num="0051">Herein, the morphology of the grain surface and fracture surface of the samples were observed by scanning electron microscopy. Scanning Electron Microscopy (SEM) techniques have been employed to observe the fracture surface of historical leather as well as the nano-composite treated leather pursuant to the instant invention.</p>
+      <p id="p-00052-en" num="0052">A Scanning Electron Microscopy—Energy Dispersive X-ray Spectroscopy (SEM-EDX) of the samples illustrated the penetration of nanoparticles in the leather substrate and their attachment on the collagen fibers. Moreover, the collagen filaments of the treated sample were thicker than those belonging to untreated samples. This means that the nano-composite induced a plasticizer quality and decreased the interaction of the filaments in slip and tensile state. Also, the calcium and phosphorus mappings by the EDX analysis in treated samples show the uniform distribution of these elements in the leather substrate.</p>
+      <heading id="h-00011-en" level="2">Differential Scanning Calorimetric (DSC) Analysis</heading>
+      <p id="p-00053-en" num="0053">It should be considered that the deterioration of leather is explained as a transformation from the triple helix to a random coil, accruing in the areas between the cross-links. The super helix is strengthened by hydrogen bonds, hydrophobia, van der Waals interactions and also interaction between side chains. In addition, hydrogen-bonded water takes a significant role in the firmness of the molecule. These non-covalent links that decompose through heating result in an increase in the covalent bonds and cross-link intramolecularly, ultimately inducing a denature temperature (T<sub>d</sub>) shift toward higher temperatures range. This happens on aging, cross-links, the rupture of intra- and internal sequence H—bonds and arrangement on new hydrophobic links in the random coiled form. During the past decades, thermal studying techniques, such as differential scanning calorimetric (DSC), thermo-gravimetric analysis (TGA), etc., were employed in the investigation of old leather and parchment. The analysis curves resulting from the aforesaid techniques enable one to roughly determine the age and state of leather.</p>
+      <p id="p-00054-en" num="0054">The aforementioned thermal analyses have been adapted for the investigation of thermal behavior of some collagen based materials (i.e., pure collagen, new parchments and tanned leathers; and old parchments and leathers) in water, nitrogen, oxygen and synthetic air flow with continuing heating in a temperature range of about 25° C. to 269° C. In the case of the N<sub>2 </sub>gas flow, all the prepared samples pursuant to the present invention show two main phases, correlated with the dehydration and melting. Recently, the progress of the aforementioned analytical techniques was achieved by assembling a material using sample amounts in a range of about 1 mg to 5 mg.</p>
+      <p id="p-00055-en" num="0055">The DSC method determines the “melting” temperature of the crystalline constituent of collagen—based materials flow as a consequence of natural aging of leather, the conservation situation and their deterioration extent. In addition, DSC enables the analysis regarding the real structure of collagen, and how the molecules join to tannin and other materials.</p>
+      <p id="p-00056-en" num="0056">DSC analysis results have confirmed that in an untreated sample, a glass transition, melting phase occurred at higher range temperatures than those corresponding to a treated sample, meaning that the amorphous structure is stiffer than the treated sample. Similarly, aged, treated samples show more softness than an aged untreated sample.</p>
+      <heading id="h-00012-en" level="2">Thermo Gravimetric Analysis (TGA) and Differential Thermal Gravimeter (DTG)</heading>
+      <p id="p-00057-en" num="0057">It should be understood that the thermo-gravimetric analysis (TGA) includes the calculation of the combination change of a sample while it is subjected to a heating system. In this method, measurements are carried out under a specified gas flow in isothermal and non-isothermal (linear heating flow) conditions. New apparatus enable using quite small sample amounts of a few mg, even less than 1 mg, making the TGA analysis preferred methodology for the study of old objects, which is a subject of the present invention.</p>
+      <p id="p-00058-en" num="0058">Furthermore, the aforesaid analyses provide the numerical modifications of thermo-gravimetric (TG) curves. As it will be demonstrated in a “TG/DTG” section hereinbelow, the obtained DTG data provide knowledge about historical leather degradation. The combination of DSC and TGA methods, pursuant to the present invention, enable one to determine the inclusive damage and phase changes. In one embodiment of the present invention, laterally-obtained information was confirmed by the DSC results, showing the improving changes caused by the treatment with the nano-composite of the present invention.</p>
+      <p id="p-00059-en" num="0059">The obtained results from the aforesaid TGA and DTG analyses in N<sub>2 </sub>flow reveal that the untreated sample has more water content lost and more structural changes in progressive temperature than the treated sample. Also, the aged untreated leather lost more water content in progressive temperatures and had more weight changes than the aged treated sample. In addition, it is confirmed that the flexibility and strength of the collagen filaments in the treated sample are better than those of the untreated sample even after aging.</p>
+      <p id="p-00060-en" num="0060">Exemplary techniques for the production of the HA/PEG nano-composite pursuant to the teachings of the present invention, and its use in leather conservation treatments pursuant to the present invention are set forth in more detail hereinbelow. It should be understood that these examples set forth herein are illustrative only, and similar techniques for the production and application of the preferred nano-composites of the present invention are thus possible with different parameters, as is understood in the art. The examples should not be deemed as limiting the scope of the present invention. The only limitations of the scope of the instant case are set forth in the claims appended hereinbelow.</p>
+      <heading id="h-00013-en" level="1">Example 1</heading>
+      <heading id="h-00014-en" level="1">Synthesis of the HA/PEG Nano-Composite</heading>
+      <p id="p-00061-en" num="0061">In this example, a HA/PEG nano-composite pursuant to the teachings of the present invention is produced via the dispersion of HA nanoparticles in a two-phase mixture. Accordingly, polyethylene glycol, with a preferred molecular weight of about 400, and nano-hydroxyapatite in a water suspension were obtained. Firstly, a 10 ml solution, with a PEG content of about 15% by volume in deionized water, was prepared and then about 0.1 ml of a 10% wt HA aqueous suspension was added to it. The resultant two-phase solution was vigorously stirred at a rate of about 240 rpm for about 30 min at ambient temperature by a magnetic or other stirrer, until the solution became semi-transparent and homogenous.</p>
+      <p id="p-00062-en" num="0062">With reference now to <figref>FIG. 1</figref> of the DRAWINGS, there is shown a transition electron microscopy (TEM) image of hydroxyapatite particles, such as used in practicing the principles of the present invention. This image confirms that the hydroxyapatite particles' dimension remains at nano-scale, between about 50 nm to 120 nm, after curing. This illustrative TEM image shows that the size of a majority of the particles is about 50 nm. Therefore, it can be concluded that no agglomeration of particles has occurred in the solution before the coating. Other samples have similar distributions.</p>
+      <heading id="h-00015-en" level="1">Example 2</heading>
+      <heading id="h-00016-en" level="1">Historical Leather Treatment by the HA/PEG Nano-Composite</heading>
+      <p id="p-00063-en" num="0063">In this embodiment example, a type of historical goat leather of a book cover from the Qajar era (19<sup>th </sup>century) with vegetable characterization tanning and hand coloring was obtained. A piece of the aforesaid leather was used as the “control” sample, designated herein as “control.” For nano-composite treatment, a rectangular form of the historical leather sample is placed in the nano-composite solution, prepared according to the procedure described in connection with EXAMPLE 1 hereinabove, under magnetic stirring for about 15 min at room temperature. Then, it was removed from the solution and then, the treated leather surface was softly dried by a soft cloth and stored in a desiccator at room temperature for about one week before mechanical and thermal testing. In addition, the samples were conditioned in the test room at 23° C. and 50% relative humidity (RH) for 24 hours before mechanical property testing. A piece of the treated leather sample (designated herein as “Optimum”) was used for the following analyses.</p>
+      <heading id="h-00017-en" level="2">SEM Analysis</heading>
+      <p id="p-00064-en" num="0064">An SEM technique was employed to observe the fracture surface of the historical leather treated with the nano-composite. The fracture surface was provided by the temperature of liquid nitrogen and the samples were coated with a thin layer of gold having a thickness of about 15 nm and a density of 19.32 g/cm<sup>3</sup>. The distributions of Ca and P atoms, as well as other elements in the EDX spectra on the leather substrates, were obtained by SEM-EDX mapping.</p>
+      <p id="p-00065-en" num="0065">With reference now to <figref>FIG. 2</figref> of the DRAWINGS, this figure shows SEM micrographs of the collagen fibers belonging to the aforementioned “control” and the “optimum” samples.</p>
+      <p id="p-00066-en" num="0066">The collagen filaments, cell attachment and distribution of the nano hydroxyapatite crystals on collagen fibers can be seen in these images. By comparison of the SEM images of collagen filaments for the “control” and “optimum” samples in the same magnification, as illustrated in <figref>FIGS. 2</figref><i>a </i>and <b>2</b><i>b</i>, respectively, an increase in fiber thickness is observed for the treated sample. This can be attributed to the absorption due to humidity, accompanied by the penetration of the PEG in the fibril structure. Also, the PEG present in the leather can act as a plasticizer and a lubricating agent. On the other hand, the hydroxyapatite nanoparticles rest between collagen filaments as globules and decrease their interactions in slip and tensile state.</p>
+      <p id="p-00067-en" num="0067">The presence of HA nanoparticles on the collagen fibers indicates good penetration of these particles into the leather structure. In addition, the attachment between the HA particles and the fibers can be due to electrostatic interactions of the mineral phase, Ca<sup>+2 </sup>from hydroxyapatite, on the organic phase (carboxyl groups of collagen at the sample).</p>
+      <heading id="h-00018-en" level="2">SEM-EDX Mapping</heading>
+      <p id="p-00068-en" num="0068">The elemental spectra and distribution of calcium (Ca) and phosphorous (P) atoms at the fracture surface of the nano-composite leather sample (i.e., “optimum”) and untreated leather (i.e. “control”) was characterized by SEM-EDX mappings.</p>
+      <p id="p-00069-en" num="0069">With reference now to <figref>FIGS. 3 and 4</figref> of the DRAWINGS, these figures present the calcium and phosphorous maps in which Ca and P atoms are denoted by white points in “control” and “optimum” leather samples. As seen from these images, the calcium particles (designated by white points) have uniform distribution and are more condensed in the treated leather (i.e. “optimum”) compared with the untreated historical leather (i.e. “control”). The “control” sample does not indicate any existence of phosphorous atoms in the fracture surface, while it is uniformly distributed in the “optimum” sample. Therefore, it can be concluded the HA nanoparticles are uniformly distributed in the “optimum” sample.</p>
+      <heading id="h-00019-en" level="2">Tensile Test</heading>
+      <p id="p-00070-en" num="0070">In the present invention, tensile test measurements were recorded using a tensile machine at a crosshead speed of 2 mm min<sup>−1 </sup>at room temperature; with load cell of 60KN. Tensile samples were prepared as dumbbell-shaped specimens having 35 mm×7 mm×0.5 mm dimensions.</p>
+      <p id="p-00071-en" num="0071">The tensile property measurements, including yield strength, ultimate strength, and Young's modulus for the aforesaid “control” and “optimum” samples obtained from their stress-strain curves, are set forth and presented in TABLE 1, hereinbelow.</p>
+      <p id="p-00072-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>The tensile properties of leather samples</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Yield</entry>
+                  <entry>Strain at</entry>
+                  <entry>Ultimate</entry>
+                  <entry />
+                  <entry>Young’s</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>strength</entry>
+                  <entry>yield point </entry>
+                  <entry>Strength</entry>
+                  <entry>Strain at</entry>
+                  <entry>modulus</entry>
+                </row>
+                <row>
+                  <entry>Samples</entry>
+                  <entry>(N/mm<sup>2</sup>)</entry>
+                  <entry>(%)</entry>
+                  <entry>(N/mm<sup>2</sup>)</entry>
+                  <entry>Break (%)</entry>
+                  <entry>(N/mm<sup>2</sup>)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="char" char="." />
+              <colspec colname="3" colwidth="35pt" align="char" char="." />
+              <colspec colname="4" colwidth="42pt" align="char" char="." />
+              <colspec colname="5" colwidth="35pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>“control”</entry>
+                  <entry>6.43</entry>
+                  <entry>21</entry>
+                  <entry>6.08</entry>
+                  <entry>25</entry>
+                  <entry>1.88</entry>
+                </row>
+                <row>
+                  <entry>“optimum”</entry>
+                  <entry>9.85</entry>
+                  <entry>35</entry>
+                  <entry>9.25</entry>
+                  <entry>39</entry>
+                  <entry>0.93</entry>
+                </row>
+                <row>
+                  <entry>“AC”</entry>
+                  <entry>4.46</entry>
+                  <entry>19</entry>
+                  <entry>3.96</entry>
+                  <entry>21</entry>
+                  <entry>1.73</entry>
+                </row>
+                <row>
+                  <entry>“AS”</entry>
+                  <entry>5.64</entry>
+                  <entry>34</entry>
+                  <entry>5.19</entry>
+                  <entry>36</entry>
+                  <entry>1.66</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00073-en" num="0072">By comparison of the “control” and “optimum” samples results set forth in TABLE 1 hereinabove, the yield and ultimate strengths, as well as the strain at yield and strain at break, were increased while the Young's modulus decreased in the “optimum” sample. This means that the mechanical properties and the surface area under a tensile-elongation curve was improved by the HA/PEG nano-composite treatment. These results confirm that the treatment with the HA/PEG nano-composite of the present invention promoted the movement of collagen fibers, and decreased the frictional resistance of the fibers. This reduction in friction led to more softness and an increase in tensile strength.</p>
+      <heading id="h-00020-en" level="2">DMTA Analysis</heading>
+      <p id="p-00074-en" num="0073">In the present invention, the DMTA measurements were performed using DMTA equipment on rectangular samples, which were (5 mm×5.5 mm×0.5 mm) mounted in the tensile mode between 0° C. to 250° C. at 3 Kmin<sup>−1 </sup>under a controlled strain (0.2%) and 0.3 N static force, at 1 Hz frequency, in a static air environment.</p>
+      <p id="p-00075-en" num="0074">With reference now to the <figref>FIG. 5</figref> of the DRAWINGS, this figure illustrates the values of displacement recorded as a function of temperature for untreated and treated historical goat leathers obtained by DMTA analysis. It was possible to calculate the values for the shrinkage temperature (T<sub>s</sub>) as well as the amount of shrinkage, from values of displacement versus temperature curves. The untreated sample showed a higher shrinkage temperature (T<sub>s</sub>) than the treated sample, while the initial displacements are the same for both samples.</p>
+      <p id="p-00076-en" num="0075">With reference now to <figref>FIGS. 6 and 7</figref> of the DRAWINGS, these figures illustrate the storage modulus (E′) and loss factor (tan (8)) curves for the “control,” designated with the aforenoted “AC,” and “optimum” samples, designated with the aforenoted “AS,” respectively, as a function of temperature at 1 Hz.</p>
+      <p id="p-00077-en" num="0076">It has been reported in the prior art that changes in the modulus are related to the moisture content of the samples and not to the drying temperature. A typical DMTA behavior of a vegetable-tanned leather within the temperature range of about −100° C. to 300° C. shows three major viscoelastic transitions, whereby the peaks are suggested to be the 8 and 8 shrinking-related transition and the glass transition, respectively. According to another study on viscoelastic behavior of new and historical leathers in tensile mode, a major melting process above 200° C. was exhibited.</p>
+      <p id="p-00078-en" num="0077">Herein, by comparison of the storage modulus (E′) and loss factor (tan (8)) of the leather samples versus temperature at progressive heating, the following information can be obtained: (1) an initial decrease of E′ followed by a slight increase and a large plateau; (2) a continuous increase of the storage modulus at around 230° C.-250° C.; and (3) a drop of two orders of magnitude in the storage modulus E′. The first part of the curves is due to moisture loss. The abrupt decrease of modulus at temperatures above 200° C. is attributed to the melting of the crystalline fraction of collagen. The inflexion point of this decrease of the storage modulus, (indicated before as T<sub>s</sub>), was used to estimate the melting temperature of the samples. In this study, T<sub>storage </sub>was found to be 253° C. for historical leather, i.e., “control,” and 241° C. for treated leather i.e., “optimum.”</p>
+      <p id="p-00079-en" num="0078">As shown in the figures, the tan (δ) curve dependence on temperature for the leather samples indicated the following trends: a broad and weak peak at about 30° C.-70° C., a continuous increase to about 200° C., and a very sharp peak at about 250° C. The comparison of the obtained results shows that the treated historical leather, i.e., “optimum,” exhibits a viscoelastic behavior similar to historical leather while it has less stiffness and higher viscoelastic behavior from room temperatures up to 70° C. However, historical leather, i.e., “control,” has a higher melting temperature than treated leather, i.e., “optimum,” which could be due to either cross linking occurring or natural aging.</p>
+      <p id="p-00080-en" num="0079">On the whole, the nano-composite treatment of the historical leather can induce storage modulus curves of “control” and “optimum” to show similar features at higher temperatures and less stiffness and viscoelastic behavior up to 70° C., which means that the treated leather is softer than the “control” sample even in progressively increasing temperatures.</p>
+      <p id="p-00081-en" num="0080">The decrease in the storage modulus of the “optimum” sample and the increase in tan (δ) amplitude and shifting to lower temperatures may be attributed to the formation of hydrated collagen fibers and (HA) nanoparticles which act like spacers between the collagen chains in the leather matrices, which in turn reduces the interchain interactions. This suggests that the lubricating of leather with HA and PEG improves the mechanical properties.</p>
+      <heading id="h-00021-en" level="2">DSC Analysis in N<sub>2 </sub>Flow</heading>
+      <p id="p-00082-en" num="0081">In the present invention, differential scanning calorimetric (DSC) thermal measurements were performed using a DSC calorimeter apparatus. The samples with amounts of about 10.5±0.2 mg were heated at the constant rate of 10 K min<sup>−1 </sup>from 20° C. to 350° C. in open aluminum pans and nitrogen flow (50 ml min<sup>−1</sup>, nitrogen purity of 99.999%).</p>
+      <p id="p-00083-en" num="0082">It should be understood that all samples were stored in sealed crucibles in the test room at 23°±2° C. and RH 50% for one week before any analysis. Therefore, any release of matter is prevented, and thus the moisture content of the sample remains constant over the entire measurement temperature range. Therefore, the DSC results are related to the thermal denaturation only.</p>
+      <p id="p-00084-en" num="0083">With reference now to <figref>FIG. 8</figref> of the DRAWINGS, there are illustrated therein DSC curves for the aforementioned “control” and “optimum” samples. The analysis of all data obtained by DSC analysis in N<sub>2 </sub>flow is summarized and set forth in TABLE 2 hereinbelow, illustrating the glass transition temperature (Tg) and the minimum temperature of endothermic peaks (I and II), as indicated in <figref>FIG. 8</figref>.</p>
+      <p id="p-00085-en" num="0084">As shown in <figref>FIG. 8</figref>, the glass transition temperature of the “control” sample occurs at higher temperature in comparison with the “optimum” sample. This indicates that the value of Tg for historical leather decreases by the treatment with PEG and nano HA aqueous solution. This may be attributed to the movement of amorphous chains of collagen due to an increase in their volumes because of water absorption, as revealed by the SEM results illustrated in <figref>FIG. 1</figref> of the DRAWINGS, and discussed in more detail hereinabove. In addition, the nano hydroxyl apatite particles are placed between the collagen chains, increasing free volume, facilitating the movement of the amorphous sections, and consequently inducing a decrease in the glass transition temperature (Tg).</p>
+      <p id="p-00086-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>The data of the DSC analysis</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Glassy</entry>
+                  <entry>Minimum</entry>
+                  <entry>Minimum</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>transition</entry>
+                  <entry>temperature</entry>
+                  <entry>temperature</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Leather</entry>
+                  <entry>temperature</entry>
+                  <entry>of peak I </entry>
+                  <entry>of peak II</entry>
+                </row>
+                <row>
+                  <entry>group</entry>
+                  <entry>samples</entry>
+                  <entry>Tg (° C.)</entry>
+                  <entry>(° C.) </entry>
+                  <entry>(° C.)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Unartifical</entry>
+                  <entry>“control”</entry>
+                  <entry>55/07</entry>
+                  <entry>80/93</entry>
+                  <entry>155/02 </entry>
+                </row>
+                <row>
+                  <entry>aged</entry>
+                  <entry>“optimum”</entry>
+                  <entry>40/74</entry>
+                  <entry>73/1 </entry>
+                  <entry>148/721</entry>
+                </row>
+                <row>
+                  <entry>Artificial </entry>
+                  <entry>“AC”</entry>
+                  <entry>44/18</entry>
+                  <entry>64/42</entry>
+                  <entry>215/37 </entry>
+                </row>
+                <row>
+                  <entry>aged</entry>
+                  <entry>“AS”</entry>
+                  <entry>41/26</entry>
+                  <entry>63/96</entry>
+                  <entry>202/73 </entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00087-en" num="0085">According to the endothermic peaks set forth in TABLE 2 hereinabove, at a relative low temperature, each investigated sample exhibited a wide endothermic peak, denoted by I, corresponding to the loss of humidity. This process is followed by one or some smaller endothermic peaks, denoted by I′ and I″ in <figref>FIG. 8</figref>. Immersion of the “optimum” sample in the aqueous HA/PEG solution can be induced at higher hydration level in relation to the natural aged sample (i.e., the aforesaid “control”). Therefore, the endothermic processes occurring between room temperature and about 120° C. can be related to the vaporization of the adsorbed and absorbed residual water. In addition, the immersion of the leather in a nano-composite aqueous solution induces decreasing minimum temperatures of peak I and I′ to the lower temperatures in the “optimum” sample. With a further reference to <figref>FIG. 8</figref> of the DRAWINGS, it is illustrated in this figure that the endothermic process I can be displaced to lower temperatures for the “optimum” sample compared with the “control” sample.</p>
+      <p id="p-00088-en" num="0086">With further reference to <figref>FIG. 8</figref> of the DRAWINGS, the second endothermic process (process II) could be explained by the biphasic, amorphous-crystalline structure of collagen-based materials, according to which the crystalline triple-helix is embedded into an amorphous-matrix (protein denaturation). Consequently, process II might be related to the softening (melting) of the crystalline part of the material.</p>
+      <p id="p-00089-en" num="0087">In the “control” sample, phase melting occurs at higher temperatures in comparison with those corresponding to the “optimum” sample, revealing a stiffer amorphous structure in the control sample, which could be explained by the above-mentioned biphasic, amorphous-crystalline structure, collagen-based materials, where the softening of the crystalline part is hindered by the rigidity of the amorphous matrix. It seems that PEG induces more softness in the “optimum” sample because of the absorption of the environmental humidity as per its characteristics. In addition, the mineral HA nanoparticles are hydrophilic, which can increase the aforementioned property.</p>
+      <p id="p-00090-en" num="0088">It should be understood that the melting temperature (T<sub>m</sub>) values are influenced by both the different leather preparation procedures and by the various environmental conditions of stocking and exposure. Therefore, the temperature related to the softening (melting) process could be used only as a qualitative criterion to differ between new and old leathers.</p>
+      <p id="p-00091-en" num="0089">With further reference to <figref>FIG. 8</figref>, it can be seen that denaturation peaks are sharp and narrow, and reach their maximum at about 120° C. In N<sub>2 </sub>gas flow, a broad endothermic ranging from room temperature to about 130° C. is the experimental evidence of two overlapping processes, moisture loss and collagen thermal denaturation. Thermal denaturation cannot thus be evaluated, but transitions related to softening/melting of the collagen crystalline fraction, as well as thermal oxidation, can be detected at higher temperatures.</p>
+      <p id="p-00092-en" num="0090">Immersion of the “optimum” sample and its DSC measurement were carried out for qualitative evaluation of deterioration, since it is at higher hydration levels compared to the natural aged samples, as mentioned hereinabove. In this condition, collagen fibrils are swollen in water, which is divided into two phases: intrafibril and external water. Furthermore, water addition merely increases its presence in the external pool without affecting the intrafibril water or interaxial molecular spacing of collagen molecules in the fiber lattice. By contrast, at intermediate hydration levels, as for so-called wet samples, results may be less reliable, since DSC parameters can vary with the collagen hydration level.</p>
+      <p id="p-00093-en" num="0091">Highly cooperative structures, such as proteins, stabilized by the cooperation of numerous weak forces (e.g., hydrogen bonding, electrostatic and hydrophobic interactions, etc.) undergo thermal transitions resulting from changes in conformation, hydration/dehydration, denaturation, aggregation, de-aggregation, and oxidation. Thermal denaturation is a time-dependent, irreversible transformation of the native triple helical structure into uncoiled structures regardless of the underlying molecular mechanisms; and collagen heating gives rise to sharp endothermic peaks at defined temperatures, T<sub>max</sub>, depending on the hydration level as shown in <figref>FIG. 8</figref>. DSC peak temperature has been assumed as the denaturation temperature of the collagen within the parchment. The higher denaturation temperature for the same sample measured in static air is mainly due to the higher crosslink content and fibril cohesion.</p>
+      <heading id="h-00022-en" level="2">Tga-Dtg Analysis in N<sub>2 </sub>Flow</heading>
+      <p id="p-00094-en" num="0092">It should be understood that the shrinkage phenomenon is the main heat damage in the collagen network coupled with some water loss. Herein, TGA analysis was used to quantify the extent of the water loss and DTG curve of the samples was studied for better interpretation of the TGA data.</p>
+      <p id="p-00095-en" num="0093">In the present invention, the TGA and DTG curves were recorded using TG apparatus. The samples were weighed (9±1 mg) and then heated at a constant temperature-increasing rate of 10 K min<sup>−1 </sup>in gas flow (Nitrogen; purity of gas in higher than 99.999%; 50 ml min<sup>−1</sup>) in a temperature range of 20° C. to 600° C.</p>
+      <p id="p-00096-en" num="0094">With reference now to <figref>FIGS. 9 and 10</figref> of the DRAWINGS, these figures show the TGA-DTG curves obtained by analysis in N<sub>2 </sub>flow for the aforesaid “control” and the “optimum” samples. The “control” sample here exhibits melting phase at the temperature range of about 154° C. to 169° C., whereas it occurs for the “optimum” sample in a range of about 136° C. to 165° C.</p>
+      <p id="p-00097-en" num="0095">The initial slope in the TGA curve of the “control” sample is sharper than those corresponding with the “optimum” sample, which means that the “control” sample has lost more water content in progressive temperature heating compared to the “optimum” sample.</p>
+      <p id="p-00098-en" num="0096">With further reference to the DTG curve shown in <figref>FIG. 10</figref> of the DRAWINGS, it is observed that the first peak related to water content loss is sharper for the “control” sample compared to the “optimum” sample, also the second peak, which is related to the leather structure denaturing, is broader for the “control” sample. Applicant contends that this means that the “control” sample shows more structural changes in comparison with the “optimum” sample. Furthermore, in the “control” sample, the temperature at which the maximum weight loss occurred is lower than that of the “optimum” sample.</p>
+      <p id="p-00099-en" num="0097">The obtained data from the TGA-DTG analyses are set forth and presented hereinbelow in connection with TABLE 3.</p>
+      <p id="p-00100-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>The obtained data from the TGA-DTG analysis</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="70pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>The temperature of the</entry>
+                  <entry>The temperature of</entry>
+                  <entry>Stopping</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>maximum weight</entry>
+                  <entry>the melting</entry>
+                  <entry>temperature </entry>
+                </row>
+                <row>
+                  <entry>samples</entry>
+                  <entry>losing (° C.)</entry>
+                  <entry>phase (° C.)</entry>
+                  <entry>(° C.)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="70pt" align="char" char="." />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>“control”</entry>
+                  <entry>266</entry>
+                  <entry>154 - 169</entry>
+                  <entry>599</entry>
+                </row>
+                <row>
+                  <entry>“optimum”</entry>
+                  <entry>267</entry>
+                  <entry>136 - 165</entry>
+                  <entry>600</entry>
+                </row>
+                <row>
+                  <entry>“AC”</entry>
+                  <entry>328/87</entry>
+                  <entry>198 - 228</entry>
+                  <entry>600.26</entry>
+                </row>
+                <row>
+                  <entry>“AS”</entry>
+                  <entry>330/23</entry>
+                  <entry>180 - 217</entry>
+                  <entry>600.55</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00023-en" level="1">Example 3</heading>
+      <heading id="h-00024-en" level="1">Aging Procedure</heading>
+      <p id="p-00101-en" num="0098">In this example, the structural changes during the time lapse for the “control” and the “optimum” (treated by the aforenoted HA/PEG nano-composite) samples are investigated through an accelerated aging procedure. Accordingly, two pieces of the leather samples are prepared pursuant to the method described in EXAMPLE 2 (designated as “control” and “optimum”), and were artificially aged in a chamber for 1000 hours. The samples were then exposed to a cyclic test: first, 16 hours at 40° C. under a relative humidity of 80%, a first cycle at substantially room temperatures and high humidity, followed by 8 hours at 15° C. under a relative humidity of 5%, a second cycle at lower than room temperatures and low humidity, and a UV radiation treatment provided by an ultraviolet B (UVb) lamp with a power of 8 W. Accordingly, the obtained artificially-aged “control” and “optimum” samples were coded as “AC” and “AS,” respectively. The obtained samples were analyzed by the same methods according to those described in previous example (i.e., EXAMPLE 2), hereinabove.</p>
+      <heading id="h-00025-en" level="2">Tensile Test Results</heading>
+      <p id="p-00102-en" num="0099">The tensile property measurements, including yield strength, ultimate strength, and Young's modulus for the “control” and the “optimum” samples after the accelerated ageing test, obtained from the stress-strain curves are presented and set forth in TABLE 1 hereinabove.</p>
+      <p id="p-00103-en" num="0100">It can be seen from TABLE 1 presented hereinabove, that the artificially-aged “optimum” samples, i.e., “AS,” had better tensile properties in comparison with the “control” aged, i.e., “AC,” sample. However, a general reduction in the tensile properties is observed after the artificial aging process, as compared to the similar results for un-aged samples (i.e., “control” and “optimum”).</p>
+      <p id="p-00104-en" num="0101">The increase of the strain quality in “AS” in comparison with the “control” and “AC” can be attributed to the nano-composite treatment effect. The HA nanoparticles can be considered as spherical balls, which are placed between collagen chains to ease their slipping over one another. This treatment promotes the movement of collagen fibers and decreases the frictional resistance of fibers when leather is subjected to a tensile force. The reduction of friction leads to a more uniform stress distribution in stretched leather and consequently leads to an increase in tensile strength.</p>
+      <heading id="h-00026-en" level="2">DMTA Analysis Results</heading>
+      <p id="p-00105-en" num="0102">The storage modulus (E′) and loss factor (tan (δ)) curves of the aged samples (i.e., “AC” and “AS”) are illustrated in <figref>FIGS. 6 and 7</figref> of the DRAWINGS as a function of temperature in 1 Hz. Accordingly, the value of Tstorage (T<sub>s</sub>) is 247° C. and 197° C. for “AS” and “AC” samples, respectively.</p>
+      <p id="p-00106-en" num="0103">With further reference to <figref>FIGS. 6 and 7</figref>, there is observed an exception behavior for artificial aged untreated historical leather, i.e., “AC” in both storage modulus (E′) and loss factor (tan (δ)) curves, compared with the treated historical leather, i.e., “AS” and also the un-aged samples (i.e., “control” and “optimum”) analyzed in the previous example hereinabove. The obtained storage modulus (E′) curve for “AC” exhibited two shoulders at about 177° C. and 196° C., while the “AS”, “control” and “optimum” samples show a continuous increase of storage modulus at around 230° C. to 250° C.</p>
+      <p id="p-00107-en" num="0104">As mentioned hereinabove in connection with EXAMPLE 2, the tan(8) curve dependence on temperature for the leather samples indicated a broad and weak peak followed by a continuous increase to about 200° C., and a very sharp peak at about 250° C., which occurs for the “AC” sample at about 200° C. The comparison of the obtained results shows that the treated leather after the artificial aging process, i.e., “AS,” shows the same E′-T feature as the “optimum” and the “control” samples with a shift of E′ to higher amounts and a displacement of 8 relaxation peak to a lower temperature and amplitude. In addition, artificial aging increases its melting temperature from 241° C. to 247° C.</p>
+      <p id="p-00108-en" num="0105">The explanation of the viscoelastic behavior of the “AC” sample is quite difficult due to the complexity of the degradation processes, the heterogeneity of the samples and the unknown previous preservation treatment. The shapes of the E′ vs. T curve of the “AC” sample represents a viscoelastic behavior similar to the historical leather, while it has a shift of E′ to a smaller amount and two lower melting temperatures compared to the historical leather, i.e., the “control” sample. These shifts can be related to various levels of the deterioration, which are related to the artificial aging process or heterogeneity of the samples. Artificial aging of the leathers can affect collagen and the non-collagen components of the leathers (tannins, oils, etc.) due to their oxidative and hydrolytic degradation, as shown, for example, by the decrease of tannin extracts for old leathers in comparison with the new samples. These results are confirmed when fibrils and bundles come closer, resulting in a more compact and rigid network.</p>
+      <heading id="h-00027-en" level="2">DSC Analysis in N<sub>2 </sub>Flow</heading>
+      <p id="p-00109-en" num="0106">With reference now to <figref>FIG. 11</figref> of the DRAWINGS, this figure shows the DSC curves for the untreated historical leather and the historical leather immersed in nano HA/PEG aqueous solution after artificial aging, as per the present invention. The analysis of all data is summarized in TABLE 2, as set forth hereinabove.</p>
+      <p id="p-00110-en" num="0107">It could be observed that the glass transition temperature of the “AC” sample occurs at a lower temperature in comparison with the “control” sample. This indicates that Tg decreases as a result of the artificial aging, as well as the treatment with HA/PEG nano-composite solution, as discussed hereinabove.</p>
+      <p id="p-00111-en" num="0108">As was seen in <figref>FIG. 8</figref> of the DRAWINGS, the endothermic process I can be displaced to lower temperatures for the “optimum” sample compared with the “control” sample, while with reference to <figref>FIG. 11</figref> of the DRAWINGS, both samples (“AC” and “AS”) exhibit a similar trend after artificial aging. In addition, the minimum peak temperatures of process I occur at a lower temperature in comparison with the aforesaid “control” and the “optimum” samples. This may be attributed to the stable hydration levels in the artificial aged samples.</p>
+      <p id="p-00112-en" num="0109">Melting phase occurs at higher temperatures for the “AC” sample compared to the “AS” sample, meaning a softer amorphous structure for “AS”. It seems, therefore, that PEG induces more softness in the “AS” sample, as well as the “optimum” sample, by absorption of the environmental humidity and by its structural characteristics. Also, the hydrophilic mineral HA nanoparticles intensified this effect.</p>
+      <p id="p-00113-en" num="0110">With further reference to <figref>FIGS. 8 and 11</figref>, it is illustrated that the melting temperature (T<sub>m</sub>) values in the case of the aged samples (“AC” and “AS”) are higher than those corresponding to the “optimum” and the “control” samples because the ageing process induces heterogeneity in the structure of the crystalline region. As was mentioned hereinabove, the melting temperature (T<sub>m</sub>) values are influenced by different leather preparation procedures and by various environmental conditions in stocking and exposure. Therefore, the temperature related to the softening (melting) process could be used only as a qualitative criterion to differ between new and old leathers.</p>
+      <p id="p-00114-en" num="0111">Accelerated ageing treatments resulted in distinct variation patterns for DSC parameters depending on the ageing factors and hence on the induced deterioration mechanisms. At high hydration levels, the multiple character of DSC curves is resolved (as illustrated in <figref>FIG. 11</figref> of the DRAWINGS) and multiple peaks can be singled out by the appropriate DE convolution. As a consequence, besides their excellent reproducibility, measurements in excess water offer a more comprehensive evaluation of thermal denaturation of parchments. DSC parameters of the thermal denaturation in excess water were therefore selected for the quantitative evaluation of the damages and the stability of the parchments. The large collection of DSC parameters obtained for the parchments exposed to various accelerated ageing treatments enabled us to set up a deterioration scale ranking parchments in four damage classes (no damage, minor, medium and major damage).</p>
+      <p id="p-00115-en" num="0112">Alteration of DSC full peak on ageing/deterioration determined from its shifting, broadening and shortening with respect to reference is an indication of increasing heterogeneity of the distribution of the collagen populations with different thermal stability. Their separation is obtained by convolution of full DSC peak. New parchments display up to three components: a minimum at T\T<sub>max</sub>, a main transition peak at T<sub>max</sub>, and a shoulder at T [T<sub>max</sub>]. These peaks are associated with labile, stable and cross-linked collagen populations, respectively. Quantification of the collagen populations with distinct thermal stability is given by the enthalpy associated to the corresponding fractions. TABLE 2 hereinabove reports thermal stability (i.e., peak temperature) and percent distribution (i.e., percent enthalpy) of distinct collagen populations, as well as the overall thermal denaturation enthalpies. This collagen population stabilized by high concentration of cros slinking also showed a clear tendency to withstand deterioration induced by heating in a humid atmosphere, as well as by combined heating at 100° C. and exposure to NO atmosphere (50 ppm).</p>
+      <heading id="h-00028-en" level="2">TGA-DTG Analysis in N<sub>2 </sub>Flow</heading>
+      <p id="p-00116-en" num="0113">With reference now to the <figref>FIGS. 12 and 13</figref> of the DRAWINGS, these figures show the TGA curves obtained by analysis in N<sub>2 </sub>flow for the aforementioned “AC” and the “AS” samples. As shown, the “AC” sample exhibits a phase melting at a temperature range between 198° C. to 228° C., while the phase melting occurs for the “AS” at a temperature range of 180° C. to 217° C. The initial slope in the TGA curve for the “AC” sample is more than those corresponding with the “AS” samples, which means the “AC” sample has lost more water content in the progressive temperature compared to the “AS” sample. The first and second peak in the DTG curve for the “AC” sample is broader than those of the “AS” sample, which means that the “AC” sample exhibits more weight changes. Also, for the “AC” sample, the temperature at which maximum weight loss occurs is lower than that of the “AS” sample. After accelerated aging, the temperature range of the melting phase has shifted to higher temperatures because of the structural heterogeneity. The DTG curves for the “control” and the “AC” samples show a number of smaller peaks in addition to the first and second peaks, demonstrating more structural heterogeneity in these samples. Although the general trend of water release was substantially analogous in either cases, the “control” sample had a lower water content compared to the “optimum” sample and the aged samples (“AC” and “AS”), and the “AC” sample had lower water contents compared to the “AS” sample.</p>
+      <p id="p-00117-en" num="0114">It is considered that with the exception of water evaporation, shown by the first TG-process, the other thermal events related to the damage degree are due to age (history) or conservation conditions of the material.</p>
+      <p id="p-00118-en" num="0115">While the present invention has been illustrated by the description of the embodiments thereof, and while the embodiments have been described in detail, it is not the intention of the applicant to restrict or in any way limit the scope of the appended claims to such detail. Additional advantages and modifications will readily appear to those skilled in the art. Therefore, the invention in its broader aspects is not limited to the specific details, representative apparatus and method, and illustrative examples shown and described. Accordingly, departures may be made from such details without departure from the breadth or scope of the applicant's concept. Furthermore, although the present invention has been described in connection with a number of exemplary embodiments and implementations, the present invention is not so limited but rather covers various modifications and equivalent arrangements, which fall within the purview of the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A nanocomposite polymeric compound comprising:
+<claim-text>a polymeric matrix; and</claim-text><claim-text>a plurality of hydroxyapatite (HA) nanoparticles,</claim-text><claim-text>wherein said nanoparticles are homogenously suspended in said polymeric matrix.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The nanocomposite polymeric compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said polymeric matrix comprises polyethylene glycol (PEG).</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The nanocomposite polymeric compound according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein said polyethylene glycol (PEG) has a molecular weight in the range of about 200 to about 800 daltons.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The nanocomposite polymeric compound according to <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein said polyethylene glycol (PEG) has a molecular weight of about 400 (PEG400).</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The nanocomposite polymeric compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said hydroxyapatite (HA) nanoparticles have an average size of about 50 nm to about 120 nm.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The nanocomposite polymeric compound according to <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein said hydroxyapatite (HA) nanoparticles have an average size of about 50 nm.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>
+        <b>7</b>. A method for producing a nanocomposite polymeric compound comprising the steps of:
+<claim-text>preparing a solution of polyethylene glycol (PEG) in deionized water;</claim-text><claim-text>adding a plurality of hydroxyapatite (HA) nanoparticles to said solution; and</claim-text><claim-text>stirring the resultant solution until semi-transparent and homogenous.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the concentration of said PEG in the resultant solution is in a range between about 15% to about 60% by weight.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the concentration of said HA nanoparticles in the resultant solution is about 10% by weight.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the concentration of said HA nanoparticles in the resultant solution is about 0.1% by volume.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. A method for the treatment of an object comprising the steps of:
+<claim-text>immersing said object in a nanocomposite solution prepared according to the method of <claim-ref idref="clm-00007-en">claim 7</claim-ref>;</claim-text><claim-text>removing and drying said object; and</claim-text><claim-text>storing the object in a sealed condition for at least one day.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method for the treatment of an object according to <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein said step of immersing comprises immersing said object in a polymeric matrix of polyethylene glycol (PEG) admixed with a plurality of hydroxyapatite (HA) nanoparticles.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method for the treatment of an object according to <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein said object is a leather object.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method for the treatment of an object according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein said leather object is an ancient leather object.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method for the treatment of an object according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein said leather object is selected from the group consisting of goat leather, sheep leather and vegetable tanning leather.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method for the treatment of an object according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, further comprising the steps of:
+<claim-text>exposing said leather object, in a first cycle, to a first ambient temperature and first humidity, said first humidity being about 80%; and subsequently</claim-text><claim-text>exposing said leather object, in a second cycle, to a second temperature lower than said first temperature and second humidity lower than said first humidity, and</claim-text><claim-text>radiating said leather object with UV radiation.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the steps are sequentially repeated for at least 1,000 hours.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the first and second cycles take about 16 hours and 8 hours, respectively.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein said said first ambient temperature is about 40° C. and said second temperature is about 15° C.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein said second humidity is about 5%.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The method according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein said UV radiation is provided by a UVb lamp having a radiation power of about 8 W.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The method for the treatment of an object according to <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein said object is parchment. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252197A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150252197A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252197A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252197A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252197A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252197A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150252197A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252197A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150252197A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252197A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150252197A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252197A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150252197A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252197A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150252197A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252197A1-20150910-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150252197A1_00009.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150252197A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150252197A1.PDF" type="pdf" size="999703" pages="18" />
+</lexisnexis-patent-document>

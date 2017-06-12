@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257522A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030235" date-changed="20151102" time-changed="070854">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121316637">
+        <country>US</country>
+        <doc-number>20150257522</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14434365</doc-number>
+        <date>20121018</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A46B  15/00        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>46</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A46B  11/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>46</class>
+        <subclass>B</subclass>
+        <main-group>11</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61C  19/06        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>C</subclass>
+        <main-group>19</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A46B  15/0055      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>46</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>0055</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A46B  11/00        20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>46</class>
+        <subclass>B</subclass>
+        <main-group>11</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A46B  11/001       20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>46</class>
+        <subclass>B</subclass>
+        <main-group>11</main-group>
+        <subgroup>001</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A46B2200/1066      20130101 LA20130910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>46</class>
+        <subclass>B</subclass>
+        <main-group>2200</main-group>
+        <subgroup>1066</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61C  19/066       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>C</subclass>
+        <main-group>19</main-group>
+        <subgroup>066</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">27</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">ORAL CARE SYSTEM</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>COLGATE-PALMOLIVE COMPANY</orgname>
+            <address>
+              <city>New York</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Boyke</last-name>
+            <first-name>Christine</first-name>
+            <address>
+              <city>Somerset</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Wu</last-name>
+            <first-name>Donghui</first-name>
+            <address>
+              <city>Bridgewater</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US12060776</doc-number>
+        <date>20121018</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014062186</doc-number>
+        <date>20140424</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173670756">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257522</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20121018</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173670754">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257522</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20121018</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">An oral care system including a toothbrush body having a cavity and a dispenser positioned within the cavity. In one aspect, the invention can be an oral care system comprising: a toothbrush body comprising a handle and a head, the toothbrush body extending along a longitudinal axis from a proximal end to a distal end; a plurality of tooth cleaning elements extending from the head; an opening in the proximal end of the toothbrush body that forms a passageway into an internal cavity of the handle; a first dispenser positioned within the internal cavity and comprising a first store of oral care material, the first dispenser resiliently coupled to the toothbrush body to be alterable between: (1) a first retracted state; and (2) a first extended state.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20121112</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257522A1</docdb-publication-number>
+      <docdb-application-id>444510730</docdb-application-id>
+      <new-owner>COLGATE-PALMOLIVE COMPANY, NEW YORK</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:BOYKE, CHRISTINE;WU, DONGHUI;REEL/FRAME:029277/0666</free-text-description>
+      <effective-date>
+        <date>20121012</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150506</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257522A1</docdb-publication-number>
+      <docdb-application-id>444510730</docdb-application-id>
+      <new-owner>COLGATE-PALMOLIVE COMPANY, NEW YORK</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:BOYKE, CHRISTINE;WU, DONGHUI;REEL/FRAME:035574/0425</free-text-description>
+      <effective-date>
+        <date>20121012</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present invention relates generally to an oral care system, and specifically to an oral care system including a toothbrush and a dispenser.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">Oral care products or agents are applied in different ways. For example, a common technique used for tooth whitening products is to cast an impression of a person's teeth and provide a tray of the shape of this impression. While tray-based systems are suitable, many people do not use them due to the fact that they tend to be uncomfortable and/or awkward. Moreover, in order to use a whitening tray, a user must keep the tray and the required components at hand. This not only requires extra storage space in already cramped bathroom cabinets but also requires that the user remember to use the whitening system. Furthermore, these tray-based systems are not conveniently portable for transport and/or travel.</p>
+      <p id="p-00003-en" num="0003">In addition to difficulties in applying some oral care products, storage is sometimes cumbersome and inconvenient for the user. The oral care product must typically be stored separately from oral care tooth cleaning implements such as a toothbrush since the oral care product package and toothbrush heretofore are generally treated as separate and distinct parts of an oral care regimen. A more portable, compact and convenient way to store oral care products, and to dispense and apply those oral care products to oral surfaces is desired.</p>
+      <heading id="h-00003-en" level="1">BRIEF SUMMARY OF THE INVENTION</heading>
+      <p id="p-00004-en" num="0004">Embodiments of the present invention provide an efficient, compact, and portable oral care system that combines an oral care implement such as a toothbrush with an oral care product or agent dispenser in a highly portable housing. Advantageously, such embodiments are especially suited for easy transport and/or travel.</p>
+      <p id="p-00005-en" num="0005">In one embodiment, the invention can be an oral care system comprising: a toothbrush body comprising a handle and a head, the toothbrush body extending along a longitudinal axis from a proximal end to a distal end; a plurality of tooth cleaning elements extending from the head; an opening in the proximal end of the toothbrush body that forms a passageway into an internal cavity of the handle; a first dispenser positioned within the internal cavity and comprising a first store of oral care material, the first dispenser resiliently coupled to the toothbrush body to be alterable between: (1) a first retracted state; and (2) a first extended state.</p>
+      <p id="p-00006-en" num="0006">In another embodiment, the invention can be an oral care system comprising: a toothbrush body comprising a handle and a head; a plurality of tooth cleaning elements extending from the head; an opening in the toothbrush body that forms a passageway into an internal cavity of the handle; a first dispenser positioned within the internal cavity and comprising a first store of oral care material, the first dispenser resiliently coupled to the toothbrush body to be alterable between: (1) a first retracted state; and (2) a first extended state.</p>
+      <p id="p-00007-en" num="0007">Further areas of applicability of the present invention will become apparent from the detailed description provided hereinafter. It should be understood that the detailed description and specific examples, while indicating the preferred embodiment of the invention, are intended for purposes of illustration only and are not intended to limit the scope of the invention.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00008-en" num="0008">The present invention will become more fully understood from the detailed description and the accompanying drawings, wherein:</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 1</figref> is a schematic of an oral care system according to a first embodiment of the present invention including a dispenser in a retracted state within a handle internal cavity;</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 2</figref> is a schematic of the oral care system of <figref>FIG. 1</figref> wherein the dispenser is in an extended state and a toothbrush cap is in a closed state;</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 3</figref> is a schematic of the oral care system of <figref>FIG. 1</figref> wherein the dispenser is in an extended state and the toothbrush cap is in an open state;</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 4A</figref> is a close-up view of area IVA of <figref>FIG. 1</figref> wherein an actuator is in a non-actuated state;</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 4B</figref> is the close-up view of <figref>FIG. 4A</figref> wherein the actuator is in an actuated state;</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 5</figref> is a schematic of an oral care system according to a second embodiment of the present invention including multiple dispensers in a retracted state within a handle internal cavity; and</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 6</figref> is a schematic of the oral care system of <figref>FIG. 5</figref> wherein one of the dispensers is in an extended state.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00016-en" num="0016">The following description of the preferred embodiment(s) is merely exemplary in nature and is in no way intended to limit the invention, its application, or uses.</p>
+      <p id="p-00017-en" num="0017">The description of illustrative embodiments according to principles of the present invention is intended to be read in connection with the accompanying drawings, which are to be considered part of the entire written description. In the description of embodiments of the invention disclosed herein, any reference to direction or orientation is merely intended for convenience of description and is not intended in any way to limit the scope of the present invention. Relative terms such as “lower,” “upper,” “horizontal,” “vertical,” “above,” “below,” “up,” “down,” “top” and “bottom” as well as derivatives thereof (e.g., “horizontally,” “downwardly,” “upwardly,” etc.) should be construed to refer to the orientation as then described or as shown in the drawing under discussion. These relative terms are for convenience of description only and do not require that the apparatus be constructed or operated in a particular orientation unless explicitly indicated as such. Terms such as “attached,” “affixed,” “connected,” “coupled,” “interconnected,” and similar refer to a relationship wherein structures are secured or attached to one another either directly or indirectly through intervening structures, as well as both movable or rigid attachments or relationships, unless expressly described otherwise. Moreover, the features and benefits of the invention are illustrated by reference to the exemplified embodiments. Accordingly, the invention expressly should not be limited to such exemplary embodiments illustrating some possible non-limiting combination of features that may exist alone or in other combinations of features; the scope of the invention being defined by the claims appended hereto.</p>
+      <p id="p-00018-en" num="0018">Preferred embodiments of the present invention will now be described with respect to one or more possible oral care or treatment systems. Embodiments of the oral care system include at least one dispenser that may include, without limitation, one or more of the following oral care materials: tooth whitening, antibacterial, enamel protection, anti-sensitivity, anti-inflammatory, anti-attachment, fluoride, tartar control/protection, flavorant, sensate, colorant and others. However, other embodiments of the present invention may be used to store and dispense any suitable type of oral care material and the invention is expressly not limited to any particular oral care system or oral care material alone. Furthermore, some embodiments of the oral care system include a first dispenser and a second dispenser, each of which may include any one of the oral care materials noted above. A more detailed, although still non-exhaustive, listing of possible oral care materials that may be stored in the dispenser(s) of the present invention and utilized with the oral care system will be provided below.</p>
+      <p id="p-00019-en" num="0019">Referring to <figref>FIGS. 1-3</figref>, an oral care system <b>100</b> is illustrated according to one embodiment of the present invention. The oral care system <b>100</b> is a compact, readily portable, self-contained, user-friendly system that comprises all of the necessary components and chemistries for a user to perform a desired oral care treatment routine. As will be described in greater detail below, the oral care system <b>100</b> in one exemplary embodiment generally comprises a toothbrush body <b>110</b> comprising a handle <b>111</b>, a head <b>112</b> and an elongated neck <b>115</b> extending between the handle <b>111</b> and the head <b>112</b>. The toothbrush body <b>110</b> extends along a longitudinal axis A-A from a proximal end <b>113</b> to a distal end <b>114</b>.</p>
+      <p id="p-00020-en" num="0020">In the exemplified embodiment, the entire toothbrush body <b>110</b>, including the handle <b>111</b>, the head <b>112</b> and the elongated neck <b>115</b>, is formed as a single integral piece using a molding, milling, machining or other suitable process. However, in other embodiments the handle <b>111</b> and the head <b>112</b> (and the neck <b>115</b>) may be formed as separate components which are operably connected at a later stage of the manufacturing process by any suitable technique known in the art including without limitation thermal or ultrasonic welding, a tight-fit assembly, a coupling sleeve, threaded engagement, adhesion, or fasteners.</p>
+      <p id="p-00021-en" num="0021">In certain embodiments, the toothbrush body <b>110</b> is formed of a rigid plastic material, such as for example without limitation polymers and copolymers of ethylene, propylene, butadiene, vinyl compounds and polyesters such as polyethylene terephthalate. However, the invention is not to be so limited in all embodiments and in certain other embodiments the toothbrush body <b>110</b> can be formed of other materials. Furthermore, in some embodiments the handle <b>111</b> of the toothbrush body <b>110</b> may be overmolded with a soft, resilient material, such as a thermoplastic elastomer, to provide comfort to a user when gripping the handle <b>111</b> during use of the oral care system <b>100</b> to clean and/or sanitize a user's oral cavity.</p>
+      <p id="p-00022-en" num="0022">In the exemplified embodiment, the toothbrush body <b>110</b> (i.e., the handle <b>111</b>, the neck <b>115</b> and the head <b>110</b>) forms a manual toothbrush that is typically used to brush a user's teeth. However, the invention is not to be so limited in all embodiments and in certain other embodiments the toothbrush body <b>110</b> can be any other type of oral care implement, such as for example without limitation, a powered toothbrush, a tongue scraper, a gum and soft tissue cleanser, a water pick, an interdental device, a tooth polisher, a specially designed ansate implement having tooth engaging elements specially designed to increase the effect of an active agent on the teeth or any other type of implement that is commonly used for oral care. Thus, it is to be understood that the inventive concepts discussed herein can be applied to any type of oral care implement unless a specific type of oral care implement is specified in the claims.</p>
+      <p id="p-00023-en" num="0023">In the exemplified embodiment, the head <b>112</b> of the toothbrush body <b>110</b> is generically illustrated as being ovular in shape. However, the invention is not to be so limited and the head <b>112</b> of the toothbrush body <b>110</b> can take on any other desired shape. Furthermore, in the exemplified embodiment the head <b>112</b> of the toothbrush body <b>110</b> has a plurality of tooth cleaning elements <b>116</b> extending therefrom. More specifically, the head <b>112</b> of the toothbrush body <b>110</b> comprises a front surface <b>117</b> and an opposite rear surface <b>118</b>, and the tooth cleaning elements <b>166</b> extend outwardly from the front surface <b>116</b>.</p>
+      <p id="p-00024-en" num="0024">The exact structure, pattern, orientation and material of the tooth cleaning elements <b>116</b> is not to be limiting of the present invention unless so specified in the claims. As used herein, the term “tooth cleaning elements” is used in a generic sense to refer to any structure that can be used to clean, polish or wipe the teeth and/or soft oral tissue (e.g. tongue, cheek, gums, etc.) through relative surface contact. Common examples of “tooth cleaning elements” include, without limitation, bristle tufts, filament bristles, fiber bristles, nylon bristles, spiral bristles, rubber bristles, elastomeric protrusions, flexible polymer protrusions, combinations thereof and/or structures containing such materials or combinations. Suitable elastomeric materials include any biocompatible resilient material suitable for uses in an oral hygiene apparatus. To provide optimum comfort as well as cleaning benefits, the elastomeric material of the tooth or soft tissue engaging elements has a hardness property in the range of A8 to A25 Shore hardness. One suitable elastomeric material is styrene-ethylene/butylene-styrene block copolymer (SEBS) manufactured by GLS Corporation. Nevertheless, SEBS material from other manufacturers or other materials within and outside the noted hardness range could be used.</p>
+      <p id="p-00025-en" num="0025">The tooth cleaning elements <b>116</b> of the present invention can be connected to the head <b>112</b> of the toothbrush body <b>110</b> in any manner known in the art. For example, staples/anchors, in-mold tufting (IMT) or anchor free tufting (AFT) could be used to mount the cleaning elements/tooth engaging elements. In AFT, a plate or membrane is secured to the brush head such as by ultrasonic welding. The bristles extend through the plate or membrane. The free ends of the bristles on one side of the plate or membrane perform the cleaning function. The ends of the bristles on the other side of the plate or membrane are melted together by heat to be anchored in place. Any suitable form of cleaning elements may be used in the broad practice of this invention. Alternatively, the bristles could be mounted to tuft blocks or sections by extending through suitable openings in the tuft blocks so that the base of the bristles is mounted within or below the tuft block.</p>
+      <p id="p-00026-en" num="0026">In certain embodiments, the head <b>112</b> of the toothbrush body <b>110</b> may also include a soft tissue cleanser coupled to or positioned on the rear surface <b>118</b> of the head <b>112</b>, which is opposite the front surface <b>117</b> from which the tooth cleaning elements <b>116</b> extend. An example of a suitable soft tissue cleanser that may be used with the present invention is disclosed in U.S. Pat. No. 7,143,462, issued Dec. 5, 2006 to the assignee of the present application, the entirety of which is hereby incorporated by reference. In certain other embodiments, the soft tissue cleanser may include protuberances, which can take the form of elongated ridges, nubs, or combinations thereof. Of course, the invention is not to be so limited and in certain embodiments the head <b>112</b> of the toothbrush body <b>110</b> may not include any soft tissue cleanser.</p>
+      <p id="p-00027-en" num="0027">The handle <b>111</b> of the toothbrush body <b>110</b> extends from the proximal end <b>113</b> of the toothbrush body <b>110</b> to a distal end <b>119</b> of the handle <b>111</b>. The distal end <b>119</b> of the handle <b>111</b> is the portion of the handle <b>111</b> from which the neck <b>115</b> and/or head <b>112</b> extends. The handle <b>111</b> comprises an inner surface <b>121</b> and an outer surface <b>122</b>. The outer surface <b>122</b> of the handle <b>111</b> forms a gripping surface of the toothbrush body <b>110</b>. Thus, the handle <b>111</b> is an elongated structure that provides the mechanism by which a user can hold and manipulate the toothbrush body <b>110</b> during use.</p>
+      <p id="p-00028-en" num="0028">The inner surface <b>121</b> of the handle <b>111</b> defines an internal cavity <b>125</b>. Furthermore, an opening <b>120</b> is formed into the proximal end <b>113</b> of the toothbrush body <b>110</b>. The opening <b>120</b> forms a passageway into the internal cavity <b>125</b> of the handle <b>111</b>. Thus, the opening <b>120</b> provides access into the internal cavity <b>125</b> from an area external to the internal cavity <b>125</b>. In the exemplified embodiment, the opening <b>120</b> is located on the opposite end of the handle <b>111</b> relative to the location from which the neck <b>115</b> and/or head <b>112</b> extends. However, the invention is not to be so limited and the opening <b>120</b> can be otherwise located, such as into a side surface of the handle <b>111</b> or into the same side of the handle <b>111</b> from which the neck <b>115</b> and/or head extends <b>112</b> as desired.</p>
+      <p id="p-00029-en" num="0029">The oral care system <b>100</b> further comprises a dispenser <b>150</b> positioned within the internal cavity <b>125</b>. The dispenser <b>150</b> extends from a proximal end <b>155</b> to a distal end <b>154</b>. In certain embodiments the dispenser <b>150</b>, including the structural details and means for dispensing oral care material, may be similar to that disclosed in U.S. patent application Ser. No. 13/518,424, filed on Jun. 22, 2012, the entirety of which is incorporated herein by reference. In some embodiments, the dispenser <b>150</b> can be a pen-type dispenser. However, the invention is not to be so limited in all embodiments and the dispenser <b>150</b> can take on other structural forms including those discussed herein below.</p>
+      <p id="p-00030-en" num="0030">The dispenser <b>150</b> comprises a first store of oral care material. More specifically, the dispenser <b>150</b> has an internal cavity or reservoir that holds the first store of oral care material therein for dispensing. The different types of oral care material that can be used as the first store of oral care material and contained within the dispenser <b>150</b> will be described in more detail below. The dispenser <b>150</b> is resiliently coupled to the toothbrush body <b>110</b> so as to be alterable between a retracted state, as illustrated in <figref>FIG. 1</figref>, and an extended state, as illustrated in <figref>FIGS. 2 and 3</figref>. The dispenser <b>150</b> comprises a dispenser body <b>151</b> and an applicator <b>152</b>. Specifically, the applicator <b>152</b> extends from the dispenser body <b>151</b>. The applicator <b>152</b> is not as wide as the dispenser body <b>151</b>, and therefore a shoulder <b>153</b> is formed on the portion of the dispenser body <b>151</b> from which the applicator <b>152</b> extends.</p>
+      <p id="p-00031-en" num="0031">The dispenser body <b>151</b> of the dispenser <b>150</b> is an elongated structure having an inner surface that defines a hollow interior cavity for storing the first store of oral care material therein. Furthermore, the dispenser body <b>151</b> has an outer surface <b>159</b>. In the exemplified embodiment, when the dispenser <b>150</b> is located within the internal cavity <b>125</b> of the handle <b>111</b>, the outer surface <b>159</b> of the dispenser <b>150</b> is in surface contact with the inner surface <b>121</b> of the handle <b>111</b>. However, the invention is not to be so limited and in other embodiments a gap may be formed between the outer surface <b>159</b> of the dispenser <b>150</b> and the inner surface <b>121</b> of the handle <b>111</b>. Regardless of whether there is a gap or not, the dispenser <b>150</b> is capable of movement within the internal cavity <b>125</b> between the retracted and extended states, so any surface contact between the outer surface <b>159</b> of the dispenser <b>150</b> and the inner surface <b>121</b> of the handle <b>111</b> must not impede such movement of the dispenser <b>150</b>, which will be described in more detail below.</p>
+      <p id="p-00032-en" num="0032">In certain embodiments, the dispenser body <b>151</b> has a cross-sectional profile that corresponds to the cross-sectional profile of the cavity <b>125</b>. Furthermore, in certain embodiments the outer surface <b>159</b> of the dispenser body <b>151</b> is circular. In such embodiments, the inner surface <b>121</b> of the handle <b>111</b> and/or the outer surface <b>159</b> of the dispenser body <b>151</b> may include grooves and/or protrusions to prevent relative rotation between the dispenser <b>150</b> and the toothbrush body <b>110</b>. In other embodiments, the cross-sectional profiles of the cavity <b>125</b> and the dispenser body <b>151</b> can be non-circular to prevent relative rotation between the dispenser <b>150</b> and the toothbrush body <b>110</b>. Furthermore, the resilient element <b>160</b> may also assist in preventing relative rotation between the dispenser <b>150</b> and the toothbrush body <b>110</b>.</p>
+      <p id="p-00033-en" num="0033">A dispensing orifice <b>156</b> is formed into the applicator <b>152</b> at the distal end <b>154</b> of the dispenser <b>150</b>. A user can apply the first store of oral care material by squeezing, compressing or otherwise forcing the first store of oral care material from the dispenser <b>150</b> and out of the dispensing orifice <b>156</b> in the distal end <b>154</b> of the dispenser <b>150</b>. As will be appreciated from the discussion below with regard to <figref>FIG. 3</figref>, in certain embodiments the dispenser body <b>151</b> remains positioned or located within the internal cavity <b>125</b> even during dispensing such that only the applicator <b>152</b> protrudes through the opening <b>120</b>. In such embodiments, the entire handle <b>111</b> of the toothbrush body <b>110</b> may be compressible for facilitating dispensing of the first store of oral care material from the dispenser <b>150</b>. In other embodiments, the oral care system <b>100</b> may include a threaded screw coupled to an elevator mechanism for forcing the oral care material from the dispenser <b>150</b> out through the dispensing orifice <b>156</b>. Such a threaded screw/elevator mechanism could be coupled to the dispenser <b>150</b> on a portion of the dispenser <b>150</b> that protrudes from the opening <b>120</b> when the dispenser <b>150</b> is in the extended state. Of course, any other mechanisms that assist with dispensing, such as mechanical, electrical, or electromechanical pumps and the like, can be used in other embodiments.</p>
+      <p id="p-00034-en" num="0034">Furthermore, in some embodiments upon the dispenser <b>150</b> achieving the extended state, the dispenser <b>150</b> may automatically dispense a pre-determined amount of the oral care material. In such embodiments, the oral care material may be dispensed at a delay after the dispenser <b>150</b> achieves the extended state in order to enable a user to prepare for application of the oral care material onto his or her teeth and other oral surfaces. Such an embodiment would include the necessary processor and memory. In still other embodiments, the applicator <b>152</b> may include a dispensing chamber that is in fluid communication with a reservoir that contains the oral care material. The applicator <b>152</b> can be compressible such that upon compressing the applicator <b>152</b> downwardly in a direction towards the dispenser body <b>151</b>, the oral care material is dispensed. In still other embodiments, dispensing of the oral care material can be achieved via capillary action or wicking. In such an embodiment, a capillary material is positioned within the dispenser <b>150</b> in contact with the oral care material and is exposed through the dispensing orifice <b>156</b> of the dispenser <b>150</b>. A user can apply the oral care material by contacting the exposed portion of the capillary material to the user's teeth or other oral surfaces.</p>
+      <p id="p-00035-en" num="0035">In certain embodiments, the dispenser <b>150</b> may be refillable so that a user can refill the first store of oral care material into the dispenser <b>150</b> after depletion thereof. However, in certain other embodiments upon depletion of the first store of oral care material contained within the dispenser <b>150</b>, the entire oral care system <b>100</b> will be replaced. Thus, in certain embodiments the amount of the first store of oral care material contained within the dispenser <b>150</b> is indicative of the life-cycle of the tooth cleaning elements <b>116</b> (i.e., the first store of oral care material may last for three months when used regularly, which is the time period recommended for replacement of a toothbrush).</p>
+      <p id="p-00036-en" num="0036">In certain embodiments, the applicator <b>152</b> may be formed of an elastomeric material to provide comfort when applying the oral care material directly onto a user's teeth and/or oral surfaces from the dispenser <b>150</b>. Specifically, when dispensing the oral care material directly onto a tooth, the applicator <b>152</b> can be made to contact the tooth directly to ensure that the oral care material is adequately and sufficiently applied onto the tooth surface. Forming the applicator <b>152</b> out of an elastomeric material makes this direct dispensing process more comfortable for a user. However, the invention is not to be so limited and in certain other embodiments the applicator <b>152</b> may be formed of other materials, including bristles, a porous or sponge material, or a fibrillated material. Furthermore, in still other embodiments the applicator <b>152</b> may be omitted and the dispensing orifice <b>156</b> can be formed directly into the dispenser <b>150</b> for dispensing the oral care material contained therein.</p>
+      <p id="p-00037-en" num="0037">In the exemplified embodiment, the applicator <b>152</b> has an angled top surface. Angling the top surface makes it easier to apply the oral care material directly to a user's teeth. However, the invention is not to be so limited in all embodiments and in certain other embodiments the top surface of the applicator <b>152</b> can be a flat surface, or it can have various contours to match the contours of a user's teeth and/or other oral surfaces.</p>
+      <p id="p-00038-en" num="0038">As noted above, the dispenser <b>150</b> is alterable between a retracted state and an extended state. More specifically, a resilient element <b>160</b> is fixed within the internal cavity <b>125</b> that is capable of altering the dispenser <b>150</b> between the retracted and extended states. The resilient element <b>160</b> has a first portion <b>161</b> that is fixed to the inner surface <b>121</b> of the handle <b>111</b> of the toothbrush body <b>110</b> and a second portion <b>162</b> that is fixed to the proximal end <b>155</b> of the dispenser <b>150</b>. In the exemplified embodiment, the first portion <b>161</b> of the resilient element <b>160</b> is fixed to a protrusion extending downwardly from a roof of the internal cavity <b>125</b> and the second portion <b>162</b> of the resilient element <b>160</b> is fixed to a protrusion extending from the proximal end <b>155</b> of the dispenser <b>150</b>. However, the invention is not to be so limited and the resilient element <b>160</b> can be fixed at other locations or in other manners to the dispenser <b>150</b> and the toothbrush body <b>110</b> and still achieve the same effect as discussed herein.</p>
+      <p id="p-00039-en" num="0039">In the exemplified embodiment, the resilient element <b>160</b> is a compression spring. However, the invention is not to be so limited and the resilient element <b>160</b> can take on other forms, including without limitation a torsion spring, an extension spring, a barrel spring, a coil spring, a drawbar spring, a magazine spring, a spring pin, a cotter pin, an air spring, a gas spring, a leaf spring, a cantilever spring, a volute spring, a rubber spring, a spring washer, a wave spring or the like. The resilient element <b>160</b> need not be a spring in all embodiments and can be any element that enables the dispenser <b>150</b> to be alterable between the retracted state and the extended state, as will be discussed in more detail below. For example without limitation, the resilient element <b>160</b> can simply be a manual slide that enables a user to slide the dispenser <b>150</b> into and out of the internal cavity <b>125</b> between the retracted and extended states.</p>
+      <p id="p-00040-en" num="0040">Referring now solely to <figref>FIG. 1</figref>, the oral care system <b>100</b> will be further described with regard to the dispenser <b>150</b> being in the retracted state. When the dispenser <b>150</b> is in the retracted state, an entirety of the dispenser <b>150</b> is located within the internal cavity <b>125</b>. The dispenser <b>150</b> comprises a locking element <b>170</b> for locking the dispenser <b>150</b> in the retracted state. The locking element <b>170</b> extends from the proximal end <b>155</b> of the dispenser <b>150</b> in an axial direction towards the head <b>112</b> of the toothbrush body <b>110</b>. More specifically, the locking element <b>170</b> comprises a rod portion <b>175</b> and a locking portion <b>176</b>. The rod portion <b>175</b> is an elongated structure that extends from the proximal end <b>155</b> of the dispenser <b>150</b>. The locking portion <b>176</b> extends from the rod portion <b>175</b> and has an engaging surface <b>177</b> that facilitates achieving and maintaining the retracted state of the dispenser <b>150</b> as will be discussed in more detail below. When the dispenser <b>150</b> is in the retracted state, the rod portion <b>175</b> of the locking element <b>170</b> abuts against and is in surface contact with the inner surface <b>121</b> of the handle <b>111</b>.</p>
+      <p id="p-00041-en" num="0041">The inner surface <b>121</b> of the handle <b>111</b> has a depression <b>171</b> formed therein. The depression <b>171</b> is a groove, dimple or notch formed into the inner surface <b>121</b> of the handle <b>111</b>. The depression <b>171</b> can take on any shape as long as it can maintain the dispenser <b>150</b> in the retracted state as discussed below. In the exemplified embodiment, the depression <b>171</b> comprises a shoulder <b>172</b>. In the exemplified embodiment, the inner surface <b>121</b> of the handle <b>111</b> also comprises a stop notch <b>173</b> having a shoulder <b>174</b>. The stop notch <b>173</b> is similar in size and shape to the depression <b>171</b>. The purpose of the stop notch <b>173</b> will be better understood from the discussion of <figref>FIGS. 2 and 3</figref> below.</p>
+      <p id="p-00042-en" num="0042">The locking element <b>170</b> is alterable between a locking state and a released state, which will be discussed in more detail below with reference to <figref>FIGS. 4A and 4B</figref>. When the dispenser <b>150</b> is in the retracted state, the locking element <b>170</b> is in the locking state whereby the locking member <b>170</b> nests within the depression <b>171</b> and engages the shoulder <b>172</b> of the depression <b>171</b>. Due to the interaction between the locking member <b>170</b> and the depression <b>171</b>, and more specifically between the engaging surface <b>177</b> of the locking portion <b>176</b> of the locking member <b>170</b> and the shoulder <b>172</b> of the depression <b>171</b>, the dispenser <b>150</b> is maintained in the retracted state whereby the dispenser <b>150</b> is positioned within the internal cavity <b>125</b>.</p>
+      <p id="p-00043-en" num="0043">The dispenser <b>150</b> has a distal portion <b>157</b>, which includes the shoulder <b>153</b> and the applicator <b>152</b>. The distal portion <b>157</b> of the dispenser <b>150</b> comprises a dispenser cap <b>126</b> coupled to the dispenser body <b>151</b> of the dispenser <b>150</b>. The dispenser cap <b>126</b> is alterable between a closed state in which the dispenser cap <b>126</b> covers the dispensing orifice <b>156</b> (<figref>FIGS. 1 and 2</figref>) and an open state in which the first dispensing orifice <b>156</b> is exposed (<figref>FIG. 3</figref>).</p>
+      <p id="p-00044-en" num="0044">When the dispenser <b>150</b> is in the retracted state and the dispenser cap <b>126</b> is coupled to the dispenser (<figref>FIG. 1</figref>), the dispenser cap <b>126</b> abuts the proximal end <b>113</b> of the toothbrush body <b>110</b> and covers the opening <b>120</b>. Furthermore, when the dispenser <b>150</b> is in the retracted state and the dispenser cap <b>126</b> is coupled to the dispenser <b>150</b>, a first portion <b>145</b> of the dispenser cap <b>126</b> is located within the internal cavity <b>125</b> and a second portion <b>146</b> of the dispenser cap <b>126</b> extends from the proximal end <b>113</b> of the handle <b>111</b> and blocks the opening <b>120</b>. Thus, the dispenser cap <b>126</b> prevents access from the external environment into the cavity <b>125</b> through the opening <b>120</b>. The dispenser cap <b>126</b> comprises an outer surface <b>127</b>. When the dispenser cap <b>126</b> is coupled to the toothbrush body <b>110</b> and the dispenser <b>150</b> is in the retracted state, the outer surface <b>127</b> of the dispenser cap <b>126</b> and the outer surface <b>122</b> of the handle <b>111</b> form a smooth continuous surface at an interface <b>128</b> between the dispenser cap <b>126</b> and the handle <b>11</b>. The dispenser cap <b>126</b> can be coupled to the dispenser body <b>110</b> using any desired technique, including a snap-fit, an interference fit, threaded screws, fasteners or the like.</p>
+      <p id="p-00045-en" num="0045">Furthermore, in the exemplified embodiment an O-ring <b>129</b> is coupled to the proximal end <b>113</b> of the toothbrush body <b>110</b>. The dispenser cap <b>126</b> has a flange portion <b>106</b> that abuts against the proximal end <b>113</b> of the toothbrush body <b>110</b> when the dispenser cap <b>126</b> is coupled to the toothbrush body <b>110</b>. Thus, the O-ring <b>129</b> acts as a seal that becomes compressed between the flange portion <b>106</b> of the dispenser cap <b>126</b> and the proximal end <b>113</b> of the toothbrush body <b>110</b> when the dispenser cap <b>126</b> is coupled to the toothbrush body <b>110</b>. As a result, a fluid-tight seal is formed that prevents debris and liquids from entering into the internal cavity <b>125</b>. The O-ring can be any type of gasket or seal that facilitates creating a seal between the dispenser cap <b>126</b> and the toothbrush body <b>110</b>. The dispenser cap <b>126</b> also seals and protects the applicator <b>152</b>, and more specifically the dispensing orifice <b>156</b> of the dispenser <b>150</b> to prevent the store of oral care material contained within the dispenser <b>150</b> from prematurely drying out or from being accidently dispensed.</p>
+      <p id="p-00046-en" num="0046">The oral care system <b>100</b> further comprises an actuator <b>180</b> that is coupled to the locking element <b>170</b>. The actuator <b>180</b> is alterable between a non-actuated state (<figref>FIG. 4A</figref>) and an actuated state (<figref>FIG. 4B</figref>). Furthermore the actuator is biased into the non-actuated state.</p>
+      <p id="p-00047-en" num="0047">Referring to <figref>FIGS. 4A and 4B</figref>, the actuator <b>180</b> and the locking element <b>170</b> will be further described. In the exemplified embodiment, the actuator <b>180</b> comprises a depressible button <b>181</b> and a rod <b>182</b>. The rod <b>182</b> extends through a channel <b>179</b> that is formed into the handle <b>111</b>. The channel <b>179</b> extends from the outer surface <b>122</b> of the handle <b>111</b> to the inner surface <b>121</b> of the handle <b>111</b>. The rod <b>182</b> has a length that is greater than the length of the channel <b>179</b> so that a portion of the rod <b>182</b> can either extend through the opening into the channel <b>179</b> on the outer surface <b>122</b> of the handle <b>111</b> or the opening of the channel <b>179</b> on the inner surface <b>121</b> of the handle <b>111</b>. This feature enables the rod <b>182</b> to engage the locking element <b>170</b> as will be discussed below to force the locking element <b>170</b> into the released state, which in turn forces the dispenser <b>150</b> from the retracted state into the extended state.</p>
+      <p id="p-00048-en" num="0048">In the exemplified embodiment the rod <b>182</b> is coupled to the depressible button <b>181</b>, and in certain embodiments may be integrally formed with the depressible button <b>181</b>. In <figref>FIG. 4A</figref>, the actuator <b>180</b> is in its biased, non-actuated state. In this state, the locking element <b>170</b> is positioned within the depression <b>171</b> such that the locking element <b>170</b> engages the shoulder <b>172</b> of the depression <b>171</b>. More specifically, the engaging surface <b>177</b> of the locking portion <b>176</b> of the locking element <b>170</b> abuts against and engages the shoulder <b>172</b> of the depression <b>171</b> when the locking element <b>170</b> is in the locked state and the dispenser <b>150</b> is in the retracted state.</p>
+      <p id="p-00049-en" num="0049">Upon a user depressing the depressible button <b>181</b>, the rod <b>182</b> contacts the locking element <b>170</b> and pushes it in a direction transverse to the longitudinal axis A-A such that the locking element <b>170</b> is removed from the depression <b>171</b>. The locking element <b>170</b> is a resilient component such that it is capable of flexing into and out of the depression <b>171</b> as discussed herein while remaining connected to the proximal end <b>155</b> of the dispenser <b>150</b>. The locking element <b>170</b> may be formed out of a plastic material such as has been discussed herein above, but it is thin enough so as to maintain flexibility and resiliency in order to achieve its desired function. In other embodiments the locking element <b>170</b> may be formed out of an elastomeric material, a resilient metal, or any other material so long as it can function as described herein.</p>
+      <p id="p-00050-en" num="0050">The locking element <b>170</b> is self-biased into the locked state such that the locking element <b>170</b> is biased into a position whereby the locking element <b>170</b> is nested within the depression <b>171</b> when the dispenser <b>150</b> is in the retracted state. However, upon the user depressing the depressible button <b>181</b> and thereby actuating the actuator <b>180</b>, the locking element <b>170</b> is pushed out of its biased position and into the released state due to the resiliency of the locking element <b>170</b>. Thus, actuation of the actuator <b>180</b> forces the locking element <b>170</b> into the released state, which is illustrated in <figref>FIG. 4B</figref>. Furthermore, actuation of the actuator <b>180</b> causes at least a portion of the rod portion <b>175</b> of the locking element <b>170</b> to come out of contact with the inner surface <b>121</b> of the handle <b>111</b>.</p>
+      <p id="p-00051-en" num="0051">
+        <figref>FIG. 4B</figref> illustrates the locking element <b>170</b> just as it reaches the released state and before the resilient element <b>160</b> has used its biasing force to alternate the dispenser <b>150</b> into the extended state. Thus, upon the locking element <b>170</b> achieving the released state, the dispenser <b>150</b> is automatically biased into the extended state due to the resilient element <b>160</b> as will be discussed in more detail below with reference to <figref>FIGS. 2 and 3</figref>. Furthermore, after depressing and releasing the actuator <b>180</b>, the actuator <b>180</b> returns to its non-actuated state due to it being biased into the non-actuated state. In certain embodiments, the actuator <b>180</b> only returns to its non-actuated state upon the dispenser <b>150</b> being returned to the retracted state due to the locking element <b>170</b> pushing the rod portion <b>182</b> into the channel <b>179</b> in the direction of the button <b>181</b>.</p>
+      <p id="p-00052-en" num="0052">Although described and illustrated herein as being a depressible button <b>181</b>, the actuator <b>180</b> is not limited to such a structure. The actuator <b>180</b> can be any type of mechanism that is capable of altering the locking element <b>170</b> between its biased locked state and the released state. For example without limitation, the actuator <b>180</b> may be a switch, a slide lock, a pull pin, a push pin, a magnetic actuator system, or any other type of mechanism capable of achieving the function described herein.</p>
+      <p id="p-00053-en" num="0053">Referring now to <figref>FIG. 2</figref>, the oral care system <b>100</b> will be described after the actuator <b>180</b> has been actuated. Upon actuating the actuator <b>180</b> (by depressing the depressible button <b>181</b> as described above, or in any other manner), the locking element <b>170</b> is forced into the released state and the dispenser <b>150</b> translates from the retracted state into the extended state. The dispenser <b>150</b> is actually biased into the extended state due to the bias of the resilient element <b>160</b>. When moving between the retracted state and the extended state (and vice versa), the dispenser <b>150</b> translates along a first path that is substantially parallel to the longitudinal axis A-A.</p>
+      <p id="p-00054-en" num="0054">As the dispenser <b>150</b> translates from the retracted state to the extended state, the locking element <b>170</b>, and more specifically the locking portion <b>176</b> of the locking element <b>170</b>, pushes against the inner surface <b>121</b> of the handle <b>111</b> due to its bias/resiliency. Thus, upon the locking element <b>170</b>, and more specifically the locking portion <b>176</b> of the locking element <b>170</b>, reaching the stop notch <b>173</b>, the locking portion <b>176</b> of the locking element <b>170</b> enters into the stop notch <b>173</b> such that the engaging surface <b>177</b> of the locking portion <b>176</b> of the locking element <b>170</b> abuts against the shoulder <b>174</b> of the stop notch <b>173</b>. Furthermore, upon reaching this position, the rod portion <b>175</b> of the locking element <b>170</b> again abuts against and is in surface contact with the inner surface <b>121</b> of the handle <b>111</b>. Thus, the combination of the stop notch <b>173</b> and the locking element <b>170</b> prevents the dispenser <b>150</b> from being completely disengaged and/or separated from the handle <b>111</b>.</p>
+      <p id="p-00055-en" num="0055">Thus, the oral care system <b>100</b> comprises a stopper element or retaining element that prevents over-extension of the dispenser <b>150</b> beyond the extended state and prevents the dispenser <b>150</b> from being completely detached from the toothbrush body <b>110</b>. In the exemplified embodiment, the locking element <b>170</b> acts as the stopper element due to it being biased into the stop notch <b>173</b> and engaging the shoulder <b>174</b> thereof. However, the invention is not to be so limited in all embodiments. In certain other embodiments the dispenser <b>150</b> may include a shoulder or flange that is separate from the locking element <b>170</b> such that the shoulder or flange engages a protrusion extending from the inner surface <b>121</b> of the handle <b>111</b> to prevent over-extension of the dispenser <b>150</b>. In such embodiments, after the locking element <b>170</b> is removed from the depression <b>171</b>, the dispenser <b>150</b> will translate into the extended position until the flange or shoulder of the dispenser <b>150</b> contacts the protrusion extending from the inner surface <b>121</b> of the handle <b>111</b>. Other mechanisms and structures are contemplated for acting as the stopper element or retaining element to prevent over-extension of the dispenser <b>150</b> beyond the extended state and to thereby prevent the dispenser <b>150</b> from being completely detached from the toothbrush body <b>110</b>. For example, any combination of grooves, notches, flanges, protrusions, protuberances or other mechanical structures can be used. Alternatively, electrical locking systems can be used to prevent over-extension of the dispenser <b>150</b> as desired. These stopper/retaining elements also prevent over-extension of the resilient element <b>160</b>, which could cause the resilient element to become non-functional (such as when a spring is over-extended and is therefore no longer capable of achieving its intended function).</p>
+      <p id="p-00056-en" num="0056">In the exemplified embodiment, upon the dispenser <b>150</b> achieving the extended state, the locking element <b>170</b> nests within the stop notch <b>173</b> as discussed above. Furthermore, when the dispenser <b>150</b> is in the extended state, the distal portion <b>157</b> of the dispenser <b>150</b> protrudes from and through the opening <b>120</b>. As discussed above, the distal portion <b>157</b> of the dispenser <b>150</b> includes the applicator <b>152</b> and the dispensing orifice <b>156</b>. Thus, in the extended state the dispensing orifice <b>156</b> of the dispenser <b>150</b> protrudes through the opening <b>120</b> and is accessible to a user so that the user can apply the oral care material contained within the dispenser <b>150</b> to the user's teeth and other oral surfaces using the dispensing techniques described herein above and others.</p>
+      <p id="p-00057-en" num="0057">In <figref>FIG. 2</figref>, the dispenser <b>150</b> is in the extended state and the dispenser cap <b>126</b> remains coupled to the dispenser body <b>151</b> of the dispenser <b>150</b>. Thus, the dispenser cap <b>126</b> is attached to the dispenser body <b>151</b> and therefore moves axially with the dispenser <b>150</b> as the dispenser <b>150</b> alternates between the retracted and extended states. When a user desires to use the dispenser <b>150</b> to dispense the oral care material therefrom, the user first removes the dispenser cap <b>126</b> from the dispenser body <b>151</b>, which can be achieved simply by pulling on the dispenser cap <b>126</b> in an axial direction away from the toothbrush body <b>110</b>. Upon removing the dispenser cap <b>126</b> from the dispenser body <b>151</b>, the oral care material can be dispensed from the dispenser <b>150</b> through the dispensing orifice <b>156</b>. The oral care system <b>100</b> is illustrated with the dispenser <b>150</b> in the extended state and with the dispenser cap <b>126</b> removed or separated from the dispenser body <b>151</b> in <figref>FIG. 3</figref>.</p>
+      <p id="p-00058-en" num="0058">Referring to <figref>FIGS. 5 and 6</figref>, an oral care system <b>200</b> will be described in accordance with a second embodiment of the present invention. The oral care system <b>200</b> is similar to the oral care system <b>100</b> except that the oral care system <b>200</b> includes a first dispenser <b>250</b> and a second dispenser <b>350</b>. Many of the features of the first dispenser <b>250</b> and the second dispenser <b>350</b> are similar to the features of the dispenser <b>150</b> discussed above with regard to the oral care system <b>100</b>. Furthermore, the oral care system <b>200</b> includes a toothbrush body <b>210</b> having a handle <b>211</b> and a head <b>212</b>. Many features of the toothbrush body <b>210</b> are similar to the features of the toothbrush body <b>110</b> of the oral care system <b>100</b> described above. Similar features of the oral care system <b>200</b> will not be described herein below in detail in the interest of brevity. However, similar features of the oral care system <b>200</b> will be similarly numbered to the corresponding feature from the oral care system <b>100</b> except that the 200-series and 300-series of numbers will be used. Where a detailed description of a component of the oral care system <b>200</b> is not provided, the description of the similar component of the oral care system <b>100</b> will apply.</p>
+      <p id="p-00059-en" num="0059">As noted above, the oral care system <b>200</b> comprises the toothbrush body <b>210</b> having the handle <b>211</b> and the head <b>212</b>. Furthermore, a neck <b>215</b> extends between the handle <b>211</b> and the head <b>212</b>. The head <b>212</b> has a front surface <b>217</b> and an opposing rear surface <b>218</b>. Tooth cleaning elements <b>216</b>, such as any of the various types of tooth cleaning elements described above, extend from the front surface <b>217</b> of the head <b>211</b>. Although not illustrated, a soft tissue cleanser may be positioned on the rear surface <b>218</b> of the head <b>211</b>, which can include any soft tissue cleanser described above. The toothbrush body <b>210</b> extends along a longitudinal axis B-B from a proximal end <b>213</b> to a distal end <b>214</b>.</p>
+      <p id="p-00060-en" num="0060">The handle <b>211</b> of the toothbrush body <b>210</b> has an inner surface <b>221</b> and an outer surface <b>222</b>. The inner surface <b>221</b> of the handle <b>211</b> defines an internal cavity <b>225</b>. A divider wall <b>230</b> extends into the internal cavity <b>225</b> from a roof of the internal cavity <b>225</b> to separate the internal cavity <b>225</b> into a first chamber <b>231</b> and a second chamber <b>232</b>. In the exemplified embodiment, the divider wall <b>230</b> extends into the internal cavity <b>225</b> a distance that is greater than half of the length of the internal cavity <b>225</b>. However, the invention is not to be so limited and the divider wall <b>201</b> may extend less distance into the internal cavity <b>225</b> from the roof of the internal cavity <b>225</b>. Furthermore, in still other embodiments the divider wall <b>230</b> may be omitted and the internal cavity <b>225</b> may not be separated into two chambers.</p>
+      <p id="p-00061-en" num="0061">An opening <b>220</b> is formed into the toothbrush body <b>210</b> at the proximal end <b>213</b> of the toothbrush body <b>210</b>. The opening <b>220</b> forms a passageway into the internal cavity <b>225</b>, and more specifically into each of the first and second chambers, <b>231</b>, <b>232</b> of the internal cavity <b>225</b> from the external environment. In the exemplified embodiment, a toothbrush cap <b>240</b> is coupled to the toothbrush body <b>210</b> at the proximal end <b>213</b> of the toothbrush body <b>210</b>. The toothbrush cap <b>240</b> is alterable between a closed state, as illustrated in <figref>FIG. 5</figref>, in which the toothbrush cap <b>240</b> covers the opening <b>220</b>, and an open state, as illustrated in <figref>FIG. 6</figref>, in which the toothbrush cap <b>240</b> does not cover the opening <b>220</b> and the opening <b>220</b> is exposed. In the exemplified embodiment, the toothbrush cap <b>240</b> is coupled to the toothbrush body <b>210</b> by a hinge <b>241</b>. In certain embodiments, the hinge <b>241</b> may include a resilient member or spring that biases the toothbrush cap <b>240</b> into the closed position. However, the invention is not to be so limited and in certain other embodiments the toothbrush cap <b>240</b> can be coupled to the toothbrush body <b>210</b> by other means, including a tight fit, an interference fit, threaded screws, fasteners, magnets or the like. Furthermore, in still other embodiments the toothbrush cap <b>240</b> can be altogether omitted and the opening <b>220</b> may always remain exposed.</p>
+      <p id="p-00062-en" num="0062">As discussed above, the oral care system <b>200</b> comprises the first dispenser <b>250</b> and the second dispenser <b>350</b>. The first dispenser <b>250</b> contains a first store of oral care material therein. The second dispenser <b>350</b> contains a second store of oral care material therein. In certain embodiments, the first store of oral care material is different than the second store of oral care material. However, the invention is not to be so limited in all embodiments and in certain other embodiments each of the first and second stores of oral care material can be the same.</p>
+      <p id="p-00063-en" num="0063">The first dispenser <b>250</b> is positioned within the first chamber <b>231</b> and the second dispenser <b>350</b> is positioned within the second chamber <b>232</b>. Thus, in the exemplified embodiment the first and second dispensers <b>250</b>, <b>350</b> are separated from one another by the divider wall <b>230</b> along at least a portion of their length. The first dispenser <b>250</b> extends from a proximal end <b>255</b> to a distal end <b>254</b> and the second dispenser <b>350</b> extends from a proximal end <b>355</b> to a distal end <b>354</b>. The first dispenser <b>250</b> is resiliently coupled to the toothbrush body <b>210</b> to be alterable between a first retracted state (<figref>FIG. 5</figref>) and a first extended state (<figref>FIG. 6</figref>). The second dispenser <b>350</b> is resiliently coupled to the toothbrush body <b>210</b> to be alterable between a second retracted state (<figref>FIG. 5</figref>) and a second extended state (not illustrated).</p>
+      <p id="p-00064-en" num="0064">A first resilient element <b>260</b> is positioned within the first chamber <b>231</b> to facilitate the first dispenser <b>250</b> alternating between the first retracted state and the first extended state. The first resilient element <b>260</b> has a first portion <b>261</b> that is fixed to the toothbrush body <b>210</b> (specifically at the roof of the first chamber <b>231</b>) and a second portion <b>262</b> that is connected to the proximal end <b>255</b> of the first dispenser. A second resilient element <b>360</b> is positioned within the second chamber <b>232</b> to facilitate the second dispenser <b>350</b> alternating between the second retracted state and the second extended state. The second resilient element <b>360</b> has a first portion <b>361</b> that is fixed to the toothbrush body <b>210</b> (specifically at the roof of the second chamber <b>232</b>) and a second portion <b>362</b> that is connected to the proximal end <b>355</b> of the second dispenser <b>350</b>. The first and second resilient elements <b>260</b>, <b>360</b> have a similar structure and function to the resilient element <b>160</b> of the oral care system <b>100</b>.</p>
+      <p id="p-00065-en" num="0065">The first dispenser <b>250</b> comprises a first locking element <b>270</b> for locking the first dispenser <b>250</b> in the retracted state whereby the first dispenser <b>250</b> is entirely contained within the internal cavity <b>225</b>, and more specifically within the first chamber <b>231</b> of the internal cavity <b>225</b>. The first locking element <b>270</b> engages a first depression or notch <b>271</b> formed into the inner surface <b>221</b> of the handle <b>211</b> in the same manner as has been discussed above with regard to the oral care system <b>100</b>. The inner surface <b>221</b> of the handle <b>211</b> further comprises a first stop notch <b>273</b> for preventing over-extension of the first dispenser <b>250</b> when the first dispenser <b>250</b> moves from the retracted state to the extended state. The details of the interaction between the first locking element <b>270</b> and the first depression or notch <b>271</b> and between the first locking element <b>270</b> and the first stop notch <b>273</b> will not be discussed herein with an understanding that the description of the same components in the oral care system <b>100</b> applies.</p>
+      <p id="p-00066-en" num="0066">A first actuator <b>280</b> is operably coupled to the first locking element <b>270</b> when the first dispenser <b>250</b> is in the retracted state. Actuation of the first actuator <b>280</b> causes the first locking element <b>270</b> to disengage from the first depression or notch <b>271</b>. When the first locking element <b>270</b> disengages from the first depression or notch <b>271</b>, the first resilient element <b>260</b> forces the first dispenser <b>250</b> into the first extended state due to the bias of the first resilient element <b>260</b>. Thus, upon actuating the first actuator <b>280</b> (which can be achieved in any of the manners discussed above with regard to the actuator <b>180</b>), the first locking element <b>270</b> is released from the first depression or notch <b>271</b> and the first dispenser <b>250</b> is automatically biased into the first extended state (illustrated in <figref>FIG. 6</figref>). In the exemplified embodiment, upon being biased into the first extended state, the first locking element <b>270</b> engages the first stop notch <b>273</b> to prevent over-extension of the first dispenser <b>250</b> beyond the first extended state and to prevent the first dispenser <b>250</b> from being completely detached from the toothbrush body <b>210</b>.</p>
+      <p id="p-00067-en" num="0067">The second dispenser <b>350</b> comprises a second locking element <b>370</b> for locking the second dispenser <b>350</b> in the retracted state whereby the second dispenser <b>350</b> is entirely contained within the internal cavity <b>225</b>, and more specifically within the second chamber <b>232</b> of the internal cavity <b>225</b>. The second locking element <b>370</b> engages a second depression or notch <b>371</b> formed into the inner surface <b>221</b> of the handle <b>211</b> in the same manner as has been discussed above with regard to the oral care system <b>100</b>. The inner surface <b>221</b> of the handle <b>211</b> further comprises a second stop notch <b>373</b> for preventing over-extension of the second dispenser <b>350</b> when the second dispenser <b>350</b> moves from the retracted state to the extended state. The details of the interaction between the second locking element <b>370</b> and the second depression or notch <b>371</b> and between the second locking element <b>370</b> and the second stop notch <b>373</b> will not be discussed herein with an understanding that the description of the same components in the oral care system <b>100</b> applies.</p>
+      <p id="p-00068-en" num="0068">A second actuator <b>380</b> is operably coupled to the second locking element <b>370</b> when the second dispenser <b>350</b> is in the retracted state. Actuation of the second actuator <b>380</b> causes the second locking element <b>370</b> to disengage from the second depression or notch <b>371</b>. When the second locking element <b>370</b> disengages from the second depression or notch <b>371</b>, the second resilient element <b>360</b> forces the second dispenser <b>350</b> into the second extended state due to the bias of the second resilient element <b>360</b>. Thus, upon actuating the second actuator <b>380</b> (which can be achieved in any of the manners discussed above with regard to the actuator <b>180</b>), the second locking element <b>370</b> is released from the second depression or notch <b>371</b> and the second dispenser <b>350</b> is automatically biased into the second extended state. In the exemplified embodiment, upon being biased into the second extended state, the second locking element <b>370</b> engages the second stop notch <b>373</b> to prevent over-extension of the second dispenser <b>350</b> beyond the second extended state and to prevent the second dispenser <b>350</b> from being completely detached from the toothbrush body <b>210</b>.</p>
+      <p id="p-00069-en" num="0069">The first dispenser <b>250</b> is biased into the first extended state due to the bias of the first resilient member <b>260</b> and the second dispenser <b>350</b> is biased into the second extended state due to the bias of the second resilient element <b>360</b>. Thus, in order to retain the first and second dispensers <b>250</b>, <b>350</b> in the first and second retracted states within the first and second chambers <b>231</b>, <b>232</b>, respectively, the bias of the first and second resilient elements <b>260</b>, <b>360</b> must be overcome by pressing the first and second dispensers <b>250</b>, <b>350</b> in the axial direction towards the head <b>212</b> until the first and second locking elements <b>270</b>, <b>370</b> engage the first and second depressions/notches <b>271</b>, <b>371</b>.</p>
+      <p id="p-00070-en" num="0070">When the first and/or second dispensers <b>250</b>, <b>260</b> are alternated into the first and second extended states, the distal portions <b>257</b>, <b>357</b> of the first and second dispensers <b>250</b>, <b>350</b> may contact the toothbrush cap <b>240</b> (if the toothbrush cap <b>240</b> has not previously been opened to expose the opening <b>220</b>). In such embodiments, the force of the first and second dispensers <b>250</b>, <b>350</b> bumping against the toothbrush cap <b>240</b> may cause the toothbrush cap <b>240</b> to open automatically.</p>
+      <p id="p-00071-en" num="0071">The first and second dispensers <b>250</b>, <b>350</b> are movable independent of one another. Specifically, actuating the first actuator <b>280</b> when the first dispenser <b>250</b> is in the first retracted state will cause the first dispenser <b>250</b> to be released from the first retracted state and to be biased into the first extended state. However, actuating the first actuator <b>280</b> will not cause the second dispenser <b>350</b> to move. Similarly, actuating the second actuator <b>380</b> when the second dispenser <b>350</b> is in the second retracted state will cause the second dispenser <b>350</b> to be released from the second retracted state and to be biased into the second extended state. However, actuating the second actuator <b>380</b> will not cause the first dispenser <b>250</b> to move. Thus, each of the first and second dispensers <b>250</b>, <b>350</b> can be extended and used independently of one another.</p>
+      <p id="p-00072-en" num="0072">The first dispenser <b>250</b> comprises a first dispenser cap <b>290</b> coupled to the first dispenser body <b>251</b> of the first dispenser <b>250</b>. Specifically, the first dispenser cap <b>290</b> is coupled to the first dispenser body <b>251</b> such as by a tight fit, an interference fit, a threaded screw, fasteners or the like. The first dispenser cap <b>290</b> covers the first applicator <b>252</b> and the first dispensing orifice <b>256</b> when coupled to the first dispenser body <b>251</b>. Thus, the first dispenser cap <b>290</b> prevents the first store of oral care material contained within the first dispenser <b>250</b> from accidentally dispensing, leaking, or drying out. In certain embodiments the first dispenser cap <b>290</b> may be hingedly coupled to the first dispenser body <b>251</b>, although the invention is not to be so limited and in other embodiments the first dispenser cap <b>290</b> may be completely removable and separable from the first dispenser body <b>251</b>. Furthermore, in certain embodiments the dispenser caps <b>290</b> may be formed as a part of the toothbrush cap <b>240</b>. Furthermore, in some embodiments the first dispenser cap <b>290</b> may be omitted from the oral care system <b>200</b>.</p>
+      <p id="p-00073-en" num="0073">The second dispenser <b>350</b> comprises a second dispenser cap <b>390</b> coupled to the second dispenser body <b>351</b> of the second dispenser <b>350</b>. Specifically, the second dispenser cap <b>390</b> is coupled to the second dispenser body <b>351</b> such as by a tight fit, an interference fit, a threaded screw, fasteners or the like. The second dispenser cap <b>390</b> covers the second applicator <b>352</b> and the second dispensing orifice <b>356</b> when coupled to the second dispenser body <b>351</b>. Thus, the second dispenser cap <b>390</b> prevents the second store of oral care material contained within the second dispenser <b>350</b> from accidentally dispensing, leaking, or drying out. In certain embodiments the second dispenser cap <b>390</b> may be hingedly coupled to the second dispenser body <b>351</b>, although the invention is not to be so limited and in other embodiments the second dispenser cap <b>390</b> may be completely removable and separable from the second dispenser body <b>351</b>. Furthermore, in some embodiments the second dispenser cap <b>390</b> may be omitted from the oral care system <b>200</b>.</p>
+      <p id="p-00074-en" num="0074">When the first dispenser <b>250</b> is in the first extended state as illustrated in <figref>FIG. 6</figref> and the first dispenser cap <b>290</b> is removed from the first dispenser body <b>251</b>, a distal portion <b>257</b> of the first dispenser <b>250</b> protrudes from the toothbrush body <b>210</b> and through the opening <b>220</b> in the proximal end <b>213</b> of the toothbrush body <b>210</b>. In the first extended state, the first locking element <b>270</b> is nested within the first stop notch <b>273</b> as has been described above so that the first dispenser <b>250</b> can not be separated from the toothbrush body <b>210</b>.</p>
+      <p id="p-00075-en" num="0075">The distal portion <b>257</b> of the first dispenser <b>250</b> includes the first applicator <b>252</b> and the first dispensing orifice <b>256</b>. Thus, when the first dispenser <b>250</b> is in the first extended state, a user can cause the first dispenser <b>250</b> to dispense the first store of oral care material (or a portion thereof) through the first dispensing orifice <b>256</b> to apply the first store of oral care material to his or her teeth and/or other oral surfaces. Dispensing of the first store of oral care material from the first dispenser <b>250</b> can be achieved in any of the manners discussed above with regard to the dispenser <b>150</b> or by any other techniques.</p>
+      <p id="p-00076-en" num="0076">Although not illustrated, when the second dispenser <b>350</b> is in the first extended state and the second dispenser cap <b>390</b> is removed from the second dispenser body <b>351</b>, a distal portion <b>357</b> of the second dispenser <b>350</b> protrudes from the toothbrush body <b>210</b> and through the opening <b>220</b> in the proximal end <b>213</b> of the toothbrush body <b>210</b>. In the second extended state, the second locking element <b>370</b> is nested within the second stop notch <b>373</b> as has been described above so that the second dispenser <b>350</b> can not be separated from the toothbrush body <b>210</b>. The distal portion <b>357</b> of the second dispenser <b>350</b> includes the second applicator <b>352</b> and the second dispensing orifice <b>356</b>. Thus, when the second dispenser <b>350</b> is in the second extended state, a user can cause the second dispenser <b>350</b> to dispense the second store of oral care material (or a portion thereof) through the second dispensing orifice <b>356</b> to apply the second store of the oral care material to his or her teeth and/or other oral surfaces. Dispensing of the second store of oral care material from the second dispenser <b>350</b> can be achieved using any of the techniques discussed herein above.</p>
+      <p id="p-00077-en" num="0077">The oral care materials contained within the dispenser <b>150</b> of the oral care system <b>100</b> and the first and second dispensers <b>250</b>, <b>350</b> of the oral care system <b>200</b> may be a measured amount of a semi-viscous, yet flowable, aesthetically pleasing, pleasant tasting oral care composition that is dosed or metered through the dispensing orifice and delivered directly into a user's oral cavity or onto the tooth cleaning elements. The oral care material can either be a flowable liquid and/or a solid that is easily dispensed for consumer use. The flowable liquids may include, without limitation, pastes, gels, rinses, foams, scrubbers, solids, liquids and/or aerosols under compressed air.</p>
+      <p id="p-00078-en" num="0078">The oral care materials can be used for a variety of oral care needs including but not limited to whitening, sensitivity, gum health, stain-removal, enamel strengthening, mouthrinse, breath spray, sanitizer solution for a toothbrush, and whole mouth care solutions. The oral care material may also include active ingredients typical of use in whole mouth oral care formulations. The oral care material may also contain sweeteners, particulate, and sensates capable of delivering unique benefits to the consumer.</p>
+      <p id="p-00079-en" num="0079">The oral care material can be used as a stand-alone formulation. In some embodiments, the composition has the capability and potential of containing and delivering active ingredients, such as Fluoride, Arginine, Triclosan, or the like, while further providing potential cleaning, stain-removal, whitening of the teeth surface with the incorporation of chemical agents such as hydrogen peroxide, or polishing abrasives such as, for example, silica, dicalcium phosphate, precipitated calcium carbonate or the like. The composition also has the capability of delivering consumer perceivable visual signals via unique colorants, shapes, stripes, sparkles, extruded forms, etc, while further delivering consumer perceivable sensory signals delivered via unique flavors, sweeteners, sensates, or the like.</p>
+      <p id="p-00080-en" num="0080">The oral care materials include materials that provide oral health benefits to a user upon contact with a user's oral cavity. In one embodiment, the oral care materials are fluidic materials. For example, in certain embodiments the oral care materials include a mouthwash solution that cleans the oral surfaces when applied thereto and provides the user with breath freshening benefits. In other embodiments, the oral care materials include a tooth cleaning solution, such as a dentifrice. Of course, the oral care materials are not to be in any way limiting of the present invention and may include fluids having active or inactive agents that deliver therapeutic, cosmetic, experiential and/or sensorial benefits to a consumer during a tooth, soft tissue, tongue or interdental cleaning regimen. Specifically, the oral care material can be an anti-sensitivity agent, fluoride, a tartar protection agent, an antibacterial agent, an oxidative or whitening agent, an enamel strengthening or repair agent, a tooth erosion preventing agent, a gum health active, a nutritional ingredient, a tartar control or anti-stain ingredient, an enzyme, a sensate ingredient, a flavor or flavor ingredient, a breath freshening ingredient, an oral malodor reducing agent, an anti-attachment agent or sealant, a diagnostic solution, an occluding agent, a dry mouth relief ingredient, a catalyst to enhance the activity of any of these agents, colorants or aesthetic ingredients, arginine bicarbonate, chlorohexidine, triclosan, CPC, zinc oxide and combinations thereof. As noted above, in certain embodiments the oral care materials or at least one of the oral care materials is free of a dentifrice as the oral care fluid is intended to supplement traditional brushing of the teeth rather than supplant it.</p>
+      <p id="p-00081-en" num="0081">The formulation or oral care material in the dispensers can be used as a standalone formulation or if using a device with more than one dispenser, the formulations in the applicators can be used in a non-sequential or separate but sequential manner. For example, the non-sequential dispensers could be that one dispenser contains sanitizer spray for the toothbrush while the other contains plaque finding ingredients. In this case, the plaque finding ingredient would be used before brushing and the sanitizer spray in the other applicator would be used after brushing. The two dispensers could also be used in conjunction with one another. In this example, the whitening ingredient in one dispenser may need a sealant to be added in order to work over time. The first dispenser containing the whitening ingredient would then be applied first and the sealant in the second dispenser applied immediately afterward. These two formulas/benefits would not be compatible and/or would not be as effective if used in a single formulation.</p>
+      <p id="p-00082-en" num="0082">It should be appreciated that various combinations of the components and functionality described above with respect to the different embodiments are contemplated within the scope of the present invention. Therefore, certain features of one embodiment can be incorporated into another embodiment. Furthermore, certain features are not described in detail with regard to some of the embodiments with an understanding that the description of that similar feature in the other embodiments is equally applicable. Moreover, although the embodiments are described herein with a single dispenser or with two dispensers, other embodiments are contemplated that use more than two dispensers. In one such embodiment, four dispensers are incorporated.</p>
+      <p id="p-00083-en" num="0083">As used throughout, ranges are used as shorthand for describing each and every value that is within the range. Any value within the range can be selected as the terminus of the range. In addition, all references cited herein are hereby incorporated by referenced in their entireties. In the event of a conflict in a definition in the present disclosure and that of a cited reference, the present disclosure controls.</p>
+      <p id="p-00084-en" num="0084">While the invention has been described with respect to specific examples including presently preferred modes of carrying out the invention, those skilled in the art will appreciate that there are numerous variations and permutations of the above described systems and techniques. It is to be understood that other embodiments may be utilized and structural and functional modifications may be made without departing from the scope of the present invention. Thus, the spirit and scope of the invention should be construed broadly as set forth in the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An oral care system comprising:
+<claim-text>a toothbrush body comprising a handle and a head, the toothbrush body extending along a longitudinal axis from a proximal end to a distal end;</claim-text><claim-text>a plurality of tooth cleaning elements extending from the head;</claim-text><claim-text>an opening in the proximal end of the toothbrush body that forms a passageway into an internal cavity of the handle;</claim-text><claim-text>a first dispenser positioned within the internal cavity and comprising a first store of oral care material, the first dispenser resiliently coupled to the toothbrush body to be alterable between: (1) a first retracted state; and (2) a first extended state.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The oral care system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising a first resilient element comprising a first portion fixed to the toothbrush body and a second portion fixed to the first dispenser.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The oral care system according to any one of <claim-ref idref="clm-00001-en">claims 1 </claim-ref> to <claim-ref idref="clm-00002-en">2</claim-ref> wherein the first dispenser is biased into the first extended state.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The oral care system according to <claim-ref idref="clm-00003-en">claim 3</claim-ref> further comprising:
+<claim-text>a first locking element for locking the first dispenser in the first retracted state;</claim-text><claim-text>a first actuator operably coupled to the first locking element;</claim-text><claim-text>wherein when the first dispenser is in the first retracted state and the first actuator is actuated, the first locking element is released and the first dispenser is automatically biased into the first extended state.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The oral care system according to any one of <claim-ref idref="clm-00001-en">claims 1 </claim-ref> to <claim-ref idref="clm-00004-en">4</claim-ref> further comprising a first stopper element that prevents over-extension of the first dispenser beyond the first extended state.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The oral care system according to any one of <claim-ref idref="clm-00001-en">claims 1 </claim-ref> to <claim-ref idref="clm-00005-en">5</claim-ref> further comprising a first retaining element that prevents the first dispenser from being completely detached from the toothbrush body.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The oral care system according to any one of <claim-ref idref="clm-00001-en">claims 1 </claim-ref> to <claim-ref idref="clm-00006-en">6</claim-ref> wherein the first dispenser translates along a first path when moving between the first extended state and the first retracted state, the first path being substantially parallel to the longitudinal axis.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The oral care system according to any one of <claim-ref idref="clm-00001-en">claims 1 </claim-ref> to <claim-ref idref="clm-00007-en">7</claim-ref> wherein, when the first dispenser is in the first retracted state, an entirety of the first dispenser is located within the internal cavity; and wherein when the first dispenser is in the first extended state, a distal portion of the first dispenser protrudes from the opening, the distal portion of the first dispenser comprising a first dispensing orifice through which the first store of oral care material can be dispensed.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The oral care system according to <claim-ref idref="clm-00008-en">claim 8</claim-ref> wherein the distal portion of the first dispenser further comprises a first dispenser cap coupled to a first dispenser body of the first dispenser to be alterable between: (1) a closed state in which the first dispenser cap covers the first dispensing orifice; and (2) an open state in which the first dispensing orifice is exposed.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The oral care system according to any one of <claim-ref idref="clm-00008-en">claims 8 </claim-ref> to <claim-ref idref="clm-00009-en">9</claim-ref> further comprising a toothbrush cap coupled to the toothbrush body so as to be alterable between: (1) a closed state in which the toothbrush cap covers the opening; and (2) an open state in which the opening is exposed.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The oral care system according to any one of <claim-ref idref="clm-00001-en">claims 1 </claim-ref> to <claim-ref idref="clm-00010-en">10</claim-ref> further comprising:
+<claim-text>a second dispenser positioned within the internal cavity and comprising a second store of oral care material that is different than the first store of oral care material, the second dispenser resiliently coupled to the toothbrush body to be alterable between: (1) a second retracted state; and (2) a second extended state.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The oral care system according to <claim-ref idref="clm-00011-en">claim 11</claim-ref> further comprising a divider wall that separates the internal cavity into a first chamber and a second chamber, the first dispenser positioned within the first chamber and the second dispenser positioned within the second chamber.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The oral care system according to any one of <claim-ref idref="clm-00011-en">claims 11 </claim-ref> to <claim-ref idref="clm-00012-en">12</claim-ref> further comprising a second resilient element comprising a first portion fixed to the toothbrush body and a second portion fixed to the second dispenser.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The oral care system according to any one of <claim-ref idref="clm-00011-en">claims 11 </claim-ref> to <claim-ref idref="clm-00013-en">13</claim-ref> wherein the second dispenser is biased into the second extended state.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The oral care system according to <claim-ref idref="clm-00014-en">claim 14</claim-ref> further comprising:
+<claim-text>a second locking element for locking the second dispenser in the second retracted state;</claim-text><claim-text>a second actuator operably coupled to the second locking element;</claim-text><claim-text>wherein when the second dispenser is in the second retracted state and the second actuator is actuated, the second locking element is released and the second dispenser is automatically biased into the second extended state.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The oral care system according to any one of <claim-ref idref="clm-00011-en">claims 11 </claim-ref> to <claim-ref idref="clm-00015-en">15</claim-ref> wherein the first and second dispensers are movable independent of one another.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The oral care system according to any one of <claim-ref idref="clm-00001-en">claims 1 </claim-ref> to <claim-ref idref="clm-00007-en">7</claim-ref> wherein a distal portion of the first dispenser comprises a first dispensing orifice and a first dispenser cap coupled to a body of the dispenser, and wherein when the first dispenser is in the retracted state, the first dispenser cap abuts the proximal end of the toothbrush body and covers the opening.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The oral care system according to <claim-ref idref="clm-00017-en">claim 17</claim-ref> wherein the handle of the toothbrush body comprises an outer surface and the first dispenser cap comprises an outer surface, and wherein when the first dispenser is in the retracted state, the outer surfaces of the handle and first dispenser cap form a smooth continuous surface at an interface between the first dispenser cap and the handle.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en" independent="true">
+      <claim-text>
+        <b>19</b>. An oral care system comprising:
+<claim-text>a toothbrush body comprising a handle and a head;</claim-text><claim-text>a plurality of tooth cleaning elements extending from the head;</claim-text><claim-text>an opening in the toothbrush body that forms a passageway into an internal cavity of the handle;</claim-text><claim-text>a first dispenser positioned within the internal cavity and comprising a first store of oral care material, the first dispenser resiliently coupled to the toothbrush body to be alterable between: (1) a first retracted state; and (2) a first extended state.</claim-text></claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The oral care system according to <claim-ref idref="clm-00019-en">claim 19</claim-ref> further comprising a first resilient element comprising a first portion fixed to the toothbrush body and a second portion fixed to the first dispenser.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The oral care system according to any one of <claim-ref idref="clm-00019-en">claims 19 </claim-ref> to <claim-ref idref="clm-00020-en">20</claim-ref> wherein the first dispenser is biased into the first extended state.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The oral care system according to <claim-ref idref="clm-00021-en">claim 21</claim-ref> further comprising:
+<claim-text>a first locking element for locking the first dispenser in the first retracted state;</claim-text><claim-text>a first actuator operably coupled to the first locking element;</claim-text><claim-text>wherein when the first dispenser is in the first retracted state and the first actuator is actuated, the first locking element is released and the first dispenser is automatically biased into the first extended state.</claim-text></claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The oral care system according to any one of <claim-ref idref="clm-00019-en">claims 19 </claim-ref> to <claim-ref idref="clm-00022-en">22</claim-ref> wherein, when the first dispenser is in the first retracted state, an entirety of the first dispenser is located within the internal cavity; and wherein when the first dispenser is in the first extended state, a distal portion of the first dispenser protrudes from the opening, the distal portion of the first dispenser comprising a first dispensing orifice through which the first store of oral care material can be dispensed.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The oral care system according to <claim-ref idref="clm-00023-en">claim 23</claim-ref> wherein the distal portion of the first dispenser further comprises a first dispenser cap coupled to a first dispenser body of the first dispenser to be alterable between: (1) a closed state in which the first dispenser cap covers the first dispensing orifice; and (2) an open state in which the first dispensing orifice is exposed.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. The oral care system according to any one of <claim-ref idref="clm-00023-en">claims 23 </claim-ref> to <claim-ref idref="clm-00024-en">24</claim-ref> further comprising a toothbrush cap coupled to the toothbrush body so as to be alterable between: (1) a closed state in which the toothbrush cap covers the opening; and (2) an open state in which the opening is exposed.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. The oral care system according to any one of <claim-ref idref="clm-00022-en">claims 22 </claim-ref> to <claim-ref idref="clm-00025-en">25</claim-ref> wherein the first locking element is alterable between: (1) a locked state; and (2) a released state; and wherein the first locking element is biased into the locked state and actuation of the actuator forces the locking element into the released state.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>27</b>. The oral care system according to any one of <claim-ref idref="clm-00019-en">claims 19 </claim-ref> to <claim-ref idref="clm-00026-en">26</claim-ref> wherein the first dispenser translates between the first retracted state and the first extended state. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257522A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257522A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257522A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257522A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257522A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257522A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257522A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257522A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257522A1_00005.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257522A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257522A1.PDF" type="pdf" size="640097" pages="15" />
+</lexisnexis-patent-document>

@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257602A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030221" date-changed="20151022" time-changed="035702">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121316095">
+        <country>US</country>
+        <doc-number>20150257602</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14625214</doc-number>
+        <date>20150218</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150929">
+      <classification-ipcr sequence="1">
+        <text>A47J  43/08        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>43</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A47J  43/046       20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>43</main-group>
+        <subgroup>046</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>H02K  49/10        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>02</class>
+        <subclass>K</subclass>
+        <main-group>49</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150929">
+      <classification-cpc sequence="1">
+        <text>A47J  43/085       20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>43</main-group>
+        <subgroup>085</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A47J  43/0465      20130101 LI20150919BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>43</main-group>
+        <subgroup>0465</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150919</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>H02K  49/10        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>02</class>
+        <subclass>K</subclass>
+        <main-group>49</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">MAGNETIC DISK COUPLER FOR BLENDING APPARATUS WITH ENERGY STORAGE</invention-title>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61952195</doc-number>
+          <date>20140313</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>WHIRLPOOL CORPORATION</orgname>
+            <role>02</role>
+            <address>
+              <city>Benton Harbor</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Conard</last-name>
+            <first-name>Wayne</first-name>
+            <address>
+              <city>Stevensville</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Paget</last-name>
+            <first-name>Paul</first-name>
+            <address>
+              <city>Kalamazoo</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20151005">
+      <main-family family-id="174230571">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257602</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150218</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2015200987</doc-number>
+            <kind>A1</kind>
+            <date>20151001</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173669887">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257602</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150218</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2918207</doc-number>
+            <kind>A1</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20150312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2015200987</doc-number>
+            <kind>A1</kind>
+            <date>20151001</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A blending appliance includes a housing having a motor compartment and a jar receiving portion spaced laterally therefrom. The jar receiving portion is disposed below an upper housing. A motor is disposed in the motor compartment is adapted to drive a blade assembly of the jar through a magnetic coupling system. The motor is connected to a blade assembly disposed within the jar through a series of gears or belts, and finally through a magnetic coupler. The magnetic coupler is configured such that it stores kinetic energy while the motor is running at a high speed, and releases the stored energy when the motor is running at a slower speed.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150218</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257602A1</docdb-publication-number>
+      <docdb-application-id>444510886</docdb-application-id>
+      <new-owner>WHIRLPOOL CORPORATION, MICHIGAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:CONARD, WAYNE;PAGET, PAUL;SIGNING DATES FROM 20140213 TO20150213;REEL/FRAME:035037/0622</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND</heading>
+      <p id="p-00001-en" num="0001">The present concept generally relates to a blending appliance, and more particularly to a blending appliance, wherein a blade assembly disposed within a blending jar is magnetically coupled to a drive system via a coupler that has the ability to store and release kinetic energy.</p>
+      <heading id="h-00002-en" level="1">SUMMARY</heading>
+      <p id="p-00002-en" num="0002">One aspect of the present concept includes a method of breaking an air pocket around a blade assembly of a blending appliance. The method includes connecting a motor drive shaft to a motor and a motor drive gear, and further connecting the motor drive gear to a first magnetic coupler. The first magnetic coupler is magnetically coupled to a second magnetic coupler, which is attached to a blender blade assembly. The first magnetic coupler stores kinetic energy as the motor and blade assembly are brought up to a high speed, and releases the stored energy when the motor and blade assembly are slowed to a speed below about 1000 revolutions per minute (rpm), which allows the blade to continue spinning at speeds of about 500 rpm, thereby breaking up air pockets that may form around the blade assembly.</p>
+      <p id="p-00003-en" num="0003">Another aspect of the present concept includes a method of running a blending appliance at a low voltage setting. The method includes the steps of providing a housing having a motor compartment and a jar receiving portion spaced laterally from the motor compartment, wherein the housing includes a laterally extending upper housing portion. A motor is disposed in the motor compartment and is configured to power a magnetic coupling system to further rotate a blade assembly disposed in a blender jar. The blade assembly is accelerated to a rotational speed above 1000 revolutions per minute by increasing an electric voltage and current to the motor, rotating a drive shaft operably coupled to the motor and a motor drive gear, rotating a first magnetic coupler indirectly coupled with the motor drive gear, rotating a second magnetic coupler magnetically coupled to the first magnetic coupler; and rotating the blade assembly operably coupled with the second magnetic coupler. An amount of kinetic energy is stored in the first magnetic coupler as the first magnetic coupler rotates under the power of the motor. A portion of the kinetic energy is released by the first magnetic coupler when the rotational speed of the blade assembly is slowed to a rotational speed below 1000 revolutions per minute.</p>
+      <p id="p-00004-en" num="0004">Another aspect of the present concept includes a method of reducing a bridging effect in a blending appliance. The method includes the steps of providing a blending appliance having a housing with a motor. The blending appliance further comprising a support base having a first magnetic coupler rotatably housed therein and powered by the motor. A blender jar is removeably received in the housing over the support base, and includes a receptacle portion disposed over a base portion. A second magnetic coupler is rotatably housed in the base portion and is magnetically coupled to the first magnetic coupler for magnetic rotation with the first magnetic coupler when the blender jar is received in the housing. The second magnetic coupler is coupled to a blade assembly which is disposed in the receptacle portion of the blender jar. Ingredients are provided to the receptacle portion of the jar and a voltage across the motor is increased to rotate the first magnetic coupler as powered by the motor. An amount of kinetic energy is then stored in the first magnetic coupler. The second magnetic coupler is then rotated as magnetically coupled to the first magnetic coupler. The blade assembly disposed in the receptacle portion of the jar is rotated to a rotational speed sufficient to cause a bridging effect in the ingredients disposed in the receptacle portion of the jar. At this point in the method, the voltage across the motor is decreased and a portion of the amount of kinetic energy stored in the first magnetic coupler is released. The kinetic energy released powers the blade assembly, such that the rotational speed of the blade assembly gradually decreases while the motor is maintained at a low voltage setting.</p>
+      <p id="p-00005-en" num="0005">Yet another aspect of the present concept includes a method of increasing efficiency in a motor of a blending appliance. The method includes the steps of providing a blending appliance having a housing with a motor and a support base having a first magnetic coupler powered by the motor for rotational movement. A blender jar is removeably received in the housing and includes a receptacle portion and a base portion. The base portion includes a second magnetic coupler which is magnetically coupled to the first magnetic coupler. The second magnetic coupler is further coupled to a blade assembly which is disposed in the receptacle portion of the blender jar. The motor is energized to a first voltage setting having a first amperage setting. The first magnetic coupler is rotated as powered by the motor. An amount of kinetic energy is then stored in the first magnetic coupler as it rotates. The second magnetic coupler is also rotated with the first magnetic coupler as magnetically coupled to the first magnetic coupler. The blade assembly disposed in the receptacle portion of the jar is also rotated at a first rotational speed. The motor is then de-energized by providing a second voltage setting to the motor having a second amperage setting, wherein the second voltage setting is less than the first voltage setting, and further wherein the second amperage setting is less than the first amperage setting. At this point, a portion of the amount of kinetic energy stored in the first magnetic coupler is released, such that the rotation of the blade assembly is allowed to decrease from the first rotational speed to a lower second rotational speed.</p>
+      <p id="p-00006-en" num="0006">These and other aspects, objects, and features of the present concept will be understood and appreciated by those skilled in the art upon studying the following specification, claims, and drawings.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00007-en" num="0007">In the drawings:</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 1</figref> is a cross-sectional view of one embodiment of a blending appliance;</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 2</figref> is a front perspective cross-sectional view of the blending appliance of <figref>FIG. 1</figref>;</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 3</figref> is a rear perspective cross-sectional view of the blending appliance of <figref>FIG. 1</figref>;</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 4</figref> is a perspective exploded view of a user-interface;</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 5</figref> is an assembled cross-sectional view of the user-interface of <figref>FIG. 4</figref> as coupled to an upper housing;</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 6A</figref> is a perspective view of the user-interface of <figref>FIG. 5</figref>;</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 6B</figref> is a front elevational view of the user-interface of <figref>FIG. 6A</figref>;</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 7</figref> is a cross-sectional view of a bearing assembly and an associated blade assembly;</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 8</figref> is a top perspective exploded view of the bearing assembly of <figref>FIG. 7</figref>;</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 9</figref> is a cross-sectional view of an upper portion of a blender jar, cap and interlock switch assembly;</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 10A</figref> is a top perspective view of the interlock switch assembly of <figref>FIG. 9</figref> in an “OFF” position;</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 10B</figref> is a top perspective view of the interlock switch assembly of <figref>FIG. 10A</figref> in an “ON” position;</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 11A</figref> is a bottom perspective view of a base portion of a blender jar;</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 11B</figref> is a bottom perspective view of another embodiment of a base portion of a blender jar;</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 12</figref> is a top perspective view of another embodiment of a base portion of a blender appliance;</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 13A</figref> is a schematic representation measuring rotational speed of a blender motor during a blending sequence;</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 13B</figref> is a schematic representation measuring the rotational speed of the blender motor of <figref>FIG. 13A</figref>, and further measuring voltage across the motor during the blending sequence of <figref>FIG. 13A</figref>;</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 14A</figref> is a schematic representation measuring rotational speed of a blender blade assembly along with associated motor voltage and electrical current levels of a blending sequence;</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 14B</figref> is a zoomed-in schematic representation of a portion of the graph of <figref>FIG. 14A</figref>; and</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 15</figref> is a schematic representation measuring rotational speed of a blender motor along with associated motor voltage and electrical current levels of a blending sequence.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00028-en" num="0028">For purposes of description herein, the terms “upper,” “lower,” “right,” “left,” “rear,” “front,” “vertical,” “horizontal,” and derivatives thereof shall relate to the concept as oriented in <figref>FIG. 1</figref>. However, it is to be understood that the concept may assume various alternative orientations, except where expressly specified to the contrary. It is also to be understood that the specific devices and processes illustrated in the attached drawings, and described in the following specification are simply exemplary embodiments of the concepts defined in the appended claims. Hence, specific dimensions and other physical characteristics relating to the embodiments disclosed herein are not to be considered as limiting, unless the claims expressly state otherwise.</p>
+      <p id="p-00029-en" num="0029">Referring to <figref>FIG. 1</figref>, reference numeral <b>10</b> generally designates a blending appliance. The blending appliance includes a housing <b>12</b> having a motor compartment <b>14</b> and a jar receiving portion <b>16</b> spaced laterally therefrom to define a cavity. The jar receiving portion <b>16</b> includes an upper housing or upper retaining member <b>18</b>. A motor <b>20</b> is disposed in the motor compartment <b>14</b>. A support base <b>22</b> is operably coupled to the housing <b>12</b>. A blender jar <b>24</b> includes a lid <b>26</b> with a feed chute <b>30</b>. The jar <b>24</b> and lid <b>26</b> are configured for lateral reception in the jar receiving portion <b>16</b>. The lid <b>26</b> is vertically secured on the jar <b>24</b> by the upper housing <b>18</b> upon reception of the jar <b>24</b> into the jar receiving portion <b>16</b>.</p>
+      <p id="p-00030-en" num="0030">Referring again to <figref>FIG. 1</figref>, the illustrated blending appliance <b>10</b> is generally configured to include a low profile to easily accommodate use under a cupboard or shelf in a kitchen area. The jar <b>24</b> of the blending appliance <b>10</b> is designed to engage the housing <b>12</b> from a lateral direction as indicated by arrow A. Most traditional blending appliances include a construction that mandates vertical or drop-in placement of a jar onto a base that includes a motor therein. Unfortunately, these constructions require substantial vertical space above the base, and when connected with a jar, provide for a very tall overall appliance.</p>
+      <p id="p-00031-en" num="0031">Referring now to <figref>FIGS. 2 and 3</figref>, the inner componentry of the blending appliance <b>10</b> of the illustrated embodiment will be discussed. As illustrated, a blade assembly <b>72</b> of the blending appliance <b>10</b> is fixedly engaged with a jar drive shaft <b>80</b>. The jar drive shaft <b>80</b> extends downward through a bottom portion of the jar <b>24</b> and is sealed by gaskets. The bottom of the jar drive shaft <b>80</b> is configured to engage a gear assembly <b>82</b> disposed below the jar <b>24</b>. The gear assembly <b>82</b> is positioned above the support base <b>22</b> in a gear housing <b>84</b>. In the illustrated embodiment, there are three gears that relay rotational forces from the motor <b>20</b> to the blade assembly <b>72</b>. However, it is contemplated that more or less gears may be utilized in the blending appliance <b>10</b>. In addition, it is also contemplated that a belt driven system may be utilized that requires less gears overall, as shown in <figref>FIG. 1</figref> at reference numeral <b>28</b>. In the illustrated embodiment of <figref>FIGS. 2 and 3</figref>, a jar drive gear <b>86</b> is disposed below and coupled to the jar drive shaft <b>80</b> for rotation therewith. The jar drive gear <b>86</b> is rotatably engaged with a transition gear <b>88</b>, which is operably engaged with a motor drive gear <b>90</b>. The motor drive gear <b>90</b> is fixedly connected with a drive shaft <b>92</b> that extends downwardly from the motor <b>20</b>. The drive shaft <b>92</b> is supported by a drive shaft bracket <b>94</b>. The entire motor assembly <b>20</b> is supported over a motor bracket <b>96</b> inside the motor compartment <b>14</b>, as best shown in <figref>FIG. 3</figref>. In the illustrated embodiment, the motor <b>20</b> includes a magnet <b>98</b> and a winding assembly <b>100</b> that is protected by a motor shroud <b>102</b>. The motor shroud <b>102</b> protects the motor <b>20</b> and keeps it free of moisture and debris. A shroud bracket <b>104</b> is disposed inside the motor shroud <b>102</b> and supports a fan assembly <b>106</b> disposed above the motor <b>20</b>. The fan assembly <b>106</b> moves air inside the motor compartment <b>14</b>, preventing or minimizing the likelihood of the motor <b>20</b> overheating.</p>
+      <p id="p-00032-en" num="0032">Referring now to <figref>FIG. 4</figref>, a user interface <b>440</b> is shown in the form of an exploded rotating dial assembly <b>442</b>. The dial <b>442</b> generally includes an outer ring <b>444</b> which is engaged by a user and rotated along a rotational path R<sub>1 </sub>as indicated in <figref>FIGS. 6A</figref>, <b>6</b>B. The outer ring <b>444</b> is disposed about a central aperture <b>446</b> of the dial <b>442</b> in which a central push button <b>450</b> is disposed in assembly. Both the dial <b>442</b> and push button <b>450</b> may be comprised of a thermoset body portion having a metallic coating. In assembly, the push button <b>450</b> remains stationary while the dial <b>442</b> rotates along rotational path R<sub>1</sub>. The stationary positioning of the push button <b>450</b> is generally provided by a rotor post <b>452</b> engaging a rotary plate <b>454</b> through a slot <b>455</b> disposed thereon. The rotary plate <b>454</b> is disposed within a retainer <b>456</b> in assembly. A printed circuit board (PCB) <b>460</b> is mounted on a central portion of the rotary plate <b>454</b>. The PCB <b>460</b> includes one or more LEDs <b>462</b> and a tactile switch <b>464</b>. A plastic window <b>466</b> is aligned with the LEDs <b>462</b> of the PCB <b>460</b> and is further disposed within the push button <b>450</b> in assembly. A biasing spring <b>470</b> is disposed between the push button <b>450</b> and the rotary plate <b>454</b>, thereby biasing the push button <b>450</b> outwardly in a direction as indicated by arrow <b>472</b>. In this way, the push button <b>450</b> can be pushed by a user, inwardly in a direction as indicated by arrow <b>474</b>, to activate the tactile switch <b>464</b> disposed on the PCB <b>460</b>. By engaging and pushing the push button <b>450</b>, the user makes a selection for a given function as determined by the rotating dial <b>442</b> as further described below.</p>
+      <p id="p-00033-en" num="0033">As further shown in <figref>FIG. 4</figref>, a plurality of fasteners <b>480</b> couple the rotary plate <b>454</b> to a mounting portion <b>447</b> of the dial <b>442</b>. As coupled together, the dial <b>442</b> and rotary plate <b>454</b> are received within an interior portion <b>457</b> of the retainer <b>456</b>. As best shown in <figref>FIG. 5</figref>, the retainer <b>456</b> is adapted to retain the user interface assembly <b>440</b> on a location disposed on the upper housing <b>402</b> via clips <b>458</b> which are resiliently flexible to engage the upper housing <b>402</b>. The upper housing <b>402</b> is contemplated to function as upper retaining member <b>18</b> as shown in <figref>FIG. 1</figref>. As shown in <figref>FIGS. 4 and 5</figref>, a main PCB <b>490</b> includes a potentiometer <b>492</b> which is adapted to read an input from the user interface <b>440</b> for performing a preselected function of a blending appliance on which the user interface assembly <b>440</b> is disposed. A plurality of fasteners <b>494</b> are adapted to couple the main PCB <b>490</b> to the retainer <b>456</b> via mounting portions <b>459</b> disposed on the retainer <b>456</b>.</p>
+      <p id="p-00034-en" num="0034">Referring now to <figref>FIGS. 6A and 6B</figref>, the user interface <b>440</b> includes a plurality of functions F which are disposed at discrete locations around the dial <b>442</b>. In use, a user will rotate the dial <b>442</b> along rotational path R<sub>1 </sub>until a selected function F is disposed at a reference point which may be indicated by lighting up the particular function or by using an audible indicator. As shown in <figref>FIG. 6B</figref>, the functions F may include, but are not limited to, iced drink, soup, milkshake, juice, smoothie, as well as an off position, and a progressive blending speed indicator scale identified as reference numeral <b>445</b>. Once the user has rotated the dial <b>442</b> to a desired function F, the user will push the central push button <b>450</b> to initiate a specific blending sequence related to the selected function F. The design of the user interface <b>440</b> allows the dial <b>442</b> to rotate a full 360 degrees in either direction along rotational path R<sub>1 </sub>while the center push button <b>450</b> remains stationary.</p>
+      <p id="p-00035-en" num="0035">Referring now to <figref>FIGS. 7 and 8</figref>, a bearing assembly <b>500</b> includes a metal blade assembly <b>502</b> which is coupled to a shaft <b>504</b> by a fastener <b>506</b>, which operate in a manner similar to blade assembly <b>72</b> and drive shaft <b>80</b> shown in <figref>FIG. 1</figref>. The shaft <b>504</b> is pressed into and received within first and second radial bearing assemblies <b>510</b>, <b>512</b>. The radial bearing assemblies <b>510</b> and <b>512</b> are separated by a spacer <b>514</b> and are clearance-fit to a housing <b>516</b> defined by a retainer <b>520</b>. The retainer <b>520</b> includes a threaded lower portion <b>522</b> which engages a threaded nut <b>528</b> in assembly. The retainer <b>520</b> is adapted to be received within an aperture <b>550</b> disposed within a lower portion <b>62</b>B of jar <b>24</b>A. The retainer <b>520</b> further includes a head portion <b>524</b> which abuts the aperture <b>550</b> in the jar <b>24</b>A in assembly. A wave spring <b>532</b> is a compressible biasing mechanism that abuts a retainer clip <b>530</b> at an upper end, and further abuts the upper radial bearing assembly <b>510</b> at a lower end. The retainer clip <b>530</b> is disposed in an inset portion <b>526</b> within the housing <b>516</b> of the retainer <b>520</b>. A seal <b>534</b> is disposed above the retainer clip <b>530</b> and is adapted to keep debris out of the bearing assembly <b>500</b>. The wave spring <b>532</b>, abutting the retainer clip <b>530</b> and the first bearing <b>510</b>, provides a constant downward force on the first and second bearings <b>510</b>, <b>512</b> as indicated by arrow <b>552</b>. This constant downward force indicated by arrow <b>552</b> eliminates potential for jar rotation when the shaft <b>504</b> and blade assembly <b>502</b> are rotating in use. As further shown in <figref>FIG. 7</figref>, the threadable nut <b>528</b> includes a lower brake surface <b>529</b> for use with a brake mechanism as further described below.</p>
+      <p id="p-00036-en" num="0036">Referring now to <figref>FIG. 9</figref>, an interlock switch assembly <b>600</b> is shown disposed in an interior <b>402</b>A of an upper housing <b>402</b> of a blending appliance <b>10</b>A. The interlock switch assembly <b>600</b> includes a switch housing <b>602</b> which further includes a vertical portion <b>602</b>A and a horizontal portion <b>602</b>B. Disposed on the vertical portion <b>602</b>A, one or more electrical air gap switches <b>604</b> are mounted, as shown in this embodiment, to mounting posts <b>606</b> and upper and lower clip mechanisms <b>608</b> and <b>610</b>. In this way, one or more electrical switch assemblies <b>604</b> are snap-fit to the switch housing <b>602</b>. The horizontal portion <b>602</b>B of the switch housing <b>602</b> is secured to the lower portion <b>403</b> of the upper housing <b>402</b> via mounting cylinders <b>612</b>, <b>614</b>. The mounting cylinders <b>612</b>, <b>614</b> are disposed on mounting posts <b>403</b>A of the lower portion <b>403</b> of the upper housing <b>402</b>. The horizontal portion <b>602</b>B of the switch housing <b>602</b> coupled to the mounting posts <b>403</b>A and <b>403</b>B using fasteners. A spring-backed lever <b>620</b> is further disposed on the horizontal portion <b>602</b>B of the switch housing <b>602</b>. The lever <b>620</b> includes first, second, and third contact surfaces <b>622</b>, <b>623</b>, and <b>624</b>, which are disposed along a periphery of a main body portion <b>626</b>. The lever <b>620</b> is a spring-backed lever which is operable between on and off positions as further described below.</p>
+      <p id="p-00037-en" num="0037">Referring now to <figref>FIGS. 10A and 10B</figref>, the interlock switch assembly <b>600</b> is shown with the switch housing <b>602</b> having the switch assembly <b>604</b>, shown in <figref>FIG. 9</figref>, removed. The body portion <b>626</b> of the lever <b>620</b> includes an outwardly extending mounting rod <b>628</b> and a retention clip <b>630</b>. A torsion spring <b>632</b> is mounted on the mounting rod <b>628</b> and includes an outwardly extending arm <b>624</b> which is retained by the retention clip <b>630</b> to bias the lever <b>620</b> to an “OFF” position as shown in <figref>FIG. 10A</figref>. As further shown in <figref>FIG. 10A</figref>, the mounting rod <b>628</b> is nested into a pivot cradle <b>636</b> disposed on the horizontal portion <b>602</b>B of the switch housing <b>602</b>. The torsion spring <b>632</b> biases the lever <b>620</b> to the off position as indicated by arrow <b>638</b>. As shown in <figref>FIG. 10A</figref>, when the switch <b>620</b> is in the off position, the first contact surface <b>622</b> is disposed below the horizontal portion <b>602</b>B of the switch housing <b>602</b>. The second contact surface <b>623</b> abuts an abutment portion <b>603</b> disposed on the horizontal portion <b>602</b>B to limit the movement of a lever <b>620</b> in the direction indicated by arrow <b>638</b>.</p>
+      <p id="p-00038-en" num="0038">Referring now to <figref>FIG. 10B</figref>, the lever <b>620</b> is in an “ON” position such that the lever <b>620</b> is adapted to articulate between on and off positions along an arcuate path as indicated by arrow R<sub>2</sub>. In the on position, the torsion spring <b>632</b> is loaded and prepared to move the lever <b>620</b> to the off position as shown in <figref>FIG. 10A</figref>. When in the on position, the third contact surface <b>624</b> of the switch <b>620</b> abuts an abutment portion <b>605</b> of the switch housing <b>602</b>. Referring again to <figref>FIG. 9</figref>, the lever <b>620</b> is moved to the on position when the jar <b>24</b> is received in a jar receiving portion of a blending appliance, such as jar receiving portion <b>16</b> of blending appliance <b>10</b> shown in <figref>FIG. 1</figref>. As received in the jar receiving area <b>16</b>, the lid <b>560</b> of the jar <b>24</b> has an upper-most portion <b>569</b>A disposed on the raised or ramped portion <b>569</b> of the lid <b>560</b>. As the jar <b>24</b> is received in the jar receiving area <b>16</b>, the upper-most portion <b>569</b>A of the lid <b>560</b> contacts the first contact surface <b>622</b> of the lever <b>620</b>, thereby moving the lever <b>620</b> to the on position as shown in <figref>FIGS. 9 and 10B</figref>. In the on position, the lever <b>620</b> activates the air gap switch <b>604</b> to provide power to the blending appliance <b>10</b> as further described below. When the blender jar <b>24</b> is removed from the blending appliance <b>10</b>, the torsion spring <b>632</b> biases the lever <b>620</b> to the off position, such that the blending appliance <b>10</b> is cut-off from power by the interlock switch assembly <b>600</b>. As further shown in <figref>FIG. 9</figref>, the third engagement surface <b>624</b> is adapted to contact a lever <b>607</b> disposed on the switch <b>604</b> which in turn activates an activation button <b>609</b> to provide power to the blending appliance <b>10</b> when the lever <b>620</b> is in the on position.</p>
+      <p id="p-00039-en" num="0039">Referring again to <figref>FIG. 1</figref>, the blender jar <b>24</b> is shown received in the blender jar receiving area <b>16</b>. The motor <b>20</b> is adapted to drive a drive shaft <b>92</b>A having upper and lower portions <b>92</b>B and <b>92</b>C. The lower end <b>92</b>C of drive shaft <b>92</b>A is adapted to power or drive a first pulley <b>90</b> which is connected to a first or lower magnetic coupler M<b>1</b> via a belt <b>28</b>. A magnetic coupling system <b>100</b> includes lower and upper (first and second) magnetic couplers M<b>1</b> and M<b>2</b>. The lower magnetic coupler M<b>1</b> is disposed adjacent to a receiving deck <b>22</b>A of the jar receiving area <b>16</b> which encapsulates the lower magnetic coupler M<b>1</b> within the support base <b>22</b> of the blending appliance <b>10</b>. The upper magnetic coupler M<b>2</b> is disposed within a base portion <b>24</b>A of the jar <b>24</b>. The upper magnetic coupler M<b>2</b>, disposed with the base portion <b>24</b>A of jar <b>24</b>, is removed from the blending appliance <b>10</b> when the jar <b>24</b> is removed from the jar receiving area <b>16</b>. The upper magnetic coupler M<b>2</b> is coupled to the jar drive shaft <b>80</b>. An upper end of the drive shaft <b>80</b> is connected to a blade assembly <b>72</b> which is fully disposed within a receptacle portion <b>24</b>B of the jar <b>24</b>. As shown in <figref>FIG. 1</figref>, the magnetic coupling system <b>100</b> magnetically couples the jar <b>24</b> to the support base <b>22</b> of the blending appliance <b>10</b> through the magnetic attraction generated between lower and upper magnetic couplers M<b>1</b>, M<b>2</b>. As shown in the embodiment of <figref>FIG. 1</figref>, the first and second magnetic couplers M<b>1</b> and M<b>2</b>, have a generally circular or disc configurations at a prescribed diameter, such that the jar <b>24</b> will properly seat on the receiving deck <b>22</b>A due to the magnetic coupling and attraction forces between the lower and upper magnetic couplers M<b>1</b>, M<b>2</b>. In assembly, the motor <b>20</b> drives the drive belt <b>28</b>, as described above, thereby driving the lower magnetic coupler M<b>1</b>. Due to the magnetic coupling of the lower magnetic coupler M<b>1</b> to the upper magnetic coupler M<b>2</b>, the upper magnetic coupler M<b>2</b> rotates the drive shaft <b>80</b> in a direction which corresponds to the rotational path of the lower magnetic coupler M<b>1</b>. In this way, the lower and upper magnetic couplers M<b>1</b>, M<b>2</b> drive the blade assembly <b>72</b> disposed within the receptacle portion <b>24</b>B of the jar <b>24</b> through a magnetic torque coupling, rather than a mechanical coupling, thereby allowing for the lateral reception of the jar <b>24</b> into the jar receiving portion <b>16</b> along the path indicated by arrow A.</p>
+      <p id="p-00040-en" num="0040">Referring now to <figref>FIGS. 11A and 11B</figref>, a base portion of <b>62</b>B of another blender jar <b>24</b>C is shown having upper magnetic coupler M<b>2</b>A disposed thereon. The upper magnetic coupler M<b>2</b>A includes a generally planar body portion <b>730</b> in the form of a disc having a plurality of magnetic elements <b>732</b> disposed along a periphery <b>734</b> of the disc <b>730</b>. The magnetic elements <b>732</b> are disposed about the periphery <b>734</b> to define a magnetic array <b>735</b>. As shown, the magnetic elements <b>732</b> are individual magnetic elements which are separated by portions of the disc <b>730</b> which is contemplated to be made of a non-magnetic polymeric material. In the embodiment shown in <figref>FIG. 11B</figref>, a blender jar <b>24</b>C includes a base <b>62</b>B having an upper magnetic coupler M<b>2</b>B with a disc portion <b>736</b> having a plurality of magnets <b>738</b> disposed within an outer channel <b>740</b> of the disc <b>736</b>. In this configuration, it is contemplated that the individual magnetic elements <b>738</b> are aligned on a metallic disc disposed in the channel <b>740</b>, such that the magnetic elements <b>738</b> are not individually separated by a polymeric material, such as found in the embodiment of <figref>FIG. 11A</figref>. While the configurations shown in <figref>FIGS. 11A and 11B</figref> include a plurality of individual magnetic elements <b>732</b>, <b>738</b>, it is contemplated that the magnetic elements, as disposed in the lower and upper magnetic couplers M<b>1</b>, M<b>2</b>, M<b>2</b>A, M<b>2</b>B, may be comprised of continuous metallic rings, or other like shapes, for providing a sufficient coupling in the magnetic coupling system <b>100</b>.</p>
+      <p id="p-00041-en" num="0041">Referring now to <figref>FIG. 12</figref>, a support base <b>22</b>B and motor <b>20</b>B are shown with the belt drive system <b>678</b> coupled to the motor <b>20</b>B and further coupled to another embodiment of a lower magnetic coupler M<b>1</b>A. In this embodiment, a tensioner pulley <b>679</b> is incorporated into the belt drive system <b>678</b> to reduce slack within the belt <b>682</b>. It is further contemplated that the belt <b>682</b> can be a flexibly resilient or elastic belt that does not require a tensioner pulley, such as tensioner pulley <b>679</b>. Having a belt <b>682</b> that is elastic in nature, provides for a belt drive system <b>678</b>, wherein the belt <b>682</b> can also store energy from the motor <b>20</b>B to the lower magnetic coupler M<b>1</b>A. As further shown in this embodiment, the lower magnetic coupler M<b>1</b>A includes a disc portion <b>750</b> having a plurality of magnetic elements <b>752</b> disposed within an outer channel <b>754</b> of the disc <b>750</b>. The magnetic array of magnetic elements <b>752</b> shown in this embodiment is akin to the magnetic array of magnetic elements <b>738</b> shown in <figref>FIG. 11B</figref>. Again, as noted above, the motor <b>20</b>B is adapted to drive the lower magnetic coupler M<b>1</b>A in a direction as indicated by arrow R<sub>3</sub>.</p>
+      <p id="p-00042-en" num="0042">With regards to the magnetic coupler system <b>100</b>, as shown and described above, it is contemplated that a plurality of nonmagnetic layers will exist between the lower and upper magnetic couplers M<b>1</b>, M<b>2</b>. Such nonmagnetic layers may be disposed on the support base <b>22</b> of the blending appliance <b>10</b>, or may be included on the base portion <b>24</b>A of the blender jar <b>24</b>, or both. In this way, the magnetic elements disposed within the lower and upper magnetic couplers M<b>1</b>, M<b>2</b> do not contact one another, such that the torque provided by the lower magnetic coupler M<b>1</b> will transfer to the upper magnetic coupler M<b>2</b> purely through magnetic attraction forces that exist across the nonmagnetic layers which may also include an air gap.</p>
+      <p id="p-00043-en" num="0043">When a blender, such as blending appliance <b>10</b> (<figref>FIG. 1</figref>), is run at higher speeds, e.g. typically between about 4000 revolutions per minute (rpm) to about 22,000 rpm, an air pocket may form around the blades of the blade assembly <b>72</b> within the blender jar <b>24</b>. This air pocket, called a bridge or the effect bridging, may prevent ingredients disposed within the receptacle portion <b>24</b>B of the blender jar <b>24</b> from contacting the blade assembly and being circulated within the jar <b>24</b>. Thus, the bridging effect may prevent such ingredients from being properly processed during a blending sequence which involves high speeds. This situation may require a user to shake the jar <b>24</b> or use some other type of interrupting implement to break the bridge.</p>
+      <p id="p-00044-en" num="0044">Another way to break the bridge is to slow the rotational speed of the blade assembly <b>72</b> (<figref>FIG. 1</figref>). The present blending appliance <b>10</b> is configured to store kinetic energy in one of or both of the upper and lower couplers, which may be magnetic couplers like couplers M<b>1</b> and M<b>2</b> discussed above. As a result, the blending appliance <b>10</b> can run at a lower rotational speed (as low as 500 rpm) while still blending the contents of the blender jar <b>24</b>. Such a lower speed aids in the control of bridging material found in known high speed blending devices and provides energy savings as well. In the present blending appliance <b>10</b>, the amount of time the blade assembly <b>72</b> can operate at a rotational speed that is under 1000 rpm ranges from approximately about 2 to about 6 seconds, as further described below and with reference to <figref>FIGS. 13A-15</figref>.</p>
+      <p id="p-00045-en" num="0045">The power for the blending appliance <b>10</b>, as shown in <figref>FIG. 1</figref>, initially comes from the motor <b>20</b>, which turns lower and upper magnetic couplers M<b>1</b>, M<b>2</b> and further turns the blender blade assembly <b>72</b>. As powered by the motor <b>20</b>, the lower and upper couplers M<b>1</b>, M<b>2</b> are adapted to store energy like an inertia driven flywheel when the motor <b>20</b> is energized and turning the blender blade assembly <b>72</b>. Thus, the magnetic coupler system <b>100</b> operates to store rotational energy in the lower and upper magnetic couplers M<b>1</b>, M<b>2</b> which have a mass that provides an effective amount of inertia in the lower and upper magnetic couplers M<b>1</b>, M<b>2</b>, such that the lower and upper magnetic couplers M<b>1</b>, M<b>2</b> are resistant to changes in rotational speed. Energy is transferred to lower and upper magnetic couplers M<b>1</b>, M<b>2</b> by applying torque to lower and upper magnetic couplers M<b>1</b>, M<b>2</b> from the motor <b>20</b>. This torque realized on the lower and upper magnetic couplers M<b>1</b>, M<b>2</b> increases their rotational speed, which thereby increases the rotational energy stored in the lower and upper magnetic couplers M<b>1</b>, M<b>2</b>. The lower and upper magnetic couplers M<b>1</b>, M<b>2</b> can release the rotational energy stored therein by applying torque to a mechanical load, such as the blade assembly <b>72</b>. Applying torque to the mechanical load (blade assembly <b>72</b>) decreases the rotational speed of the lower and upper magnetic couplers M<b>1</b>, M<b>2</b> as the rotational energy is released. The storage of the kinetic energy is actually realized in the system as a whole, from the motor <b>20</b> to the blade assembly <b>72</b>. While the stored kinetic energy is discussed within this disclosure with specific reference to the lower and upper magnetic couplers M<b>1</b>, M<b>2</b>, this disclosure is not meant to limit the storage and release of kinetic energy to the lower and upper magnetic couplers M<b>1</b>, M<b>2</b> alone.</p>
+      <p id="p-00046-en" num="0046">
+        <figref>FIGS. 13A-15</figref> include graphical representations of current, rpm, and voltage changes in a motor and blade assembly that result in an overall energy savings by using an inertia driven flywheel mechanism in the lower coupler M<b>1</b> of the blending appliance <b>10</b>. With specific reference to <figref>FIGS. 14A and 14B</figref>, a blending sequence is shown, wherein voltage across a motor, such as the motor <b>20</b> shown in <figref>FIG. 1</figref>, is decreased and rotational energy, stored as kinetic energy in the lower coupler M<b>1</b>, is released for a period of time to rotate the blade assembly <b>72</b> while the motor <b>20</b> is running at a low voltage setting. This stored energy turns the upper and lower magnetic couplers M<b>1</b>, M<b>2</b> and the blender blade assembly <b>72</b>, such that the blender blade assembly <b>72</b> continues to mix ingredients in the jar <b>24</b> while the motor <b>20</b> remains at the low voltage setting. This method of blending keeps the blender motor <b>20</b> cool and helps to balance forces in the blender jar <b>24</b>, thereby lowering the tendency of ingredients to bridge in blender jar <b>24</b>. Thus, as shown in <figref>FIGS. 14A and 14B</figref>, two reference points A and B are indicated along the blending sequence shown in <figref>FIGS. 14A and 14B</figref>. As best shown in <figref>FIG. 14B</figref>, the rpm of the blade assembly <b>72</b> at reference point A is approximately 5550 rpm. At reference point B, the rotational speed of the blade assembly <b>72</b> has decreased from 5550 rpm to approximately 2200 rpm. This decrease in rotational speed is generally due to the motor <b>20</b> being operated at a steady low voltage setting of approximately 12.3 volts at reference point A, and approximately 16.2 volts at reference point B. The amount of electricity used between reference point A and B is also shown in <figref>FIG. 14B</figref> in amps, with the first reading at reference point A being 1.2 amps, and the second reading at reference point B being 4.8 amps. Thus, as shown in <figref>FIG. 14B</figref>, the motor <b>20</b> was provided with a high voltage and amp setting at reference point C to get the rotational speed of the blade assembly <b>72</b> to approximately 5550 rpm. The high voltage and amp setting may include a voltage of about 80 volts to about 100 volts, or more likely about 90 volts, during this ramp-up stage in the blending sequence at reference point C. The amperage or amp setting required at this ramp-up stage at reference point C is contemplated to be about 20 amps to about 40 amps, or more likely 30 amps, to get the motor <b>20</b> up to about 6000 rpm and the blade assembly <b>72</b> up to approximately 5550 rpm. When the motor <b>20</b> was set to a steady low voltage and amp setting, approximately 10-20 volts and 1-5 amps, the rotational speed of the blade assembly <b>72</b> gradually decreased from 5550 rpm to 2200 rpm from reference point A to reference point B, as shown in <figref>FIG. 14B</figref>. Having the rotational speed of the blade assembly <b>72</b> decrease from 5550 rpm to 2200 rpm, the blade assembly <b>72</b> is still capable of processing ingredients disposed within the blender jar <b>24</b>. This slower rotation, as noted above, can also help resolve or sufficiently diminish any bridging effect of the ingredients, to ensure that the ingredients are thoroughly mixed. This slower rotational speed of the blade assembly <b>72</b> indicated from reference point A to reference point B also provides an energy savings using the inertia driven flywheel of the lower and upper magnetic couplers M<b>1</b>, M<b>2</b>, while the motor <b>20</b> runs at a steady low voltage and low amperage setting. As further shown in <figref>FIG. 14B</figref>, the rotational speed of the blade assembly <b>72</b> has a steady and gradual decline from reference point A to reference point B. This gradual decline is due to the steady release of kinetic energy from the lower magnetic coupler M<b>1</b>.</p>
+      <p id="p-00047-en" num="0047">The kinetic energy may be stored in the lower magnetic couple M<b>1</b> by the addition of mass in certain areas of the lower magnetic couple M<b>1</b>. The amount of the added mass, which may be a metallic mass or polymeric mass that is embedded or external to the lower magnetic coupler M<b>1</b>, and the location of the added mass may be varied given different jar configurations and motor sizes. An added mass of 300-500 grams is optimal to be added to the lower magnetic coupler M<b>1</b> in the illustrated embodiment. This allows enough kinetic energy to be stored in the lower magnetic coupler M<b>1</b>, while still allowing the motor <b>20</b> to ramp up to a desired speed in a reasonable time. The amount of Kinetic energy stored is related to the following equation:</p>
+      <p id="p-00048-en" num="0000">
+        <maths id="maths-00001-en" num="00001">
+          <math overflow="scroll">
+            <mrow>
+              <msub>
+                <mi>K</mi>
+                <mi>e</mi>
+              </msub>
+              <mo>=</mo>
+              <mrow>
+                <mfrac>
+                  <mn>1</mn>
+                  <mn>2</mn>
+                </mfrac>
+                <mo></mo>
+                <msup>
+                  <mi>Iw</mi>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+            </mrow>
+          </math>
+          <img id="img-00001-en" wi="N/A" he="N/A" file="US20150257602A1_00017.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150257602A1-20150917-M00001.TIF" />
+        </maths>
+      </p>
+      <p id="p-00049-en" num="0048">where:</p>
+      <p id="p-00050-en" num="0049">K<sub>e</sub>=Kinetic Energy (Joules);</p>
+      <p id="p-00051-en" num="0050">I=Moment of Inertia of the lower magnetic coupler M<b>1</b> (kg m);</p>
+      <p id="p-00052-en" num="0051">w<sup>2</sup>=Rotational Velocity of the lower magnetic coupler M<b>1</b> (rad/s).</p>
+      <p id="p-00053-en" num="0052">As one skilled in the art would appreciate, by placing an added mass in varied amounts and in varied places on the lower magnetic coupler M<b>1</b>, the moment of inertia (I) may be optimized for different coupler and motor configurations. It is also contemplated that the same equation and optimization may be run on the upper magnetic coupler M<b>2</b>.</p>
+      <p id="p-00054-en" num="0053">When the motor voltage is reduced to a point where the blade assembly <b>72</b> is rotating at or below 1000 rpm, the lower magnetic coupler M<b>1</b> releases stored kinetic energy. This allows the blade assembly <b>72</b> to continue spinning at speeds of about 500 rpm for approximately 2-6 seconds. This is a sufficient amount of time to break any bridging effect that may have been caused from running the blade assembly <b>72</b> at higher speeds. After the bridging effect is disrupted or sufficiently diminished, the voltage across the motor <b>20</b> is increased and the blade assembly <b>72</b> is accelerated to the desired high speed without the bridging effect present, and the process is repeated as necessary.</p>
+      <p id="p-00055-en" num="0054">With specific reference to <figref>FIGS. 13A and 13B</figref>, a blending sequence is shown in which the rotational speed of a motor, such as motor <b>20</b> shown in <figref>FIG. 1</figref>, is ramped up to approximately 6000 rpm at reference point A, and then allowed to run at 5000 rpm from reference point A to reference point B, as best shown in <figref>FIG. 13A</figref>. At reference point B, the rotational speed of the motor <b>20</b> is allowed to drop from 5000 rpm to a rotational speed that is lower than 1000 rpm for approximately 6 seconds as indicated between reference points C and D. The rotational speed of the motor <b>20</b> is then ramped up again at reference point E to approximately 6500 rpm, and continues to run at a steady state of approximately 6000 rpm from reference point E to reference point F. It is contemplated that approximately 90 volts across the motor <b>20</b> are required to ramp the motor speed up to 6500 rpm. Approximately 64.5 volts are necessary to run the motor <b>20</b> at the steady state of 6000 rpm. Further, approximately 25-35 amps are required to get the motor <b>20</b> up to 6500 rpm, while approximately 6 amps are required to run the motor <b>20</b> at the steady state of 6000 rpm. The rotational speed of the motor <b>20</b> drops from 6000 rpm to a rotational speed below 1000 rpm for no longer than 6 seconds, as indicated between reference points G and H. This reduction in motor speed is due to the motor <b>20</b> being run at a low voltage and low amperage setting. At the final portion of the blending sequence shown in <figref>FIG. 13A</figref>, the rotational speed of the motor <b>20</b> is again ramped up to approximately 5500 rpm and allowed to run at 5000 rpm from reference point I to reference point J. As specifically shown in <figref>FIG. 13B</figref>, the blending sequence between reference points B and E, as found in <figref>FIG. 13A</figref>, are examined. An associated voltage is also indicated between reference points B and E in <figref>FIG. 13B</figref> which shows that a decrease in voltage across the motor <b>20</b> decreases the rpm of the motor <b>20</b> to below 1000 rpm. This rotational speed is maintained by sending 8-10 volts to the motor <b>20</b> between reference points B and E. The rotational energy stored in the magnetic coupler, and specifically lower magnetic coupler M<b>1</b>, is released between reference points B and E to keep the blade assembly <b>72</b> moving, such that ingredients are still processed within the blender jar <b>24</b>, and any bridging effect is decreased or eliminated due to the decreased rotational speed realized between reference points B and E. As the kinetic or rotational energy of the lower magnetic coupler M<b>1</b> is released, the blade assembly <b>72</b> gradually slows down at a steady rate. While the rotational speed of the blade assembly <b>72</b> gradually decreases, the motor <b>20</b> remains at a low voltage and low amperage setting.</p>
+      <p id="p-00056-en" num="0055">Referring now to <figref>FIG. 15</figref>, a blending sequence is shown wherein the motor speed ramps down to approximately 1200 rpm from approximately 4000 rpm between reference points A and B. As further shown in <figref>FIG. 15</figref>, the motor amperage drops from approximately 30 amps in the ramp-up stage preceding reference point A, to about 1.25 amps at reference point A. The voltage across motor <b>20</b> also drops to approximately 10-20 volts as compared to 45 volts used during the ramp-up period shown just before reference point A. Thus, in the time frame indicated between reference points A and B, the magnetic coupling system <b>100</b> continues to turn the blade assembly <b>72</b> within the blender jar <b>24</b> as the lower magnetic coupler M<b>1</b> releases stored rotational energy while the motor <b>20</b> draws a low current. In this way, energy is released from the magnetic coupling system <b>100</b>, such that ingredients within the blender jar <b>24</b> can still be processed while a total energy savings is realized in the motor <b>20</b>.</p>
+      <p id="p-00057-en" num="0056">As powered by the motor <b>20</b>, the rotational speed of the blade assembly <b>72</b> is directly related to the rotational speed of the motor <b>20</b>. Using a gear assembly, such as gear assembly <b>82</b> shown in <figref>FIG. 2</figref>, or a belt drive system, such as belt drive system <b>678</b> shown in <figref>FIG. 12</figref>, the translated rotational speed of the blade assembly is about 0.925 times the rotational speed of the motor <b>20</b> or drive shaft <b>92</b>A of <figref>FIG. 1</figref>. Referring again to <figref>FIGS. 13A-14B</figref>, a blending sequence is shown, wherein the blending sequence is configured to save energy and diminish a bridging effect. The voltage across the motor <b>20</b> is shown to be about 90 volts during the ramp-up stage at reference point A shown in <figref>FIG. 13B</figref>, which correlates to an increased motor speed of about 6500 rpm at reference point A shown in <figref>FIG. 13A</figref>. After the ramp-up stage, the motor <b>20</b> is maintained at approximately 5000 rpm between reference points A and B of <figref>FIG. 13A</figref>, which is a rotational speed sufficient enough to cause a bridging effect in ingredients being processed by an associated blade assembly being powered by the motor <b>20</b>. This maintained speed requires a voltage setting in a range from about 50 to about 70 volts, more particularly about 64.5 volts, across the motor <b>20</b> and an amperage setting of about 4 to about 8 amps, more particularly about 5.8 amps. When the voltage is set to a low voltage setting, as indicated between reference points B and E of <figref>FIG. 13B</figref>, the speed of the motor <b>20</b> drops to a rotational speed below 1000 rpm, as shown in <figref>FIG. 13A</figref>. This reduced speed requires only a low voltage setting of about 8 to about 10 volts across the motor <b>20</b> between reference points B and E, shown in <figref>FIG. 13B</figref>, and a low amperage setting of about 1 amp to about 5 amps. The rotational speed of the motor <b>20</b> being below 1000 rpm, would normally correlate to a rotational speed of the blade assembly <b>72</b> being about 925 rpm. With kinetic energy released from the lower magnetic coupler M<b>1</b>, the rotational speed of the blade assembly <b>72</b> is gradually decreased and, as shown in <figref>FIG. 14B</figref>, slows from about 5500 rpm to about 2200 rpm. This reduced rotational speed of the blade assembly <b>72</b> is sufficient to disrupt the bridging effect of ingredients, such that an air pocket formed around the blade assembly <b>72</b> will be broken. When the bridging effect is disrupted, the ingredients will again contact the rotating blade assembly <b>72</b> for further processing.</p>
+      <p id="p-00058-en" num="0057">It is contemplated that for any of the embodiments disclosed herein that the drive system could include a series of gears or belts, as generally described. In addition, a magnet drive system may also be utilized that does not include a physical coupling system. In this instance, the blade assembly inside the blender jar would be driven by opposing magnetic forces. The drive system would include a disc with magnets driven by a motor through a belt or gear drive. The jar would also include a disc with magnets that is driven by the motor driven disc.</p>
+      <p id="p-00059-en" num="0058">It is also important to note that the construction and arrangement of the elements of the concept as shown in the exemplary embodiments is illustrative only. Although only a few embodiments of the present innovations have been described in detail in this disclosure, those skilled in the art who review this disclosure will readily appreciate that many modifications are possible (e.g., variations in sizes, dimensions, structures, shapes and proportions of the various elements, values of parameters, mounting arrangements, use of materials, colors, orientations, etc.) without materially departing from the novel teachings and advantages of the subject matter recited. For example, elements shown as integrally formed may be constructed of multiple parts or elements shown as multiple parts may be integrally formed, the operation of the interfaces may be reversed or otherwise varied, the length or width of the structures and/or members or connector or other elements of the system may be varied, the nature or number of adjustment positions provided between the elements may be varied. It should be noted that the elements and/or assemblies of the system may be constructed from any of a wide variety of materials that provide sufficient strength or durability, in any of a wide variety of colors, textures, and combinations. Accordingly, all such modifications are intended to be included within the scope of the present innovations. Other substitutions, modifications, changes, and omissions may be made in the design, operating conditions, and arrangement of the desired and other exemplary embodiments without departing from the spirit of the present innovations.</p>
+      <p id="p-00060-en" num="0059">It will be understood that any described processes or steps within described processes may be combined with other disclosed processes or steps to form structures within the scope of the present concept. The exemplary structures and processes disclosed herein are for illustrative purposes and are not to be construed as limiting.</p>
+      <p id="p-00061-en" num="0060">It is also to be understood that variations and modifications can be made on the aforementioned structures and methods without departing from the concepts of the present concept, and further it is to be understood that such concepts are intended to be covered by the following claims unless these claims by their language expressly state otherwise.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of running a blending appliance with a low voltage setting, the method comprising the steps of:
+<claim-text>providing a housing having a motor compartment and a jar receiving portion spaced laterally therefrom, the housing including a laterally extending upper housing portion;</claim-text><claim-text>providing a motor disposed in the motor compartment;</claim-text><claim-text>providing a support base operably coupled to the housing;</claim-text><claim-text>providing a jar including a blade assembly;</claim-text><claim-text>providing a magnetic coupler assembly comprising a first magnetic coupler disposed within the support base and a second magnetic coupler disposed within the jar;</claim-text><claim-text>accelerating the blade assembly to a rotational speed above 1000 revolutions per minute comprising the steps of:
+<claim-text>increasing an electric voltage and current to the motor;</claim-text><claim-text>rotating a drive shaft operably coupled to the motor and a motor drive gear;</claim-text><claim-text>rotating a first magnetic coupler indirectly coupled with the motor drive gear;</claim-text><claim-text>rotating a second magnetic coupler magnetically coupled to the first magnetic coupler; and</claim-text><claim-text>rotating the blade assembly operably coupled with the second magnetic coupler;</claim-text></claim-text><claim-text>storing an amount of kinetic energy in the first magnetic coupler; and</claim-text><claim-text>releasing a portion of the amount of kinetic energy stored in the first magnetic coupler when the rotational speed of the blade assembly is slowed to below 1000 revolutions per minute.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the step of releasing a portion of the amount of kinetic energy stored in the first magnetic coupler when the rotational speed of the blade assembly is slowed to below 1000 revolutions per minute further includes:
+<claim-text>decreasing the electric voltage and current to the motor.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method claimed in <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the step of releasing a portion of the amount of kinetic energy stored in the first magnetic coupler when the rotational speed of the blade assembly is slowed to below 1000 revolutions per minute further includes:
+<claim-text>allowing the blade assembly to rotate below 1000 revolutions per minute for less than 6 seconds.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en" independent="true">
+      <claim-text>
+        <b>4</b>. A method of reducing a bridging effect in a blending appliance, the method comprising the steps of:
+<claim-text>providing a blending appliance having a housing with a motor, the blending appliance further comprising a support base having a first magnetic coupler rotatably housed therein and powered by the motor;</claim-text><claim-text>providing a jar removeably received in the housing over the support base, the jar have a receptacle portion disposed over a base portion, wherein the base portion includes a second magnetic coupler rotatably housed therein, wherein the second magnetic coupler is magnetically coupled to the first magnetic coupler for rotation therewith, and further wherein the second magnetic coupler is further coupled to a blade assembly disposed in the receptacle portion of the jar;</claim-text><claim-text>providing ingredients to the receptacle portion of the jar;</claim-text><claim-text>increasing a voltage across the motor;</claim-text><claim-text>rotating the first magnetic coupler as powered by the motor;</claim-text><claim-text>storing an amount of kinetic energy in the first magnetic coupler;</claim-text><claim-text>rotating the second magnetic coupler as magnetically coupled to the first magnetic coupler;</claim-text><claim-text>rotating the blade assembly disposed in the receptacle portion of the jar to a rotational speed sufficient to cause a bridging effect in the ingredients disposed in the receptacle portion of the jar;</claim-text><claim-text>decreasing the voltage across the motor;</claim-text><claim-text>releasing a portion of the amount of kinetic energy stored in the first magnetic coupler; and</claim-text><claim-text>gradually decreasing the rotational speed of the blade assembly.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method claimed in <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the step of gradually decreasing the rotational speed of the blade assembly further includes:
+<claim-text>gradually decreasing the rotational speed of the blade assembly until the bridging effect is sufficiently diminished.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method claimed in <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the step of increasing a voltage across the motor further includes:
+<claim-text>increasing the voltage across the motor to a range of about 70 volts to about 90 volts.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method claimed in <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the step of rotating the blade assembly disposed in the receptacle portion of the jar to a rotational speed sufficient to cause a bridging effect in the ingredients disposed in the receptacle portion of the jar further includes:
+<claim-text>rotating the blade assembly to a rotational speed of 5000 rpm or greater.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method claimed in <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the step of decreasing the voltage across the motor further includes:
+<claim-text>decreasing the voltage across the motor to a range of about 5 volts to about 25 volts.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method claimed in <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the step of decreasing the voltage across the motor to a range of about 5 volts to about 25 volts further includes:
+<claim-text>decreasing the voltage across the motor to a range of about 8 volts to about 10 volts.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method claimed in <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the step of gradually decreasing the rotational speed of the blade assembly further includes:
+<claim-text>gradually decreasing the rotational speed of the blade assembly from 5000 rpm to a rotational speed below 1000 rpm.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method claimed in <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the step of gradually decreasing the rotational speed of the blade assembly from 5000 rpm to a rotational speed below 1000 rpm further includes:
+<claim-text>maintaining the rotational speed of the blade assembly below 1000 rpm for no longer than 6 seconds.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method claimed in <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the step of maintaining the rotational speed of the blade assembly below 1000 rpm for no longer than 6 seconds further includes:
+<claim-text>maintaining the rotational speed of the blade assembly below 1000 rpm until the bridging effect is sufficiently diminished.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method claimed in <claim-ref idref="clm-00004-en">claim 4</claim-ref>, further including:
+<claim-text>disrupting the bridging effect.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en" independent="true">
+      <claim-text>
+        <b>14</b>. A method of increasing efficiency in a motor of a blending appliance, the method comprising the steps of:
+<claim-text>providing a blending appliance having a housing with a motor, the blending appliance further comprising a support base having a first magnetic coupler powered by the motor for rotational movement;</claim-text><claim-text>providing a jar removeably received in the housing, the jar have a receptacle portion and a base portion, wherein the base portion includes a second magnetic coupler magnetically coupled to the first magnetic coupler for rotation therewith, and further wherein the second magnetic coupler is coupled to a blade assembly disposed in the receptacle portion of the jar;</claim-text><claim-text>energizing the motor by providing a first voltage setting to the motor having a first amperage setting;</claim-text><claim-text>rotating the first magnetic coupler as powered by the motor;</claim-text><claim-text>storing an amount of kinetic energy in the first magnetic coupler;</claim-text><claim-text>rotating the second magnetic coupler as magnetically coupled to the first magnetic coupler;</claim-text><claim-text>rotating the blade assembly disposed in the receptacle portion of the jar at a first rotational speed;</claim-text><claim-text>de-energizing the motor by providing a second voltage setting to the motor having a second amperage setting, wherein the second voltage setting is less than the first voltage setting, and further wherein the second amperage setting is less than the first amperage setting;</claim-text><claim-text>releasing a portion of the amount of kinetic energy stored in the first magnetic coupler; and</claim-text><claim-text>allowing the blade assembly to decrease from the first rotational speed to a second rotational speed.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method claimed in <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the second rotational speed includes a second rotational speed below 1000 rpm.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method claimed in <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the first voltage setting is in a range of about 50 volts to about 70 volts.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method claimed in <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the first amperage setting is in a range of about 4 amps to about 10 amps.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method claimed in <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the second voltage setting is in a range of about 5 volts to about 15 volts,</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method claimed in <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the second amperage setting is in a range of about 1 amp to about 4 amps.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method claimed in <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the first rotational speed of the blade assembly includes a first rotational speed greater than 1000 rpm, and further wherein the second rotational speed of the blade assembly includes a second rotational speed less than 1000 rpm. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00015.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00017.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150257602A1-20150917-M00001.TIF" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150257602A1_00018.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257602A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257602A1.PDF" type="pdf" size="1137067" pages="24" />
+</lexisnexis-patent-document>

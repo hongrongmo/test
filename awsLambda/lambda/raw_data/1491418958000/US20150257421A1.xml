@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257421A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030234" date-changed="20151002" time-changed="033531">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121316590">
+        <country>US</country>
+        <doc-number>20150257421</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14432895</doc-number>
+        <date>20131002</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012220787</doc-number>
+        <date>20121002</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A23L   1/226       20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>226</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A23L   1/226       20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>226</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A23L   1/22628     20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>22628</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A23L   1/22635     20130101 LI20140728BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>22635</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140728</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A23L   2/56        20130101 LI20150814BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>2</main-group>
+        <subgroup>56</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150814</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A23V2002/00        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>V</subclass>
+        <main-group>2002</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">SHRIMP FLAVOR COMPOSITION AND SHRIMP FLAVOR ENHANCER</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>TAKASAGO INTERNATIONAL CORPORATION</orgname>
+            <role>03</role>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Valerie</last-name>
+            <first-name>Rota</first-name>
+            <address>
+              <city>Zuelpich</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Sawamura</last-name>
+            <first-name>Ryosuke</first-name>
+            <address>
+              <city>Kanagawa</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Nakatoh</last-name>
+            <first-name>Azusa</first-name>
+            <address>
+              <city>Kanagawa</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Nagahashi</last-name>
+            <first-name>Hisaya</first-name>
+            <address>
+              <city>Kanagawa</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13076858</doc-number>
+        <date>20131002</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014054705</doc-number>
+        <date>20140410</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151022">
+      <main-family family-id="165151548">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257421</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014054705</doc-number>
+            <kind>A1</kind>
+            <date>20140410</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104684413</doc-number>
+            <kind>A</kind>
+            <date>20150603</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2904909</doc-number>
+            <kind>A1</kind>
+            <date>20150812</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2015004187</doc-number>
+            <kind>A</kind>
+            <date>20150610</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165151547">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257421</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014054705</doc-number>
+            <kind>A1</kind>
+            <date>20140410</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104684413</doc-number>
+            <kind>A</kind>
+            <date>20150603</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2904909</doc-number>
+            <kind>A1</kind>
+            <date>20150812</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2015004187</doc-number>
+            <kind>A</kind>
+            <date>20150610</date>
+          </document-id>
+          <application-date>
+            <date>20131002</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention is intended to provide a shrimp flavor composition and a shrimp flavor enhancer with which a more desirable shrimp flavor can be obtained, and to provide a food, a drink or a seasoning that contains the composition or the enhancer. The present invention is concerned with a shrimp flavor composition and a shrimp flavor enhancer that contain at least one of 1,5-octadien-3-one and 1,5-octadien-3-ol, and a food, a drink or a seasoning that contains the composition or the enhancer.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150401</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257421A1</docdb-publication-number>
+      <docdb-application-id>444510534</docdb-application-id>
+      <new-owner>TAKASAGO INTERNATIONAL CORPORATION, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:VALERIE, ROTA;SAWAMURA, RYOSUKE;NAKATOH, AZUSA;AND OTHERS;SIGNING DATES FROM 20150204 TO 20150210;REEL/FRAME:035312/0187</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a shrimp flavor composition that contains 1,5-octadien-3-one and/or 1,5-octadien-3-ol, and to a food, a drink or a seasoning that contains the shrimp flavor composition, and further relates to a shrimp flavor enhancer that contains 1,5-octadien-3-one and/or 1,5-octadien-3-ol, and to a food, a drink or a seasoning that contains the shrimp flavor enhancer.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">Conventionally, shrimp flavor compositions use materials, for example, such as (1) a crustacean extract, (2) a crustacean oleoresin, (3) a seasoning oil, (4) a supercritical carbon dioxide gas extract of crustacean, (5) a fractionated flavoring, and (6) a synthetic flavoring, and one or more of these may be appropriately combined and prepared according to the intended use to obtain a shrimp flavor composition (Non Patent Literature 1).</p>
+      <p id="p-00003-en" num="0003">As flavor characteristics desired for a shrimp flavor composition, a natural flavor characteristic of shrimp, and a flavor characteristic that evokes a perception of boiled flavor or a perception of roast flavor that stimulates appetite in harmony with a dish are required.</p>
+      <p id="p-00004-en" num="0004">Patent Literature 1 proposes, as a stronger and more desirable crustacean flavor composition, a crustacean flavor composition characterized in that materials are classified into 12 categories: (A) hydrocarbons, (B) alcohols, (C) phenols, (D) aldehydes, (E) ketones, (F) esters, (G) lactones, (H) carboxylic acids, (I) furan compounds, (J) nitrogen-containing compounds, (K) sulfur-containing compounds, and (L) flavorings of natural origin, and at least one, preferably two or more materials selected from a group composed of these (A) to (L) are appropriately mixed with amino acids.</p>
+      <p id="p-00005-en" num="0005">In preparation of a shrimp flavor composition by using a synthetic flavoring, an odor analysis data of various heat-treated shrimps are generally used as a reference.</p>
+      <p id="p-00006-en" num="0006">Odor analysis is typically performed by gas chromatography, and the analysis values are generally shown by being sorted in order of odor retention time (hereinafter, also referred to simply as “retention time”), or by being classified according to functional group. Therefore, a flavor preparing person who refers to the odor analysis data often start preparation by selecting various synthetic flavorings referring to the retention time or according to the functional group.</p>
+      <p id="p-00007-en" num="0007">
+        <b>1</b>,<b>5</b>-Octadien-3-one is a known compound contained in beef and the like, and is known to have a metallic odor or a geranium odor (Non Patent Literatures 2 to 6). On the other hand, 1,5-octadien-3-ol is a known compound contained in roast chicken, cauliflower and the like, and is known as a compound which has an odor that evokes a tree aroma or a geranium aroma (Non Patent Literatures 7 and 8).</p>
+      <heading id="h-00003-en" level="1">PRIOR ART LITERATURES</heading>
+      <heading id="h-00004-en" level="1">Patent Literature</heading>
+      <heading id="h-00005-en" level="2">Patent Literature 1: JP-A-2005-160402</heading>
+      <heading id="h-00006-en" level="1">Non Patent Literatures</heading>
+      <p id="p-00008-en" num="0008">Non Patent Literature 1: Patent Office Publication, Published Collection of Well-Known Prior Arts [Flavor] vol. 2, Food Flavors 3.10.3 Crustacean Flavor, published on January 14, 2000 <br /> Non Patent Literature 2: Journal of food science, Vol.61 (1996), pp.1271-1284 </p>
+      <heading id="h-00007-en" level="2">Non Patent Literature 3: Z Lebensm Unters Forsch A (1997) 205: pp.232-238 </heading>
+      <heading id="h-00008-en" level="2">Non Patent Literature 4: Z Lebensm Unters Forsch A (1997) 204: pp.3-6 </heading>
+      <heading id="h-00009-en" level="2">Non Patent Literature 5: Z Lebensm Unters Forsch (1988) 186: pp.489-494</heading>
+      <heading id="h-00010-en" level="2">Non Patent Literature 6: Journal of the Science of Food and Agriculture, Vol.28, 11, pp.1019-1024, November 1977  </heading>
+      <p id="p-00009-en" num="0009">Non Patent Literature 7: Lebensm. Wiss. Technol., 20 (1987), pp. 37-41 <br /> Non Patent Literature 8: J. Agric. Food Chem., 2002, 50, pp. 6459-6467 </p>
+      <heading id="h-00011-en" level="1">SUMMARY OF INVENTION</heading>
+      <heading id="h-00012-en" level="1">Technical Problem</heading>
+      <p id="p-00010-en" num="0010">However, it is rarely the case that a shrimp flavor composition prepared by directly replicating the quantitative analysis data of odor components is usable as a composition with the intended shrimp flavor, and usually, satisfying flavor was not able to be obtained.</p>
+      <p id="p-00011-en" num="0011">Generally used synthetic flavoring-based shrimp flavors are designed flavors that highlight or elaborate the characteristic odor of shrimp by finding the specific odor components of shrimp through odor analyses. Specifically, the intended shrimp can be recognized by using a shrimp flavor composition in combination with a color and a taste of a final product relating shrimp, and the desired shrimp flavor could not be reproduced by the flavor itself.</p>
+      <p id="p-00012-en" num="0012">As noted above, in order to prepare desired shrimp flavor compositions, they were often composed of, mainly, materials such as (1) a crustacean extract, (2) a crustacean oleoresin, (3) a seasoning oil, (4) a supercritical carbon dioxide gas extract of crustacean, (5) a fractionated flavoring, and (6) a synthetic flavoring. However, because shrimp flavor compositions using such materials are of low potency, novel materials are needed and there was room for improvement for the preparation of a composition for obtaining a stronger and more desirable shrimp flavor.</p>
+      <p id="p-00013-en" num="0013">Compounds such as 1,5-octadien-3-one and 1,5-octadien-3-ol are known as odor components, as noted above. However, use for imparting or enhancing a shrimp flavor was not known.</p>
+      <p id="p-00014-en" num="0014">It is accordingly a first object of the present invention to provide a shrimp flavor composition and a shrimp flavor enhancer that can provide a more desirable shrimp flavor. A further object of the present invention is such as to provide a variety of food, drink or a seasoning that uses the composition or the enhancer, and to impart a shrimp flavor to a food, a drink and a seasoning, or enhance it with the use of the composition and the enhancer.</p>
+      <p id="p-00015-en" num="0015">As used in the present specification, “desirable shrimp flavor” means that flavor characteristics (shrimp flavor) are more desirable, that evoke such as a flavor of a soup that results from boiling shrimp or the flavor that results from sauteing shrimp (a perception of boiled flavor), a flavor of fried shrimp that results from frying shrimp with oil (a  perception of fried flavor), and a flavor of roast shrimp that results from roasting shrimp (a perception of roast flavor).</p>
+      <heading id="h-00013-en" level="1">Solution to Problem</heading>
+      <p id="p-00016-en" num="0016">The present inventors conducted intensive studies to find a solution to the foregoing problems, and found that a shrimp flavor composition obtained by mixing 1,5-octadien-3-one and/or 1,5-octadien-3-ol surprisingly has a shrimp flavor with strong flavor and body, and an excellent roast flavor, resulted in completion of the present invention.</p>
+      <p id="p-00017-en" num="0017">Specifically, the present invention relates to the following (1) to (12).</p>
+      <p id="p-00018-en" num="0000">(1) A shrimp flavor composition containing at least one of 1,5-octadien-3-one and 1,5-octadien-3-ol. <br /> (2) The shrimp flavor composition according to (1), containing a shrimp flavor selected from a boiled flavor, a fried flavor, and a roast flavor. <br /> (3) The shrimp flavor composition according to (1) or (2), in which a total content of the 1,5-octadien-3-one and the 1,5-octadien-3-ol is 0.001 ppm to 1000 ppm by mass. <br /> (4) A food, a drink or a seasoning, containing the shrimp flavor composition according to any one of (1) to (3). <br /> (5) A method for imparting a shrimp flavor to a food, a drink or a seasoning, in which the shrimp flavor composition according to any one of (1) to (3) is added. <br /> (6) A method for enhancing a shrimp flavor of a food, a drink or a seasoning, the method including adding the shrimp flavor composition according to any one of (1) to (3). <br /> (7) A shrimp flavor enhancer, containing at least one of 1,5-octadien-3-one and 1,5-octadien-3-ol. <br /> (8) The shrimp flavor enhancer according to (7), which enhances a shrimp flavor selected from a boiled flavor, a fried flavor, and a roast flavor. <br /> (9) A food, a drink or a seasoning, containing the shrimp flavor enhancer according to (7) or (8). (10) The food, the drink or the seasoning according to (9), in which a total content of the 1,5-octadien-3-one and the 1,5-octadien-3-ol is 0.0001 ppb to 10 ppm by mass. <br /> (11) A method for imparting a shrimp flavor to a food, a drink or a seasoning, the method including adding the shrimp flavor enhancer according to (7) or (8). <br /> (12) A method for enhancing a shrimp flavor of a food, a drink or a seasoning, the method including adding the shrimp flavor enhancer according to (7) or (8). </p>
+      <heading id="h-00014-en" level="1">Advantageous Effects of Invention</heading>
+      <p id="p-00019-en" num="0018">The present invention can provide a shrimp flavor composition which is useful as a flavor enhancer or the like for food, drink, seasonings or the like, and which has an excellent shrimp flavor that accompanies a perception of boiled flavor, a perception of fried flavor, or a perception of roast flavor, by mixing 1,5-octadien-3-one and/or 1,5-octadien-3-ol with a shrimp flavor composition.</p>
+      <heading id="h-00015-en" level="1">DESCRIPTION OF EMBODIMENTS</heading>
+      <p id="p-00020-en" num="0019">The present invention is described below in detail. However, the present invention is not limited to the following embodiment, and may be carried out with arbitral modifications without deviating from the gist of the present invention.</p>
+      <p id="p-00021-en" num="0020">As used in the present specification, “mass %” and “mass part”, and “weight %” and “weight part” have the same meaning, respectively, and when simply mention “%”, “ppm”, and “ppb”, they indicate “weight %”, “weight ppm”, and “weight ppb”, respectively.</p>
+      <p id="p-00022-en" num="0021">The shrimp flavor composition according to the present invention contains at least one of 1,5-octadien-3-one and 1,5-octadien-3-ol. At the beginning, the following describes 1,5-octadien-3-one and 1,5-octadien-3-ol.</p>
+      <p id="p-00023-en" num="0022">There exist two geometric isomers, (5E)-form and (5Z)-form, for I,5-octadien-3-one, depending on cis-trans resulting from the substituents on the double bond within the molecule. Specifically, there are two kinds, (5E)-1,5-octadien-3-one and (5Z)-1,5-octadien-3-one.</p>
+      <p id="p-00024-en" num="0023">For 1,5-octadien-3-ol, there exist (3S)-form and (3R)-form due to a single asymmetric carbon within the molecule, and there exist two geometric isomers, (5E)-form and (5Z)-form, depending on cis-trans resulting from the substituents on the double bond. Specifically, there are four kinds, (3S)-(5E)-1,5-octadien-3-ol, (3R)-(5E)-1,5-octadien-3-ol, (3S)-(5Z)-1,5-octadien-3-ol, and (3R)-(5Z)-1,5-octadien-3-ol.</p>
+      <p id="p-00025-en" num="0024">All of these 1,5-octadien-3-one and 1,5-octadien-3-ol are in oil (liquid) form at ordinary temperature.</p>
+      <p id="p-00026-en" num="0025">The present invention may use any isomer of 1,5-octadien-3-one and 1,5-octadien-3-ol, or may use a mixture of these.</p>
+      <p id="p-00027-en" num="0026">These isomers can be distinguished on the basis of the retention time in gas chromatography. In this specification, no distinction is made for these isomers, and they are collectively referred to as “1,5-octadien-3-one” or “1,5-octadien-3-ol”.</p>
+      <p id="p-00028-en" num="0027">As the 1,5-octadien-3-one and/or 1,5-octadien-3-ol, ones obtained by extraction from natural products may be used, or ones obtained by chemical synthesis (for example, ones synthesized according to the methods described in Non Patent Literature 6) may be used. The ones obtained from natural products and obtained by chemical synthesis may be used in a combination.</p>
+      <p id="p-00029-en" num="0028">High-purity 1,5-octadien-3-one and/or 1,5-octadien-3-ol can be obtained in large quantities in the case by chemical synthesis.</p>
+      <p id="p-00030-en" num="0029">The content of the 1,5-octadien-3-one and the 1,5-octadien-3-ol in <sub>t</sub>he shrimp flavor composition of the present invention is, by their total content, preferably 0.001 ppm to 1000 ppm, more preferably 0.01 ppm to 100 ppm, and further preferably 0.1 ppm to 10 ppm. With a content of 0.001 ppm or more, the present invention can sufficiently exhibit effects, and with a content of 1000 ppm or less, an odorant note becomes more desirable as a shrimp flavor, and therefore they are preferred.</p>
+      <p id="p-00031-en" num="0030">The shrimp flavor composition of the present invention may contain other odor components.</p>
+      <p id="p-00032-en" num="0031">Non-limiting examples of such other odor components include known synthetic flavoring compounds, including: hydrocarbons such as limonene, ocimene, α-pinene, β-pinene, γ-terpinene, sabinene, and myrcene; alcohols such as linalol, citronellol, dihydrolinalol, tetrahydromugol, myrcenol, dihydromyrcenol, tetrahydromyrcenol, ocimenol, terpineol, 3-thujanol, benzyl alcohol, β-phenylethyl alcohol, α-phenylethyl alcohol, and cis-3-hexenol; aldehydes such as acetaldehyde, n-hexanal, n-heptanal, n-octanal, n-nonanal, cis-3-hexenal, cis-6-nonenal, 3,5,5-trimethylhexanal, decanal, undecanal, 2-methyldecanal, dodecanal, tridecanal, tetradecanal, trans-2-hexenal, trans-4-decenal, cis-4-decenal, trans-2-decenal, 10-undecenal, trans-2-undecenal, trans-2-dodecenal, 3-dodecenal, trans-2-tridecenal, 2,4-hexadienal, 2,4-decadienal, 2,4-dodecadienal, 5,9-dimethyl-4,8-decadienal, citral, citronellal, benzaldehyde, cuminaldehyde, vanillin, and ethyl vanillin; ketones such as 2-butanone, 3-heptanone, 3-octanone, 2-nonanone, 2-undecanone, 2-tridecanone, methyl heptenone, dimethyl octenone, geranyl acetone, 2,3,5-trimethyl-4-cyclohexenyl-1-methylketone, 3-methyl-2,4-nonanedione, Nerone (Givaudan, registered trade mark), nootkatone, dihydronootkatone, acetophenone, and 4,7-dihydro-2-isopentyl-2-methyl-1,3-dioxepin; esters such as propyl formate, octyl formate, linalyl formate, citronellyl formate, geranyl formate , neryl formate, terpinyl formate, ethyl acetate, isopropyl acetate, cis-3-hexenyl acetate, trans-2-hexenyl acetate, octyl acetate, nonyl acetate, decyl acetate, dodecyl acetate, dimethyl undecadienyl acetate, ocimenyl acetate, myrcenyl acetate, dihydromyrcenyl acetate, linalyl acetate, citronellyl acetate, geranyl acetate, neryl acetate, tetrahydromugol acetate, lavandulyl acetate, nerolidol acetate, dihydrocuminyl acetate, terpinyl acetate, citryl acetate, nopyl acetate, dihydroterpinyl acetate, 2,4-dimethyl-3-cyclohexenylmethyl acetate, myraldyl acetate, boeticol acetate, decenyl propionate, linalyl propionate, geranyl propionate, neryl propionate, terpinyl propionate, tricyclodecenyl propionate, styralyl propionate, octyl butyrate, neryl butyrate, cinnamyl butyrate, isopropyl isobutyrate, octyl isobutyrate, linalyl isobutyrate, neryl isobutyrate, linalyl isovalerate, terpinyl isovalerate, phenylethyl isovalerate, 2-methylpentyl 2-methyl valerate, methyl 3-hydroxyhexanoate, ethyl 3-hydroxyhexanoate, methyl octanoate, octyl octanoate, linalyl octanoate, methyl nonanoate, methyl undecylenate, linalyl benzoate, methyl cinnamate, isoprenyl angelate, methyl geranate, and triethyl citrate; phenols such as thymol, carvacrol, and β-naphthol isobutyl ether; lactones such as γ-undecalactone, and δ-dodecalactone; fatty acids such as acetic acid, propionic acid, butyric acid, valeric acid, hexanoic acid, octanoic acid, decanoic acid, dodecanoic acid, 2-decenoic acid, and geranic acid; sulfides such as diallyl sulfide, diallyl disulfide, dipropyl disulfide, methyl propyl disulfide, allyl propyl disulfide, and diallyl trisulfide; and nitrogen- or sulfur-containing compounds such as methyl anthranilate, ethyl anthranilate, methyl N-methyl anthranilate, methyl N-2′-methyl pentylidene anthranilate, ligantraal, dodecanenitrile, 2-tridecenenitrile, geranyl nitrile, citronellyl nitrile, 3,7-dimethyl-2,6-nonadienonitrile, indole, 5-methyl-3-heptanoneoxime, thiogeraniol, limonenethiol, and P-menthyl-8-thiol, and</p>
+      <p id="p-00033-en" num="0032">crustacean (such as shrimp, and crab) extracts; flavors with crustacean flavor obtained by solvent extraction, hydrodistillation, enzyme treatment, heat reactions, and the like; fishery product extracts; plant essential oils such as peppermint oil, spearmint oil, and spice essential oils of such as ginger, pepper, and onion; and oily extracts such as spice extracts, and oleoresins thereof.</p>
+      <p id="p-00034-en" num="0033">These may be arbitrarily combined and mixed to prepare the shrimp flavor composition.</p>
+      <p id="p-00035-en" num="0034">In the shrimp flavor composition according to the present invention, the mass ratio of the total content of the 1,5-octadien-3-one and the 1,5-octadien-3-ol to other odor components is preferably 1:9 to 1:99.9 from the standpoint of improving the shrimp flavor.</p>
+      <p id="p-00036-en" num="0035">The shrimp flavor composition of the present invention may contain components other than the odor components, exemplified as suitable solvents for dissolving the odor components. Examples thereof include water, ethyl alcohol, glycerine, propylene glycol, triacetin, middle-chain fatty acid glycerine ester, food oils and fats such as food vegetable oils, natural pigments usable for food or drink, vitamins, vegetable resins, and the like.</p>
+      <p id="p-00037-en" num="0036">From the standpoint of ease of handling of the composition, these are contained in preferably 0 to 99 mass % of the shrimp flavor composition.</p>
+      <p id="p-00038-en" num="0037">A shrimp flavor composition prepared into a liquid form by using the foregoing solvents may be prepared into a powder form by adding carriers such as lactose, dextrin, gum arabic, and cyclodextrin, or into an emulsion with the use of various emulsifiers usable for food or drink. Besides, a composition may be prepared and used in arbitral form such as a paste form, a granule form, and a microcapsule according to its intended use.</p>
+      <p id="p-00039-en" num="0038">The shrimp flavor composition according to the present invention preferably has a shrimp flavor selected from a boiled flavor, a fried flavor, or a roast flavor.</p>
+      <p id="p-00040-en" num="0039">The shrimp flavor composition according to the present invention can impart a shrimp flavor to a food, a drink or a seasoning by being added thereto. Specifically, a food or drink with an imparted shrimp flavor can easily be produced even if the food, the drink or the seasoning does not have any shrimp flavor.</p>
+      <p id="p-00041-en" num="0040">A food, a drink or a seasoning with the enhanced shrimp flavor can be obtained by adding the shrimp flavor composition according to the present invention to a food, a drink or a seasoning that already has a shrimp flavor.</p>
+      <p id="p-00042-en" num="0041">Such food, drink or seasoning (hereinafter, also referred to simply as “shrimp flavored food or drink”, or “shrimp flavored seasoning”, respectively) containing the shrimp flavor composition according to the present invention are not particularly limited. Preferably, these are food, drink or seasonings relating shrimp, such as a shrimp flavored food or drink or a shrimp flavored seasoning as represented by soup, instant noodle, snack, and the like.</p>
+      <p id="p-00043-en" num="0042">A compounding amount of the shrimp flavor composition of the present invention to the shrimp flavored food or drink or the shrimp flavored seasoning varies depending on such as the intended use, and the type and the odorant note strength of the shrimp flavor enhancer. For example, a concentration range may be 0.001% to 10%, preferably 0.01 to 3%.</p>
+      <p id="p-00044-en" num="0043">The present invention also can provide a shrimp flavor enhancer containing 1,5-octadien-3-one and/or 1,5-octadien-3-ol. The flavor enhanced by the enhancer is preferably a shrimp flavor selected from a boiled flavor, a fried flavor, and a roast flavor.</p>
+      <p id="p-00045-en" num="0044">As the 1,5-octadien-3-one and/or the 1,5-octadien-3-ol here, any of the foregoing geometric isomers may be used, and two or more of them may be used in combination.</p>
+      <p id="p-00046-en" num="0045">The total of a compounding amount of the 1,5-octadien-3-one and the 1,5-octadien-3-ol in the shrimp flavor enhancer of the present invention to the shrimp flavored food or drink or the shrimp flavored seasoning varies depending on such as the intended use and the type of the shrimp flavor enhancer. For example, a concentration range may be 0.0001 ppb to 10 ppm, preferably 0.001 ppb to 1 ppm, more preferably 0.01 ppb to 0.1 ppm.</p>
+      <p id="p-00047-en" num="0046">As the content of the 1,5-octadien-3-one and the 1,5-octadien-3-ol in the shrimp flavor enhancer, in their total content, 0.001 ppm to 1000 ppm is preferred in that the present invention can sufficiently exhibit effects, and an odorant note becomes more desirable as a shrimp flavor.</p>
+      <p id="p-00048-en" num="0047">The shrimp flavor composition of the present invention may be added to the shrimp flavored food or drink or the shrimp flavored seasoning to enhance the shrimp flavors of them, and may be added to various food, drink or seasonings having no shrimp flavor to easily produce a food, a drink or a seasoning that has an imparted shrimp flavor.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00016-en" level="1">EXAMPLES</heading>
+      <p id="p-00049-en" num="0048">The following describes the present invention in greater detail by using Examples. However, the present invention is in no way limited by the following, and may be altered or modified in many ways without deviating from the scope of the invention. Concerning to the unit in the formulations described below, composition ratios indicate, unless specifically mentioned, mass ratios.</p>
+      <heading id="h-00017-en" level="1">Example 1</heading>
+      <heading id="h-00018-en" level="1">Shrimp Flavor Enhancer</heading>
+      <p id="p-00050-en" num="0049">In Example 1, a shrimp flavor enhancer was prepared by preparing a 0.1% aqueous solution of 1,5-octadien-3-one. The 1,5-octadien-3-one here is (5Z)-1,5-octadien-3-one, obtained by the synthesis method described in Non Patent Literature 6.</p>
+      <heading id="h-00019-en" level="1">Example 2</heading>
+      <heading id="h-00020-en" level="1">Shrimp Flavor Enhancer</heading>
+      <p id="p-00051-en" num="0050">In Example 2, a shrimp flavor enhancer was prepared by preparing a 0.1% aqueous solution of 1,5-octadien-3-one. The 1,5-octadien-3-ol here is (5Z)-1,5-octadien-3-01, obtained by the synthesis method described in Non Patent Literature 6.</p>
+      <heading id="h-00021-en" level="1">Examples 3 and 4</heading>
+      <heading id="h-00022-en" level="1">Shrimp Flavor Composition</heading>
+      <p id="p-00052-en" num="0051">Shrimp flavor compositions were obtained by mixing each component according to the formulations presented in the Table 1 below. The obtained compositions both had a boiled flavor.</p>
+      <p id="p-00053-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="right" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>(mass part)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="119pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Component</entry>
+                  <entry>Example 3</entry>
+                  <entry>Example 4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="119pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="49pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>α-Pinene</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Limonene</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>1-Penten-3-ol</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2-Ethylhexanol</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Benzyl alcohol</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Phenylethyl alcohol</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>4-Ethylguaiacol</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Anisole</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Isopentanal</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hexanal</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Melonal</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Phenylacetaldehyde</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2-Octanone</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2-Methoxyacetophenone</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Methylheptenone</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>β-Ionone</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2-Decanone</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2,3-Dimethylcyclohexan-2-one</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ethyl 4-methylbenzoate</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Isopentanoic acid</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hexanoic acid</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Furfural</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Dimethylamine</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Trimethylamine</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>N-Methylpyrrole</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Pyridine</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2-Ethyl-5-methylpyrazine</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ethyl trimethylpyrazine</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Tetramethylpyrazine</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Methionol</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Methional</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Dimetyl disulfide</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Lobster oleoresin</entry>
+                  <entry>30</entry>
+                  <entry>30</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Shrimp flavor enhancer of Example 1</entry>
+                  <entry>0.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Shrimp flavor enhancer of Example 2</entry>
+                  <entry />
+                  <entry>0.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ethanol</entry>
+                  <entry>Remainder</entry>
+                  <entry>Remainder</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Total</entry>
+                  <entry>1000</entry>
+                  <entry>1000</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00023-en" level="1">Comparative Example 1</heading>
+      <heading id="h-00024-en" level="1">Shrimp Flavor Composition</heading>
+      <p id="p-00054-en" num="0052">A shrimp flavor composition was prepared in the same manner as in Example 3, except that the shrimp flavor enhancer was not contained.</p>
+      <heading id="h-00025-en" level="1">Application Example 1</heading>
+      <heading id="h-00026-en" level="1">Shrimp Flavor Oil</heading>
+      <p id="p-00055-en" num="0053">To 200 g of shrimp shell was added 1 kg of water and the mixture was heated at 120° C. for 4 hours. After cooling, an insoluble solid was removed to obtain 850 g of shrimp extract. The extract was concentrated under reduced pressure to mass of ⅓, and the resulting concentrate was, after adding 150 g of canola oil and the shrimp flavor composition of Example 3 by 2 mass % with respect to the canola oil, stirred under heat at 100° C. for 3 hours. The mixture was cooled, and centrifuged to collect the shrimp flavor oil layer portion to obtain a present product 1 (shrimp flavor oil).</p>
+      <heading id="h-00027-en" level="1">Application Example 2</heading>
+      <heading id="h-00028-en" level="1">Shrimp Flavor Oil</heading>
+      <p id="p-00056-en" num="0054">A present product 2 (shrimp flavor oil) was obtained in the same manner as in Application Example 1, except that the shrimp flavor composition of Example 4 was used instead of the shrimp flavor composition of Example 3.</p>
+      <heading id="h-00029-en" level="1">Comparative Application Example 1</heading>
+      <heading id="h-00030-en" level="1">Shrimp Flavor Oil</heading>
+      <p id="p-00057-en" num="0055">A comparative product 1 (shrimp flavor oil) was obtained in the same manner as in Application Example 1, except that the shrimp flavor composition of Comparative Example 1 was used instead of the shrimp flavor composition of Example 3.</p>
+      <p id="p-00058-en" num="0056">The present product 1, the present product 2, and the comparative product 1 were each diluted in 20 times with canola oil, and evaluated for flavor in a sensory evaluation participated by 10 trained panelists. All panelists rated the present product 1 and the present product 2 as more imparting an impression of an enhanced top impact and a distinct edge, and more having an enduring shrimp flavor than the comparative product 1.</p>
+      <heading id="h-00031-en" level="1">Test Examples 1-1 to 1-8</heading>
+      <heading id="h-00032-en" level="1">Tests on the Effect of 1,5-Octadien-3-One in Shrimp Flavor Oil</heading>
+      <p id="p-00059-en" num="0057">Shrimp flavor enhancers of Test Examples 1-1 to 1-8 were each prepared by preparing 1,5-octadien-3-one aqueous solutions in the same manner as in Example 1, with the 1,5-octadien-3-one varied to have the concentrations shown in Table 2. Shrimp flavor compositions of Test Examples 1-1 to 1-8 were prepared by each using the shrimp flavor enhancers in Example 3 prepared instead of the shrimp flavor enhancer of Example 1.</p>
+      <p id="p-00060-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="14pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="14pt" align="center" />
+              <colspec colname="6" colwidth="14pt" align="center" />
+              <colspec colname="7" colwidth="14pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="21pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="9" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Test Examples</entry>
+                  <entry>1-1</entry>
+                  <entry>1-2</entry>
+                  <entry>1-3</entry>
+                  <entry>1-4</entry>
+                  <entry>1-5</entry>
+                  <entry>1-6</entry>
+                  <entry>1-7</entry>
+                  <entry>1-8</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Concentration (ppm)</entry>
+                  <entry>0</entry>
+                  <entry>0.005</entry>
+                  <entry>0.05</entry>
+                  <entry>0.5</entry>
+                  <entry>5</entry>
+                  <entry>50</entry>
+                  <entry>500</entry>
+                  <entry>5000</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00061-en" num="0058">Shrimp flavor oils of Test Examples 1-1 to 1-8 were obtained in the same manner as in Application Example 1, except that the shrimp flavor compositions of Test Examples 1-1 to 1-8 were used instead of the shrimp flavor composition of Example 3.</p>
+      <p id="p-00062-en" num="0059">The shrimp flavor oils of Test Examples 1-1 to 1-8 were each diluted in 20 times with canola oil, and evaluated for flavor in a sensory evaluation participated by 10 trained panelists. All panelists rated the shrimp flavor oils of Test Examples 1-2 to 1-7 as notably having a roundness and a richness with a sense of harmony, and having enduring shrimp flavor. The shrimp flavor oils of Test Examples 1-4 to 1-6 were particularly found to have a desirable shrimp flavor. On the other hand, all panelists rated that the shrimp flavor oil of Test Example 1-1 did not sufficiently develop a perception of shrimp flavor and that the shrimp flavor oil of Test Example 1-8 was undesirable because of the odorant note that was different from a shrimp flavor.</p>
+      <heading id="h-00033-en" level="1">Test Examples 2-1 to 2-8</heading>
+      <heading id="h-00034-en" level="1">Tests on the Effect of 1,5-Octadien-3-Ol in Shrimp Flavor Oil</heading>
+      <p id="p-00063-en" num="0060">Shrimp flavor enhancers of Test Examples 2-1 to 2-8 were each prepared by preparing 1,5-octadien-3-ol aqueous solutions in the same manner as in Example 2, with the 1,5-octadien-3-ol varied to have the concentrations shown in Table 3. Shrimp flavor compositions of Test Examples 2-1 to 2-8 were prepared by each using the shrimp flavor enhancers in Example 4 prepared instead of the shrimp flavor enhancer of Example 2.</p>
+      <p id="p-00064-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="14pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="14pt" align="center" />
+              <colspec colname="6" colwidth="14pt" align="center" />
+              <colspec colname="7" colwidth="14pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="21pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="9" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Test Examples</entry>
+                  <entry>2-1</entry>
+                  <entry>2-2</entry>
+                  <entry>2-3</entry>
+                  <entry>2-4</entry>
+                  <entry>2-5</entry>
+                  <entry>2-6</entry>
+                  <entry>2-7</entry>
+                  <entry>2-8</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Concentration (ppm)</entry>
+                  <entry>0</entry>
+                  <entry>0.005</entry>
+                  <entry>0.05</entry>
+                  <entry>0.5</entry>
+                  <entry>5</entry>
+                  <entry>50</entry>
+                  <entry>500</entry>
+                  <entry>5000</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00065-en" num="0061">Shrimp flavor oils of Test Examples 2-1 to 2-8 were obtained in the same manner as in Application Example 1, except that the shrimp flavor compositions of Test Examples 2-1 to 2-8 were used instead of the shrimp flavor of Example 4.</p>
+      <p id="p-00066-en" num="0062">The shrimp flavor oils of Test Examples 2-1 to 2-8 were each diluted in 20 times with canola oil, and evaluated for flavor in a sensory evaluation participated by 10 trained panelists. All panelists rated the shrimp flavor oils of Test Examples 2-2 to 2-7 as notably having a roundness and a richness with a sense of harmony, and having enduring shrimp flavor. The shrimp flavor oils of Test Examples 2-4 to 2-6 were particularly found to have a desirable shrimp flavor. On the other hand, all panelists rated that the shrimp flavor oil of Test Example 2-1 did not sufficiently develop a perception of shrimp flavor and that the shrimp flavor oil of Test Example 2-8 was undesirable because of the odorant note that was different from a shrimp flavor.</p>
+      <p id="p-00067-en" num="0063">While the present invention has been described in detail with reference to specific embodiments thereof, it will be apparent to one skilled in the art that various changes and modifications can be made therein without departing from the spirit and scope thereof.</p>
+      <p id="p-00068-en" num="0064">This application is based on Japanese Patent Application (No. 2012-220787) filed on Oct. 2, 2012, the contents of which are incorporated herein by reference.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A shrimp flavor composition comprising at least one of 1,5-octadien-3-one and 1,5-octadien-3-ol.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The shrimp flavor composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, comprising a shrimp flavor selected from a boiled flavor, a fried flavor, and a roast flavor.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The shrimp flavor composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a total content of the 1,5-octadien-3-one and the 1,5-octadien-3-ol is 0.001 ppm to 1000 ppm by mass.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. A food, a drink or a seasoning, comprising the shrimp flavor composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. A method for imparting a shrimp flavor to a food, a drink or a seasoning, wherein the shrimp flavor composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> is added.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. A method for enhancing a shrimp flavor of a food, a drink or a seasoning, wherein the shrimp flavor composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> is added.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>
+        <b>7</b>. A shrimp flavor enhancer, comprising at least one of 1,5-octadien-3-one and 1,5-octadien-3-ol.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The shrimp flavor enhancer according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, which enhances a shrimp flavor selected from a boiled flavor, a fried flavor, and a roast flavor.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. A food, a drink or a seasoning, comprising the shrimp flavor enhancer according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The food, the drink or the seasoning according to <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein a total content of the 1,5-octadien-3-one and the 1,5-octadien-3-ol is 0.0001 ppb to 10 ppm by mass.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. A method for imparting a shrimp flavor to a food, a drink or a seasoning, the method comprising adding the shrimp flavor enhancer according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. A method for enhancing a shrimp flavor of a food, a drink or a seasoning, the method comprising adding the shrimp flavor enhancer according to <claim-ref idref="clm-00007-en">claim 7</claim-ref></claim-text>
+    </claim>
+  </claims>
+  <image file="US20150257421A1.PDF" type="pdf" size="344872" pages="6" />
+</lexisnexis-patent-document>

@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257658A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030156" date-changed="20151027" time-changed="110533">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315348">
+        <country>US</country>
+        <doc-number>20150257658</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14645606</doc-number>
+        <date>20150312</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151027">
+      <classification-ipcr sequence="1">
+        <text>A61B   5/0205      20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0205</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B   5/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61B   5/026       20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>026</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61B   5/1455      20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>1455</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151027">
+      <classification-cpc sequence="1">
+        <text>A61B   5/02055     20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>02055</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   5/0008      20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0008</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B   5/0022      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0022</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B   5/01        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B   5/0205      20130101 LI20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0205</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B   5/02416     20130101 LI20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>02416</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61B   5/02438     20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>02438</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61B   5/14551     20130101 LI20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>14551</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61B   5/14552     20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>14552</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61B   5/6826      20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>6826</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61B   5/6898      20130101 LA20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>6898</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>A61B   5/7275      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>7275</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>A61B   5/743       20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>743</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>A61B2560/0462      20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2560</main-group>
+        <subgroup>0462</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">14</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">Portable Rapid Vital Sign Apparatus and Method</invention-title>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61951755</doc-number>
+          <date>20140312</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Geesbreght</last-name>
+            <first-name>John M.</first-name>
+            <address>
+              <city>Fort Worth</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Dial</last-name>
+            <first-name>Darrell D.</first-name>
+            <address>
+              <city>Fort Worth</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Geesbreght</last-name>
+            <first-name>John M.</first-name>
+            <address>
+              <city>Fort Worth</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Dial</last-name>
+            <first-name>Darrell D.</first-name>
+            <address>
+              <city>Fort Worth</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173668630">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257658</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150312</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173693039">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015138768</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257658</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150312</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A portable, cuffless instrument and system for providing rapid measurements of vital signs of a patient undergoing trauma from illness or injury comprising a portable instrument connectable via contact sensors to the patient to produce a vital sign data set including blood pressure, pulse, blood oxygen saturation, and body temperature. The instrument preferably includes wireless communication capability in a network and system including a remote server, database, and processing capability to provide access to electronic medical records, to analyze the vital signs data, report preliminary diagnoses to a care giver, including listing chronologically vital sign data for trends.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">The present application claims priority to U.S. Provisional Patent Application No. 61/951,755 filed Mar. 12, 2014 by the same inventors entitled PORTABLE RAPID VITAL SIGN APPARATUS AND METHOD.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">1. Field of the Invention</p>
+      <p id="p-00003-en" num="0003">The present invention generally relates to devices for monitoring or measuring vital signs of patients in a treatment setting, and more particularly to a portable, self-contained device capable of rapidly measuring selected key vital signs of an injured or sick patient in one operation in an emergency or triage setting.</p>
+      <p id="p-00004-en" num="0004">2. Background of the Invention and Description of the Prior Art:</p>
+      <p id="p-00005-en" num="0005">Vital physiological signs that are key measures of the state of health of medical patients, especially in emergency situations include blood pressure and pulse rate, blood oxygen saturation level, and temperature. The measurements of these four parameters provide important indicators of a patient's condition along with the patient's description thereof. Blood pressure, typically measured by a sphygmomanometer and a stethoscope, provides the pressure values when the heart contracts (systolic) and when the heart relaxes (diastolic), a reliable indicator of the health of the blood circulatory system and its condition or state at the time of the measurement. Pulse rate is a measure of the number of times the heart beats per minute.</p>
+      <p id="p-00006-en" num="0006">Blood hemoglobin saturation level, measured non-invasively with a pulse oximeter, is a measure of the proportion of oxygen bound up in the blood hemoglobin. This measurement is an indirect indicator of the oxygenation efficiency of the respiratory system (“respiratory sufficiency”) of a patient. The body temperature of a patient, traditionally measured with a thermometer, indicates whether the ability of the body to eliminate or generate heat to maintain the correct temperature is functioning correctly. Temperature is another primary indicator of the body's condition or state when experiencing injury or illness.</p>
+      <p id="p-00007-en" num="0007">Patients brought into triage in emergency room settings, or requiring assessment of injuries or illness at the scene of an accident or the onset of acute or severe symptoms, need to have their vital signs measured accurately, rapidly, and in some cases repeatedly, to provide an initial assessment of the patient's condition. In most situations, the key vital sign measurements are blood pressure, pulse rate, the saturation of oxygen in the blood (pulse oximetry), and the temperature. Traditionally, these measurements were obtained manually using separate instruments, and usually not all at the same time. Often, the complete vital sign data is not available at the time the physician arrives at the bedside to begin the examination and diagnosis, and to assess the patient's need for treatment. More recently, but typically in patient care areas other than emergency or transport facilities, electronic monitor equipment installed next to the patient's bedside is connected to the patient through cables and wiring for taking continuous measurements and displaying them to the care givers. Such monitoring equipment is unwieldy and limits the ability of the patient to shift position or to be moved. These shortcomings make such monitoring unsuitable in emergency or triage situations where taking vital signs rapidly and with minimum operating inconvenience is crucial to the treatment assessment and delivery required in these situations. This is equally evident if not more so in the pre-hospital care setting. What is needed is a rapid way to measure these vital sign parameters in a single process and to enable such rapid measurements repetitively to establish trend lines, thus facilitating processing of the patient as rapidly as possible into the appropriate care environment.</p>
+      <p id="p-00008-en" num="0008">Another problem with the traditional methods, whether using manual instruments or the conventional bedside monitors, is the lack of the ability to quickly and automatically transmit vital sign data to an electronic medical record (EMR) and to quickly access those patient's records, to facilitate performing a preliminary diagnostic analysis, virtually as soon as the vital signs are obtained. The lack of such information close to the time the vital signs are known could impair the ability to provide the correct initial treatment, and perhaps even mean the difference between life and death of a patient in a severe trauma circumstance. What is needed is a way to report or convey this information to a physician as a complete set of both initial and repetitive data, to enable access to this type of information with minimal delay, and preferably to make the data known at the same time that the vital signs are known.</p>
+      <p id="p-00009-en" num="0009">Of further great functional importance is the ability, typically not readily available, is the listing of all available vital sign data displayed chronologically from the time vital signs were taken pre-hospital through the entire patient journey including the emergency department, surgery, recovery, intensive care unit (ICU), etc. What is needed is a system and suitable device to have vital sign data immediately available to the caregiver at all times, accompanied by the time the data was taken and other pertinent information.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00010-en" num="0010">Accordingly, in one embodiment there is provided a portable instrument for providing rapid measurements of vital signs, comprising a handheld, cuffless device operable by contact during assessment of a patient undergoing health trauma to establish a vital sign data set; an assembly of sensors in the device for measuring and outputting measurement values for blood pressure, pulse, blood oxygen saturation, and body temperature; a processor in the device operable under programmed control to receive and process the measurement values output by the sensors and produce a vital signs data set; and a wireless interface coupled to the processor for transmitting the vital sign data set to an electronic medical record in a remote database for display of the vital sign data on a single display screen to medical personnel.</p>
+      <p id="p-00011-en" num="0011">In other aspects, the invention includes a display controlled by the processor for reading out the vital sign data set, and a single housing having finger stations for sensing by contact the patient's blood pressure, pulse, blood oxygen saturation, and body temperature.</p>
+      <p id="p-00012-en" num="0012">In another aspect, the invention includes a cuffless sensor for measuring by contact the patient's systolic and diastolic blood pressure, a pulse oximeter sensor for measuring by contact the patient's pulse and blood oxygen saturation, a thermometer for measuring by contact the patient's body temperature, and at least one analog-to-digital convertor circuit for converting data output by each sensor for processing by the processor.</p>
+      <p id="p-00013-en" num="0013">In another aspect, the invention includes optical proximity sensors operable to detect changes in blood flow through the capillary bed of a patient's finger tip, and operable to detect body temperature of a temporal artery.</p>
+      <p id="p-00014-en" num="0014">In another aspect the invention includes a programmable central processing unit including, a memory for program storage, and at least program instructions for processing the sensor data and controlling the wireless interface. The wireless interface may be controlled by the processor operable according to a communications protocol to communicate with a remote server via a wireless network.</p>
+      <p id="p-00015-en" num="0015">In a second embodiment, the invention provides a system for assisting in emergency medical diagnosis comprising the portable instrument of the first embodiment and a server connected to a program memory and a database for electronic medical records, and operable in a medical facility network of caregiver work stations and at least one emergency room workstation.</p>
+      <p id="p-00016-en" num="0016">In another aspect, the system includes diagnostic analysis algorithms stored in the program memory for providing preliminary diagnosis alternatives derived from the sensor data set and the medical history data set, a selection of standard vital sign profile charts stored in the program memory and accessible during processing of the sensor data set and the medical history data set, and may include program instructions operable in the processor of the server to compare the vital sign data sets with standard vital sign profile charts and the medical history data set of the patient to produce preliminary diagnostic possibilities for the patient connected to the portable instrument.</p>
+      <p id="p-00017-en" num="0017">In other aspects, the system may include caregiver workstations having a first program accessible from the caregiver work station for analyzing initial and subsequent vital sign data obtained at intervals of time by the portable instrument to enable identification of trends in the vital sign data, and a second program in the caregiver work station for displaying in a single screen display to a medical practitioner trends over time in both the vital sign data and the patient's historical data.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 1</figref> illustrates one embodiment of an RVS device for measuring vital signs according to the present invention;</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 2</figref> illustrates a display panel of the embodiment depicted in <figref>FIG. 1</figref>;</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 3</figref> illustrates a block diagram of one embodiment of an RVS device as depicted in <figref>FIG. 1</figref>;</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 4</figref> illustrates a system block diagram depicting a typical system of use of the RVS device of <figref>FIGS. 1</figref>, <b>2</b>, and <b>3</b> according to the present invention;</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 5</figref> illustrates a simplified flow chart of one embodiment of the RVS device in operation as a stand-alone vital signs instrument;</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIGS. 6A and 6B</figref> illustrates a flow chart diagram depicting one embodiment of the processes that may be carried out by the system and the RVS device shown in <figref>FIGS. 1 and 2</figref>; and</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 7</figref> illustrates an alternate embodiment of an RVS device display for use with the system embodiment of <figref>FIGS. 6A and 6B</figref> according to the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <heading id="h-00006-en" level="1">Introduction</heading>
+      <p id="p-00025-en" num="0025">A medical diagnostic device and system that advances the state of the art is disclosed. The system, in broad terms includes a portable or handheld rapid vital signs (“RVS”) instrument that is operable in contact with a patient undergoing evaluation to quickly produce a vital sign data set; a communications interface in the vital signs instrument for wirelessly connecting and communicating with a database via a remote server over a network; a depository of patient medical history records in the database and accessible via a server connected to the network for providing a medical history data set; and a processor in communication with the rapid vital signs instrument and the database that may be operable in some embodiments to apply selected algorithms to the vital sign and the medical history data sets to produce a preliminary diagnosis of the patient connected to the rapid vital signs instrument.</p>
+      <p id="p-00026-en" num="0026">The concept of the invention may be considered as a precursor to a system of initial diagnoses that relies on accurate vital signs data and algorithms for analysis of the vital signs data, the circumstances and appearance of the patient, and other patient medical record data to determine most likely avenues for treatment and/or further tests. When a patient is brought into an emergency room time is often of the essence, and processing of incoming cases is often complicated by the number of patients awaiting examination and evaluation. The present invention is directed toward apparatus, and systems and methods for accurate and rapid assessment and diagnosis of patient illness or injury leading to appropriate treatment as soon as possible.</p>
+      <p id="p-00027-en" num="0027">The rapid vital signs instrument for use in the above described system preferably includes a processor having analog-to-digital convertors (ADC) for converting input sensor data to digital form, a memory for program and data storage, a display, programs for controlling operation of the device and its display, and a communications interface. Sensor data may be supplied to the processor from sensors, preferably configured for measuring blood pressure, pulse, blood oxygen saturation, and body temperature. Sensor data converted in the ADC is input to the processor may be processed for display, and also output via the communications interface to a physician's location in the system, generally an emergency facility. In one embodiment the RVS instrument may be enclosed in a single housing having designated contact positions for sensing the patient's blood pressure, pulse, blood oxygen saturation, and body temperature.</p>
+      <p id="p-00028-en" num="0028">Although the preferred embodiment is configured as a cuffless instrument, in some embodiments an inflatable cuff device operable with the RVS device for measuring the patient's blood pressure may be attached to enable measurement of blood pressure when a patient's finger is not accessible. The housing may be configured as a small portable cabinet having a display for reading out the sensor data, a keypad or similar device for entering instructions or requests, and a wireless transmitter for sending data through a network to caregivers. In other embodiments the housing may be a small, cylindrical device that may be carried in a caregiver's pocket. In some embodiments the display may be configured or adjusted so that it is or is not readily visible to the patient. In yet other embodiments the RVS may be configured for operation with or without a cuff for measuring blood pressure.</p>
+      <p id="p-00029-en" num="0029">The invention provides a single, combination RVS instrument, which may be coupled via wireless link to supply a vital signs data set to an EMR (electronic medical record) stored at a remote location. The RVS instrument (also known as a portable instrument herein) is designed to take accurate vital signs of the patient at the earliest examination point, including mobile emergency care in a field setting remote from a caregiver's location in a minimum of time. In some environments it may be possible to receive an assessment of likely problems causing the patient to need treatment. Sensors may be selected to provide vital signs data very rapidly—on the order of 15 seconds or less—as compared with conventional sphygmomanometers that typically take up to a minute or more to obtain a stable reading of blood pressure. The RVS instrument and system provides an early and fast assessment in a triage circumstance, enabling a minimum of lost time to take vital signs, assess the results, and more quickly determine the emergency care that needs to be administered as soon as possible.</p>
+      <heading id="h-00007-en" level="2">Example of Use</heading>
+      <p id="p-00030-en" num="0030">The following outline illustrates an example of using the RVS device in an emergency room situation, beginning with the patient's entrance into the emergency facility.</p>
+      <heading id="h-00008-en" level="2">I. START</heading>
+      <p id="p-00031-en" num="0031">A. Patient arrives at Emergency Room (ER) or Department (ED);</p>
+      <p id="p-00032-en" num="0032">B. Check in and process the patient.</p>
+      <heading id="h-00009-en" level="2">II. CHECK IN AND IDENTIFY THE PATIENT TO THE ER</heading>
+      <p id="p-00033-en" num="0033">A. Issue ID and case number.</p>
+      <p id="p-00034-en" num="0034">B. Scan bar code to submit to EMR (Electronic Medical Record).</p>
+      <p id="p-00035-en" num="0035">C. Check for EMR data.</p>
+      <p id="p-00036-en" num="0000">III. INPUT THE VITAL SIGNS FROM THE AMBULANCE (If in transport)</p>
+      <p id="p-00037-en" num="0036">A. Manually enter vitals signs from Pre-entry to the ER or use RVS device.</p>
+      <p id="p-00038-en" num="0037">B. Time stamp all entries.</p>
+      <heading id="h-00010-en" level="2">IV. TAKE VITAL SIGNS OF THE PATIENT IN THE ER</heading>
+      <p id="p-00039-en" num="0038">A. Place patient's hand on RVS sensing stage.</p>
+      <p id="p-00040-en" num="0039">B. Record the RVS vital signs data and time stamp.</p>
+      <p id="p-00041-en" num="0040">C. Verify complete and accurate data.</p>
+      <p id="p-00042-en" num="0041">D. Press SEND button to send data to doctor and EMR system.</p>
+      <heading id="h-00011-en" level="2">V. VERIFY THE VITAL SIGN DATA IS CORRECT</heading>
+      <p id="p-00043-en" num="0042">A. Check for accurate data collection.</p>
+      <p id="p-00044-en" num="0043">B. Add or delete data as needed.</p>
+      <heading id="h-00012-en" level="2">VI. SEND VITAL SIGN DATA TO THE EMR; VERIFY RECEIPT</heading>
+      <p id="p-00045-en" num="0044">A. Store the readings in memory; Print if requested.</p>
+      <p id="p-00046-en" num="0045">B. Send data to EMR; verify receipt by doctor.</p>
+      <heading id="h-00013-en" level="2">VII. RETAKE THE VITAL SIGNS WITH TIME STAMP, SEND TO EMR</heading>
+      <p id="p-00047-en" num="0046">A. Retake vital signs with time stamp; Repeat as needed.</p>
+      <p id="p-00048-en" num="0047">B. Select routine to run.</p>
+      <p id="p-00049-en" num="0048">C. Send data to EMR.</p>
+      <heading id="h-00014-en" level="2">VIII. CLEAN OR SANITIZE THE RVS DEVICE AS REQUIRED.</heading>
+      <p id="p-00050-en" num="0049">A. Apply uV radiation or other sanitizer.</p>
+      <p id="p-00051-en" num="0050">B. Prepare for next use.</p>
+      <heading id="h-00015-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00052-en" num="0051">
+        <figref>FIG. 1</figref> illustrates one embodiment of an RVS device <b>10</b> (or, instrument) for measuring vital signs including blood pressure, pulse, oxygen saturation, and body temperature. The RVS device <b>10</b> may include a housing <b>12</b> and a front panel <b>14</b> containing a display <b>16</b> for reading out vital signs data, and a keypad <b>18</b> for entering data or commands. The display <b>16</b> to be described with <figref>FIG. 2</figref> preferably includes figures for displaying the numerical values for the measured vital signs. The front panel <b>14</b> may also include designated buttons (which may be touch sensitive or physical button elements) for initiating such functions as patient ID <b>20</b>, Reset <b>22</b>, Read <b>24</b>, Print <b>26</b>, and Send <b>30</b>. The ID button may provide for receiving patient identification data from a bar code reader, for example that may be connected to the RVS device <b>10</b>. The Reset button <b>22</b> may be used to cancel an operation or to initialize the RVS unit <b>10</b> so that a new data set may be obtained. The Read <b>24</b> button may be used to begin reading out the vital signs data as it is being measured, after the RVS device <b>10</b> is properly placed in contact with patient's hand or fingers or forehead. The Print <b>26</b> button may be used to instruct the RVS device <b>10</b> to send the vital signs data set to a printer connected either via a wireless link (not shown) or to a system server or caregiver computer with access to a printer. The Send <b>30</b> button may be used to transmit the data set to a remote server or caregiver computer or to an EMR (Electronic Medical Record) database to add to a patient record being compiled there. An indicator light <b>32</b> may be provided on the front panel <b>14</b> of the RVS device <b>10</b> to indicate power ON, a Ready condition, a Low Power or Battery condition, etc.</p>
+      <p id="p-00053-en" num="0052">The front panel <b>14</b> of the RVS device <b>10</b> preferably includes position indicia on the surface of the front panel <b>14</b> for placement of the patient's fingers to sense blood flow parameters for measurements of blood pressure, pulse, and oxygen saturation. For example, a pad <b>34</b> may be delineated as the position for measuring oxygen saturation (O<sub>2</sub>) and the pad <b>36</b> may be delineated as the position for measuring systolic and diastolic blood pressure and pulse. These positions may preferably be placed close to the respective sensors (to be described). In the depicted embodiment the sensors, which are configured for sensing blood flow in the patient's finger tips—i.e., the flow of blood through the capillary bed within the finger tips—are located directly below the designated positions <b>34</b>, <b>36</b>. A temperature sensor <b>40</b> may be located in a forward end of the RVS device <b>10</b>, as indicted by an arrowhead <b>42</b>. Such a sensor <b>40</b> is preferably one that senses body temperature by contact with a patient's skin, for example on the forehead of the patient over the temporal artery just above the eyebrow. The RVS device <b>10</b> may also include a USB port connector <b>44</b> along or near an edge of the housing <b>12</b> for connecting a bar code reader, a blood pressure cuff sign, etc.</p>
+      <p id="p-00054-en" num="0053">A variety of physical configurations are possible. A blood pressure cuff (not shown because it is a well-known component used with conventional devices for measuring blood pressure), which may be operable in the conventional manner in some embodiments, may be connected to the RVS device <b>10</b>. For example, blood pressure may be measured with cuffs adapted to different positions on a person's upper arm, wrist, or the fingers of the person's hand. The cuff may include other types of sensors as, for example, a skin contact sensor for sensing body temperature. In all cases, the RVS device <b>10</b> includes the capability in a portable and compact instrument for rapidly measuring and reporting blood pressure, pulse rate, blood oxygen saturation, and body temperature.</p>
+      <p id="p-00055-en" num="0054">The sensor portions of the RVS device <b>10</b>, except in some cases the blood pressure cuff, are preferably accessed merely by touch—that is, by placing and holding the patient's hand in contact with the device. In an alternate embodiment (not shown) may be a feature for illuminating the patient's hand, or alternatively the sensor contact areas of the RVS device <b>10</b> with ultraviolet light to sanitize them. In another alternate embodiment, the RVS device <b>10</b> may be incorporated in a glove (not shown) such that the patient's hand is slipped into the glove. The glove may have a wrist gauntlet portion that includes an embedded blood pressure cuff and temperature sensor. The pulse, O2 and (alternately) temperature sensors may be included in the finger portions of the glove.</p>
+      <p id="p-00056-en" num="0055">In other configurations, small finger or hand sensors may be devised that combine all of the sensor elements into a single unit. Some RVS devices <b>10</b> may be linked to a smart phone or wrist phone (not shown) equipped with an application program (“AP”) for convenience. Such a configuration is compact and readily carried in a pocket by a care giver. Like the larger configurations described above, the smaller ones may include the transceiver and interface (to be described) necessary for communicating with an EMR (Emergency Medical Record) system.</p>
+      <p id="p-00057-en" num="0056">In some embodiments, the wireless interface or transceiver <b>70</b>, <b>126</b> (See <figref>FIGS. 3</figref>, <b>4</b>) may comprise a local hub in the RVS device <b>10</b>, operating per the Medical Body Area Network (“MBAN”) in the 2360-2400 MHZ band allocated by the FCC (Federal Communications Commission). The vital sign data set may be transmitted from the hub to a remote location. The 40 MHZ band between 2360 MHZ and 2400 MHZ is allocated for “the development of the Medical Body Area Network (MBAN) devices . . . to provide a flexible platform for the wireless networking of multiple body transmitters used for the purpose of measuring and recording physiological parameters and other patient information or for performing diagnostic or therapeutic functions, primarily in health care facilities” by the Federal Communications Commission (“FCC”) in a Report and Order and Further Notice of Proposed Rule Making (FCC <b>12</b>-<b>54</b>) released May 24, 2012.</p>
+      <p id="p-00058-en" num="0057">
+        <figref>FIG. 2</figref> illustrates a display panel <b>16</b> for the embodiment depicted in <figref>FIG. 1</figref>, which may be implemented in any of several suitable technologies well known in the art. Preferably the display is adapted to reading out numerical values for the vital sign data. The outline ‘boxes’ represent the location of the numeric figures for respectively systolic <b>50</b> and diastolic <b>52</b> blood pressure, heart beat or pulse <b>54</b>, blood oxygen saturation <b>56</b>, and body temperature <b>58</b>. The units of measurement may be imprinted in the display near the respective data numeric. For example, the blood pressure readings would be in mmHg, pulse in beats per minute (bpm), blood oxygen saturation in %, and body temperature in degrees F. (Fahrenheit) or C (Centigrade). The blood oxygen percent (%) figure indicates the percentage of hemoglobin in the blood that is “loaded” with oxygen (O<sub>2</sub>). The display may further include an indicator symbol or icon representing an alert or ‘flag’ to indicate an anomalous reading of some kind, or a READY symbol or icon (not shown).</p>
+      <p id="p-00059-en" num="0058">
+        <figref>FIG. 3</figref> illustrates a block diagram of one embodiment of circuitry <b>80</b> contained in the RVS device <b>10</b> depicted in <figref>FIG. 1</figref>. The RVS circuitry <b>80</b> shown in <figref>FIG. 3</figref> includes a CPU or processor <b>60</b> coupled to a non-volatile memory <b>62</b> for storing programs and data, a display driver <b>66</b> for reading out vital sign data on the display <b>16</b>, an A/D (analog-to-digital) convertor <b>64</b>, and a number of sensor input terminals coupled to the A/D convertor <b>64</b> for receiving data signals from the sensors for blood pressure <b>112</b>, pulse oxygen saturation <b>116</b>, and temperature <b>120</b>. Also connected to respective inputs of the CPU <b>60</b> are buttons or touch pad icons for entering commands or data for operating the RVS device <b>10</b>. These buttons include the ID <b>20</b>, Reset <b>22</b>, Read <b>24</b>, Print <b>26</b>, and Send <b>30</b> buttons. An input for receiving data from a bar code reader <b>124</b> may also be connected to an input of the CPU <b>60</b>. The RVS instrument <b>10</b> may be preferably connected via a communication interface <b>68</b> in a network <b>106</b> coupled to a system such as an emergency room in a hospital or clinic <b>104</b> as will be shown and described in <figref>FIG. 4</figref>. The interface <b>68</b> may include a wireless transmitter <b>70</b> as previously described or utilize a wireless mesh network or any other suitable wireless link well known in the art. The interface may further include a USB connection <b>72</b>.</p>
+      <p id="p-00060-en" num="0059">
+        <figref>FIG. 4</figref> illustrates a system block diagram depicting a typical system of use of the RVS device <b>10</b> of <figref>FIGS. 1</figref>, <b>2</b>, and <b>3</b> according to the present invention. The diagram of the RVS system <b>100</b> is shown in two sections separated by the vertical dashed line. On the left is a simplified block diagram of an RVS device <b>102</b> (which is the same as the RVS device <b>10</b> of <figref>FIG. 1</figref>) including an RVS processor <b>110</b> shown coupled via a wireless interface <b>126</b> through a network <b>106</b> to a simplified block diagram of a hospital or clinic <b>104</b>, shown to the right side of the vertical dashed line. Connected as inputs to the RVS processor <b>110</b> are a blood pressure sensor <b>112</b> and a conversion circuit <b>114</b> to match the sensor output signal to the input of the RVS processor <b>110</b>. Similarly, the blood oxygen and pulse (pulse oximeter) sensor <b>116</b> is coupled via a conversion circuit <b>118</b> to the processor <b>110</b>, and the temperature sensor <b>120</b> is coupled via its conversion circuit <b>122</b> to an input of the processor <b>110</b>. In some embodiments a bar code reader <b>124</b> may be coupled to the RVS device <b>102</b> for entering patient identification data into the RVS device <b>102</b>.</p>
+      <p id="p-00061-en" num="0060">In the cuffless RVS device <b>10</b> described herein the sensor elements themselves (see, e.g., <figref>FIGS. 3 and 4</figref>, sensors <b>112</b>, <b>116</b>, <b>120</b>), the sensors may preferably but not exclusively be optical proximity sensors well known in the art that employ light of a selected wavelength emitted by a light emitting diode (LED). The light signal, typically in the infra-red or visible portion of the spectrum, may be reflected from a portion of the vascular system such as a capillary bed or temporal artery, and the reflected signal detected by an photo detecting diode or transistor. Such reflected signals can correspond to the pressure changes in the capillary bed, providing a clear waveform of the heart rhythm. The detecting element may form part of a conversion or other circuit that may be integrated on a single chip. Thus, these elements can be manufactured in very small packages—on the order of a few millimeters square—thus enabling exceedingly compact sensors suitable for finger-tip applications. The small size of these sensor elements permits construction of RVS devices in a variety of small, portable, pocket-sized packages. The sensor elements may include amplifying, filtering, and other conversion circuitry to produce a signal compatible with external processing circuitry. The processing circuitry preferably includes suitable algorithms for interpreting the raw signal data produced by the sensors, including operations to average multiple readings taken over a span of time; to infer, from peak values of the pulse waveform the values of systolic and diastolic pressure within the capillary bed of a finger-tip; and further enabling estimation of the average time between peak events to determine pulse rate, etc.</p>
+      <p id="p-00062-en" num="0061">The hospital or clinic <b>104</b> (representing a medical facility <b>104</b> herein) may include a medical server <b>130</b> having a wireless communication interface for connection with the network <b>106</b>. Connected to the medical server <b>130</b> may be a program memory <b>132</b> and a database <b>134</b> for retaining electronic medical records. Also connected to the medical server <b>130</b> may be a network of care giver workstations including workstations for a physician <b>150</b>, a nurse <b>152</b>, and a scribe <b>154</b>. The system <b>104</b> may further include an EMR workstation <b>140</b> for entering, accessing, displaying, printing, etc. patient data. A display <b>142</b>, camera <b>144</b>, and a printer <b>146</b> may all be connected to the EMR workstation <b>140</b>. The workstations <b>140</b>, <b>150</b>, <b>152</b>, <b>154</b> may be mobile or located in emergency room and triage settings to access the EMR system and to receive the data set output of the RVS device <b>102</b> via a wireless connection to the network <b>106</b>.</p>
+      <p id="p-00063-en" num="0062">The server <b>130</b>, if accessed from the RVS device <b>102</b> or from a workstation that is connectable in the system network <b>106</b>, may be called upon to perform some of the analysis of data obtained via the RVS device <b>102</b>. In this way a variety of algorithms may be employed to assist the emergency room or triage care givers in determining the best next treatment step or process for the patient. The server <b>130</b> may access a variety of algorithmic programs stored in the database <b>134</b> for assessing the RVS sensor data sets. The server <b>130</b> and the work stations <b>140</b>, <b>150</b>, <b>152</b>, <b>154</b> may further include facilities for printing reports to care givers to assist in communicating outcomes of the assessment and vital signs data.</p>
+      <p id="p-00064-en" num="0063">The system diagram of <figref>FIG. 4</figref> is intended to be broadly representative and not particularly descriptive of a specific computer network or system in a patient care center. Further, as experience with the data in numerous instances of its use accumulate, the ability to refine the use of the RVS becomes an important by-product that will naturally improve its utility. In one example, the system may be operable to construct tables of vital sign data for an individual patient that lists the vital sign data along with an initial assessment based on comparison of the individual vital sign data with established normal ranges and indicating via a readout in a portion of the table whether an out-of-range vital sign is irregular, abnormal, critical, etc. to indicate to a caregiver that special attention is required. Such condition may also be used to trigger an alert, alarm, or flag to call attention to a vital sign data set that includes at least one questionable reading. Such readings may initiate a flag or other alarm if the RVS device <b>10</b> or server <b>130</b> is programmed to provide this feature.</p>
+      <p id="p-00065-en" num="0064">For example, program instructions provided in the system may include diagnostic analysis algorithms stored in the program memory for providing preliminary diagnosis alternatives derived from the sensor data set and the medical history data set. The program memory may further include a selection of standard vital sign profile charts stored in the program memory and accessible during processing of the sensor data set and the medical history data set. Program instructions operable in the processor of the server may also be provided to compare the vital sign data sets with standard vital sign profile charts and the medical history data set of the patient to produce a list of diagnostic alternatives for the patient connected to the portable instrument.</p>
+      <p id="p-00066-en" num="0065">In the description that follows, whenever RVS device <b>10</b> is identified, either RVS device <b>10</b> or RVS device <b>102</b> is applicable.</p>
+      <p id="p-00067-en" num="0066">
+        <figref>FIG. 5</figref> illustrates a simplified flow chart of one embodiment of the RVS device <b>10</b> in operation as a stand-alone vital signs instrument. The reader will recognize the similarity between the process illustrated in <figref>FIG. 5</figref> and the “Example of Use” set forth previously. The process starts at step <b>204</b> and advances to step <b>206</b> to enter patient ID into the RVS device <b>10</b> depicted in <figref>FIG. 1</figref>. Pressing the ID button <b>20</b> may be operable to condition the processor or CPU <b>60</b> (<figref>FIG. 2</figref>) to receive the ID information in barcode form. In step <b>210</b> the patient's middle and ring fingers are placed in contact with the areas designated Middle <b>34</b> and Ring <b>36</b> on the front panel <b>14</b> of the RVS device <b>10</b>, followed by pressing the RESET button <b>22</b> on the device <b>10</b> to initialize the sensors. In the next step, the READ button <b>24</b> is pressed followed by the sequencing, automatically controlled by a program in the non-volatile memory <b>62</b> (<figref>FIG. 3</figref>), through the vital sign measurements for blood pressure, blood oxygen saturation, pulse, and body temperature. The measurement data may preferably include time stamp information.</p>
+      <p id="p-00068-en" num="0067">Continuing with <figref>FIG. 5</figref>, the RVS device <b>10</b> tests the readings in step <b>224</b> to determine if they are valid readings, i.e., the measurement distinctly resulted in a definite numerical result. If the test indicates an error occurred—by a NO result in step <b>224</b>—the type of error is indicated (such as but not limited to insufficient contact with sensor pad <b>34</b> or <b>36</b>, residue on the contact pads <b>34</b> or <b>36</b>, fingers not stationary, etc.) in step <b>226</b> and the user is directed to press the RESET button in step <b>228</b> and return to step <b>222</b>, after correcting the reason for the error indication. Following valid readings in step <b>224</b> (indicated by YES) the readings are stored in step <b>230</b>, read out on the display <b>16</b> (<figref>FIGS. 1 and 2</figref>) in step <b>244</b>, and the process advanced to step <b>246</b>. Step <b>246</b> provides access to the PRINT button <b>26</b> on the front panel <b>14</b>. If the user desires a printed copy of the vital signs data the PRINT button <b>26</b> is pressed in step <b>248</b>; if not, then the process advances to step <b>256</b> to format the vital signs data for transmitting it to a server in a network for use by caregivers. For example, the RVS device <b>10</b> may employ its wireless interface to connect to the network <b>106</b> and server <b>130</b> of <figref>FIG. 4</figref> for storing in a database <b>134</b> so that caregivers in a hospital or clinic served by the network <b>106</b> may access the vital signs data from respective workstations <b>140</b> to <b>146</b> and <b>150</b> to <b>154</b>. Transmission of the vital signs data stored in the RVS device <b>10</b> memory <b>62</b> occurs in step <b>258</b> when the user presses the SEND button <b>30</b> on the front panel <b>14</b>. The RVS queries the user “Repeat RVS Measurements” in step <b>262</b>. If YES, the flow advances to step <b>222</b> to repeat the sequence; if NO, the flow advances to step <b>264</b> to clean the RVS device <b>10</b> for the next use, and the routine ends at step <b>240</b>.</p>
+      <p id="p-00069-en" num="0068">
+        <figref>FIGS. 6A and 6B</figref> illustrates a more comprehensive flow chart diagram depicting one embodiment of the processes that may be carried out by the RVS device <b>10</b> of <figref>FIGS. 1-3</figref> and the system <b>100</b> depicted in <figref>FIG. 4</figref>. The sequence may, of course vary from that shown depending on the particular architecture of the RVS device <b>10</b> (or RVS device <b>102</b>) and its relationship with the hospital or clinic <b>104</b> and other elements in the system <b>100</b>. As depicted, the process begins at step <b>304</b> to turn ON the RVS device <b>10</b>, which may follow preliminary access to the EMR and other patient data in steps <b>300</b> and <b>302</b>, including but not limited to identification, insurance, medical history and the like. This step <b>304</b> may be accompanied by illumination of the ON indicator light <b>32</b> (See <figref>FIG. 1</figref>). The entry point for patient identification may be via a bar code reader (for reading a patient's bracelet ID device having a bar code) connected to the RVS device <b>10</b> and a check, as in step <b>308</b> to determine if the EMR data is available. In an alternate embodiment, a keyboard or keypad on the RVS device <b>10</b> (if so equipped) may be used to enter a patient ID.</p>
+      <p id="p-00070-en" num="0069">At step <b>310</b> the patient's hand is applied to the RVS device <b>10</b>, which may be configured as a small portable unit hanging from the bedside or gurney frame, a pocket-sized instrument, or a glove-like device. In any case placing the hand on the front panel <b>14</b> of the RVS device <b>10</b>, or attaching the RVS device <b>10</b> to the patient's hand if so configured, or a B/P cuff to the patient's arm in step <b>310</b>, setting a READY indicator (not shown in <figref>FIG. 1</figref> or <b>2</b> for clarity, but may be a signal on the display <b>16</b>), followed by pressing the RESET button <b>22</b> to initialize the sensors (in step <b>312</b>) prepares the RVS device <b>10</b> to sense the respective vital signs data when the READ button <b>24</b> is pressed at step <b>322</b> as will be described.</p>
+      <p id="p-00071-en" num="0070">Continuing with <figref>FIG. 6A</figref>, a test query provides in step <b>314</b> to select connecting to the server <b>130</b> (in the system <b>100</b> of <figref>FIG. 4</figref>) to retrieve a patient record. If it is known that the patient may have a record in the facility <b>104</b> then the flow is along the YES path to access the record in step <b>316</b>, download the vital sign history (for example) in step <b>318</b>, and store the vital sign history in the local non-volatile memory <b>62</b> of the RVS device <b>10</b> in step <b>320</b>. If, on the other hand a patient's vital sign history or other pertinent medical record is not in the database <b>134</b> of the facility <b>104</b>, the flow advances along the NO path to step <b>322</b>.</p>
+      <p id="p-00072-en" num="0071">Step <b>322</b> initiates the measurement process in the RVS device <b>10</b> when the READ button <b>24</b> is pressed to “read” the outputs of the sensors for the vital signs of the patient. Here again, the sequence may be to perform a measurement of blood pressure (both systolic and diastolic values), blood oxygen saturation, pulse, and body temperature in this example. The measured values appear in the display <b>16</b> in the designated regions of the display. Blood pressure is recorded as two values, the systolic (contraction of the heart) and diastolic (relaxation of the heart), blood oxygen saturation is indicated as a percentage (%) figure, pulse is indicated in beats per minute (bpm), and body temperature in degrees Fahrenheit (° F.) or, in some units if the scale is selectable, degrees Centigrade (° C.). In step <b>322</b> the vital sign data may be time stamped to enable correlation of the vital sign data with the passage of time form the first measurement to later measurements on the same patient. This information is useful in monitoring trend lines—patterns of data that may in themselves indicate medical conditions not otherwise detectable with a single set of vital sign data.</p>
+      <p id="p-00073-en" num="0072">Continuing with <figref>FIG. 6A</figref>, a check is made at step <b>324</b> for valid readings, and if NO, an error occurs, the error type may be indicated in step <b>326</b>, the reading discarded. The flow then advances to block <b>328</b> where the READ button <b>24</b> is pressed again (or, in an alternate embodiment, a REPEAT button (not shown) is pressed to return the flow to the input of step <b>322</b> to read the parameters again, preferably after re-checking the placement of the patient's finger on the sensor pads <b>34</b>, <b>36</b>. If the readings are determined valid in step <b>324</b>, the flow advances along the YES path to step <b>330</b>.</p>
+      <p id="p-00074-en" num="0073">Proceeding with <figref>FIG. 6B</figref>, after storing the readings in the RVS memory at step <b>330</b> (<figref>FIG. 6A</figref>), the flow may advance to perform a preliminary test for out-of-range results in step <b>332</b> and comparing it with historical data from, e.g., the EMR if it is available. If an out-of-range parameter is identified, indicating a possible health-related alarm situation, an ALERT may be issued in step <b>334</b>, followed by proceeding to RESET the device in step <b>336</b> and to END the routine in step <b>340</b>. Note that in step <b>332</b>, the out of range data may be determined with reference to a selected profile table of values stored in memory according to patient's age, gender, overall physical appearance, type of injury or disease condition, etc. An ALERT may be indicated by visual or aural means, such as an indicia on the display <b>16</b> or an annunciator built into the RVS device <b>10</b>, neither of which are shown in the figures.</p>
+      <p id="p-00075-en" num="0074">Alternatively, if the choice is to continue, the flow moves forward to step <b>342</b> (an optional step) to decide whether to select local processing of the sensor data if it is within normal ranges for the patient. If the decision is to select local processing in step <b>342</b>, a profile set corresponding to the patient is selected in step <b>338</b> and the process may call up a selected routine in block <b>352</b> from a list of processing routines that may include, for example, Repeat the measurement; Average the data from the measurements; Estimate a trend in the measurements; Display the data; or Make a tentative diagnosis. From block <b>352</b> the flow advances to step <b>354</b> to compare and readout both the original and the processed data results. The care giver may then request to REPEAT the RVS test in step <b>358</b> and return to step <b>322</b> via the path marked with an asterisk (*) or, if no repeat is needed, to advance to step <b>360</b> to format the RVS and historical data for transmission to the server or hub of the RVS device in step <b>362</b>, after which the process ENDs at step <b>340</b>.</p>
+      <p id="p-00076-en" num="0075">Returning to step <b>342</b>, if local processing was declined, the flow proceeds to step <b>344</b>, which provides for printing out a paper copy of the results of the RVS tests in steps <b>346</b> and <b>348</b>. Following printing the flow advances to step <b>356</b> to format the data for transmission to the server <b>130</b> in the facility <b>104</b>, and transmit the vital sign data to the server <b>130</b> in step <b>362</b>. Again, the current and historical data may be compared in step <b>350</b>, and if YES then followed by the step <b>352</b> to select a routine for analysis of the parameter data reported by the RVS device <b>10</b>. If the choice is made in step <b>346</b> to decline a comparison of current and historical data for the patient, the flow follows the path to format the data for transmission to the server in step <b>356</b> and send the transmission in step <b>362</b>. Thereafter, the process ENDs in step <b>340</b> after cleaning the RVS device <b>10</b> in step <b>364</b> for the next use as previously described.</p>
+      <p id="p-00077-en" num="0076">One of the optional subroutines occurs at step <b>314</b> in <figref>FIG. 6A</figref>, whereupon the care giver may opt to access the EMR in step <b>316</b> and download the vital sign history of the patient in step <b>318</b>. If this option is selected, the vital sign history may be stored in the local memory <b>362</b> of the RVS device <b>10</b> in step <b>320</b>. The flow then returns to step <b>322</b> described previously.</p>
+      <p id="p-00078-en" num="0077">In notes that are placed adjacent several of the steps in <figref>FIG. 3</figref>, explanatory details are provided to assist understanding. The START block <b>304</b> commences with the care giver turning ON the RVS accompanied by illumination of, for example, a green light indicator. The bar code reader mentioned in conjunction with step <b>306</b> is an optional feature. During step <b>328</b>, this step may include other actions such as RESET, BYPASS or other options. In the validity check step <b>324</b> it may be necessary to check that separate algorithms or profile set for checking the validity are appropriate for the patient.</p>
+      <p id="p-00079-en" num="0078">
+        <figref>FIG. 7</figref> illustrates one example of a typical vital signs profile chart or display of the type that may be used and displayed by a display <b>142</b> coupled to the server <b>130</b> in the system of <figref>FIG. 4</figref> in reporting the results of measurements performed by the RVS device <b>10</b>. The display <b>142</b> displays a graphic image <b>402</b> includes a patient identifier <b>404</b> and sections configured as separate graphs or plots of blood pressure <b>410</b>, pulse <b>416</b>, blood oxygen saturation <b>418</b>, and body temperature <b>420</b>. The blood pressure graph <b>410</b> includes a sequence of histograms showing the systolic <b>412</b> and diastolic <b>414</b> values recorded at specified times marked on the horizontal axis. The vertical axis is preferably marked in units of mmHg. The graph for pulse <b>416</b> may display the pulse recorded at the same times as the blood pressure readings in graph <b>410</b>, on a vertical scale marked in beats per minute. Similarly, the graph for blood oxygen saturation (“O<sub>2 </sub>Sat”) may be recorded at the same time intervals as the blood pressure and pulse, with their percentage values corresponding to the percent numbers marked on the vertical scale. Finally, the body temperature graph <b>420</b>, with its vertical scale marked in degrees F. or degrees C. (for example, degrees F. on the left vertical axis and degrees C. marked on the right vertical axis) may be shown at each of the same times that the other vital sign data is displayed. In this way each graph displays a sequence of readings over time at intervals marked on the horizontal axis, allowing trends to be spotted and correlations identified among the individual vital signs. Such information about trends or patterns or correlations may disclose particular conditions of interest to the caregiver or physician.</p>
+      <p id="p-00080-en" num="0079">In a hypothetical example of the use of vital sign data provided by the RVS device <b>10</b>, such as for a 27 year old male patient of average height and weight and apparently in “great” physical condition, four sets of vital signs parameters may be obtained. The state of the patient may be estimated by an algorithmic process and estimated according to the data reported by the RVS device <b>10</b>. In this example the state may be identified as Normal (regular/normal, good condition), Abnormal (not normal/alarming, cause for concern), Critical (Abnormal for several minutes and or continue to worsen), and Irregular (sensors disconnected, providing false readings?). These “State” conditions may thus be interpreted as an initial, preliminary assessment to draw the attention of the care giver to the RVS results. As additional RVS readings are taken at selected intervals, a pattern (such as provided by the display of <figref>FIG. 7</figref>) of “states” may emerge to clarify these initial assessments or to indicate the effects of treatment. These chart sets may be stored in the local memory <b>62</b> of the RVS device <b>10</b> as described in <figref>FIG. 6A</figref>, step <b>320</b>.</p>
+      <heading id="h-00016-en" level="1">CONCLUSION</heading>
+      <p id="p-00081-en" num="0080">To summarize, the present invention provides the ability to (1) take all vital sign readings at one time, and repetitively at intervals and locations during the patient's movement through the hospital system, thus providing a continuous, timely record; (2) format the vital sign data and send it wirelessly to the EMR system for ready access and retrieval as needed by care givers; (3) provide automated preliminary analyses of the data along with other patient information to determine or indicate the most likely possible explanations of the illness or injury experienced by the patient; (4) assist the hospital determine the tests to be ordered to minimize lost time; (5) reduce the number of vital sign data input errors by formatting the data and transmitting it directly from the RVS instrument; and (6) ensure correct association of the patient ID and vital sign data.</p>
+      <p id="p-00082-en" num="0081">The foregoing descriptions and illustrations of embodiments of the invention are representative examples of possible implementations of the concept of a small portable instrument for rapidly and accurately measuring at least four vital signs of a patient experiencing trauma or illness, whether mild or severe, and of the transmission and integration of the instrument's data via communication links with the computer system and network of a medical treatment location whether it be a hospital, clinic, triage center, temporary field hospital, and the like to medical personnel engaged in treating patients, particularly in an “emergency department” setting. The scope of the invention is not limited to these particular illustrations but may include various combinations thereof that may occur to persons of skill in the art. The concept of the invention is a precursor to a system of initial diagnosis that relies on rapid and accurate vital signs data and algorithms for analysis of the vital signs data, the circumstances and appearance of the patient, and other patient medical record data to determine most likely avenues for treatment and/or further tests. When a patient is brought to an Emergency Room time is often of the essence, and processing of incoming cases is often complicated by the number of patients awaiting examination and evaluation. The present invention is directed toward apparatus, and systems and methods for accurate and rapid assessment and diagnosis of patient illness or injury leading to appropriate treatment as soon as possible.</p>
+      <p id="p-00083-en" num="0082">While the invention has been shown in only one of its forms, it is not thus limited but is susceptible to various changes and modifications without departing from the spirit thereof.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A portable instrument for providing rapid measurements of vital signs, comprising:
+<claim-text>a handheld, cuffless device operable during contact with a patient undergoing health evaluation to produce a vital sign data set for the patient;</claim-text><claim-text>an assembly of sensors in the device for measuring and outputting measurement values for blood pressure, pulse, blood oxygen saturation, and body temperature;</claim-text><claim-text>a processor in the device operable under programmed control to receive and process the measurement values output by the sensors and produce a vital signs data set; and</claim-text><claim-text>a wireless interface coupled to the processor for transmitting the vital sign data set to an electronic medical record in a remote database.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The instrument of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising:
+<claim-text>a display controlled by the processor for reading out the vital sign data set.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The instrument of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising:
+<claim-text>a single housing having finger stations for sensing by contact the patient's blood pressure, pulse, blood oxygen saturation, and body temperature.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The instrument of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising:
+<claim-text>a cuffless sensor for measuring by contact the patient's systolic and diastolic blood pressure;</claim-text><claim-text>a pulse oximeter sensor for measuring by contact the patient's pulse and blood oxygen saturation;</claim-text><claim-text>a thermometer for measuring by contact the patient's body temperature; and</claim-text><claim-text>at least one analog-to-digital convertor circuit for converting data output by each sensor for processing by the processor.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The instrument of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the assembly of sensors comprise:
+<claim-text>optical proximity sensors operable to detect changes in blood flow through the capillary bed of a patient's finger tip; and</claim-text><claim-text>operable to detect body temperature of a temporal artery.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the processor comprises:
+<claim-text>a programmable central processing unit including, a memory for program storage; and</claim-text><claim-text>at least program instructions for processing the sensor data and controlling the wireless interface.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The instrument of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the wireless interface comprises:
+<claim-text>a wireless transceiver controlled by the processor operable according to a communications protocol to communicate with a remote server via a wireless network.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A system for emergency medical diagnosis comprising the portable instrument of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising:
+<claim-text>a server connected to a program memory and a database for electronic medical records, and operable in a medical facility network of caregiver work stations and at least one emergency room workstation.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The system of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the emergency room workstation comprises:
+<claim-text>a computer having a display and a printer coupled thereto.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The system of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, further comprising:
+<claim-text>diagnostic analysis algorithms stored in the program memory for providing preliminary diagnosis alternatives derived from the sensor data set and the medical history data set.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The system of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, further comprising:
+<claim-text>a selection of standard vital sign profile charts stored in the program memory and accessible during processing of the sensor data set and the medical history data set.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The system of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein:
+<claim-text>program instructions operable in the processor of the server to compare the vital sign data sets with standard vital sign profile charts and the medical history data set of the patient to produce a list of diagnostic alternatives for the patient connected to the portable instrument.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The system of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the caregiver workstations comprise:
+<claim-text>a first program accessible from the caregiver work station for analyzing initial and subsequent vital sign data obtained at intervals of time by the portable instrument to enable identification of trends in the vital sign data.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The system of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, comprising:
+<claim-text>a second program in the caregiver work station for displaying in a single screen display to a medical practitioner trends over time in both the vital sign data and the patient's historical data. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257658A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257658A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257658A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257658A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257658A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257658A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257658A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257658A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257658A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257658A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257658A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257658A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257658A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257658A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257658A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257658A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257658A1_00009.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257658A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257658A1.PDF" type="pdf" size="783674" pages="16" />
+</lexisnexis-patent-document>

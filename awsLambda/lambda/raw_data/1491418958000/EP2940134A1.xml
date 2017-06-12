@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940134A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091149" date-changed="20151202" time-changed="052202">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121940055">
+        <country>EP</country>
+        <doc-number>2940134</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13868750</doc-number>
+        <date>20131225</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>jpn</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012283421</doc-number>
+        <date>20121226</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2012283421</doc-number>
+        <kind>A</kind>
+        <date>20121226</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2013007598</doc-number>
+        <kind>W</kind>
+        <date>20131225</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2012283421</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013007598</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>JP20120283421</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2013JP07598</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150722</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151202">
+      <classification-ipcr sequence="1">
+        <text>C12N  15/09        20060101AFI20140717BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>09</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140717</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K  39/145       20060101ALI20140717BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>145</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140717</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61K  48/00        20060101ALI20140717BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>48</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140717</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61P  31/16        20060101ALI20140717BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>P</subclass>
+        <main-group>31</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140717</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>A61P  35/00        20060101ALI20140717BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>P</subclass>
+        <main-group>35</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140717</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>C12N   7/02        20060101ALI20140717BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>7</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140717</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>C12N   7/04        20060101ALI20140717BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>7</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140717</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151202">
+      <classification-cpc sequence="1">
+        <text>C12N  15/86        20130101 FI20151122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>86</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K  39/0011      20130101 LI20151122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>0011</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K  39/12        20130101 LI20150528BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150528</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K  39/145       20130101 LI20151123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>145</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61K  48/00        20130101 LA20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>48</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61K2039/5252      20130101 LA20151122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2039</main-group>
+        <subgroup>5252</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61K2039/5256      20130101 LA20151122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2039</main-group>
+        <subgroup>5256</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C12N   7/00        20130101 LI20151122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C12N   7/02        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>7</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C12N   7/04        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>7</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C12N  15/09        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>09</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C12N2760/18734     20130101 LA20151122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2760</main-group>
+        <subgroup>18734</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C12N2760/18743     20130101 LA20151123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2760</main-group>
+        <subgroup>18743</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>C12N2760/18762     20130101 LA20151122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2760</main-group>
+        <subgroup>18762</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">MITHILFE DES MENSCHLICHEN PARAINFLUENZAVIRUS-TYP- 2-VEKTORS HERGESTELLTER IMPFSTOFF</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">VACCINE PREPARED UTILIZING HUMAN PARAINFLUENZA VIRUS TYPE 2 VECTOR</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">VACCIN PRÉPARÉ À L'AIDE D'UN VECTEUR DU VIRUS PARAINFLUENZA HUMAIN DE TYPE 2</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>BioComo Inc.</orgname>
+            <registered-number>101331483</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>1325 Komono Komono-cho</address-1>
+              <city>Mie-gun, Mie 510-1233</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="2" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Mie University</orgname>
+            <registered-number>101274093</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>1577, Kurimamachiya-cho</address-1>
+              <city>Tsu-shi, Mie 514-8507</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>FUKUMURA, Masayuki</name>
+            <address>
+              <address-1>c/o BioComo Inc. 1325 Ooaza Komono Komono-cho</address-1>
+              <city>Mie-gun Mie 510-1233</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>OHTSUKA, Junpei</name>
+            <address>
+              <address-1>c/o BioComo Inc. 1325 Ooaza Komono Komono-cho</address-1>
+              <city>Mie-gun Mie 510-1233</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>NOSAKA, Tetsuya</name>
+            <address>
+              <address-1>c/o Mie University Graduate School of Medicine 2-174 Edobashi</address-1>
+              <city>Tsu-shi Mie 514-8507</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>TSURUDOME, Masato</name>
+            <address>
+              <address-1>c/o Mie University Graduate School of Medicine 2-174 Edobashi</address-1>
+              <city>Tsu-shi Mie 514-8507</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5">
+          <addressbook lang="eng">
+            <name>KAWANO, Mitsuo</name>
+            <address>
+              <address-1>c/o Mie University Graduate School of Medicine 2-174 Edobashi</address-1>
+              <city>Tsu-shi Mie 514-8507</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6">
+          <addressbook lang="eng">
+            <name>HARA, Ken-ichiro</name>
+            <address>
+              <address-1>c/o Mie University Graduate School of Medicine 2-174 Edobashi</address-1>
+              <city>Tsu-shi Mie 514-8507</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Schwarz &amp; Partner</name>
+            <registered-number>101130944</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Patentanwälte Wipplingerstraße 30</address-1>
+              <city>1010 Wien</city>
+              <country>AT</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13007598</doc-number>
+        <date>20131225</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014103310</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151119">
+      <main-family family-id="166469932">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940134</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103310</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104968782</doc-number>
+            <kind>A</kind>
+            <date>20151007</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150329874</doc-number>
+            <kind>A1</kind>
+            <date>20151119</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166469931">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940134</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103310</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104968782</doc-number>
+            <kind>A</kind>
+            <date>20151007</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150329874</doc-number>
+            <kind>A1</kind>
+            <date>20151119</date>
+          </document-id>
+          <application-date>
+            <date>20131225</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Disclosed are: a virus vector in which a gene encoding an antigenic polypeptide is integrated in human parainfluenza virus type 2 gene, wherein the antigenic polypeptide is expressed in the form of a fusion protein with a viral structural protein; and a method for producing the same. The virus vector of the present invention contains a quantitatively large amount of the antigenic peptide on the virus particle and can efficiently deliver the antigenic polypeptide to a target cell.<img id="imga-00001-en" wi="82" he="53" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">Technical Field</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to an RNA virus vector useful as a vaccine for prevention or treatment of a disease and an inactivated vaccine.</p>
+    <heading id="h-00002-en">Background Art</heading>
+    <p id="p-00002-en" num="0002">Viruses of the family Paramyxoviridae have negative-sense single-stranded RNA as the genome. Their vectors capable of highly expressing a foreign gene have been prepared by reverse genetics methods and considered to have excellent properties as vectors for gene therapy or vectors for recombinant vaccines. The life cycles of these viruses are free from DNA phase. In addition, all processes of transcription and replication occur cytoplasmically outside the nucleus. For these reasons, the probability of homologous recombination with chromosomal DNA is very small, and the risk of developing cancer due to gene recombination into the chromosome is also small.</p>
+    <p id="p-00003-en" num="0003">The present inventors have previously attempted to vectorize human parainfluenza virus type 2 (hereinafter, referred to as hPIV2), a negative-sense single-stranded RNA virus, belonging to the genus Rubulavirus within the subfamily Paramyxovirinae of the family Paramyxoviridae, and studied use thereof as vectors for vaccines and for gene therapy.</p>
+    <p id="p-00004-en" num="0004">In this process, the present inventors have constructed an F gene-defective vector of hPIV2 completely lacking the F gene of a viral structural protein. This vector has non-transmissible or single-round-infectious properties. The present inventors have also successfully obtained stably F gene-expressing packaging cells having the ability to produce high-titer vectors for production of the F gene-defective vector. The F gene-defective vector can yield an infectious vector carrying the F protein on the virus envelope, only in packaging cells expressing F gene. On the other hand, in cells or tissues expression of F gene, this vector can do so-called self-replication, but cannot yield an infectious vector. Inexhaustible vector multiplication therefore does not occur in recipients. Thus, this vector is highly safe (Patent Literature 1).</p>
+    <p id="p-00005-en" num="0005"> Nonclinical trials, clinical research, clinical trials, etc., have reported many results indicating the efficacy of vaccines or gene therapy using recombinant live RNA virus vectors or attenuated recombinant RNA viruses (Non Patent Literatures 1 to 9). At the moment, however, there is no report on recombinant live RNA virus vector preparations approved as medicines by the Food and Drug Administration and the European Medicines Agency. This is presumably because in the case of using recombinant live RNA viruses as vectors, large amounts of viruses and foreign gene products are still produced in infected cells, though safety measures are taken in such a way that pathogenicity is reduced by use of attenuated viruses or non-transmissible vectors are utilized; thus concerns such as their influence on homeostasis or mutations of the foreign genes cannot be dispelled.</p>
+    <p id="p-00006-en" num="0006">Thus, vaccines whose genome has been inactivated or degraded into components so as to prevent the transcription or replication of the virus are highly safe. Treatment methods with formalin are often used in the preparation of such inactivated vaccines.</p>
+    <p id="p-00007-en" num="0007">Unfortunately, the inactivated vaccines, which are considered to be highly safe, also present safety problems. In the 1960s, a formalin-inactivated RSV vaccine was developed from RSV belonging to the family Paramyxoviridae, and vaccination with this vaccine resulted in severe infant patients and two cases of death after the natural infection of RSV. Then, the cause thereof was intensively investigated. The inactivation treatment of the virus with formalin was found to alter the three-dimensional structure of F membrane protein. It was revealed that antibodies having no neutralizing activity against the F membrane protein altered by the vaccination are produced, and the antibody having neutralizing activity against the F membrane protein having a normal structure is not produced because the F membrane protein having a normal structure is absent due to the formalin treatment. After the vaccination, the natural infection of the RSV virus causes the response of the body to excessively produce the antibodies having no neutralizing activity in order to suppress the multiplication of the virus. As a result, a large number of eosinophils, which are not seen in common RSV infection, are infiltrated into lung tissues. Along with this, the levels of cytokines such as IL-4 and IL-5 are elevated so that neither local IgA antibodies nor cellular immunity is induced, probably leading to increased severity.</p>
+    <p id="p-00008-en" num="0008">In addition, the formalin-inactivated RSV is known to be inferior in the ability to maturate dendritic cells, which are antigen-presenting cells, to live RSV. Inactivation by UV treatment, heat treatment, or the like, without the use of formalin has also been studied, but has not yet been put in practical use because all of these treatments have the low ability to activate dendritic cells and further induce inflammatory response. Likewise, the infiltration of eosinophils and atypical measles have also been reported as to a formalin-inactivated vaccine of measles virus belonging to the family Paramyxoviridae.</p>
+    <p id="p-00009-en" num="0009">Meanwhile, animal testing has reported that an inactivated RSV vaccine designed to be able to induce Th1 immunity is effective for preventing viral infection. This suggests the possibility that an inactivated vaccine that can induce Th1 can solve these problems.</p>
+    <p id="p-00010-en" num="0010">Virus vectors are considered to offer high in vivo transgene expression. Some reports, however, show that these vectors are not highly workable as vectors for gene therapy, because the transgene expression in virus-infected cells or tissues is not quantitative or has a low expression level. The suppression of expression by pre-existing antibodies against the transferred virus vectors or the suppression of expression by antibodies against the virus vectors associated with a plurality of doses of the vectors has also been reported. These reports imply the difficulty in using virus vectors having the high ability to induce antibodies, in gene therapy, which requires over a certain level of gene expression, albeit transient.</p>
+    <p id="p-00011-en" num="0011">In the case of transferring a foreign gene to a virus vector and expressing the gene, the foreign gene product has no packaging signal and, therefore, is usually not contained in the vector. The virus vector after in vivo administration infects a recipient cell where transcription and replication in turn occur so that the foreign gene product is produced for the first time. Thus, the expression of the foreign gene is suppressed or reduced when neutralizing antibodies or the like inhibit the infection, transcription or replication, etc., of the virus vector.</p>
+    <p id="p-00012-en" num="0012">The efficiency of viral infection of cells or tissues is low in vivo, or even if the cells or tissues are virus-infected, transcription or replication does not occur or occurs with very poor efficiency in vivo so that the foreign gene is hardly expressed in most cases. This is probably because, for example: in in vivo infected cells, interferons or the like induced by the viral infection minimize the transcription or replication of the virus; and extracellular matrix or the like hinders the virus vector from reaching a target cell.</p>
+    <heading id="h-00003-en">Citation List</heading>
+    <heading id="h-00004-en">Patent Literature</heading>
+    <p id="p-00013-en" num="0013">Patent Literature 1: <patcit id="pcit-00001" dnum="WO2012108195A"><text>WO2012/108195</text></patcit></p>
+    <heading id="h-00005-en">Non Patent Literature</heading>
+    <p id="p-00014-en" num="0014">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>Non Patent Literature 1: <nplcit id="ncit-00001" npl-type="s"><text>Vitology. 377 (2), 225 (2008</text></nplcit>)</li>
+        <li>Non Patent Literature 2:<nplcit id="ncit-00002" npl-type="s"><text> Virology. 362 (1), 139 (2007</text></nplcit>)</li>
+        <li>Non Patent Literature 3:<nplcit id="ncit-00003" npl-type="s"><text> Vitology. 16 (11), 21883 (2008</text></nplcit>)</li>
+        <li>Non Patent Literature 4: <nplcit id="ncit-00004" npl-type="s"><text>Vaccine. 28, 2771, (2010</text></nplcit>)</li>
+        <li>Non Patent Literature 5: <nplcit id="ncit-00005" npl-type="s"><text>J Virol. 6521, (2011</text></nplcit>)</li>
+        <li>Non Patent Literature 6: <nplcit id="ncit-00006" npl-type="s"><text>J Virol. 1089, (2002</text></nplcit>)</li>
+        <li>Non Patent Literature 7: <nplcit id="ncit-00007" npl-type="s"><text>Vaccine. 29, 8557, (2011</text></nplcit>)</li>
+        <li>Non Patent Literature 8: <nplcit id="ncit-00008" npl-type="s"><text>J Virol. 584, (2009</text></nplcit>)</li>
+        <li>Non Patent Literature 9: <nplcit id="ncit-00009" npl-type="s"><text>Vet Immunol Immunopathol. 146 (1), 92 (2012</text></nplcit>)</li>
+      </ul>
+    </p>
+    <heading id="h-00006-en">Summary of Invention</heading>
+    <heading id="h-00007-en">Technical Problem</heading>
+    <p id="p-00015-en" num="0015">An object of the present invention is to provide a virus vector of the family Paramyxoviridae that is useful as a vaccine for prevention or treatment of a disease and is capable of efficiently delivering an antigenic polypeptide (including an antigenic protein and peptide) to a target cell, and an inactivated vector.</p>
+    <heading id="h-00008-en">Solution to Problem</heading>
+    <p id="p-00016-en" num="0016">The present inventors have found that an antigenic protein or peptide can be delivered efficiently and quantitatively to a target cell by fusing a structural gene of a virus with a gene of the antigenic protein or peptide, followed by expression.</p>
+    <p id="p-00017-en" num="0017">The present inventors have also successfully constructed the following 4 types of vectors: 1) a type in which an antigen gene is located on the 3'-terminal side (hereinafter, concerning a coding strand) of a gene of membrane protein HN, whereby the antigenic peptide is expressed outside the vector envelope; 2) a type in which an antigen gene is located on the 3'-terminal side of F gene of an F-packaging cell, whereby the antigenic peptide is expressed inside the vector envelope; 3) a type of 1) and 2) in combination, whereby the antigenic peptide is expressed both inside and outside the vector envelope; and 4) a type in which an antigen is fused with a membrane or intracellular domain of a membrane protein functioning as a viral packaging signal, whereby the antigen is taken up on the vector. This allows a plurality of antigens to be transferred in various manners to vectors.</p>
+    <p id="p-00018-en" num="0018"> Specifically, the present invention relates to a virus vector capable of efficiently delivering an antigenic polypeptide to a target cell and specifically provides the following aspects: <ol><li>[1] a virus vector in which a gene encoding an antigenic polypeptide is integrated in a viral gene of the family Paramyxoviridae, wherein the antigenic polypeptide is expressed in the form of a fusion protein with a viral structural protein or a portion thereof;</li><li>[2] the virus vector according to [1], wherein the fusion protein is a fusion protein with one or more selected from HN protein, F protein, and M protein of the virus, or a portion thereof;</li><li>[3] the virus vector according to [1] or [2], wherein the gene encoding an antigenic polypeptide is <ol><li>1) located on the 3'-terminal side of the HN gene, wherein the antigenic polypeptide is expressed outside the vector envelope,</li><li>2) located on the 3'-terminal side of the F gene, wherein the antigenic polypeptide is expressed inside the vector envelope, or</li><li>3) located on each of the 3'-terminal side of the HN gene and the 3'-terminal side of the F gene, wherein the antigenic polypeptide is expressed both outside and inside the vector envelope;</li></ol></li><li>[4] the virus vector according to [1] or [2], wherein the antigenic polypeptide is fused with a membrane or intracellular domain of the F or HN membrane protein serving as a viral packaging signal so that the antigenic polypeptide is retained on the vector envelope;</li><li>[5] the virus vector according to any of [1] to [4], wherein the virus is an F protein-defective virus of the family Paramyxoviridae;</li><li>[6] the virus vector according to any of [1] to [5], wherein the virus has undergone nucleic acid inactivation treatment;</li><li>[7] the virus vector according to [6], wherein the nucleic acid inactivation treatment avoids altering (does not substantially alter) the structure of the virus envelope;</li><li>[8] the virus vector according to any of [1] to [7], wherein the antigenic polypeptide is influenza virus M2e protein or a fragment thereof;</li><li>[9] the virus vector according to any of [1] to [7], wherein the antigenic polypeptide is any one or more selected from: the group consisting of an antigenic peptide of a virus selected from influenza viruses including a highly virulent influenza virus, parainfluenza virus type 3, RS virus, Hendra virus, SARS virus, Nipah virus, Lassa virus, dengue virus, West Nile virus, human metapneumovirus, Ebola virus, hantavirus, AIDS virus, hepatitis C virus, Lassa virus, human papillomavirus, rubella virus, rotavirus, norovirus, Crimean-Congo hemorrhagic fever virus, herpesvirus, cytomegalovirus, and papillomavirus; the group consisting of an antigenic peptide of a bacterium selected from A beta-hemolytic streptococcus, Mycobacterium tuberculosis, Vibrio cholerae, and mycoplasma; and the group consisting of an antigen selected from RSV F protein, cancer antigens gp100, MUC1, NY-ESO-1, MelanA/MART1, TRP2, MAGE, CEA, CA125, HER2/neu, WT1, and PSA; or fragment(s) thereof;</li><li>[10] a method for producing a virus vector of the family Paramyxoviridae by which an antigenic polypeptide is expressed in the form of a fusion protein with a viral structural protein or a portion thereof, the method comprising the steps of: coculturing, with Vero cells, a virus of the family Paramyxoviridae in which a gene encoding the fusion protein is integrated in a viral gene; and isolating virus particles from the culture supernatant;</li><li>[11] the method according to [10], wherein the fusion protein is a fusion protein with one or more selected from HN protein, F protein, and M protein of the virus, or a portion thereof;</li><li>[12] the method according to [10] or [11], wherein the fusion protein is a fusion protein with an intracellular domain of the HN protein or the F protein of the virus;</li><li>[13] the method according to any of [10] to [12], wherein the antigenic polypeptide is <ol><li>1) fused on the C-terminal side of the HN protein and expressed outside the vector envelope,</li><li>2) fused on the N- or C-terminal side of the F protein or on the N-terminal side of the HN protein and expressed inside the vector envelope, or</li><li>3) fused on each of the C-terminal side of the HN protein and the N- or C-terminal side of the F protein or the N-terminal side of the HN protein and expressed both outside and inside the vector envelope;</li></ol></li><li>[14] the method according to any of [10] to [12], wherein the antigenic polypeptide is fused with a membrane or intracellular domain of the HN protein or the F protein of the virus so that the antigenic polypeptide is included on the vector envelope;</li><li>[15] the method according to any of [10] to [14], wherein the method comprises: coculturing an F gene-defective virus of the family Paramyxoviridae with Vero cells expressing the F gene of the virus of the family Paramyxoviridae or the F gene fused with the antigen; and isolating virus particles from the culture supernatant;</li><li>[16] the method according to any of [10] to [15], further comprising the step of subjecting the virus to nucleic acid inactivation treatment;</li><li>[17] the method according to [16], wherein the nucleic acid inactivation treatment avoids altering (does not substantially alter) the structure of the virus envelope;</li><li>[18] the method according to any of [10] to [17], wherein the antigenic polypeptide is influenza virus M2e protein or a fragment thereof;</li><li>[19] the method according to any of [10] to [18], wherein the antigenic polypeptide is any one or more selected from: the group consisting of an antigenic peptide of a virus selected from influenza viruses including a highly virulent influenza virus, parainfluenza virus type 3, RS virus, Hendra virus, SARS virus, Nipah virus, Lassa virus, dengue virus, West Nile virus, human metapneumovirus, Ebola virus, hantavirus, AIDS virus, hepatitis C virus, Lassa virus, human papillomavirus, rubella virus, rotavirus, norovirus, Crimean-Congo hemorrhagic fever virus, herpesvirus, cytomegalovirus, and papillomavirus; the group consisting of an antigenic peptide of a bacterium selected from group A beta-hemolytic streptococcus, Mycobacterium tuberculosis, Vibrio cholerae, mycoplasma; and the group consisting of RSV F protein; cancer antigens gp100, MUC1, NY-ESO-1, MelanA/MART1, TRP2, MAGE, CEA, CA125, HER2/neu, WT1, and PSA, or fragment(s) thereof; and</li><li>[20] a Vero cell comprising antigen gene-fused F gene of a virus of the family Paramyxoviridae and expressing a fusion protein between the antigen and the F protein.</li></ol></p>
+    <heading id="h-00009-en">Advantageous Effects of Invention</heading>
+    <p id="p-00019-en" num="0019">
+      <ol>
+        <li>1) The problem of the conventional platform-type inactivated virus vector is that the amount of an antigen transferred per vector is low; thus, antibody production efficiency is low. By contrast, the virus vector of the present invention can contain a quantitatively large amount of an antigenic peptide on the virus particle.</li>
+        <li>2) According to the present invention, the fused structural protein, particularly, the fused membrane protein, from the virus vector has immunogenicity in itself. High immunity can therefore be induced against the low immunogenic antigenic polypeptide fused with this protein. Specifically, the vector itself has adjuvant activity and thus eliminates the need of adding an adjuvant or reduces the amount of an adjuvant added for administration.</li>
+        <li>3) The virus vector of the present invention transfers an antigen and an adjuvant to the same cell and can thus reduce the inefficient induction of immunity attributed to the uptake of a peptide and an adjuvant administered as a mixture into different cells.</li>
+        <li>4) The human parainfluenza virus used in the present invention is a negative-sense single-stranded virus terminally modified with triphosphate (5'-PPP). A single-stranded RNA moiety having this terminal triphosphate and following several bases serves as a substrate for an intracellular signal called IFIT. Thus, this moiety induces type 1 interferon or the like having antivirus activity and contributes to DC cell maturation, etc. (<nplcit id="ncit-00010" npl-type="s"><text>Abbas YT., Nature, Vol. 494, Issue 7435, pp. 60-64 (2013</text></nplcit>); and <nplcit id="ncit-00011" npl-type="s"><text>Saito T. et al., J. Exp. Med. Vol. 205, No. 7, pp. 1523-1527 (2008</text></nplcit>)).</li>
+        <li>5) According to the present invention, nucleic acid inactivation is carried out using a low concentration of β-propiolactone or the like. The three-dimensional structures of virus envelope proteins are therefore maintained, while only the virus genome is inactivated with the functions of these proteins maintained. Hence, the vector has cell adsorption properties similar to those of live viruses and can exert the ability to induce immunity and the ability to maturate DC cells by virtue of the aforementioned structures.</li>
+        <li>6) From these advantages, the virus vector of the present invention can be expected to have high effects even on humans, unlike the conventional virus vector, which cannot be expected to produce sufficient effects.</li>
+        <li>7) The transfer of an antigen at the gene level eliminates the need of transferring the antigen after inactivation and can circumvent problems associated with the transfer of the antigen after inactivation (low antigen transfer efficiency, disruption of an envelope structure, etc.).</li>
+        <li>8) The virus vector of the present invention can be constituted such that the antigen can be located outside or inside, or both outside and inside the vector envelope.</li>
+      </ol>
+    </p>
+    <p id="p-00020-en" num="0020">This allows a plurality of antigens to be transferred in various manners to vectors.</p>
+    <p id="p-00021-en" num="0021">As described above, according to the present invention, an inactivated vector capable of inducing immunity comparable to live virus vectors for dendritic cells or the like can be obtained by efficient virus inactivation treatment. Thus, an opportunity can be opened up for the development of an inactivated vector vaccine using a virus of the family Paramyxoviridae.</p>
+    <heading id="h-00010-en">Brief Description of Drawings</heading>
+    <p id="p-00022-en" num="0022">
+      <ul id="ul-00002-en" list-style="none" compact="compact">
+        <li>[<figref>Figure 1] Figure 1</figref> shows the gene expression efficiency of human parainfluenza virus type 2 in mouse cells (NIH-3T3 cells) and monkey cells (Vero cells). GFP expression was confirmed up to 10<sup>4</sup> dilutions in the mouse cells and up to 10<sup>7</sup> dilutions in the monkey cells.</li>
+        <li>[<figref>Figure 2] Figure 2</figref> shows the number of hPIV2/ΔF copies in human and mouse dendritic cells.</li>
+        <li>[<figref>Figure 3] Figure 3</figref> shows the infection efficiency of hPIV2/ΔF in mouse dendritic cells.</li>
+        <li>[<figref>Figure 4] Figure 4</figref> shows the maturation marker expression of human dendritic cells after live hPIV2/ΔF/GFP infection.</li>
+        <li>[<figref>Figure 5] Figure 5</figref> shows the MHC and cytokine expression of human dendritic cells after live hPIV2/ΔF/GFP infection.</li>
+        <li>[<figref>Figure 6] Figure 6</figref> shows results of virus inactivation treatment with β-propiolactone. <figref>Figure 6(A)</figref> shows the GFP fluorescence of vectors at Day 5 and Day 10. <figref>Figure 6(B)</figref> shows hemagglutination reaction (HA titer). <figref>Figures 6(C) to 6(E)</figref> each show antibody levels (IgG1, IgG2, and IgA) in alveolar lavages after administration of live hPIV2/ΔF/GFP, β-propiolactone-treated hPIV2/ΔF/GFP, and formalin-treated hPIV2/ΔF/GFP.</li>
+        <li>[<figref>Figure 7] Figure 7</figref> shows the maturation and MHC expression of mouse dendritic cells and the induction of cytokines by live and β-propiolactone (BPL)-inactivated hPIV2/ΔF.</li>
+        <li>[<figref>Figure 8] Figure 8</figref> shows the construction of a vector for producing a fusion protein between an antigen and hPIV2 HN. <figref>Figure 8(A)</figref> is a diagram showing the genome of hPIV2(ΔF) for an antigen fused with HN (fused antigen: e.g., M2e peptide, gp-100 peptide, or WT-1 peptide). <figref>Figure 8(B)</figref> is a schematic diagram of inactivated hPIV2 (ΔF) for an antigen fused with HN. <figref>Figure 8(C)</figref> shows results of confirming the antigen from an antigen transfer virus for HN by Western blot (HN-M2e represents the antigen transfer virus, and HN represents an antigen transfer-free virus; anti-M2 antibody-positive reaction was observed only for HN-M2e).</li>
+        <li>[<figref>Figure 9] Figure 9(A)</figref> is a diagram showing a plasmid vector for packaging cell establishment for producing a fusion protein among hPIV2, F protein in a packaging cell, and an antigen (fused antigen: e.g., M2e peptide, gp-100 peptide, or WT-1 peptide). <figref>Figure 9(B)</figref> shows results of antigen transfer of a recovered vector by Western blot. The Western blot images depict hPIV2wt: an antigen transfer-free virus, HN-M2e hPIV2ΔF: an antigen transfer virus for HN, and F-M2e tandem hPIV2ΔF: an antigen transfer virus for F, from the left to the right.</li>
+        <li>[<figref>Figure 10] Figure 10(A)</figref> shows the mode of antigen transfer to hPIV2 (diagram showing the arrangement of a vector and an antigen). <figref>Figure 10(B)</figref> shows results of antigen transfer by a vector that simultaneously transferred the antigen to HN and F (Western blot). The Western blot images depict hPIV2wt: an antigen transfer-free virus, HN-M2e hPIV2ΔF: an antigen transfer virus for HN, F M2e tandem hPIV2ΔF: an antigen transfer virus for F, 4F M2e tandem + HN M2e hPIV2ΔF: and an antigen transfer virus for both F and HN, from the left to the right.</li>
+        <li>[<figref>Figure 11] Figure 11</figref> shows the vaccine effect of hPIV2/ΔF/HN-M2e against an influenza virus infection.</li>
+        <li>[<figref>Figure 12] Figure 12</figref> shows the vaccine effect of hPIV2/ΔF/HN-gp-100 against melanoma cell growth.</li>
+        <li>[<figref>Figure 13] Figure 13</figref> shows the therapeutic effect of hPIV2/ΔF/HN-gp-100/WT-1 on melanoma cell-transplanted mice.</li>
+        <li>[<figref>Figure 14] Figure 14(A)</figref> is a diagram showing that a gene for the fusion of an M2e antigen or an RSV F (including its modified form) extracellular domain and a membrane or intracellular domain of F membrane protein functioning as a viral packaging signal is integrated in the NotI site of an hPIV2/ΔF plasmid. <figref>Figure 14(B)</figref> shows results of confirming the expression of M2e in cells infected by a recovered vector.</li>
+      </ul>
+    </p>
+    <p id="p-00023-en" num="0023">The present specification encompasses the contents described in the specification of Japanese Patent Application No. <patcit id="pcit-00002" dnum="JP2012283421A"><text>2012-283421</text></patcit> on which the priority of the present application is based.</p>
+    <heading id="h-00011-en">Description of Embodiments</heading>
+    <p id="p-00024-en" num="0024">In one aspect, the present invention provides a virus vector in which a gene encoding an antigenic polypeptide is integrated in a viral structural gene of the family Paramyxoviridae, wherein the antigenic polypeptide is expressed in the form of a fusion protein with the viral structural protein, and an inactivated vector that is derived from the vector and is capable of inducing immunity similarly to live viruses.</p>
+    <p id="p-00025-en" num="0025">As specifically shown in Examples below, in the present invention, each F gene-defective hPIV2 vector was constructed for expression of a fusion form of universal influenza virus M2e peptide gene, melanoma antigen gp100 peptide gene, or WT-1 cancer antigen gene with F gene-defective hPIV2 vector HN gene and/or F gene. Also, an F gene-defective hPIV2 vector in which an M2e antigen and a packaging signal-containing membrane or intracellular domain of F membrane protein were fused into the foreign gene insertion site of the F gene-defective hPIV2 vector was constructed.</p>
+    <p id="p-00026-en" num="0026">The genomes of these vectors were further inactivated by β-propiolactone treatment in the state where their hemagglutinating activity and ability to maturate dendritic cells were maintained. The inactivated or live vectors thus obtained were confirmed to have a very high vaccine effect on influenza viruses and an inhibitory effect on melanoma growth.</p>
+    <p id="p-00027-en" num="0027">The virus of the family Paramyxoviridae used in the present invention is particularly preferably human parainfluenza virus type 2 having monocistronic negative-sense single-stranded RNA of approximately 15,000 bases as the genome. NP protein, P (phospho) protein, M (matrix) protein, F (fusion) protein, HN (hemagglutinin-neuraminidase) protein, and L (large) protein are encoded in this order as viral structural gene products on the genome. In addition, V protein is produced by RNA editing. The nucleocapsid protein (NP) is bound with the RNA genome to form a helically symmetric ribonucleoside-protein complex (nucleocapsid, RNP). Of the proteins encoded on the virus genome, the NP protein, the P (phospho) protein, and the L (large) protein are necessary for the formation of RNP. The F (fusion) protein and the HN (hemagglutinin-neuraminidase) protein reside on the virus envelope and are responsible for adsorption and fusion to a receptor. The M (matrix) protein interacts with the intracytoplasmic domains of the F and HN proteins, the envelope lipid bilayer, and RNP and is important for the budding of virus particles.</p>
+    <p id="p-00028-en" num="0028">Since the human parainfluenza virus type 2 is an RNA virus that multiplies cytoplasmically, its gene is not integrated into the chromosomes of host cells. This virus is known to infect the mucous membrane of the human respiratory tract and induce mucosal immunity consisting of IgA mainly and humoral immunity and cellular immunity mediated by IgG. No serious case of infection of humans (adults) by this virus has previously been reported. The virus is therefore considered to be very useful as a virus vector for treatment.</p>
+    <p id="p-00029-en" num="0029">The "virus vector" means a virus particle by which a gene to be expressed in an infected cell, is packaged together with the virus genome, and a vector of which genome is not capable of producing a virus having infectious ability. In the present specification, the latter is particularly referred to as an "inactivated vector" and can be obtained by inactivating the nucleic acid by treatment with a drug or the like.</p>
+    <p id="p-00030-en" num="0030">The "antigenic polypeptide" refers to a polypeptide that can cause immune response in a subject given the virus vector of the present invention. Examples thereof include cancer antigens or a portion thereof and bacterium- or virus-derived proteins or a portion thereof. For example, the antigenic polypeptide useful for use as a vaccine for influenza is influenza virus HA protein, NA protein, M2 protein, or M2e protein, or a fragment thereof.</p>
+    <p id="p-00031-en" num="0031">Examples of infectious disease-related antigenic polypeptides to be transferred include antigenic peptides of viruses such as influenza viruses (including a highly virulent influenza virus), parainfluenza virus type 3, RS virus, Hendra virus, SARS virus, Nipah virus, Lassa virus, dengue virus, West Nile virus, human metapneumovirus, Ebola virus, hantavirus, AIDS virus, hepatitis C virus, Lassa virus, human papillomavirus, rubella virus, rotavirus, norovirus, Crimean-Congo hemorrhagic fever virus, herpesvirus, cytomegalovirus, and papillomavirus, and antigenic peptides of bacteria such as group A beta-hemolytic streptococcus, Mycobacterium tuberculosis, Vibrio cholerae, and mycoplasma.</p>
+    <p id="p-00032-en" num="0032"> Examples of antigenic polypeptides useful for use as vaccines for cancer treatment include gp100, MUC1, NY-ESO-1, MelanA/MART1, TRP2, MAGE, CEA, CA125, HER2/neu, WT1, and PSA. The fragment refers to a polypeptide that has a partial sequence of the protein to be used as an antigen and can cause immune response when administered to a subject. The immune response includes both humoral immunity and cellular immunity.</p>
+    <p id="p-00033-en" num="0033">In the present invention, the antigenic polypeptide is expressed in the form of a fusion protein with a viral structural protein or a portion of the structural protein. As a result, the antigenic polypeptide expressed in the virus is taken up into the virus particle and delivered to a cell infected by the virus. Specifically, in the present invention, the gene of the antigenic polypeptide integrated on the viral gene is transcribed and translated in the infected cell, and in addition, the virus particle itself has the antigenic polypeptide and can thereby reliably deliver a large amount of the antigenic polypeptide to the recipient cell.</p>
+    <p id="p-00034-en" num="0034">In order to express the antigenic polypeptide expressed in the form of a fusion protein, the gene encoding the antigenic polypeptide is integrated into a viral gene such that the gene encoding the antigenic polypeptide is linked to a gene encoding the viral structural protein or a portion of the structural protein. Examples of the gene encoding the viral structural protein include hPIV2 HN gene, F gene, M gene, NP gene, P gene, and L gene. One type of antigen gene may be used, or two or more types of antigen genes may be linked thereto. This can cause immune response to two or more types of antigens. Alternatively, a plurality of antigens may be transferred simultaneously to a plurality of genes selected from the HN gene, the F gene, the M gene, the NP gene, the P gene, and the L gene. Such a vector can be constructed by a standard method using routine recombinant DNA technique.</p>
+    <p id="p-00035-en" num="0035">Particularly preferably, the antigenic polypeptide is expressed in the form of a fusion protein with one or more selected from HN protein, F protein, and M protein. The integration of the antigen gene such that the antigenic polypeptide is fused on the C-terminal side of the HN protein allows the antigenic polypeptide to be expressed on the virus envelope. The integration of the antigen gene such that the antigenic polypeptide is fused on the N-terminal side of the HN protein, fused on the Nor C-terminal side of the F protein, or fused with the M protein allows the antigenic polypeptide to be expressed inside the virus particle. The F protein fused on its C-terminal side with the antigenic peptide can be constructed and combined with a packaging cell that supplies the protein in trans so that a large amount of the antigen is expressed inside the envelope of F-defective hPIV2. The antigenic peptide can be fused with a membrane or intracellular domain of the HN protein or the F protein of the virus so that the antigen is included on the vector envelope. Since the HN protein or the F protein has antigenicity in itself, high immunogenicity can be imparted to even a low immunogenic antigenic polypeptide by fusion with the HN protein or the F protein.</p>
+    <p id="p-00036-en" num="0036">In a preferred embodiment of the present invention, an F gene-defective (referred to as ΔF) virus is used as the human parainfluenza virus type 2. The F protein of the human parainfluenza virus type 2 is a protein necessary for fusing the virus envelope and a cell membrane and transferring virus nucleocapsid into the host in the virus replication and transcription processes. The F gene-defective human parainfluenza virus type 2 yields infectious hPIV2 carrying the F gene in packaging cells, but does not yield the infectious virus in cells without the expressed F protein. Thus, this virus cannot constitute a virus particle having the ability to multiply autonomously after infection of cells of a subject and does not infect the other cells. The virus is therefore highly safe as a virus for vaccines.</p>
+    <p id="p-00037-en" num="0037"> In order to prepare the F gene-defective human parainfluenza virus type 2 vector, an F gene-defective virus is cultured in cells expressing hPIV2 F protein. The F protein can thereby be retained on the virus envelope in the presence of the F protein supplied in trans from the cells to produce virus particles having infectious ability.</p>
+    <p id="p-00038-en" num="0038">In a preferred embodiment of the present invention, Vero cells are used as the packaging cells that can produce virus particles by infection by the F gene-defective virus. The Vero cells are particularly highly permissive with the human parainfluenza virus type 2 F protein. In addition, these cells do not express interferons, and can stably grow and can efficiency produce virus particles, even if the human parainfluenza virus type 2 F gene is constantly expressed.</p>
+    <p id="p-00039-en" num="0039">Instead of the Vero packaging cells expressing the F gene, Vero cells carrying the F gene fused with the antigenic polypeptide can be used as the packaging cells to produce defective virus particles having infectious ability that supplies the F gene in trans.</p>
+    <p id="p-00040-en" num="0040">In another aspect, the present invention provides a method for producing a human parainfluenza virus type 2 vector by which an antigenic polypeptide is expressed in the form of a fusion protein with a viral structural protein. This method comprises the steps of: coculturing, with a Vero cell, human parainfluenza virus type 2 in which a gene encoding the fusion protein is integrated in a viral gene; and isolating a virus particle from the culture supernatant.</p>
+    <p id="p-00041-en" num="0041">In a preferred embodiment, the virus vector of the present invention has undergone nucleic acid inactivation treatment. The nucleic acid inactivation treatment refers to the inactivation of only the virus genome in the state where the three-dimensional structures of envelope proteins such as F protein and HN protein are maintained and these proteins have their functions. The nucleic acid inactivation treatment can be carried out by, for example, nucleic acid-alkylating agent treatment, hydrogen peroxide treatment, UV irradiation, exposure to radiation, or heat treatment. Particularly preferably, the virus vector is treated with a nucleic acid-alkylating agent β-propiolactone. The β-propiolactone can be added to the virus culture solution and incubated therewith at 4°C for approximately 24 hours. The concentration of the β-propiolactone is preferably 0.004% to 0.05%, more preferably 0.004% to 0.01%, in terms of final concentration.</p>
+    <p id="p-00042-en" num="0042"> By use of the F gene-defective virus, the virus lacks the ability to multiply and thus cannot multiply in a recipient even if the live virus remains after the drug treatment; thus, the high safety of the inactivated vaccine can be kept.</p>
+    <p id="p-00043-en" num="0043">The treatment of the virus vector of the present invention with β-propiolactone can inactivate the genome while the virus vector maintains its hemagglutinating activity and ability to maturate dendritic cells. This method has the advantage that: the virus particle itself has adjuvant activity and therefore eliminates the need of combined use with an adjuvant that causes immunity against the antigen or can reduce adjuvant concentration.</p>
+    <p id="p-00044-en" num="0044">The virus vector of the present invention infects a cell via a sialic acid receptor. Since sialic acid resides on the surface of many cells or tissues, the possible administration route of the vector is nasal spray, transpulmonary, oral, sublingual, intradermal, or subcutaneous administration, or direct administration to the vein as well as ex vivo administration to immunity-causing cells such as dendritic cells.</p>
+    <p id="p-00045-en" num="0045">Typically, the virus vector of the present invention can be administered as an aerosol to cells of a mammal including a human. The aerosol can be prepared by a standard method. For example, a culture supernatant containing the virus vector is concentrated, if necessary, and suspended together with an appropriate carrier or excipient in a buffer solution such as PBS, a virus vector-stabilizing solution, or saline. Then, the suspension can be sterilized by filtration through a filter or the like according to the need and subsequently charged into an aseptic container to prepare the aerosol. The aerosol may be supplemented with a stabilizer, a preservative, and the like, according to the need. The expression vector thus obtained can be administered by inhalation to a subject.</p>
+    <p id="p-00046-en" num="0046">Typically, the virus vector of the present invention can also be administered as an injection (subcutaneous, intradermal, or intramuscular injection) to cells of a mammal including a human. The injection can be prepared by a standard method. For example, a culture supernatant containing the virus vector is concentrated, if necessary, and suspended together with an appropriate carrier or excipient in a buffer solution such as PBS or saline. Then, the suspension can be sterilized by filtration through a filter or the like according to the need and subsequently charged into an aseptic container to prepare the injection. The injection may be supplemented with a stabilizer, a preservative, and the like, according to the need. The expression vector thus obtained can be administered as the injection to a subject.</p>
+    <p id="p-00047-en" num="0047">Hereinafter, the present invention will be described in more detail with reference to Examples. However, the present invention is not intended to be limited by these Examples.</p>
+    <heading id="h-00012-en">Examples</heading>
+    <heading id="h-00013-en">Example 1 Confirmation of transgene expression in African green monkey cell (Vero cell) and mouse cell (NIH3T3 cell) using hPIV2/ΔF</heading>
+    <p id="p-00048-en" num="0048">Vero cells or NIH3T3 cells were cultured in a 96-well plate such that the cells became a monolayer at the time of vector infection. hPIV2/ΔF harboring GFP gene was diluted up to 10<sup>8</sup> from the undiluted solution. This vector does not yield an infectious vector and therefore exhibits GFP fluorescence only in primarily infected cells. The virus dilutions were each added at 1/10 of the amount of each cell culture solution, followed by culture for 3 days.</p>
+    <p id="p-00049-en" num="0049">As a result, the GFP fluorescence was confirmed in the Vero cells and the NIH3T3 cells when 10<sup>1</sup> to 10<sup>7</sup> vector dilutions and 10<sup>1</sup> to 10<sup>4</sup> vector dilutions, respectively, were added thereto (<figref>Figure 1</figref>).</p>
+    <heading id="h-00014-en">Example 2 Confirmation of the number of multiplied vector copy in human and mouse dendritic cell using hPIV2/ΔF</heading>
+    <heading id="h-00015-en">(Preparation of human dendritic cells)</heading>
+    <p id="p-00050-en" num="0050">Under the code of ethical conduct, CD14-positive cells were recovered from the peripheral blood of a healthy person. At cell culture days 1, 4, and 7, 50 ng/mL GM-CSF and 25 ng/mL IL-4 were added to the culture solution to culture the cells. The cells cultured for 8 days were infected at a multiplicity of infection (MOI) of 25, 50, or 100 by hPIV2/ΔF harboring GFP gene. The N gene domain portion of hPIV2 in the cells thus infected for 3 days was subjected to quantitative PCR to measure the number of genome copies.</p>
+    <heading id="h-00016-en">(Preparation of mouse dendritic cells)</heading>
+    <p id="p-00051-en" num="0051">Under the code of ethical conduct, the bone marrow was recovered from each of the femurs of B57BL/6 and BALB/c mice and cultured (RPM-1640 medium, 10% FBS) after removal of debris. Every two culture days, the culture solution was replaced with a fresh medium, and GM-CSF (20 ng/mL) and IL-4 (20 ng/mL) were added thereto. The cells cultured for 8 days were infected at a multiplicity of infection (MOI) of 25, 50, or 100 by hPIV2/ΔF harboring GFP gene. The N gene domain portion of hPIV2 in the cells thus infected for 3 days was subjected to quantitative PCR to measure the number of genome copies. The results of the quantitative PCR using the N domain portion revealed that the number of copies of the N domain portion per cell was approximately 5 times larger at the maximum in the human dendritic cells compared with the mouse dendritic cells (<figref>Figure 2</figref>).</p>
+    <p id="p-00052-en" num="0052">From Examples 1 and 2, hPIV2 was confirmed to be capable of infecting the mouse cells and multiplying the transgene. However, the transgene expression level and the number of multiplied viruses were both low in the mouse cells compared with the human or monkey cells (<figref>Figures 1</figref> and <figref>2</figref>).</p>
+    <heading id="h-00017-en">Example 3 Confirmation of infection efficiency in dendritic cells using hPIV2/ΔF</heading>
+    <p id="p-00053-en" num="0053">Under the code of ethical conduct, CD14-positive cells were recovered from the peripheral blood of a healthy person. At cell culture days 1, 4, and 7, 50 ng/mL (in terms of final concentration) GM-CSF and 25 ng/mL (in terms of final concentration) IL-4 were added to the culture solution to culture the cells. The cells cultured for 8 days were infected at a multiplicity of infection (MOI) of 25, 50, or 100 by hPIV2/ΔF harboring GFP gene.</p>
+    <p id="p-00054-en" num="0054">Under the code of ethical conduct, the bone marrow was recovered from the femur of B57BL/6 and cultured (RPM-1640 medium, 10% FBS) after removal of debris. Every two culture days, the culture solution was replaced with a fresh medium, and 20 ng/mL (in terms of final concentration) GM-CSF and 20 ng/mL (in terms of final concentration) IL-4 were added thereto. The cells cultured for 8 days were infected at a multiplicity of infection (MOI) of 25, 50, or 100 by hPIV2/ΔF harboring GFP gene.</p>
+    <p id="p-00055-en" num="0055">The infection efficiency in the dendritic cells thus infected for 2 days was examined by flow cytometry with GFP fluorescence as an index. CD11c-positive cells were used as the dendritic cells.</p>
+    <p id="p-00056-en" num="0056">The results about the mouse are shown in <figref>Figure 3</figref>.27.5%, 51.0%, and 68.0% mouse dendritic cells were GFP fluorescence-positive at MOI = 25, MOI = 50, and MOI = 100, respectively (<figref>Figure 3</figref>). 59.9%, 73.1%, and 77.8% human dendritic cells were GFP fluorescence-positive at MOI = 25, MOI = 50, and MOI = 100, respectively.</p>
+    <p id="p-00057-en" num="0057">These results demonstrated that: hPIV2/ΔF can infect the human dendritic cells and the mouse dendritic cells and express the gene; and its infection efficiency is higher in the human dendritic cells than in the mouse dendritic cells.</p>
+    <heading id="h-00018-en">Example 4 Maturation of human dendritic cells by hPIV2/ΔF</heading>
+    <p id="p-00058-en" num="0058">In Example 3, hPIV2/ΔF was confirmed to be able to efficiently express the gene in the human dendritic cells. For the effective functions of dendritic cells as immune-presenting cells and the efficient induction of immunity, it is very important that the cells are maturated and homed to lymphoid organs. Thus, human dendritic cells were infected for 2 days by hPIV2/ΔF at MOI = 25. The ability to maturate the dendritic cells was evaluated on the basis of the expression of costimulatory factors CD40, CD80, and CD86 for antigen-presenting cells. The ability to home the cells to secondary lymphoid organs was evaluated with a rise in CCR7 expression as an index. As a positive control, LPS (lipopolysaccharide) known to activate TRL4 and very efficiently cause maturation and homing to lymphoid organs was added at 1 µg/mL into the medium. The evaluation was conducted by flow cytometry using an index antibody.</p>
+    <p id="p-00059-en" num="0059">As a result, the dendritic cells infected by hPIV2/ΔF were able to induce the expression of the costimulatory factors at a degree comparable to LPS and exhibited a rise in CCR7 expression (<figref>Figure 4</figref>).</p>
+    <heading id="h-00019-en">Example 5 Major histocompatibility complex (MHC, or HLA for humans) expression in human dendritic cell and induction of cytokine using hPIV2/ΔF</heading>
+    <p id="p-00060-en" num="0060">Antigen presentation on MHC is important for the induction of antigen-specific immunity. In this respect, antigen presentation on MHC class I or II molecules is necessary. CD8-positive T cells recognize an antigen on the MHC class I molecule and induce cytotoxic T cells or the like. CD4-positive T cells recognize an antigen on the MHC class II molecule and are activated.</p>
+    <p id="p-00061-en" num="0061">The dendritic cells are capable of presenting an antigen on the MHC class I molecule and the MHC class II molecule. hPIV2/ΔF was examined for a rise in the expression of the MHC class I molecule (or HLA-A molecule for humans) and the MHC class II molecule (or HLA-DR molecule for humans) in human dendritic cells under the same conditions as in Examples 3 and 4 with the human HLA-A molecule as the MHC class I molecule and the human HLA-DR molecule as the MHC class II molecule as indexes. As a result, hPIV2/ΔF also elevated the expression of the HLA-A molecule and the HLA-DR molecule at the same degree as in the positive control LPS (<figref>Figure 5</figref>).</p>
+    <p id="p-00062-en" num="0062">The induction of IL-6 and IL-12 cytokines in a culture supernatant was further examined. hPIV2/ΔF was confirmed to elevate the expression of IL-6 at the same degree as in LPS and the expression of IL-12, albeit at a degree lower than that of LPS, in the human dendritic cells (<figref>Figure 5</figref>).</p>
+    <heading id="h-00020-en">Example 6 Inactivation and hemagglutinating activity of hPIV2/ΔF and induction of immunity by inactivated hPIV2/ΔF</heading>
+    <p id="p-00063-en" num="0063">In order to inactivate only the genome of hPIV2/ΔF with the structures and functions of its proteins maintained, inactivation using an alkylating agent β-propiolactone (BPL) was studied. BPL was added at 0.004%, 0.005%, 0.0075%, 0.009%, 0.01%, 0.012%, 0.025%, or 0.05% to the culture solution of GFP gene-containing hPIV2/ΔF cultured in a serum-free medium, followed by treatment at 4°C for 24 hours. Then, BPL was inactivated by treatment at 37°C for 30 minutes. hPIV2/ΔF was recovered by ultracentrifugation. As a control, the same volume of hPIV2/ΔF was also concentrated by ultracentrifugation, and the final volume was suspended in the same volume of a PBS solution. Cells expressing hPIV2 F were infected by the inactivated vector or the control vector and cultured for 10 days. Fresh cells expressing hPIV2 F were further infected by each supernatant and cultured for 10 days. This operation was further carried out. The culture of the F-expressing cells infected by the vector was performed a total of three times. Virus assay by TCID50 also produced similar results.</p>
+    <p id="p-00064-en" num="0064">As a result, the control vector exhibited strong fluorescence and cytopathicity, whereas none of the vectors inactivated by 0.004%, 0.005%, 0.0075%, 0.009%, 0.01%, 0.01%, 0.012%, 0.025%, or 0.05% BPL exhibited GFP fluorescence or cytopathicity. These results demonstrated that the genome is completely inactivated by the BPL treatment (<figref>Figure 6A</figref>).</p>
+    <p id="p-00065-en" num="0065">Next, the inactivated vector and the control vector were examined for their hemagglutination reaction. To a 1% guinea pig erythrocyte solution, the same amount of each vector dilution was added to examine the hemagglutination reaction.</p>
+    <p id="p-00066-en" num="0066">As a result, the inactivated vector exhibited the same 512 HA titer as that of the live hPIV2/ΔF control vector without the inactivation treatment (<figref>Figure 6B</figref>). This indicates that the HN protein of the inactivated vector does not lose its hemagglutinating capacity at all, i.e., maintains its three-dimensional structure and does not lose its functions. Thus, only the genome of the vector was presumably inactivated by the inactivation treatment.</p>
+    <p id="p-00067-en" num="0067">In order to examine the effect of inactivation, the vector was inactivated using 0.012% BPL or formalin treatment according to the conventional method. 2 x 10<sup>7</sup> vector particles each of live hPIV2/ΔF/GFP, BPL-inactivated hPIV2/ΔF/GFP, and formalin-treated hPIV2/ΔF/GFP were transnasally administered twice (every other week) to a B6 mouse. One week after the administration, alveolar lavages were recovered and examined for antibody titers (IgG1, IgG2, and IgA) against the vectors. A 96-well plate was coated with 4 µg/mL inactivated hPIV2, and the antibody titers were measured. As a result, BPL-inactivated hPIV2/ΔF/GFP in the alveolar lavage induced IgG1, IgG2, and IgA antibodies, albeit at a degree lower than that of live hPIV2/ΔF/GFP.A rise in antibody against formalin-treated hPIV2/ΔF/GFP was hardly seen in the alveolar lavage (<figref>Figures 6C, 6D, and 6E</figref>). This indicates that the induction of antibodies against the hPIV2 proteins having a normal three-dimensional structure was low in the alveolar lavage by the formalin treatment. On the other hand, a rise in antibody was observed even for formalin-treated hPIV2/ΔF as a result of stimulation with an antigen for a long period using spleen cells. From these results, the vector treated with a low concentration of BPL was confirmed to induce antibodies similarly to live viruses, as compared with the formalin treatment. From these results, it was presumed that the membrane protein structures similar to those of live viruses can be maintained after the inactivation treatment with a low concentration of BPL compared with the formalin treatment.</p>
+    <heading id="h-00021-en">Example 7 Maturation of mouse dendritic cell, major histocompatibility complex (MHC or HLA for humans) expression, and induction of cytokine using hPIV2/ΔF</heading>
+    <p id="p-00068-en" num="0068">The bone marrow was recovered from the femurs of B57BL/6 mice. At cell culture days 1, 4, and 7, 25 ng/mL GM-CSF was added to the culture solution to culture the cells. The cells cultured for 8 days were infected at a multiplicity of infection (MOI) of 25 by the GFP gene-containing vector hPIV2/ΔF inactivated by treatment with 0.05% BPL. The maturation of dendritic cells based on the elevated expression of CD40 and CD80, a rise in MHC class I or II based on H-2K<sup>b</sup> and I-A/I-E, and the expression of IL-6 and IL-12 in the culture solution were examined in the cells thus infected for 2 days. (Live) hPIV2/ΔF without inactivation was used as a control.</p>
+    <p id="p-00069-en" num="0069">As a result, the infection of the mouse dendritic cells by hPIV2/ΔF was confirmed to elevate the expression of the CD40 and CD86 maturation markers, though their expression levels were low as compared with live hPIV2/ΔF (<figref>Figure 7</figref>). The infection by the vector hPIV2/ΔF inactivated by treatment with 0.012% BPL at a multiplicity of infection (MOI) of 25 produced an effect equivalent to that of (live) hPIV2/ΔF.</p>
+    <p id="p-00070-en" num="0070">The expression of the mouse H-2K<sup>b</sup> molecule corresponding to the MHC class I molecule and the I-A/I-E molecule corresponding to the MHC class II molecule was also elevated. The secretion of each cytokine was also elevated, albeit at a degree lower than that of live hPIV2/ΔF (<figref>Figure 7</figref>). The infection by the vector hPIV2/ΔF inactivated by treatment with 0.012% BPL at a multiplicity of infection (MOI) of 25 produced an effect equivalent to that of (live) hPIV2/ΔF.</p>
+    <p id="p-00071-en" num="0071">From these results, bot live and inactivated vectors of hPIV2/ΔF were confirmed to be usable in vector evaluation and therefore subjected to the following tests.</p>
+    <heading id="h-00022-en">Example 8 Construction of hPIV2/ΔF in which antigen gene was fused with hPIV2 HN gene</heading>
+    <p id="p-00072-en" num="0072">A plasmid construct of a vector was constructed such that universal influenza virus M2e antigenic peptide (N terminus-SLLTEVETPIRNEWGCRCNDSSDD-C terminus (SEQ ID NO: 1)) or skin cancer malignant tumor gp-100 antigenic peptide (N terminus-KVPRNQDWL-C terminus (SEQ ID NO: 2)) was inserted to the C-terminal tail portion of hPIV2 HN protein. This construct was constructed on the basis of the rule of 6 reportedly important for the construct such that the total number of hPIV2 genomes was a multiple of 6. The virus was recovered by the reverse genetics method.</p>
+    <p id="p-00073-en" num="0073"> As a result, hPIV2/ΔF/HN-M2e and hPIV2/ΔF/HN-gp-100 in which the universal influenza virus M2e antigenic peptide or the skin cancer malignant tumor gp-100 antigenic peptide was fused with the HN gene were successfully recovered (<figref>Figure 8</figref>). The transfer of a gene encoding M2e antigenic peptide [N terminus-SLLTEVETPTRNEWECRCSDSSDD-C terminus (SEQ ID NO: 7) or N terminus-SLLTEVETLTRNGWGCRCSDSSDD-C terminus (SEQ ID NO: 8)] or WT-1 [N terminus-ALLPAVPSL-C terminus (SEQ ID NO: 3), N terminus-CYTWNQMNL-C terminus (SEQ ID NO: 4), N terminus-CMTWNQMNL-C terminus (SEQ ID NO: 5), or N terminus-RMPNAPYL-C terminus (SEQ ID NO: 6)] was also carried out. However, the recovery of the vector harboring the highly hydrophobic peptide (e.g., N terminus-CYTWNQMNL-C terminus (SEQ ID NO: 4)) was also found to be difficult, as compared with the recovery of common hPIV2/ΔF. There is no report on the expression of an antigen in a fusion form from a defective virus vector of the family Paramyxoviridae.</p>
+    <heading id="h-00023-en">Example 9 Construction of packaging cell expressing fusion product of antigen gene with F gene and construction of hPIV2/ΔF</heading>
+    <p id="p-00074-en" num="0074">A gene encoding universal influenza virus M2e antigenic peptide (N terminus-SLLTEVETPIRNEWGCRCNDSSDD-C terminus: SEQ ID NO: 1), WT-1 antigenic peptide (N terminus-ALLPAVPSL-C terminus (SEQ ID NO: 3)), WT-1 antigenic peptide (N terminus-CYTWNQMNL-C terminus (SEQ ID NO: 4)), or WT-1 antigenic peptide (N terminus-RMPNAPYL-C terminus (SEQ ID NO: 6)) was integrated on the 3'-terminal side of hPIV2 F gene on a plasmid for F expression constructed in order to prepare packaging cells. In this way, the packaging cells were constructed. One or more antigens were transferred thereto. The cells were used to recover F-defective hPIV2 by the conventional reverse genetics method.</p>
+    <p id="p-00075-en" num="0075">As a result, as shown in <figref>Figure 9</figref>, a vector carrying the antigen inside the vector was successfully recovered. Also, an expression vector for a plurality of antigens was successfully recovered. The recovery of a vector for antigen expression inside the vector envelope was also found to be easier than the recovery of a vector for antigen expression outside the vector envelope. The transfer of a gene encoding M2e antigenic peptide [N terminus-SLLTEVETPTRNEWECRCSDSSDD-C terminus (SEQ ID NO: 7) or N terminus-SLLTEVETLTRNGWGCRCSDSSDD-C terminus (SEQ ID NO: 8)] or WT-1 peptide (N terminus-CMTWNQMNL-C terminus (SEQ ID NO: 5)) was also carried out.</p>
+    <heading id="h-00024-en">Example 10 Construction of vector capable of antigen expression both inside and outside F-defective hPIV2 envelope</heading>
+    <p id="p-00076-en" num="0076">Examples 8 and 9 showed the recovery of the vector capable of antigen expression inside or outside the vector envelope. In this Example, the recovery of F-defective hPIV2 carrying antigens both inside and outside the vector was studied. The F packaging cells in which two M2e genes were fused with F gene as shown in Example 9 were infected by the M2e antigen (SEQ ID NO: 1)-carrying vector recovered in Example 8. Whether the vector could be recovered was examined.</p>
+    <p id="p-00077-en" num="0077">As a result, as shown in <figref>Figure 10</figref>, two types of proteins reacting with anti-M2 antibodies were detected by the Western blot of the vector recovered from 3 mL of a viral infection culture supernatant. Their molecular weights corresponded to the total molecular weights of the F protein (cleaved F protein) and the HN protein with the M2e antigen, demonstrating that the vector carrying antigens outside and inside the envelope was successfully recovered. From <figref>Figure 10</figref>, the band of F protein-fused M2e was thicker than that of HN protein-fused M2e, demonstrating that the F protein supplied in trans from the packaging cells and the antigen are present in larger amounts on the vector.</p>
+    <heading id="h-00025-en">Example 11 Vaccine effect of hPIV2/ΔF/HN-M2e on influenza virus</heading>
+    <p id="p-00078-en" num="0078">hPIV2/ΔF/HN-M2e for expression of a fusion form of an influenza M2e antigen (SEQ ID NO: 1) with HN protein was examined for its preventive effect on an influenza RP8 strain. Each of live hPIV2/ΔF/HN-M2e and hPIV2/ΔF/HN-M2e inactivated by treatment with 0.05% BPL was used as the hPIV2/ΔF/HN-M2e. In addition, live hPIV2/ΔF/M2 for expressing the whole of M2 by itself was used for comparison. In HN-fused M2e, the N-terminal region of HN resides inside the membrane of the virus envelope, while the C-terminal region resides outside the membrane.</p>
+    <p id="p-00079-en" num="0079">In this experiment, whether M2e constructed in a fusion form with HN in hPIV2/ΔF/HN-M2e was recognized as an antigen and whether inactivated hPIV2/ΔF/HN-M2e was effective as a vaccine were examined.</p>
+    <p id="p-00080-en" num="0080">Under the code of ethical conduct, the test was conducted using 5-week-old female BALB/c. 2 x 10<sup>8</sup> vector particles each of live hPIV2/ΔF/HN-M2e, inactivated hPIV2/ΔF/HN-M2e, live hPIV2/ΔF/M2, and inactivated hPIV2/ΔF/GFP were transnasally administered at a dose of 20 µl (in terms of TCID50) to the mouse under anesthesia. This administration was carried out again after 2 weeks. Two weeks after the administration, 16,000 influenza viruses of the PR8 strain (LD50: 1,000 viruses or less) were transnasally administered at a dose of 20 µl to each mouse of the vector administration group and the control group under anesthesia. Body weight measurement and external observation were carried out every day from the administration date. Dead mice or mice whose body weight was decreased by 30% compared with that at the time of influenza virus inoculation were regarded as being dead.</p>
+    <p id="p-00081-en" num="0081">
+      <figref>Figure 11</figref> shows the results about body weight change (in percentage) and deaths for 10 days after the influenza virus inoculation. Very surprisingly, all of the mice in the inactivated hPIV2/ΔF/HN-M2e group (n = 4) exhibited neither reduction in body weight nor piloerection even after the influenza virus administration, and their movement and feeding did not vary from those before the virus administration.</p>
+    <p id="p-00082-en" num="0082">On the other hand, one of the 3 mice given live hPIV2/ΔF/M2 made a recovery, whereas the other mice died. Particularly, live hPIV2/ΔF/M2 decreased the average body weight by nearly 2 g at the maximum at the time of the influenza virus administration, as compared with other mice. This might be influenced by the events where: when live hPIV2/ΔF is compared with inactivated hPIV2/ΔF, the total amount of proteins secreted into the mouse alveolar lavage is 10 or more times higher for live hPIV2/ΔF; and in vitro hPIV2/ΔF/M2-infected cells exhibit a higher cytopathic effect and higher cytotoxicity than those of hPIV2/ΔF/HN-M2e-infected cells. M2 is a membrane protein composed of 97 amino acid residues. This protein forms a tetramer and works as a proton channel. In the case of the transfer of the full-length M2 protein by live hPIV2/ΔF/M2, the body weights of the mice might be decreased by the action of the functions before influenza infection. On the other hand, inactivated hPIV2/ΔF/HN-M2e caused the expression of a fusion form of M2e with the HN membrane protein. The antigenicity of M2e was enhanced by the fusion with the highly immunogenic HN membrane protein, probably leading to the higher vaccine effect. In fact, the increased antigenicity of M2e fused with Neisseria meningitidis outer membrane complex (OMPC) has been reported. The transnasal administration of inactivated hPIV2/ΔF/HN-M2e preferentially induced the IgA antibody against M2e, while its intramuscular administration preferentially induced IgG2 thereagainst.</p>
+    <p id="p-00083-en" num="0083">Live hPIV2/ΔF/HN-M2e was also confirmed to have no vaccine effect on the influenza virus.</p>
+    <p id="p-00084-en" num="0084">The very high vaccine effect exhibited by inactivated hPIV2/ΔF/HN-M2e demonstrated that this inactivated vector system works very effectively as a system for a vaccine against the influenza virus. The possibilities were confirmed that: inactivated hPIV2 that possesses hemagglutinating activity can induce a vaccine effect without the addition of an adjuvant; M2e fused with the viral structural protein functions sufficiently as an antigen for vaccines; the fusion of M2e with the hPIV2 membrane protein can impart a high immune effect to M2e; and toxicity to a recipient is low because the transcription and replication of the viral structural protein are absent.</p>
+    <heading id="h-00026-en">Example 12 Vaccine effect of hPIV2/ΔF/HN-gp-100 on B-16 melanoma cell</heading>
+    <p id="p-00085-en" num="0085">hPIV2/ΔF/HN-gp-100 was examined for its ex vivo preventive tumor inhibitory effect on B-16 melanoma cells.</p>
+    <p id="p-00086-en" num="0086">DC cells were recovered from the femur of mice and cultured in vitro. The vector was added to the DC cells, which were then brought back to the mouse to examine the ex vivo tumor inhibitory effect. As shown in Example 2, the bone marrow was recovered from the femur of a B57BL/6 mouse and cultured (RPMI-1640 medium, 10% FBS) after removal of debris. Every two culture days, the culture solution was replaced with a fresh medium, and GM-CSF (20 ng/mL) and IL-4 (20 ng/mL) were added thereto. The cells cultured for 8 days were examined for their differentiation into DC. The cells were washed and cultured in an RPMI-1640 medium containing 10% FBS. Live hPIV2/ΔF/GFP or hPIV2/ΔF/GFP treated with 0.05% BPL was added at MOI = 50 to the culture solution. The cells were cultured for 2 days. The cells were recovered and subcutaneously (SC) administered at a dose of 3 x 10<sup>6</sup> cells to the vicinity of the groin of the 6-week-old B57BL/6 mouse three times at one-week intervals. One week after the final administration, mouse melanoma cells (which were washed with PBS three times before administration) were intradermally (ID) administered at a dose of 5 x 10<sup>5</sup> cells/100 µl to the back of the mouse. After the administration, the tumor axes were measured to calculate a tumor volume. The tumor volume was calculated according to the expression Minor axis of the tumor x Minor axis x Major axis x 0.5.</p>
+    <p id="p-00087-en" num="0087">The results are shown in <figref>Figure 12</figref>. The control group had the largest tumor volume. The live hPIV2/ΔF/HN-gp-100 treatment group produced the highest effect, and tumor growth was not observed in any of the mice during the assay period. Likewise, tumor growth was not observed in some mice in the live hPIV2/ΔF/GFP group. This is presumably because of an effect brought about by the infection by live hPIV2/ΔF/GFP that enhanced the general immune functions of DC.</p>
+    <p id="p-00088-en" num="0088">From these test results, live hPIV2/ΔF/HN-gp-100 was shown to have a higher tumor growth inhibitory effect than that of live hPIV2/ΔF/GFP.</p>
+    <p id="p-00089-en" num="0089"> On the other hand, when inactivated hPIV2/ΔF/HN-gp-100 is compared with inactivated hPIV2/ΔF/GFP and the control, inactivated hPIV2/ΔF/HN-gp-100 exhibited an obvious tumor growth inhibitory effect compared with inactivated hPIV2/ΔF/GFP and the control. The tumor inhibitory effect of the inactivated hPIV2 was smaller than that of the live one. This may be because the gene transfer efficiency of hPIV2 is lower for DC than for epithelium-derived cells and infection and gene transfer efficiency is poorer for mouse cells than for human cells. Presumably, the effect of the vector is enhanced with increase in the amount of the vector added.</p>
+    <p id="p-00090-en" num="0090">Live or inactivated hPIV2/ΔF/HN-gp-100 significantly inhibited tumor growth, as compared with live or inactivated hPIV2/ΔF/GFP, suggesting that hPIV2/ΔF/HN-gp-100 allows antigen-presenting cells to present the gp-100 peptide serving as an antigen to induce antitumor immunity such as CTL. In addition, the vector was found to be able to exert its tumor inhibitory effect without the addition of an adjuvant.</p>
+    <heading id="h-00027-en">Example 13 Vaccine effects of hPIV2/ΔF/HN-gp-100 and hPIV2/ΔF/WT-1 on B-16 melanoma cell</heading>
+    <p id="p-00091-en" num="0091">Next, inactivated hPIV2/ΔF/HN-gp-100 and inactivated hPIV2/ΔF/WT-1 (WT-1 sequence used: N terminus-RMPNAPYL-C terminus (SEQ ID NO: 6)) were examined for their therapeutic effects. The back of a B57BL/6 mouse was shaved, and 2 x 10<sup>6</sup> B-16 melanoma cells were intradermally transplanted to the mouse. After 4 days, when the axis of the transplanted B-16 melanoma reached approximately 3 mm, 7.0 x 10<sup>6</sup> particles each of inactivated hPIV2/ΔF/HN-gp-100 and inactivated hPIV2/ΔF/WT-1 adjusted to 70 µL were intratumorally administered a total of four times (days 4, 7, 10, and 13 after the cell transplantation). The tumor axes were measured each time. Inactivated hPIV2/ΔF/GFP was administered as a control. The volume of 70 µL was a volume exceeding the tumor volume at the early stage of the administration.</p>
+    <p id="p-00092-en" num="0092">As a result, in light of the tumor volume, a tumor inhibitory effect was confirmed in the inactivated hPIV2/ΔF/GFP administration group and the inactivated hPIV2/ΔF/HN-gp-100 and inactivated hPIV2/ΔF/WT-1 administration group compared with a PBS administration group (<figref>Figure 13</figref>). No large difference was confirmed between the inactivated hPIV2/ΔF/GFP administration group and the inactivated hPIV2/ΔF/HN-gp-100 and inactivated hPIV2/ΔF/WT-1 administration group. In the case of directly administering the vector to tumor, the inhibition of the tumor through the lysis, etc., of the tumor cells by the administration of the vector itself seems to be higher than the tumor inhibitory effect brought about by the induction of immunity. It has been reported that viral components exhibits an antitumor effect by the intratumoral administration of a virus vector harboring no tumor antigen and an inactivated virus vector, suggesting the tumor inhibitory effect brought about by the intratumoral administration of the inactivated vector in this test.</p>
+    <heading id="h-00028-en">Example 14 Insertion of foreign gene to each site of hPIV2/ΔF</heading>
+    <p id="p-00093-en" num="0093">Two M2e genes (SEQ ID NO: 1) were linked to each other and genes encoding hPIV2 F membrane anchor domain and membrane or intracellular domain proteins were linked on the C-terminal side thereof, i.e., a linkage product of a packaging signal to the vector was constructed. This construct was inserted to hPIV2/ΔF to study whether the foreign gene product was taken up into the vector.</p>
+    <p id="p-00094-en" num="0094">hPIV2 R1, intervening sequence, and R2 were added to the 3' side of the gene construct by the conventional method, and Not I sequences were further located at both ends thereof. The resulting construct was inserted to the Not I site of hPIV2/ΔF to construct a vector plasmid in which two M2e were linked to each other and a fusion protein of the F membrane anchor domain and intramembrane domain proteins was integrated (<figref>Figure 14A</figref>). The hPIV2/ΔF carries a Not I restriction site upstream of the NP gene. A foreign gene can be inserted to this site so that the virus can express the foreign gene by itself.</p>
+    <p id="p-00095-en" num="0095">The vector was recovered using F-expressing cells by the conventional method. F-expressing Vero cells (1 x 10<sup>6</sup> cells) were infected by a sample recovered from a culture supernatant. The cells thus infected for 8 days were recovered and subjected to Western blot using an anti-M2 antibody.</p>
+    <p id="p-00096-en" num="0096">As a result, as shown in <figref>Figure 14B</figref>, anti-M2 antibody-positive reaction was found in the infected cells. This means that the vector carrying the gene of interest was recovered. This vector can be combined with the aforementioned prepared vector to prepare an inactivated vector capable of transferring a larger number of antigens. The extramembrane domain peptide of RSV virus F membrane protein or the extramembrane domain peptide of modified F membrane protein has been transferred by a similar method to construct hPIV2/ΔF.</p>
+    <p id="p-00097-en" num="0097">Vector plasmids having a foreign gene insertion site between NP and P, between P and M, between M and HN, and/or between HN and L in addition to the insertion site upstream of the N gene are constructed in the same way as above. Vector plasmids carrying RSV F protein or RSV modified F protein gene as a transgene are further constructed.</p>
+    <p id="p-00098-en" num="0098">All publications, patents, and patent applications cited herein are incorporated herein by reference in their entirety.</p>
+    <heading id="h-00029-en">Industrial Applicability</heading>
+    <p id="p-00099-en" num="0099">The present invention is useful for a vaccine for prevention or treatment of a disease. <img id="img-00001-en" wi="132" he="233" img-content="dna" file="EP2940134A1_00016.PNG" img-format="png" original="imgb0001.tif" /><img id="img-00002-en" wi="136" he="233" img-content="dna" file="EP2940134A1_00017.PNG" img-format="png" original="imgb0002.tif" /><img id="img-00003-en" wi="136" he="39" img-content="dna" file="EP2940134A1_00018.PNG" img-format="png" original="imgb0003.tif" /></p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A virus vector in which a gene encoding an antigenic polypeptide is integrated in a viral gene of the family Paramyxoviridae, wherein the antigenic polypeptide is expressed in the form of a fusion protein with a viral structural protein or a portion thereof.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The virus vector according to claim 1, wherein the fusion protein is a fusion protein with any one or more selected from HN protein, F protein, and M protein of the virus, or a portion thereof.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The virus vector according to claim 1 or 2, wherein the gene encoding an antigenic polypeptide is
+<claim-text>1) located on the 3'-terminal side of the HN gene, wherein the antigenic polypeptide is expressed outside the vector envelope,</claim-text><claim-text>2) located on the 3'-terminal side of the F gene, wherein the antigenic polypeptide is expressed inside the vector envelope, or</claim-text><claim-text>3) located on each of the 3'-terminal side of the HN gene and the 3'-terminal side of the F gene, wherein the antigenic polypeptide is expressed both outside and inside the vector envelope.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text> The virus vector according to claim 1 or 2, wherein the antigenic polypeptide is fused with a membrane or intracellular domain of the F or HN membrane protein serving as a viral packaging signal so that the antigenic polypeptide is retained on the vector envelope.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The virus vector according to any of claims 1 to 4, wherein the virus is an F protein-defective virus of the family Paramyxoviridae.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The virus vector according to any of claims 1 to 5, wherein the virus has undergone nucleic acid inactivation treatment.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The virus vector according to claim 6, wherein the nucleic acid inactivation treatment does not substantially alter the structure of the virus envelope.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The virus vector according to any of claims 1 to 7, wherein the antigenic polypeptide is influenza virus M2e protein or a fragment thereof.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The virus vector according to any of claims 1 to 7, wherein the antigenic polypeptide is any one or more selected from the group consisting of an antigenic peptide of a virus selected from influenza viruses including a highly virulent influenza virus, parainfluenza virus type 3, RS virus, Hendra virus, SARS virus, Nipah virus, Lassa virus, dengue virus, West Nile virus, human metapneumovirus, Ebola virus, hantavirus, AIDS virus, hepatitis C virus, Lassa virus, human papillomavirus, rubella virus, rotavirus, norovirus, Crimean-Congo hemorrhagic fever virus, herpesvirus, cytomegalovirus, and papillomavirus, the group consisting of an antigenic peptide of a bacterium selected from the group A beta-hemolytic streptococcus, Mycobacterium tuberculosis, Vibrio cholerae, and mycoplasma,; and the group consisting of cancer antigens gp100, MUC1, NY-ESO-1, MelanA/MART1, TRP2, MAGE, CEA, CA125, HER2/neu, WT1, and PSA, or fragment(s) thereof.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en" independent="true">
+      <claim-text>A method for producing a virus vector of the family Paramyxoviridae by which an antigenic polypeptide is expressed in the form of a fusion protein with a viral structural protein or a portion thereof, the method comprising the steps of: coculturing, with a Vero cell, a virus vector of the family Paramyxoviridae in which a gene encoding the fusion protein is integrated in a viral gene; and isolating virus particles from the culture supernatant.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>The method according to claim 10, wherein the fusion protein is a fusion protein with one or more selected from HN protein, F protein, and M protein of the virus, or a portion thereof.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>The method according to claim 10 or 11, wherein the fusion protein is a fusion protein with an intracellular domain of the HN protein or the F protein of the virus.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>The method according to any of claims 10 to 12,<br />
+wherein the antigenic polypeptide is
+<claim-text>1) fused on the C-terminal side of the HN protein and expressed outside the vector envelope,</claim-text><claim-text>2) fused on the C- or N-terminal side of the F protein and expressed inside the vector envelope, or</claim-text><claim-text>3) fused on each of the C-terminal side of the HN protein and the C- or N-terminal side of the F protein or the N-terminal side of the HN protein and expressed both outside and inside the vector envelope.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>The method according to any of claims 10 to 12, wherein the antigenic polypeptide is fused with a membrane or intracellular domain of the HN protein or the F protein of the virus so that the antigenic polypeptide is included on the vector envelope.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>The method according to any of claims 10 to 14, wherein the method comprises:
+<claim-text>coculturing an F gene-defective virus of the family Paramyxoviridae with a Vero cell expressing the F gene of the virus of the family Paramyxoviridae or the F gene fused with the antigen; and</claim-text><claim-text>isolating a virus particle from the culture supernatant.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>The method according to any of claims 10 to 15, further comprising the step of subjecting the virus to nucleic acid inactivation treatment.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>The method according to claim 16, wherein the nucleic acid inactivation treatment does not substantially alter the structure of the virus envelope.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>The method according to any of claims 10 to 17, wherein the antigenic polypeptide is influenza virus M2e protein or a fragment thereof.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>The method according to any of claims 10 to 18, wherein the antigenic polypeptide is any one or more antigenic peptides selected from the group consisting of an antigenic peptide of a virus selected from influenza viruses including a highly virulent influenza virus, parainfluenza virus type 3, RS virus, Hendra virus, SARS virus, Nipah virus, Lassa virus, dengue virus, West Nile virus, human metapneumovirus, Ebola virus, hantavirus, AIDS virus, hepatitis C virus, Lassa virus, human papillomavirus, rubella virus, rotavirus, norovirus, Crimean-Congo hemorrhagic fever virus, herpesvirus, cytomegalovirus, and papillomavirus, the group consisting of an antigenic peptide of a bacterium selected from the group A beta-hemolytic streptococcus, Mycobacterium tuberculosis, Vibrio cholerae, and mycoplasma, and the group consisting of cancer antigens gp100, MUC1, NY-ESO-1, MelanA/MART1, TRP2, MAGE, CEA, CA125, HER2/neu, WT1, and PSA, or fragment(s) thereof.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en" independent="true">
+      <claim-text>A Vero cell comprising antigen gene-fused F gene of a virus of the family Paramyxoviridae and expressing a fusion protein between the antigen and the F protein.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0003.tif" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0004.tif" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0005.tif" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0006.tif" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0007.tif" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0008.tif" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0009.tif" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0010.tif" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0011.tif" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0012.tif" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0013.tif" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0014.tif" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00016.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00017.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0002.tif" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00018.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0003.tif" inline="yes" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="EP2940134A1_00019.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2940134A1.PDF" type="pdf" size="1038633" pages="35" />
+</lexisnexis-patent-document>

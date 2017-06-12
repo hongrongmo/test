@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259826A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030059" date-changed="20151117" time-changed="080604">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121313990">
+        <country>US</country>
+        <doc-number>20150259826</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14723626</doc-number>
+        <date>20150528</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>TW</country>
+        <doc-number>099202372</doc-number>
+        <date>20100204</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151117">
+      <classification-ipcr sequence="1">
+        <text>C30B  25/10        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C30B  25/12        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C30B  25/14        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151117">
+      <classification-cpc sequence="1">
+        <text>C30B  25/10        20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C23C  16/4585      20130101 LI20150113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>4585</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C23C  16/4586      20130101 LI20150113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>4586</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C30B  25/12        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">EPITAXIAL GROWTH SYSTEMS</invention-title>
+    <related-documents date-changed="20150917">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13021330</doc-number>
+              <date>20110204</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9068264</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007236</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>EPISTAR CORPORATION</orgname>
+            <address>
+              <city>Hsinchu</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>TW</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>YANG</last-name>
+            <first-name>Tzu-Ching</first-name>
+            <address>
+              <city>Hsinchu</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>CHANG</last-name>
+            <first-name>Chung-Ying</first-name>
+            <address>
+              <city>Hsinchu</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="159434775">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9068264</doc-number>
+            <kind>B2</kind>
+            <date>20150630</date>
+          </document-id>
+          <application-date>
+            <date>20110204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>M392431</doc-number>
+            <kind>U</kind>
+            <date>20101111</date>
+          </document-id>
+          <application-date>
+            <date>20100204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259826</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150528</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="159434773">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20110120376</doc-number>
+            <kind>A1</kind>
+            <date>20110526</date>
+          </document-id>
+          <application-date>
+            <date>20110204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9068264</doc-number>
+            <kind>B2</kind>
+            <date>20150630</date>
+          </document-id>
+          <application-date>
+            <date>20110204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>M392431</doc-number>
+            <kind>U</kind>
+            <date>20101111</date>
+          </document-id>
+          <application-date>
+            <date>20100204</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259826</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150528</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Disclosed is about an epitaxial growth system, including an epitaxial growth reactor chamber; a susceptor disposed in the epitaxial growth reactor chamber, wherein the susceptor includes a top surface and a side surface; a plurality of wafer fixing elements disposed on the top surface, and each of the wafer fixing elements has a boundary; a plurality of first heating elements directly under the susceptor arranged in parallel to the top surface; and a second heating element disposed directly under the outermost first heating element; wherein no other heating elements are disposed directly under the first heating elements other than the outermost first heating element; and wherein the first and the second heating elements are independently controllable.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150528</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259826A1</docdb-publication-number>
+      <docdb-application-id>444515237</docdb-application-id>
+      <new-owner>EPISTAR CORPORATION, TAIWAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:YANG, TZU-CHING;CHANG, CHUNG-YING;SIGNING DATES FROM 20100809 TO 20150312;REEL/FRAME:035774/0128</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation application of U.S. patent application Ser. No. 13/021,330, entitled “EPITAXIAL GROWTH SYSTEMS”, filed Feb. 4, 2011, now pending, which claims the right of priority based on Taiwan application Serial No. 099202372, filed on Feb. 4, 2010, and the entire contents of both applications are hereby incorporated by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00002-en" num="0002">The disclosure relates to an epitaxial growth system, and more particularly to an epitaxial growth system with high heating uniformity.</p>
+      <heading id="h-00003-en" level="1">DESCRIPTION OF BACKGROUND ART</heading>
+      <p id="p-00003-en" num="0003">The semiconductor optoelectronic devices contribute to data transmission and energy conversion along with the advance of technology. For example, the semiconductor optoelectronics devices can be applied in systems such as the optical fiber communication, optical storage, military system, and the like. In general, the processes of forming semiconductor optoelectronic devices include forming wafer, growing epitaxy layers, growing, thin films, diffusion/ion implantation, photolithography, etching, and the like.</p>
+      <p id="p-00004-en" num="0004">In the described processes, growing epitaxy layers are generally performed by a chemical vapor deposition (CVD) system or a molecular beam epitaxy (MBE) system. The CVD system is preferred in this industry because of its faster production rate compared with the MBE system.</p>
+      <p id="p-00005-en" num="0005">
+        <figref>FIG. 1</figref> shows a cross-sectional diagram of major parts of a conventional epitaxial growth system chemical vapor deposition system <b>1</b> for semiconductor optoelectronic devices. In system <b>1</b>, a base plate <b>101</b> is combined with an enclosure <b>102</b> to form a sealed reactor chamber <b>103</b>. A susceptor <b>104</b> is contained in the reactor chamber <b>103</b>. The susceptor <b>104</b> has a horizontal supporting surface <b>105</b> with a plurality of wafer fixing elements (not shown) thereon. The wafer fixing elements fix a plurality of wafers <b>106</b> on the sup eating surface <b>105</b>, and the fixed wafers <b>106</b> can be subsequently processed by epitaxial growth. In addition, several inductive coils <b>107</b> are disposed under the supporting surface <b>105</b> to heat the wafers thereon. The inductive coils <b>107</b> are supplied with electricity, and thereby form an electromagnetic induction to heat the wafer <b>106</b> on the susceptor <b>104</b>. In this system, the inductive cells <b>107</b> are arranged in curve relative to the supporting surface <b>105</b>. Therefore, the wafers <b>106</b> can be uniformly heated by the inductive coils <b>107</b>. In other words, a rotation device <b>108</b> is set as a reference to separate the inductive coils <b>107</b> to left and right parts. The remote portion of the inductive coils <b>107</b> (far away from the reference) are apart from the supporting surface <b>105</b> with a shorter distance, and the center portion of the inductive coils <b>107</b> (near the reference) are apart from the supporting surface <b>105</b> with a larger distance. In addition, the rotation device <b>108</b> is connected to the center of the susceptor <b>104</b> such that the susceptor <b>104</b> can be rotated. Therefore, the wafers <b>106</b> fixed on different locations of the susceptor <b>104</b> can be heated with higher uniformity. The internal part of the rotation device <b>108</b> can be further connected to a gas line <b>109</b>, thereby connecting to an external gas supply system. The gas line is used to input a gas to the reactor chamber for the epitaxial growth. Simultaneously, the susceptor <b>104</b> is rotated by the rotation device <b>108</b>, and uniformly heated by the lower heating system. Afterwards, an epitaxy layer is formed on the surface of the wafers <b>106</b>.</p>
+      <p id="p-00006-en" num="0006">In the conventional epitaxial growth system <b>1</b> for semiconductor optoelectronic devices, the upper wafers <b>106</b> are heated by electromagnetic induction of the inductive coils <b>107</b>. The inductive coils <b>107</b> are arranged in curve related to the supporting surface <b>105</b>. The curved degree of the arrangement is defined by the distance between the inductive coils <b>107</b> and the upper wafers <b>106</b>, and the density of the arrangement is defined by the distance of the inductive coils therebetween. The temperature uniformity depends on the curved degree and the density of the arrangement so the temperature tuning is quite complicated. When the device material and/or the epitaxy reaction temperature are changed, the whole arrangement of the inductive coils <b>107</b> has to be correspondingly tuned. Moreover, if the temperature uniformity of the wafers <b>106</b> is tuned by increasing/decreasing the applied electromagnetic energy, the temperature is dramatically interfered with the circumstance temperature. In short, it is difficult to control the healing uniformity of the wafers <b>106</b>.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE DISCLOSURE</heading>
+      <p id="p-00007-en" num="0007">The present disclosure provides several epitaxial growth systems.</p>
+      <p id="p-00008-en" num="0008">An epitaxial growth system in accordance with an embodiment of the disclosure includes an epitaxial growth reactor chamber; a susceptor disposed in the epitaxial growth reactor chamber, wherein the susceptor includes a top surface and a side surface; a plurality of wafer fixing elements disposed on the top surface, and each of the wafer fixing elements has a boundary: a plurality of first heating elements directly under the susceptor arranged in parallel to the top surface; and a second healing element disposed directly under the outermost first heating element; wherein no other heating elements are disposed directly under the first heating elements other than the outermost first heating element; and wherein the first and the second healing elements are independently controllable.</p>
+      <p id="p-00009-en" num="0009">An epitaxial growth system in accordance with an embodiment of the disclosure includes an epitaxial growth reactor chamber; a susceptor disposed in the epitaxial growth reactor chamber, wherein the susceptor includes a top surface and a side surface; a plurality of wafer fixing elements disposed on the top surface, and each of the wafer fixing elements having a boundary; a plurality of first heating elements being apart from the top surface with a first distance, wherein the first distances of the first heating elements are substantially the same; a second heating element being apart from the top surface with a second distance less than the first distance; and a third heating element directly under the second heating element, and no other heating elements are disposed directly under the plurality of first heating elements other than the second heating element; wherein the first, the second and the third heating elements are independently controllable.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 1</figref> illustrates a conventional epitaxial growth system for semiconductor optoelectronic devices;</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 2</figref> illustrates an epitaxial growth system for semiconductor optoelectronic devices in accordance with an embodiment of the disclosure.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 3</figref> illustrates a partial enlarged diagram of an epitaxial growth system for semiconductor optoelectronic devices in accordance with an embodiment of the disclosure;</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIGS. 4A-4B</figref> illustrate partial lop views of susceptors of epitaxial growth systems for semiconductor optoelectronic devices in accordance with embodiments of the disclosure; and</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIGS. 5A-5H</figref> illustrate partial enlarged diagrams of healing parts of epitaxial growth systems for semiconductor optoelectronic devices in accordance with embodiments of the disclosure.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION OF PREFERRED EMBODIMENTS</heading>
+      <p id="p-00015-en" num="0015">The embodiments are described hereinafter in accompany with drawings.</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 2</figref> shows a major reactor part of an epitaxial growth system <b>2</b> for semiconductor optoelectronic devices in one embodiment of the disclosure. In the epitaxial growth system <b>2</b>, a base plate <b>201</b> is combined with an enclosure <b>202</b> to form a sealed reactor chamber <b>203</b>. The epitaxial growth is performed in the reactor chamber <b>203</b>. A susceptor <b>204</b> is contained in the reactor chamber <b>203</b>. The susceptor <b>201</b> has a horizontal supporting surface <b>205</b> with a plurality of water fixing elements (not shown) thereon. The wafer fixing elements fix a plurality of wafers <b>206</b> on the supporting surface <b>205</b>. Several first heating elements <b>207</b> are disposed under the supporting surface <b>205</b> of the epitaxial growth system <b>2</b>, and the first heating elements <b>207</b> are substantially arranged in parallel to the supporting surface <b>205</b>. For example, the first heating elements can be tungsten healing lines and the like. The temperature of the tungsten heating lines is increased during a heating process, such that a temperature difference is occurred between the tungsten heating lines and the upper susceptor <b>204</b>. The heat can be transferred from the first heating elements <b>207</b> to the susceptor <b>204</b> by convection and/or radiation. Because the heating process is based on the temperature difference, the temperature control of the upper susceptor is easier. As a result, the arrangement of the first heating elements <b>207</b> can be simple, and there is no need to have a complicated geometry shape (e.g. curve in <figref>FIG. 1</figref>). Furthermore, the first healing elements <b>207</b> can be optionally connected to different temperature controllers (not shown) set by segment, thereby heating the first heating elements <b>207</b> to different temperatures, respectively. The temperature of the first heating elements <b>207</b> can be directly tuned by different temperature controllers to uniformly heating the wafers <b>206</b>. Similarly, the rotation device <b>208</b> set in geometry center of the susceptor <b>204</b> may rotate the susceptor <b>204</b>, and the wafers <b>206</b> on different locations of the susceptor <b>204</b> are heated with higher uniformity. The internal part of the reactor chamber <b>203</b> can be further connected to gas lines <b>209</b>, thereby connecting to an external gas supply system. The gas lines <b>209</b> are used to input a gas to the reactor chamber <b>203</b> for the epitaxial growth. Simultaneously, the susceptor <b>204</b> is rotated by the rotation device <b>208</b>, and uniformly healed by the lower heating system. Afterwards, an epitaxy layer is formed on the surface of the wafers <b>206</b>.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 3</figref> shows a partial enlarged diagram of the epitaxial growth system <b>2</b> in one embodiment of the disclosure. Obviously, the susceptor <b>204</b> includes a supporting surface <b>205</b>, and the first heating elements <b>207</b> are disposed under and arranged in parallel to the susceptor <b>204</b>. The epitaxial growth system efficiency is determined by the number of the wafers fixed on the supporting surface <b>205</b> per process. In other words, the wafers should be arranged in densest way to occupy the maximum area of the supporting surface <b>205</b>. Accordingly, if the boundary <b>212</b> of the wafer fixing elements <b>210</b> and the rim <b>211</b> of the supporting surface <b>205</b> are closer, the utilization of the surface area of the susceptor <b>204</b> is higher.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 4A</figref> shows a top view of a supporting surface <b>405</b> in one embodiment of the disclosure. Several wafers <b>406</b> are disposed on the supporting surface <b>405</b> for epitaxial growth. In this manner, wafer fixing elements (not shown) are disposed on the supporting surface <b>405</b>, such as cavities corresponding to a wafer shape, to hold and fix the wafers.</p>
+      <p id="p-00019-en" num="0019">For enhancing the surface area utilization of the susceptor, <figref>FIG. 4B</figref> shows a top view of another supporting surface <b>405</b> in one embodiment of the disclosure. The wafers <b>406</b> are much densely arranged on the supporting surface <b>405</b> for epitaxial growth. In this manner, wafer fixing elements (not shown) are disposed on the supporting surface <b>405</b>, such as cavities corresponding to a wafer shape, to hold and fix the wafers. The difference between <figref>FIGS. 4A and 4B</figref> is the number of wafers on the supporting surface. The area utilization of the susceptor <b>405</b> in <figref>FIG. 4B</figref> is higher than that of <figref>FIG. 4A</figref>. The number of wafers <b>406</b> is thirty-one in <figref>FIG. 4A</figref> and thirty-seven in <figref>FIG. 4B</figref>, respectively. In <figref>FIG. 4B</figref>, the boundary <b>412</b> of the outermost wafer fixing element is closer to the rim <b>411</b> of the supporting surface <b>405</b>. In other word, the wafers occupy more area of the supporting surface <b>405</b> in <figref>FIG. 4B</figref>.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIGS. 5A and 5B</figref> show different heating structures corresponding to the embodiment shown in <figref>FIG. 4B</figref>. As described above, the boundary <b>412</b> of the outermost wafer fixing element <b>410</b> should be close to the rim <b>411</b> of the supporting surface <b>405</b> so the area utilization of the susceptor surface is improved. However, the susceptor <b>404</b> has an unavoidable thickness. The first heating element <b>407</b> and the susceptor <b>404</b> must have a safety distance to prevent the first heating element <b>407</b> from damaging the susceptor <b>404</b> during heating process. <figref>FIG. 5A</figref> shows part of the heating structure close to the rim <b>411</b> of the supporting surface <b>405</b>. In <figref>FIG. 5A</figref>, a wafer fixing element <b>410</b> is disposed on the supporting surface <b>405</b>, and the wafer fixing element <b>410</b> has a closest approach (e.g. boundary <b>412</b>) to the rim <b>411</b> of the supporting surface <b>405</b>, wherein the boundary <b>412</b> and the rim <b>411</b> have a minimum distance D. Several first healing elements <b>407</b>, four in this embodiment, are disposed under the susceptor <b>404</b> and arranged in parallel to the supporting surface <b>405</b>. Considering the sidewall thickness of the susceptor <b>404</b> and the safety distance between the first heating elements <b>407</b> and the susceptor <b>404</b>, the first heating element <b>407</b> and the rim <b>411</b> should have a minimum distance L. Because the sidewall of the susceptor limits the location of the first heating element <b>407</b>, the minimum distance L cannot be less than the minimum distance D. As proven in experiments, the difference between the minimum distances L and D is less than or equal to 5 mm and greater than or equal to 0, in the condition of the minimum distance L greater than or equal to the minimum distance D, so the outermost pan of the wafers (i.e. the boundary <b>412</b> of the wafer fixing element <b>410</b>) are sufficiently heated for the epitaxial growth. Moreover, several second heating elements <b>413</b> can be further disposed under the first healing elements <b>407</b> and arranged vertically to the supporting surface <b>405</b>. The second heating elements <b>413</b> may assist in providing heat to the side of the susceptor, such that the temperature of the side of the susceptor and the whole temperature uniformity are less influenced by the radiated cooling in the circumstance. Note that the first heating elements <b>407</b> and the second heating elements <b>413</b> can be selectively heated by different temperature controllers, respectively, such that the wafers has higher heating uniformity due to different temperature adjustment by segment. In this embodiment, the susceptor <b>404</b> can be a thermally conductive material, such as silicon carbide, graphite, boron nitride, or combinations thereof. The first and/or second heating elements can be a thermally stable material, such as tungsten heating lines.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 5B</figref> shows part of the heating structure close to the rim <b>411</b> of the supporting surface <b>405</b> in another embodiment of the disclosure. In <figref>FIG. 5B</figref>, a wafer fixing element <b>410</b> is disposed on the supporting surface <b>405</b>, and the wafer fixing element <b>410</b> has a closest approach (e.g. boundary <b>412</b>) to the rim <b>411</b> of the supporting surface <b>405</b>, wherein the boundary <b>412</b> and the rim <b>411</b> have a minimum distance D. Several first heating elements <b>407</b>, three in this embodiment, are disposed under the susceptor <b>404</b> and arranged in parallel to the supporting surface <b>405</b>. In addition, a second heating element <b>407</b>′ is further disposed near the rim <b>411</b> of the supporting surface <b>405</b>. Compared with the first heating element <b>407</b>, the second heating element <b>407</b>′ is closer to the supporting surface <b>405</b>. Therefore, the upper wafers near the rim <b>411</b> can be sufficiently heated by the closer healing source (e.g. the second heating element <b>407</b>′).</p>
+      <p id="p-00022-en" num="0022">Moreover, several third heating elements <b>414</b> can be further disposed under the second heating elements <b>407</b>′ and arranged vertically to the supporting surface <b>405</b>. The third heating elements <b>414</b> may assist in providing heat to the side of the susceptor, such that the temperature of the side of the susceptor and the whole temperature uniformity are less influenced by the radiated cooling in the circumstance. Note that the first heating elements <b>407</b>, the second heating element <b>407</b>′, and the third heating elements <b>413</b> can be selectively heated by different temperature controllers, respectively, such that the wafers has higher heating uniformity due to different temperature adjustment by segment. Similarly, considering the sidewall thickness of the susceptor <b>404</b> and the safety distance between the second healing element <b>407</b>′ and the susceptor <b>404</b>, the second healing element <b>407</b>′ and the rim <b>411</b> should have a minimum distance L′ Because the sidewall of the susceptor limits the location of the second healing element <b>407</b>′, the minimum distance L′ cannot be less than the minimum distance D. As proven in experiments, the difference between the minimum distances L′ and D is less than or equal to 5 mm and greater than or equal to 0, in the condition of the minimum distance L′ greater than or equal to the minimum distance D. In those experiments, the outermost part of the wafers and the rim <b>411</b> of the wafer fixing element <b>410</b> are sufficiently heated to process the epitaxial growth. In this embodiment, the susceptor <b>404</b> can be a thermally conductive material, such as silicon carbide, graphite, boron nitride, or combinations thereof. The first, second, and/or third heating elements can be a thermally stable material, such as tungsten heating lines.</p>
+      <p id="p-00023-en" num="0023">As shown in the described embodiments, the boundary <b>412</b> of the wafer fixing elements and the rim <b>411</b> of the supporting surface have a minimum distance D, and the first heating element may align with the boundary <b>412</b> of the wafer fixing elements. Preferably, D is a minimum value and L is equal to D. When the distance D between the outermost boundary <b>412</b> of the wafer fixing element <b>410</b> and the rim <b>411</b> of the supporting surface is minimized, it is dangerous to dispose the first healing element <b>407</b> under the susceptor <b>404</b> and aligning to the rim <b>411</b> of the supporting surface. The danger is caused by luck of the safety distance between the sidewall of the susceptor <b>404</b> and the first heating element <b>407</b>. To overcome the safety problems, the described system is further adjusted in other embodiments. As shown in <figref>FIGS. 5C and 5D</figref>, part of the sidewall <b>415</b> of the susceptor <b>404</b> corresponding to the outermost first heating element <b>407</b> (or second heating element <b>407</b>′) is thinner than another part of the sidewall <b>416</b> of the susceptor <b>404</b> distanced away from the thinner part of the sidewall <b>415</b> and not corresponding to the outermost first heating element <b>407</b> (or second heating element <b>407</b>′). As such, the outermost first heating element <b>407</b> (or second healing element <b>407</b>′) can be disposed farther to align the boundary <b>412</b> of the wafer fixing elements. Therefore, the wafers surface is heated with higher uniformity.</p>
+      <p id="p-00024-en" num="0024">In other embodiment, an edge part <b>417</b> of the susceptor <b>404</b> corresponding to the outermost first heating element <b>407</b> is thinner than another part <b>418</b> of the susceptor <b>404</b>, as shown in <figref>FIG. 5E</figref>. Similarly, an edge part <b>417</b> of the susceptor <b>404</b> corresponding to the second heating element <b>407</b>′ is thinner than another part <b>418</b> of the susceptor <b>404</b>, as shown in <figref>FIG. 5F</figref>. The thinner edge <b>417</b> (as shown in <figref>FIGS. 5E-5F</figref>) can be combined with the thinner sidewall <b>415</b> (as shown in <figref>FIGS. 5C-5D</figref>) to form the susceptors <b>404</b> as shown in <figref>FIGS. 5G-5H</figref>.</p>
+      <p id="p-00025-en" num="0025">More specifically, with reference to <figref>FIG. 5H</figref>, several first heating elements <b>407</b> are disposed under the susceptor <b>404</b> and arranged in parallel to the supporting surface <b>405</b>. Each of the first heating elements <b>407</b> is apart from the supporting surface <b>405</b> with a first distance and the first distance for each of the first heating elements <b>407</b> to the supporting surface <b>405</b> are substantially the same. The second heating element <b>407</b>′ is disposed near the rim <b>411</b> of the supporting surface <b>405</b>, and compared with the first healing element <b>407</b>, the second heating element <b>407</b>′ is closer to the supporting surface <b>405</b>. Moreover, several third heating elements <b>414</b> are disposed under the second heating elements <b>407</b>′ and arranged in a direction vertically to the supporting surface <b>405</b>. The third heating elements <b>414</b> may assist in providing heat to the side of the susceptor <b>404</b>, such that the temperature of the side of the susceptor <b>404</b> and the whole temperature uniformity are less influenced by the radiated cooling in the circumstance. The wafer fixing element <b>410</b> is disposed on the supporting surface <b>405</b>, and the wafer fixing element <b>410</b> has a closest approach (e.g. boundary <b>412</b>) to the rim <b>411</b> of the supporting surface <b>405</b>, wherein the boundary <b>412</b> and the rim <b>411</b> have a minimum distance D. The second heating element <b>407</b>′ and the rim <b>411</b> should have a minimum distance L′.</p>
+      <p id="p-00026-en" num="0026">In the disclosure, the first heating elements are disposed under and arranged in parallel to the susceptor, such that the upper wafers can be directly heated with higher uniformity. In addition, the waters can be effectively arranged on the supporting surface by adjusting the relative position of the lower healing element boundary and the upper wafer fixing element boundary. In conclusion, the disclosure improves the mass production.</p>
+      <p id="p-00027-en" num="0027">The foregoing description has been directed lo the specific embodiments of this disclosure. It is apparent; however, that other alternatives and modifications may be made to the embodiments without escaping the spirit and scope of the disclosure.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An epitaxial growth system, comprising:
+<claim-text>an epitaxial growth reactor chamber;</claim-text><claim-text>a susceptor disposed in the epitaxial growth reactor chamber, wherein the susceptor includes a top surface and a side surface;</claim-text><claim-text>a plurality of wafer fixing elements disposed on the top surface, and each of the wafer fixing elements has a boundary;</claim-text><claim-text>a plurality of first heating elements directly under the susceptor arranged in parallel to the top surface; and</claim-text><claim-text>a second heating element disposed directly under the outermost first heating element; and no other heating elements are disposed directly under the first healing elements other than the outermost first heating element;</claim-text><claim-text>wherein the first and the second heating elements are independently controllable.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a rotation device connected to a geometry center of the susceptor.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a plurality of gas input elements disposed in the epitaxial growth reactor chamber for providing process gases during an epitaxy process.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the susceptor comprises:
+<claim-text>a first sidewall corresponding to the outermost first heating element; and</claim-text><claim-text>a second sidewall not corresponding to the outermost first heating element; wherein the first sidewall is thinner than the second sidewall.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein an edge part of the susceptor corresponding to the outermost first heating element of the first heating elements is thinner than a part of the susceptor not corresponding to the outermost first heating element.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a first minimum distance between the second heating element and the side surface is greater than or equal to a second minimum distance between the boundary of the outermost wafer fixing element and the side surface; and a difference between the first minimum distance and the second minimum distance is less than or equal to 5 mm.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein each of the first heating elements is apart from the top surface with a first distance, and the first distances of the first heating elements are substantially the same.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en" independent="true">
+      <claim-text>
+        <b>8</b>. An epitaxial growth system, comprising:
+<claim-text>an epitaxial growth reactor chamber;</claim-text><claim-text>a susceptor disposed in the epitaxial growth reactor chamber, wherein the susceptor includes a top surface and a side surface;</claim-text><claim-text>a plurality of wafer fixing elements disposed on the top surface, and each of the wafer fixing elements having a boundary;</claim-text><claim-text>a plurality of first heating elements being apart from the top surface with a first distance, wherein the first distances of the first healing elements are substantially the same;</claim-text><claim-text>a second heating element being apart from the top surface with a second distance less than the first distance; and</claim-text><claim-text>a third heating element directly under the second healing element, and no other heating elements are disposed directly under the plurality of first heating elements other than the second heating element;</claim-text><claim-text>wherein the first, the second and the third heating elements are independently controllable.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The system as claimed in <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein a first minimum distance between the second heating element and the side surface is greater than or equal to a second minimum distance between the boundary of the outermost wafer fixing element and the side surface; and a difference between the first minimum distance and the second minimum distance is less than or equal to 5 mm.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The system as claimed in <claim-ref idref="clm-00008-en">claim 8</claim-ref>, further comprising a rotation device connected to a geometry center of the susceptor.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The system as claimed in <claim-ref idref="clm-00008-en">claim 8</claim-ref>, further comprising a plurality of gas input elements disposed in the epitaxial growth reactor chamber for providing process gases during an epitaxy process.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The system as claimed in <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the susceptor comprises:
+<claim-text>a first sidewall corresponding to the second heating element; and</claim-text><claim-text>a second sidewall not corresponding to the second heating element; wherein the first sidewall is thinner than the second sidewall.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259826A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150259826A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259826A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259826A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259826A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259826A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259826A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259826A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259826A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259826A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150259826A1_00006.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150259826A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150259826A1.PDF" type="pdf" size="556808" pages="9" />
+</lexisnexis-patent-document>

@@ -1,0 +1,1813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259683A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030139" date-changed="20151027" time-changed="110506">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314999">
+        <country>US</country>
+        <doc-number>20150259683</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14668618</doc-number>
+        <date>20150325</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2004382791</doc-number>
+        <date>20041222</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>JP</country>
+        <doc-number>2008068227</doc-number>
+        <date>20080317</date>
+      </priority-claim>
+      <priority-claim sequence="3" kind="national">
+        <country>JP</country>
+        <doc-number>2010138070</doc-number>
+        <date>20100617</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151020">
+      <classification-ipcr sequence="1">
+        <text>C12N  15/113       20100101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20100101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>113</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151020">
+      <classification-cpc sequence="1">
+        <text>C12N  15/113       20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>113</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K   9/127       20130101 LI20130603BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>127</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130603</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K  31/07        20130101 LI20130603BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>07</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130603</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K  31/7088      20130101 LI20130603BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>7088</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130603</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61K  31/713       20130101 LI20130603BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>713</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130603</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61K  47/10        20130101 LI20130603BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130603</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61K  47/48038     20130101 LI20130603BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>48038</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130603</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61K  47/48815     20130101 LI20130603BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>48815</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130603</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61K  47/48846     20130101 LI20130603BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>48846</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130603</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61K  47/48853     20130101 LI20130603BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>48853</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130603</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C12N  15/111       20130101 LA20151013BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>111</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151013</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C12N2310/14        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2310</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C12N2320/32        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2320</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">25</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">AGENT FOR TREATING RENAL FIBROSIS</invention-title>
+    <references-cited date-changed="20151027">
+      <patent-citations name="patcit" date-changed="20151027" />
+      <citation>
+        <patcit num="1" dnum="US2008193512A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080193512</doc-number>
+            <kind>A1</kind>
+            <name>NIITSU YOSHIRO [JP], et al</name>
+            <date>20080814</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="WO2009036368A2" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2009036368</doc-number>
+            <kind>A2</kind>
+            <name>NITTO DENKO CORP [JP], et al</name>
+            <date>20090319</date>
+          </document-id>
+          <application-date>
+            <date>20080912</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150917">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13704437</doc-number>
+              <date>20130215</date>
+            </document-id>
+            <parent-status>ABANDONED</parent-status>
+            <parent-pct-document>
+              <document-id>
+                <country>WO</country>
+                <doc-number>PCT/JP2011/063910</doc-number>
+                <date>20110617</date>
+              </document-id>
+            </parent-pct-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006686</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13867346</doc-number>
+              <date>20130422</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13704437</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13585736</doc-number>
+              <date>20120814</date>
+            </document-id>
+            <parent-status>ABANDONED</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13867346</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12933075</doc-number>
+              <date>20101210</date>
+            </document-id>
+            <parent-status>ABANDONED</parent-status>
+            <parent-pct-document>
+              <document-id>
+                <country>WO</country>
+                <doc-number>PCT/JP2009/001148</doc-number>
+                <date>20090316</date>
+              </document-id>
+            </parent-pct-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13585736</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13786883</doc-number>
+              <date>20130306</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12933075</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13439330</doc-number>
+              <date>20120404</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8652526</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13786883</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>11793736</doc-number>
+              <date>20080408</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8173170</doc-number>
+              </document-id>
+            </parent-grant-document>
+            <parent-pct-document>
+              <document-id>
+                <country>WO</country>
+                <doc-number>PCT/JP2005/023619</doc-number>
+                <date>20051222</date>
+              </document-id>
+            </parent-pct-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13439330</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13492424</doc-number>
+              <date>20120608</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13786883</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61494840</doc-number>
+          <date>20110608</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>NITTO DENKO CORPORATION</orgname>
+            <address>
+              <city>Osaka</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>JP</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Niitsu</last-name>
+            <first-name>Yoshiro</first-name>
+            <address>
+              <city>Sapporo-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kajiwara</last-name>
+            <first-name>Keiko</first-name>
+            <address>
+              <city>Ibaraki-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Tanaka</last-name>
+            <first-name>Yasunobu</first-name>
+            <address>
+              <city>Ibaraki-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Miyazaki</last-name>
+            <first-name>Miyono</first-name>
+            <address>
+              <city>Sapporo-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP11063910</doc-number>
+        <date>20110617</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2011158933</doc-number>
+        <date>20111222</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20160120">
+      <main-family family-id="173668173">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259683</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150325</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="155006840">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015187137</doc-number>
+            <kind>A</kind>
+            <date>20151029</date>
+          </document-id>
+          <application-date>
+            <date>20150601</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>4121537</doc-number>
+            <kind>B2</kind>
+            <date>20080723</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2008050375</doc-number>
+            <kind>A</kind>
+            <date>20080306</date>
+          </document-id>
+          <application-date>
+            <date>20071113</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2010142226</doc-number>
+            <kind>A</kind>
+            <date>20120427</date>
+          </document-id>
+          <application-date>
+            <date>20090316</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201204389</doc-number>
+            <kind>A</kind>
+            <date>20120201</date>
+          </document-id>
+          <application-date>
+            <date>20110617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>8178124</doc-number>
+            <kind>B2</kind>
+            <date>20120515</date>
+          </document-id>
+          <application-date>
+            <date>20110929</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2718560</doc-number>
+            <kind>A1</kind>
+            <date>20090924</date>
+          </document-id>
+          <application-date>
+            <date>20090316</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1842557</doc-number>
+            <kind>A1</kind>
+            <date>20071010</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2727583</doc-number>
+            <kind>A3</kind>
+            <date>20140723</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2730277</doc-number>
+            <kind>A3</kind>
+            <date>20140723</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>342CHENP2013</doc-number>
+            <kind>A</kind>
+            <date>20150703</date>
+          </document-id>
+          <application-date>
+            <date>20130115</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20120269886</doc-number>
+            <kind>A1</kind>
+            <date>20121025</date>
+          </document-id>
+          <application-date>
+            <date>20120608</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130171240</doc-number>
+            <kind>A1</kind>
+            <date>20130704</date>
+          </document-id>
+          <application-date>
+            <date>20130306</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>8173170</doc-number>
+            <kind>B2</kind>
+            <date>20120508</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2005320014</doc-number>
+            <kind>B2</kind>
+            <date>20110526</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2011266057</doc-number>
+            <kind>B2</kind>
+            <date>20141204</date>
+          </document-id>
+          <application-date>
+            <date>20110617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2802414</doc-number>
+            <kind>A1</kind>
+            <date>20111222</date>
+          </document-id>
+          <application-date>
+            <date>20110617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>101102795</doc-number>
+            <kind>A</kind>
+            <date>20080109</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DK</country>
+            <doc-number>1842557</doc-number>
+            <kind>T3</kind>
+            <date>20131202</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2258395</doc-number>
+            <kind>A1</kind>
+            <date>20101208</date>
+          </document-id>
+          <application-date>
+            <date>20090316</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2583691</doc-number>
+            <kind>A1</kind>
+            <date>20130424</date>
+          </document-id>
+          <application-date>
+            <date>20110617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2727583</doc-number>
+            <kind>A2</kind>
+            <date>20140507</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>1094MUMNP2007</doc-number>
+            <kind>A</kind>
+            <date>20071012</date>
+          </document-id>
+          <application-date>
+            <date>20070723</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2009221164</doc-number>
+            <kind>A</kind>
+            <date>20091001</date>
+          </document-id>
+          <application-date>
+            <date>20080317</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>WO2006068232</doc-number>
+            <kind>A1</kind>
+            <date>20080807</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020110010692</doc-number>
+            <kind>A</kind>
+            <date>20110207</date>
+          </document-id>
+          <application-date>
+            <date>20090316</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>I499434</doc-number>
+            <kind>B</kind>
+            <date>20150911</date>
+          </document-id>
+          <application-date>
+            <date>20090317</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20120076852</doc-number>
+            <kind>A1</kind>
+            <date>20120329</date>
+          </document-id>
+          <application-date>
+            <date>20110929</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130011464</doc-number>
+            <kind>A2</kind>
+            <date>20130110</date>
+          </document-id>
+          <application-date>
+            <date>20120404</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>8652526</doc-number>
+            <kind>B2</kind>
+            <date>20140218</date>
+          </document-id>
+          <application-date>
+            <date>20120404</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2005320014</doc-number>
+            <kind>A1</kind>
+            <date>20060629</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2009227445</doc-number>
+            <kind>B2</kind>
+            <date>20140918</date>
+          </document-id>
+          <application-date>
+            <date>20090316</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2011266057</doc-number>
+            <kind>A1</kind>
+            <date>20130110</date>
+          </document-id>
+          <application-date>
+            <date>20110617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2595517</doc-number>
+            <kind>C</kind>
+            <date>20130924</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2820728</doc-number>
+            <kind>A1</kind>
+            <date>20060629</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>101102795</doc-number>
+            <kind>B</kind>
+            <date>20111207</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>101977629</doc-number>
+            <kind>A</kind>
+            <date>20110216</date>
+          </document-id>
+          <application-date>
+            <date>20090316</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>102343092</doc-number>
+            <kind>A</kind>
+            <date>20120208</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>102933233</doc-number>
+            <kind>A</kind>
+            <date>20130213</date>
+          </document-id>
+          <application-date>
+            <date>20110617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1842557</doc-number>
+            <kind>A4</kind>
+            <date>20110810</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1842557</doc-number>
+            <kind>B1</kind>
+            <date>20131023</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2258395</doc-number>
+            <kind>A4</kind>
+            <date>20110330</date>
+          </document-id>
+          <application-date>
+            <date>20090316</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2258395</doc-number>
+            <kind>B1</kind>
+            <date>20160106</date>
+          </document-id>
+          <application-date>
+            <date>20090316</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2730277</doc-number>
+            <kind>A2</kind>
+            <date>20140514</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2443229</doc-number>
+            <kind>T3</kind>
+            <date>20140218</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2013100350</doc-number>
+            <kind>A</kind>
+            <date>20130523</date>
+          </document-id>
+          <application-date>
+            <date>20130212</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5172880</doc-number>
+            <kind>B2</kind>
+            <date>20130327</date>
+          </document-id>
+          <application-date>
+            <date>20100305</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5421322</doc-number>
+            <kind>B2</kind>
+            <date>20140219</date>
+          </document-id>
+          <application-date>
+            <date>20110428</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5808064</doc-number>
+            <kind>B2</kind>
+            <date>20151110</date>
+          </document-id>
+          <application-date>
+            <date>20140421</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020130121813</doc-number>
+            <kind>A</kind>
+            <date>20131106</date>
+          </document-id>
+          <application-date>
+            <date>20110617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150143880</doc-number>
+            <kind>A</kind>
+            <date>20151223</date>
+          </document-id>
+          <application-date>
+            <date>20090316</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>PT</country>
+            <doc-number>1842557</doc-number>
+            <kind>E</kind>
+            <date>20131107</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2013101969</doc-number>
+            <kind>A</kind>
+            <date>20140727</date>
+          </document-id>
+          <application-date>
+            <date>20110617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201000134</doc-number>
+            <kind>A</kind>
+            <date>20100101</date>
+          </document-id>
+          <application-date>
+            <date>20090317</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20120328694</doc-number>
+            <kind>A1</kind>
+            <date>20121227</date>
+          </document-id>
+          <application-date>
+            <date>20120814</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130136789</doc-number>
+            <kind>A1</kind>
+            <date>20130530</date>
+          </document-id>
+          <application-date>
+            <date>20110617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259683</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150325</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>8574623</doc-number>
+            <kind>B2</kind>
+            <date>20131105</date>
+          </document-id>
+          <application-date>
+            <date>20121010</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>8591953</doc-number>
+            <kind>B2</kind>
+            <date>20131126</date>
+          </document-id>
+          <application-date>
+            <date>20120404</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2006068232</doc-number>
+            <kind>A1</kind>
+            <date>20060629</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2009116257</doc-number>
+            <kind>A1</kind>
+            <date>20090924</date>
+          </document-id>
+          <application-date>
+            <date>20090316</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2011158933</doc-number>
+            <kind>A1</kind>
+            <date>20111222</date>
+          </document-id>
+          <application-date>
+            <date>20110617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2009227445</doc-number>
+            <kind>A1</kind>
+            <date>20090924</date>
+          </document-id>
+          <application-date>
+            <date>20090316</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2595517</doc-number>
+            <kind>A1</kind>
+            <date>20060629</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>1855MUMNP2010</doc-number>
+            <kind>A</kind>
+            <date>20101203</date>
+          </document-id>
+          <application-date>
+            <date>20100831</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2010138188</doc-number>
+            <kind>A</kind>
+            <date>20100624</date>
+          </document-id>
+          <application-date>
+            <date>20100305</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2011201890</doc-number>
+            <kind>A</kind>
+            <date>20111013</date>
+          </document-id>
+          <application-date>
+            <date>20110428</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2012020995</doc-number>
+            <kind>A</kind>
+            <date>20120202</date>
+          </document-id>
+          <application-date>
+            <date>20110617</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014141525</doc-number>
+            <kind>A</kind>
+            <date>20140807</date>
+          </document-id>
+          <application-date>
+            <date>20140421</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015155459</doc-number>
+            <kind>A</kind>
+            <date>20150827</date>
+          </document-id>
+          <application-date>
+            <date>20150518</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>4533420</doc-number>
+            <kind>B2</kind>
+            <date>20100901</date>
+          </document-id>
+          <application-date>
+            <date>20071113</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101454286</doc-number>
+            <kind>B1</kind>
+            <date>20141017</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020130099232</doc-number>
+            <kind>A</kind>
+            <date>20130905</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2547571</doc-number>
+            <kind>C2</kind>
+            <date>20150410</date>
+          </document-id>
+          <application-date>
+            <date>20090316</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201536325</doc-number>
+            <kind>A</kind>
+            <date>20151001</date>
+          </document-id>
+          <application-date>
+            <date>20090317</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20080193512</doc-number>
+            <kind>A1</kind>
+            <date>20080814</date>
+          </document-id>
+          <application-date>
+            <date>20051222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20120189691</doc-number>
+            <kind>A1</kind>
+            <date>20120726</date>
+          </document-id>
+          <application-date>
+            <date>20120404</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130028967</doc-number>
+            <kind>A1</kind>
+            <date>20130131</date>
+          </document-id>
+          <application-date>
+            <date>20121010</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130216611</doc-number>
+            <kind>A1</kind>
+            <date>20130822</date>
+          </document-id>
+          <application-date>
+            <date>20130422</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to a substance delivery carrier for extracellular matrix-producing cells in the kidney, the carrier including a retinoid as a targeting agent, an agent for treating renal fibrosis utilizing the carrier, a process for producing them, a production kit, a method for treating renal fibrosis using the agent for treating renal fibrosis, etc.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150723</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259683A1</docdb-publication-number>
+      <docdb-application-id>444514953</docdb-application-id>
+      <new-owner>NITTO DENKO CORPORATION, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:NIITSU, YOSHIRO;KAJIWARA, KEIKO;TANAKA, YASUNOBU;AND OTHERS;SIGNING DATES FROM 20150520 TO 20150625;REEL/FRAME:036167/0877</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a substance delivery carrier targeted to extracellular matrix-producing cells in the kidney, and a composition for treating renal fibrosis and a method for treating renal fibrosis utilizing the above carrier.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">In recent years, due to great changes in lifestyle, mainly with respect to eating habits, the prevalence of lifestyle-related diseases such as high blood pressure and diabetes has increased, and accompanying this the risk of renal disease, and consequently renal failure, has been increasing.</p>
+      <p id="p-00003-en" num="0003">The kidney is an important organ for maintaining homeostasis of the internal environment by means of excretion of waste products or regulation of bodily fluids/electrolytes/acid-base balance, etc. The kidney controls the concentrations of various compounds in the blood, such as those of hydrogen, sodium, potassium, and silicon, and excretes waste products in the form of urine. Any deterioration of renal function gives rise to the possibility of interference with the body's ability to sufficiently remove metabolites from the blood and also the possibility of destruction of the body's electrolyte balance. In its most serious form, deterioration or failure of renal function can be fatal.</p>
+      <p id="p-00004-en" num="0004">Furthermore, other than the above-mentioned functions, the kidney has functions such as cell mediated immunity, endocrine secretion, and metabolism. The kidney as an endocrine organ carries out the production of erythropoietin, which regulates the production of red blood cells or 1,25-dihydroxyvitamin D3, which is an active form of vitamin D3, the secretion of renin and erythropoietin, which are blood pressure regulation factors, and the secretion of kinin, kallikrein, prostaglandin, etc.</p>
+      <p id="p-00005-en" num="0005">Chronic renal failure means a state in which the above renal functions gradually deteriorate irreversibly and homeostasis of a living body cannot be maintained. It is known that chronic renal failure is caused by diabetic nephropathy, chronic glomerulonephritis, malignant nephrosclerosis, polycystic kidney disease, etc. All of the renal diseases are accompanied by fibrosis of the kidney and eventually lead to terminal renal failure. In particular, since chronic deterioration of renal function depends heavily on the progress of fibrosis of the kidney, it is thought that inhibiting the progress of fibrosis can result in suppression of the progress of chronic renal failure.</p>
+      <p id="p-00006-en" num="0006">In general, renal fibrosis is accompanied by an inflammatory response due to endothelial cell dysfunction, and the extracellular matrix that is eventually produced in excess causes fibrosis. For example, in glomerulosclerosis, due to glomerular endothelial cell dysfunction, a cytokine such as a chemokine or a growth factor is secreted, and monocytes or macrophages migrate so as to make an inflammatory response progress. Subsequently, activation, proliferation, and transformation of mesangial cells occur, an excess amount of extracellular matrix is produced from extracellular matrix-producing cells such as mesangial cells, fibrosis occurs, and this leads to glomerulosclerosis.</p>
+      <p id="p-00007-en" num="0007">In particular, diabetic nephropathy is the biggest factor leading to chronic renal failure, and one of the complications of diabetes. Diabetic nephropathy is characterized by hyperplasia and enlargement of the glomerular mesangium, and this is mainly due to an increase in accumulation of an ECM protein such as type I or type IV collagen, fibronectin, or laminin.</p>
+      <p id="p-00008-en" num="0008">Once a serious degree of chronic renal failure occurs, recovery is impossible, and uremia will occur unless a treatment such as dialysis is carried out. As a therapy for chronic renal failure, a diet such as a low-protein diet or a salt-restricted diet, administration of an antihypertensive drug in order to alleviate the burden on the glomerulus, etc. is carried out.</p>
+      <p id="p-00009-en" num="0009">Furthermore, for chronic renal failure, as necessary, a treatment for supplementing 1,25-dihydroxyvitamin D3 or erythropoietin, which are secreted by the kidney, or a treatment for appropriately maintaining blood pressure regulation, which is an important function of the kidney, is carried out.</p>
+      <p id="p-00010-en" num="0010">As a chemotherapy, in order to suppress the progress of renal failure, an angiotensin converting enzyme inhibitor or an angiotensin II receptor antagonist is used. It is surmised that they have a renal protective effect per se in addition to suppressing the progress of renal failure by decreasing glomerular blood pressure. However, it is necessary to take care in administration since when the glomerular blood pressure is decreased too much the amount of glomerular blood flow instead decreases and prerenal renal failure occurs.</p>
+      <p id="p-00011-en" num="0011">As the angiotensin converting enzyme inhibitor, there are captoril, enalapril, delapril, imidapril, quinapril, temocapril, perindopril erbumine, lisinopril, etc., and as the angiotensin II receptor antagonist there are losartan, valsartan, candesartan cilexetil, telmisartan, olmesartan medoxomil, irbesartan, etc.</p>
+      <p id="p-00012-en" num="0012">Other than the above, in order to improve the symptoms of uremia and delay the start of dialysis a little, Kremezin is used as an adsorptive carbon that adsorbs harmful substances in the intestine. Furthermore, in order to prevent breathlessness, numbness in the limbs, arrhythmia, etc. due to an increase in potassium in the blood, calcium polystyrene sulfonate is used as an ion-exchange resin that adsorbs potassium in the intestine and is excreted in the feces.</p>
+      <p id="p-00013-en" num="0013">When the concentration in serum of creatinine, which is a skeletal muscle-derived metabolite, exceeds 5 to 7 mg/dL, an artificial dialysis therapy such as peritoneal dialysis, hemofiltration, or blood dialysis, or a kidney transplant, can be considered. However, blood dialysis imposes a large burden on a person's life due to having to visit a hospital three times a week and being confined there for 4 to 5 hours per treatment, and with regard to a kidney transplant, since there are few kidney donors, among patients who desire one only a very small number can receive a kidney transplant. Furthermore, the average life expectancy of renal failure patients after starting dialysis is only about half that of the normal population.</p>
+      <p id="p-00014-en" num="0014">In these circumstances, a great deal of research effort has been put into the development of an agent for treating renal fibrosis. As a result, it has been reported that, for example, a medicinal agent acting on the renin-angiotensin-aldosterone system such as an angiotensin converting enzyme inhibitor, an AT1 angiotensin II receptor antagonist, an aldosterone antagonist, or a renin inhibitor, a medicinal agent acting on the nitric oxide system such as an endothelin receptor antagonist, an α blocker, a β blocker, an immunosuppressive agent, an extracellular matrix metabolism inhibitor, a complement system inhibitor, a chemokine inhibitor, or a phosphodiesterase 5 inhibitor, and a medicinal agent such as an NFκB inhibitor, a Rho inhibitor, a p38 MAPK inhibitor, a PI3Kγ inhibitor, a vascular endothelium cell growth factor (VEGF) inhibitor, kallikrein, relaxin, an interleukin 1 receptor antagonist, bone morphogenetic factor 7 (BMP-7), antitumor necrosis factor α antibody (Anti-TNFα antibody), or anti-platelet-derived growth factor D antibody (Anti-PDGF-D antibody) have a certain degree of success with a renal fibrosis model animal or in a clinical trial (Non-Patent Document 1).</p>
+      <p id="p-00015-en" num="0015">Furthermore, there have been many patent applications and, for example, patents relating to an angiotensin converting enzyme inhibitor (Patent Document 1), an angiotensin II receptor antagonist (Patent Document 2), a transforming growth factor β (TGF-β) inhibitor (Patent Document 3), a plasminogen activator inhibitor 1 (PAI-1) production inhibitor (Patent Document 4), a prostaglandin receptor 4 selective agonist (Patent Document 5), a type I collagen synthesis inhibitor (Patent Document 6), a chondroitin sulfate proteoglycan sulfotransferase inhibitor (Patent Document 7), a vitamin K epoxide reductase inhibitor (Patent Document 8), a glycation end product formation inhibitor (Patent Document 9), an A2A adenosine receptor 2A agonist (Patent Document 10), an endothelin receptor antagonist (Patent Document 11), a VEGF inhibitor (Patent Document 12), etc. have been applied for as drugs for treating renal fibrosis. However, none of these medicinal agents are satisfactory, and further development of agents for treating renal fibrosis is needed.</p>
+      <heading id="h-00003-en" level="1">RELATED ART DOCUMENTS</heading>
+      <heading id="h-00004-en" level="1">Patent Documents</heading>
+      <p id="p-00016-en" num="0000">
+        <ul id="ul-00001-en" list-style="none">
+          <li>[Patent Document 1] U.S. Pat. No. 5,238,924</li>
+          <li>[Patent Document 2] JP, A, 07-002667</li>
+          <li>[Patent Document 3] JP, A, 2004-043459</li>
+          <li>[Patent Document 4] JP, A, 2009-007258</li>
+          <li>[Patent Document 5] JP, A, 2001-233792</li>
+          <li>[Patent Document 6] JP, A (PCT) 2004-534760</li>
+          <li>[Patent Document 7] JP, A, 2009-292725</li>
+          <li>[Patent Document 8] JP, A, 2010-077101</li>
+          <li>[Patent Document 9] JP, A, 2009-029750</li>
+          <li>[Patent Document 10] JP, A (PCT) 2007-536241</li>
+          <li>[Patent Document 11] JP, A (PCT) 2006-519817</li>
+          <li>[Patent Document 12] JP, A, 2007-099641</li>
+          <li>[Patent Document 13] International Patent Application WO 2006/068232</li>
+          <li>[Patent Document 14] JP, A, 2009-221164</li>
+          <li>[Patent Document 15] JP, A, 2010-59124</li>
+        </ul>
+      </p>
+      <heading id="h-00005-en" level="1">Non-Patent Documents</heading>
+      <p id="p-00017-en" num="0000">
+        <ul id="ul-00002-en" list-style="none">
+          <li>[Non-Patent Document 1] Nephrology, dialysis, transplantation 2007; 22(12): 3391-407</li>
+        </ul>
+      </p>
+      <heading id="h-00006-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <heading id="h-00007-en" level="1">Problems to be Solved by the Invention</heading>
+      <p id="p-00018-en" num="0032">It is an object of the present invention to provide a carrier that can specifically deliver a substance such as a drug to extracellular matrix-producing cells in the kidney, and an agent for treating renal fibrosis and a method for treating renal fibrosis utilizing the carrier.</p>
+      <heading id="h-00008-en" level="1">Means for Solving the Problems</heading>
+      <p id="p-00019-en" num="0033">The inventors have discovered, during an investigation into a novel agent for treating renal fibrosis, that renal fibrosis could be treated effectively by administering a composition in which an extracellular matrix production inhibitor is carried by a carrier that includes a retinoid as a targeting agent, thereby completing the invention.</p>
+      <p id="p-00020-en" num="0034">It is known that a carrier that includes vitamin A can deliver a drug to stellate cells that store vitamin A (Patent Document 13), and that a composition in which siRNA for HSP47 is supported on the above carrier can improve hepatic fibrosis (Patent Document 13), pulmonary fibrosis (Patent Document 14), and myelofibrosis (Patent Document 15), but any relationship to renal fibrosis, renal interstitial tissue, or the mesangium is so far completely unknown.</p>
+      <p id="p-00021-en" num="0035">That is, the present invention relates to the following.</p>
+      <p id="p-00022-en" num="0036">(1) A carrier for delivering a substance to extracellular matrix-producing cells in the kidney, the carrier including a retinoid as a targeting agent for extracellular matrix-producing cells in the kidney.</p>
+      <p id="p-00023-en" num="0037">(2) The carrier according to (1) above, wherein the retinoid includes retinol.</p>
+      <p id="p-00024-en" num="0038">(3) The carrier according to (1) or (2) above, wherein the carrier has the form of a liposome, and the molar ratio of retinoid and lipid contained in the liposome is 8:1 to 1:4.</p>
+      <p id="p-00025-en" num="0039">(4) A pharmaceutical composition for treating renal fibrosis, the composition including the carrier according to any one of (1) to (3) above and a drug for controlling the activity or growth of extracellular matrix-producing cells in the kidney.</p>
+      <p id="p-00026-en" num="0040">(5) The pharmaceutical composition according to (4) above, wherein the drug for controlling the activity or growth of extracellular matrix-producing cells in the kidney is selected from the group consisting of an inhibitor of PAI-1 activity or production, a cell activity inhibitor, a growth inhibitor, an apoptosis inducer, and an RNAi molecule, ribozyme, antisense nucleic acid, or DNA/RNA chimeric polynucleotide that target at least one of the extracellular matrix constituent molecules or molecules involved in the production or secretion of the extracellular matrix constituent molecules or a vector expressing same.</p>
+      <p id="p-00027-en" num="0041">(6) The pharmaceutical composition according to (4) above, wherein the drug for controlling the activity or growth of extracellular matrix-producing cells is an HSP47 inhibitor.</p>
+      <p id="p-00028-en" num="0042">(7) The pharmaceutical composition according to any one of (4) to (6) above, wherein the drug and the carrier are mixed at a place of medical treatment or in its vicinity.</p>
+      <p id="p-00029-en" num="0043">(8) A kit for preparing the pharmaceutical composition according to any one of (4) to (7) above, the kit including one or more containers that contain either singly or in combination the drug for controlling the activity or growth of extracellular matrix-producing cells in the kidney, the retinoid and, as necessary, a carrier constituent substance other than the retinoid.</p>
+      <p id="p-00030-en" num="0044">(9) A process for producing a carrier for delivering a substance to extracellular matrix-producing cells in the kidney, the process including a step of formulating a retinoid as a targeting agent for extracellular matrix-producing cells in the kidney.</p>
+      <p id="p-00031-en" num="0045">(10) A process for producing a pharmaceutical composition for treating renal fibrosis, the process including a step of formulating a retinoid as a targeting agent for extracellular matrix-producing cells in the kidney, and a drug for controlling the activity or growth of extracellular matrix-producing cells in the kidney as an active ingredient.</p>
+      <heading id="h-00009-en" level="1">Effects of the Invention</heading>
+      <p id="p-00032-en" num="0046">While the exact mode of action of the composition for treating renal fibrosis of the present invention has not yet been completely clarified, it is believed that the retinoid functions as an agent that targets extracellular matrix-producing cells in the kidney such as fibroblasts or myofibroblasts, and delivers an active ingredient such as a drug that controls the activity or growth of extracellular matrix-producing cells in the kidney to such cells, thereby exhibiting an effect against renal fibrosis.</p>
+      <p id="p-00033-en" num="0047">Therefore, since an active ingredient can be efficiently delivered to the site of action and, further, to target cells, by using the carrier of the present invention, the treatment, suppression of progression, and prevention of onset of renal fibrosis, etc., in particular diabetic nephritis, the treatment of which has been difficult to date, are made possible, and the present carrier thus contributes significantly to human medicine and veterinary medicine.</p>
+      <p id="p-00034-en" num="0048">Moreover, the carrier of the present invention can be combined with any pharmaceutical agent (for example, an existing therapeutic agent for renal fibrosis) to increase its efficiency of action; it is therefore also advantageous for its broad range of application in terms of formulation, enabling the production of effective therapeutic agents to be facilitated.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00010-en" level="1">BRIEF DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00035-en" num="0049">
+        <figref>FIG. 1</figref> is a representative microscopic image of the glomerulus by Sirius red staining of a section of the renal cortex of a mouse of each group. The images were taken at a magnification of 800× using an oil immersion lens.</p>
+      <p id="p-00036-en" num="0050">
+        <figref>FIG. 2</figref> is a graph showing the proportion of the fibrotic region of the renal cortex quantitatively determined by Sirius red staining. 20 fields of view were randomly taken in the renal cortex region per individual mouse, and the proportion of the fibrotic region (Fibrosis area (%)) was calculated (*P&lt;0.05, **P&lt;0.01).</p>
+      <p id="p-00037-en" num="0051">
+        <figref>FIG. 3</figref> is a graph showing gene knockdown by siRNA-containing VA-binding liposome in mouse renal extracellular matrix-producing cells. The level of HSP47 gene expression in the extracellular matrix-producing cells collected from the mouse kidney was corrected with the expression level of GAPDH, which is an internal control gene, and the proportion of HSP47 gene expression (HSP47 gene expression (%)) was plotted while defining ‘No treatment’ (non-treated) as 100%. VA-lip denotes VA-liposome-siRNA Hsp47C, lip denotes liposome-siRNA Hsp47C, VA+siRNA denotes VA+siRNA Hsp47C, and NT denotes No treatment.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00011-en" level="1">MODES FOR CARRYING OUT THE INVENTION</heading>
+      <p id="p-00038-en" num="0052">In the present invention, the extracellular matrix-producing cells in the kidney are not particularly limited as long as they are cells present in the kidney having the ability to produce extracellular matrix, and examples thereof present in the kidney include mesangial cells, tubulointerstitial cells, pericytes, fibroblasts, fibrocytes, which are precursor cells for fibroblasts, and myofibroblasts. The matrix-producing cells present in the kidney can include not only those derived from cells present in the kidney but also those derived from fibrocytes in circulating blood and those transformed from endothelial cells by endothelial-mesenchymal transdifferentiation. Myofibroblasts are characterized by the expression of α-SMA (alpha-smooth muscle actin). The myofibroblasts in the present invention are ones identified by for example immunostaining using detectably-labeled anti-α-SMA antibodies. Furthermore, since fibroblasts express vimentin, which is characteristic of mesenchymal cells, but do not express αSMA, they may be identified by double staining of vimentin and αSMA, etc. Moreover, the extracellular matrix-producing cells in the kidney may be obtained by treating renal tissue with collagenase and protease and then carrying out isolation by density-gradient centrifugation (e.g. in Nycodenz® having a final concentration of 8%).</p>
+      <p id="p-00039-en" num="0053">The retinoid of the present invention functions as a targeting agent (targeting agent) to extracellular matrix-producing cells in the kidney, and promotes the specific delivery of a substance to these cells. The mechanism of the promotion of substance delivery by the retinoid has not yet been completely clarified; however, for example, it is thought that a retinoid that has specifically bound to a retinol-binding protein (RBP) is taken into an extracellular matrix-producing cell in the kidney through a certain receptor present on the surface of said cell.</p>
+      <p id="p-00040-en" num="0054">A retinoid is a member of a class of compounds having a skeleton in which four isoprenoid units are bonded in a head-to-tail manner (see G. P. Moss, ‘Biochemical Nomenclature and Related Documents’, 2nd Ed. Portland Press, pp. 247-251 (1992)). Vitamin A is a generic descriptor for a retinoid that qualitatively shows the biological activity of retinol. The retinoid that can be used in the present invention is not particularly limited, and examples thereof include retinol (including all-trans-retinol), retinal, retinoic acid (including tretinoin), retinoid derivatives such as an ester of retinol and a fatty acid, an ester of an aliphatic alcohol and retinoic acid, etretinate, isotretinoin, adapalene, acitretine, tazarotene, and retinyl palmitate, and vitamin A analogues such as fenretinide (4-HPR) and bexarotene.</p>
+      <p id="p-00041-en" num="0055">Of these, retinol, retinal, retinoic acid, an ester of retinol and a fatty acid (such as retinyl acetate, retinyl palmitate, retinyl stearate, and retinyl laurate) and an ester of an aliphatic alcohol and retinoic acid (such as ethyl retinoate) are preferable from the viewpoint of efficiency of specific delivery of a substance to extracellular matrix-producing cells in the kidney.</p>
+      <p id="p-00042-en" num="0056">All retinoid isomers including cis-trans isomers are included in the scope of the present invention. The retinoid may be substituted with one or more substituents. The retinoid in the present invention includes a retinoid in an isolated form as well as in a form of a solution or mixture with a medium that can dissolve or retain the retinoid.</p>
+      <p id="p-00043-en" num="0057">The carrier of the present invention may be constituted from the retinoid on its own or may be constituted by binding the retinoid to a carrier constituent component other than the retinoid, or by enclosing it therein. Therefore, the carrier of the present invention may include a carrier constituent component other than the retinoid. Such a component is not particularly limited, and any component known in the medicinal and pharmaceutical fields may be used, but those that can enclose the retinoid or can bind to the retinoid are preferable.</p>
+      <p id="p-00044-en" num="0058">Examples of such a component include a lipid, for example, a phospholipid such as glycerophospholipid, a sphingolipid such as sphingomyelin, a sterol such as cholesterol, a vegetable oil such as soybean oil or poppy seed oil, a mineral oil, a lecithin such as egg-yolk lecithin, and a polymer, but the examples are not limited thereto. Among them, those that can form a liposome, for example, a natural phospholipid such as lecithin, a semisynthetic phospholipid such as dimyristoylphosphatidylcholine (DMPC), dipalmitoylphosphatidylcholine (DPPC), or distearoylphosphatidylcholine (DSPC), dioleylphosphatidylethanolamine (DOPE), dilauroylphosphatidylcholine (DLPC), cholesterol, etc. are preferable.</p>
+      <p id="p-00045-en" num="0059">A particularly preferred component is a component that can avoid capture by the reticuloendothelial system, examples thereof including cationic lipids such as N-(α-trimethylammonioacetyl)-didodecyl-D-glutamate chloride (TMAG), N,N′,N″,N′″-tetramethyl-N,N′,N″,N′″-tetrapalmitylspermine (TMTPS), 2,3-dioleyloxy-N-[2-(sperminecarboxamido)ethyl]-N,N-dimethyl-1-propanaminium trifluoroacetate (DOSPA), N-[1-(2,3-dioleyloxyl)propyl]-N,N,N-trimethylammonium chloride (DOTMA), dioctadecyldimethylammonium chloride (DODAC), didodecylammonium bromide (DDAB), 1,2-dioleyloxy-3-trimethylammoniopropane (DOTAP), 3β-[N—(N′,N′-dimethylaminoethane)carbamoyl]cholesterol (DC-Chol), 1,2-dimyristoyloxypropyl-3-dimethylhydroxyethylammonium (DMRIE), and O,O′-ditetradecanoyl-N-(α-trimethylammonioacetyl)diethanolamine chloride (DC-6-14).</p>
+      <p id="p-00046-en" num="0060">The carrier in the present invention may have a specific three-dimensional structure. Such a structure is not limited, and examples thereof include a straight-chained or branched linear structure, a film-form structure, and a spherical structure. Therefore, the carrier may have, without limitation, any three-dimensional form such as a micelle, a liposome, an emulsion, a microsphere, or a nanosphere.</p>
+      <p id="p-00047-en" num="0061">The binding of the retinoid to the carrier of the present invention or the enclosing of it therein is also made possible by binding the retinoid to or enclosing it in a carrier constituent other than the retinoid by a chemical and/or physical method. Alternatively, the retinoid can be bound to or enclosed in the carrier of the present invention by mixing the retinoid and the carrier constituents other than the retinoid during the preparation of the carrier. The amount of the retinoid in the carrier of the present invention may be for example 0.01 to 1000 nmol/μL, and is preferably 0.1 to 100 nmol/μL. The retinoid may be bound to or enclosed in the carrier before supporting a drug on the carrier; or the carrier, retinoid and drug may be mixed simultaneously; or the retinoid may be admixed with the carrier already supporting the drug, etc. Therefore, the present invention also relates to a process for producing a formulation specific to extracellular matrix-producing cells in the kidney, the process including a step of binding a retinoid to any existing drug-binding carrier or drug-encapsulating carrier, for example, a liposomal formulation such as DaunoXome®, Doxil, Caelyx®, or Myocet®.</p>
+      <p id="p-00048-en" num="0062">The carrier of the present invention may be in any form as long as a desired substance or object can be transported to target extracellular matrix-producing cells in the kidney, and examples thereof include, but are not limited to, a macromolecular micelle, a liposome, an emulsion, microspheres, and nanospheres. In the present invention, a liposomal form is preferable among these from the viewpoint of high delivery efficiency, wide selection of substances to be delivered, and ease of formulation, etc., and a cationic liposome containing a cationic lipid is particularly preferable. In the case where the carrier is in the form of a liposome, the molar ratio of the retinoid to other constituents of the liposome is preferably 8:1 to 1:4, and more preferably 4:1 to 1:2, from the viewpoint of the efficiency of binding the retinoid to the carrier or enclosing it therein.</p>
+      <p id="p-00049-en" num="0063">The carrier of the present invention may contain a substance to be transported within its interior, it may be attached to the exterior of a substance to be transported, or it may be mixed with a substance to be transported, as long as it contains a retinoid in a form such that the retinoid is able to function as a targeting agent. ‘Function as a targeting agent’ herein means that the carrier that includes a retinoid reaches and/or is taken up by the target cells, i.e., extracellular matrix-producing cells in the kidney, more rapidly and/or in a larger quantity than with a carrier not including the retinoid, and this may easily be confirmed by, for example, adding a labeled carrier or label-containing carrier to a culture of target cells and analyzing the distribution of the label after a predetermined period of time. Structurally, this requirement can be satisfied, for example, if a retinoid is at least partially exposed to the exterior of the formulation containing the carrier at the latest by the time it reaches the target cells. The ‘formulation’ referred to here is a concept that includes the composition of the present invention, which is described later, and that further has a form. Whether or not the retinoid is exposed at the exterior of a formulation can be evaluated by contacting the formulation with a substance that specifically binds to a retinoid, such as for example a retinol-binding protein (RBP), and examining its binding to the formulation.</p>
+      <p id="p-00050-en" num="0064">Exposing a retinoid at least partially to the exterior of the formulation at the latest by the time it reaches the target cells may be achieved for example by adjusting the compounding ratio of the retinoid and carrier constituent components other than the retinoid. Furthermore, when the carrier has the form of a lipid structure such as a liposome, when for example forming a complex from a retinoid and a carrier constituent component other than the retinoid, a method in which first a lipid structure formed from the carrier constituent component other than the retinoid is diluted in an aqueous solution, and this is then contacted and mixed with the retinoid, etc. may be used. In this case, the retinoid may be in a state in which it is dissolved in a solvent, for example, an organic solvent such as DMSO. The lipid structure referred to here means a structure containing a lipid as a constituent component and having any three-dimensional structure, for example, a shape such as a linear form, a film form, or a spherical form, and examples thereof include, but are not limited to, a liposome, a micelle, a lipid microsphere, a lipid nanosphere, and a lipid emulsion. Application to another drug carrier of the same targeting agent as one used with a liposome in targeting is described in for example Zhao and Lee, Adv Drug Deliv Rev. 2004; 56(8): 1193-204, Temming et al., Drug Resist Updat. 2005; 8(6): 381-402, etc.</p>
+      <p id="p-00051-en" num="0065">The lipid structure may be stabilized by for example adjusting the osmotic pressure by the use of an osmotic pressure-adjusting agent such as a salt, a saccharide such as sucrose, glucose, or maltose, or a polyhydric alcohol such as glycerol or propylene glycol, and preferably sucrose or glucose. Furthermore, the pH may be adjusted by adding an appropriate amount of an adjusting agent such as a salt or a buffer. It is therefore possible to carry out production, storage, etc. of a lipid structure in a medium containing the above substances. In this case, the concentration of the osmotic pressure-adjusting agent is preferably adjusted so as to be isotonic with blood. For example, in the case of sucrose the concentration thereof in a medium is, although not limited to, 3 to 15 wt %, preferably 5 to 12 wt %, more preferably 8 to 10 wt %, and particularly 9 wt %, and in the case of glucose the concentration thereof in a medium is, although not limited to, 1 to 10 wt %, preferably 3 to 8 wt %, more preferably 4 to 6 wt %, and particularly 5 wt %.</p>
+      <p id="p-00052-en" num="0066">The present invention also relates to a process for producing a carrier for delivering a substance to extracellular matrix-producing cells in the kidney, the process including a step of formulating a retinoid as a targeting agent to extracellular matrix-producing cells in the kidney. The method of formulating the retinoid is not particularly limited as long as, in the carrier in which it is formulated, the retinoid can function as an agent targeting extracellular matrix-producing cells in the kidney, and for example various methods described in the present specification may be used. Therefore, formulation of the retinoid may be carried out by binding the retinoid to or enclosing it in another constituent component of the carrier by a chemical and/or physical method or by mixing the retinoid with another carrier constituent component when preparing the carrier. The amount of retinoid formulated, etc. is as described above with respect to the carrier of the present invention.</p>
+      <p id="p-00053-en" num="0067">The substance or object that is delivered by the present carrier is not particularly limited, and it preferably has a size such that it can physically move within the body of an organism from the site of administration to the site of a lesion where the target cells are present. Therefore, the carrier of the present invention can transport not only a substance such as an atom, a molecule, a compound, a protein, or a nucleic acid, but also an object such as a vector, a virus particle, a cell, a drug-releasing system that includes one or more elements, or a micromachine. The substance or object preferably has the property of having some effect on the target cells, and examples include those labeling the target cells or controlling (e.g. increasing or suppressing) the activity or growth of the target cells.</p>
+      <p id="p-00054-en" num="0068">Therefore, in one embodiment of the present invention, it is ‘a drug for controlling the activity or growth of extracellular matrix-producing cells in the kidney’ that is delivered by the carrier. The activity of the extracellular matrix-producing cells in the kidney herein refers to various activities such as secretion, uptake, or migration exhibited by extracellular matrix-producing cells in the kidney, and in the present invention, in particular, among these, it typically means an activity involved in the onset, progression, and/or recurrence of renal fibrosis. Examples of such activity include, but are not limited to, the production/secretion of a biologically active substance such as PAI-1, and of an extracellular matrix component such as collagen, proteoglycan, tenascin, fibronectin, thrombospondin, osteopontin, osteonectin, or elastin, and the suppression of decomposition activity of these extracellular matrix components.</p>
+      <p id="p-00055-en" num="0069">Therefore, the drug for controlling the activity or growth of extracellular matrix-producing cells in the kidney referred to in the present specification may be any drug that directly or indirectly suppresses the physical, chemical, and/or physiological actions, etc. of said cells related to the onset, progression and/or recurrence of renal fibrosis, and examples thereof include, but are not limited to, a drug that inhibits the activity or production of the biologically active substance above, antibodies and antibody fragments that neutralize the biologically active substance above, a substance that suppresses the expression of the biologically active substance above, such as an RNAi molecule (e.g. siRNA, shRNA, ddRNA, miRNA, piRNA, rasiRNA, etc.), a ribozyme, an antisense nucleic acid (including RNA, DNA, PNA, or a composite thereof), or a substance having a dominant negative effect such as a dominant negative mutant, or a vector expressing these, or a drug that inhibits the production and secretion of the extracellular matrix component above, for example, a substance that suppresses the expression of the extracellular matrix component, such as an RNAi molecule (e.g. siRNA, shRNA, ddRNA, miRNA, piRNA, rasiRNA, etc.), a ribozyme, an antisense nucleic acid (including RNA, DNA, PNA, or a composite thereof), or a substance having a dominant negative effect such as a dominant negative mutant, or a vector expressing these, an inhibitor of cell activity such as a sodium channel blocker, a cell-growth inhibitor such as an alkylating agent (such as ifosfamide, nimustine, cyclophosphamide, dacarbazine, melphalan, or ranimustine), an antitumor antibiotic (such as idarubicin, epirubicin, daunorubicin, doxorubicin, pirarubicin, bleomycin, peplomycin, mitoxantrone, or mitomycin C), an antimetabolite (such as gemcitabine, enocitabine, cytarabine, tegafur/uracil, a tegafur/gimeracil/oteracil potassium mixture, doxifluridine, hydroxycarbamide, fluorouracil, methotrexate, or mercaptopurine), an alkaloid such as etoposide, irinotecan, vinorelbine, docetaxel, paclitaxel, vincristine, vindesine, or vinblastine, and a platinum complex such as carboplatin, cisplatin, or nedaplatin, as well as an apoptosis inducer such as cyclosporine.</p>
+      <p id="p-00056-en" num="0070">Examples of the drug for inhibiting the production/secretion of an extracellular matrix component include, but are not limited to, HSP47, which is a collagen-specific molecular chaperone essential for intracellular transport and molecule maturation, which are common to the synthetic processes of various types of collagen.</p>
+      <p id="p-00057-en" num="0071">Furthermore, the ‘drug for controlling the activity or growth of extracellular matrix-producing cells in the kidney’ in the present invention may be any drug that directly or indirectly promotes the physical, chemical and/or physiological actions of extracellular matrix-producing cells in the kidney directly or indirectly related to the suppression of onset, progression and/or recurrence of renal fibrosis, for example, the production/secretion of MMP (including MMP1, MMP2, etc.), a plasminogen activator (PA), etc. Examples of such a drug include, but are not limited to, an activator or an expression enhancer for these substances. The carrier of the present invention may deliver one or more types of the above-mentioned drugs.</p>
+      <p id="p-00058-en" num="0072">The siRNA (small interfering RNA) that can be used in the present invention includes, in addition to siRNA in the strict sense, duplex RNAs and modified forms thereof such as miRNA (micro RNA), shRNA (short hairpin RNA), piRNA (Piwi-interacting RNA), and rasiRNA (repeat associated siRNA). An siRNA as a functional small RNA in a wide sense and a vector expressing the siRNA may be used for example in accordance with instructions in a standard text (Experimental Medicine Special Edition, Revised RNAi Experimental Protocol 2004, Yodosha, RNAi Experimental Frequently Asked Questions 2006, Yodosha).</p>
+      <p id="p-00059-en" num="0073">Design of these siRNAs may be carried out appropriately by a person skilled in the art in accordance with instructions in a standard text (Experimental Medicine Special Edition, Revised RNAi Experimental Protocol 2004, Yodosha, RNAi Experimental Frequently Asked Questions 2006, Yodosha) by reference to a messenger RNA sequence of a target gene and a known siRNA sequence.</p>
+      <p id="p-00060-en" num="0074">The substance to be delivered by the carrier of the present invention may be, but is not limited to, a drug for suppressing the onset, progression, and/or recurrence of renal fibrosis other than the above-mentioned drugs, and examples thereof include, but are not limited to, a medicinal agent acting on the nitric oxide system such as an angiotensin converting enzyme inhibitor, an AT1 angiotensin II receptor antagonist, an aldosterone antagonist, an endothelin receptor antagonist, an α blocker, a β blocker, an immunosuppressive agent, an extracellular matrix metabolism inhibitor, a complement system inhibitor, a chemokine inhibitor, a TGF-β inhibitor, or a phosphodiesterase 5 inhibitor, an NFκB inhibitor, a Rho inhibitor, a p38 MAPK inhibitor, a PI3Kγ inhibitor, kallikrein, an interleukin 1 receptor antagonist, BMP-7, an antitumor necrosis factor α antibody, an anti-platelet-derived growth factor D antibody, a plasminogen activator inhibitor-1 production inhibitor, a prostaglandin receptor 4 selective agonist, a type I collagen synthesis inhibitor, a chondroitin sulfate proteoglycan sulfotransferase inhibitor, a vitamin K epoxide reductase inhibitor, a glycation end product formation inhibitor, an A2A adenosine receptor 2A agonist, an endothelin receptor antagonist, a VEGF inhibitor, an activator or an expression enhancer for ADAM (a disintegrin and metalloprotease domain) protease, an activator or an expression enhancer for ADAMTS (a disintegrin and metalloprotease with thrombospondin motifs) protease, and relaxin or an expression enhancer therefor. In the present specification, examples of the expression enhancer include, but are not limited to, a gene therapy agent such as a vector containing a nucleic acid coding for a protein that is a target for expression enhancement. These drugs may be used in combination with the composition of the present invention, which is described later. ‘Used in combination’ includes substantially simultaneous administration of the composition of the present invention and the above-mentioned drug and administration thereof with spaced timing within the same treatment period. In the case of the latter, the composition of the present invention may be administered either before or after the drug.</p>
+      <p id="p-00061-en" num="0075">In one embodiment of the present invention, as the drug for controlling the activity or growth of extracellular matrix-producing cells in the kidney, an HSP47 inhibitor, for example, an siRNA corresponding to each thereof can be cited.</p>
+      <p id="p-00062-en" num="0076">The substance or object delivered by the carrier of the present invention may or may not be labeled. Labeling enables monitoring of the success or failure of delivery to target cells, or the increase and decrease of target cells, etc., and is particularly useful not only at the testing/research level but also at the clinical level. A label may be selected from any label known to a person skilled in the art such as, for example, any radioisotope, magnetic material, substance that binds to a labeled substance (e.g. an antibody, etc.), fluorescent substance, fluorophore, chemiluminescent substance, enzyme, etc. A label may be affixed to a carrier constituent component or may be supported on a carrier as an independent substance to be delivered.</p>
+      <p id="p-00063-en" num="0077">In the present invention, ‘for extracellular matrix-producing cells in the kidney’ or ‘for delivery to extracellular matrix-producing cells in the kidney’ means that it is suitable for use for extracellular matrix-producing cells in the kidney as target cells, and this includes, for example, it being possible to deliver a substance to these cells, more rapidly, efficiently, and/or in a larger quantity than to other cells, for example, normal cells. For example, the carrier of the present invention can deliver a substance to extracellular matrix-producing cells in the kidney at a rate and/or efficiency of 1.1 times or more, 1.2 times or more, 1.3 times or more, 1.5 times or more, 2 times or more, or even 3 times or more compared with other cells.</p>
+      <p id="p-00064-en" num="0078">The present invention also relates to a composition for controlling the activity or growth of extracellular matrix-producing cells in the kidney, or for treating renal fibrosis, the composition including the above-mentioned carrier and the above-mentioned drug for controlling the activity or growth of extracellular matrix-producing cells in the kidney, and the present invention also relates to use of the carrier in the production of said composition.</p>
+      <p id="p-00065-en" num="0079">The renal fibrosis referred to in the present invention includes any interstitial nephritis, for example, streptococcal nephritis, staphylococcal nephritis, pneumococcal nephritis, varicella, hepatitis B, hepatitis C, viral nephritis associated with HIV, etc., nephritis due to a parasitic infection such as malaria, infectious interstitial nephritis associated with fungal nephritis, mycoplasma nephritis, etc., systemic lupus erythematosus (lupus nephritis), systemic scleroderma (kidney collagen disease), interstitial nephritis associated with a collagen disease such as Sjogren syndrome, nephritis associated with a blood vessel immune disease such as purpura nephritis, polyarteritis, or rapidly progressive glomerulonephritis, interstitial nephritis associated with radiation exposure, drug-induced interstitial nephritis due to a gold drug, an NSAID, penicillamine, an anticancer agent such as bleomycin, an antibiotic, Paraquat, etc., allergic nephritis due to insect bite, pollen, an Anacardiaceae family plant, etc., amyloidosis nephritis, diabetic nephropathy, chronic glomerulonephritis, nephritis associated with malignant nephrosclerosis, a polycystic kidney disease, etc., tubulointerstitial nephritis, nephritis associated with gestational toxicosis or a cancer, membranoproliferative glomerulonephritis, IgA nephropathy, mixed cryoglobulinemic nephritis, Goodpasture's syndrome nephritis, Wegener's granulomatous nephritis, and a chronic form of interstitial nephritis caused by idiopathic interstitial nephritis such as acute interstitial nephritis. Preferred examples of renal fibrosis in the present invention include diabetic nephritis, drug-induced interstitial nephritis, and a chronic form of idiopathic interstitial nephritis.</p>
+      <p id="p-00066-en" num="0080">In the composition of the present invention, as long as the retinoid contained in the carrier is present in a mode such that it functions as a targeting agent, the carrier may contain a substance to be delivered within its interior, it may be attached to the exterior of a substance to be delivered, or may be mixed with a substance to be delivered. Therefore, depending on the administration route and the manner in which the drug is released, etc., the composition may be covered with an appropriate material such as, for example, an enteric coating or a timed-disintegration material, or may be incorporated into an appropriate drug release system. Furthermore, the composition of the present invention may be in the form of a complex of an active ingredient and a retinoid-binding liposome, that is, a lipoplex. Moreover, when the carrier is constituted only from a retinoid, the composition of the present invention may be in the form of a complex of the retinoid and a drug for controlling the activity or growth of extracellular matrix-producing cells in the kidney.</p>
+      <p id="p-00067-en" num="0081">The composition of the present invention may be used as a medicine (that is, a pharmaceutical composition) and may be administered via various routes including both oral and parenteral routes, and examples thereof include, but are not limited to, oral, intravenous, intramuscular, subcutaneous, local, intrapulmonary, tracheobronchial, intratracheal, intrabronchial, nasal, intrarectal, intraarterial, intraportal, intraventricular, intramedullary, intra-lymph node, intra-lymphatic, intracerebral, intrathecal, intracerebroventricular, transmucosal, percutaneous, intranasal, intraperitoneal, and intrauterine routes, and it may be formulated into a dosage form suitable for each administration route. Such a dosage form and formulation method may be selected as appropriate from any known dosage form and method (see e.g. Hyojun Yakuzaigaku (Standard Pharmaceutics), Ed. by Yoshiteru Watanabe et al., Nankodo, 2003).</p>
+      <p id="p-00068-en" num="0082">Examples of dosage forms suitable for oral administration include, but are not limited to, powder, granule, tablet, capsule, liquid, suspension, emulsion, gel, and syrup, and examples of dosage forms suitable for parenteral administration include injections such as an injectable solution, an injectable suspension, an injectable emulsion, and an injection to be prepared at the time of use. Formulations for parenteral administration may be in a form such as an aqueous or nonaqueous isotonic sterile solution or suspension.</p>
+      <p id="p-00069-en" num="0083">The present invention also relates to a process for producing a pharmaceutical composition for treating renal fibrosis, the process including a step of formulating a retinoid as a targeting agent for extracellular matrix-producing cells in the kidney and a drug for controlling the activity or growth of extracellular matrix-producing cells in the kidney as an active ingredient. The method for formulating the retinoid is not particularly limited as long as the retinoid can function as a targeting agent for extracellular matrix-producing cells in the kidney in the composition in which it is formulated, and for example various methods described in the present specification may be used. Furthermore, the method for formulating the active ingredient is not particularly limited as long as the active ingredient can exhibit a predetermined effect, and any known method may be used. Formulation of the active ingredient may be carried out at the same time as formulation of the retinoid or may be carried out before or after formulating the retinoid. For example, when the composition contains a carrier constituent component other than the retinoid, formulation of the active ingredient may be carried out by mixing the active ingredient with a carrier in which the retinoid has already been formulated as the targeting agent, it may be carried out by mixing the retinoid, a carrier constituent component other than the retinoid, and the active ingredient at the same time, or it may be carried out by formulating the active ingredient with a carrier constituent component other than the retinoid and then mixing this with the retinoid.</p>
+      <p id="p-00070-en" num="0084">The amount of retinoid formulated, etc. is as described above with respect to the carrier of the present invention. Furthermore, the amount of active ingredient is an amount that, when administered as the composition, can suppress the onset or recurrence of renal fibrosis, improve the clinical condition, alleviate its symptoms, or delay or bring to a halt its progression, and preferably may be an amount that can prevent the onset or recurrence of renal fibrosis or cure it. It is also preferably an amount that does not cause an adverse effect that exceeds the benefit from administration. Such an amount may be known or be appropriately determined by an in vitro test using cultured cells or by a test in a model animal such as a mouse, rat, dog or pig, and such test methods are well known to a person skilled in the art. Examples of a model animal with renal fibrosis include one described in JP, A, 2009-178143. The amount of active ingredient formulated can vary according to the form of administration of the composition. For example, when a plurality of units of the composition are used in one administration, the amount of active ingredient formulated in one unit of the composition may be one obtained by dividing the amount of active ingredient required for one administration by the number of units. Such adjustment of the amount formulated may be carried out appropriately by a person skilled in the art.</p>
+      <p id="p-00071-en" num="0085">The carrier or the composition of the present invention may be provided in any form, but from the viewpoint of stability on storage, it may preferably be provided in a form that can be prepared at the time of use, for example in a form such that it can be prepared at a place of medical treatment or in the vicinity thereof by a doctor and/or pharmacist, nurse or other paramedic. In this case, the carrier or the composition of the present invention is provided as one or more containers containing at least one constituent essential therefor, and it is prepared prior to use, for example, within 24 hours prior to use, preferably within 3 hours prior to use, and more preferably, immediately prior to use. When carrying out preparation, a reagent, a solvent, preparation equipment, etc. that are normally available at the place of preparation may be used as appropriate.</p>
+      <p id="p-00072-en" num="0086">Accordingly, the present invention also relates to a kit for preparing a carrier or composition, the kit including one or more containers that contain singly or in combination a retinoid, and/or a substance to be delivered, and/or a carrier constituent substance other than the retinoid, as well as to a constituent that is necessary for the carrier or composition provided in the form of such a kit. The kit of the present invention may contain, in addition to the above, instructions such as for example a written explanation or an electronic recording medium such as a CD or DVD regarding methods for preparing or administering the carrier and composition of the present invention, etc. Furthermore, the kit of the present invention may contain all of the constituents for completing the carrier or the composition of the present invention, but need not necessarily contain all of the constituents. Accordingly, the kit of the present invention need not contain a reagent or solvent that is normally available at a place of medical treatment, an experimental facility, etc., such as, for example, sterile water, physiological saline, or glucose solution.</p>
+      <p id="p-00073-en" num="0087">The present invention further relates to a method for controlling the activity or growth of extracellular matrix-producing cells in the kidney or for treating renal fibrosis, the method including administering an effective amount of the above composition to a subject in need thereof. Here, the effective amount in for example a method for treating renal fibrosis is an amount that suppresses the onset or recurrence of renal fibrosis, improves the clinical condition, alleviates its symptoms, or delays or brings to a halt its progression, and is preferably an amount that prevents the onset or recurrence of renal fibrosis or cures it. It is also preferably an amount that does not cause an adverse effect that exceeds the benefit from administration. Such an amount may be appropriately determined by an in vitro test using cultured cells or by a test in a model animal such as a mouse, rat, dog, or pig, and such test methods are well known to a person skilled in the art. Moreover, the dose of the retinoid contained in the carrier and the dose of the drug used in the method of the present invention are known to a person skilled in the art, or may be appropriately determined by the above-mentioned test, etc. Examples of a model animal with renal fibrosis include one described in JP, A, 2009-178143.</p>
+      <p id="p-00074-en" num="0088">The specific dose of the composition administered in the method of the present invention may be determined taking into account various conditions with respect to the subject in need of the treatment, such as the severity of symptoms, the general health condition of the subject, the age, body weight, and gender of the subject, diet, the administration route, the timing and frequency of administration, concurrent medication, responsiveness to the treatment, compliance with the treatment, etc.</p>
+      <p id="p-00075-en" num="0089">The route of administration includes various routes including both oral and parenteral routes such as, for example, oral, intravenous, intramuscular, subcutaneous, local, intrapulmonary, tracheobronchial, intratracheal, intrabronchial, nasal, intrarectal, intraarterial, intraportal, intraventricular, intramedullary, intra-lymph node, intra-lymphatic, intracerebral, intrathecal, intracerebroventricular, transmucosal, percutaneous, intranasal, intraperitoneal, and intrauterine routes.</p>
+      <p id="p-00076-en" num="0090">The frequency of administration varies depending on the properties of the composition to be used and the aforementioned conditions of the subject, and may be, for example, a plurality of times per day (more specifically, 2, 3, 4, 5, or more times per day), once a day, every few days (more specifically, every 2, 3, 4, 5, 6, or 7 days, etc.), a few times per week (e.g. 2, 3, 4 times, etc. per week), once a week, or every few weeks (more specifically, every 2, 3, 4 weeks, etc.).</p>
+      <p id="p-00077-en" num="0091">In the method of the present invention, the term ‘subject’ means any living individual, preferably an animal, more preferably a mammal, and yet more preferably a human individual. In the present invention, the subject may be healthy or affected by some disorder, and when treatment of renal fibrosis is intended, it typically means a subject affected by diabetic nephritis or renal fibrosis or at risk of being affected thereby. When prevention of renal fibrosis is intended, for example, typical examples include, but are not limited to, a subject affected by diabetic nephritis, in particular diabetic nephritis due to type II diabetes.</p>
+      <p id="p-00078-en" num="0092">Furthermore, the term ‘treatment’ includes all types of medically acceptable prophylactic and/or therapeutic intervention for the purpose of the cure, temporary remission, or prevention of a disorder. For example, the term ‘treatment’ includes medically acceptable intervention for various purposes, including delaying or halting the progression of renal fibrosis, the regression or disappearance of a lesion, and the prevention of onset and prevention of recurrence of renal fibrosis.</p>
+      <p id="p-00079-en" num="0093">The present invention also relates to a method utilizing the above carrier for delivering a drug to extracellular matrix-producing cells in the kidney. This method includes, but is not limited to, for example, a step of supporting a substance to be delivered on the carrier, and a step of administering or adding the carrier supporting the substance to be delivered to an organism or a medium, for example a culture medium, which contains extracellular matrix-producing cells in the kidney. These steps may appropriately be achieved according to any known method or a method described in the present specification. The delivery method may be combined with another delivery method, for example, another delivery method for targeting the kidney. Moreover, the method includes an embodiment performed in vitro and an embodiment in which extracellular matrix-producing cells in the kidney inside the body are targeted.</p>
+      <heading id="h-00012-en" level="1">EXAMPLES</heading>
+      <p id="p-00080-en" num="0094">The present invention is explained below in further detail by reference to the Examples, but they are only Examples and do not at all limit the present invention.</p>
+      <heading id="h-00013-en" level="1">Example 1</heading>
+      <heading id="h-00014-en" level="1">Preparation of siRNA-Containing VA-Binding Liposome</heading>
+      <p id="p-00081-en" num="0095">As the siRNA, one having the following sequence was used.</p>
+      <p id="p-00082-en" num="0000">Sequence name: Hsp47-C <br /> 5′-GGACAGGCCUGUACAACUA-dTdT-3′(sense, SEQ ID NO: 1) <br /> 5′-UAGUUGUACAGGCCUGUCC-dTdT-3′(antisense, SEQ ID NO: 2) </p>
+      <p id="p-00083-en" num="0096">As solutions prior to mixing, 10 mM vitamin A (retinol, Sigma; hereinafter also called VA, dissolved in dimethyl sulfoxide), 1 mM Lipotrust SR (Hokkaido System Science Co., Ltd.; hereinafter also called a liposome or a liposome-constituting lipid, dissolved in nuclease-free water), and 10 μg/μL siRNA (Hsp47-C was dissolved in nuclease-free water) were prepared. Subsequently, VA dissolved in dimethyl sulfoxide was added to the Lipotrust SR dissolved in nuclease-free water prepared above at a ratio of 1:1 (mol/mol), and the mixture was stirred by means of a vortex for 15 seconds and then allowed to stand at room temperature for 5 minutes in a light-shielded state, thus forming a complex. This complex was mixed with siRNA, thus giving a VA Liposome-siRNA Hsp47C administration solution. This administration solution contained, per 100 μL, 75 nmol of VA, 75 nmol of liposome-constituting lipid, and 112.5 μg of siRNA, this corresponding to 3.00 μmol/kg of body weight of VA, 3.00 μmol/kg of body weight of the liposome-constituting lipid, and siRNA 4.5 mg/kg of body weight of siRNA. VA was exposed on the liposome surface.</p>
+      <heading id="h-00015-en" level="1">Example 2</heading>
+      <heading id="h-00016-en" level="1">Examination of Therapeutic Effect in Renal Fibrosis Model Mouse</heading>
+      <heading id="h-00017-en" level="2">(1) Preparation of Renal Fibrosis Model Animal</heading>
+      <p id="p-00084-en" num="0097">Preparation of renal fibrosis model mice was commissioned from Stelic Institute &amp; Co. Specifically, 2 day old C57BL6J/JcL male mice (CLEA Japan, Inc.) after birth were given an N-acetyl-β-D-glucosaminidase inhibitor, reared by feeding with CE-2 feed (CLEA Japan, Inc.) and sterile water up to 4 weeks old, weaned when they reached an age of 4 weeks, and then reared by feeding with High Fat Diet 32 (CLEA Japan, Inc.), which has a higher crude fat content than that of normal diet, and sterile water up to 12 weeks old, thus preparing STAM mice. It is known that these model mice will be affected by diabetic nephritis (see JP, A, 2009-178143), and renal fibrosis due to diabetic nephritis can be examined.</p>
+      <p id="p-00085-en" num="0098">The above-mentioned model mice were divided into the four groups below, with 10 animals per group, at the age of 12 weeks and 3 days.</p>
+      <p id="p-00086-en" num="0000">(First group) No treatment-STAM mice, pre-treatment control group (hereinafter, NT-STAM (Pre) group) <br /> (Second group) No treatment-STAM mice group (hereinafter, NT-STAM group) <br /> (Third group) 5% glucose treated group (hereinafter, Vehicle group) <br /> (Fourth group) VA Liposome-siRNA Hsp47C treated group (hereinafter, VL-Hsp47C group) </p>
+      <heading id="h-00018-en" level="2">(2) Administration of Administration Solution</heading>
+      <p id="p-00087-en" num="0099">For the NT-STAM (Pre) group, after dividing into groups the mice were sacrificed before starting the treatment, and the clinical condition was checked. For the above-mentioned two groups other than the NT-STAM group, the corresponding administration solution below was administered by tail vein injection a total of 10 times every other day from the time of 12 weeks and 5 days old.</p>
+      <p id="p-00088-en" num="0000">(Third group) As a solvent control, an administration solution (5% glucose or Vehicle) in which 0.75 mL/kg of body weight of nuclease-free water and 3.250 mL/kg of body weight of 5% glucose (Otsuka Pharmaceutical Co., Ltd.) were mixed was used. <br /> (Fourth group) An administration solution (VA Liposome-siRNA Hsp47C or VL-Hsp47C) in which 75 nmol of VA, 75 nmol of liposome-constituting lipid, and 112.5 μg of siRNA were mixed per 100 μL of administration solution and final adjustment was carried out using 5% glucose was used. </p>
+      <p id="p-00089-en" num="0100">The body weight at the date when administration was started was defined as the standard body weight, and 4 mL/kg of body weight of each administration solution was administered from the tail vein when the percentage body weight change at the date of administration was within 20% of the standard body weight. When it exceeded 20%, that body weight was thereafter defined as a new standard body weight, and the dose was reset.</p>
+      <heading id="h-00019-en" level="2">(3) Examination of Improvement Effect on Renal Fibrosis</heading>
+      <p id="p-00090-en" num="0101">On the 2<sup>nd </sup>day after final administration was completed (15 weeks 4 days), the mice were sacrificed by taking blood from the heart under diethyl ether anesthesia, and the kidneys were removed.</p>
+      <p id="p-00091-en" num="0102">The removed kidneys were fixed using a 4% paraformaldehyde-phosphoric acid buffer and embedded in paraffin, and thin section samples were prepared. In order to examine a therapeutic effect on renal fibrosis, Sirius red staining (fiber staining that specifically stains collagen red) was carried out, and an image was taken using a BZ-9000 all-in-one fluorescence microscope (Keyence Corporation) at 80×. Analysis was carried out by randomly taking images of 20 fields of view in the renal cortex region, and quantified using analysis software that came with the BZ-9000.</p>
+      <p id="p-00092-en" num="0103">
+        <figref>FIG. 1</figref> shows a representative microscopic image of the glomerulus of the renal cortex region in each treated group. Sirius red staining is collagen-specific fiber staining, and a fibrosis site is stained with red to pink. From the microscopy results, no differences were seen between any of the groups with respect to thickening of the glomerular basement membrane, the degree of fibrosis in the mesangial region (stroma) and the surroundings of tubule cells was slight for the VL-Hsp47C treated group compared with the other three groups, and there was improvement in renal fibrosis (enlargement of mesangial region shown by arrow). Furthermore, 20 fields of view were randomly taken in the renal cortex region per individual mouse, and the proportion of the fibrotic region was calculated. From the results shown in <figref>FIG. 2</figref>, in the VL-Hsp47C treated group, the proportion of a Sirius red positive region was significantly lower than in the NT-STAM and Vehicle groups, and there was an improvement in renal fibrosis. Evaluation of statistically significant difference was carried out by use of the t-test.</p>
+      <p id="p-00093-en" num="0104">From the result above, a tendency for the improvement of fibrosis in the VL-Hsp47C treated group was observed. Considering that siRNA basically acts within the cytoplasm, this result suggests that the retinoid functions as an agent targeting extracellular matrix-producing cells in the kidney, efficiently delivers a drug to same cells, and thus can suppress the progress of renal fibrosis.</p>
+      <heading id="h-00020-en" level="1">Example 3</heading>
+      <heading id="h-00021-en" level="1">Gene Knockdown in Extracellular Matrix-Producing Cells in Kidney by Means of siRNA-Containing VA-Binding Liposome</heading>
+      <heading id="h-00022-en" level="2">(1) Isolation and Collection of Cells</heading>
+      <p id="p-00094-en" num="0105">Extracellular matrix-producing cells in the kidney having similar properties to those of hepatic stellate cells were isolated and collected as follows.</p>
+      <p id="p-00095-en" num="0106">First, the five types of solutions below were prepared in advance. All of the solutions were stored at 4° C.</p>
+      <p id="p-00096-en" num="0000">EGTA solution: 1.19 g of HEPES and 0.1 g of EGTA were added to 500 mL of HBSS (Invitrogen 14170) and mixed. <br /> 0.02% Collagenase solution: 1.19 g of HEPES, 0.235 g of CaCl<sub>2 </sub>2H<sub>2</sub>O, and 0.1 g of Collagenase (Yakult YK-102) were added to 500 mL of HBSS (Invitrogen 24020) and mixed. <br /> 0.02% Collagenase+0.1% Protease solution: 40 mg of Protease (Sigma P6911-1G) was added to 40 mL of 0.02% Collagenase and mixed. <br /> Hanks' solution: 0.05 g of MgSO<sub>4 </sub>was added to 500 mL of HBSS (Invitrogen 24020) and mixed. <br /> 10% Nycodenz® solution (Axis-Shield Prod. No 1114542-1): 50 g of Nycodenz® was added to 500 mL of distilled water and mixed and dissolved. </p>
+      <p id="p-00097-en" num="0107">A mouse (Male C57BL6/J, 20 to 30 g, 6 to 8 weeks old) was anesthetized, the abdominal area was shaved and an incision was made along the midline, and the kidneys were taken out. The kidneys thus taken out were washed with 30 mL of EGTA solution three times, thus removing blood. The kidneys were placed in 5 mL of EGTA solution, and finely cut using scissors. EGTA solution was added to the cut kidneys to make the total volume 30 mL, and centrifugation was carried out at 1300 rpm for 5 minutes. After the centrifugation, the supernatant was removed, 30 mL of 0.02% Collagenase+0.1% Protease solution was added, and the mixture was transferred to an Erlenmeyer flask and stirred at 37° C. for 20 minutes. The stirred solution was filtered using a Cell Strainer (Falcon 352360), and the filtrate was centrifuged at 1300 rpm for 5 minutes. The sediment was suspended in Hanks' solution, and 10% Nycodenz® solution was mixed with the Hanks' solution so as to give a final concentration of 8% Nycodenz®. The solution mixture was centrifuged at 1400×g for 20 minutes. The supernatant was collected and further centrifuged at 1300 rpm for 5 minutes. The supernatant was removed, the sample was resuspended in 10% FBS DMEM (Sigma D6546), and seeded on a T-75 flask (BD 353136).</p>
+      <heading id="h-00023-en" level="2">(2) Gene Silencing Experiment</heading>
+      <p id="p-00098-en" num="0108">1. Preparation of siRNA-Containing VA-Binding Liposome</p>
+      <p id="p-00099-en" num="0109">As the siRNA, one having the following sequence was used. Sequence name: Hsp47-C</p>
+      <p id="p-00100-en" num="0000">5′-GGACAGGCCUGUACAACUA-dTdT-3′(sense, SEQ ID NO: 1) <br /> 5′-UAGUUGUACAGGCCUGUCC-dTdT-3′(antisense, SEQ ID NO: 2) </p>
+      <p id="p-00101-en" num="0110">As solutions prior to mixing, 10 mM vitamin A (R7632, retinol, Sigma; hereinafter abbreviated to VA, dissolved in dimethyl sulfoxide), 1 mM Lipotrust SR (N301, Hokkaido System Science Co., Ltd.; hereinafter also called a liposome or a liposome-constituting lipid, dissolved in nuclease-free water), and 10 mg/mL siRNA (Hsp47-C dissolved in nuclease-free water) were prepared. Subsequently, VA dissolved in dimethyl sulfoxide was added to the Lipotrust SR dissolved in nuclease-free water prepared above at a ratio of 1:1 (mol:mol), and the mixture was then stirred by means of a vortex for 15 seconds and allowed to stand at room temperature for 5 minutes in a light-shielded state, thus forming a complex. This complex was mixed with 10 mg/mL siRNA, thus giving VA Liposome-siRNA Hsp47C. When no VA was used, an equal amount of dimethyl sulfoxide was added instead of VA. Preparation was carried out such that when transfected to cells the final concentration of Lipotrust SR/VA was 7.7 μM and that of siRNA was 869 nM.</p>
+      <heading id="h-00024-en" level="2">2. Transfection Experiment</heading>
+      <p id="p-00102-en" num="0111">As cells for the experiment, the extracellular matrix-producing cells collected from mouse kidneys in the above-mentioned collection method were seeded in advance on a 6 well plate with 0.2×10<sup>5 </sup>cells/well and cultured in 10% FBS DMEM at 37° C. for 2 days.</p>
+      <p id="p-00103-en" num="0112">After 2 days of culturing, all of the 10% FBS DMEM of each well was removed prior to transfection, 900 μL of fresh 10% FBS DMEM was added, and culturing was carried out at 37° C. for about 15 minutes.</p>
+      <p id="p-00104-en" num="0113">100 μL of VA Liposome-siRNA Hsp47C or Liposome-siRNA Hsp47C prepared in ‘1.’ above was added gently to each well and incubation was carried out at 37° C. for 30 minutes, all of the culture supernatant of each well was then removed, 2 mL of fresh 10% FBS DMEM was added, and culturing was carried out at 37° C. for 2 days. After 2 days RNA was isolated from the cells using an RNeasy Mini Kit (QIAGEN 74104), and RT-PCR was carried out by means of a High Capacity RNA-to-cDNA Master Mix (Applied Biosystems 4390779), thus giving cDNA. Quantitative PCR was carried out by means of a Power SYBR® Green PCR Master Mix (Applied Biosystems 4368708) using the cDNA thus obtained, and the effect in gene silencing was examined. The results are shown in <figref>FIG. 3</figref>.</p>
+      <p id="p-00105-en" num="0114">The above results show that the siRNA for the HSP47 gene used in Example 2 suppresses the expression of the HSP47 gene in extracellular matrix-producing cells of the kidney, suggesting that the siRNA contained in the treatment agent of the present invention is specifically incorporated into the extracellular matrix-producing cells of the kidney and suppresses the expression of the target gene within the cells, thus suppressing the progress of renal fibrosis.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en" independent="true">
+      <claim-text>
+        <b>2</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en" independent="true">
+      <claim-text>
+        <b>3</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en" independent="true">
+      <claim-text>
+        <b>4</b>. A pharmaceutical composition for treating renal fibrosis, the composition comprising (i) a carrier comprising a retinoid as a targeting agent and (ii) a drug selected from the group consisting of a growth inhibitor; an apoptosis inducer; an siRNA, a ribozyme, an antisense nucleic acid or a DNA/RNA chimeric polynucleotide that suppresses the expression of an extracellular matrix constituent molecule or a molecule involved in the production or secretion of an extracellular matrix constituent molecule; and a vector expressing said siRNA, ribozyme, anti-sense nucleic acid or DNA/RNA chimeric polynucleotide.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en" independent="true">
+      <claim-text>
+        <b>5</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The pharmaceutical composition according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the molecule involved in the production or secretion of the extracellular matrix constituent molecule is HSP47.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The pharmaceutical composition according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the drug and the carrier are mixed at a place of medical treatment or in its vicinity.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A kit for preparing the pharmaceutical composition according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, the kit comprising one or more containers that comprise either singly or in combination the drug, the retinoid and, as necessary, a carrier constituent substance other than the retinoid.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en" independent="true">
+      <claim-text>
+        <b>9</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A process for producing a pharmaceutical composition according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, the process comprising a step of formulating the retinoid as a targeting agent, and the drug as an active ingredient.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The pharmaceutical composition according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the drug is an siRNA that suppresses the expression of an extracellular matrix constituent molecule or a molecule involved in the production or secretion of the extracellular matrix constituent molecules, or a vector expressing said siRNA.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The pharmaceutical composition according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the drug is an siRNA, ribozyme, antisense nucleic acid, or DNA/RNA chimeric polynucleotide that suppresses the expression of collagen or HSP47, or a vector expressing said siRNA, ribozyme, antisense nucleic acid, or DNA/RNA chimeric polynucleotide.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The pharmaceutical composition according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the drug is an siRNA that suppresses the expression of HSP47.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. A kit for preparing the pharmaceutical composition according to <claim-ref idref="clm-00006-en">claim 6</claim-ref>, the kit comprising one or more containers that comprise either singly or in combination the drug, the retinoid and, as necessary, a carrier constituent substance other than the retinoid.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. A kit for preparing the pharmaceutical composition according to <claim-ref idref="clm-00011-en">claim 11</claim-ref>, the kit comprising one or more containers that comprise either singly or in combination the drug, the retinoid and, as necessary, a carrier constituent substance other than the retinoid.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. A kit for preparing the pharmaceutical composition according to <claim-ref idref="clm-00012-en">claim 12</claim-ref>, the kit comprising one or more containers that comprise either singly or in combination the drug, the retinoid and, as necessary, a carrier constituent substance other than the retinoid.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. A kit for preparing the pharmaceutical composition according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, the kit comprising one or more containers that comprise either singly or in combination the drug, the retinoid and, as necessary, a carrier constituent substance other than the retinoid.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. A process for producing a pharmaceutical composition according to <claim-ref idref="clm-00006-en">claim 6</claim-ref>, the process comprising a step of formulating the retinoid as a targeting agent, and the drug as an active ingredient.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. A process for producing a pharmaceutical composition according to <claim-ref idref="clm-00011-en">claim 11</claim-ref>, the process comprising a step of formulating the retinoid as a targeting agent, and the drug as an active ingredient.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. A process for producing a pharmaceutical composition according to <claim-ref idref="clm-00012-en">claim 12</claim-ref>, the process comprising a step of formulating the retinoid as a targeting agent, and the drug as an active ingredient.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. A method for treating renal fibrosis, the method comprising administering an effective amount of the pharmaceutical composition according to <claim-ref idref="clm-00004-en">claim 4</claim-ref> to a subject in need thereof.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. A method for treating renal fibrosis, the method comprising administering an effective amount of the pharmaceutical composition according to <claim-ref idref="clm-00006-en">claim 6</claim-ref> to a subject in need thereof.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. A method for treating renal fibrosis, the method comprising administering an effective amount of the pharmaceutical composition according to <claim-ref idref="clm-00011-en">claim 11</claim-ref> to a subject in need thereof.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. A method for treating renal fibrosis, the method comprising administering an effective amount of the pharmaceutical composition according to <claim-ref idref="clm-00012-en">claim 12</claim-ref> to a subject in need thereof.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. A method for treating renal fibrosis, the method comprising administering an effective amount of the pharmaceutical composition according to <claim-ref idref="clm-00013-en">claim 13</claim-ref> to a subject in need thereof. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259683A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259683A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259683A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259683A1-20150917-D00002.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150259683A1.PDF" type="pdf" size="781098" pages="14" />
+</lexisnexis-patent-document>

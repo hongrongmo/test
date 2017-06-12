@@ -1,0 +1,1221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940184A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091044" date-changed="20160104" time-changed="145457">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121939252">
+        <country>EP</country>
+        <doc-number>2940184</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13867683</doc-number>
+        <date>20131126</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>jpn</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012288536</doc-number>
+        <date>20121228</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2012288536</doc-number>
+        <kind>A</kind>
+        <date>20121228</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2013081810</doc-number>
+        <kind>W</kind>
+        <date>20131126</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2012288536</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013081810</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>JP20120288536</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2013JP81810</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150127</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20160104">
+      <classification-ipcr sequence="1">
+        <text>C23C  18/31        20060101AFI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>31</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>F01D  25/24        20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>25</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>F01D  25/26        20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>25</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>F04D  29/42        20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>04</class>
+        <subclass>D</subclass>
+        <main-group>29</main-group>
+        <subgroup>42</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>F04D  29/62        20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>04</class>
+        <subclass>D</subclass>
+        <main-group>29</main-group>
+        <subgroup>62</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160104">
+      <classification-cpc sequence="1">
+        <text>F01D  25/24        20130101 FI20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>25</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C23C  18/1605      20130101 LA20151123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>1605</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C23C  18/1616      20130101 LI20150925BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>1616</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C23C  18/1619      20130101 LI20150619BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>1619</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150619</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C23C  18/1633      20130101 LI20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>1633</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C23C  18/1675      20130101 LI20150619BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>1675</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150619</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C23C  18/1678      20130101 LI20151123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>1678</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C23C  18/1692      20130101 LA20151123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>1692</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C23C  18/18        20130101 LI20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C23C  18/1817      20130101 LI20151123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>1817</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C23C  18/32        20130101 LA20150619BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150619</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C23C  18/44        20130101 LI20151123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>44</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>F01D  25/005       20130101 LI20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>25</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>F04D  17/122       20130101 LI20140801BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>04</class>
+        <subclass>D</subclass>
+        <main-group>17</main-group>
+        <subgroup>122</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140801</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>F04D  29/023       20130101 LI20150925BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>04</class>
+        <subclass>D</subclass>
+        <main-group>29</main-group>
+        <subgroup>023</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>F04D  29/4206      20130101 LI20150925BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>04</class>
+        <subclass>D</subclass>
+        <main-group>29</main-group>
+        <subgroup>4206</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="17">
+        <text>F05D2230/90        20130101 LA20151222BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>05</class>
+        <subclass>D</subclass>
+        <main-group>2230</main-group>
+        <subgroup>90</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151222</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="18">
+        <text>Y10T  29/49323     20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>29</main-group>
+        <subgroup>49323</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">16</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">VERFAHREN ZUR HERSTELLUNG EINER DREHMASCHINE, VERFAHREN ZUR PLATTIERUNG EINER DREHMASCHINE UND DREHMASCHINE</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">METHOD FOR MANUFACTURING ROTARY MACHINE, METHOD FOR PLATING ROTARY MACHINE, AND ROTARY MACHINE</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">PROCÉDÉ DE FABRICATION D'UNE MACHINE ROTATIVE, PROCÉDÉ DE PLACAGE POUR MACHINE ROTATIVE ET MACHINE ROTATIVE</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Mitsubishi Heavy Industries, Ltd.</orgname>
+            <registered-number>101201472</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>16-5, Konan 2-chome Minato-ku</address-1>
+              <city>Tokyo 108-8215</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>ISHIBASHI Yusuke</name>
+            <address>
+              <address-1>c/o MITSUBISHI HEAVY INDUSTRIES LTD. 16-5 Konan 2-chome Minato-ku</address-1>
+              <city>Tokyo 108-8215</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>KONNO Yuya</name>
+            <address>
+              <address-1>c/o MITSUBISHI HEAVY INDUSTRIES LTD. 16-5 Konan 2-chome Minato-ku</address-1>
+              <city>Tokyo 108-8215</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>WATANABE Yujiro</name>
+            <address>
+              <address-1>c/o MITSUBISHI HEAVY INDUSTRIES LTD. 16-5 Konan 2-chome Minato-ku</address-1>
+              <city>Tokyo 108-8215</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>YASUI Toyoaki</name>
+            <address>
+              <address-1>c/o MITSUBISHI HEAVY INDUSTRIES LTD. 16-5 Konan 2-chome Minato-ku</address-1>
+              <city>Tokyo 108-8215</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5">
+          <addressbook lang="eng">
+            <name>TANAKA Kazunari</name>
+            <address>
+              <address-1>c/o MITSUBISHI HEAVY INDUSTRIES LTD. 16-5 Konan 2-chome Minato-ku</address-1>
+              <city>Tokyo 108-8215</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6">
+          <addressbook lang="eng">
+            <name>KAWAHARA Kosei</name>
+            <address>
+              <address-1>c/o MITSUBISHI HEAVY INDUSTRIES LTD. 16-5 Konan 2-chome Minato-ku</address-1>
+              <city>Tokyo 108-8215</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7">
+          <addressbook lang="eng">
+            <name>FUCHIGAMI Yohei</name>
+            <address>
+              <address-1>c/o MITSUBISHI HEAVY INDUSTRIES LTD. 16-5 Konan 2-chome Minato-ku</address-1>
+              <city>Tokyo 108-8215</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="8">
+          <addressbook lang="eng">
+            <name>NISHINA Toshio</name>
+            <address>
+              <address-1>c/o Nishina Industrial Co. LTD. 1003 Shimoochiai Chuo-ku</address-1>
+              <city>Saitama-shi Saitama 338-0002</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Hoffmann Eitle</name>
+            <registered-number>100061036</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Patent- und Rechtsanwälte PartmbB Arabellastraße 30</address-1>
+              <city>81925 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13081810</doc-number>
+        <date>20131126</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014103595</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151104">
+      <main-family family-id="166468968">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103595</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131126</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104508181</doc-number>
+            <kind>A</kind>
+            <date>20150408</date>
+          </document-id>
+          <application-date>
+            <date>20131126</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940184</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131126</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014129575</doc-number>
+            <kind>A</kind>
+            <date>20140710</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150267559</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20131126</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166468966">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103595</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131126</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104508181</doc-number>
+            <kind>A</kind>
+            <date>20150408</date>
+          </document-id>
+          <application-date>
+            <date>20131126</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940184</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131126</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014129575</doc-number>
+            <kind>A</kind>
+            <date>20140710</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150267559</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20131126</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Provided is a method of manufacturing a rotary machine, which includes: a casing forming process (S0) of forming a casing (1) of the rotary machine (100) that has multiple opening parts (5, 6, 10, 11) and suctions and discharges a fluid (F); a surface activating process (S2) of supplying a pretreatment liquid (W1) into the casing (1), then discharging the pretreatment liquid (W1) from the casing (1) through the opening parts (5, 6, 10, 11), and activating an inner surface (1a) of the casing (1) after the casing forming process (S0); a plating process (S5) of performing supply and discharge of a plating liquid (W3) into and from the casing (1) through the opening parts (5, 6, 10, 11) to circulate the plating liquid (W3) and plating the inner surface (1a) of the casing (1) after the surface activating process (S2); and an assembling process (S7) of providing a rotating body (3, 4) that is rotatable relative to the casing (1) so as to be covered from an outer circumference side by the casing (1) plated in the plating process (S5).<img id="imga-00001-en" wi="77" he="84" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">[Technical Field]</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to plating work performed on an inner surface of a casing in manufacturing a rotary machine.</p>
+    <p id="p-00002-en" num="0002">Priority is claimed on Japanese Patent Application No. <patcit id="pcit-00001" dnum="JP2012288536A"><text>2012-288536, filed on December 28, 2012</text></patcit>, the contents of which are incorporated herein by reference.</p>
+    <heading id="h-00002-en">[Background Art]</heading>
+    <p id="p-00003-en" num="0003">For example, a rotary machine such as a centrifugal compressor or a turbine is provided with a casing that covers rotating bodies such as a rotary shaft and a blade set from an outer circumference side. Since an interior of the casing is exposed to a working fluid, plating is carried out on an inner surface of the casing as a measure against anticorrosion, for instance, when the working fluid is carbon dioxide</p>
+    <p id="p-00004-en" num="0004">Here, such plating work is typically done by immersing the casing in a plating liquid in a plating tank. Accordingly, a plating tank that has a large volume and is appropriate for the dimensions of the casing of the rotary machine is currently required, which inevitably leads to higher costs.</p>
+    <p id="p-00005-en" num="0005">Incidentally, a plating method of sending a plating liquid into an interior of a long pipe under pressure and plating an inner surface of the long pipe without using a plating tank is disclosed in Patent Literature 1.</p>
+    <heading id="h-00003-en">[Citation List]</heading>
+    <heading id="h-00004-en">[Patent Literature]</heading>
+    <heading id="h-00005-en">[Patent Literature 1]</heading>
+    <p id="p-00006-en" num="0006">Japanese Unexamined Patent Application, First Publication No.<patcit id="pcit-00002" dnum="JPH08319576B"><text> H08-319576</text></patcit></p>
+    <heading id="h-00006-en">[Summary of Invention]</heading>
+    <heading id="h-00007-en">[Technical Problem]</heading>
+    <p id="p-00007-en" num="0007">However, if the plating method of Patent Literature 1 is used, no plating tank is required, which leads to a reduction of costs. However, in addition to the fact that the dimensions are very large, the casing also has a complicated shape. Therefore, when application of the method of Patent Literature 1 to the plating work for the inner surface of the casing of the rotary machine is attempted, a huge device is required, and the plating work is not easy.</p>
+    <p id="p-00008-en" num="0008">An object of the present invention is to provide a method of manufacturing a rotary machine, a method of plating the rotary machine, and the rotary machine, all of which enables plating work for a casing using a simple technique while reducing costs.</p>
+    <heading id="h-00008-en">[Solution to Problem]</heading>
+    <p id="p-00009-en" num="0009">A method of manufacturing a rotary machine according to a first aspect of the present invention includes: a casing forming process of forming a casing of the rotary machine that has multiple opening parts and suctions and discharges a fluid; a surface activating process of supplying a pretreatment liquid into the casing, then discharging the pretreatment liquid from the casing through the opening parts, and activating an inner surface of the casing after the casing forming process; a plating process of performing supply and discharge of a plating liquid into and from the casing through the opening parts to circulate the plating liquid and plating the inner surface of the casing after the surface activating process; and an assembling process of providing a rotating body that is rotatable relative to the casing so as to be covered from an outer circumference side by the casing plated in the plating process.</p>
+    <p id="p-00010-en" num="0010">According to this method of manufacturing the rotary machine, the inner surface of the casing is activated from the opening parts formed in the casing by the pretreatment liquid. Further, plating work is performed by circulation of the plating liquid. Since the multiple opening parts for suctioning and discharging the liquids are formed in the casing, the supply and discharge of the pretreatment liquid and the plating liquid can be performed using the multiple opening parts with no change in the surface activating process and the plating process. Accordingly, separate nozzles for supplying and discharging the pretreatment liquid and the plating liquid are not provided, and a plating tank for immersing the entire casing is not required either. As such, the plating work for the inner surface of the casing is possible.</p>
+    <p id="p-00011-en" num="0011">Further, a method of manufacturing a rotary machine according to a second aspect of the present invention may further include a preheating process of<br /> supplying a pretreatment liquid into the casing, then discharging the pretreatment liquid from the casing through the opening parts, and preheating the casing between the surface activating process and the plating process in the first aspect.</p>
+    <p id="p-00012-en" num="0012"> Because this preheating process is provided, the plating tank for immersing the entire casing is not required, and the preheating before the plating work can be performed using the opening parts. Particularly, in the casing having a large size and a complicated shape, it takes time to raise a temperature by circulating the plating liquid. Further, an uneven temperature may be caused on the inner surface of the casing by partial immersion of the plating liquid. For this reason, it may be impossible to obtain a sufficient quality of plating. Due to the preheating liquid, such a problem can be avoided, and a quality of plating can be further improved.</p>
+    <p id="p-00013-en" num="0013">Further, in a method of manufacturing a rotary machine according to a third aspect of the present invention, the casing in the preheating process in the second aspect may be preheated by a preheating liquid containing a reductant as the preheating liquid.</p>
+    <p id="p-00014-en" num="0014">The preheating liquid containing such a reductant is used, and thereby it is possible to prevent an oxide thin film from forming at the inner surface of the casing which is a portion to be plated during the preheating. That is, the oxidation of the inner surface of the casing can be prevented, and the quality of plating can be further improved in the plating process.</p>
+    <p id="p-00015-en" num="0015">Further, in a method of manufacturing a rotary machine according to a fourth aspect of the present invention, the plating liquid supplied into the casing in the plating process in any one of the first to third aspects may be stirred by a stirring device.</p>
+    <p id="p-00016-en" num="0016">This stirring device is used, and thereby even in the casing having a large size and a complicated shape, a flow velocity of the plating liquid in the casing can be set to a numerical value most suitable for plating work. Further, by removing a gas that is generated during the plating work and is attached to the inner surface of the casing, it is possible to prevent the plating work from being obstructed at portions at which the gas is attached. Therefore, the quality of plating can be further improved in the plating process.</p>
+    <p id="p-00017-en" num="0017">Further, in a method of manufacturing a rotary machine according to a fifth aspect of the present invention, in the plating process in any one of the first to fourth aspects, the plating may be performed in a state in which the opening part having a largest opening among the multiple opening parts is directed upward.</p>
+    <p id="p-00018-en" num="0018">Thereby, the gas that is generated during the plating work and is attached to the inner surface of the casing can be easily discharged outside the casing. Therefore, the quality of plating can be further improved in the plating process.</p>
+    <p id="p-00019-en" num="0019">Further, in a method of manufacturing a rotary machine according to a sixth aspect of the present invention, the plating liquid in the plating process in any one of the first to fifth aspects may be supplied and discharged from the opening part that requires plating work and suctions and discharges the fluid among the multiple opening parts.</p>
+    <p id="p-00020-en" num="0020">Thereby, when the plating liquid is supplied and discharged, an inner surface of the opening part requiring the plating work can be plated at the same time. For this reason, the plating work can be performed on the casing in a more efficient way.</p>
+    <p id="p-00021-en" num="0021">Further, in a method of manufacturing a rotary machine according to a seventh aspect of the present invention, in the plating process in any one of the first to sixth aspects, the plating may be performed in a state in which a cover member surrounding an opening edge of the opening part from an outer circumference side is provided for the casing so as to cause the opening part opened upward among the multiple opening parts to further extend in an upward direction.</p>
+    <p id="p-00022-en" num="0022">Due to such a cover member, a liquid level of the plating liquid supplied into the casing can be at a higher position than the upper opening part. For this reason, the plating work can be performed up to an opening edge of the opening part, and the plating work can be reliably performed on the entire inner surface of the casing. Therefore, the quality of plating is further improved.</p>
+    <p id="p-00023-en" num="0023">Further, in a method of manufacturing a rotary machine according to an eighth aspect of the present invention, in the plating process in any one of the first to seventh aspects, the plating may be performed after a core is installed in the casing in a state in which the core is spaced apart from an inner surface of the casing.</p>
+    <p id="p-00024-en" num="0024">Because such a core is provided, an internal volume of the casing can be reduced, and a supplied amount of the plating liquid can be reduced, which leads to a reduction of costs. Further, a flow channel when the plating liquid circulates and flows in the casing is reduced, and a flow can be made smooth. Therefore, the quality of plating can be improved.</p>
+    <p id="p-00025-en" num="0025">Further, in a method of manufacturing a rotary machine according to a ninth aspect of the present invention, in the plating process in the eighth aspects, a hollow member having through-holes that are formed in an outer circumferential surface thereof and communicate with an interior and exterior thereof may be used as the core, and the plating liquid may be supplied into the hollow member and be ejected from the through-holes toward an exterior of the hollow member.</p>
+    <p id="p-00026-en" num="0026">Because the core of such a hollow member is used, the flow channel when the plating liquid circulates and flows in the casing is reduced, and the flow can be made smooth. Further, the plating liquid is ejected from the through-holes, and thereby a stirring effect can also be obtained. Accordingly, it is possible to make the flow velocity of the plating liquid in the casing uniform, and to remove the gas that is generated during the plating work and is attached to the inner surface of the casing. Therefore, the quality of plating can be improved in the plating process.</p>
+    <p id="p-00027-en" num="0027">Further, in a method of manufacturing a rotary machine according to a tenth aspect of the present invention, in the plating process in the eighth or ninth aspect, the plating may be performed while moving the core.</p>
+    <p id="p-00028-en" num="0028">Thereby, it is possible to obtain an effect of stirring the plating liquid, to optimize the flow velocity of the plating liquid, and to remove the gas. Therefore, the quality of plating can be further improved in the plating process.</p>
+    <p id="p-00029-en" num="0029">Further, in a method of manufacturing a rotary machine according to an eleventh aspect of the present invention, in the plating process in any one of the first to tenth aspects, the plating may be performed in a state in which a partition plate for partitioning an interior of the casing into multiple spaces in an extending direction of the casing is provided such that at least two of the opening parts communicate with the respective spaces.</p>
+    <p id="p-00030-en" num="0030">Thereby, the internal space of the casing in which the plating liquid circulates can be finely divided, and the plating liquid can flow through each space. Therefore, fluidity of the plating liquid in the casing can be improved, and the quality of plating can be improved.</p>
+    <p id="p-00031-en" num="0031">Further, in a method of manufacturing a rotary machine according to a twelfth aspect of the present invention, in the plating process in any one of the first to eleventh aspects, the plating may be performed while vibration is imparted to the casing by a vibration imparting device.</p>
+    <p id="p-00032-en" num="0032">Thereby, it is possible to prevent retention of the gas that is generated during the plating work and is attached to the inner surface of the casing. As such, the quality of plating can be further improved in the plating process.</p>
+    <p id="p-00033-en" num="0033">Further, in a method of manufacturing a rotary machine according to a thirteenth aspect of the present invention, in the plating process in any one of the first to twelfth aspects, the plating may be performed while the inner surface of the casing is rubbed by a brush.</p>
+    <p id="p-00034-en" num="0034">Thereby, it is possible to prevent retention of the gas that is generated during the plating work and is attached to the inner surface of the casing, and to further improve the quality of plating in the plating process.</p>
+    <p id="p-00035-en" num="0035">Further, a rotary machine according to a fourteenth aspect of the present invention is manufactured by the method according to any one of the first to thirteenth aspects.</p>
+    <p id="p-00036-en" num="0036">According to this rotary machine, the supply and discharge of the pretreatment liquid and the plating liquid can be performed using the multiple opening parts with no change in the surface activating process and the plating process. Accordingly, the separate nozzles for supplying and discharging the pretreatment liquid and the plating liquid are not provided. Further, as the plating tank for immersing the entire casing is not required either, the plating work for the inner surface of the casing is possible.</p>
+    <p id="p-00037-en" num="0037">Further, a method of plating a rotary machine according to a fifteenth aspect of the present invention includes, to plate an inner surface of a casing of the rotary machine that has multiple opening parts and suctions and discharges a fluid, a surface activating process of supplying and discharging a pretreatment liquid into and from the casing through the opening parts and activating the inner surface of the casing, and a plating process of performing supply and discharge of a plating liquid into and from the casing through the opening parts to circulate the plating liquid and plating the inner surface of the casing after the surface activating process.</p>
+    <p id="p-00038-en" num="0038">According to this method of plating the rotary machine, the separate nozzles for supplying and discharging the pretreatment liquid and the plating liquid are not provided. Further, as the plating tank for immersing the entire casing is not required, the plating work for the inner surface of the casing is possible.</p>
+    <p id="p-00039-en" num="0039">Further, a rotary machine according to a sixteenth aspect of the present invention is manufactured by the method according to the fifteenth aspect.</p>
+    <p id="p-00040-en" num="0040">According to this rotary machine, the rotary machine can be manufacture by the plating method of performing the plating work on the inner surface of the casing while the separate nozzles for supplying and discharging the pretreatment liquid and the plating liquid are not provided, and the plating tank for immersing the entire casing is not required.</p>
+    <heading id="h-00009-en">[Advantageous Effects of Invention]</heading>
+    <p id="p-00041-en" num="0041">According to the method of manufacturing a rotary machine, the method of plating the rotary machine, and the rotary machine, the pretreatment liquid and the plating liquid are supplied and discharged using the opening parts formed in the casing. Thereby, a cost can be reduced, and plating work of the casing can be performed by a simple technique.</p>
+    <heading id="h-00010-en">[Brief Description of Drawings]</heading>
+    <p id="p-00042-en" num="0042">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>
+          <figref>Fig. 1</figref> is a schematic cross-sectional view illustrating a centrifugal compressor manufactured by a method of manufacturing the centrifugal compressor according to a first embodiment of the present invention.</li>
+        <li>
+          <figref>Fig. 2</figref> is a flow chart illustrating a procedure of the method of manufacturing the centrifugal compressor according to the first embodiment of the present invention.</li>
+        <li>
+          <figref>Fig. 3</figref> is a perspective view illustrating an aspect of carrying out plating on a casing using the method of manufacturing the centrifugal compressor according to the first embodiment of the present invention.</li>
+        <li>
+          <figref>Fig. 4</figref> is a perspective view illustrating an aspect of carrying out plating on a casing using a method of manufacturing a centrifugal compressor according to a second embodiment of the present invention.</li>
+        <li>
+          <figref>Fig. 5</figref> is a perspective view illustrating an aspect of carrying out plating on a casing using a method of manufacturing a centrifugal compressor according to a third embodiment of the present invention.</li>
+        <li>
+          <figref>Fig. 6</figref> is a perspective view illustrating an aspect of carrying out plating on a casing using a method of manufacturing a centrifugal compressor according to a fourth embodiment of the present invention.</li>
+        <li>
+          <figref>Fig. 7</figref> is a perspective view illustrating an aspect of carrying out plating on a casing using a method of manufacturing a centrifugal compressor according to a fifth embodiment of the present invention.</li>
+        <li>
+          <figref>Fig. 8</figref> is a perspective view illustrating an aspect of carrying out plating on a casing using a method of manufacturing a centrifugal compressor according to a sixth embodiment of the present invention.</li>
+        <li>
+          <figref>Fig. 9</figref> is a perspective view illustrating an aspect of carrying out plating on a casing using a method of manufacturing a centrifugal compressor according to a seventh embodiment of the present invention.</li>
+        <li>
+          <figref>Fig. 10A</figref> is a view illustrating the aspect of carrying out the plating on the casing using the method of manufacturing a centrifugal compressor according to the fifth embodiment of the present invention when the casing is obliquely viewed from the inside.</li>
+        <li>
+          <figref>Fig. 10B</figref> is a view illustrating the aspect of carrying out the plating on the casing using the method of manufacturing a centrifugal compressor according to the fifth embodiment of the present invention when the casing is viewed from the outside.</li>
+      </ul>
+    </p>
+    <heading id="h-00011-en">[Description of Embodiments]</heading>
+    <heading id="h-00012-en">[First embodiment]</heading>
+    <p id="p-00043-en" num="0043">Hereinafter, a method of manufacturing a centrifugal compressor (rotary machine) 100 according to a first embodiment of the present invention will be described.</p>
+    <p id="p-00044-en" num="0044">The centrifugal compressor 100 manufactured by the present embodiment is a device that takes in a fluid F, circulates the fluid F along an axis O, and thereby raises a pressure of the fluid F.</p>
+    <p id="p-00045-en" num="0045">As illustrated in <figref>Fig. 1</figref>, the centrifugal compressor 100 includes a casing 1 having a cylindrical shape, an internal casing 2 that is adapted to be covered from an outer circumference side thereof by the casing 1 and is provided so as not to be relatively rotatable with respect to the casing 1, a rotary shaft (rotating body) 3 and an impeller (rotating body) 4 that are covered from an outer circumference side thereof by the internal casing 2 and are provided so as to be relatively rotatable with respect to the internal casing 2.</p>
+    <p id="p-00046-en" num="0046">The rotary shaft 3 has a columnar shape whose center is an axis O, and extends in a direction of the axis O. Further, the impeller 4 has multiple stages that are fit onto the rotary shaft 3 at predetermined intervals in the direction of the axis O and are rotated about the axis O along with the rotary shaft 3.</p>
+    <p id="p-00047-en" num="0047">The internal casing 2 supports the rotary shaft 3 and the impeller 4. Further, a channel (not shown) is formed between the stages of the impeller 4 in the internal casing 2, and the fluid F is gradually circulated from the foremost stage to the rearmost stage of the impeller 4 via the channel and is increased in pressure.</p>
+    <p id="p-00048-en" num="0048">The casing 1 has a cylindrical shape whose center is the axis O and in which an upstream opening part 10 of one side in the direction of the axis O (left side in the space of <figref>Fig. 1</figref>) and a downstream opening part 11 of the other side are formed, and takes an external form of the centrifugal compressor 100. In the present embodiment, the casing 1 is shaped to protrude toward a radial inner side of the axis O in an annular shape at an end of one side in the direction of the axis O. Thereby, in comparison with the downstream opening part 11, the upstream opening part 10 is adapted to have a smaller diameter.</p>
+    <p id="p-00049-en" num="0049">The casing 1 has an intake port (opening part) 5 of the fluid F which is provided at the end of one side serving as an upstream side in the direction of the axis O, and a discharge port (opening part) 6 of the fluid F which is provided at the end of the other side so as to protrude from an outer circumferential surface thereof toward a radial outer side of the axis O. In the present embodiment, the casing 1 is one cylindrical member without a division plane.</p>
+    <p id="p-00050-en" num="0050">The intake port 5 is formed with an intake channel FC1 that passes through the casing 1 in a radial direction of the axis O so as to communicate with the interior and exterior of the casing 1. The intake channel FC1 is adapted to communicate with an interior of the foremost-stage impeller 4, to take in the fluid F from the outside, and to allow the fluid F to flow into this impeller 4.</p>
+    <p id="p-00051-en" num="0051">The discharge port 6 is formed with a discharge channel FC2 that passes through the casing 1 in the radial direction of the axis O so as to communicate with the interior and exterior of the casing 1. The discharge channel FC2 is adapted to communicate with an interior of the rearmost-stage impeller 4, and to be able to discharge the fluid F from this impeller 4 to the outside.</p>
+    <p id="p-00052-en" num="0052">Next, with regard to a manufacturing method (including a plating method) of the centrifugal compressor 100, first, an outline of manufacturing processes will be given, and then details of each process will be described.</p>
+    <p id="p-00053-en" num="0053">As illustrated in <figref>Fig. 2</figref>, the manufacturing method of the centrifugal compressor 100 includes a casing forming process S0 of forming the casing 1, a preparing process S1 of preparing plating work for the inner surface 1a of the casing 1 after the casing forming process S0, and a surface activating process S2 of supplying a pretreatment liquid W1 into the casing 1 after the preparing process S1 and activating the inner surface 1a of the casing 1.</p>
+    <p id="p-00054-en" num="0054">Further, the manufacturing method of the centrifugal compressor 100 includes a cleaning process S3 of cleaning the interior of the casing 1 after the surface activating process S2, a preheating process S4 of supplying a preheating liquid W2 into the casing 1 and preheating the casing 1 after the cleaning process S3, a plating process S5 of supplying a plating liquid W3 into the casing 1 and plating the inner surface 1a of the casing 1 after the preheating process S4, and a casing finishing process S6 of finishing the casing 1 after the plating process S5.</p>
+    <p id="p-00055-en" num="0055">Then, the manufacturing method of the centrifugal compressor 100 includes an assembling process S7 of incorporating the internal casing 2, the rotary shaft 3, and the impeller 4 into the casing 1 after the casing finishing process S6. The final centrifugal compressor 100 is manufactured via these processes.</p>
+    <p id="p-00056-en" num="0056"> First, the casing forming process S0 is carried out. In detail, a cylindrical casing 1 is formed using machining such as casting.</p>
+    <p id="p-00057-en" num="0057">Next, the preparing process S1 is carried out. In detail, masking is performed on an unnecessary plating portion of the casing 1. Afterwards, the casing 1 is placed such that the direction of the axis O is identical to a vertical direction and the intake port 5 is disposed downward. Since the downstream opening part 11 is placed upward at this point in time, among the intake port 5, the discharge port 6, the upstream opening part 10, and the downstream opening part 11 that are all the opening parts in the casing 1, the largest opening part is directed upward.</p>
+    <p id="p-00058-en" num="0058">In the preparing process S1, the upstream opening part 10 is additionally covered to prevent a liquid from leaking from the upstream opening part 10. In addition, a pump 15 and a tank 16 (see <figref>Fig. 3</figref>) are installed to connect pipings 16a to the intake port 5 and the discharge port 6.</p>
+    <p id="p-00059-en" num="0059">Although details of the tank 16 are not illustrated, three kinds of liquids, i.e. the pretreatment liquid W1, the preheating liquid W2, and the plating liquid W3, are adapted to each be stored separately. Then, the liquid used in each process is separately supplied into the casing 1 via the piping 16a. Further, the liquids discharged from the interior of the casing 1 are adapted to be recovered, via the piping 16a. Further, a pH value, a concentration, and a temperature of each liquid are properly adjusted so as to have predetermined values at all times.</p>
+    <p id="p-00060-en" num="0060">In the preparing process S1, an alkaline solution is sprayed onto the inner surface 1a of the casing 1, and treatment such as degreasing is performed on the inner surface 1a. For example, as the alkaline solution, a mixture such as sodium hydroxide, a silicate, and a surfactant is used. After the treatment of the inner surface 1a is performed, flushing is performed by spraying water on the inner surface 1a.</p>
+    <p id="p-00061-en" num="0061">Further, a cover member 17, which surrounds an opening edge 11a of the downstream opening part 11 from the outer circumference side so as to cause the downstream opening part 11 opened upward to further extend in an upward direction and has a cylindrical shape in which a space in which the liquid is collected is formed in an upper portion of the downstream opening part 11, is mounted on an upper portion of the casing 1. The cover member 17 may be fixed to the upper portion of the casing 1, or it may simply be placed on the upper portion of the casing 1, for instance, via a packing.</p>
+    <p id="p-00062-en" num="0062">Next, the surface activating process S2 is performed. In detail, the pretreatment liquid W1 is supplied from the tank 16 to the intake port 5 by the pump 15, and the interior of the casing 1 is filled with the pretreatment liquid W1. In this case, it is preferable to decide a supplied amount of the pretreatment liquid W1 such that a liquid level SF of the stored pretreatment liquid W1 is located inside the cover member 17 or overflows over the cover member 17, and the liquid level SF preferably reaches the upper portion of the downstream opening part 11. Afterwards, the pretreatment liquid W1 is discharged from the discharge port 6 of the casing 1, is recovered to the tank 16, and removes an oxide film of the inner surface 1a of the casing 1 to activate the inner surface 1a.</p>
+    <p id="p-00063-en" num="0063">As the pretreatment liquid W1, for example, an acid solution such as hydrochloric acid adjusted to room temperature is used.</p>
+    <p id="p-00064-en" num="0064">The cleaning process S3 is performed after the surface activating process S2. In detail, flushing is performed on the inner surface 1a of the casing 1 which is activated by the pretreatment liquid W1 using a spray.</p>
+    <p id="p-00065-en" num="0065">Next, the preheating process S4 is performed. In detail, with respect to the casing 1 flushed in the cleaning process S3, the preheating liquid W2 is supplied from the tank 16 to the intake port 5 by the pump 15, and the interior of the casing 1 is filled with the preheating liquid W2. Then, it is preferable to decide a supplied amount of the preheating liquid W2 such that a liquid level SF of the preheating liquid W2 stored in the casing 1 is located inside the cover member 17 or overflows over the cover member 17, and the liquid level SF preferably reaches the upper portion of the downstream opening part 11. Afterwards, the preheating liquid W2 is discharged from the discharge port 6 of the casing 1, is recovered in the tank 16, and raises a temperature of the casing 1 before the plating work.</p>
+    <p id="p-00066-en" num="0066">As the preheating liquid W2, for example, an aqueous solution including a reductant adjusted to a temperature of about 90°C is used. As the reductant, for example, sodium hypophosphite is used, but other typical reductants may be used.</p>
+    <p id="p-00067-en" num="0067">Here, the flushing may be performed after the preheating process S4 has been performed.</p>
+    <p id="p-00068-en" num="0068">Next, the plating process S5 is performed. In detail, with respect to the casing 1 preheated in the preheating process S4, the plating liquid W3 is supplied from the tank 16 to the intake port 5 by the pump 15, and the interior of the casing 1 is filled with the plating liquid W3. A supplied amount of the plating liquid W3 filling the casing 1 is decided such that a liquid level SF of the plating liquid W3 is located inside the cover member 17 or overflows over the cover member 17. Namely, the liquid level SF is adapted to reach the upper portion of the downstream opening part 11, and the casing 1 remains filled with the plating liquid W3 up to the uppermost portion thereof. In this state, the plating liquid W3 is discharged from the discharge port 6, and is recovered to the tank 16. In a state in which the interior of the casing 1 is filled with the plating liquid W3, the plating liquid W3 is circulated to plate the inner surface of the casing 1.</p>
+    <p id="p-00069-en" num="0069">As the plating liquid W3, for example, an electroless nickel plating liquid W3 adjusted to a temperature of about 90°C is used.</p>
+    <p id="p-00070-en" num="0070">Next, the casing finishing process S6 is performed. In detail, the plated inner surface 1a of the casing 1 is flushed using a spray first, and then is dried, and the casing 1 is finished. Further, a baking treatment (hydrogen embrittlement removal) may be carried out.</p>
+    <p id="p-00071-en" num="0071">Finally, the assembling process S7 is performed. In detail, the internal casing 2, the rotary shaft 3, and the impeller 4 are installed in the casing 1, and the centrifugal compressor 100 is manufactured.</p>
+    <p id="p-00072-en" num="0072">In this manufacturing method of the centrifugal compressor 100, the pretreatment liquid W1 is supplied from the intake port 5 formed in the casing 1, and is discharged from the discharge port 6. Thereby, the inner surface 1a of the casing 1 is activated by the pretreatment liquid W1. Likewise, the preheating liquid W2 and the plating liquid W3 are supplied and discharged from the intake port 5 and the discharge port 6. Thereby, the plating work for the inner surface 1a of the casing 1 can be performed.</p>
+    <p id="p-00073-en" num="0073">In detail, in the surface activating process S2 and the plating process S5, the supply and discharge of the pretreatment liquid W1 and the plating liquid W3 can be performed using the multiple opening parts with no change. Accordingly, separate nozzles for supplying and discharging these liquids are not provided, and a plating tank for immersing the entire casing 1 is not required either. As such, the plating work for the inner surface 1a of the casing 1 is possible.</p>
+    <p id="p-00074-en" num="0074">Here, especially in the casing 1 having a large size and a complicated shape, it takes time to raise the temperature based on the circulation of the plating liquid W3. Further, the plating liquid W3 is partly immersed, and thereby unevenness in the temperature may occur at the inner surface 1a of the casing 1. For this reason, a sufficient quality of plating may not be obtained. In view of this, the preheating process S4 is performed before the plating process S5, and thereby a preheating tank for immersing the entire casing 1 is not required. As such, the temperature of the casing 1 can be uniformly raised. For this reason, a quality of plating can be further improved.</p>
+    <p id="p-00075-en" num="0075">Further, in the preheating process S4, the preheating liquid W2 containing the reductant is used. Thereby, in the inner surface 1a of the casing 1 which is a portion to be plated, it is possible to prevent the oxide film from forming during the preheating. That is, it is possible to achieve the antioxidation of the inner surface 1a of the casing 1, and to further improve the quality of plating in the plating process S5.</p>
+    <p id="p-00076-en" num="0076">Furthermore, the casing 1 is placed such that the downstream opening part 11 that is the largest opening part is directed upward, and the plating work is performed. For this reason, hydrogen gas that is generated during the plating work and is attached to the inner surface 1a of the casing 1 can be easily discharged outside the casing 1. Therefore, the quality of plating can be further improved in the plating process S5.</p>
+    <p id="p-00077-en" num="0077">Thus, in the present embodiment, in the state in which the cover member 17 is provided upward and the space in which the liquid is collected is formed in an upper portion of the casing 1, each of the pretreatment liquid W1, the preheating liquid W2, and the plating liquid W3 is supplied into the casing 1. For this reason, the liquid level SF of the liquid supplied into the casing 1 is placed at a higher position than the downstream opening part 11, and the plating work can be performed up to the opening edge 11a of the downstream opening part 11. Accordingly, since the plating work can be reliably performed on the entire inner surface 1a of the casing 1, this leads to further improvement in the quality of plating. Each liquid overflowing from the upper portion of the cover member 17 is recovered to the tank 16 and is reused.</p>
+    <p id="p-00078-en" num="0078">Further, since the plating liquid W3 is supplied from the intake port 5 and the discharge port 6 of the casing 1, inner surfaces 1a of the intake and discharge channels FC1 and FC2 can also be plated at the same time.</p>
+    <p id="p-00079-en" num="0079">According to the manufacturing method of the centrifugal compressor 100 of the present embodiment, the pretreatment liquid W1 and the plating liquid W3 are supplied and discharged using the intake and discharge ports 5 and 6 formed in the casing 1. Thereby, costs are reduced, and the plating work for the inner surface 1a of the casing 1 can be performed in a simple way.</p>
+    <p id="p-00080-en" num="0080">Here, in the present embodiment, the pretreatment liquid W1, the preheating liquid W2, and the plating liquid W3 are adapted to be supplied from the intake port 5 of the casing 1 and be discharged from the discharge port 6. However, without being limited to such an example, conversely, each liquid may be supplied from the discharge port 6 and be discharged from the intake port 5, or be supplied and discharged using the upstream opening part 10 and the downstream opening part 11. Further, in addition to the intake port 5, the discharge port 6, the upstream opening part 10, and the downstream opening part 11, each liquid may be supplied and discharged through other opening parts formed in the casing 1.</p>
+    <p id="p-00081-en" num="0081">Incidentally, of the intake and discharge ports 5 and 6, the opening part from which high corrosion resistance is particularly required may be subjected to overlaying using a stainless steel material. Such an opening part requires no plating work. For this reason, as the pretreatment liquid W1, the preheating liquid W2, and the plating liquid W3 are supplied and discharged from the opening part from which the plating is required among the multiple opening parts, the plating work is performed on the inner surface 1a of the casing 1, and these opening parts can be plated. Therefore, the casing 1 can be more efficiently plated. For example, in a side stream type of compressor, since two intake ports 5 and one discharge port 6 are provided, the opening parts supplying and discharging the liquid can be appropriately selected from these intake ports 5 and the discharge port 6.</p>
+    <p id="p-00082-en" num="0082">When there is a low possibility of unevenness in temperature occurring at the inner surface 1a of the casing 1 in view of a shape and size of the casing 1, the preheating process S4 may not necessarily be performed. Further, no reductant is contained in the preheating liquid W2 used in preheating process S4.</p>
+    <p id="p-00083-en" num="0083">The supply of the plating liquid W3 may also be initiated before the preheating liquid W2 is completely discharged.</p>
+    <p id="p-00084-en" num="0084">The casing 1 is placed in the state in which the downstream opening part 11 is directed upward, and each liquid is supplied and discharged. However, the casing 1 may be placed, for instance, such that the direction of the axis O becomes a horizontal direction, i.e. such that a direction in which the upstream opening part 10 and the downstream opening part 11 are open becomes a horizontal direction, and each liquid may be supplied and discharged.</p>
+    <p id="p-00085-en" num="0085">In the preparing process S1, the cleaning process S3, and the casing finishing process S6, the interior of the casing 1 is flushed by the spray. Instead of this, similar to the surface activating process S2, the preheating process S4, and the plating process S5, water may be supplied and discharged using the intake port 5, the discharge port 6, the upstream opening part 10, and the downstream opening part 11, and the inner surface 1a of the casing 1 may be flushed. The same is true when the flushing is performed after the preheating process S4.</p>
+    <p id="p-00086-en" num="0086">The cover member 17 may not necessarily be provided, and the surface activating process S2, the preheating process S4, and the plating process S5 may be performed by supplying each liquid such that each liquid overflows from the downstream opening part 11 opened upward.</p>
+    <heading id="h-00013-en">[Second embodiment]</heading>
+    <p id="p-00087-en" num="0087">Next, a method of manufacturing a centrifugal compressor 100 according to a second embodiment of the present invention will be described.</p>
+    <p id="p-00088-en" num="0088">The same components as in the first embodiment will be given the same numerals or symbols, and detailed description thereof will be omitted.</p>
+    <p id="p-00089-en" num="0089">In the present embodiment, a plating process S25 is different from that of the first embodiment.</p>
+    <p id="p-00090-en" num="0090">As illustrated in <figref>Fig. 4</figref>, in the plating process S25, plating work is performed on an inner surface 1a of a casing 1 in a state in which a stirring propeller 21 acting as a stirring device is inserted from a downstream opening part 11.</p>
+    <p id="p-00091-en" num="0091">The stirring propeller 21 has a body part 22 shaped of a rod extending in a direction of an axis O, blade parts 23 that are provided in one body so as to protrude to a radial outer side of the body part 22, i.e. so as to be directed to the inner surface 1a of the casing 1, and a driving part 24 such as an electric motor which clamps the body part 22 to provide a rotational force about the axis O.</p>
+    <p id="p-00092-en" num="0092">In the plating process S25, a plating liquid W3 is circulated while the stirring propeller 21 is rotated and an interior of the casing 1 filled with the plating liquid W3 is stirred.</p>
+    <p id="p-00093-en" num="0093">According to the method of manufacturing the centrifugal compressor 100 of the present embodiment, even in the case of the casing 1 that is large and has a complicated shape, the use of the stirring propeller 21 allows a flow velocity of the plating liquid W3 in the casing 1 to be set to a numerical value most suitable for plating work.</p>
+    <p id="p-00094-en" num="0094">Further, hydrogen gas that is generated during the plating work and is attached to the inner surface 1a of the casing 1 is removed. Thereby, it is possible to prevent the plating work from being obstructed at portions at which the hydrogen gas is attached. For this reason, a quality of plating can be further improved in the plating process S25.</p>
+    <p id="p-00095-en" num="0095">Here, another device may be used as the stirring device. Namely, the plating liquid W3 in the casing 1 can also be convected and stirred, for instance, by controlling a flow rate of the supplied or discharged plating liquid W3. To be specific, as a supplied amount of the plating liquid W3 from an intake port 5 is increased, and a discharged amount of the plating liquid W3 from the discharge port 6 is reduced, convection of the plating liquid W3 can be generated, and the foregoing effects can be obtained like the stirring propeller 21.</p>
+    <p id="p-00096-en" num="0096">Further, the stirring propeller 21 can be applied to the plating process S25 as well as a surface activating process S2, a preheating process S4, a cleaning process S3, and so on. Thereby, the quality of plating can be further improved.</p>
+    <heading id="h-00014-en">[Third embodiment]</heading>
+    <p id="p-00097-en" num="0097">Next, a method of manufacturing a centrifugal compressor 100 according to a third embodiment of the present invention will be described.</p>
+    <p id="p-00098-en" num="0098">The same components as in the first and second embodiments will be given the same numerals or symbols, and detailed description thereof will be omitted.</p>
+    <p id="p-00099-en" num="0099">In the present embodiment, a plating process S35 is different from those of the first and second embodiments.</p>
+    <p id="p-00100-en" num="0100">As illustrated in <figref>Fig. 5</figref>, in the plating process S35, a core 31 of a columnar shape is provided by insertion from a downstream opening part 11 so as to have the same axis as a casing 1, i.e. in a state in which a central axis of the core 31 is identical to an axis O and the core 31 is spaced apart from an inner surface 1a of the casing 1, and plating work for the inner surface 1a of the casing 1 is performed.</p>
+    <p id="p-00101-en" num="0101">According to the method of manufacturing the centrifugal compressor 100 of the present embodiment, the core 31 is inserted, so that an internal volume of the casing 1 can be reduced. For this reason, a supplied amount of a plating liquid W3 can be reduced, which leads reduction of costs. Further, the plating liquid W3 causes flowing between the core 31 and the inner surface 1a of the casing 1. For this reason, a flow channel when the plating liquid W3 circulates and flows in the casing 1 is reduced, and a flow can be made smooth. Therefore, a quality of plating can be improved.</p>
+    <p id="p-00102-en" num="0102">Further, a space defined between the inner surface 1a of the casing 1 and the core 31 has a constant gap throughout the circumference in a radial direction of the axis O in order to provide the core 31 on the same axis as the casing 1. Accordingly, a flow velocity of the plating liquid W3 flowing through an interior of the casing 1 can be made uniform, and thus the quality of plating can be further improved.</p>
+    <p id="p-00103-en" num="0103">The core 31 may not necessarily be provided on the concentric axis. If the core 31 is at least provided so as to reduce the internal volume of the casing 1, the supplied amount of the plating liquid W3 is reduced to enable cost reduction.</p>
+    <p id="p-00104-en" num="0104">Further, the core 31 is rotated around the axis O or is caused to move up and down, and thereby the core 31 can be used as a stirring device. Hydrogen gas attached to the inner surface 1a of the casing 1 during the plating work is removed, and the quality of plating can be further improved.</p>
+    <p id="p-00105-en" num="0105">Furthermore, the core 31 can be applied to the plating process S35 as well as a surface activating process S2, a preheating process S4, or a cleaning process S3. Thereby, the quality of plating can be further improved.</p>
+    <heading id="h-00015-en">[Fourth embodiment]</heading>
+    <p id="p-00106-en" num="0106">Next, a method of manufacturing a centrifugal compressor 100 according to a fourth embodiment of the present invention will be described.</p>
+    <p id="p-00107-en" num="0107">The same components as in the first to third embodiments will be given the same numerals or symbols, and detailed description thereof will be omitted.</p>
+    <p id="p-00108-en" num="0108">In the present embodiment, a plating process S45 is different from those of the first to third embodiments.</p>
+    <p id="p-00109-en" num="0109">As illustrated in <figref>Fig. 6</figref>, like the third embodiment, in the plating process S45, a core 41 with a cylindrical shape is provided so as to have the same axis as a casing 1, i.e. in a state in which a central axis of the core 41 is identical to an axis O. Further, the core 41 is provided by insertion from a downstream opening part 11 in a state in which the core 41 is spaced apart from an inner surface 1a of the casing 1, and plating work for the inner surface 1a of the casing 1 is performed.</p>
+    <p id="p-00110-en" num="0110">Here, the core 41 is a hollow member, and an outer circumferential surface thereof is formed with multiple through-holes 41a so as to communicate with the interior and exterior of the core 41. The core 41 is connected to the tank 16 via a piping 41b and a pump 42. A plating liquid W3 is supplied into the core 41 during the plating work.</p>
+    <p id="p-00111-en" num="0111">According to the method of manufacturing the centrifugal compressor 100 of the present embodiment, the core 41 is inserted, and the plating liquid W3 is supplied into the core 41. Thereby, the plating liquid W3 flows between the core 41 and the inner surface 1a of the casing 1. For this reason, a flow channel of the plating liquid W3 is reduced, and a flow can be made smooth. Further, since the plating liquid W3 can be ejected from the through-holes 41 a toward the inner surface 1a of the casing 1, it is possible to obtain a stirring effect in the casing 1. Accordingly, it is possible to measure a uniform flow velocity of the plating liquid W3 in the casing 1, and to remove hydrogen gas attached to the inner surface 1a of the casing 1 during the plating work. Therefore, a quality of plating can be improved in the plating process S45.</p>
+    <p id="p-00112-en" num="0112">The core 41 may not necessarily be provided on the concentric axis. The core 41 is rotated around the axis O or is caused to move up and down, and thereby the stirring effect can be further improved. The core 41 can be applied to the plating process S45 as well as a surface activating process S2, a preheating process S4, or a cleaning process S3.</p>
+    <heading id="h-00016-en">[Fifth embodiment]</heading>
+    <p id="p-00113-en" num="0113">Next, a method of manufacturing a centrifugal compressor 100 according to a fifth embodiment of the present invention will be described.</p>
+    <p id="p-00114-en" num="0114">The same components as in the first to fourth embodiments will be given the same numerals or symbols, and detailed description thereof will be omitted.</p>
+    <p id="p-00115-en" num="0115">In the present embodiment, a plating process S55 is different from those of the first to fourth embodiments.</p>
+    <p id="p-00116-en" num="0116">As illustrated in <figref>Fig. 7</figref>, in the plating process S55, plating work for an inner surface 1a of a casing 1 is performed in a state in which plating supply hoses 51 acting as a stirring device are inserted from a downstream opening part 11.</p>
+    <p id="p-00117-en" num="0117">Here, the plating supply hoses 51 are connected to a tank 16 via piping 51a and a pump 52. A plating liquid W3 is adapted to be supplied from an interior of the tank 16 into the casing 1.</p>
+    <p id="p-00118-en" num="0118">According to the method of manufacturing the centrifugal compressor 100 of the present embodiment, the plating liquid W3 is supplied by the plating supply hoses 51 alongside the supply from an intake port 5. Thereby, it is possible to remove hydrogen gas attached to the inner surface 1a of the casing 1 during the plating work. Therefore, it is possible to prevent the plating work from being obstructed at portions at which the hydrogen gas is attached. For this reason, a quality of plating can be further improved in the plating process S55.</p>
+    <p id="p-00119-en" num="0119">Particularly, when the casing 1 has a more complicated shape, a water stop region is formed at a corner portion such as a connection portion between the inner surface 1a of the casing 1 and an intake channel FC1 and between the inner surface 1a of the casing 1 and a discharge channel FC2. The plating liquid W3 is supplied from the plating supply hoses 51 at this position, and an effect of removing the hydrogen gas can be further improved.</p>
+    <p id="p-00120-en" num="0120">The plating supply hoses 51 can carry out the plating process S55 as well as a surface activating process S2, a preheating process S4, or a cleaning process S3 using the same technique as in the present embodiment in which each liquid is supplied by the supply hoses. Thereby, the quality of plating can be further improved.</p>
+    <p id="p-00121-en" num="0121">In the present embodiment, the plating supply hoses 51 are used as the stirring device. Instead of this, plating suction hoses suctioning the plating liquid W3 from the interior of the casing 1 can also be used.</p>
+    <heading id="h-00017-en">[Sixth embodiment]</heading>
+    <p id="p-00122-en" num="0122">Next, a method of manufacturing a centrifugal compressor 100 according to a sixth embodiment of the present invention will be described.</p>
+    <p id="p-00123-en" num="0123">The same components as in the first to fifth embodiments will be given the same numerals or symbols, and detailed description thereof will be omitted.</p>
+    <p id="p-00124-en" num="0124">In the present embodiment, a plating process S65 is different from those of the first to fifth embodiments.</p>
+    <p id="p-00125-en" num="0125">As illustrated in <figref>Fig. 8</figref>, in the plating process S65, a mounting table 61 is provided as a vibration imparting device, and plating work is performed in a state in which a casing 1 is placed on the mounting table 61.</p>
+    <p id="p-00126-en" num="0126">Here, the mounting table 61 has, for instance, an electric motor (not shown), and is a device that generates vibration in a horizontal direction, a vertical direction, and forward, backward, leftward, and rightward directions.</p>
+    <p id="p-00127-en" num="0127">According to a method of manufacturing a centrifugal rotary machine of the present embodiment, vibration is imparted to the casing 1 by the mounting table 61 in a state in which a plating liquid W3 is stored in the casing 1. For this reason, it is possible to prevent stagnation of hydrogen gas that is generated during plating work and is attached to an inner surface 1a of the casing 1. Accordingly, a quality of plating can be further improved in the plating process S65.</p>
+    <p id="p-00128-en" num="0128">Here, without using the mounting table 61 as the vibration imparting device, a technique of, for instance, directly striking the casing 1 may also be used.</p>
+    <p id="p-00129-en" num="0129">Further, ultrasonic waves may also be imparted to the casing 1 using an ultrasonic generator (ultrasonic generating part) generating the ultrasonic waves as the vibration imparting device.</p>
+    <p id="p-00130-en" num="0130">Furthermore, the vibration imparting device can be applied to the plating process S65 as well as a surface activating process S2, a preheating process S4, or a cleaning process S3. Thereby, the quality of plating can be further improved.</p>
+    <heading id="h-00018-en">[Seventh embodiment]</heading>
+    <p id="p-00131-en" num="0131">Next, a method of manufacturing a centrifugal compressor 100 according to a seventh embodiment of the present invention will be described.</p>
+    <p id="p-00132-en" num="0132">The same components as in the first to sixth embodiments will be given the same numerals or symbols, and detailed description thereof will be omitted.</p>
+    <p id="p-00133-en" num="0133">In the present embodiment, a plating process S75 is different from those of the first to sixth embodiments.</p>
+    <p id="p-00134-en" num="0134">As illustrated in <figref>Fig. 9</figref>, in the plating process S75, plating work is performed by a brush 71 inserted from a downstream opening part 11 while an inner surface 1a of a casing 1 is rubbed.</p>
+    <p id="p-00135-en" num="0135">The brush 71 is shaped of a rod which extends in a direction of an axis O with multiple hairs being provided on an outer circumferential surface thereof, and is displaced up and down by a driving part 74 such as an electric motor. The driving part 74 may rotate the brush 71 around the axis O.</p>
+    <p id="p-00136-en" num="0136">According to the method of manufacturing the centrifugal rotary machine of the present embodiment, in a state in which a plating liquid W3 is stored in the casing 1, the inner surface 1 a of the casing 1 is rubbed by the brush 71. For this reason, it is possible to prevent stagnation of hydrogen gas that is generated during plating work and is attached to the inner surface 1a of the casing 1. Therefore, a quality of plating can be further improved in the plating process S75.</p>
+    <p id="p-00137-en" num="0137">The brush 71 can be applied to the plating process S75 as well as a surface activating process S2, a preheating process S4, or a cleaning process S3. Thereby, the quality of plating can be further improved.</p>
+    <heading id="h-00019-en">[Eighth embodiment]</heading>
+    <p id="p-00138-en" num="0138">Next, a method of manufacturing a centrifugal compressor 100A according to an eighth embodiment of the present invention will be described.</p>
+    <p id="p-00139-en" num="0139">The same components as in the first to seventh embodiments will be given the same numerals or symbols, and detailed description thereof will be omitted.</p>
+    <p id="p-00140-en" num="0140">In the present embodiment, a casing 1A that is a target to be plated is different from those of the first to seventh embodiments. Further, a plating process S85 is different from those of these embodiments.</p>
+    <p id="p-00141-en" num="0141">As illustrated in <figref>Figs. 10A and 10B</figref>, in the plating process S85, the casing 1A undergoing plating work is given as a horizontal division type that is divided into two parts so as to include an axis O.</p>
+    <p id="p-00142-en" num="0142">In the plating process S85, the plating work is performed in a state in which the casing 1A is placed in a halved state such that the axis O becomes a horizontal direction, i.e., such that a direction in which an upstream opening part 10A and a downstream opening part 11 A are open becomes a horizontal direction. At this point in time, a division-side opening part 82 of the casing 1A is placed upward. For this reason, among an intake port 5A, a discharge port 6A, the upstream opening part 10A, the downstream opening part 11A, and the division-side opening part 82 that are all opening parts in the casing 1, the largest opening part remains directed upward.</p>
+    <p id="p-00143-en" num="0143">Further, in the plating process S85, plating work is performed in a state in which an interior of the casing 1A is partitioned into two spaces by a partition plate 81 shaped of a plate. To be specific, the partition plate 81 is provided between the intake port 5A and the discharge port 6A so as to be perpendicular to the axis O, and the partition plate 81 is sandwiched to partition the interior of the casing 1A into a first space C1 of one side in a direction of the axis O (right side in the space of <figref>Fig. 10A</figref>) and a second space C2 of the other side in the direction of the axis O.</p>
+    <p id="p-00144-en" num="0144">The partition plate 81 is installed to be plugged into a groove 1Aa formed in the inner surface 1a of the casing 1A in a ring shape in a circumferential direction of the axis O. In this case, a gap may also be present between the inner surface 1a of the casing 1A and the partition plate 81.</p>
+    <p id="p-00145-en" num="0145">In the plating process S85, the upstream opening part 10A and the intake port 5A communicate with the first space C1, and the downstream opening part 11 A and the discharge port 6A communicate with the second space C2. That is, at least two opening parts communicate with each space.</p>
+    <p id="p-00146-en" num="0146">According to the method of manufacturing the centrifugal compressor 100A of the present embodiment, the space in the casing 1 A in which a plating liquid W3 circulates can be divided into the first space C1 and the second space C2. For this reason, the plating liquid W3 can flow through each space, and fluidity of the plating liquid W3 in the casing 1A can be improved compared to when the partition plate 81 is not provided. Therefore, a quality of plating can be improved.</p>
+    <p id="p-00147-en" num="0147">In the present embodiment, the partition plate 81 can be applied to the plating process S85 as well as a surface activating process S2, a preheating process S4, or a cleaning process S3. Thereby, the quality of plating can be further improved.</p>
+    <p id="p-00148-en" num="0148">Although preferred embodiments of the present invention have been described in detail, some design changes are also possible without departing from the technical idea of the present invention.</p>
+    <p id="p-00149-en" num="0149">In the aforementioned embodiments, the cylindrical type of casing 1 has been described with regard to the first to seventh embodiments. However, the method of manufacturing the centrifugal compressor 100 in these embodiments may be applied to the horizontal division type of casing 1A described in the eighth embodiment. In this case, as illustrated in <figref>Figs. 10A and 10B</figref>, the casing 1A is preferably placed in a halved state such that the division-side opening part 82 is directed upward.</p>
+    <p id="p-00150-en" num="0150">Further, in the eighth embodiment, the horizontal division type of casing 1A has been described. However, the method of manufacturing the centrifugal compressor 100A in the eighth embodiment may be applied to the cylindrical type of casing 1 described in the first to seventh embodiments. In this case, the casing 1 is preferably placed such that the downstream opening part 11 or the upstream opening part 10 is directed upward.</p>
+    <p id="p-00151-en" num="0151">Furthermore, the methods for manufacturing the centrifugal compressor 100 (100A) described in the first to eighth embodiments may be appropriately combined. For example, the stirring propeller 21 of the second embodiment may be combined with the mounting table 61 of the sixth embodiment.</p>
+    <p id="p-00152-en" num="0152">Further, in the aforementioned embodiments, the centrifugal compressor 100</p>
+    <p id="p-00153-en" num="0153">(100A) has been described, but the aforementioned manufacturing method may be applied to other rotary machines such as an axial compressor, a turbine, and so on.</p>
+    <heading id="h-00020-en">[Industrial Applicability]</heading>
+    <p id="p-00154-en" num="0154">According to the method of manufacturing the rotary machine, the method of plating the rotary machine, and the rotary machine, all of which are described above, the pretreatment liquid and the plating liquid are supplied and discharged using the opening parts formed in the casing, and thereby costs can be reduced, and the plating work for the casing can be done by a simple technique.</p>
+    <heading id="h-00021-en">[Reference Signs List]</heading>
+    <p id="p-00155-en" num="0155">
+      <ul id="ul-00002-en" list-style="none" compact="compact">
+        <li>1: casing</li>
+        <li>1a: inner surface</li>
+        <li>2: internal casing</li>
+        <li>3: rotary shaft (rotating body)</li>
+        <li>4: impeller (rotating body)</li>
+        <li>5: intake port (opening part)</li>
+        <li>6: discharge port (opening part)</li>
+        <li>10: upstream opening part</li>
+        <li>11: downstream opening part</li>
+        <li>11 a: opening edge</li>
+        <li>15: pump</li>
+        <li>16: tank</li>
+        <li>16a: piping</li>
+        <li>17: cover member</li>
+        <li>100: centrifugal compressor (rotary machine)</li>
+        <li>O: axis</li>
+        <li>F: fluid</li>
+        <li>FC1: intake channel</li>
+        <li>FC2: discharge channel</li>
+        <li>S0: casing forming process</li>
+        <li>S1: preparing process</li>
+        <li>S2: surface activating process</li>
+        <li>S3: cleaning process</li>
+        <li>S4: preheating process</li>
+        <li>S5: plating process</li>
+        <li>S6: casing finishing process</li>
+        <li>S7: assembling process</li>
+        <li>SF: liquid level</li>
+        <li>W1: pretreatment liquid</li>
+        <li>W2: preheating liquid</li>
+        <li>W3: plating liquid</li>
+        <li>S25: plating process</li>
+        <li>21: stirring propeller (stirring device)</li>
+        <li>22: body part</li>
+        <li>23: blade part</li>
+        <li>24: driving part</li>
+        <li>S35: plating process</li>
+        <li>31: core</li>
+        <li>S45: plating process 41: core</li>
+        <li>41 a: through-hole</li>
+        <li>41b: piping</li>
+        <li>42: pump</li>
+        <li>S55: plating process</li>
+        <li>51: plating supply hose (stirring device)</li>
+        <li>51a: piping</li>
+        <li>52: pump</li>
+        <li>S65: plating process</li>
+        <li>61: mounting table (vibration imparting device)</li>
+        <li>S75: plating process</li>
+        <li>71: brush</li>
+        <li>74: driving part</li>
+        <li>1A: casing</li>
+        <li>1Aa: groove</li>
+        <li>5A: intake port</li>
+        <li>6A: discharge port</li>
+        <li>10A: upstream opening part</li>
+        <li>11A: downstream opening part</li>
+        <li>81: partition plate</li>
+        <li>82: division-side opening part</li>
+        <li>S85: plating process</li>
+        <li>C1: first space</li>
+        <li>C2: second space</li>
+        <li>100A: centrifugal compressor (rotary machine)</li>
+      </ul>
+    </p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A method of manufacturing a rotary machine comprising:
+<claim-text>a casing forming process of forming a casing of the rotary machine that has multiple opening parts and suctions and discharges a fluid;</claim-text><claim-text>a surface activating process of supplying a pretreatment liquid into the casing, then discharging the pretreatment liquid from the casing through the opening parts, and activating an inner surface of the casing after the casing forming process;</claim-text><claim-text>a plating process of performing supply and discharge of a plating liquid into and from the casing through the opening parts to circulate the plating liquid and plating the inner surface of the casing after the surface activating process; and</claim-text><claim-text>an assembling process of providing a rotating body that is rotatable relative to the casing so as to be covered from an outer circumference side by the casing plated in the plating process.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The method according to claim 1, further comprising a preheating process of supplying a preheating liquid into the casing, then discharging the preheating liquid from the casing through the opening parts, and preheating the casing between the surface activating process and the plating process.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The method according to claim 2, wherein the casing in the preheating process is preheated by a preheating liquid containing a reductant as the preheating liquid.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The method according to any one of claims 1 to 3, wherein the plating liquid supplied into the casing in the plating process is stirred by a stirring device.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The method according to any one of claims 1 to 4, wherein, in the plating process, the plating is performed in a state in which the opening part having a largest opening among the multiple opening parts is directed upward.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The method according to any one of claims 1 to 5, wherein the plating liquid in the plating process is supplied and discharged from the opening part that requires plating work and suctions and discharges the fluid among the multiple opening parts.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The method according to any one of claims 1 to 6, wherein, in the plating process, the plating is performed in a state in which a cover member surrounding an opening edge of the opening part from an outer circumference side is provided for the casing so as to cause the opening part opened upward among the multiple opening parts to further extend in an upward direction.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The method according to any one of claims 1 to 7, wherein, in the plating process, the plating is performed after a core is installed in the casing in a state in which the core is spaced apart from an inner surface of the casing.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The method according to claim 8, wherein, in the plating process, a hollow member having through-holes that are formed in an outer circumferential surface thereof and communicate with an interior and exterior thereof is used as the core, and the plating liquid is supplied into the hollow member and is ejected from the through-holes toward an exterior of the hollow member.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text> The method according to claim 8 or 9, wherein, in the plating process, the plating is performed while moving the core.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>The method according to any one of claims 1 to 10, wherein, in the plating process, the plating is performed in a state in which a partition plate for partitioning an interior of the casing into multiple spaces in an extending direction of the casing is provided such that at least two of the opening parts communicate with the respective spaces.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>The method according to any one of claims 1 to 11, wherein, in the plating process, the plating is performed while vibration is imparted to the casing by a vibration imparting device.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>The method according to any one of claims 1 to 12, wherein, in the plating process, the plating is performed while the inner surface of the casing is being rubbed by a brush.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>A rotary machine manufactured by the method according to any one of claims 1 to 13.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en" independent="true">
+      <claim-text>A method of plating a rotary machine, particularly an inner surface of a casing of the rotary machine that has multiple opening parts and suctions and discharges a fluid, the method comprising:
+<claim-text>a surface activating process of supplying a pretreatment liquid into the casing, then discharging the pretreatment liquid from the casing through the opening parts, and activating an inner surface of the casing; and</claim-text><claim-text>a plating process of performing supply and discharge of a plating liquid into and from the casing through the opening parts to circulate the plating liquid and plating the inner surface of the casing after the surface activating process.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>A rotary machine manufactured by the method according to claim 15.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940184A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940184A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940184A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940184A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0003.tif" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2940184A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0004.tif" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2940184A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0005.tif" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2940184A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0006.tif" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2940184A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0007.tif" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP2940184A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0008.tif" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="EP2940184A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0009.tif" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="EP2940184A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0010.tif" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="EP2940184A1_00012.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2940184A1.PDF" type="pdf" size="536066" pages="25" />
+</lexisnexis-patent-document>
