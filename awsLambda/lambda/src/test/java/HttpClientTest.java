@@ -234,7 +234,6 @@ public class HttpClientTest {
 	public static class MyHttpResponseHandler<T> implements ResponseHandler<String> {
 
 
-		@Override
 		public String handleResponse(HttpResponse response)
 				throws ClientProtocolException, IOException {
 			

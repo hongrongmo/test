@@ -441,8 +441,32 @@ public class VTWAssetAPI {
 		
 		
 		//patentIds.put("AU2010281317A1", "http://dev-ucs-content-store-eu-west.s3.amazonaws.com/content/pat%3AAU2010281317A1/MAIN/application/xml/02d84460608e91d8510f8725fe109b7a/AU2010281317A1.xml?AWSAccessKeyId=AKIAIKW4U6PKMIE3KSLQ&Expires=1471522524&Signature=u1zyiRsWNXf5DlgT5d7zR9iadlY%3D");
-		patentIds.put("EP2831534A4", "");
-		patentIds.put("EP2670359B1", "");
+		/*patentIds.put("EP2831534A4", "");
+		patentIds.put("EP2670359B1", "");*/
+		
+		
+		patentIds.put("US20090280091A1", "");
+		patentIds.put("US20130241553A1", "");
+		patentIds.put("US20030218103A1", "");
+		patentIds.put("US8705496B2", "");
+		patentIds.put("US9322510B2", "");
+		patentIds.put("US20040163418A1", "");
+		patentIds.put("US9311257B2", "");
+		patentIds.put("US20020168750A1", "");
+		patentIds.put("US9219499B2", "");
+		patentIds.put("US7714994B2", "");
+		patentIds.put("US7904723B2", "");
+		patentIds.put("US20090044426A1", "");
+		patentIds.put("US7950124B2", "");
+		patentIds.put("US20040130815A1", "");
+		patentIds.put("USD0668937S", "");
+		patentIds.put("US20070284484A1", "");
+		patentIds.put("US20080051507A1", "");
+		patentIds.put("US20120209491A1", "");
+		patentIds.put("US8644581B2", "");
+		patentIds.put("US20110124254A1", "");
+		
+		
 		
 		
 		api.downloadPatent(patentIds,"forward");
