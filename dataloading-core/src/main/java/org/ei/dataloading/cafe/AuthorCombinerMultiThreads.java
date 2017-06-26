@@ -1,5 +1,6 @@
 package org.ei.dataloading.cafe;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,31 +18,34 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Set;
-import java.util.SortedSet;
-import java.util.StringTokenizer;
-import java.util.TreeSet;
+import java.util.concurrent.CountDownLatch;
 import java.util.regex.Pattern;
 
-import javax.json.JsonArray;
-import javax.json.JsonArrayBuilder;
+
+
+
+
+
+
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.ei.common.Constants;
-import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.dataloading.DataLoadDictionary;
-import org.ei.domain.DataDictionary;
-import org.ei.xml.Entity;
+import org.ei.dataloading.cafe.CafeDownloadFileFromS3AllTypes.s3FileDownload;
+
+
 
 /**
  * 
  * @author TELEBH
- * @Date: 07/14/2016
+ * @Date: 06/16/2017
  * @Description: Cafe Author Profile with embeded Author Affiliation part in the Author profile
  * Only CPX AU profiles to be indexed in ES 
- * by comparing author-id with ANI metadata tables.
+ * by comparing author-id with ANI metadata tables, index to ES by
+ * 			1. write ES docs into out files as bulk contents
+ * 			2. index to ES using multithreading that each thread assigned to group of out files to index
  */
-public class AuthorCombiner {
+public class AuthorCombinerMultiThreads {
 
 	public String[] AuCombinedRecKeys = {AuAfCombinedRec.DOCID, AuAfCombinedRec.EID, AuAfCombinedRec.AUID, AuAfCombinedRec.DOC_TYPE,AuAfCombinedRec.STATUS, 
 			AuAfCombinedRec.LOADDATE, AuAfCombinedRec.ITEMTRANSACTIONID, AuAfCombinedRec.ESINDEXTIME, 
@@ -64,13 +68,14 @@ public class AuthorCombiner {
 	private static String esDomain = "search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
 	private static String tableToBeTruncated = "APR_ES_INDEXED";
 	private static String esIndexedIdsSqlldrFileName = "aprESIndexedIdsFileLoader.sh";
-	static String esIndexType = "direct";
+	static String esIndexType = "file";
+	static int numOfThreads = 1;
 
 	static int ESdirSeq_ID = 1;
 
 
 	// get CurrentData and Time for ESIndexTime
-	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+	static DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
 	String date;
 
 	static CombinedAuAfJSON writer;
@@ -85,12 +90,13 @@ public class AuthorCombiner {
 	LinkedHashSet<String> affiliation_historyIds_List;
 
 	List<String> auId_deletion_list;
+	static List<String> esIndexed_docs_list = new ArrayList<String>();	
 
 
 	AuAfCombinedRec rec;
 	String esDir;
 	static AuAfESIndex s3upload;
-	static AusAffESIndex esIndex;
+	static WriteEsDocToFile docWrite;
 
 
 	Connection con = null;
@@ -102,7 +108,7 @@ public class AuthorCombiner {
 
 	public static void main(String args[])
 	{
-		if(args.length >13)
+		if(args.length >14)
 		{
 			if(args[0] !=null)
 			{
@@ -119,7 +125,7 @@ public class AuthorCombiner {
 			if(args[3] !=null)
 			{
 				username = args[3];
-				
+
 				System.out.println("Schema: " + username);
 			}
 			if(args[4] !=null)
@@ -131,6 +137,8 @@ public class AuthorCombiner {
 				if(Pattern.matches("^\\d*$", args[5]))
 				{
 					loadNumber = Integer.parseInt(args[5]);
+
+					System.out.println("loadnumber: " + loadNumber);
 				}
 				else
 				{
@@ -192,7 +200,21 @@ public class AuthorCombiner {
 					System.exit(1);
 				}
 			}
+			if(args[14] !=null)
+			{
+				if(Pattern.matches("^\\d*$", args[14]))
+				{
+					numOfThreads = Integer.parseInt(args[14]);
 
+					System.out.println("Number of Threads: " + numOfThreads);
+				}
+				else
+				{
+					System.out.println("Number of Threads has wrong format");
+					System.exit(1);
+				}
+				
+			}
 
 		}
 		else
@@ -212,17 +234,17 @@ public class AuthorCombiner {
 				System.exit(1);
 			}
 
-			writer = new CombinedAuAfJSON(doc_type,loadNumber,esIndexType);
+
+
+			docWrite = new WriteEsDocToFile(recsPerEsbulk);
+
+			writer = new CombinedAuAfJSON(doc_type,loadNumber, docWrite, esIndexType);
 			writer.init(ESdirSeq_ID);
-			//s3upload = new AuAfESIndex(doc_type);  for ES index using Jest
 
-			esIndex = new AusAffESIndex(recsPerEsbulk, esDomain, action);
-
-
-			AuthorCombiner c = new AuthorCombiner();
+			AuthorCombinerMultiThreads c = new AuthorCombinerMultiThreads();
 			c.con = c.getConnection(url,driver,username,password);
 
-			c.esDir = writer.getEsDirName();
+			//c.esDir = writer.getEsDirName();
 
 			midTime = System.currentTimeMillis();
 			endTime = System.currentTimeMillis();
@@ -240,11 +262,6 @@ public class AuthorCombiner {
 				c.writeCombinedByWeekNumber();
 			}
 
-			
-			
-			//added 05/10/2017 to update status = "indexed" for the docs that successfully indexed to ES
-			UpdateProfileTableESStatus profileESUpdate = new UpdateProfileTableESStatus(doc_type,username,password,loadNumber,tableToBeTruncated,url,esIndexedIdsSqlldrFileName);
-			profileESUpdate.writeIndexexRecs(esIndex.getESIndexedDocsList());
 
 		}
 		catch(Exception e)
@@ -285,15 +302,15 @@ public class AuthorCombiner {
 
 				writeRecs(rs,con);
 
-				esIndex.ProcessBulk();
-				esIndex.end();
-
-
+				docWrite.close();
 				System.out.println("Wrote records.");
+
+				IndexESDocFilesToES();
+
 
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
-				System.out.println("time for get records from table "+(endTime-midTime)/1000.0+" seconds");
+				System.out.println("time after Index records to ES "+(endTime-midTime)/1000.0+" seconds");
 				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 
 
@@ -312,6 +329,7 @@ public class AuthorCombiner {
 
 				System.out.println("Got records... from table: " + tableName);
 				getDeletionList(rs);
+				IndexESDocFilesToES();
 			}
 
 		}
@@ -375,7 +393,7 @@ public class AuthorCombiner {
 
 
 				System.out.println(query);
-				
+
 				stmt.setFetchSize(200);
 				rs = stmt.executeQuery(query);
 
@@ -389,11 +407,10 @@ public class AuthorCombiner {
 
 				writeRecs(rs,con);
 
-				esIndex.ProcessBulk();
-				esIndex.end();
-
-
+				docWrite.close();
 				System.out.println("Wrote records.");
+
+				IndexESDocFilesToES();
 
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
@@ -411,41 +428,12 @@ public class AuthorCombiner {
 
 				// for testing
 
-				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
-				" and AUTHORID in ('7003368787' , '56274927700', '55341202700', '55184666600', '35314476100', '7006070058' , '55770916500',"
-				+ "'33967479000', '56912187400', '15751442200')";*/
-
-
-				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
-						" and AUTHORID = '35610162600'";*/
-
-				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
-						" and rownum<2";
-				 */
-
-				// 02/22/2017 to test author with chinees name ( made up chinees name to test)
-
-				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
-				" and AUTHORID = '6603802631'";*/
-
-
-				// 04/03/2017 to test why history_display_name in ES not showing as expected as in DB tables "Author_AFF"
-
-				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
-						" and AUTHORID = '55820750800'";*/
-
-
-				// 04/04/2017, only index AU profile that has BD CPX abstract records in fast DEV for Dayton to test EV App
-
-				/*query =  "select * from " +  tableName + "  where AUTHORID in (select author_id from ap_correction1.Cafe_au_lookup where pui "
-						+ " in (select pui from ap_correction1.AUTHOR_MID)) and rownum<2";*/
-
 				//06/08/2017 re-index AU profile to include new extra fields (i.e. updateepoch, ..)
-				
+
 				//query = "select * from " +  tableName + " where authorid in (select AUID from db_cafe.HH_APR_ES_IDS)" ;
-				
-						
-						
+
+
+
 
 				System.out.println(query);
 
@@ -461,15 +449,12 @@ public class AuthorCombiner {
 
 
 				writeRecs(rs,con);
-				//s3upload.end();
 
-				//upload ES files to S3 buckt for ES index with Lambda Function
-				//UploadAuAfESToS3.UploadFileToS3(esDir,"evcafe");
 
-				esIndex.ProcessBulk();
-				esIndex.end();
-
+				docWrite.close();
 				System.out.println("Wrote records.");
+
+				IndexESDocFilesToES();
 
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
@@ -482,7 +467,11 @@ public class AuthorCombiner {
 				// need to check with Hongrong
 
 				updateNumber=loadNumber;
-				query = "select M_ID from " +  tableName + " where updatenumber=" + updateNumber; 
+				query = "select M_ID from " +  tableName + " where updatenumber=" + updateNumber;
+
+				// for testing
+				//query = "select M_ID from " +  tableName + " where authorid in (select AUID from db_cafe.HH_APR_ES_IDS)" ;
+
 
 				System.out.println(query);
 
@@ -491,11 +480,7 @@ public class AuthorCombiner {
 
 				System.out.println("Got records... from table: " + tableName);
 				getDeletionList(rs);
-
-				// used for delete for S3 bucket & ES using Lambda function
-				//AuAfESIndex.DeleteFilesFromS3(auId_deletion_list, "evcafe"); 
-
-				esIndex.createBulkDelete(doc_type, auId_deletion_list);
+				IndexESDocFilesToES();
 
 			}
 
@@ -546,7 +531,7 @@ public class AuthorCombiner {
 
 	public void writeRecs(ResultSet rs, Connection con) throws Exception
 	{
-		int count =0, rec_count = 1;
+		int count =0;
 		String currentdept_affid= null;
 		String email="";
 		while (rs.next())
@@ -568,7 +553,7 @@ public class AuthorCombiner {
 
 					// UPDATEEPOCH (place holder for future filling with SQS epoch)
 					rec.put(AuAfCombinedRec.UPDATEEPOCH, "");
-					
+
 					//LOADNUMBER
 					if(rs.getString("LOADNUMBER") !=null)
 					{
@@ -1450,6 +1435,115 @@ public class AuthorCombiner {
 	return normalized_str;
 	}*/
 
+
+
+	/**
+	 * Added: 06/16/2017
+	 * to physically index generated ES bulks to ES using multithreading 
+	 */
+
+	public void IndexESDocFilesToES()
+	{
+		CountDownLatch latch = null;
+		try
+		{
+			if(action !=null && (action.equalsIgnoreCase("update") || action.equalsIgnoreCase("new")))
+			{
+				if(WriteEsDocToFile.esFilesList.size() >0)
+				{
+					int listSize = WriteEsDocToFile.esFilesList.size();
+
+					// #ofThreads must be <= # of total files to process
+					if(numOfThreads > listSize)
+					{
+						numOfThreads = listSize;
+						System.out.println("#ofThreads > # of total ES Files, so reset #ofThreads to be = # of total ES Files");
+						latch = new CountDownLatch(numOfThreads);
+					}
+
+					latch = new CountDownLatch(numOfThreads);
+
+					double sublist = listSize/numOfThreads;
+					int subListSize = (int)sublist;
+					int start = 0;
+					int last = (subListSize -1);
+
+
+
+					System.out.println("Total files to process per single thread: " + subListSize);
+					if(numOfThreads ==1)
+						last = subListSize -1;
+
+
+
+					System.out.println("STARTING................." + new Date().getTime());
+
+
+					for(int i=0;i<numOfThreads;i++)
+					{
+						AusAffESIndexMultiThreads esIndexThread = new AusAffESIndexMultiThreads("Thread " + i,latch,recsPerEsbulk, esDomain, action, docWrite, start,last);
+						esIndexThread.init();
+						esIndexThread.start();
+
+						Thread.sleep(1000);    // sleep for 1 seconds
+						synchronized (esIndexThread) {
+							start = last + 1;
+							if(i<(numOfThreads-2))
+								last = start + (subListSize -1);
+							else
+								last = listSize -1;
+
+							System.out.println("***********************");	
+						}
+					}
+					latch.await();
+
+					System.out.println("In Main thread after completion of " + numOfThreads + " threads");
+					System.out.println("FINISHED................." + new Date().getTime());
+
+					//shutdown Amazon Http clinet
+					AmazonHttpClientService.getInstance().end();
+
+					//added 05/10/2017 to update status = "indexed" for the docs that successfully indexed to ES
+					UpdateProfileTableESStatus profileESUpdate = new UpdateProfileTableESStatus(doc_type,username, password,loadNumber,tableToBeTruncated,url,esIndexedIdsSqlldrFileName);
+					profileESUpdate.writeIndexexRecs(esIndexed_docs_list);
+
+				}
+
+			}
+
+			else if(action !=null && action.equalsIgnoreCase("delete"))
+			{
+				int start = 0;
+				int last = auId_deletion_list.size() -1;
+				latch = new CountDownLatch(0);
+				System.out.println("action is delete, so nothing to do with updating AU Profile's status column, just delete from ES");
+
+				AusAffESIndexMultiThreads esIndexThread = new AusAffESIndexMultiThreads("Thread1",latch,recsPerEsbulk, esDomain, action, docWrite, start, last);
+				esIndexThread.init();
+				esIndexThread.createBulkDelete(doc_type, auId_deletion_list);
+
+				//shutdown Amazon Http clinet
+				AmazonHttpClientService.getInstance().end();
+			}
+
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+	}
+
+	/***
+	 * 
+	 * @param connectionURL
+	 * @param driver
+	 * @param username
+	 * @param password
+	 * @return
+	 * @throws Exception
+	 */
 
 
 	private Connection getConnection(String connectionURL,

@@ -65,6 +65,7 @@ public class AusAffESIndex {
 
 	
 	private int recsPerbulk = 10;
+	private String action;
 	private int curRecNum = 1;
 
 	private int status = 0;
@@ -74,6 +75,9 @@ public class AusAffESIndex {
 	private final static Logger logger = Logger.getLogger(AusAffESIndex.class);
 
 	 AmazonHttpClient client = null;
+	 ExecutionContext context;
+	 MyHttpResponseHandler<Void> responseHandler;
+	 MyErrorHandler errorHandler;
 	 
 	 
 	 
@@ -88,9 +92,10 @@ public class AusAffESIndex {
 		
 	}
 	
-	public AusAffESIndex(int bulkSize, String esDomain)
+	public AusAffESIndex(int bulkSize, String esDomain, String esAction)
 	{
 		recsPerbulk = bulkSize;
+		action = esAction;
 		
 		HOST = esDomain;
 		ENDPOINT_ROOT = "http://" + HOST;
@@ -102,23 +107,26 @@ public class AusAffESIndex {
 		System.out.println("Time after initializing AusAffIndex class "+(endTime-startTime)/1000.0+" seconds");
 		System.out.println("total Time used "+(endTime-startTime)/1000.0+" seconds");
 
-		
+		init();
 	}
 	
 	// initialize the Client 
 	private void init()
 	{
-		/*context = new ExecutionContext(true);
+		try {
+			context = new ExecutionContext(true);
+			client = AmazonHttpClientService.getInstance().getAmazonHttpClient();
 
-		ClientConfiguration clientConfiguration = new ClientConfiguration();
-		clientConfiguration.setConnectionTimeout(ClientConfiguration.DEFAULT_CONNECTION_TIMEOUT);
-		clientConfiguration.setConnectionMaxIdleMillis(ClientConfiguration.DEFAULT_CONNECTION_MAX_IDLE_MILLIS);
-		client = new AmazonHttpClient(clientConfiguration);
 
-		responseHandler = new MyHttpResponseHandler<Void>();
-		errorHandler = new MyErrorHandler();*/
-		
-		//System.out.println("do nothing");
+			responseHandler = new MyHttpResponseHandler<Void>();
+			errorHandler = new MyErrorHandler();
+		} 
+		catch (IOException e) 
+		{
+			System.out.println("Failed to create AmazonHttpClient!!!!!");
+			System.out.println("Reason: " + e.getMessage());
+			e.printStackTrace();
+		}
 	}
 
 	// shutdown the Client 
@@ -126,11 +134,14 @@ public class AusAffESIndex {
 	{
 		try
 		{
-			if(client !=null)
+			AmazonHttpClientService.getInstance().end();
+			
+			// uncomment when initialize and create HTTP client in this class instead of AmazonHttpClientService
+			/*if(client !=null)
 			{
 				client.shutdown();
 				System.out.println("AmazonHttpClient Client was shutdown successfully");
-			}
+			}*/
 		}
 		
 		catch(Exception e)
@@ -172,7 +183,9 @@ public class AusAffESIndex {
 	/// Send the request to the ES server
 	private void sendRequest(Request<?> request) 
 	{
-		 ExecutionContext context = new ExecutionContext(true);
+		// moved to init
+		
+		 /*ExecutionContext context = new ExecutionContext(true);
 
 	       ClientConfiguration clientConfiguration = new ClientConfiguration();
 	       clientConfiguration.setConnectionTimeout(ClientConfiguration.DEFAULT_CONNECTION_TIMEOUT);
@@ -182,12 +195,13 @@ public class AusAffESIndex {
 	       client = new AmazonHttpClient(clientConfiguration);
 
 	       MyHttpResponseHandler<Void> responseHandler = new MyHttpResponseHandler<Void>();
-	       MyErrorHandler errorHandler = new MyErrorHandler();
+	       MyErrorHandler errorHandler = new MyErrorHandler();*/
 
 	       try
 	       {
 	    	   Response<Void> response = client.execute(request, responseHandler, errorHandler, context);
-		       System.out.println(response.getAwsResponse());
+		       //System.out.println(response.getAwsResponse());  // only for debugging
+	    	   
 	       }
 	       catch(Exception e)
 	       {
@@ -229,8 +243,8 @@ public class AusAffESIndex {
 
 		
 		
-		// Shutdown client
-		end();
+		// Shutdown client, Uncomment when initialize and create HTTP client in this class instead of AmazonHttpClientService
+		//end();
 
 	}
 	public static void main(String[] args) {
@@ -269,7 +283,7 @@ public class AusAffESIndex {
 
 			String responseString = IOUtils.toString(responseStream);
 
-			logger.info(responseString);
+			//logger.info(responseString); // only for debugging
 			//System.out.println(responseString);
 			// set status for DB deletion
 			setStatusCode(Integer.toString(response.getStatusCode()));
@@ -414,6 +428,9 @@ public int getStatusCode()
 
 public void parseESIndexJSONResponse(String esResponseString)
 {
+	int count = 0;
+	JSONObject index;
+	
 	JSONParser parser = new JSONParser();
 	try
 	{
@@ -433,16 +450,23 @@ public void parseESIndexJSONResponse(String esResponseString)
 			//indexes list
 			 JSONObject indexes = indexesIterator.next();
 			
-			JSONObject index = (JSONObject)indexes.get("index");
+			 if(action !=null && !(action.equalsIgnoreCase("delete")))
+				 index = (JSONObject)indexes.get("index");
+			 else
+				 index = (JSONObject)indexes.get("delete");
 			String _id = (String)index.get("_id");
+			String result = (String)index.get("result");
 			Long status = (Long)index.get("status");
-			if(status != null && status == 200)
+			if(status != null && (status == 200 || status == 201))
 				esIndexed_docs_list.add(_id);
 			else
-				System.out.print("doc: " + _id + " failed to index to ES!!!!");
+				System.out.print("doc: " + _id + " with status: " + status + " and result: " + result + " failed to index to ES!!!!");
 			
-			
+			count ++;
 		}
+		
+		System.out.println("Total indexed count: " + count);
+		
 	}
 	catch (org.json.simple.parser.ParseException e) 
 	{

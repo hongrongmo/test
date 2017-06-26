@@ -24,8 +24,8 @@ public final class AmazonS3Service {
 
 	private AmazonS3 s3service;
 	
-	private static int S3_CONN_TIMEOUT = 18000 * 1000;  //1 minute timeout
-	private static int S3_SOCK_TIMEOUT = 18000 * 1000;  // 1 minute timeout
+	private static int S3_CONN_TIMEOUT = 1500 * 1000;  //1 minute timeout
+	private static int S3_SOCK_TIMEOUT = 1500 * 1000;  // 1 minute timeout
 			
 	private static ClientConfiguration clientConfig;
 	
@@ -44,7 +44,9 @@ public final class AmazonS3Service {
 			clientConfig = new ClientConfiguration();
 			clientConfig.setConnectionTimeout(S3_CONN_TIMEOUT);
 			clientConfig.setSocketTimeout(S3_SOCK_TIMEOUT);
-			
+			clientConfig.setMaxConnections(ClientConfiguration.DEFAULT_MAX_CONNECTIONS);
+			clientConfig.setMaxErrorRetry(6);
+						
 			
 			instance = new AmazonS3Service();
 			 Region usEast1 = Region.getRegion(Regions.US_EAST_1);
