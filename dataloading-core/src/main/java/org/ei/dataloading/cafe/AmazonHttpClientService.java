@@ -2,17 +2,19 @@ package org.ei.dataloading.cafe;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
-import org.ei.dataloading.awss3.AmazonS3Service;
-
 import com.amazonaws.ClientConfiguration;
-import com.amazonaws.auth.InstanceProfileCredentialsProvider;
 import com.amazonaws.http.AmazonHttpClient;
-import com.amazonaws.regions.Region;
-import com.amazonaws.regions.Regions;
-import com.amazonaws.services.s3.AmazonS3;
-import com.amazonaws.services.s3.AmazonS3Client;
 
+
+
+/**
+ * 
+ * @author TELEBH
+ * @Date: 06/19/2017
+ * @Description: creating one single instance of AmazonHttpClient to be shared with subsequent HttpRequests for ES index
+ * instead of creating multiple clients for each #of AU/AF bulks to index to ES, create only one single instance and share it with subsequent Http Requests
+ * after all ES index is complete, close the connection 
+ */
 public class AmazonHttpClientService 
 {
 
