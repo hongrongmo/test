@@ -325,7 +325,7 @@ throws Exception
         while (rs.next())
         {
           ++i;
-          String firstGUID = "";
+          String firstGUID = "";        
           int numCoords = 1;
           int coordCount = 0;
           if(rs.getString("DATABASE") != null)
@@ -380,6 +380,7 @@ throws Exception
                         {
                             authorString=authorString+rs.getString("AUTHOR_1");
                         }
+                        
                         rec.put(EVCombinedRec.AUTHOR, prepareBdAuthor(authorString));
                         
                         if(rs.getString("authorid")==null && rs.getString("cafe_author")!=null)
@@ -644,6 +645,7 @@ throws Exception
                     }
 
                     String docType = rs.getString("CITTYPE");
+                    String sourceType = rs.getString("SOURCETYPE");
                     if(docType != null)
                     {
                         boolean confCodeFlag = false;
@@ -653,7 +655,19 @@ throws Exception
                         }
 
                         String ct = null;
-                        if((ct = getCitationType(docType,confCodeFlag)) != null)
+                        if(sourceType!=null && sourceType.equalsIgnoreCase("b") &&
+                           (docType.equalsIgnoreCase("bk") || docType.equalsIgnoreCase("ch") || docType.equalsIgnoreCase("mr") || docType.equalsIgnoreCase("mc")))
+                        {
+                        	if(docType.equalsIgnoreCase("ch") || docType.equalsIgnoreCase("mc"))
+                        	{
+                        		rec.put(EVCombinedRec.DOCTYPE,"ch");
+                        	}
+                        	else
+                        	{
+                        		rec.put(EVCombinedRec.DOCTYPE,"bk");
+                        	}
+                        }
+                        else if((ct = getCitationType(docType,confCodeFlag)) != null)
                         {
                             if((isCpx)&&((rs.getString("MAINHEADING") != null)|| rec.containsKey(EVCombinedRec.CONTROLLED_TERMS)))
                             {
@@ -2060,5 +2074,8 @@ throws Exception
         }
 
     }
+    
+  
 
 }
+

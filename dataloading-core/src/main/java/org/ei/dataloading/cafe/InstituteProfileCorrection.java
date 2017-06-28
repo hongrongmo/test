@@ -51,7 +51,7 @@ public class InstituteProfileCorrection
 	private static long endTime = System.currentTimeMillis();
 	private static long midTime = System.currentTimeMillis();
 	private static String filename = "";
-	private static String path="";
+	private static String path=".";
 	private static String bucketName="";
 	private static String key="";
 
@@ -261,7 +261,7 @@ public class InstituteProfileCorrection
 	                
 	                if(bucketName==null || bucketName.length()==0)
 	                {	                		   	                	
-	                    c.readFile(filename,outFile);               
+	                    c.readFile(path+"/"+filename,outFile);               
 	                }
 	                //read from s3 bucket
 	                else if (bucketName !=null && bucketName.length() >0)
@@ -288,7 +288,12 @@ public class InstituteProfileCorrection
 	                	                
 	                endTime = System.currentTimeMillis();
 	                System.out.println("time for loading temp table "+(endTime-midTime)/1000.0+" seconds");	              
-	               
+	                
+	                p = r.exec("mv "+outFileName+" "+path);
+	                p = r.exec("mv "+affOutFileName+" "+path);
+	                
+	                t = p.waitFor();
+	                
 	                midTime = endTime;
 	                
 	                if(tempTableCount>0)
