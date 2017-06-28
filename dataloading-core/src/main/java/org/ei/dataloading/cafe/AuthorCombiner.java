@@ -312,6 +312,8 @@ public class AuthorCombiner {
 
 				System.out.println("Got records... from table: " + tableName);
 				getDeletionList(rs);
+				
+				esIndex.createBulkDelete(doc_type, auId_deletion_list);
 			}
 
 		}
